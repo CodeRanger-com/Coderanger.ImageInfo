@@ -20,6 +20,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Fixtures\Jpeg\bad_image_end.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Fixtures\Jpeg\high-res.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

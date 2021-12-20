@@ -16,12 +16,14 @@ internal static class UnitConvertor
 
   internal static int ToDpi( DensityUnit unit, double pixels )
   {
+    if( pixels == 1 ) return DefaultDpi;
+
     return unit switch
     {
       DensityUnit.PixelsPerInch => Convert.ToInt32( pixels ),
       DensityUnit.PixelsPerMeter => Convert.ToInt32( Math.Round( pixels / InchesPerMetre ) ),
       DensityUnit.PixelsPerCentimeter => Convert.ToInt32( Math.Round( pixels / InchesPerCentiMetre ) ),
-      _ => Convert.ToInt32( pixels * DefaultDpi ),
+      _ => Convert.ToInt32( pixels ),
     };
   }
 }

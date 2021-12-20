@@ -7,6 +7,7 @@
 // JPEGs are written in Big Endian format
 // Specifications:
 // https://www.w3.org/Graphics/JPEG/itu-t81.pdf
+// https://www.w3.org/Graphics/JPEG/jfif3.pdf
 // https://en.wikipedia.org/wiki/JPEG_File_Interchange_Format
 // </comment>
 // -----------------------------------------------------------------------
@@ -69,9 +70,14 @@ internal class DecodeJpeg : IDecoder
       {
         // start and end of the image
         case JpegConstants.Markers.ImageStart:
+          _remainingInFrame = 0;
+          continue;
+
+        // end of image, exit
         case JpegConstants.Markers.ImageEnd:
           _remainingInFrame = 0;
-          break;
+          eof = true;
+          continue;
 
         // restart interval
         case JpegConstants.Markers.Restart:
@@ -84,23 +90,27 @@ internal class DecodeJpeg : IDecoder
           break;
       }
 
-      // EOF?
-      if( markerType == JpegConstants.Markers.ImageEnd )
-      {
-        eof = true;
-        continue;
-      }
-
       // Process the data in the frame
       if( _remainingInFrame > 0 )
       {
-        // this is what we are looking for
-        if( (
-          markerType == JpegConstants.Markers.BaselineStart
-          || markerType == JpegConstants.Markers.ExtendedSequentialStart
-          || markerType == JpegConstants.Markers.ProgressiveStart ) )
+        var startOfSegment = reader.BaseStream.Position;
+
+        if( markerType == JpegConstants.Markers.Jfif.App )
         {
-          // skip header length x 2 bytes
+          // Check there is a valid APP0 marker
+          if( _remainingInFrame >= JpegConstants.Markers.Jfif.SegmentLength )
+          {
+            DecodeJfif( reader );
+          }
+        }
+        else if( markerType == ExifConstants.App )
+        {
+          DecodeExif( reader );
+        }
+        else if( markerType == JpegConstants.Markers.BaselineStart
+                || markerType == JpegConstants.Markers.ExtendedSequentialStart
+                || markerType == JpegConstants.Markers.ProgressiveStart )
+        {
           // skip bitplane x 1 byte
           reader.Skip( 1 );
 
@@ -110,32 +120,17 @@ internal class DecodeJpeg : IDecoder
           // 2 byte width/height values
           _height = DataConversion.Int16FromBigEndianBuffer( frameBuffer, 0 );
           _width = DataConversion.Int16FromBigEndianBuffer( frameBuffer, 2 );
-        }
-        else
-        {
-          // Skip app header
-          if( _remainingInFrame < JpegConstants.Markers.Jfif.SegmentLength )
-          {
-            reader.ReadBytes( _remainingInFrame );
-            continue;
-          }
 
-          _remainingInFrame -= JpegConstants.Markers.Jfif.SegmentLength;
-
-          if( markerType == JpegConstants.Markers.Jfif.App )
-          {
-            DecodeJfif( reader );
-          }
-          else if( markerType == ExifConstants.App )
-          {
-            DecodeExif( reader );
-          }
+          _remainingInFrame -= 5;
         }
+
+        // Jump to end of segment
+        reader.BaseStream.Seek( startOfSegment + _remainingInFrame, SeekOrigin.Begin );
       }
 
       if( _width > 0 && _height > 0 && _horizontalResolution > 0 && _verticalResolution > 0 )
       {
-        // Short circuit when we have everything
+        // Short circuit when all the elements exist
         var horizontalDpi = UnitConvertor.ToDpi( _resolutionUnit, _horizontalResolution );
         var verticalDpi = UnitConvertor.ToDpi( _resolutionUnit, _verticalResolution );
 
@@ -167,8 +162,9 @@ internal class DecodeJpeg : IDecoder
       short yDensity = DataConversion.Int16FromBigEndianBuffer( data, 10 );
       if( xDensity > 0 && yDensity > 0 )
       {
-        _horizontalResolution = UnitConvertor.ToDpi( densityUnits, xDensity );
-        _verticalResolution = UnitConvertor.ToDpi( densityUnits, yDensity );
+        _resolutionUnit = densityUnits;
+        _horizontalResolution = xDensity;
+        _verticalResolution = yDensity;
       }
     }
   }
@@ -177,7 +173,6 @@ internal class DecodeJpeg : IDecoder
   private void DecodeExif( BinaryReader reader )
   {
     // Exif data is little endian
-    //var appSegmentSize = reader.ReadInt16();
 
     // Buffer only the data we need
     var data = reader.ReadBytes( ExifConstants.MagicBytes.Length );
@@ -186,7 +181,7 @@ internal class DecodeJpeg : IDecoder
       // JPEG is big endian, but Exif data is stored as TIFF and
       // That contains bytes as to what byte order the TIFF data is
       // written as
-      _exifDataStart = reader.BaseStream.Position /*- JpegConstants.Markers.Exif.MagicBytes.Length*/;
+      _exifDataStart = reader.BaseStream.Position;
 
       // Get TIFF header
       data = reader.ReadBytes( TiffConstants.HeaderLength );
@@ -214,7 +209,6 @@ internal class DecodeJpeg : IDecoder
       do
       {
         reader.BaseStream.Seek( _exifDataStart + ifdOffsetStart, SeekOrigin.Begin );
-        //reader.Skip( ifdOffsetStart );
 
         var ifdDirectoryBuffer = reader.ReadBytes( 2 );
         var directoryCount = DataConversion.Int16FromBuffer( ifdDirectoryBuffer, 0, _exifByteOrder );
@@ -234,8 +228,8 @@ internal class DecodeJpeg : IDecoder
 
   private void DecodeDirectory( BinaryReader reader )
   {
+    // Pre-buffer all bytes needed
     var directoryBuffer = reader.ReadBytes( 12 );
-    //var tag = buffer.AsSpan( 0, 2 );
 
     var exifTag = DataConversion.Int16FromBuffer( directoryBuffer, 0, _exifByteOrder );
     var exifDataType = DataConversion.Int16FromBuffer( directoryBuffer, 2, _exifByteOrder );
@@ -251,42 +245,33 @@ internal class DecodeJpeg : IDecoder
     }
     else if( exifTag == ExifConstants.Tags.ImageWidth )
     {
-      //var svalue = buffer.AsSpan( 8, 4 );
-      //_width = GetRationalValue( reader, exifDataType, exifValue, componentCount );
+      // Use JPEG/JFIF image dimensions in preference
+      if( _width == 0 )
+      {
+        //var svalue = buffer.AsSpan( 8, 4 );
+        //_width = GetRationalValue( reader, exifDataType, exifValue, componentCount );
+      }
     }
     else if( exifTag == ExifConstants.Tags.ImageHeight )
     {
-      //var svalue = buffer.AsSpan( 8, 4 );
-      //_height = GetRationalValue( reader, exifDataType, exifValue, componentCount );
+      // Use JPEG/JFIF image dimensions in preference
+      if( _height == 0 )
+      {
+        //var svalue = buffer.AsSpan( 8, 4 );
+        //_height = GetRationalValue( reader, exifDataType, exifValue, componentCount );
+      }
     }
     else if( exifTag == ExifConstants.Tags.ResolutionUnit )
     {
       var tagValue = DataConversion.Int16FromBuffer( directoryBuffer, 8, _exifByteOrder );
 
-      if( tagValue == 1 )
+      _resolutionUnit = tagValue switch
       {
-        // Unknown, assume inches
-        _resolutionUnit = DensityUnit.PixelsPerInch;
-      }
-      else if( tagValue == 2 )
-      {
-        _resolutionUnit = DensityUnit.PixelsPerInch;
-      }
-      else if( tagValue == 3 )
-      {
-        _resolutionUnit = DensityUnit.PixelsPerCentimeter;
-      }
-      else
-      {
-        // Default
-        _resolutionUnit = DensityUnit.PixelsPerInch;
-      }
+        2 => DensityUnit.PixelsPerInch,
+        3 => DensityUnit.PixelsPerCentimeter,
+        _ => DensityUnit.PixelsPerInch, // Unknown or not set, assume inches
+      };
     }
-
-    //var count = directoryBuffer.AsSpan( 4, 4 );
-
-    // Reset current position
-    //reader.BaseStream.Position = currentStreamPosition;
   }
 
   private double GetRationalValue( BinaryReader reader, short type, int exifValue, int dataCount )
