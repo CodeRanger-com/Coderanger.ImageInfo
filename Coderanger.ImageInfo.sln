@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32002.185
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coderanger.ImageInfo", "Coderanger.ImageInfo.csproj", "{94801F12-4B59-449A-BCF7-E895C1C68325}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coderanger.ImageInfo.Tests", "Tests\Coderanger.ImageInfo.Tests\Coderanger.ImageInfo.Tests.csproj", "{473712E9-F580-4E59-9C0A-7B0FAF0DBCFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94801F12-4B59-449A-BCF7-E895C1C68325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94801F12-4B59-449A-BCF7-E895C1C68325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94801F12-4B59-449A-BCF7-E895C1C68325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94801F12-4B59-449A-BCF7-E895C1C68325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{473712E9-F580-4E59-9C0A-7B0FAF0DBCFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{473712E9-F580-4E59-9C0A-7B0FAF0DBCFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{473712E9-F580-4E59-9C0A-7B0FAF0DBCFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{473712E9-F580-4E59-9C0A-7B0FAF0DBCFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7569653-C5D9-4F71-B8C0-94E2AE4FE2BD}
+	EndGlobalSection
+EndGlobal
