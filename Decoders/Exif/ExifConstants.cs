@@ -20,42 +20,28 @@ internal static class ExifConstants
   /// </summary>
   internal static byte[] MagicBytes => new[]
   {
-    // 0x45, 0x78, 0x69, 0x66 = 69, 120, 105, 102
+    // 0x45, 0x78, 0x69, 0x66
     (byte)'E', (byte)'x', (byte)'i', (byte)'f', (byte)'\0', (byte)'\0'
   };
 
   /// <summary>
-  /// Tag constants
-  /// https://www.exiv2.org/tags.html
+  /// IFD Offsets
   /// </summary>
-  internal static class Tags
+  internal enum IfdOffset
   {
     /// <summary>
-    /// Number of pixels in given resolution unit for X axis
+    /// Exif IFD
     /// </summary>
-    internal static int ImageWidth => 0x0100;
+    Exif = 0x8769, // 34665
 
     /// <summary>
-    /// Number of pixels in given resolution unit for X axis
+    /// GPS IFD
     /// </summary>
-    internal static int ImageHeight => 0x0101;
+    Gps = 0x8825, // 34853
 
     /// <summary>
-    /// Number of pixels in given resolution unit for X axis
+    /// Interoperability IFD
     /// </summary>
-    internal static int ResolutionX => 0x011A;
-
-    /// <summary>
-    /// Number of pixels in given resolution unit for Y axis
-    /// </summary>
-    internal static int ResolutionY => 0x011B;
-
-    /// <summary>
-    /// Type of unit resolution X and Y values are stored in
-    /// </summary>
-    /// <remarks>
-    /// If the image resolution is unknown, 2 (inches) is designated
-    /// </remarks>
-    internal static int ResolutionUnit => 0x0128;
+    Inter = 0xA005, // 40965
   }
 }

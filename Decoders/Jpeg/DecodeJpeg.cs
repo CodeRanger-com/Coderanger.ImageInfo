@@ -4,20 +4,23 @@
 // </copyright>
 // <author>Dan Petitt</author>
 // <comment>
-// JPEGs are written in Big Endian format
+// JPEGs are written in Big Endian format; but may contain EXIFs stored as
+// TIFF segments which define what encoding is used
 // Specifications:
+// https://en.wikipedia.org/wiki/JPEG_File_Interchange_Format
 // https://www.w3.org/Graphics/JPEG/itu-t81.pdf
 // https://www.w3.org/Graphics/JPEG/jfif3.pdf
-// https://en.wikipedia.org/wiki/JPEG_File_Interchange_Format
+// Exif:
+// https://www.cipa.jp/std/documents/e/DC-008-2012_E.pdf
+// https://www.media.mit.edu/pia/Research/deepview/exif.html
 // </comment>
 // -----------------------------------------------------------------------
 
 namespace Coderanger.ImageInfo.Decoders.Jpeg;
 
-using System;
-using System.IO;
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 using Coderanger.ImageInfo.Decoders.Exif;
+using Coderanger.ImageInfo.Decoders.Exif.Types;
 
 /// <summary>
 /// Decoder for the JPEG image format
@@ -47,12 +50,7 @@ internal class DecodeJpeg : IDecoder
 
   public ImageDetails Decode( BinaryReader reader )
   {
-    _width = 0;
-    _height = 0;
-    _exifDataStart = 0;
-    _horizontalResolution = 0;
-    _verticalResolution = 0;
-    _resolutionUnit = DensityUnit.PixelsPerInch;
+    Reset();
 
     bool eof = false;
     while( !eof )
@@ -97,7 +95,7 @@ internal class DecodeJpeg : IDecoder
 
         if( markerType == JpegConstants.Markers.Jfif.App )
         {
-          // Check there is a valid APP0 marker
+          // Check there is a valid APP0/JFIF marker
           if( _remainingInFrame >= JpegConstants.Markers.Jfif.SegmentLength )
           {
             DecodeJfif( reader );
@@ -105,7 +103,11 @@ internal class DecodeJpeg : IDecoder
         }
         else if( markerType == ExifConstants.App )
         {
-          DecodeExif( reader );
+          var decoder = DecodeExif.DecodeFromReader( reader );
+          if( decoder != null )
+          {
+            _exifDecoder = decoder;
+          }
         }
         else if( markerType == JpegConstants.Markers.BaselineStart
                 || markerType == JpegConstants.Markers.ExtendedSequentialStart
@@ -118,24 +120,23 @@ internal class DecodeJpeg : IDecoder
           var frameBuffer = reader.ReadBytes( 4 );
 
           // 2 byte width/height values
-          _height = DataConversion.Int16FromBigEndianBuffer( frameBuffer, 0 );
-          _width = DataConversion.Int16FromBigEndianBuffer( frameBuffer, 2 );
+          _jfifHeight = DataConversion.Int16FromBigEndianBuffer( frameBuffer, 0 );
+          _jfifWidth = DataConversion.Int16FromBigEndianBuffer( frameBuffer, 2 );
 
-          _remainingInFrame -= 5;
+          _remainingInFrame -= 5; // buffer + bitplane
         }
 
         // Jump to end of segment
         reader.BaseStream.Seek( startOfSegment + _remainingInFrame, SeekOrigin.Begin );
       }
 
-      if( _width > 0 && _height > 0 && _horizontalResolution > 0 && _verticalResolution > 0 )
-      {
-        // Short circuit when all the elements exist
-        var horizontalDpi = UnitConvertor.ToDpi( _resolutionUnit, _horizontalResolution );
-        var verticalDpi = UnitConvertor.ToDpi( _resolutionUnit, _verticalResolution );
+      SyncResolution();
 
+      if( _width > 0 && _height > 0 && _horizontalDpi > 0 && _verticalDpi > 0 )
+      {
+        // Short circuit when all the elements required exist
         reader.BaseStream.Position = 0;
-        return new ImageDetails( _width, _height, horizontalDpi, verticalDpi, "image/jpeg" );
+        return new ImageDetails( _width, _height, _horizontalDpi, _verticalDpi, "image/jpeg", _exifDecoder?.ExifTags ?? new Dictionary<ushort, ExifValue>() );
       }
 
       if( reader.BaseStream.Position >= reader.BaseStream.Length )
@@ -144,17 +145,25 @@ internal class DecodeJpeg : IDecoder
       }
     }
 
+    if( _width > 0 && _height > 0 )
+    {
+      reader.BaseStream.Position = 0;
+      return new ImageDetails( _width, _height, _horizontalDpi, _verticalDpi, "image/jpeg", _exifDecoder?.ExifTags ?? new Dictionary<ushort, ExifValue>() );
+    }
+
     throw ExceptionHelper.Throw( reader, ErrorMessage );
   }
 
   private void DecodeJfif( BinaryReader reader )
-{
+  {
     // Buffer only the data we need
     var data = reader.ReadBytes( 12 );
 
     if( data.Length >= JpegConstants.Markers.Jfif.MagicBytes.Length
       && data.AsSpan( 0, JpegConstants.Markers.Jfif.MagicBytes.Length ).SequenceEqual( JpegConstants.Markers.Jfif.MagicBytes ) )
     {
+      _processedJfif = true;
+
       // Ignore Position 5 = majorVersion
       // Ignore Position 6 = minorVersion
       var densityUnits = (DensityUnit)data[ 7 ];
@@ -162,179 +171,82 @@ internal class DecodeJpeg : IDecoder
       short yDensity = DataConversion.Int16FromBigEndianBuffer( data, 10 );
       if( xDensity > 0 && yDensity > 0 )
       {
-        _resolutionUnit = densityUnits;
-        _horizontalResolution = xDensity;
-        _verticalResolution = yDensity;
+        _jfifDensityUnits = densityUnits;
+        _jfifHorizontalResolution = xDensity;
+        _jfifVerticalResolution = yDensity;
       }
     }
   }
 
-  // TODO: Move to Exif decoder
-  private void DecodeExif( BinaryReader reader )
+  private void SyncResolution()
   {
-    // Exif data is little endian
-
-    // Buffer only the data we need
-    var data = reader.ReadBytes( ExifConstants.MagicBytes.Length );
-    if( DecoderHelper.MatchesMagic( data, ExifConstants.MagicBytes ) )
+    if( _processedJfif || _exifDecoder != null )
     {
-      // JPEG is big endian, but Exif data is stored as TIFF and
-      // That contains bytes as to what byte order the TIFF data is
-      // written as
-      _exifDataStart = reader.BaseStream.Position;
+      _horizontalDpi = 0;
+      _verticalDpi = 0;
 
-      // Get TIFF header
-      data = reader.ReadBytes( TiffConstants.HeaderLength );
-      _exifByteOrder = ByteOrderHelper.GetTiffByteOrder( data );
-
-      var signature = DataConversion.Int16FromBuffer( data, 2, _exifByteOrder );
-      if( signature != 42 )
+      if( _exifDecoder != null )
       {
-        ExceptionHelper.Throw( reader, "Invalid TIFF header signature" );
+        _horizontalDpi = _exifDecoder.HorizontalDpi;
+        _verticalDpi = _exifDecoder.VerticalDpi;
       }
 
-      // Find the tags containing the resolution
-      if( _horizontalResolution == 0 )
+
+      // Check whether the exif values are better?
+      if( _jfifHorizontalResolution != 0 && _jfifVerticalResolution != 0 )
       {
-        // We have an EXIF header so we can reset values to the EXIF default
-        // When the image resolution is unknown, 72 [dpi] is designated
-        _horizontalResolution = 72;
-        _verticalResolution = 72;
-        _resolutionUnit = DensityUnit.PixelsPerInch;
-      }
+        var xDpi = UnitConvertor.ToDpi( _jfifDensityUnits, _jfifHorizontalResolution );
+        var yDpi = UnitConvertor.ToDpi( _jfifDensityUnits, _jfifVerticalResolution );
 
-      // Offset is from the beginning of this header (i.e. at the point of the byte order marker)
-      var ifdOffsetStart = DataConversion.Int32FromBuffer( data, 4, _exifByteOrder ) /*- TiffConstants.HeaderLength*/;
-
-      do
-      {
-        reader.BaseStream.Seek( _exifDataStart + ifdOffsetStart, SeekOrigin.Begin );
-
-        var ifdDirectoryBuffer = reader.ReadBytes( 2 );
-        var directoryCount = DataConversion.Int16FromBuffer( ifdDirectoryBuffer, 0, _exifByteOrder );
-        for( var directoryIndex = 0; directoryIndex < directoryCount; directoryIndex++ )
+        if( xDpi > _horizontalDpi )
         {
-          DecodeDirectory( reader );
+          _horizontalDpi = xDpi;
         }
 
-        // Last entry after directories is the offset to next IFD
-        var nextIfdBuffer = reader.ReadBytes( 4 );
-        ifdOffsetStart = DataConversion.Int32FromBuffer( nextIfdBuffer, 0, _exifByteOrder );
-      } while( ifdOffsetStart != 0 );
+        if( yDpi > _verticalDpi )
+        {
+          _verticalDpi = yDpi;
+        }
+      }
 
-      // Finished all IFDs
-    }
-  }
-
-  private void DecodeDirectory( BinaryReader reader )
-  {
-    // Pre-buffer all bytes needed
-    var directoryBuffer = reader.ReadBytes( 12 );
-
-    var exifTag = DataConversion.Int16FromBuffer( directoryBuffer, 0, _exifByteOrder );
-    var exifDataType = DataConversion.Int16FromBuffer( directoryBuffer, 2, _exifByteOrder );
-    var exifValue = DataConversion.Int32FromBuffer( directoryBuffer, 8, _exifByteOrder );
-    var componentCount = DataConversion.Int32FromBuffer( directoryBuffer, 4, _exifByteOrder );
-    if( exifTag == ExifConstants.Tags.ResolutionX )
-    {
-      _horizontalResolution = GetRationalValue( reader, exifDataType, exifValue, componentCount );
-    }
-    else if( exifTag == ExifConstants.Tags.ResolutionY )
-    {
-      _verticalResolution = GetRationalValue( reader, exifDataType, exifValue, componentCount );
-    }
-    else if( exifTag == ExifConstants.Tags.ImageWidth )
-    {
-      // Use JPEG/JFIF image dimensions in preference
-      if( _width == 0 )
+      if( _jfifWidth != 0 && _jfifHeight != 0 )
       {
-        //var svalue = buffer.AsSpan( 8, 4 );
-        //_width = GetRationalValue( reader, exifDataType, exifValue, componentCount );
+        _width = _jfifWidth;
+        _height = _jfifHeight;
       }
     }
-    else if( exifTag == ExifConstants.Tags.ImageHeight )
-    {
-      // Use JPEG/JFIF image dimensions in preference
-      if( _height == 0 )
-      {
-        //var svalue = buffer.AsSpan( 8, 4 );
-        //_height = GetRationalValue( reader, exifDataType, exifValue, componentCount );
-      }
-    }
-    else if( exifTag == ExifConstants.Tags.ResolutionUnit )
-    {
-      var tagValue = DataConversion.Int16FromBuffer( directoryBuffer, 8, _exifByteOrder );
-
-      _resolutionUnit = tagValue switch
-      {
-        2 => DensityUnit.PixelsPerInch,
-        3 => DensityUnit.PixelsPerCentimeter,
-        _ => DensityUnit.PixelsPerInch, // Unknown or not set, assume inches
-      };
-    }
   }
 
-  private double GetRationalValue( BinaryReader reader, short type, int exifValue, int dataCount )
+  private void Reset()
   {
-    var tagDataSize = GetTagDataSize( type );
+    _width = 0;
+    _height = 0;
 
-    var currentStreamPosition = reader.BaseStream.Position;
+    _processedJfif = false;
+    _jfifDensityUnits = DensityUnit.PixelsPerInch;
+    _jfifHorizontalResolution = 0;
+    _jfifVerticalResolution = 0;
+    _jfifWidth = 0;
+    _jfifHeight = 0;
 
-    // Rational type is 8 bytes, so size * 8 is the data size
-    // Total data length is larger than 4bytes, so next 4bytes contains an offset to data
-    reader.BaseStream.Seek( _exifDataStart + exifValue, SeekOrigin.Begin );
-    var dataValue = reader.ReadBytes( dataCount * tagDataSize );
-    if( dataCount * tagDataSize == 8 )
-    {
-      var enumer = DataConversion.Int32FromBuffer( dataValue, 0, _exifByteOrder );
-      var denom = DataConversion.Int32FromBuffer( dataValue, 4, _exifByteOrder );
-
-      // Reset current position
-      reader.BaseStream.Position = currentStreamPosition;
-
-      return enumer / denom;
-    }
-
-    return 0;
+    _exifDecoder = null;
   }
 
-  private static int GetTagDataSize( int type )
-  {
-    switch( type )
-    {
-      case 1: // unsigned byte
-      case 2: // ascii strings    
-      case 6: // signed byte
-        return 1;
+  private long _width = 0;
+  private long _height = 0;
+  private int _horizontalDpi = 0;
+  private int _verticalDpi = 0;
 
-      case 3: // unsigned short
-      case 8: // signed short
-        return 2;
+  private DecodeExif? _exifDecoder = null;
 
-      case 4: // unsigned long
-      case 9: // signed long
-      case 11: // single float
-        return 4;
-
-      case 5: // unsigned rational
-      case 10: // signed rational
-      case 12: // double float
-        return 8;
-    }
-
-    return 0;
-  }
-
-  private int _width = 0;
-  private int _height = 0;
-
-  private long _exifDataStart = 0;
-  private double _horizontalResolution = 0;
-  private double _verticalResolution = 0;
-  private DensityUnit _resolutionUnit = DensityUnit.PixelsPerInch;
+  private bool _processedJfif = false;
+  private long _jfifWidth = 0;
+  private long _jfifHeight = 0;
+  private DensityUnit _jfifDensityUnits = DensityUnit.PixelsPerInch;
+  private short _jfifHorizontalResolution = 0;
+  private short _jfifVerticalResolution = 0;
 
   private int _remainingInFrame = 0;
-  private ByteOrder _exifByteOrder = ByteOrder.Unknown;
 
   const string ErrorMessage = "Invalid JPEG format";
 }

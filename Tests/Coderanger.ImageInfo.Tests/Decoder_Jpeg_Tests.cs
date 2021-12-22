@@ -26,24 +26,30 @@ public class Decoder_Jpeg_Tests
   [DataRow( "sample-image-file-small.jpg", 4000, 3000, 96, 96, "image/jpeg" )]
   [DataRow( "sample-image-file-very-small.jpg", 2560, 1920, 96, 96, "image/jpeg" )]
   [DataRow( "bad_image_end.jpg", 3000, 3000, 72, 72, "image/jpeg" )]
+  [DataRow( "freediving.jpeg", 5760, 3840, 300, 300, "image/jpeg" )]
+  [DataRow( "dakar-rally.jpg", 6000, 4000, 300, 300, "image/jpeg" )]
+  [DataRow( "dakar-rally-bike.jpg", 2000, 1333, 300, 300, "image/jpeg" )]
+  [DataRow( "dakar-rally-toby-price.jpg", 2560, 1704, 300, 300, "image/jpeg" )]
+  [DataRow( "sample-clouds-400x300.jpg", 400, 300, 350, 350, "image/jpeg" )]
+  [DataRow( "sample-birch-400x300.jpg", 400, 300, 350, 350, "image/jpeg" )]
+  [DataRow( "sample-city-park-400x300.jpg", 400, 300, 350, 350, "image/jpeg" )]
   public void Decode_Valid_Jpeg( string filename, int width, int height, int hdpi, int vdpi, string mime )
   {
     // Arrange
     using var stream = new FileStream( $"./Fixtures/Jpeg/{filename}", FileMode.Open, FileAccess.Read );
-    var info = new ImageInfo( stream );
 
     // Act
-    var details = info.Decode();
+    var info = ImageInfo.DecodeFromStream( stream );
 
     // Assert
-    details.Should().NotBeNull();
-    if( details != null )
+    info.Should().NotBeNull();
+    if( info != null )
     {
-      details.Width.Should().Be( width );
-      details.Height.Should().Be( height );
-      details.HorizontalResolution.Should().Be( hdpi );
-      details.VerticalResolution.Should().Be( vdpi );
-      details.MimeType.Should().Be( mime );
+      info.Width.Should().Be( width );
+      info.Height.Should().Be( height );
+      info.HorizontalDpi.Should().Be( hdpi );
+      info.VerticalDpi.Should().Be( vdpi );
+      info.MimeType.Should().Be( mime );
     }
   }
 }
