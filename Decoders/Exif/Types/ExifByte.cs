@@ -8,35 +8,33 @@
 
 namespace Coderanger.ImageInfo.Decoders.Exif.Types;
 
-using Coderanger.ImageInfo.Decoders.DecoderUtils;
-
 /// <summary>
 /// 
 /// </summary>
-public class ExifByte : ExifValue
+public class ExifByte : ExifTypeValue, IExifValue
 {
   internal ExifByte( BinaryReader reader, ExifComponent component )
-    : base( reader, component )
+    : base( ExifType.Byte, reader, component )
   {
   }
 
-  public new bool TryGetByte( out byte value )
+  public bool TryGetValue( out ExifTagValue? value )
   {
     value = GetValue();
     return true;
   }
 
-  private byte GetValue()
+  private ExifTagValue? GetValue()
   {
     if( !_processed )
     {
-      _convertedValue = Component.DataValueBuffer[ 8 ];
+      _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: Component.DataValueBuffer[ 0 ] );
       _processed = true;
     }
 
     return _convertedValue;
   }
 
-  private byte _convertedValue;
+  private ExifTagValue? _convertedValue;
   private bool _processed = false;
 }

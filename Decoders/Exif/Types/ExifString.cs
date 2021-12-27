@@ -14,21 +14,21 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 /// <summary>
 /// 
 /// </summary>
-public class ExifString : ExifValue
+public class ExifString : ExifTypeValue, IExifValue
 {
   internal ExifString( ExifStringEncoding encoding, BinaryReader reader, ExifComponent component )
-    : base( reader, component )
+    : base( ExifType.String, reader, component )
   {
     _encoding = encoding;
   }
 
-  public new bool TryGetString( out string value )
+  public bool TryGetValue( out ExifTagValue? value )
   {
     value = GetValue();
     return true;
   }
 
-  private string GetValue()
+  private ExifTagValue? GetValue()
   {
     if( !_processed )
     {
@@ -40,19 +40,28 @@ public class ExifString : ExifValue
       var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
       Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
 
-      var byteCount = ( Component.ComponentCount * Component.ComponentSize );
+      var byteCount = Component.ComponentCount * Component.ComponentSize;
       var dataValue = Reader.ReadBytes( byteCount );
-      if( dataValue != null )
+      if( dataValue?.Length > 0 )
       {
         if( _encoding == ExifStringEncoding.Ascii )
         {
           // -1 for end null byte
-          _convertedValue = Encoding.ASCII.GetString( dataValue, 0, byteCount - 1 );
+          var value = Encoding.UTF8.GetString( dataValue, 0, byteCount - 1 );
+          _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: value );
+        }
+        else if( _encoding == ExifStringEncoding.Ucs2 )
+        {
+          // -2 for end double-byte nulls
+          var value = Encoding.GetEncoding( "UCS-2" ).GetString( dataValue, 0, byteCount - 2 );
+          _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: value );
         }
         else
         {
-          // -2 for end null bytes
-          _convertedValue = Encoding.GetEncoding( "UCS-2" ).GetString( dataValue, 0, byteCount - 2 );
+          // UTF8 is best for unknown encoding, as it decodes ascii as well as dbcs characters
+          // -1 for end null byte
+          var value = Encoding.UTF8.GetString( dataValue, 0, byteCount - 1 );
+          _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: value );
         }
       }
 
@@ -65,7 +74,8 @@ public class ExifString : ExifValue
     return _convertedValue;
   }
 
+  private ExifTagValue? _convertedValue;
   private bool _processed = false;
-  private string _convertedValue = string.Empty;
+
   private readonly ExifStringEncoding _encoding;
 }

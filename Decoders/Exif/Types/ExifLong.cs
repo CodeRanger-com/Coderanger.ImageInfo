@@ -13,26 +13,29 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 /// <summary>
 /// 
 /// </summary>
-internal class ExifLong : ExifValue
+internal class ExifLong : ExifTypeValue, IExifValue
 {
   internal ExifLong( BinaryReader reader, ExifComponent component )
-    :base( reader, component )
+    :base( ExifType.Long, reader, component )
   {
   }
 
-  public new bool TryGetLong( out long value )
+  public bool TryGetValue( out ExifTagValue? value )
   {
     value = GetValue();
     return true;
   }
 
-  private long GetValue()
+  private ExifTagValue? GetValue()
   {
     if( !_processed )
     {
       if( Component.ComponentCount == 1 )
       {
-        _convertedValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+        // Its a 4 byte (int32) value but it is expected to be an 8 byte value
+        // so its safe to just cast it
+        var value = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+        _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: (long)value );
         _processed = true;
         return _convertedValue;
       }
@@ -48,7 +51,8 @@ internal class ExifLong : ExifValue
       var dataValue = Reader.ReadBytes( Component.ComponentCount * Component.ComponentSize );
       if( Component.ComponentCount * Component.ComponentSize == 8 )
       {
-        _convertedValue = DataConversion.Int64FromBuffer( dataValue, 0, Component.ByteOrder );
+        var value = DataConversion.Int64FromBuffer( dataValue, 0, Component.ByteOrder );
+        _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: value );
       }
 
       _processed = true;
@@ -60,33 +64,36 @@ internal class ExifLong : ExifValue
     return _convertedValue;
   }
 
-  private long _convertedValue;
+  private ExifTagValue? _convertedValue;
   private bool _processed = false;
 }
 
 /// <summary>
 /// 
 /// </summary>
-internal class ExifULong : ExifValue
+internal class ExifULong : ExifTypeValue, IExifValue
 {
   internal ExifULong( BinaryReader reader, ExifComponent component )
-    : base( reader, component )
+    : base( ExifType.ULong, reader, component )
   {
   }
 
-  public new bool TryGetULong( out ulong value )
+  public bool TryGetValue( out ExifTagValue? value )
   {
     value = GetValue();
     return true;
   }
 
-  private ulong GetValue()
+  private ExifTagValue? GetValue()
   {
     if( !_processed )
     {
       if( Component.ComponentCount == 1 )
       {
-        _convertedValue = DataConversion.UInt32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+        // Its a 4 byte (int32) value but it is expected to be an 8 byte value
+        // so its safe to just cast it
+        var value = DataConversion.UInt32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+        _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: (ulong)value );
         _processed = true;
         return _convertedValue;
       }
@@ -102,7 +109,8 @@ internal class ExifULong : ExifValue
       var dataValue = Reader.ReadBytes( Component.ComponentCount * Component.ComponentSize );
       if( Component.ComponentCount * Component.ComponentSize == 8 )
       {
-        _convertedValue = DataConversion.UInt64FromBuffer( dataValue, 0, Component.ByteOrder );
+        var value = DataConversion.UInt64FromBuffer( dataValue, 0, Component.ByteOrder );
+        _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: value );
       }
 
       _processed = true;
@@ -114,6 +122,6 @@ internal class ExifULong : ExifValue
     return _convertedValue;
   }
 
-  private ulong _convertedValue;
+  private ExifTagValue? _convertedValue;
   private bool _processed = false;
 }

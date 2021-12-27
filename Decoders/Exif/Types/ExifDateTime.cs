@@ -15,20 +15,20 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 /// <summary>
 /// 
 /// </summary>
-public class ExifDateTime : ExifValue
+public class ExifDateTime : ExifTypeValue, IExifValue
 {
   internal ExifDateTime( BinaryReader reader, ExifComponent component )
-    : base( reader, component )
+    : base( ExifType.DateTime, reader, component )
   {
   }
 
-  public new bool TryGetDateTime( out DateTime? value )
+  public bool TryGetValue( out ExifTagValue? value )
   {
     value = GetValue();
     return true;
   }
 
-  private DateTime? GetValue()
+  private ExifTagValue? GetValue()
   {
     if( !_processed )
     {
@@ -46,10 +46,10 @@ public class ExifDateTime : ExifValue
       if( dataValue != null )
       {
         var value = Encoding.ASCII.GetString( dataValue );
-        // 2020:01:02 09:19:25
         if( DateTime.TryParseExact( value, "yyyy:MM:dd HH:mm:ss", null, System.Globalization.DateTimeStyles.None, out var dt ) )
         {
-          _convertedValue = dt;
+          // Dates are stored as ASCII strings, but we can do better
+          _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: dt );
         }
       }
 
@@ -62,6 +62,6 @@ public class ExifDateTime : ExifValue
     return _convertedValue;
   }
 
+  private ExifTagValue? _convertedValue;
   private bool _processed = false;
-  private DateTime? _convertedValue = null;
 }

@@ -3,7 +3,10 @@
 //     CodeRanger.com. All rights reserved
 // </copyright>
 // <author>Dan Petitt</author>
-// <comment></comment>
+// <comment>
+// https://www.cipa.jp/std/documents/e/DC-008-2012_E.pdf
+// https://www.media.mit.edu/pia/Research/deepview/exif.html
+// </comment>
 // -----------------------------------------------------------------------
 
 namespace Coderanger.ImageInfo.Decoders.Exif;
@@ -88,113 +91,50 @@ internal class DecodeExif
   {
     // Offset is from the beginning of this header (i.e. at the point of the byte order marker)
     var ifdOffset = DataConversion.Int32FromBuffer( data, 4, _exifByteOrder );
+    ExtractTagsFromIfd( ExifProfileType.Exif, ifdOffset, ref _exifTags );
 
-    do
-    {
-      _reader.BaseStream.Seek( _segmentStart + ifdOffset, SeekOrigin.Begin );
-
-      var ifdDirectoryBuffer = _reader.ReadBytes( 2 );
-      var directoryCount = DataConversion.Int16FromBuffer( ifdDirectoryBuffer, 0, _exifByteOrder );
-      for( var directoryIndex = 0; directoryIndex < directoryCount; directoryIndex++ )
-      {
-        SetSpecialOffset();
-
-        var dataValue = ExifTagValueFactory.Create( ExifProfileType.Exif, _reader, _segmentStart, _exifByteOrder );
-        if( dataValue != null && !ExifTags.ContainsKey( dataValue.Component.Tag ) )
-        {
-          ExifTags.Add( dataValue.Component.Tag, dataValue );
-        }
-      }
-
-      // Last entry after directories is the offset to next IFD
-      var nextIfdBuffer = _reader.ReadBytes( 4 );
-      ifdOffset = DataConversion.Int32FromBuffer( nextIfdBuffer, 0, _exifByteOrder );
-    } while( ifdOffset != 0 );
-
-    if( _ifdExifOffset > 0 )
-    {
-      ifdOffset = _ifdExifOffset;
-      do
-      {
-        _reader.BaseStream.Seek( _segmentStart + ifdOffset, SeekOrigin.Begin );
-
-        var ifdDirectoryBuffer = _reader.ReadBytes( 2 );
-        var directoryCount = DataConversion.Int16FromBuffer( ifdDirectoryBuffer, 0, _exifByteOrder );
-        for( var directoryIndex = 0; directoryIndex < directoryCount; directoryIndex++ )
-        {
-          SetSpecialOffset();
-
-          var dataValue = ExifTagValueFactory.Create( ExifProfileType.Exif, _reader, _segmentStart, _exifByteOrder );
-          if( dataValue != null && !ExifTags.ContainsKey( dataValue.Component.Tag ) )
-          {
-            ExifTags.Add( dataValue.Component.Tag, dataValue );
-          }
-        }
-
-        // Last entry after directories is the offset to next IFD
-        var nextIfdBuffer = _reader.ReadBytes( 4 );
-        ifdOffset = DataConversion.Int32FromBuffer( nextIfdBuffer, 0, _exifByteOrder );
-      } while( ifdOffset != 0 );
-    }
-
-    if( _ifdGpsOffset > 0 )
-    {
-      ifdOffset = _ifdGpsOffset;
-      do
-      {
-        _reader.BaseStream.Seek( _segmentStart + ifdOffset, SeekOrigin.Begin );
-
-        var ifdDirectoryBuffer = _reader.ReadBytes( 2 );
-        var directoryCount = DataConversion.Int16FromBuffer( ifdDirectoryBuffer, 0, _exifByteOrder );
-        for( var directoryIndex = 0; directoryIndex < directoryCount; directoryIndex++ )
-        {
-          var dataValue = ExifTagValueFactory.Create( ExifProfileType.Gps, _reader, _segmentStart, _exifByteOrder );
-          if( dataValue != null && !GpsTags.ContainsKey( dataValue.Component.Tag ) )
-          {
-            GpsTags.Add( dataValue.Component.Tag, dataValue );
-          }
-        }
-
-        // Last entry after directories is the offset to next IFD
-        var nextIfdBuffer = _reader.ReadBytes( 4 );
-        ifdOffset = DataConversion.Int32FromBuffer( nextIfdBuffer, 0, _exifByteOrder );
-      } while( ifdOffset != 0 );
-    }
-
-    if( _ifdInterOffset > 0 )
-    {
-      ifdOffset = _ifdInterOffset;
-      do
-      {
-        _reader.BaseStream.Seek( _segmentStart + ifdOffset, SeekOrigin.Begin );
-
-        var ifdDirectoryBuffer = _reader.ReadBytes( 2 );
-        var directoryCount = DataConversion.Int16FromBuffer( ifdDirectoryBuffer, 0, _exifByteOrder );
-        for( var directoryIndex = 0; directoryIndex < directoryCount; directoryIndex++ )
-        {
-          var dataValue = ExifTagValueFactory.Create( ExifProfileType.Gps, _reader, _segmentStart, _exifByteOrder );
-          if( dataValue != null && !InterTags.ContainsKey( dataValue.Component.Tag ) )
-          {
-            InterTags.Add( dataValue.Component.Tag, dataValue );
-          }
-        }
-
-        // Last entry after directories is the offset to next IFD
-        var nextIfdBuffer = _reader.ReadBytes( 4 );
-        ifdOffset = DataConversion.Int32FromBuffer( nextIfdBuffer, 0, _exifByteOrder );
-      } while( ifdOffset != 0 );
-    }
+    ExtractTagsFromIfd( ExifProfileType.Exif, _ifdExifOffset, ref _exifTags );
+    ExtractTagsFromIfd( ExifProfileType.Gps, _ifdGpsOffset, ref _gpsTags );
+    ExtractTagsFromIfd( ExifProfileType.Interoperability, _ifdInterOffset, ref _interTags );
 
     // Finished all IFDs
     _processed = true;
   }
 
-  private bool SetSpecialOffset()
+  private void ExtractTagsFromIfd( ExifProfileType profile, int ifdOffset, ref Dictionary<ushort, IExifValue> tags )
+  {
+    if( ifdOffset > 0 )
+    {
+      do
+      {
+        _reader.BaseStream.Seek( _segmentStart + ifdOffset, SeekOrigin.Begin );
+
+        var ifdDirectoryBuffer = _reader.ReadBytes( 2 );
+        var directoryCount = DataConversion.Int16FromBuffer( ifdDirectoryBuffer, 0, _exifByteOrder );
+        for( var directoryIndex = 0; directoryIndex < directoryCount; directoryIndex++ )
+        {
+          DiscoverIfdOffsets();
+
+          var dataValue = ExifTagValueFactory.Create( profile, _reader, _segmentStart, _exifByteOrder );
+          if( dataValue != null && !tags.ContainsKey( dataValue.Tag ) )
+          {
+            tags.Add( dataValue.Tag, dataValue );
+          }
+        }
+
+        // Last entry after directories is the offset to next IFD
+        var nextIfdBuffer = _reader.ReadBytes( 4 );
+        ifdOffset = DataConversion.Int32FromBuffer( nextIfdBuffer, 0, _exifByteOrder );
+      } while( ifdOffset != 0 );
+    }
+  }
+
+  private bool DiscoverIfdOffsets()
   {
     try
     {
       var directoryBuffer = _reader.ReadBytes( IfdOffsetSegmentSize );
-      var (tag, dataType, componentCount, valueBuffer) = ExifTagValueFactory.CrackData( directoryBuffer, _exifByteOrder );
+      var (tag, _, _, valueBuffer) = ExifTagValueFactory.CrackData( directoryBuffer, _exifByteOrder );
       var value = DataConversion.Int32FromBuffer( valueBuffer, 0, _exifByteOrder );
 
       switch( tag )
@@ -231,13 +171,13 @@ internal class DecodeExif
   /// </summary>
   private void ExtractResolutionInfo()
   {
-    if( ExifTags.TryGetValue( ExifTag.ResolutionUnit, out var resUnitTag ) )
+    if( _exifTags.TryGetValue( ExifTag.ResolutionUnit, out var resUnitTag ) )
     {
       DensityUnit? exifDensityUnit = null;
 
-      if( ( (ExifUShort)resUnitTag ).TryGetUShort( out var unitVal ) )
+      if( ( (ExifUShort)resUnitTag ).TryGetValue( out var unitVal ) )
       {
-        exifDensityUnit = unitVal switch
+        exifDensityUnit = unitVal?.Value switch
         {
           2 => DensityUnit.PixelsPerInch,
           3 => DensityUnit.PixelsPerCentimeter,
@@ -245,20 +185,23 @@ internal class DecodeExif
         };
       }
 
-      if( exifDensityUnit.HasValue && ExifTags.TryGetValue( ExifTag.XResolution, out var xResTag ) )
+      if( !exifDensityUnit.HasValue )
       {
-        var exifValue = xResTag as ExifURational;
-        if( exifValue?.TryGetRational( out var xDpi ) ?? false )
+        return;
+      }
+
+      if( _exifTags.TryGetValue( ExifTag.XResolution, out var xResTag ) )
+      {
+        if( xResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value != null )
         {
-          HorizontalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, xDpi );
+          HorizontalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, (double)dpi.Value );
         }
       }
-      if( exifDensityUnit.HasValue && ExifTags.TryGetValue( ExifTag.YResolution, out var yResTag ) )
+      if( _exifTags.TryGetValue( ExifTag.YResolution, out var yResTag ) )
       {
-        var exifValue = yResTag as ExifURational;
-        if( exifValue?.TryGetRational( out var yDpi ) ?? false )
+        if( yResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value != null )
         {
-          VerticalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, yDpi );
+          VerticalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, (double)dpi.Value );
         }
       }
     }
@@ -266,11 +209,27 @@ internal class DecodeExif
 
   internal int HorizontalDpi { get; set; } = 0;
   internal int VerticalDpi { get; set; } = 0;
-  internal Dictionary<ushort, ExifValue> ExifTags { get; set; } = new();
-  internal Dictionary<ushort, ExifValue> GpsTags { get; set; } = new();
-  internal Dictionary<ushort, ExifValue> InterTags { get; set; } = new();
+
+  internal Dictionary<ushort, IExifValue> GetExifTags()
+  {
+    return _exifTags;
+  }
+
+  internal Dictionary<ushort, IExifValue> GetGpsTags()
+  {
+    return _gpsTags;
+  }
+
+  internal Dictionary<ushort, IExifValue> GetInteroperabilityfTags()
+  {
+    return _interTags;
+  }
 
   private const int TiffSignatureValue = 42;
+
+  private Dictionary<ushort, IExifValue> _exifTags = new();
+  private Dictionary<ushort, IExifValue> _gpsTags = new();
+  private Dictionary<ushort, IExifValue> _interTags = new();
 
   private long _segmentStart = 0;
   private bool _processed = false;

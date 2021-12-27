@@ -9,13 +9,20 @@
 namespace Coderanger.ImageInfo.Tests;
 
 using System.IO;
+using Coderanger.ImageInfo.Decoders.Exif.Types;
+using Coderanger.ImageInfo.Decoders.Exif;
+
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Diagnostics;
+using System;
+using System.Collections.Generic;
 
 [TestClass]
 public class Decoder_Jpeg_Tests
 {
   [TestMethod]
+  [DataRow( "budleigh-salterton.jpg", 4032, 3024, 72, 72, "image/jpeg" )]
   [DataRow( "high-res.jpg", 2000, 1333, 300, 300, "image/jpeg" )]
   [DataRow( "large_test.jpg", 1280, 853, 96, 96, "image/jpeg" )]
   [DataRow( "large_test_progressive.jpg", 1280, 853, 96, 96, "image/jpeg" )]

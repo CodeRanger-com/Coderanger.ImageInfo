@@ -13,20 +13,20 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 /// <summary>
 /// 
 /// </summary>
-public class ExifRational: ExifValue
+public class ExifRational: ExifTypeValue, IExifValue
 {
   internal ExifRational( BinaryReader reader, ExifComponent component )
-    : base( reader, component )
+    : base( ExifType.Rational, reader, component )
   {
   }
 
-  public new bool TryGetRational( out double value )
+  public bool TryGetValue( out ExifTagValue? value )
   {
     value = GetValue();
     return true;
   }
 
-  private double GetValue()
+  private ExifTagValue? GetValue()
   {
     if( !_processed )
     {
@@ -44,7 +44,7 @@ public class ExifRational: ExifValue
         var enumer = DataConversion.Int32FromBuffer( dataValue, 0, Component.ByteOrder );
         var denom = DataConversion.Int32FromBuffer( dataValue, 4, Component.ByteOrder );
 
-        _convertedValue = enumer / denom;
+        _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: (double)enumer / denom );
       }
 
       _processed = true;
@@ -56,27 +56,27 @@ public class ExifRational: ExifValue
     return _convertedValue;
   }
 
-  private double _convertedValue;
+  private ExifTagValue? _convertedValue;
   private bool _processed = false;
 }
 
 /// <summary>
 /// 
 /// </summary>
-public class ExifURational : ExifValue
+public class ExifURational : ExifTypeValue, IExifValue
 {
   internal ExifURational( BinaryReader reader, ExifComponent component )
-    : base( reader, component )
+    : base( ExifType.URational, reader, component )
   {
   }
 
-  public new bool TryGetRational( out double value )
+  public bool TryGetValue( out ExifTagValue? value )
   {
     value = GetValue();
     return true;
   }
 
-  private double GetValue()
+  private ExifTagValue? GetValue()
   {
     if( !_processed )
     {
@@ -94,7 +94,7 @@ public class ExifURational : ExifValue
         var enumer = DataConversion.Int32FromBuffer( dataValue, 0, Component.ByteOrder );
         var denom = DataConversion.Int32FromBuffer( dataValue, 4, Component.ByteOrder );
 
-        _convertedValue = enumer / denom;
+        _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: (double)enumer / denom );
       }
 
       _processed = true;
@@ -106,6 +106,6 @@ public class ExifURational : ExifValue
     return _convertedValue;
   }
 
-  private double _convertedValue;
+  private ExifTagValue? _convertedValue;
   private bool _processed = false;
 }

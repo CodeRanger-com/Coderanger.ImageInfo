@@ -20,7 +20,6 @@ namespace Coderanger.ImageInfo.Decoders.Jpeg;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 using Coderanger.ImageInfo.Decoders.Exif;
-using Coderanger.ImageInfo.Decoders.Exif.Types;
 
 /// <summary>
 /// Decoder for the JPEG image format
@@ -132,13 +131,6 @@ internal class DecodeJpeg : IDecoder
 
       SyncResolution();
 
-      if( _width > 0 && _height > 0 && _horizontalDpi > 0 && _verticalDpi > 0 )
-      {
-        // Short circuit when all the elements required exist
-        reader.BaseStream.Position = 0;
-        return new ImageDetails( _width, _height, _horizontalDpi, _verticalDpi, "image/jpeg", _exifDecoder?.ExifTags ?? new Dictionary<ushort, ExifValue>() );
-      }
-
       if( reader.BaseStream.Position >= reader.BaseStream.Length )
       {
         eof = true;
@@ -147,8 +139,7 @@ internal class DecodeJpeg : IDecoder
 
     if( _width > 0 && _height > 0 )
     {
-      reader.BaseStream.Position = 0;
-      return new ImageDetails( _width, _height, _horizontalDpi, _verticalDpi, "image/jpeg", _exifDecoder?.ExifTags ?? new Dictionary<ushort, ExifValue>() );
+      return new ImageDetails( _width, _height, _horizontalDpi, _verticalDpi, "image/jpeg", _exifDecoder?.GetExifTags(), _exifDecoder?.GetGpsTags() );
     }
 
     throw ExceptionHelper.Throw( reader, ErrorMessage );

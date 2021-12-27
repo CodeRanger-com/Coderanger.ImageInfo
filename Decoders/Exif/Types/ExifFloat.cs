@@ -13,20 +13,20 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 /// <summary>
 /// 
 /// </summary>
-public class ExifFloat : ExifValue
+public class ExifFloat : ExifTypeValue, IExifValue
 {
   internal ExifFloat( BinaryReader reader, ExifComponent component )
-    : base( reader, component )
+    : base( ExifType.Float, reader, component )
   {
   }
 
-  public new bool TryGetFloat( out float value )
+  public bool TryGetValue( out ExifTagValue? value )
   {
     value = GetValue();
     return true;
   }
 
-  private float GetValue()
+  private ExifTagValue? GetValue()
   {
     if( !_processed )
     {
@@ -44,7 +44,7 @@ public class ExifFloat : ExifValue
         var enumer = DataConversion.Int32FromBuffer( dataValue, 0, Component.ByteOrder );
         var denom = DataConversion.Int32FromBuffer( dataValue, 4, Component.ByteOrder );
 
-        _convertedValue = enumer / denom;
+        _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: enumer / denom );
       }
 
       _processed = true;
@@ -56,6 +56,6 @@ public class ExifFloat : ExifValue
     return _convertedValue;
   }
 
+  private ExifTagValue? _convertedValue;
   private bool _processed = false;
-  private float _convertedValue = 0;
 }

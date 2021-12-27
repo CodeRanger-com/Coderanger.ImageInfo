@@ -23,6 +23,9 @@
     <None Update="Fixtures\Jpeg\bad_image_end.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Fixtures\Jpeg\budleigh-salterton.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Fixtures\Jpeg\dakar-rally-bike.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

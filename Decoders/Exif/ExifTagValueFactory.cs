@@ -14,7 +14,7 @@ using Coderanger.ImageInfo.Decoders.Exif.Types;
 
 internal static class ExifTagValueFactory
 {
-  internal static ExifValue? Create( ExifProfileType profile, BinaryReader reader, long dataStart, TiffByteOrder byteOrder )
+  internal static IExifValue? Create( ExifProfileType profile, BinaryReader reader, long dataStart, TiffByteOrder byteOrder )
   {
     var directoryBuffer = reader.ReadBytes( ExifDirectorySize );
     var component = ExtractComponent( profile, directoryBuffer, dataStart, byteOrder );
@@ -27,8 +27,8 @@ internal static class ExifTagValueFactory
           ExifTag.ProcessingSoftware => new ExifString( ExifStringEncoding.Ascii, reader, component ),
           ExifTag.NewSubfileType => new ExifLong( reader, component ),
           ExifTag.SubfileType => new ExifUShort( reader, component ),
-          ExifTag.ImageWidth => new ExifLong( reader, component ),
-          ExifTag.ImageHeight => new ExifLong( reader, component ),
+          ExifTag.ImageWidth => new ExifUShort( reader, component ),
+          ExifTag.ImageHeight => new ExifUShort( reader, component ),
           ExifTag.BitsPerSample => new ExifUShort( reader, component ),
           ExifTag.Compression => new ExifUShort( reader, component ),
           ExifTag.PhotometricInterpretation => new ExifUShort( reader, component ),
@@ -64,8 +64,8 @@ internal static class ExifTagValueFactory
           ExifTag.PrimaryChromaticities => new ExifURational( reader, component ),
           ExifTag.ColorMap => new ExifUShort( reader, component ),
           ExifTag.HalftoneHints => new ExifUShort( reader, component ),
-          ExifTag.TileWidth => new ExifLong( reader, component ),
-          ExifTag.TileLength => new ExifLong( reader, component ),
+          ExifTag.TileWidth => new ExifULong( reader, component ),
+          ExifTag.TileLength => new ExifULong( reader, component ),
           ExifTag.TileOffsets => new ExifUShort( reader, component ),
           ExifTag.TileByteCounts => new ExifLong( reader, component ),
           ExifTag.InkSet => new ExifUShort( reader, component ),
@@ -83,9 +83,9 @@ internal static class ExifTagValueFactory
           ExifTag.YClipPathUnits => new ExifShort( reader, component ),
           ExifTag.Indexed => new ExifUShort( reader, component ),
           ExifTag.OPIProxy => new ExifUShort( reader, component ),
-          ExifTag.JPEGProc => new ExifLong( reader, component ),
-          ExifTag.JPEGInterchangeFormat => new ExifLong( reader, component ),
-          ExifTag.JPEGInterchangeFormatLength => new ExifLong( reader, component ),
+          ExifTag.JPEGProc => new ExifULong( reader, component ),
+          ExifTag.JPEGInterchangeFormat => new ExifULong( reader, component ),
+          ExifTag.JPEGInterchangeFormatLength => new ExifULong( reader, component ),
           ExifTag.JPEGRestartInterval => new ExifUShort( reader, component ),
           ExifTag.JPEGLosslessPredictors => new ExifUShort( reader, component ),
           ExifTag.JPEGPointTransforms => new ExifUShort( reader, component ),
@@ -97,7 +97,7 @@ internal static class ExifTagValueFactory
           ExifTag.YCbCrPositioning => new ExifUShort( reader, component ),
           ExifTag.ReferenceBlackWhite => new ExifURational( reader, component ),
           ExifTag.XMLPacket => new ExifByte( reader, component ),
-          ExifTag.Rating => new ( reader, component ),
+          ExifTag.Rating => new ExifUShort( reader, component ),
           ExifTag.RatingPercent => new ExifUShort( reader, component ),
           ExifTag.VignettingCorrParams => new ExifShort( reader, component ),
           ExifTag.ChromaticAberrationCorrParams => new ExifShort( reader, component ),
@@ -106,7 +106,7 @@ internal static class ExifTagValueFactory
           ExifTag.CFARepeatPatternDim => new ExifUShort( reader, component ),
           ExifTag.CFAPattern => new ExifByte( reader, component ),
           ExifTag.BatteryLevel => new ExifURational( reader, component ),
-          ExifTag.Copyright => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.Copyright => new ExifString( ExifStringEncoding.Utf8, reader, component ),
           ExifTag.ExposureTime => new ExifURational( reader, component ),
           ExifTag.FNumber => new ExifURational( reader, component ),
           ExifTag.IPTCNAA => new ExifLong( reader, component ),
@@ -252,7 +252,43 @@ internal static class ExifTagValueFactory
 
       case ExifProfileType.Gps:
       {
-        break;
+        return component.Tag switch
+        {
+          ExifTag.GPSVersionID => new ExifByte( reader, component ),
+          ExifTag.GPSLatitudeRef => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSLatitude => new ExifURational( reader, component ),
+          ExifTag.GPSLongitudeRef => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSLongitude => new ExifURational( reader, component ),
+          ExifTag.GPSAltitudeRef => new ExifByte( reader, component ),
+          ExifTag.GPSAltitude => new ExifURational( reader, component ),
+          ExifTag.GPSTimeStamp => new ExifURational( reader, component ),
+          ExifTag.GPSSatellites => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSStatus => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSMeasureMode => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSDOP => new ExifURational( reader, component ),
+          ExifTag.GPSSpeedRef => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSSpeed => new ExifURational( reader, component ),
+          ExifTag.GPSTrackRef => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSTrack => new ExifURational( reader, component ),
+          ExifTag.GPSImgDirectionRef => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSImgDirection => new ExifURational( reader, component ),
+          ExifTag.GPSMapDatum => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSDestLatitudeRef => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSDestLatitude => new ExifURational( reader, component ),
+          ExifTag.GPSDestLongitudeRef => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSDestLongitude => new ExifURational( reader, component ),
+          ExifTag.GPSDestBearingRef => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSDestBearing => new ExifURational( reader, component ),
+          ExifTag.GPSDestDistanceRef => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSDestDistance => new ExifURational( reader, component ),
+          ExifTag.GPSProcessingMethod => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSAreaInformation => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.GPSDateStamp => new ExifDate( reader, component ),
+          ExifTag.GPSDifferential => new ExifUShort( reader, component ),
+          ExifTag.GPSHPositioningError => new ExifURational( reader, component ),
+
+          _ => null,
+          };
       }
 
       case ExifProfileType.Interoperability:

@@ -19,5 +19,7 @@ public enum ExifType
   Long,
   Float,
   Rational,
+  URational,
+  Date,
   DateTime,
 }
