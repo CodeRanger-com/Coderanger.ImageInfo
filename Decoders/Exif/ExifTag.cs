@@ -1852,29 +1852,30 @@ public class ExifTag : IExifTag
 
   //
   // Interoperability Section
+  // Added 0x2000 to avoid clash with other tags
 
   /// <summary>
   /// Indicates the identification of the Interoperability rule. Use "R98" for stating ExifR98 Rules. Four bytes used including the termination code (NULL). see the separate volume of Recommended Exif Interoperability Rules (ExifR98) for other tags used for ExifR98.
   /// </summary>
-  public const ushort InteroperabilityIndex = 0x0001;
+  public const ushort InteroperabilityIndex = 0x0001 + ExifConstants.InteroperabilityOffsetFix;
 
   /// <summary>
   /// (undefined type) Interoperability version
   /// </summary>
-  public const ushort InteroperabilityVersion = 0x0002;
+  public const ushort InteroperabilityVersion = 0x0002 + ExifConstants.InteroperabilityOffsetFix;
 
   /// <summary>
   /// File format of image file
   /// </summary>
-  public const ushort RelatedImageFileFormat = 0x1000;
+  public const ushort RelatedImageFileFormat = 0x1000 + ExifConstants.InteroperabilityOffsetFix;
 
   /// <summary>
   /// Image width
   /// </summary>
-  public const ushort RelatedImageWidth = 0x1001;
+  public const ushort RelatedImageWidth = 0x1001 + ExifConstants.InteroperabilityOffsetFix;
 
   /// <summary>
   /// Image height
   /// </summary>
-  public const ushort RelatedImageLength = 0x1002;
+  public const ushort RelatedImageLength = 0x1002 + ExifConstants.InteroperabilityOffsetFix;
 }

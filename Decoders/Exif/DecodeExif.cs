@@ -223,7 +223,7 @@ internal class DecodeExif
     return _gpsTags;
   }
 
-  internal Dictionary<ushort, IExifValue> GetInteroperabilityfTags()
+  internal Dictionary<ushort, IExifValue> GetInteroperabilityTags()
   {
     return _interTags;
   }

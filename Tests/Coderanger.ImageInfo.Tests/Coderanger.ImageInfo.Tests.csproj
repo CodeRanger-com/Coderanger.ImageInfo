@@ -36,7 +36,37 @@
     <None Update="Fixtures\Jpeg\dakar-rally.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Fixtures\Jpeg\exif.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Fixtures\Jpeg\freediving.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Jpeg\gps\DSCN0010.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Jpeg\gps\DSCN0012.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Jpeg\gps\DSCN0021.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Jpeg\gps\DSCN0025.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Jpeg\gps\DSCN0027.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Jpeg\gps\DSCN0029.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Jpeg\gps\DSCN0038.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Jpeg\gps\DSCN0040.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Jpeg\gps\DSCN0042.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Fixtures\Jpeg\high-res.jpg">

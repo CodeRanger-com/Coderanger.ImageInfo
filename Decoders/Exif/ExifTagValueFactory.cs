@@ -288,12 +288,22 @@ internal static class ExifTagValueFactory
           ExifTag.GPSHPositioningError => new ExifURational( reader, component ),
 
           _ => null,
-          };
+        };
       }
 
       case ExifProfileType.Interoperability:
       {
-        break;
+        component.Tag += ExifConstants.InteroperabilityOffsetFix;
+        return component.Tag switch
+        {
+          ExifTag.InteroperabilityIndex => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.InteroperabilityVersion => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.RelatedImageFileFormat => new ExifString( ExifStringEncoding.Ascii, reader, component ),
+          ExifTag.RelatedImageWidth => new ExifUShort( reader, component ),
+          ExifTag.RelatedImageLength => new ExifUShort( reader, component ),
+
+          _ => null,
+        };
       }
     }
 

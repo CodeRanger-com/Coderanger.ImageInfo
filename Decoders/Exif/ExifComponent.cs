@@ -24,7 +24,7 @@ internal struct ExifComponent
   }
 
   public ExifProfileType Profile { get; init; }
-  public ushort Tag { get; init; }
+  public ushort Tag { get; set; }
   public short DataType { get; init; }
   public int ComponentCount { get; init; }
   public byte[] DataValueBuffer { get; init; }
@@ -55,6 +55,10 @@ internal struct ExifComponent
   {
     switch( DataType )
     {
+      case 7: // undefined - so is an 8 bit byte
+        ComponentSize = 1;
+        break;
+
       case 1: // unsigned byte
       case 2: // ascii strings    
       case 6: // signed byte

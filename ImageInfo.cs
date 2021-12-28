@@ -147,6 +147,11 @@ public sealed class ImageInfo
   public Dictionary<ushort, IExifValue>? GpsTags { get; private set; }
 
   /// <summary>
+  /// Dictionary of exif interoperability tags, or null if none exist
+  /// </summary>
+  public Dictionary<ushort, IExifValue>? InteroperabilityTags { get; private set; }
+
+  /// <summary>
   /// Initiate an instance of the class with the given stream for decoding
   /// </summary>
   /// <param name="image">Stream of data which may or may not contain a known image</param>
@@ -180,6 +185,7 @@ public sealed class ImageInfo
       MimeType = imageDetails.MimeType;
       ExifTags = imageDetails.ExifTags;
       GpsTags = imageDetails.GpsTags;
+      InteroperabilityTags = imageDetails.InteroperabilityTags;
     }
   }
 

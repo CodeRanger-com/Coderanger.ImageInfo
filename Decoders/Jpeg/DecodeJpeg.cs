@@ -54,6 +54,12 @@ internal class DecodeJpeg : IDecoder
     bool eof = false;
     while( !eof )
     {
+      if( reader.BaseStream.Position >= reader.BaseStream.Length )
+      {
+        eof = true;
+        continue;
+      }
+
       // Look for frame start before starting
       var markerPrefix = reader.ReadBytes( 2 );
       if( markerPrefix[ 0 ] != JpegConstants.Markers.Start )
@@ -130,16 +136,11 @@ internal class DecodeJpeg : IDecoder
       }
 
       SyncResolution();
-
-      if( reader.BaseStream.Position >= reader.BaseStream.Length )
-      {
-        eof = true;
-      }
     }
 
     if( _width > 0 && _height > 0 )
     {
-      return new ImageDetails( _width, _height, _horizontalDpi, _verticalDpi, "image/jpeg", _exifDecoder?.GetExifTags(), _exifDecoder?.GetGpsTags() );
+      return new ImageDetails( _width, _height, _horizontalDpi, _verticalDpi, "image/jpeg", _exifDecoder?.GetExifTags(), _exifDecoder?.GetGpsTags(), _exifDecoder?.GetInteroperabilityTags() );
     }
 
     throw ExceptionHelper.Throw( reader, ErrorMessage );

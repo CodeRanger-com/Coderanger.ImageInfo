@@ -44,4 +44,6 @@ internal static class ExifConstants
     /// </summary>
     Inter = 0xA005, // 40965
   }
+
+  internal const ushort InteroperabilityOffsetFix = 0x2000;
 }

@@ -38,6 +38,7 @@ public class Decoder_Jpeg_Tests
   [DataRow( "sample-clouds-400x300.jpg", 400, 300, 350, 350, "image/jpeg" )]
   [DataRow( "sample-birch-400x300.jpg", 400, 300, 350, 350, "image/jpeg" )]
   [DataRow( "sample-city-park-400x300.jpg", 400, 300, 350, 350, "image/jpeg" )]
+  [DataRow( "exif.jpg", 480, 360, 180, 180, "image/jpeg" )]
   public void Decode_Valid_Jpeg( string filename, int width, int height, int hdpi, int vdpi, string mime )
   {
     // Arrange
@@ -59,10 +60,51 @@ public class Decoder_Jpeg_Tests
       // Assert tag information
       info.ExifTags?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
       info.GpsTags?.ShouldMatchChildSnapshot( $"{filename}-gpstags" );
+      info.InteroperabilityTags?.ShouldMatchChildSnapshot( $"{filename}-intertags" );
 
       // Output data to console
       OutputTags( "EXIF Tags", info.ExifTags );
       OutputTags( "EXIF GPS Tags", info.GpsTags );
+      OutputTags( "EXIF Interoperability Tags", info.InteroperabilityTags );
+    }
+  }
+
+  [TestMethod]
+  [DataRow( "DSCN0010.jpg", 640, 480, 300, 300, "image/jpeg" )]
+  [DataRow( "DSCN0012.jpg", 640, 480, 300, 300, "image/jpeg" )]
+  [DataRow( "DSCN0021.jpg", 640, 480, 300, 300, "image/jpeg" )]
+  [DataRow( "DSCN0025.jpg", 640, 480, 300, 300, "image/jpeg" )]
+  [DataRow( "DSCN0027.jpg", 640, 480, 300, 300, "image/jpeg" )]
+  [DataRow( "DSCN0038.jpg", 640, 480, 300, 300, "image/jpeg" )]
+  [DataRow( "DSCN0040.jpg", 640, 480, 300, 300, "image/jpeg" )]
+  [DataRow( "DSCN0042.jpg", 640, 480, 300, 300, "image/jpeg" )]
+  public void Decode_Valid_Gps_Jpeg( string filename, int width, int height, int hdpi, int vdpi, string mime )
+  {
+    // Arrange
+    using var stream = new FileStream( $"./Fixtures/Jpeg/gps/{filename}", FileMode.Open, FileAccess.Read );
+
+    // Act
+    var info = ImageInfo.DecodeFromStream( stream );
+
+    // Assert
+    info.Should().NotBeNull();
+    if( info != null )
+    {
+      info.Width.Should().Be( width );
+      info.Height.Should().Be( height );
+      info.HorizontalDpi.Should().Be( hdpi );
+      info.VerticalDpi.Should().Be( vdpi );
+      info.MimeType.Should().Be( mime );
+
+      // Assert tag information
+      info.ExifTags?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
+      info.GpsTags?.ShouldMatchChildSnapshot( $"{filename}-gpstags" );
+      info.InteroperabilityTags?.ShouldMatchChildSnapshot( $"{filename}-intertags" );
+
+      // Output data to console
+      OutputTags( "EXIF Tags", info.ExifTags );
+      OutputTags( "EXIF GPS Tags", info.GpsTags );
+      OutputTags( "EXIF Interoperability Tags", info.InteroperabilityTags );
     }
   }
 
@@ -123,7 +165,7 @@ public class Decoder_Jpeg_Tests
         break;
 
       case ExifType.Date:
-        Console.Write( $"{(DateTime)tagValue.Value}" );
+        Console.Write( $"{(DateOnly)tagValue.Value}" );
         break;
 
       case ExifType.DateTime:

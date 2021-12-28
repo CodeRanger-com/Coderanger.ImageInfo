@@ -19,5 +19,6 @@ using Coderanger.ImageInfo.Decoders.Exif.Types;
 /// <param name="VerticalResolution">Resolution in Dots per Inch</param>
 /// <param name="ExifTags">Dictionary of exif and photo tags</param>
 /// <param name="GpsTags">Dictionary of exif gps tags</param>
+/// <param name="InteroperabilityTags">Dictionary of exif interoperability tags</param>
 /// <param name="MimeType">Mime type as 'image/type'</param>
-internal record ImageDetails( long Width, long Height, int HorizontalResolution, int VerticalResolution, string MimeType, Dictionary<ushort, IExifValue>? ExifTags, Dictionary<ushort, IExifValue>? GpsTags );
+internal record ImageDetails( long Width, long Height, int HorizontalResolution, int VerticalResolution, string MimeType, Dictionary<ushort, IExifValue>? ExifTags, Dictionary<ushort, IExifValue>? GpsTags, Dictionary<ushort, IExifValue>? InteroperabilityTags );
