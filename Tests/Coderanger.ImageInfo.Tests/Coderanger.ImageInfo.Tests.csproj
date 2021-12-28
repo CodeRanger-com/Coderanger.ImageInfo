@@ -13,6 +13,7 @@
     <PackageReference Include="MSTest.TestAdapter" Version="2.2.8" />
     <PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
     <PackageReference Include="coverlet.collector" Version="3.1.0" />
+    <PackageReference Include="Snapper" Version="2.3.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -77,6 +78,10 @@
     <None Update="Fixtures\Jpeg\us.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="_snapshots\" />
   </ItemGroup>
 
 </Project>

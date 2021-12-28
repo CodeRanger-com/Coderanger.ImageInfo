@@ -10,13 +10,11 @@ namespace Coderanger.ImageInfo.Tests;
 
 using System.IO;
 using Coderanger.ImageInfo.Decoders.Exif.Types;
-using Coderanger.ImageInfo.Decoders.Exif;
-
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Diagnostics;
 using System;
 using System.Collections.Generic;
+using Snapper;
 
 [TestClass]
 public class Decoder_Jpeg_Tests
@@ -57,6 +55,119 @@ public class Decoder_Jpeg_Tests
       info.HorizontalDpi.Should().Be( hdpi );
       info.VerticalDpi.Should().Be( vdpi );
       info.MimeType.Should().Be( mime );
+
+      // Assert tag information
+      info.ExifTags?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
+      info.GpsTags?.ShouldMatchChildSnapshot( $"{filename}-gpstags" );
+
+      // Output data to console
+      OutputTags( "EXIF Tags", info.ExifTags );
+      OutputTags( "EXIF GPS Tags", info.GpsTags );
+    }
+  }
+
+  private static void OutputTags( string title, Dictionary<ushort, IExifValue>? tags )
+  {
+    Console.Write( $"\n{title}" );
+    if( tags == null )
+    {
+      Console.Write( "\n\t(none)" );
+      return;
+    }
+
+    foreach( var tag in tags.Keys )
+    {
+      if( tags.TryGetValue( tag, out var exifValue ) && exifValue != null )
+      {
+        if( exifValue.IsArray )
+        {
+          if( exifValue.TryGetValueArray( out var tagValues ) && tagValues != null )
+          {
+            var isFirst = true;
+            foreach( var tagValue in tagValues )
+            {
+              Decoder_Jpeg_Tests.OutputValue( tagValue, outputTagDetails: isFirst, isArray: true );
+              isFirst = false;
+            }
+          }
+        }
+        else
+        {
+          if( exifValue.TryGetValue( out var tagValue ) && tagValue != null )
+          {
+            Decoder_Jpeg_Tests.OutputValue( tagValue, outputTagDetails: true, isArray: false );
+          }
+        }
+      }
+    }
+
+    Console.WriteLine( string.Empty );
+  }
+
+  private static void OutputValue( ExifTagValue? tagValue, bool outputTagDetails, bool isArray )
+  {
+    if( tagValue == null || tagValue.Value == null )
+    {
+      return;
+    }
+
+    if( outputTagDetails )
+    {
+      Console.Write( $"\n\t{tagValue.TagName} (0x{tagValue.TagId:X}) = " );
+    }
+
+    switch( tagValue.Type )
+    {
+      case ExifType.Byte:
+        Console.Write( $"{(byte)tagValue.Value}" );
+        break;
+
+      case ExifType.Date:
+        Console.Write( $"{(DateTime)tagValue.Value}" );
+        break;
+
+      case ExifType.DateTime:
+        Console.Write( $"{(DateTime)tagValue.Value}" );
+        break;
+
+      case ExifType.Float:
+        Console.Write( $"{(float)tagValue.Value}" );
+        break;
+
+      case ExifType.Int:
+        Console.Write( $"{(int)tagValue.Value}" );
+        break;
+
+      case ExifType.UInt:
+        Console.Write( $"{(uint)tagValue.Value}" );
+        break;
+
+      case ExifType.Rational:
+      case ExifType.URational:
+        var rational = (Rational)tagValue.Value;
+        Console.Write( rational );
+        break;
+
+      case ExifType.Short:
+        Console.Write( $"{(short)tagValue.Value}" );
+        break;
+
+      case ExifType.UShort:
+        Console.Write( $"{(ushort)tagValue.Value}" );
+        break;
+
+      case ExifType.String:
+        Console.Write( $"{(string)tagValue.Value}" );
+        break;
+
+      default:
+        Console.Write( $"unknown value" );
+        break;
+    }
+
+    if( isArray )
+    {
+      Console.Write( $", " );
     }
   }
 }

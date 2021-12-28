@@ -1,0 +1,2225 @@
+{
+  "sample-image-file-very-large-exif.jpg-exiftags": {
+    "256": {
+      "StringValue": "ImageWidth = 8000",
+      "IsArray": false,
+      "Tag": 256,
+      "ExifType": 3,
+      "Name": "ImageWidth",
+      "Description": ""
+    },
+    "257": {
+      "StringValue": "ImageHeight = 6000",
+      "IsArray": false,
+      "Tag": 257,
+      "ExifType": 3,
+      "Name": "ImageHeight",
+      "Description": ""
+    },
+    "271": {
+      "StringValue": "Camera Make = samsung",
+      "IsArray": false,
+      "Tag": 271,
+      "ExifType": 2,
+      "Name": "Camera Make",
+      "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "272": {
+      "StringValue": "Camera Model = SM-M307F",
+      "IsArray": false,
+      "Tag": 272,
+      "ExifType": 2,
+      "Name": "Camera Model",
+      "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "274": {
+      "StringValue": "Orientation = 1",
+      "IsArray": false,
+      "Tag": 274,
+      "ExifType": 3,
+      "Name": "Orientation",
+      "Description": ""
+    },
+    "282": {
+      "StringValue": "XResolution = 72/1",
+      "IsArray": false,
+      "Tag": 282,
+      "ExifType": 10,
+      "Name": "XResolution",
+      "Description": ""
+    },
+    "283": {
+      "StringValue": "YResolution = 72/1",
+      "IsArray": false,
+      "Tag": 283,
+      "ExifType": 10,
+      "Name": "YResolution",
+      "Description": ""
+    },
+    "296": {
+      "StringValue": "ResolutionUnit = 2",
+      "IsArray": false,
+      "Tag": 296,
+      "ExifType": 3,
+      "Name": "ResolutionUnit",
+      "Description": ""
+    },
+    "305": {
+      "StringValue": "Software = M307FXXU3BTG1",
+      "IsArray": false,
+      "Tag": 305,
+      "ExifType": 2,
+      "Name": "Software",
+      "Description": ""
+    },
+    "306": {
+      "IsArray": false,
+      "StringValue": "DateTime = ",
+      "Tag": 306,
+      "ExifType": 12,
+      "Name": "DateTime",
+      "Description": ""
+    },
+    "531": {
+      "StringValue": "YCbCrPositioning = 1",
+      "IsArray": false,
+      "Tag": 531,
+      "ExifType": 3,
+      "Name": "YCbCrPositioning",
+      "Description": ""
+    },
+    "259": {
+      "StringValue": "Compression = 6",
+      "IsArray": false,
+      "Tag": 259,
+      "ExifType": 3,
+      "Name": "Compression",
+      "Description": ""
+    },
+    "513": {
+      "StringValue": "JPEGInterchangeFormat = 762",
+      "IsArray": false,
+      "Tag": 513,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormat",
+      "Description": ""
+    },
+    "514": {
+      "StringValue": "JPEGInterchangeFormatLength = 25112",
+      "IsArray": false,
+      "Tag": 514,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormatLength",
+      "Description": ""
+    },
+    "33434": {
+      "StringValue": "ExposureTime = 1/409",
+      "IsArray": false,
+      "Tag": 33434,
+      "ExifType": 10,
+      "Name": "ExposureTime",
+      "Description": ""
+    },
+    "33437": {
+      "StringValue": "FNumber = 200/100",
+      "IsArray": false,
+      "Tag": 33437,
+      "ExifType": 10,
+      "Name": "FNumber",
+      "Description": ""
+    },
+    "34850": {
+      "StringValue": "ExposureProgram = 2",
+      "IsArray": false,
+      "Tag": 34850,
+      "ExifType": 3,
+      "Name": "ExposureProgram",
+      "Description": ""
+    },
+    "34855": {
+      "StringValue": "ISOSpeedRatings = 100",
+      "IsArray": false,
+      "Tag": 34855,
+      "ExifType": 3,
+      "Name": "ISOSpeedRatings",
+      "Description": ""
+    },
+    "36867": {
+      "IsArray": false,
+      "StringValue": "DateTimeOriginal = ",
+      "Tag": 36867,
+      "ExifType": 12,
+      "Name": "DateTimeOriginal",
+      "Description": ""
+    },
+    "37377": {
+      "StringValue": "ShutterSpeedValue = 1/409",
+      "IsArray": false,
+      "Tag": 37377,
+      "ExifType": 9,
+      "Name": "ShutterSpeedValue",
+      "Description": ""
+    },
+    "37378": {
+      "StringValue": "ApertureValue = 200/100",
+      "IsArray": false,
+      "Tag": 37378,
+      "ExifType": 10,
+      "Name": "ApertureValue",
+      "Description": ""
+    },
+    "37379": {
+      "StringValue": "BrightnessValue = 1705/100",
+      "IsArray": false,
+      "Tag": 37379,
+      "ExifType": 9,
+      "Name": "BrightnessValue",
+      "Description": ""
+    },
+    "37380": {
+      "StringValue": "ExposureBiasValue = 0/100",
+      "IsArray": false,
+      "Tag": 37380,
+      "ExifType": 9,
+      "Name": "ExposureBiasValue",
+      "Description": ""
+    },
+    "37381": {
+      "StringValue": "MaxApertureValue = 200/100",
+      "IsArray": false,
+      "Tag": 37381,
+      "ExifType": 10,
+      "Name": "MaxApertureValue",
+      "Description": ""
+    },
+    "37383": {
+      "StringValue": "MeteringMode = 2",
+      "IsArray": false,
+      "Tag": 37383,
+      "ExifType": 3,
+      "Name": "MeteringMode",
+      "Description": ""
+    },
+    "37385": {
+      "StringValue": "Flash = 0",
+      "IsArray": false,
+      "Tag": 37385,
+      "ExifType": 3,
+      "Name": "Flash",
+      "Description": ""
+    },
+    "37386": {
+      "StringValue": "FocalLength = 460/100",
+      "IsArray": false,
+      "Tag": 37386,
+      "ExifType": 10,
+      "Name": "FocalLength",
+      "Description": ""
+    }
+  },
+  "sample-image-file-very-large-exif.jpg-gpstags": {},
+  "high-res.jpg-exiftags": {
+    "256": {
+      "StringValue": "ImageWidth = 0",
+      "IsArray": false,
+      "Tag": 256,
+      "ExifType": 3,
+      "Name": "ImageWidth",
+      "Description": ""
+    },
+    "257": {
+      "StringValue": "ImageHeight = 0",
+      "IsArray": false,
+      "Tag": 257,
+      "ExifType": 3,
+      "Name": "ImageHeight",
+      "Description": ""
+    },
+    "259": {
+      "StringValue": "Compression = 6",
+      "IsArray": false,
+      "Tag": 259,
+      "ExifType": 3,
+      "Name": "Compression",
+      "Description": ""
+    },
+    "270": {
+      "StringValue": "Image Description = Dr. Dee Thornell from Fairbanks, AK.",
+      "IsArray": false,
+      "Tag": 270,
+      "ExifType": 2,
+      "Name": "Image Description",
+      "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+    },
+    "271": {
+      "StringValue": "Camera Make = Canon",
+      "IsArray": false,
+      "Tag": 271,
+      "ExifType": 2,
+      "Name": "Camera Make",
+      "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "272": {
+      "StringValue": "Camera Model = Canon EOS 5D Mark III",
+      "IsArray": false,
+      "Tag": 272,
+      "ExifType": 2,
+      "Name": "Camera Model",
+      "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "282": {
+      "StringValue": "XResolution = 300/1",
+      "IsArray": false,
+      "Tag": 282,
+      "ExifType": 10,
+      "Name": "XResolution",
+      "Description": ""
+    },
+    "283": {
+      "StringValue": "YResolution = 300/1",
+      "IsArray": false,
+      "Tag": 283,
+      "ExifType": 10,
+      "Name": "YResolution",
+      "Description": ""
+    },
+    "296": {
+      "StringValue": "ResolutionUnit = 2",
+      "IsArray": false,
+      "Tag": 296,
+      "ExifType": 3,
+      "Name": "ResolutionUnit",
+      "Description": ""
+    },
+    "305": {
+      "StringValue": "Software = paint.net 4.3.2",
+      "IsArray": false,
+      "Tag": 305,
+      "ExifType": 2,
+      "Name": "Software",
+      "Description": ""
+    },
+    "306": {
+      "IsArray": false,
+      "StringValue": "DateTime = ",
+      "Tag": 306,
+      "ExifType": 12,
+      "Name": "DateTime",
+      "Description": ""
+    },
+    "33432": {
+      "StringValue": "Copyright = Discovery Communications, Inc.",
+      "IsArray": false,
+      "Tag": 33432,
+      "ExifType": 2,
+      "Name": "Copyright",
+      "Description": ""
+    },
+    "33434": {
+      "StringValue": "ExposureTime = 1/160",
+      "IsArray": false,
+      "Tag": 33434,
+      "ExifType": 10,
+      "Name": "ExposureTime",
+      "Description": ""
+    },
+    "33437": {
+      "StringValue": "FNumber = 8/1",
+      "IsArray": false,
+      "Tag": 33437,
+      "ExifType": 10,
+      "Name": "FNumber",
+      "Description": ""
+    },
+    "34850": {
+      "StringValue": "ExposureProgram = 1",
+      "IsArray": false,
+      "Tag": 34850,
+      "ExifType": 3,
+      "Name": "ExposureProgram",
+      "Description": ""
+    },
+    "34855": {
+      "StringValue": "ISOSpeedRatings = 160",
+      "IsArray": false,
+      "Tag": 34855,
+      "ExifType": 3,
+      "Name": "ISOSpeedRatings",
+      "Description": ""
+    },
+    "36867": {
+      "IsArray": false,
+      "StringValue": "DateTimeOriginal = ",
+      "Tag": 36867,
+      "ExifType": 12,
+      "Name": "DateTimeOriginal",
+      "Description": ""
+    },
+    "37377": {
+      "StringValue": "ShutterSpeedValue = 29317/4004",
+      "IsArray": false,
+      "Tag": 37377,
+      "ExifType": 9,
+      "Name": "ShutterSpeedValue",
+      "Description": ""
+    },
+    "37378": {
+      "StringValue": "ApertureValue = 6/1",
+      "IsArray": false,
+      "Tag": 37378,
+      "ExifType": 10,
+      "Name": "ApertureValue",
+      "Description": ""
+    },
+    "37380": {
+      "StringValue": "ExposureBiasValue = 0/1",
+      "IsArray": false,
+      "Tag": 37380,
+      "ExifType": 9,
+      "Name": "ExposureBiasValue",
+      "Description": ""
+    },
+    "37381": {
+      "StringValue": "MaxApertureValue = 24361/8200",
+      "IsArray": false,
+      "Tag": 37381,
+      "ExifType": 10,
+      "Name": "MaxApertureValue",
+      "Description": ""
+    },
+    "37383": {
+      "StringValue": "MeteringMode = 2",
+      "IsArray": false,
+      "Tag": 37383,
+      "ExifType": 3,
+      "Name": "MeteringMode",
+      "Description": ""
+    },
+    "37385": {
+      "StringValue": "Flash = 16",
+      "IsArray": false,
+      "Tag": 37385,
+      "ExifType": 3,
+      "Name": "Flash",
+      "Description": ""
+    },
+    "37386": {
+      "StringValue": "FocalLength = 70/1",
+      "IsArray": false,
+      "Tag": 37386,
+      "ExifType": 10,
+      "Name": "FocalLength",
+      "Description": ""
+    }
+  },
+  "high-res.jpg-gpstags": {},
+  "large_test.jpg-exiftags": {
+    "282": {
+      "StringValue": "XResolution = 96/1",
+      "IsArray": false,
+      "Tag": 282,
+      "ExifType": 10,
+      "Name": "XResolution",
+      "Description": ""
+    },
+    "283": {
+      "StringValue": "YResolution = 96/1",
+      "IsArray": false,
+      "Tag": 283,
+      "ExifType": 10,
+      "Name": "YResolution",
+      "Description": ""
+    },
+    "296": {
+      "StringValue": "ResolutionUnit = 2",
+      "IsArray": false,
+      "Tag": 296,
+      "ExifType": 3,
+      "Name": "ResolutionUnit",
+      "Description": ""
+    },
+    "305": {
+      "StringValue": "Software = paint.net 4.3.3",
+      "IsArray": false,
+      "Tag": 305,
+      "ExifType": 2,
+      "Name": "Software",
+      "Description": ""
+    }
+  },
+  "large_test.jpg-gpstags": {},
+  "large_test_progressive.jpg-exiftags": {
+    "282": {
+      "StringValue": "XResolution = 96/1",
+      "IsArray": false,
+      "Tag": 282,
+      "ExifType": 10,
+      "Name": "XResolution",
+      "Description": ""
+    },
+    "283": {
+      "StringValue": "YResolution = 96/1",
+      "IsArray": false,
+      "Tag": 283,
+      "ExifType": 10,
+      "Name": "YResolution",
+      "Description": ""
+    },
+    "296": {
+      "StringValue": "ResolutionUnit = 2",
+      "IsArray": false,
+      "Tag": 296,
+      "ExifType": 3,
+      "Name": "ResolutionUnit",
+      "Description": ""
+    },
+    "305": {
+      "StringValue": "Software = paint.net 4.3.3",
+      "IsArray": false,
+      "Tag": 305,
+      "ExifType": 2,
+      "Name": "Software",
+      "Description": ""
+    }
+  },
+  "large_test_progressive.jpg-gpstags": {},
+  "bad_image_end.jpg-exiftags": {},
+  "bad_image_end.jpg-gpstags": {},
+  "freediving.jpeg-exiftags": {
+    "270": {
+      "StringValue": "Image Description = Two free divers, man and woman, ascending from the depth",
+      "IsArray": false,
+      "Tag": 270,
+      "ExifType": 2,
+      "Name": "Image Description",
+      "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+    },
+    "271": {
+      "StringValue": "Camera Make = Canon",
+      "IsArray": false,
+      "Tag": 271,
+      "ExifType": 2,
+      "Name": "Camera Make",
+      "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "272": {
+      "StringValue": "Camera Model = Canon EOS 5D Mark III",
+      "IsArray": false,
+      "Tag": 272,
+      "ExifType": 2,
+      "Name": "Camera Model",
+      "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "274": {
+      "StringValue": "Orientation = 1",
+      "IsArray": false,
+      "Tag": 274,
+      "ExifType": 3,
+      "Name": "Orientation",
+      "Description": ""
+    },
+    "282": {
+      "StringValue": "XResolution = 300/1",
+      "IsArray": false,
+      "Tag": 282,
+      "ExifType": 10,
+      "Name": "XResolution",
+      "Description": ""
+    },
+    "283": {
+      "StringValue": "YResolution = 300/1",
+      "IsArray": false,
+      "Tag": 283,
+      "ExifType": 10,
+      "Name": "YResolution",
+      "Description": ""
+    },
+    "296": {
+      "StringValue": "ResolutionUnit = 2",
+      "IsArray": false,
+      "Tag": 296,
+      "ExifType": 3,
+      "Name": "ResolutionUnit",
+      "Description": ""
+    },
+    "305": {
+      "StringValue": "Software = Adobe Photoshop Lightroom 6.8 (Macintosh)",
+      "IsArray": false,
+      "Tag": 305,
+      "ExifType": 2,
+      "Name": "Software",
+      "Description": ""
+    },
+    "306": {
+      "IsArray": false,
+      "StringValue": "DateTime = ",
+      "Tag": 306,
+      "ExifType": 12,
+      "Name": "DateTime",
+      "Description": ""
+    },
+    "315": {
+      "StringValue": "Artist = Dudarev Mikhail",
+      "IsArray": false,
+      "Tag": 315,
+      "ExifType": 2,
+      "Name": "Artist",
+      "Description": ""
+    },
+    "531": {
+      "StringValue": "YCbCrPositioning = 1",
+      "IsArray": false,
+      "Tag": 531,
+      "ExifType": 3,
+      "Name": "YCbCrPositioning",
+      "Description": ""
+    },
+    "33432": {
+      "StringValue": "Copyright = Dudarev Mikhail",
+      "IsArray": false,
+      "Tag": 33432,
+      "ExifType": 2,
+      "Name": "Copyright",
+      "Description": ""
+    },
+    "40091": {
+      "StringValue": "XPTitle = Two free divers ascending from the depth",
+      "IsArray": false,
+      "Tag": 40091,
+      "ExifType": 2,
+      "Name": "XPTitle",
+      "Description": ""
+    },
+    "40094": {
+      "StringValue": "XPKeywords = apnea; ascend; blue; body; breathless; buddy; constant weight; deep; depth; discipline; equalization; equipment; extreme; fin; free; free diving; freedive; freediver; freediving; full; light; line; marine; moving; ocean; people; person; rope; safety; sea; snorkeling; sport; style; sun; sunny; surface; swimming; tropical; two; underwater; water; wet; wetsuit",
+      "IsArray": false,
+      "Tag": 40094,
+      "ExifType": 2,
+      "Name": "XPKeywords",
+      "Description": ""
+    },
+    "40095": {
+      "StringValue": "XPSubject = Two free divers, man and woman, ascending from the depth",
+      "IsArray": false,
+      "Tag": 40095,
+      "ExifType": 2,
+      "Name": "XPSubject",
+      "Description": ""
+    },
+    "259": {
+      "StringValue": "Compression = 6",
+      "IsArray": false,
+      "Tag": 259,
+      "ExifType": 3,
+      "Name": "Compression",
+      "Description": ""
+    },
+    "513": {
+      "StringValue": "JPEGInterchangeFormat = 2512",
+      "IsArray": false,
+      "Tag": 513,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormat",
+      "Description": ""
+    },
+    "514": {
+      "StringValue": "JPEGInterchangeFormatLength = 3648",
+      "IsArray": false,
+      "Tag": 514,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormatLength",
+      "Description": ""
+    },
+    "33434": {
+      "StringValue": "ExposureTime = 1/200",
+      "IsArray": false,
+      "Tag": 33434,
+      "ExifType": 10,
+      "Name": "ExposureTime",
+      "Description": ""
+    },
+    "33437": {
+      "StringValue": "FNumber = 71/10",
+      "IsArray": false,
+      "Tag": 33437,
+      "ExifType": 10,
+      "Name": "FNumber",
+      "Description": ""
+    },
+    "34850": {
+      "StringValue": "ExposureProgram = 1",
+      "IsArray": false,
+      "Tag": 34850,
+      "ExifType": 3,
+      "Name": "ExposureProgram",
+      "Description": ""
+    },
+    "34855": {
+      "StringValue": "ISOSpeedRatings = 100",
+      "IsArray": false,
+      "Tag": 34855,
+      "ExifType": 3,
+      "Name": "ISOSpeedRatings",
+      "Description": ""
+    },
+    "36867": {
+      "IsArray": false,
+      "StringValue": "DateTimeOriginal = ",
+      "Tag": 36867,
+      "ExifType": 12,
+      "Name": "DateTimeOriginal",
+      "Description": ""
+    },
+    "37377": {
+      "StringValue": "ShutterSpeedValue = 15303/2002",
+      "IsArray": false,
+      "Tag": 37377,
+      "ExifType": 9,
+      "Name": "ShutterSpeedValue",
+      "Description": ""
+    },
+    "37378": {
+      "StringValue": "ApertureValue = 8376/1481",
+      "IsArray": false,
+      "Tag": 37378,
+      "ExifType": 10,
+      "Name": "ApertureValue",
+      "Description": ""
+    },
+    "37380": {
+      "StringValue": "ExposureBiasValue = 0/1",
+      "IsArray": false,
+      "Tag": 37380,
+      "ExifType": 9,
+      "Name": "ExposureBiasValue",
+      "Description": ""
+    },
+    "37381": {
+      "StringValue": "MaxApertureValue = 24361/8200",
+      "IsArray": false,
+      "Tag": 37381,
+      "ExifType": 10,
+      "Name": "MaxApertureValue",
+      "Description": ""
+    },
+    "37383": {
+      "StringValue": "MeteringMode = 6",
+      "IsArray": false,
+      "Tag": 37383,
+      "ExifType": 3,
+      "Name": "MeteringMode",
+      "Description": ""
+    },
+    "37386": {
+      "StringValue": "FocalLength = 15/1",
+      "IsArray": false,
+      "Tag": 37386,
+      "ExifType": 10,
+      "Name": "FocalLength",
+      "Description": ""
+    },
+    "37393": {
+      "StringValue": "ImageNumber = 0",
+      "IsArray": false,
+      "Tag": 37393,
+      "ExifType": 6,
+      "Name": "ImageNumber",
+      "Description": ""
+    }
+  },
+  "freediving.jpeg-gpstags": {},
+  "dakar-rally.jpg-exiftags": {
+    "270": {
+      "StringValue": "Image Description = Giniel De Villiers (ZAF) of Toyota Gazoo Racing SA tests prior Rally Dakar 2020 in Jeddah, Saudi Arabia on January 02, 2020",
+      "IsArray": false,
+      "Tag": 270,
+      "ExifType": 2,
+      "Name": "Image Description",
+      "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+    },
+    "271": {
+      "StringValue": "Camera Make = NIKON CORPORATION",
+      "IsArray": false,
+      "Tag": 271,
+      "ExifType": 2,
+      "Name": "Camera Make",
+      "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "272": {
+      "StringValue": "Camera Model = NIKON D850",
+      "IsArray": false,
+      "Tag": 272,
+      "ExifType": 2,
+      "Name": "Camera Model",
+      "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "282": {
+      "StringValue": "XResolution = 300/1",
+      "IsArray": false,
+      "Tag": 282,
+      "ExifType": 10,
+      "Name": "XResolution",
+      "Description": ""
+    },
+    "283": {
+      "StringValue": "YResolution = 300/1",
+      "IsArray": false,
+      "Tag": 283,
+      "ExifType": 10,
+      "Name": "YResolution",
+      "Description": ""
+    },
+    "296": {
+      "StringValue": "ResolutionUnit = 2",
+      "IsArray": false,
+      "Tag": 296,
+      "ExifType": 3,
+      "Name": "ResolutionUnit",
+      "Description": ""
+    },
+    "305": {
+      "StringValue": "Software = Adobe Photoshop Lightroom Classic 9.1 (Macintosh)",
+      "IsArray": false,
+      "Tag": 305,
+      "ExifType": 2,
+      "Name": "Software",
+      "Description": ""
+    },
+    "306": {
+      "IsArray": false,
+      "StringValue": "DateTime = ",
+      "Tag": 306,
+      "ExifType": 12,
+      "Name": "DateTime",
+      "Description": ""
+    },
+    "315": {
+      "StringValue": "Artist = Marcelo Maragni",
+      "IsArray": false,
+      "Tag": 315,
+      "ExifType": 2,
+      "Name": "Artist",
+      "Description": ""
+    },
+    "33432": {
+      "StringValue": "Copyright = © Marcelo Maragni/Red Bull Content Pool",
+      "IsArray": false,
+      "Tag": 33432,
+      "ExifType": 2,
+      "Name": "Copyright",
+      "Description": ""
+    },
+    "259": {
+      "StringValue": "Compression = 6",
+      "IsArray": false,
+      "Tag": 259,
+      "ExifType": 3,
+      "Name": "Compression",
+      "Description": ""
+    },
+    "513": {
+      "StringValue": "JPEGInterchangeFormat = 8",
+      "IsArray": false,
+      "Tag": 513,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormat",
+      "Description": ""
+    },
+    "514": {
+      "StringValue": "JPEGInterchangeFormatLength = 12946",
+      "IsArray": false,
+      "Tag": 514,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormatLength",
+      "Description": ""
+    },
+    "33434": {
+      "StringValue": "ExposureTime = 1/1600",
+      "IsArray": false,
+      "Tag": 33434,
+      "ExifType": 10,
+      "Name": "ExposureTime",
+      "Description": ""
+    },
+    "33437": {
+      "StringValue": "FNumber = 4/1",
+      "IsArray": false,
+      "Tag": 33437,
+      "ExifType": 10,
+      "Name": "FNumber",
+      "Description": ""
+    },
+    "34850": {
+      "StringValue": "ExposureProgram = 1",
+      "IsArray": false,
+      "Tag": 34850,
+      "ExifType": 3,
+      "Name": "ExposureProgram",
+      "Description": ""
+    },
+    "34855": {
+      "StringValue": "ISOSpeedRatings = 100",
+      "IsArray": false,
+      "Tag": 34855,
+      "ExifType": 3,
+      "Name": "ISOSpeedRatings",
+      "Description": ""
+    },
+    "36867": {
+      "IsArray": false,
+      "StringValue": "DateTimeOriginal = ",
+      "Tag": 36867,
+      "ExifType": 12,
+      "Name": "DateTimeOriginal",
+      "Description": ""
+    },
+    "37377": {
+      "StringValue": "ShutterSpeedValue = 10643856/1000000",
+      "IsArray": false,
+      "Tag": 37377,
+      "ExifType": 9,
+      "Name": "ShutterSpeedValue",
+      "Description": ""
+    },
+    "37378": {
+      "StringValue": "ApertureValue = 4/1",
+      "IsArray": false,
+      "Tag": 37378,
+      "ExifType": 10,
+      "Name": "ApertureValue",
+      "Description": ""
+    },
+    "37380": {
+      "StringValue": "ExposureBiasValue = 0/6",
+      "IsArray": false,
+      "Tag": 37380,
+      "ExifType": 9,
+      "Name": "ExposureBiasValue",
+      "Description": ""
+    },
+    "37381": {
+      "StringValue": "MaxApertureValue = 30/10",
+      "IsArray": false,
+      "Tag": 37381,
+      "ExifType": 10,
+      "Name": "MaxApertureValue",
+      "Description": ""
+    },
+    "37383": {
+      "StringValue": "MeteringMode = 5",
+      "IsArray": false,
+      "Tag": 37383,
+      "ExifType": 3,
+      "Name": "MeteringMode",
+      "Description": ""
+    },
+    "37384": {
+      "StringValue": "LightSource = 9",
+      "IsArray": false,
+      "Tag": 37384,
+      "ExifType": 3,
+      "Name": "LightSource",
+      "Description": ""
+    },
+    "37385": {
+      "StringValue": "Flash = 0",
+      "IsArray": false,
+      "Tag": 37385,
+      "ExifType": 3,
+      "Name": "Flash",
+      "Description": ""
+    },
+    "37386": {
+      "StringValue": "FocalLength = 140/10",
+      "IsArray": false,
+      "Tag": 37386,
+      "ExifType": 10,
+      "Name": "FocalLength",
+      "Description": ""
+    }
+  },
+  "dakar-rally.jpg-gpstags": {},
+  "dakar-rally-bike.jpg-exiftags": {
+    "256": {
+      "StringValue": "ImageWidth = 4812",
+      "IsArray": false,
+      "Tag": 256,
+      "ExifType": 3,
+      "Name": "ImageWidth",
+      "Description": ""
+    },
+    "257": {
+      "StringValue": "ImageHeight = 3208",
+      "IsArray": false,
+      "Tag": 257,
+      "ExifType": 3,
+      "Name": "ImageHeight",
+      "Description": ""
+    },
+    "258": {
+      "StringValue": "BitsPerSample = 8 / 8 / 8",
+      "IsArray": true,
+      "Tag": 258,
+      "ExifType": 3,
+      "Name": "BitsPerSample",
+      "Description": ""
+    },
+    "262": {
+      "StringValue": "PhotometricInterpretation = 2",
+      "IsArray": false,
+      "Tag": 262,
+      "ExifType": 3,
+      "Name": "PhotometricInterpretation",
+      "Description": ""
+    },
+    "270": {
+      "StringValue": "Image Description = CS Santosh seen in action during the shakedown before the start of the Dakar Rally in Jeddah, Saudi Arabia on December 30th, 2020 // Ishaan Bhataiya / Red Bull Content Pool // SI202101040188 // Usage for editorial use only // ",
+      "IsArray": false,
+      "Tag": 270,
+      "ExifType": 2,
+      "Name": "Image Description",
+      "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+    },
+    "271": {
+      "StringValue": "Camera Make = Canon",
+      "IsArray": false,
+      "Tag": 271,
+      "ExifType": 2,
+      "Name": "Camera Make",
+      "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "272": {
+      "StringValue": "Camera Model = Canon EOS 7D Mark II",
+      "IsArray": false,
+      "Tag": 272,
+      "ExifType": 2,
+      "Name": "Camera Model",
+      "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "274": {
+      "StringValue": "Orientation = 1",
+      "IsArray": false,
+      "Tag": 274,
+      "ExifType": 3,
+      "Name": "Orientation",
+      "Description": ""
+    },
+    "277": {
+      "StringValue": "SamplesPerPixel = 3",
+      "IsArray": false,
+      "Tag": 277,
+      "ExifType": 3,
+      "Name": "SamplesPerPixel",
+      "Description": ""
+    },
+    "282": {
+      "StringValue": "XResolution = 3000000/10000",
+      "IsArray": false,
+      "Tag": 282,
+      "ExifType": 10,
+      "Name": "XResolution",
+      "Description": ""
+    },
+    "283": {
+      "StringValue": "YResolution = 3000000/10000",
+      "IsArray": false,
+      "Tag": 283,
+      "ExifType": 10,
+      "Name": "YResolution",
+      "Description": ""
+    },
+    "296": {
+      "StringValue": "ResolutionUnit = 2",
+      "IsArray": false,
+      "Tag": 296,
+      "ExifType": 3,
+      "Name": "ResolutionUnit",
+      "Description": ""
+    },
+    "305": {
+      "StringValue": "Software = Adobe Photoshop 21.2 (Macintosh)",
+      "IsArray": false,
+      "Tag": 305,
+      "ExifType": 2,
+      "Name": "Software",
+      "Description": ""
+    },
+    "306": {
+      "IsArray": false,
+      "StringValue": "DateTime = ",
+      "Tag": 306,
+      "ExifType": 12,
+      "Name": "DateTime",
+      "Description": ""
+    },
+    "33432": {
+      "StringValue": "Copyright = Ishaan Bhataiya / Red Bull Content Pool",
+      "IsArray": false,
+      "Tag": 33432,
+      "ExifType": 2,
+      "Name": "Copyright",
+      "Description": ""
+    },
+    "259": {
+      "StringValue": "Compression = 6",
+      "IsArray": false,
+      "Tag": 259,
+      "ExifType": 3,
+      "Name": "Compression",
+      "Description": ""
+    },
+    "513": {
+      "StringValue": "JPEGInterchangeFormat = 1282",
+      "IsArray": false,
+      "Tag": 513,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormat",
+      "Description": ""
+    },
+    "514": {
+      "StringValue": "JPEGInterchangeFormatLength = 4493",
+      "IsArray": false,
+      "Tag": 514,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormatLength",
+      "Description": ""
+    },
+    "33434": {
+      "StringValue": "ExposureTime = 1/640",
+      "IsArray": false,
+      "Tag": 33434,
+      "ExifType": 10,
+      "Name": "ExposureTime",
+      "Description": ""
+    },
+    "33437": {
+      "StringValue": "FNumber = 45/10",
+      "IsArray": false,
+      "Tag": 33437,
+      "ExifType": 10,
+      "Name": "FNumber",
+      "Description": ""
+    },
+    "34850": {
+      "StringValue": "ExposureProgram = 3",
+      "IsArray": false,
+      "Tag": 34850,
+      "ExifType": 3,
+      "Name": "ExposureProgram",
+      "Description": ""
+    },
+    "34855": {
+      "StringValue": "ISOSpeedRatings = 400",
+      "IsArray": false,
+      "Tag": 34855,
+      "ExifType": 3,
+      "Name": "ISOSpeedRatings",
+      "Description": ""
+    },
+    "36867": {
+      "IsArray": false,
+      "StringValue": "DateTimeOriginal = ",
+      "Tag": 36867,
+      "ExifType": 12,
+      "Name": "DateTimeOriginal",
+      "Description": ""
+    },
+    "37377": {
+      "StringValue": "ShutterSpeedValue = 9321928/1000000",
+      "IsArray": false,
+      "Tag": 37377,
+      "ExifType": 9,
+      "Name": "ShutterSpeedValue",
+      "Description": ""
+    },
+    "37378": {
+      "StringValue": "ApertureValue = 433985/100000",
+      "IsArray": false,
+      "Tag": 37378,
+      "ExifType": 10,
+      "Name": "ApertureValue",
+      "Description": ""
+    },
+    "37380": {
+      "StringValue": "ExposureBiasValue = 2/3",
+      "IsArray": false,
+      "Tag": 37380,
+      "ExifType": 9,
+      "Name": "ExposureBiasValue",
+      "Description": ""
+    },
+    "37381": {
+      "StringValue": "MaxApertureValue = 4375/1000",
+      "IsArray": false,
+      "Tag": 37381,
+      "ExifType": 10,
+      "Name": "MaxApertureValue",
+      "Description": ""
+    },
+    "37383": {
+      "StringValue": "MeteringMode = 5",
+      "IsArray": false,
+      "Tag": 37383,
+      "ExifType": 3,
+      "Name": "MeteringMode",
+      "Description": ""
+    },
+    "37385": {
+      "StringValue": "Flash = 16",
+      "IsArray": false,
+      "Tag": 37385,
+      "ExifType": 3,
+      "Name": "Flash",
+      "Description": ""
+    },
+    "37386": {
+      "StringValue": "FocalLength = 10/1",
+      "IsArray": false,
+      "Tag": 37386,
+      "ExifType": 10,
+      "Name": "FocalLength",
+      "Description": ""
+    }
+  },
+  "dakar-rally-bike.jpg-gpstags": {},
+  "dakar-rally-toby-price.jpg-exiftags": {
+    "256": {
+      "StringValue": "ImageWidth = 5000",
+      "IsArray": false,
+      "Tag": 256,
+      "ExifType": 3,
+      "Name": "ImageWidth",
+      "Description": ""
+    },
+    "257": {
+      "StringValue": "ImageHeight = 3328",
+      "IsArray": false,
+      "Tag": 257,
+      "ExifType": 3,
+      "Name": "ImageHeight",
+      "Description": ""
+    },
+    "258": {
+      "StringValue": "BitsPerSample = 8 / 8 / 8",
+      "IsArray": true,
+      "Tag": 258,
+      "ExifType": 3,
+      "Name": "BitsPerSample",
+      "Description": ""
+    },
+    "262": {
+      "StringValue": "PhotometricInterpretation = 2",
+      "IsArray": false,
+      "Tag": 262,
+      "ExifType": 3,
+      "Name": "PhotometricInterpretation",
+      "Description": ""
+    },
+    "274": {
+      "StringValue": "Orientation = 1",
+      "IsArray": false,
+      "Tag": 274,
+      "ExifType": 3,
+      "Name": "Orientation",
+      "Description": ""
+    },
+    "277": {
+      "StringValue": "SamplesPerPixel = 3",
+      "IsArray": false,
+      "Tag": 277,
+      "ExifType": 3,
+      "Name": "SamplesPerPixel",
+      "Description": ""
+    },
+    "282": {
+      "StringValue": "XResolution = 300/1",
+      "IsArray": false,
+      "Tag": 282,
+      "ExifType": 10,
+      "Name": "XResolution",
+      "Description": ""
+    },
+    "283": {
+      "StringValue": "YResolution = 300/1",
+      "IsArray": false,
+      "Tag": 283,
+      "ExifType": 10,
+      "Name": "YResolution",
+      "Description": ""
+    },
+    "296": {
+      "StringValue": "ResolutionUnit = 2",
+      "IsArray": false,
+      "Tag": 296,
+      "ExifType": 3,
+      "Name": "ResolutionUnit",
+      "Description": ""
+    },
+    "305": {
+      "StringValue": "Software = Adobe Photoshop 21.0 (Macintosh)",
+      "IsArray": false,
+      "Tag": 305,
+      "ExifType": 2,
+      "Name": "Software",
+      "Description": ""
+    },
+    "306": {
+      "IsArray": false,
+      "StringValue": "DateTime = ",
+      "Tag": 306,
+      "ExifType": 12,
+      "Name": "DateTime",
+      "Description": ""
+    },
+    "259": {
+      "StringValue": "Compression = 6",
+      "IsArray": false,
+      "Tag": 259,
+      "ExifType": 3,
+      "Name": "Compression",
+      "Description": ""
+    },
+    "513": {
+      "StringValue": "JPEGInterchangeFormat = 372",
+      "IsArray": false,
+      "Tag": 513,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormat",
+      "Description": ""
+    },
+    "514": {
+      "StringValue": "JPEGInterchangeFormatLength = 6049",
+      "IsArray": false,
+      "Tag": 514,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormatLength",
+      "Description": ""
+    }
+  },
+  "dakar-rally-toby-price.jpg-gpstags": {},
+  "sample-clouds-400x300.jpg-exiftags": {
+    "270": {
+      "StringValue": "Image Description = SONY DSC",
+      "IsArray": false,
+      "Tag": 270,
+      "ExifType": 2,
+      "Name": "Image Description",
+      "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+    },
+    "271": {
+      "StringValue": "Camera Make = SONY ",
+      "IsArray": false,
+      "Tag": 271,
+      "ExifType": 2,
+      "Name": "Camera Make",
+      "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "272": {
+      "StringValue": "Camera Model = DSLR-A290",
+      "IsArray": false,
+      "Tag": 272,
+      "ExifType": 2,
+      "Name": "Camera Model",
+      "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "274": {
+      "StringValue": "Orientation = 1",
+      "IsArray": false,
+      "Tag": 274,
+      "ExifType": 3,
+      "Name": "Orientation",
+      "Description": ""
+    },
+    "282": {
+      "StringValue": "XResolution = 350/1",
+      "IsArray": false,
+      "Tag": 282,
+      "ExifType": 10,
+      "Name": "XResolution",
+      "Description": ""
+    },
+    "283": {
+      "StringValue": "YResolution = 350/1",
+      "IsArray": false,
+      "Tag": 283,
+      "ExifType": 10,
+      "Name": "YResolution",
+      "Description": ""
+    },
+    "296": {
+      "StringValue": "ResolutionUnit = 2",
+      "IsArray": false,
+      "Tag": 296,
+      "ExifType": 3,
+      "Name": "ResolutionUnit",
+      "Description": ""
+    },
+    "305": {
+      "StringValue": "Software = GIMP 2.8.22",
+      "IsArray": false,
+      "Tag": 305,
+      "ExifType": 2,
+      "Name": "Software",
+      "Description": ""
+    },
+    "306": {
+      "IsArray": false,
+      "StringValue": "DateTime = ",
+      "Tag": 306,
+      "ExifType": 12,
+      "Name": "DateTime",
+      "Description": ""
+    },
+    "531": {
+      "StringValue": "YCbCrPositioning = 2",
+      "IsArray": false,
+      "Tag": 531,
+      "ExifType": 3,
+      "Name": "YCbCrPositioning",
+      "Description": ""
+    },
+    "259": {
+      "StringValue": "Compression = 6",
+      "IsArray": false,
+      "Tag": 259,
+      "ExifType": 3,
+      "Name": "Compression",
+      "Description": ""
+    },
+    "513": {
+      "StringValue": "JPEGInterchangeFormat = 31434",
+      "IsArray": false,
+      "Tag": 513,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormat",
+      "Description": ""
+    },
+    "514": {
+      "StringValue": "JPEGInterchangeFormatLength = 3689",
+      "IsArray": false,
+      "Tag": 514,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormatLength",
+      "Description": ""
+    },
+    "33434": {
+      "StringValue": "ExposureTime = 1/250",
+      "IsArray": false,
+      "Tag": 33434,
+      "ExifType": 10,
+      "Name": "ExposureTime",
+      "Description": ""
+    },
+    "33437": {
+      "StringValue": "FNumber = 130/10",
+      "IsArray": false,
+      "Tag": 33437,
+      "ExifType": 10,
+      "Name": "FNumber",
+      "Description": ""
+    },
+    "34850": {
+      "StringValue": "ExposureProgram = 2",
+      "IsArray": false,
+      "Tag": 34850,
+      "ExifType": 3,
+      "Name": "ExposureProgram",
+      "Description": ""
+    },
+    "34855": {
+      "StringValue": "ISOSpeedRatings = 100",
+      "IsArray": false,
+      "Tag": 34855,
+      "ExifType": 3,
+      "Name": "ISOSpeedRatings",
+      "Description": ""
+    },
+    "36867": {
+      "IsArray": false,
+      "StringValue": "DateTimeOriginal = ",
+      "Tag": 36867,
+      "ExifType": 12,
+      "Name": "DateTimeOriginal",
+      "Description": ""
+    },
+    "37122": {
+      "StringValue": "CompressedBitsPerPixel = 8/1",
+      "IsArray": false,
+      "Tag": 37122,
+      "ExifType": 10,
+      "Name": "CompressedBitsPerPixel",
+      "Description": ""
+    },
+    "37379": {
+      "StringValue": "BrightnessValue = 1050/100",
+      "IsArray": false,
+      "Tag": 37379,
+      "ExifType": 9,
+      "Name": "BrightnessValue",
+      "Description": ""
+    },
+    "37380": {
+      "StringValue": "ExposureBiasValue = 0/10",
+      "IsArray": false,
+      "Tag": 37380,
+      "ExifType": 9,
+      "Name": "ExposureBiasValue",
+      "Description": ""
+    },
+    "37381": {
+      "StringValue": "MaxApertureValue = 497/100",
+      "IsArray": false,
+      "Tag": 37381,
+      "ExifType": 10,
+      "Name": "MaxApertureValue",
+      "Description": ""
+    },
+    "37383": {
+      "StringValue": "MeteringMode = 5",
+      "IsArray": false,
+      "Tag": 37383,
+      "ExifType": 3,
+      "Name": "MeteringMode",
+      "Description": ""
+    },
+    "37384": {
+      "StringValue": "LightSource = 0",
+      "IsArray": false,
+      "Tag": 37384,
+      "ExifType": 3,
+      "Name": "LightSource",
+      "Description": ""
+    },
+    "37385": {
+      "StringValue": "Flash = 16",
+      "IsArray": false,
+      "Tag": 37385,
+      "ExifType": 3,
+      "Name": "Flash",
+      "Description": ""
+    },
+    "37386": {
+      "StringValue": "FocalLength = 550/10",
+      "IsArray": false,
+      "Tag": 37386,
+      "ExifType": 10,
+      "Name": "FocalLength",
+      "Description": ""
+    }
+  },
+  "sample-clouds-400x300.jpg-gpstags": {},
+  "sample-birch-400x300.jpg-exiftags": {
+    "270": {
+      "StringValue": "Image Description = SONY DSC",
+      "IsArray": false,
+      "Tag": 270,
+      "ExifType": 2,
+      "Name": "Image Description",
+      "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+    },
+    "271": {
+      "StringValue": "Camera Make = SONY ",
+      "IsArray": false,
+      "Tag": 271,
+      "ExifType": 2,
+      "Name": "Camera Make",
+      "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "272": {
+      "StringValue": "Camera Model = DSLR-A290",
+      "IsArray": false,
+      "Tag": 272,
+      "ExifType": 2,
+      "Name": "Camera Model",
+      "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "274": {
+      "StringValue": "Orientation = 1",
+      "IsArray": false,
+      "Tag": 274,
+      "ExifType": 3,
+      "Name": "Orientation",
+      "Description": ""
+    },
+    "282": {
+      "StringValue": "XResolution = 350/1",
+      "IsArray": false,
+      "Tag": 282,
+      "ExifType": 10,
+      "Name": "XResolution",
+      "Description": ""
+    },
+    "283": {
+      "StringValue": "YResolution = 350/1",
+      "IsArray": false,
+      "Tag": 283,
+      "ExifType": 10,
+      "Name": "YResolution",
+      "Description": ""
+    },
+    "296": {
+      "StringValue": "ResolutionUnit = 2",
+      "IsArray": false,
+      "Tag": 296,
+      "ExifType": 3,
+      "Name": "ResolutionUnit",
+      "Description": ""
+    },
+    "305": {
+      "StringValue": "Software = GIMP 2.8.22",
+      "IsArray": false,
+      "Tag": 305,
+      "ExifType": 2,
+      "Name": "Software",
+      "Description": ""
+    },
+    "306": {
+      "IsArray": false,
+      "StringValue": "DateTime = ",
+      "Tag": 306,
+      "ExifType": 12,
+      "Name": "DateTime",
+      "Description": ""
+    },
+    "531": {
+      "StringValue": "YCbCrPositioning = 2",
+      "IsArray": false,
+      "Tag": 531,
+      "ExifType": 3,
+      "Name": "YCbCrPositioning",
+      "Description": ""
+    },
+    "259": {
+      "StringValue": "Compression = 6",
+      "IsArray": false,
+      "Tag": 259,
+      "ExifType": 3,
+      "Name": "Compression",
+      "Description": ""
+    },
+    "513": {
+      "StringValue": "JPEGInterchangeFormat = 31434",
+      "IsArray": false,
+      "Tag": 513,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormat",
+      "Description": ""
+    },
+    "514": {
+      "StringValue": "JPEGInterchangeFormatLength = 7295",
+      "IsArray": false,
+      "Tag": 514,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormatLength",
+      "Description": ""
+    },
+    "33434": {
+      "StringValue": "ExposureTime = 1/80",
+      "IsArray": false,
+      "Tag": 33434,
+      "ExifType": 10,
+      "Name": "ExposureTime",
+      "Description": ""
+    },
+    "33437": {
+      "StringValue": "FNumber = 90/10",
+      "IsArray": false,
+      "Tag": 33437,
+      "ExifType": 10,
+      "Name": "FNumber",
+      "Description": ""
+    },
+    "34850": {
+      "StringValue": "ExposureProgram = 2",
+      "IsArray": false,
+      "Tag": 34850,
+      "ExifType": 3,
+      "Name": "ExposureProgram",
+      "Description": ""
+    },
+    "34855": {
+      "StringValue": "ISOSpeedRatings = 100",
+      "IsArray": false,
+      "Tag": 34855,
+      "ExifType": 3,
+      "Name": "ISOSpeedRatings",
+      "Description": ""
+    },
+    "36867": {
+      "IsArray": false,
+      "StringValue": "DateTimeOriginal = ",
+      "Tag": 36867,
+      "ExifType": 12,
+      "Name": "DateTimeOriginal",
+      "Description": ""
+    },
+    "37122": {
+      "StringValue": "CompressedBitsPerPixel = 8/1",
+      "IsArray": false,
+      "Tag": 37122,
+      "ExifType": 10,
+      "Name": "CompressedBitsPerPixel",
+      "Description": ""
+    },
+    "37379": {
+      "StringValue": "BrightnessValue = 775/100",
+      "IsArray": false,
+      "Tag": 37379,
+      "ExifType": 9,
+      "Name": "BrightnessValue",
+      "Description": ""
+    },
+    "37380": {
+      "StringValue": "ExposureBiasValue = 0/10",
+      "IsArray": false,
+      "Tag": 37380,
+      "ExifType": 9,
+      "Name": "ExposureBiasValue",
+      "Description": ""
+    },
+    "37381": {
+      "StringValue": "MaxApertureValue = 434/100",
+      "IsArray": false,
+      "Tag": 37381,
+      "ExifType": 10,
+      "Name": "MaxApertureValue",
+      "Description": ""
+    },
+    "37383": {
+      "StringValue": "MeteringMode = 5",
+      "IsArray": false,
+      "Tag": 37383,
+      "ExifType": 3,
+      "Name": "MeteringMode",
+      "Description": ""
+    },
+    "37384": {
+      "StringValue": "LightSource = 0",
+      "IsArray": false,
+      "Tag": 37384,
+      "ExifType": 3,
+      "Name": "LightSource",
+      "Description": ""
+    },
+    "37385": {
+      "StringValue": "Flash = 24",
+      "IsArray": false,
+      "Tag": 37385,
+      "ExifType": 3,
+      "Name": "Flash",
+      "Description": ""
+    },
+    "37386": {
+      "StringValue": "FocalLength = 300/10",
+      "IsArray": false,
+      "Tag": 37386,
+      "ExifType": 10,
+      "Name": "FocalLength",
+      "Description": ""
+    }
+  },
+  "sample-birch-400x300.jpg-gpstags": {},
+  "sample-city-park-400x300.jpg-exiftags": {
+    "270": {
+      "StringValue": "Image Description = SONY DSC",
+      "IsArray": false,
+      "Tag": 270,
+      "ExifType": 2,
+      "Name": "Image Description",
+      "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+    },
+    "271": {
+      "StringValue": "Camera Make = SONY ",
+      "IsArray": false,
+      "Tag": 271,
+      "ExifType": 2,
+      "Name": "Camera Make",
+      "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "272": {
+      "StringValue": "Camera Model = DSLR-A290",
+      "IsArray": false,
+      "Tag": 272,
+      "ExifType": 2,
+      "Name": "Camera Model",
+      "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "274": {
+      "StringValue": "Orientation = 1",
+      "IsArray": false,
+      "Tag": 274,
+      "ExifType": 3,
+      "Name": "Orientation",
+      "Description": ""
+    },
+    "282": {
+      "StringValue": "XResolution = 350/1",
+      "IsArray": false,
+      "Tag": 282,
+      "ExifType": 10,
+      "Name": "XResolution",
+      "Description": ""
+    },
+    "283": {
+      "StringValue": "YResolution = 350/1",
+      "IsArray": false,
+      "Tag": 283,
+      "ExifType": 10,
+      "Name": "YResolution",
+      "Description": ""
+    },
+    "296": {
+      "StringValue": "ResolutionUnit = 2",
+      "IsArray": false,
+      "Tag": 296,
+      "ExifType": 3,
+      "Name": "ResolutionUnit",
+      "Description": ""
+    },
+    "305": {
+      "StringValue": "Software = GIMP 2.8.22",
+      "IsArray": false,
+      "Tag": 305,
+      "ExifType": 2,
+      "Name": "Software",
+      "Description": ""
+    },
+    "306": {
+      "IsArray": false,
+      "StringValue": "DateTime = ",
+      "Tag": 306,
+      "ExifType": 12,
+      "Name": "DateTime",
+      "Description": ""
+    },
+    "531": {
+      "StringValue": "YCbCrPositioning = 2",
+      "IsArray": false,
+      "Tag": 531,
+      "ExifType": 3,
+      "Name": "YCbCrPositioning",
+      "Description": ""
+    },
+    "259": {
+      "StringValue": "Compression = 6",
+      "IsArray": false,
+      "Tag": 259,
+      "ExifType": 3,
+      "Name": "Compression",
+      "Description": ""
+    },
+    "513": {
+      "StringValue": "JPEGInterchangeFormat = 31434",
+      "IsArray": false,
+      "Tag": 513,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormat",
+      "Description": ""
+    },
+    "514": {
+      "StringValue": "JPEGInterchangeFormatLength = 5497",
+      "IsArray": false,
+      "Tag": 514,
+      "ExifType": 5,
+      "Name": "JPEGInterchangeFormatLength",
+      "Description": ""
+    },
+    "33434": {
+      "StringValue": "ExposureTime = 1/125",
+      "IsArray": false,
+      "Tag": 33434,
+      "ExifType": 10,
+      "Name": "ExposureTime",
+      "Description": ""
+    },
+    "33437": {
+      "StringValue": "FNumber = 100/10",
+      "IsArray": false,
+      "Tag": 33437,
+      "ExifType": 10,
+      "Name": "FNumber",
+      "Description": ""
+    },
+    "34850": {
+      "StringValue": "ExposureProgram = 2",
+      "IsArray": false,
+      "Tag": 34850,
+      "ExifType": 3,
+      "Name": "ExposureProgram",
+      "Description": ""
+    },
+    "34855": {
+      "StringValue": "ISOSpeedRatings = 100",
+      "IsArray": false,
+      "Tag": 34855,
+      "ExifType": 3,
+      "Name": "ISOSpeedRatings",
+      "Description": ""
+    },
+    "36867": {
+      "IsArray": false,
+      "StringValue": "DateTimeOriginal = ",
+      "Tag": 36867,
+      "ExifType": 12,
+      "Name": "DateTimeOriginal",
+      "Description": ""
+    },
+    "37122": {
+      "StringValue": "CompressedBitsPerPixel = 8/1",
+      "IsArray": false,
+      "Tag": 37122,
+      "ExifType": 10,
+      "Name": "CompressedBitsPerPixel",
+      "Description": ""
+    },
+    "37379": {
+      "StringValue": "BrightnessValue = 875/100",
+      "IsArray": false,
+      "Tag": 37379,
+      "ExifType": 9,
+      "Name": "BrightnessValue",
+      "Description": ""
+    },
+    "37380": {
+      "StringValue": "ExposureBiasValue = 0/10",
+      "IsArray": false,
+      "Tag": 37380,
+      "ExifType": 9,
+      "Name": "ExposureBiasValue",
+      "Description": ""
+    },
+    "37381": {
+      "StringValue": "MaxApertureValue = 361/100",
+      "IsArray": false,
+      "Tag": 37381,
+      "ExifType": 10,
+      "Name": "MaxApertureValue",
+      "Description": ""
+    },
+    "37383": {
+      "StringValue": "MeteringMode = 5",
+      "IsArray": false,
+      "Tag": 37383,
+      "ExifType": 3,
+      "Name": "MeteringMode",
+      "Description": ""
+    },
+    "37384": {
+      "StringValue": "LightSource = 0",
+      "IsArray": false,
+      "Tag": 37384,
+      "ExifType": 3,
+      "Name": "LightSource",
+      "Description": ""
+    },
+    "37385": {
+      "StringValue": "Flash = 24",
+      "IsArray": false,
+      "Tag": 37385,
+      "ExifType": 3,
+      "Name": "Flash",
+      "Description": ""
+    },
+    "37386": {
+      "StringValue": "FocalLength = 180/10",
+      "IsArray": false,
+      "Tag": 37386,
+      "ExifType": 10,
+      "Name": "FocalLength",
+      "Description": ""
+    }
+  },
+  "sample-city-park-400x300.jpg-gpstags": {},
+  "budleigh-salterton.jpg-exiftags": {
+    "270": {
+      "StringValue": "Image Description = Budleigh Salterton Cliffs looking west over Budleigh beach and the mouth of the Otter Estuary",
+      "IsArray": false,
+      "Tag": 270,
+      "ExifType": 2,
+      "Name": "Image Description",
+      "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+    },
+    "271": {
+      "StringValue": "Camera Make = Apple",
+      "IsArray": false,
+      "Tag": 271,
+      "ExifType": 2,
+      "Name": "Camera Make",
+      "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "272": {
+      "StringValue": "Camera Model = iPhone X",
+      "IsArray": false,
+      "Tag": 272,
+      "ExifType": 2,
+      "Name": "Camera Model",
+      "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+    },
+    "282": {
+      "StringValue": "XResolution = 72/1",
+      "IsArray": false,
+      "Tag": 282,
+      "ExifType": 10,
+      "Name": "XResolution",
+      "Description": ""
+    },
+    "283": {
+      "StringValue": "YResolution = 72/1",
+      "IsArray": false,
+      "Tag": 283,
+      "ExifType": 10,
+      "Name": "YResolution",
+      "Description": ""
+    },
+    "296": {
+      "StringValue": "ResolutionUnit = 2",
+      "IsArray": false,
+      "Tag": 296,
+      "ExifType": 3,
+      "Name": "ResolutionUnit",
+      "Description": ""
+    },
+    "305": {
+      "StringValue": "Software = paint.net 4.3.4",
+      "IsArray": false,
+      "Tag": 305,
+      "ExifType": 2,
+      "Name": "Software",
+      "Description": ""
+    },
+    "306": {
+      "IsArray": false,
+      "StringValue": "DateTime = ",
+      "Tag": 306,
+      "ExifType": 12,
+      "Name": "DateTime",
+      "Description": ""
+    },
+    "322": {
+      "StringValue": "TileWidth = 512",
+      "IsArray": false,
+      "Tag": 322,
+      "ExifType": 5,
+      "Name": "TileWidth",
+      "Description": ""
+    },
+    "323": {
+      "StringValue": "TileLength = 512",
+      "IsArray": false,
+      "Tag": 323,
+      "ExifType": 5,
+      "Name": "TileLength",
+      "Description": ""
+    },
+    "33434": {
+      "StringValue": "ExposureTime = 1/685",
+      "IsArray": false,
+      "Tag": 33434,
+      "ExifType": 10,
+      "Name": "ExposureTime",
+      "Description": ""
+    },
+    "33437": {
+      "StringValue": "FNumber = 9/5",
+      "IsArray": false,
+      "Tag": 33437,
+      "ExifType": 10,
+      "Name": "FNumber",
+      "Description": ""
+    },
+    "34850": {
+      "StringValue": "ExposureProgram = 2",
+      "IsArray": false,
+      "Tag": 34850,
+      "ExifType": 3,
+      "Name": "ExposureProgram",
+      "Description": ""
+    },
+    "34855": {
+      "StringValue": "ISOSpeedRatings = 20",
+      "IsArray": false,
+      "Tag": 34855,
+      "ExifType": 3,
+      "Name": "ISOSpeedRatings",
+      "Description": ""
+    },
+    "36867": {
+      "IsArray": false,
+      "StringValue": "DateTimeOriginal = ",
+      "Tag": 36867,
+      "ExifType": 12,
+      "Name": "DateTimeOriginal",
+      "Description": ""
+    },
+    "37377": {
+      "StringValue": "ShutterSpeedValue = 71909/7633",
+      "IsArray": false,
+      "Tag": 37377,
+      "ExifType": 9,
+      "Name": "ShutterSpeedValue",
+      "Description": ""
+    },
+    "37378": {
+      "StringValue": "ApertureValue = 54823/32325",
+      "IsArray": false,
+      "Tag": 37378,
+      "ExifType": 10,
+      "Name": "ApertureValue",
+      "Description": ""
+    },
+    "37379": {
+      "StringValue": "BrightnessValue = 236629/26397",
+      "IsArray": false,
+      "Tag": 37379,
+      "ExifType": 9,
+      "Name": "BrightnessValue",
+      "Description": ""
+    },
+    "37380": {
+      "StringValue": "ExposureBiasValue = 0/1",
+      "IsArray": false,
+      "Tag": 37380,
+      "ExifType": 9,
+      "Name": "ExposureBiasValue",
+      "Description": ""
+    },
+    "37383": {
+      "StringValue": "MeteringMode = 5",
+      "IsArray": false,
+      "Tag": 37383,
+      "ExifType": 3,
+      "Name": "MeteringMode",
+      "Description": ""
+    },
+    "37385": {
+      "StringValue": "Flash = 24",
+      "IsArray": false,
+      "Tag": 37385,
+      "ExifType": 3,
+      "Name": "Flash",
+      "Description": ""
+    },
+    "37386": {
+      "StringValue": "FocalLength = 4/1",
+      "IsArray": false,
+      "Tag": 37386,
+      "ExifType": 10,
+      "Name": "FocalLength",
+      "Description": ""
+    },
+    "37396": {
+      "StringValue": "SubjectLocation = 2015 / 1511 / 2217 / 1330",
+      "IsArray": true,
+      "Tag": 37396,
+      "ExifType": 3,
+      "Name": "SubjectLocation",
+      "Description": ""
+    }
+  },
+  "budleigh-salterton.jpg-gpstags": {
+    "1": {
+      "StringValue": "GPSLatitudeRef = N",
+      "IsArray": false,
+      "Tag": 1,
+      "ExifType": 2,
+      "Name": "GPSLatitudeRef",
+      "Description": ""
+    },
+    "2": {
+      "StringValue": "GPSLatitude = 50/1 / 37/1 / 5131/100",
+      "IsArray": true,
+      "Tag": 2,
+      "ExifType": 10,
+      "Name": "GPSLatitude",
+      "Description": ""
+    },
+    "3": {
+      "StringValue": "GPSLongitudeRef = W",
+      "IsArray": false,
+      "Tag": 3,
+      "ExifType": 2,
+      "Name": "GPSLongitudeRef",
+      "Description": ""
+    },
+    "4": {
+      "StringValue": "GPSLongitude = 3/1 / 18/1 / 1737/100",
+      "IsArray": true,
+      "Tag": 4,
+      "ExifType": 10,
+      "Name": "GPSLongitude",
+      "Description": ""
+    },
+    "5": {
+      "StringValue": "GPSAltitudeRef = 0",
+      "IsArray": false,
+      "Tag": 5,
+      "ExifType": 1,
+      "Name": "GPSAltitudeRef",
+      "Description": ""
+    },
+    "6": {
+      "StringValue": "GPSAltitude = 452056/14027",
+      "IsArray": false,
+      "Tag": 6,
+      "ExifType": 10,
+      "Name": "GPSAltitude",
+      "Description": ""
+    },
+    "12": {
+      "StringValue": "GPSSpeedRef = K",
+      "IsArray": false,
+      "Tag": 12,
+      "ExifType": 2,
+      "Name": "GPSSpeedRef",
+      "Description": ""
+    },
+    "13": {
+      "StringValue": "GPSSpeed = 2378/15257",
+      "IsArray": false,
+      "Tag": 13,
+      "ExifType": 10,
+      "Name": "GPSSpeed",
+      "Description": ""
+    },
+    "16": {
+      "StringValue": "GPSImgDirectionRef = T",
+      "IsArray": false,
+      "Tag": 16,
+      "ExifType": 2,
+      "Name": "GPSImgDirectionRef",
+      "Description": ""
+    },
+    "17": {
+      "StringValue": "GPSImgDirection = 466616/1855",
+      "IsArray": false,
+      "Tag": 17,
+      "ExifType": 10,
+      "Name": "GPSImgDirection",
+      "Description": ""
+    },
+    "23": {
+      "StringValue": "GPS Destination Bearing Reference = T",
+      "IsArray": false,
+      "Tag": 23,
+      "ExifType": 2,
+      "Name": "GPS Destination Bearing Reference",
+      "Description": "Indicates the reference used for giving the bearing to the destination point; 'T' denotes true direction and 'M' is magnetic direction"
+    },
+    "24": {
+      "StringValue": "GPS Destination Bearing = 466616/1855",
+      "IsArray": false,
+      "Tag": 24,
+      "ExifType": 10,
+      "Name": "GPS Destination Bearing",
+      "Description": "Indicates the bearing to the destination point. The range of values is from 0.00 to 359.99"
+    },
+    "31": {
+      "StringValue": "GPS Horizontal Positioning Error = 26488/2207",
+      "IsArray": false,
+      "Tag": 31,
+      "ExifType": 10,
+      "Name": "GPS Horizontal Positioning Error",
+      "Description": "Indicates horizontal positioning errors in meters"
+    }
+  }
+}
