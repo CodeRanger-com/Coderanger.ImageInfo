@@ -20,26 +20,39 @@ public class ExifShort : ExifTypeValue, IExifValue
   {
   }
 
-  public bool TryGetValue( out ExifTagValue? value )
+  public string StringValue => ToString();
+
+  void IExifValue.SetValue()
   {
-    value = GetValue();
-    return true;
+    ProcessData();
   }
 
-  private ExifTagValue? GetValue()
+  internal override IEnumerable<ExifTagValue> ExtractValues()
   {
-    if( !_processed )
+    // If the size * count is within the 4 byte buffer, can just iterate it and yield the short
+    if( Component.ComponentCount * Component.ComponentSize <= BufferByteSize )
     {
-      var value = DataConversion.Int16FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
-      _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: value );
-      _processed = true;
+      for( var i = 0; i < Component.ComponentCount; i++ )
+      {
+        var value = DataConversion.Int16FromBuffer( Component.DataValueBuffer, 0 + (i * Component.ComponentSize), Component.ByteOrder );
+        yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
+      }
     }
+    else
+    {
+      // Buffer will contain a reference to the data elsewhere in the IFD, therefore move to
+      // that position and read enough bytes for conversion x number of components saved
+      var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+      Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
 
-    return _convertedValue;
+      for( var i = 0; i < Component.ComponentCount; i++ )
+      {
+        var dataValue = Reader.ReadBytes( Component.ComponentSize );
+        var value = DataConversion.Int16FromBuffer( dataValue, 0, Component.ByteOrder );
+        yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
+      }
+    }
   }
-
-  private ExifTagValue? _convertedValue;
-  private bool _processed = false;
 }
 
 /// <summary>
@@ -52,24 +65,37 @@ public class ExifUShort : ExifTypeValue, IExifValue
   {
   }
 
-  public bool TryGetValue( out ExifTagValue? value )
+  public string StringValue => ToString();
+
+  void IExifValue.SetValue()
   {
-    value = GetValue();
-    return true;
+    ProcessData();
   }
 
-  private ExifTagValue? GetValue()
+  internal override IEnumerable<ExifTagValue> ExtractValues()
   {
-    if( !_processed )
+    // If the size * count is within the 4 byte buffer, can just iterate it and yield the short
+    if( Component.ComponentCount * Component.ComponentSize <= BufferByteSize )
     {
-      var value = DataConversion.UInt16FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
-      _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: value );
-      _processed = true;
+      for( var i = 0; i < Component.ComponentCount; i++ )
+      {
+        var value = DataConversion.UInt16FromBuffer( Component.DataValueBuffer, 0 + ( i * Component.ComponentSize ), Component.ByteOrder );
+        yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
+      }
     }
+    else
+    {
+      // Buffer will contain a reference to the data elsewhere in the IFD, therefore move to
+      // that position and read enough bytes for conversion x number of components saved
+      var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+      Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
 
-    return _convertedValue;
+      for( var i = 0; i < Component.ComponentCount; i++ )
+      {
+        var dataValue = Reader.ReadBytes( Component.ComponentSize );
+        var value = DataConversion.UInt16FromBuffer( dataValue, 0, Component.ByteOrder );
+        yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
+      }
+    }
   }
-
-  private ExifTagValue? _convertedValue;
-  private bool _processed = false;
 }

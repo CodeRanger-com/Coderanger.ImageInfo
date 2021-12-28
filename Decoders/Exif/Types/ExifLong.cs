@@ -16,56 +16,41 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 internal class ExifLong : ExifTypeValue, IExifValue
 {
   internal ExifLong( BinaryReader reader, ExifComponent component )
-    :base( ExifType.Long, reader, component )
+    :base( ExifType.Int, reader, component )
   {
   }
 
-  public bool TryGetValue( out ExifTagValue? value )
+  public string StringValue => ToString();
+
+  void IExifValue.SetValue()
   {
-    value = GetValue();
-    return true;
+    ProcessData();
   }
 
-  private ExifTagValue? GetValue()
+  internal override IEnumerable<ExifTagValue> ExtractValues()
   {
-    if( !_processed )
+    // Exif Long type is a 4 byte int so may be within our existing 4 byte buffer if there is only one
+    if( Component.ComponentCount == 1 )
     {
-      if( Component.ComponentCount == 1 )
-      {
-        // Its a 4 byte (int32) value but it is expected to be an 8 byte value
-        // so its safe to just cast it
-        var value = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
-        _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: (long)value );
-        _processed = true;
-        return _convertedValue;
-      }
-
-      // Store current reader position for restoring later
-      var currentStreamPosition = Reader.BaseStream.Position;
-
-      // Rational type is 8 bytes, so size * 8 is the data size
-      // Total data length is larger than 4bytes, so next 4bytes contains an offset to data
+      var value = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+      yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
+    }
+    else
+    {
+      // Buffer will contain a reference to the data elsewhere in the IFD, therefore move to
+      // that position and read enough bytes for conversion x number of components saved
       var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
       Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
 
-      var dataValue = Reader.ReadBytes( Component.ComponentCount * Component.ComponentSize );
-      if( Component.ComponentCount * Component.ComponentSize == 8 )
+      for( var i = 0; i < Component.ComponentCount; i++ )
       {
-        var value = DataConversion.Int64FromBuffer( dataValue, 0, Component.ByteOrder );
-        _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: value );
+        var dataValue = Reader.ReadBytes( Component.ComponentSize );
+
+        var value = DataConversion.Int32FromBuffer( dataValue, 0, Component.ByteOrder );
+        yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
       }
-
-      _processed = true;
-
-      // Reset position
-      Reader.BaseStream.Position = currentStreamPosition;
     }
-
-    return _convertedValue;
   }
-
-  private ExifTagValue? _convertedValue;
-  private bool _processed = false;
 }
 
 /// <summary>
@@ -74,54 +59,39 @@ internal class ExifLong : ExifTypeValue, IExifValue
 internal class ExifULong : ExifTypeValue, IExifValue
 {
   internal ExifULong( BinaryReader reader, ExifComponent component )
-    : base( ExifType.ULong, reader, component )
+    : base( ExifType.UInt, reader, component )
   {
   }
 
-  public bool TryGetValue( out ExifTagValue? value )
+  public string StringValue => ToString();
+
+  void IExifValue.SetValue()
   {
-    value = GetValue();
-    return true;
+    ProcessData();
   }
 
-  private ExifTagValue? GetValue()
+  internal override IEnumerable<ExifTagValue> ExtractValues()
   {
-    if( !_processed )
+    // Exif ULong type is a 4 byte int so may be within our existing 4 byte buffer if there is only one
+    if( Component.ComponentCount == 1 )
     {
-      if( Component.ComponentCount == 1 )
-      {
-        // Its a 4 byte (int32) value but it is expected to be an 8 byte value
-        // so its safe to just cast it
-        var value = DataConversion.UInt32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
-        _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: (ulong)value );
-        _processed = true;
-        return _convertedValue;
-      }
-
-      // Store current reader position for restoring later
-      var currentStreamPosition = Reader.BaseStream.Position;
-
-      // Rational type is 8 bytes, so size * 8 is the data size
-      // Total data length is larger than 4bytes, so next 4bytes contains an offset to data
+      var value = DataConversion.UInt32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+      yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
+    }
+    else
+    {
+      // Buffer will contain a reference to the data elsewhere in the IFD, therefore move to
+      // that position and read enough bytes for conversion x number of components saved
       var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
       Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
 
-      var dataValue = Reader.ReadBytes( Component.ComponentCount * Component.ComponentSize );
-      if( Component.ComponentCount * Component.ComponentSize == 8 )
+      for( var i = 0; i < Component.ComponentCount; i++ )
       {
-        var value = DataConversion.UInt64FromBuffer( dataValue, 0, Component.ByteOrder );
-        _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: value );
+        var dataValue = Reader.ReadBytes( Component.ComponentSize );
+
+        var value = DataConversion.UInt32FromBuffer( dataValue, 0, Component.ByteOrder );
+        yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
       }
-
-      _processed = true;
-
-      // Reset position
-      Reader.BaseStream.Position = currentStreamPosition;
     }
-
-    return _convertedValue;
   }
-
-  private ExifTagValue? _convertedValue;
-  private bool _processed = false;
 }

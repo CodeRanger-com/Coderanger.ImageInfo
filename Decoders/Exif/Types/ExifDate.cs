@@ -9,8 +9,6 @@
 namespace Coderanger.ImageInfo.Decoders.Exif.Types;
 
 using System.Text;
-using Coderanger.ImageInfo.Decoders.DecoderUtils;
-
 
 /// <summary>
 /// 
@@ -22,46 +20,35 @@ public class ExifDate : ExifTypeValue, IExifValue
   {
   }
 
-  public bool TryGetValue( out ExifTagValue? value )
+  public string StringValue => ToString();
+
+  /// <summary>
+  /// Override to always set as false for Dates as Component.Count refers to character count
+  /// in the string which makes up the Date value
+  /// </summary>
+  public override bool IsArray => false;
+
+  public override string ToString()
   {
-    value = GetValue();
-    return true;
+    return $"{Name} = {_convertedValue}";
   }
 
-  private ExifTagValue? GetValue()
+  void IExifValue.SetValue()
   {
-    if( !_processed )
+    ProcessData();
+  }
+
+  internal override IEnumerable<ExifTagValue> ExtractValues()
+  {
+    // Date data is always 10 characters: yyyy:MM:dd
+    // so should always be within the 4 byte buffer
+    var value = Encoding.ASCII.GetString( Component.DataValueBuffer );
+    if( DateOnly.TryParseExact( value, DateFormatString, null, System.Globalization.DateTimeStyles.None, out var dt ) )
     {
-      // Store current reader position for restoring later
-      var currentStreamPosition = Reader.BaseStream.Position;
-
-      // Rational type is 8 bytes, so size * 8 is the data size
-      // Total data length is larger than 4bytes, so next 4bytes contains an offset to data
-      var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
-      Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
-
-      // -1 for end null byte
-      var byteCount = ( Component.ComponentCount * Component.ComponentSize ) - 1;
-      var dataValue = Reader.ReadBytes( byteCount );
-      if( dataValue != null )
-      {
-        var value = Encoding.ASCII.GetString( dataValue );
-        if( DateOnly.TryParseExact( value, "yyyy:MM:dd", null, System.Globalization.DateTimeStyles.None, out var dt ) )
-        {
-          // Dates are stored as ASCII strings, but we can do better
-          _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: dt );
-        }
-      }
-
-      _processed = true;
-
-      // Reset position
-      Reader.BaseStream.Position = currentStreamPosition;
+      // Dates are stored as ASCII strings, but we can do better
+      yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: dt );
     }
-
-    return _convertedValue;
   }
 
-  private ExifTagValue? _convertedValue;
-  private bool _processed = false;
+  private const string DateFormatString = "yyyy:MM:dd";
 }

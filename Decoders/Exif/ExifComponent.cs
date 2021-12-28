@@ -31,6 +31,9 @@ internal struct ExifComponent
   public long DataStart { get; init; }
   public TiffByteOrder ByteOrder { get; init; }
 
+  /// <summary>
+  /// Number of bytes this data type occupies
+  /// </summary>
   public byte ComponentSize
   {
     get
@@ -71,7 +74,7 @@ internal struct ExifComponent
 
       case 5: // unsigned rational
       case 10: // signed rational
-      case 12: // double float
+      case 12: // double float (double)
         ComponentSize = 8;
         break;
     }

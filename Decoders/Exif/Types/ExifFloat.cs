@@ -20,42 +20,35 @@ public class ExifFloat : ExifTypeValue, IExifValue
   {
   }
 
-  public bool TryGetValue( out ExifTagValue? value )
+  public string StringValue => ToString();
+
+  void IExifValue.SetValue()
   {
-    value = GetValue();
-    return true;
+    ProcessData();
   }
 
-  private ExifTagValue? GetValue()
+  internal override IEnumerable<ExifTagValue> ExtractValues()
   {
-    if( !_processed )
+    // Float type is 4 bytes so may be within our existing 4 byte buffer if there is only one
+    if( Component.ComponentCount == 1 )
     {
-      // Store current reader position for restoring later
-      var currentStreamPosition = Reader.BaseStream.Position;
-
-      // Rational type is 8 bytes, so size * 8 is the data size
-      // Total data length is larger than 4bytes, so next 4bytes contains an offset to data
+      var value = DataConversion.FloatFromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+      yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
+    }
+    else
+    {
+      // Buffer will contain a reference to the data elsewhere in the IFD, therefore move to
+      // that position and read enough bytes for conversion x number of components saved
       var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
       Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
 
-      var dataValue = Reader.ReadBytes( Component.ComponentCount * Component.ComponentSize );
-      if( Component.ComponentCount * Component.ComponentSize == 8 )
+      for( var i = 0; i < Component.ComponentCount; i++ )
       {
-        var enumer = DataConversion.Int32FromBuffer( dataValue, 0, Component.ByteOrder );
-        var denom = DataConversion.Int32FromBuffer( dataValue, 4, Component.ByteOrder );
+        var dataValue = Reader.ReadBytes( Component.ComponentSize );
 
-        _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: enumer / denom );
+        var value = DataConversion.FloatFromBuffer( dataValue, 0, Component.ByteOrder );
+        yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
       }
-
-      _processed = true;
-
-      // Reset position
-      Reader.BaseStream.Position = currentStreamPosition;
     }
-
-    return _convertedValue;
   }
-
-  private ExifTagValue? _convertedValue;
-  private bool _processed = false;
 }

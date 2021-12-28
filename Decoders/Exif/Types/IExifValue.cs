@@ -13,6 +13,10 @@ namespace Coderanger.ImageInfo.Decoders.Exif.Types;
 /// </summary>
 public interface IExifValue
 {
+  internal void SetValue();
   public bool TryGetValue( out ExifTagValue? value );
+  public bool TryGetValueArray( out List<ExifTagValue>? value );
+  public bool IsArray { get; }
   public ushort Tag { get; }
+  public string StringValue { get; }
 }

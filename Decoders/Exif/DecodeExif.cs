@@ -118,6 +118,7 @@ internal class DecodeExif
           var dataValue = ExifTagValueFactory.Create( profile, _reader, _segmentStart, _exifByteOrder );
           if( dataValue != null && !tags.ContainsKey( dataValue.Tag ) )
           {
+            dataValue.SetValue();
             tags.Add( dataValue.Tag, dataValue );
           }
         }
@@ -192,16 +193,18 @@ internal class DecodeExif
 
       if( _exifTags.TryGetValue( ExifTag.XResolution, out var xResTag ) )
       {
-        if( xResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value != null )
+        if( xResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value is not null )
         {
-          HorizontalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, (double)dpi.Value );
+          var rational = dpi.Value as Rational;
+          HorizontalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, rational?.ToDouble() ?? 0 );
         }
       }
       if( _exifTags.TryGetValue( ExifTag.YResolution, out var yResTag ) )
       {
         if( yResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value != null )
         {
-          VerticalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, (double)dpi.Value );
+          var rational = dpi.Value as Rational;
+          VerticalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, rational?.ToDouble() ?? 0 );
         }
       }
     }

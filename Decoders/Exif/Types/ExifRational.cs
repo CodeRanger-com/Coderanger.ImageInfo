@@ -20,44 +20,31 @@ public class ExifRational: ExifTypeValue, IExifValue
   {
   }
 
-  public bool TryGetValue( out ExifTagValue? value )
+  public string StringValue => ToString();
+
+  void IExifValue.SetValue()
   {
-    value = GetValue();
-    return true;
+    ProcessData();
   }
 
-  private ExifTagValue? GetValue()
+  internal override IEnumerable<ExifTagValue> ExtractValues()
   {
-    if( !_processed )
+    // Rational type is 8 bytes so will always be above the 4 byte buffer so the buffer
+    // will contain a reference to the data elsewhere in the IFD, therefore move to
+    // that position and read enough bytes for conversion x number of components saved
+    var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+    Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
+
+    for( var i = 0; i < Component.ComponentCount; i++ )
     {
-      // Store current reader position for restoring later
-      var currentStreamPosition = Reader.BaseStream.Position;
+      var dataValue = Reader.ReadBytes( Component.ComponentSize );
 
-      // Rational type is 8 bytes, so size * 8 is the data size
-      // Total data length is larger than 4bytes, so next 4bytes contains an offset to data
-      var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
-      Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
+      var numerator = DataConversion.Int32FromBuffer( dataValue, 0, Component.ByteOrder );
+      var denominator = DataConversion.Int32FromBuffer( dataValue, 4, Component.ByteOrder );
 
-      var dataValue = Reader.ReadBytes( Component.ComponentCount * Component.ComponentSize );
-      if( Component.ComponentCount * Component.ComponentSize == 8 )
-      {
-        var enumer = DataConversion.Int32FromBuffer( dataValue, 0, Component.ByteOrder );
-        var denom = DataConversion.Int32FromBuffer( dataValue, 4, Component.ByteOrder );
-
-        _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: (double)enumer / denom );
-      }
-
-      _processed = true;
-
-      // Reset position
-      Reader.BaseStream.Position = currentStreamPosition;
+      yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: new Rational( numerator, denominator ) );
     }
-
-    return _convertedValue;
   }
-
-  private ExifTagValue? _convertedValue;
-  private bool _processed = false;
 }
 
 /// <summary>
@@ -70,42 +57,29 @@ public class ExifURational : ExifTypeValue, IExifValue
   {
   }
 
-  public bool TryGetValue( out ExifTagValue? value )
+  public string StringValue => ToString();
+
+  void IExifValue.SetValue()
   {
-    value = GetValue();
-    return true;
+    ProcessData();
   }
 
-  private ExifTagValue? GetValue()
+  internal override IEnumerable<ExifTagValue> ExtractValues()
   {
-    if( !_processed )
+    // Rational type is 8 bytes so will always be above the 4 byte buffer so the buffer
+    // will contain a reference to the data elsewhere in the IFD, therefore move to
+    // that position and read enough bytes for conversion x number of components saved
+    var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+    Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
+
+    for( var i = 0; i < Component.ComponentCount; i++ )
     {
-      // Store current reader position for restoring later
-      var currentStreamPosition = Reader.BaseStream.Position;
+      var dataValue = Reader.ReadBytes( Component.ComponentSize );
 
-      // Rational type is 8 bytes, so size * 8 is the data size
-      // Total data length is larger than 4bytes, so next 4bytes contains an offset to data
-      var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
-      Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
+      var numerator = DataConversion.Int32FromBuffer( dataValue, 0, Component.ByteOrder );
+      var denominator = DataConversion.Int32FromBuffer( dataValue, 4, Component.ByteOrder );
 
-      var dataValue = Reader.ReadBytes( Component.ComponentCount * Component.ComponentSize );
-      if( Component.ComponentCount * Component.ComponentSize == 8 )
-      {
-        var enumer = DataConversion.Int32FromBuffer( dataValue, 0, Component.ByteOrder );
-        var denom = DataConversion.Int32FromBuffer( dataValue, 4, Component.ByteOrder );
-
-        _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: (double)enumer / denom );
-      }
-
-      _processed = true;
-
-      // Reset position
-      Reader.BaseStream.Position = currentStreamPosition;
+      yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: new Rational( numerator, denominator ) );
     }
-
-    return _convertedValue;
   }
-
-  private ExifTagValue? _convertedValue;
-  private bool _processed = false;
 }

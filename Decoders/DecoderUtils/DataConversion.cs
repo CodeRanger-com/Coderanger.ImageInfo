@@ -98,6 +98,48 @@ internal static class DataConversion
   }
 
   /// <summary>
+  /// Convert data from buffer determined by the buffer order, into a 4 byte
+  /// signed float (Single)
+  /// </summary>
+  /// <param name="buffer">Buffer whose size is at least 4 bytes bigger than the offset given</param>
+  /// <param name="offset">Offset from start of buffer to start conversion</param>
+  /// <param name="bufferOrder">The byte order of the data in the buffer</param>
+  /// <returns>Converted Int16 or short</returns>
+  /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
+  internal static float FloatFromBuffer( byte[] buffer, int offset, TiffByteOrder bufferOrder )
+  {
+    if( bufferOrder == TiffByteOrder.BigEndian )
+    {
+      return FloatFromBigEndianBuffer( buffer, offset );
+    }
+    else
+    {
+      return BitConverter.ToSingle( buffer, offset );
+    }
+  }
+
+  /// <summary>
+  /// Convert data from buffer determined by the buffer order, into a 8 byte
+  /// signed double
+  /// </summary>
+  /// <param name="buffer">Buffer whose size is at least 8 bytes bigger than the offset given</param>
+  /// <param name="offset">Offset from start of buffer to start conversion</param>
+  /// <param name="bufferOrder">The byte order of the data in the buffer</param>
+  /// <returns>Converted Int16 or short</returns>
+  /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
+  internal static double DoubleFromBuffer( byte[] buffer, int offset, TiffByteOrder bufferOrder )
+  {
+    if( bufferOrder == TiffByteOrder.BigEndian )
+    {
+      return DoubleFromBigEndianBuffer( buffer, offset );
+    }
+    else
+    {
+      return BitConverter.ToDouble( buffer, offset );
+    }
+  }
+
+  /// <summary>
   /// Convert data from buffer determined by the buffer order, into an 8 byte 64bit
   /// signed long (Int64)
   /// </summary>
@@ -149,15 +191,16 @@ internal static class DataConversion
   internal static short Int16FromBigEndianBuffer( byte[] buffer, int offset )
   {
     // Ensure no conversion beyond buffer bounds
-    if( offset + 2 > buffer.Length )
+    if( offset + sizeof( short ) > buffer.Length )
     {
-      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( buffer ) );
+      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( Int16FromBigEndianBuffer ) );
     }
 
     if( BitConverter.IsLittleEndian )
     {
-      // Reverse the bytes
-      return (short)( ( buffer[ offset ] << 8 ) | buffer[ offset + 1 ] );
+      // Reverse the bytes and convert to handle signed value
+      var reversed = ReverseBytes( buffer, sizeof( short ), offset );
+      return BitConverter.ToInt16( reversed );
     }
     else
     {
@@ -175,9 +218,9 @@ internal static class DataConversion
   internal static ushort UInt16FromBigEndianBuffer( byte[] buffer, int offset )
   {
     // Ensure no conversion beyond buffer bounds
-    if( offset + 2 > buffer.Length )
+    if( offset + sizeof( ushort ) > buffer.Length )
     {
-      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( buffer ) );
+      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( UInt16FromBigEndianBuffer ) );
     }
 
     if( BitConverter.IsLittleEndian )
@@ -201,15 +244,16 @@ internal static class DataConversion
   internal static int Int32FromBigEndianBuffer( byte[] buffer, int offset )
   {
     // Ensure no conversion beyond buffer bounds
-    if( offset + 4 > buffer.Length )
+    if( offset + sizeof( int ) > buffer.Length )
     {
-      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( buffer ) );
+      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( Int32FromBigEndianBuffer ) );
     }
 
     if( BitConverter.IsLittleEndian )
     {
-      // Reverse the bytes
-      return ( ( buffer[ offset ] << 24 ) | buffer[ offset + 1 ] << 16 | buffer[ offset + 2 ] << 8 | buffer[ offset + 3 ] );
+      // Reverse the bytes and convert to handle signed value
+      var reversed = ReverseBytes( buffer, sizeof( int ), offset );
+      return BitConverter.ToInt32( reversed );
     }
     else
     {
@@ -222,29 +266,78 @@ internal static class DataConversion
   /// </summary>
   /// <param name="buffer">Buffer whose size is at least 4 bytes bigger than the offset given</param>
   /// <param name="offset">Offset from start of buffer to start conversion</param>
-  /// <returns>Converted unsigned integer</returns>
+  /// <returns>Converted signed integer</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
   internal static uint UInt32FromBigEndianBuffer( byte[] buffer, int offset )
   {
     // Ensure no conversion beyond buffer bounds
-    if( offset + 4 > buffer.Length )
+    if( offset + sizeof( uint ) > buffer.Length )
     {
-      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( buffer ) );
+      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( UInt32FromBigEndianBuffer ) );
     }
 
     if( BitConverter.IsLittleEndian )
     {
       // Reverse the bytes
-      return (uint)(
-          buffer[ offset ] << 24
-        | buffer[ offset + 1 ] << 16
-        | buffer[ offset + 2 ] << 8
-        | buffer[ offset + 3 ]
-      );
+      return (uint)( ( buffer[ offset ] << 24 ) | buffer[ offset + 1 ] << 16 | buffer[ offset + 2 ] << 8 | buffer[ offset + 3 ] );
     }
     else
     {
       return BitConverter.ToUInt32( buffer, offset );
+    }
+  }
+
+  /// <summary>
+  /// Convert a big endian buffer to a 4 byte signed float
+  /// </summary>
+  /// <param name="buffer">Buffer whose size is at least 4 bytes bigger than the offset given</param>
+  /// <param name="offset">Offset from start of buffer to start conversion</param>
+  /// <returns>Converted signed integer</returns>
+  /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
+  internal static float FloatFromBigEndianBuffer( byte[] buffer, int offset )
+  {
+    // Ensure no conversion beyond buffer bounds
+    if( offset + sizeof( float ) > buffer.Length )
+    {
+      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( FloatFromBigEndianBuffer ) );
+    }
+
+    if( BitConverter.IsLittleEndian )
+    {
+      // Reverse the bytes and convert to handle signed value
+      var reversed = ReverseBytes( buffer, sizeof( float ), offset );
+      return BitConverter.ToSingle( reversed );
+    }
+    else
+    {
+      return BitConverter.ToSingle( buffer, offset );
+    }
+  }
+
+  /// <summary>
+  /// Convert a big endian buffer to an 8 byte signed double
+  /// </summary>
+  /// <param name="buffer">Buffer whose size is at least 8 bytes bigger than the offset given</param>
+  /// <param name="offset">Offset from start of buffer to start conversion</param>
+  /// <returns>Converted signed integer</returns>
+  /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
+  internal static double DoubleFromBigEndianBuffer( byte[] buffer, int offset )
+  {
+    // Ensure no conversion beyond buffer bounds
+    if( offset + sizeof( double ) > buffer.Length )
+    {
+      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( DoubleFromBigEndianBuffer ) );
+    }
+
+    if( BitConverter.IsLittleEndian )
+    {
+      // Reverse the bytes and convert to handle signed value
+      var reversed = ReverseBytes( buffer, sizeof( double ), offset );
+      return BitConverter.ToDouble( reversed );
+    }
+    else
+    {
+      return BitConverter.ToDouble( buffer, offset );
     }
   }
 
@@ -258,24 +351,16 @@ internal static class DataConversion
   internal static long Int64FromBigEndianBuffer( byte[] buffer, int offset )
   {
     // Ensure no conversion beyond buffer bounds
-    if( offset + 8 > buffer.Length )
+    if( offset + sizeof( long ) > buffer.Length )
     {
-      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( buffer ) );
+      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( Int64FromBigEndianBuffer ) );
     }
 
     if( BitConverter.IsLittleEndian )
     {
-      // Reverse the bytes
-      return (
-          buffer[ offset ] << 56
-        | buffer[ offset + 1 ] << 48
-        | buffer[ offset + 2 ] << 40
-        | buffer[ offset + 3 ] << 32
-        | buffer[ offset + 4 ] << 24
-        | buffer[ offset + 5 ] << 16 
-        | buffer[ offset + 6 ] << 8 
-        | buffer[ offset + 7 ]
-      );
+      // Reverse the bytes and convert to handle signed value
+      var reversed = ReverseBytes( buffer, sizeof( long ), offset );
+      return BitConverter.ToInt64( reversed );
     }
     else
     {
@@ -293,9 +378,9 @@ internal static class DataConversion
   internal static ulong UInt64FromBigEndianBuffer( byte[] buffer, int offset )
   {
     // Ensure no conversion beyond buffer bounds
-    if( offset + 8 > buffer.Length )
+    if( offset + sizeof( ulong ) > buffer.Length )
     {
-      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( buffer ) );
+      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( UInt64FromBigEndianBuffer ) );
     }
 
     if( BitConverter.IsLittleEndian )
@@ -316,5 +401,15 @@ internal static class DataConversion
     {
       return BitConverter.ToUInt64( buffer, offset );
     }
+  }
+
+  private static byte[] ReverseBytes( byte[] buffer, int size, int offset )
+  {
+    var reversed = new byte[ size ];
+    for( int i = 0; i < reversed.Length; i++ )
+    {
+      reversed[ reversed.Length - 1 - i ] = buffer[ offset + i ];
+    }
+    return reversed;
   }
 }

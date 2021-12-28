@@ -22,60 +22,71 @@ public class ExifString : ExifTypeValue, IExifValue
     _encoding = encoding;
   }
 
-  public bool TryGetValue( out ExifTagValue? value )
+  public string StringValue => ToString();
+
+  /// <summary>
+  /// Override to always set as false for strings as Component.Count refers to character count
+  /// in the string
+  /// </summary>
+  public override bool IsArray => false;
+
+  void IExifValue.SetValue()
   {
-    value = GetValue();
-    return true;
+    ProcessData();
   }
 
-  private ExifTagValue? GetValue()
+  /// <summary>
+  /// Processes the data buffer for each type value
+  /// </summary>
+  internal override IEnumerable<ExifTagValue> ExtractValues()
   {
-    if( !_processed )
+    // If the size * count is within the 4 byte buffer, can just iterate it and yield the string
+    if( Component.ComponentCount * Component.ComponentSize <= BufferByteSize )
     {
-      // Store current reader position for restoring later
-      var currentStreamPosition = Reader.BaseStream.Position;
-
-      // Rational type is 8 bytes, so size * 8 is the data size
-      // Total data length is larger than 4bytes, so next 4bytes contains an offset to data
+      yield return new ExifTagValue( Type: ExifType, IsArray: false, TagId: Tag, TagName: Name, Value: ConvertBuffer( Component.DataValueBuffer ) );
+    }
+    else
+    {
+      // Buffer will contain a reference to the data elsewhere in the IFD, therefore move to
+      // that position and read enough bytes for conversion x number of components saved
       var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
       Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
 
-      var byteCount = Component.ComponentCount * Component.ComponentSize;
-      var dataValue = Reader.ReadBytes( byteCount );
-      if( dataValue?.Length > 0 )
-      {
-        if( _encoding == ExifStringEncoding.Ascii )
-        {
-          // -1 for end null byte
-          var value = Encoding.UTF8.GetString( dataValue, 0, byteCount - 1 );
-          _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: value );
-        }
-        else if( _encoding == ExifStringEncoding.Ucs2 )
-        {
-          // -2 for end double-byte nulls
-          var value = Encoding.GetEncoding( "UCS-2" ).GetString( dataValue, 0, byteCount - 2 );
-          _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: value );
-        }
-        else
-        {
-          // UTF8 is best for unknown encoding, as it decodes ascii as well as dbcs characters
-          // -1 for end null byte
-          var value = Encoding.UTF8.GetString( dataValue, 0, byteCount - 1 );
-          _convertedValue = new ExifTagValue( Type: ExifType, TagName: Name, Value: value );
-        }
-      }
-
-      _processed = true;
-
-      // Reset position
-      Reader.BaseStream.Position = currentStreamPosition;
+      var buffer = Reader.ReadBytes( Component.ComponentCount );
+      yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: ConvertBuffer( buffer ) );
     }
-
-    return _convertedValue;
   }
 
-  private ExifTagValue? _convertedValue;
-  private bool _processed = false;
+  /// <summary>
+  /// Given a buffer, convert to a string using the specified encoding
+  /// </summary>
+  /// <param name="buffer"></param>
+  /// <returns></returns>
+  private string ConvertBuffer( byte[] buffer )
+  {
+    if( buffer?.Length > 0 )
+    {
+      var byteCount = Component.ComponentCount * Component.ComponentSize;
+
+      if( _encoding == ExifStringEncoding.Ascii )
+      {
+        // Buffer will be null terminated so remove any zero bytes from the end
+        return Encoding.UTF8.GetString( buffer, 0, byteCount ).TrimEnd( (char)0 );
+      }
+      else if( _encoding == ExifStringEncoding.Ucs2 )
+      {
+        // Buffer will be null terminated so remove any zero bytes from the end
+        return Encoding.GetEncoding( "UCS-2" ).GetString( buffer, 0, byteCount ).TrimEnd( (char)0 );
+      }
+      else
+      {
+        // UTF8 is best for unknown encoding, as it decodes ascii as well as dbcs characters
+        // Buffer will be null terminated so remove any zero bytes from the end
+        return Encoding.UTF8.GetString( buffer, 0, byteCount ).TrimEnd( (char)0 );
+      }
+    }
+    return string.Empty;
+  }
 
   private readonly ExifStringEncoding _encoding;
 }
