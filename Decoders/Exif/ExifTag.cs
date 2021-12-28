@@ -1682,117 +1682,139 @@ public class ExifTag : IExifTag
   /// <summary>
   /// Indicates the version of <GPSInfoIFD>. The version is given as 2.0.0.0. This tag is mandatory when <GPSInfo> tag is present. (Note: The <GPSVersionID> tag is given in bytes; unlike the <ExifVersion> tag. When the version is 2.0.0.0; the tag value is 02000000.H).
   /// </summary>
+  [ExifTagDetails( "GPS Version ID", "Indicates the version of the GPS Info IFD" )]
   public const ushort GPSVersionID = 0x0000;
 
   /// <summary>
   /// Indicates whether the latitude is north or south latitude. The ASCII value 'N' indicates north latitude; and 'S' is south latitude.
   /// </summary>
+  [ExifTagDetails( "GPS Latitude Reference", "Indicates whether the latitude is North or South longitude; 'N' denotes North longitude, 'S' denotes South longitude" )]
   public const ushort GPSLatitudeRef = 0x0001;
 
   /// <summary>
   /// Indicates the latitude. The latitude is expressed as three RATIONAL values giving the degrees; minutes; and seconds; respectively. When degrees; minutes and seconds are expressed; the format is dd/1;mm/1;ss/1. When degrees and minutes are used and; for example; fractions of minutes are given up to two decimal places; the format is dd/1;mmmm/100;0/1.
   /// </summary>
+  [ExifTagDetails( "GPS Latitude", "Indicates the latitude as three Rational values giving the degress, minutes and seconds respectively" )]
   public const ushort GPSLatitude = 0x0002;
 
   /// <summary>
   /// Indicates whether the longitude is east or west longitude. ASCII 'E' indicates east longitude; and 'W' is west longitude.
   /// </summary>
+  [ExifTagDetails( "GPS Longitude Reference", "Indicates whether the longitude is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude" )]
   public const ushort GPSLongitudeRef = 0x0003;
 
   /// <summary>
   /// Indicates the longitude. The longitude is expressed as three RATIONAL values giving the degrees; minutes; and seconds; respectively. When degrees; minutes and seconds are expressed; the format is ddd/1;mm/1;ss/1. When degrees and minutes are used and; for example; fractions of minutes are given up to two decimal places; the format is ddd/1;mmmm/100;0/1.
   /// </summary>
+  [ExifTagDetails( "GPS Longitude", "Indicates the longitude as three Rational values giving the degress, minutes and seconds respectively" )]
   public const ushort GPSLongitude = 0x0004;
 
   /// <summary>
   /// Indicates the altitude used as the reference altitude. If the reference is sea level and the altitude is above sea level; 0 is given. If the altitude is below sea level; a value of 1 is given and the altitude is indicated as an absolute value in the GSPAltitude tag. The reference unit is meters. Note that this tag is BYTE type; unlike other reference tags.
   /// </summary>
+  [ExifTagDetails( "GPS Altitude Reference", "Indicates the altitude reference used for GPSAltitude; '0' denotes altitude above sea level, '1' denotes altitude below sea level" )]
   public const ushort GPSAltitudeRef = 0x0005;
 
   /// <summary>
   /// Indicates the altitude based on the reference in GPSAltitudeRef. Altitude is expressed as one RATIONAL value. The reference unit is meters.
   /// </summary>
+  [ExifTagDetails( "GPS Altitude", "Indicates the altitude based on the reference in GPSAltitudeRef and expressed in meters" )]
   public const ushort GPSAltitude = 0x0006;
 
   /// <summary>
   /// Indicates the time as UTC (Coordinated Universal Time). <TimeStamp> is expressed as three RATIONAL values giving the hour; minute; and second (atomic clock).
   /// </summary>
+  [ExifTagDetails( "GPS TimeStamp", "Indicates the UTC time expressed as three Rational values giving the hour, minute and second" )]
   public const ushort GPSTimeStamp = 0x0007;
 
   /// <summary>
   /// Indicates the GPS satellites used for measurements. This tag can be used to describe the number of satellites; their ID number; angle of elevation; azimuth; SNR and other information in ASCII notation. The format is not specified. If the GPS receiver is incapable of taking measurements; value of the tag is set to NULL.
   /// </summary>
+  [ExifTagDetails( "GPS Satellites", "Indicates the GPS satellites used for measurements; the tag can be used to describe the number of satellites, their ID number, angle of elevation, azimuth, SNR and other information" )]
   public const ushort GPSSatellites = 0x0008;
 
   /// <summary>
   /// Indicates the status of the GPS receiver when the image is recorded. "A" means measurement is in progress; and "V" means the measurement is Interoperability.
   /// </summary>
+  [ExifTagDetails( "GPS Status", "Indicates the status of the GPS receiver when the image is recorded; 'A' denotes measurement is in-progress, 'V' denotes the measurement is Interoperability" )]
   public const ushort GPSStatus = 0x0009;
 
   /// <summary>
   /// Indicates the GPS measurement mode. "2" means two-dimensional measurement and "3" means three-dimensional measurement is in progress.
   /// </summary>
+  [ExifTagDetails( "GPS Measurement Mode", "Indicates the GPS measurement mode; '2' means two-dimensional, '3' means three-dimensional measurement is in progress" )]
   public const ushort GPSMeasureMode = 0x000a;
 
   /// <summary>
   /// Indicates the GPS DOP (data degree of precision). An HDOP value is written during two-dimensional measurement; and PDOP during three-dimensional measurement.
   /// </summary>
+  [ExifTagDetails( "GPS Data Degree of Precision", "Indicates the GPS data degree of precision. An HDOP value is written during two-dimensional measurement; and PDOP during three-dimensional measurement" )]
   public const ushort GPSDOP = 0x000b;
 
   /// <summary>
   /// Indicates the unit used to express the GPS receiver speed of movement. "K" "M" and "N" represents kilometers per hour; miles per hour; and knots.
   /// </summary>
+  [ExifTagDetails( "GPS Speed Reference", "Indicates the unit used to express the GPS receiver speed of movement; 'K' denotes km/h, 'M' denotes miles per hour, 'N' denotes knots" )]
   public const ushort GPSSpeedRef = 0x000c;
 
   /// <summary>
   /// Indicates the speed of GPS receiver movement.
   /// </summary>
+  [ExifTagDetails( "GPS Speed", "Indicates the speed of GPS receiver movement" )]
   public const ushort GPSSpeed = 0x000d;
 
   /// <summary>
   /// Indicates the reference for giving the direction of GPS receiver movement. "T" denotes true direction and "M" is magnetic direction.
   /// </summary>
+  [ExifTagDetails( "GPS Track Reference", "Indicates the reference for giving the direction of GPS receiver movement; 'T' denotes True Direction, 'M' denotes Magnetic Direction" )]
   public const ushort GPSTrackRef = 0x000e;
 
   /// <summary>
   /// Indicates the direction of GPS receiver movement. The range of values is from 0.00 to 359.99.
   /// </summary>
+  [ExifTagDetails( "GPS Track", "Indicates the direction of GPS receiver movement" )]
   public const ushort GPSTrack = 0x000f;
 
   /// <summary>
   /// Indicates the reference for giving the direction of the image when it is captured. "T" denotes true direction and "M" is magnetic direction.
   /// </summary>
+  [ExifTagDetails( "GPS Image Direction Reference", "Indicates the reference for giving the direction of the image when it is captured; 'T' denotes True Direction, 'M' denotes Magnetic Direction" )]
   public const ushort GPSImgDirectionRef = 0x0010;
 
   /// <summary>
   /// Indicates the direction of the image when it was captured. The range of values is from 0.00 to 359.99.
   /// </summary>
+  [ExifTagDetails( "GPS Image Direction", "Indicates the direction of the image when it was captured" )]
   public const ushort GPSImgDirection = 0x0011;
 
   /// <summary>
   /// Indicates the geodetic survey data used by the GPS receiver. If the survey data is restricted to Japan; the value of this tag is "TOKYO" or "WGS-84".
   /// </summary>
+  [ExifTagDetails( "GPS Map Datum", "Indicates the geodetic survey data used by the GPS receiver" )]
   public const ushort GPSMapDatum = 0x0012;
 
   /// <summary>
   /// Indicates whether the latitude of the destination point is north or south latitude. The ASCII value "N" indicates north latitude; and "S" is south latitude.
   /// </summary>
+  [ExifTagDetails( "GPS Destination Latitude Reference", "Indicates whether the latitude of the destination point is North or South latitude; 'N' denotes North latitude, 'S' denotes South latitude" )]
   public const ushort GPSDestLatitudeRef = 0x0013;
 
   /// <summary>
   /// Indicates the latitude of the destination point. The latitude is expressed as three RATIONAL values giving the degrees; minutes; and seconds; respectively. If latitude is expressed as degrees; minutes and seconds; a typical format would be dd/1;mm/1;ss/1. When degrees and minutes are used and; for example; fractions of minutes are given up to two decimal places; the format would be dd/1;mmmm/100;0/1.
   /// </summary>
+  [ExifTagDetails( "GPS Destination Latitude", "Indicates the latitude of the destination point as three Rational values giving the degress, minutes and seconds respectively" )]
   public const ushort GPSDestLatitude = 0x0014;
 
   /// <summary>
   /// Indicates whether the longitude of the destination point is east or west longitude. ASCII "E" indicates east longitude; and "W" is west longitude.
   /// </summary>
+  [ExifTagDetails( "GPS Destination Longitude Reference", "Indicates whether the longitude of the destination point is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude" )]
   public const ushort GPSDestLongitudeRef = 0x0015;
 
   /// <summary>
   /// Indicates the longitude of the destination point. The longitude is expressed as three RATIONAL values giving the degrees; minutes; and seconds; respectively. If longitude is expressed as degrees; minutes and seconds; a typical format would be ddd/1;mm/1;ss/1. When degrees and minutes are used and; for example; fractions of minutes are given up to two decimal places; the format would be ddd/1;mmmm/100;0/1.
   /// </summary>
-  [ExifTagDetails( "GPS Destination Longitude", "Indicates the longitude of the destination point" )]
+  [ExifTagDetails( "GPS Destination Longitude", "Indicates the longitude of the destination point as three Rational values giving the degress, minutes and seconds respectively" )]
   public const ushort GPSDestLongitude = 0x0016;
 
   /// <summary>
@@ -1857,25 +1879,30 @@ public class ExifTag : IExifTag
   /// <summary>
   /// Indicates the identification of the Interoperability rule. Use "R98" for stating ExifR98 Rules. Four bytes used including the termination code (NULL). see the separate volume of Recommended Exif Interoperability Rules (ExifR98) for other tags used for ExifR98.
   /// </summary>
+  [ExifTagDetails( "Interoperability Index", "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules" )]
   public const ushort InteroperabilityIndex = 0x0001 + ExifConstants.InteroperabilityOffsetFix;
 
   /// <summary>
   /// (undefined type) Interoperability version
   /// </summary>
+  [ExifTagDetails( "Interoperability Version", "Indicates the Interoperability version" )]
   public const ushort InteroperabilityVersion = 0x0002 + ExifConstants.InteroperabilityOffsetFix;
 
   /// <summary>
   /// File format of image file
   /// </summary>
+  [ExifTagDetails( "Related Image File Format", "File format of image file" )]
   public const ushort RelatedImageFileFormat = 0x1000 + ExifConstants.InteroperabilityOffsetFix;
 
   /// <summary>
   /// Image width
   /// </summary>
+  [ExifTagDetails( "Related Image Width", "Image width" )]
   public const ushort RelatedImageWidth = 0x1001 + ExifConstants.InteroperabilityOffsetFix;
 
   /// <summary>
   /// Image height
   /// </summary>
+  [ExifTagDetails( "Related Image Height", "Image height" )]
   public const ushort RelatedImageLength = 0x1002 + ExifConstants.InteroperabilityOffsetFix;
 }
