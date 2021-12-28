@@ -10,6 +10,8 @@ namespace Coderanger.ImageInfo.Decoders.Exif.Types;
 
 using System.Text;
 
+using Coderanger.ImageInfo.Decoders.DecoderUtils;
+
 /// <summary>
 /// 
 /// </summary>
@@ -41,11 +43,19 @@ public class ExifDate : ExifTypeValue, IExifValue
   internal override IEnumerable<ExifTagValue> ExtractValues()
   {
     // Date data is always 10 characters: yyyy:MM:dd
-    // so should always be within the 4 byte buffer
-    var value = Encoding.ASCII.GetString( Component.DataValueBuffer );
-    if( DateOnly.TryParseExact( value, DateFormatString, null, System.Globalization.DateTimeStyles.None, out var dt ) )
+
+    // Buffer will contain a reference to the data elsewhere in the IFD, therefore move to
+    // that position and read enough bytes for conversion x number of components saved
+    var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+    Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
+
+    var buffer = Reader.ReadBytes( Component.ComponentCount );
+    var byteCount = Component.ComponentCount * Component.ComponentSize;
+
+    var stringValue = DataConversion.ConvertBuffer( buffer, byteCount, ExifStringEncoding.Ascii );
+    if( DateOnly.TryParseExact( stringValue, DateFormatString, null, System.Globalization.DateTimeStyles.None, out var dt ) )
     {
-      // Dates are stored as ASCII strings, but we can do better
+      // Dates are stored as ASCII strings, but we can do better and make it a proper type
       yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: dt );
     }
   }

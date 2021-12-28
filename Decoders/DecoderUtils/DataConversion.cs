@@ -8,11 +8,48 @@
 
 namespace Coderanger.ImageInfo.Decoders.DecoderUtils;
 
+using Coderanger.ImageInfo.Decoders.Exif.Types;
+using System.ComponentModel;
+
+using System.Text;
+
 /// <summary>
 /// Buffer conversion helper class
 /// </summary>
 internal static class DataConversion
 {
+  /// <summary>
+  /// Converts buffer of specific size to a string in given encoding
+  /// </summary>
+  /// <param name="buffer">Byte array of string data</param>
+  /// <param name="count">Count of characters in buffer</param>
+  /// <param name="encoding">Encoding type</param>
+  /// <returns>Converted string or empty</returns>
+  internal static string ConvertBuffer( byte[] buffer, int count, ExifStringEncoding encoding )
+  {
+    if( buffer?.Length > 0 )
+{
+      if( encoding == ExifStringEncoding.Ascii )
+      {
+// Buffer will be null terminated so remove any zero bytes from the end
+        return Encoding.UTF8.GetString( buffer, 0, count ).TrimEnd( (char)0 );
+      }
+      else if( encoding == ExifStringEncoding.Ucs2 )
+      {
+        // Buffer will be null terminated so remove any zero bytes from the end
+        return Encoding.GetEncoding( "UCS-2" ).GetString( buffer, 0, count ).TrimEnd( (char)0 );
+      }
+      else
+      {
+        // UTF8 is best for unknown encoding, as it decodes ascii as well as dbcs characters
+        // Buffer will be null terminated so remove any zero bytes from the end
+        return Encoding.UTF8.GetString( buffer, 0, count ).TrimEnd( (char)0 );
+      }
+    }
+
+    return string.Empty;
+  }
+
   /// <summary>
   /// Convert data from buffer determined by the buffer order, into a 2 byte 16bit
   /// signed integer (short or Int16)
