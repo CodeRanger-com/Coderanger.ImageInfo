@@ -91,17 +91,17 @@ internal class DecodeExif
   {
     // Offset is from the beginning of this header (i.e. at the point of the byte order marker)
     var ifdOffset = DataConversion.Int32FromBuffer( data, 4, _exifByteOrder );
-    ExtractTagsFromIfd( ExifProfileType.Exif, ifdOffset, ref _exifTags );
+    ExtractTagsFromIfd( ExifProfileType.Exif, ifdOffset );
 
-    ExtractTagsFromIfd( ExifProfileType.Exif, _ifdExifOffset, ref _exifTags );
-    ExtractTagsFromIfd( ExifProfileType.Gps, _ifdGpsOffset, ref _gpsTags );
-    ExtractTagsFromIfd( ExifProfileType.Interoperability, _ifdInterOffset, ref _interTags );
+    ExtractTagsFromIfd( ExifProfileType.Exif, _ifdSubExifOffset );
+    ExtractTagsFromIfd( ExifProfileType.Gps, _ifdGpsOffset );
+    ExtractTagsFromIfd( ExifProfileType.Interoperability, _ifdInterOffset );
 
     // Finished all IFDs
     _processed = true;
   }
 
-  private void ExtractTagsFromIfd( ExifProfileType profile, int ifdOffset, ref Dictionary<ushort, IExifValue> tags )
+  private void ExtractTagsFromIfd( ExifProfileType profile, int ifdOffset )
   {
     if( ifdOffset > 0 )
     {
@@ -116,10 +116,16 @@ internal class DecodeExif
           DiscoverIfdOffsets();
 
           var dataValue = ExifTagValueFactory.Create( profile, _reader, _segmentStart, _exifByteOrder );
-          if( dataValue != null && !tags.ContainsKey( dataValue.Tag ) )
+          if( dataValue != null )
           {
+            if( !_profileTags.TryGetValue( profile, out var tags ) )
+             {
+              tags = new List<IExifValue>();
+              _profileTags.Add( profile, tags );
+            }
+
             dataValue.SetValue();
-            tags.Add( dataValue.Tag, dataValue );
+            tags.Add( dataValue );
           }
         }
 
@@ -128,6 +134,14 @@ internal class DecodeExif
         ifdOffset = DataConversion.Int32FromBuffer( nextIfdBuffer, 0, _exifByteOrder );
       } while( ifdOffset != 0 );
     }
+  }
+
+  internal int HorizontalDpi { get; set; } = 0;
+  internal int VerticalDpi { get; set; } = 0;
+
+  internal Dictionary<ExifProfileType, List<IExifValue>> GetProfileTags()
+  {
+    return _profileTags;
   }
 
   private bool DiscoverIfdOffsets()
@@ -141,7 +155,7 @@ internal class DecodeExif
       switch( tag )
       {
         case (ushort)ExifConstants.IfdOffset.Exif:
-          _ifdExifOffset = value;
+          _ifdSubExifOffset = value;
           return true;
 
         case (ushort)ExifConstants.IfdOffset.Gps:
@@ -162,8 +176,7 @@ internal class DecodeExif
     return false;
   }
 
-  private const short IfdOffsetSegmentSize = 12;
-  private int _ifdExifOffset = -1;
+  private int _ifdSubExifOffset = -1;
   private int _ifdGpsOffset = -1;
   private int _ifdInterOffset = -1;
 
@@ -172,71 +185,64 @@ internal class DecodeExif
   /// </summary>
   private void ExtractResolutionInfo()
   {
-    if( _exifTags.TryGetValue( ExifTag.ResolutionUnit, out var resUnitTag ) )
+    if( _profileTags.TryGetValue( ExifProfileType.Exif, out var tags ) )
     {
-      DensityUnit? exifDensityUnit = null;
-
-      if( ( (ExifUShort)resUnitTag ).TryGetValue( out var unitVal ) )
-      {
-        exifDensityUnit = unitVal?.Value switch
-        {
-          2 => DensityUnit.PixelsPerInch,
-          3 => DensityUnit.PixelsPerCentimeter,
-          _ => DensityUnit.PixelsPerInch, // Unknown or not set, assume inches
-        };
-      }
-
-      if( !exifDensityUnit.HasValue )
+      if( tags == null )
       {
         return;
       }
 
-      if( _exifTags.TryGetValue( ExifTag.XResolution, out var xResTag ) )
+      var resUnitTag = tags.Find( t => t.Tag == ExifTag.ResolutionUnit );
+      if( resUnitTag != null )
       {
-        if( xResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value is not null )
+        DensityUnit? exifDensityUnit = null;
+
+        if( ( (ExifUShort)resUnitTag ).TryGetValue( out var unitVal ) )
         {
-          var rational = dpi.Value as Rational;
-          HorizontalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, rational?.ToDouble() ?? 0 );
+          exifDensityUnit = unitVal?.Value switch
+          {
+            2 => DensityUnit.PixelsPerInch,
+            3 => DensityUnit.PixelsPerCentimeter,
+            _ => DensityUnit.PixelsPerInch, // Unknown or not set, assume inches
+          };
         }
-      }
-      if( _exifTags.TryGetValue( ExifTag.YResolution, out var yResTag ) )
-      {
-        if( yResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value != null )
+
+        if( !exifDensityUnit.HasValue )
         {
-          var rational = dpi.Value as Rational;
-          VerticalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, rational?.ToDouble() ?? 0 );
+          return;
+        }
+
+        var xResTag = tags.Find( t => t.Tag == ExifTag.XResolution );
+        if( xResTag != null )
+        {
+          if( xResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value is not null )
+          {
+            var rational = dpi.Value as Rational;
+            HorizontalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, rational?.ToDouble() ?? 0 );
+          }
+        }
+
+        var yResTag = tags.Find( t => t.Tag == ExifTag.YResolution );
+        if( yResTag != null )
+        {
+          if( yResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value != null )
+          {
+            var rational = dpi.Value as Rational;
+            VerticalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, rational?.ToDouble() ?? 0 );
+          }
         }
       }
     }
   }
 
-  internal int HorizontalDpi { get; set; } = 0;
-  internal int VerticalDpi { get; set; } = 0;
-
-  internal Dictionary<ushort, IExifValue> GetExifTags()
-  {
-    return _exifTags;
-  }
-
-  internal Dictionary<ushort, IExifValue> GetGpsTags()
-  {
-    return _gpsTags;
-  }
-
-  internal Dictionary<ushort, IExifValue> GetInteroperabilityTags()
-  {
-    return _interTags;
-  }
-
-  private const int TiffSignatureValue = 42;
-
-  private Dictionary<ushort, IExifValue> _exifTags = new();
-  private Dictionary<ushort, IExifValue> _gpsTags = new();
-  private Dictionary<ushort, IExifValue> _interTags = new();
+  private readonly Dictionary<ExifProfileType, List<IExifValue>> _profileTags = new();
 
   private long _segmentStart = 0;
   private bool _processed = false;
   private TiffByteOrder _exifByteOrder = TiffByteOrder.Unknown;
 
   private readonly BinaryReader _reader;
+
+  private const short IfdOffsetSegmentSize = 12;
+  private const int TiffSignatureValue = 42;
 }

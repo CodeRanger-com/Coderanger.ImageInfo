@@ -9,6 +9,7 @@
 namespace Coderanger.ImageInfo;
 
 using Coderanger.ImageInfo.Decoders;
+using Coderanger.ImageInfo.Decoders.Exif;
 using Coderanger.ImageInfo.Decoders.Exif.Types;
 using Coderanger.ImageInfo.Exceptions;
 
@@ -137,19 +138,9 @@ public sealed class ImageInfo
   public string MimeType { get; private set; } = string.Empty;
 
   /// <summary>
-  /// Dictionary of exif and photo tags, or null if none exist
+  /// Dictionary of profiles to list of exif, gps and photo tags
   /// </summary>
-  public Dictionary<ushort, IExifValue>? ExifTags { get; private set; }
-
-  /// <summary>
-  /// Dictionary of exif gps tags, or null if none exist
-  /// </summary>
-  public Dictionary<ushort, IExifValue>? GpsTags { get; private set; }
-
-  /// <summary>
-  /// Dictionary of exif interoperability tags, or null if none exist
-  /// </summary>
-  public Dictionary<ushort, IExifValue>? InteroperabilityTags { get; private set; }
+  public Dictionary<ExifProfileType, List<IExifValue>>? ExifProfiles { get; private set; }
 
   /// <summary>
   /// Initiate an instance of the class with the given stream for decoding
@@ -183,9 +174,7 @@ public sealed class ImageInfo
       HorizontalDpi = imageDetails.HorizontalResolution;
       VerticalDpi = imageDetails.VerticalResolution;
       MimeType = imageDetails.MimeType;
-      ExifTags = imageDetails.ExifTags;
-      GpsTags = imageDetails.GpsTags;
-      InteroperabilityTags = imageDetails.InteroperabilityTags;
+      ExifProfiles = imageDetails.ExifProfiles;
     }
   }
 

@@ -36,7 +36,6 @@
     <None Update="Fixtures\Jpeg\dakar-rally.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Fixtures\Jpeg\exif.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Fixtures\Jpeg\freediving.jpeg">

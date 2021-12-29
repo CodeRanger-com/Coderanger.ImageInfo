@@ -22,6 +22,6 @@ public record Rational( int Numerator, int Denominator )
 
   public override string ToString()
   {
-    return $"{Numerator}/{Denominator} ({ToDouble()})";
+    return $"{Numerator}/{Denominator} ({ToDouble()}D)";
   }
 }

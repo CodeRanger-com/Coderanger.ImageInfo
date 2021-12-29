@@ -15,6 +15,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using Snapper;
+using Coderanger.ImageInfo.Decoders.Exif;
 
 [TestClass]
 public class Decoder_Jpeg_Tests
@@ -38,7 +39,6 @@ public class Decoder_Jpeg_Tests
   [DataRow( "sample-clouds-400x300.jpg", 400, 300, 350, 350, "image/jpeg" )]
   [DataRow( "sample-birch-400x300.jpg", 400, 300, 350, 350, "image/jpeg" )]
   [DataRow( "sample-city-park-400x300.jpg", 400, 300, 350, 350, "image/jpeg" )]
-  [DataRow( "exif.jpg", 480, 360, 180, 180, "image/jpeg" )]
   public void Decode_Valid_Jpeg( string filename, int width, int height, int hdpi, int vdpi, string mime )
   {
     // Arrange
@@ -58,14 +58,10 @@ public class Decoder_Jpeg_Tests
       info.MimeType.Should().Be( mime );
 
       // Assert tag information
-      info.ExifTags?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
-      info.GpsTags?.ShouldMatchChildSnapshot( $"{filename}-gpstags" );
-      info.InteroperabilityTags?.ShouldMatchChildSnapshot( $"{filename}-intertags" );
+      info.ExifProfiles?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
 
       // Output data to console
-      OutputTags( "EXIF Tags", info.ExifTags );
-      OutputTags( "EXIF GPS Tags", info.GpsTags );
-      OutputTags( "EXIF Interoperability Tags", info.InteroperabilityTags );
+      OutputTags( info.ExifProfiles );
     }
   }
 
@@ -97,53 +93,61 @@ public class Decoder_Jpeg_Tests
       info.MimeType.Should().Be( mime );
 
       // Assert tag information
-      info.ExifTags?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
-      info.GpsTags?.ShouldMatchChildSnapshot( $"{filename}-gpstags" );
-      info.InteroperabilityTags?.ShouldMatchChildSnapshot( $"{filename}-intertags" );
+      info.ExifProfiles?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
 
       // Output data to console
-      OutputTags( "EXIF Tags", info.ExifTags );
-      OutputTags( "EXIF GPS Tags", info.GpsTags );
-      OutputTags( "EXIF Interoperability Tags", info.InteroperabilityTags );
+      OutputTags( info.ExifProfiles );
     }
   }
 
-  private static void OutputTags( string title, Dictionary<ushort, IExifValue>? tags )
+  private static void OutputTags( Dictionary<ExifProfileType, List<IExifValue>>? profiles )
   {
-    Console.Write( $"\n{title}" );
-    if( tags == null )
+    if( profiles == null )
     {
-      Console.Write( "\n\t(none)" );
       return;
     }
 
-    foreach( var tag in tags.Keys )
+    foreach( var profile in profiles.Keys )
     {
-      if( tags.TryGetValue( tag, out var exifValue ) && exifValue != null )
+      Console.Write( $"\n{profile} Tags" );
+      if( profiles.TryGetValue( profile, out var profileTags ) && profileTags != null )
       {
-        if( exifValue.IsArray )
+        foreach( var exifValue in profileTags )
         {
-          if( exifValue.TryGetValueArray( out var tagValues ) && tagValues != null )
+          if( exifValue == null )
           {
-            var isFirst = true;
-            foreach( var tagValue in tagValues )
+            Console.Write( "\n\t(none)" );
+            return;
+          }
+
+          if( exifValue.IsArray )
+          {
+            if( exifValue.TryGetValueArray( out var tagValues ) && tagValues != null )
             {
-              Decoder_Jpeg_Tests.OutputValue( tagValue, outputTagDetails: isFirst, isArray: true );
-              isFirst = false;
+              var isFirst = true;
+              foreach( var tagValue in tagValues )
+              {
+                Decoder_Jpeg_Tests.OutputValue( tagValue, outputTagDetails: isFirst, isArray: true );
+                isFirst = false;
+              }
+            }
+          }
+          else
+          {
+            if( exifValue.TryGetValue( out var tagValue ) && tagValue != null )
+            {
+              Decoder_Jpeg_Tests.OutputValue( tagValue, outputTagDetails: true, isArray: false );
             }
           }
         }
-        else
-        {
-          if( exifValue.TryGetValue( out var tagValue ) && tagValue != null )
-          {
-            Decoder_Jpeg_Tests.OutputValue( tagValue, outputTagDetails: true, isArray: false );
-          }
-        }
+
+        Console.WriteLine( string.Empty );
+      }
+      else
+      {
+        Console.Write( "\n\t(none)" );
       }
     }
-
-    Console.WriteLine( string.Empty );
   }
 
   private static void OutputValue( ExifTagValue? tagValue, bool outputTagDetails, bool isArray )

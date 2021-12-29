@@ -140,7 +140,7 @@ internal class DecodeJpeg : IDecoder
 
     if( _width > 0 && _height > 0 )
     {
-      return new ImageDetails( _width, _height, _horizontalDpi, _verticalDpi, "image/jpeg", _exifDecoder?.GetExifTags(), _exifDecoder?.GetGpsTags(), _exifDecoder?.GetInteroperabilityTags() );
+      return new ImageDetails( _width, _height, _horizontalDpi, _verticalDpi, "image/jpeg", _exifDecoder?.GetProfileTags() );
     }
 
     throw ExceptionHelper.Throw( reader, ErrorMessage );
