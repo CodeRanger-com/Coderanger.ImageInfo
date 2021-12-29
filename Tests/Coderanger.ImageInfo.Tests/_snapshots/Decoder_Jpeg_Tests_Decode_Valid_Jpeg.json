@@ -2543,5 +2543,347 @@
         "Description": "Indicates horizontal positioning errors in meters"
       }
     ]
+  },
+  "bath.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Image Description = Bath's Royal Crescent",
+        "IsArray": false,
+        "Tag": 270,
+        "ExifType": 2,
+        "Name": "Image Description",
+        "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+      },
+      {
+        "StringValue": "Camera Make = Apple",
+        "IsArray": false,
+        "Tag": 271,
+        "ExifType": 2,
+        "Name": "Camera Make",
+        "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Camera Model = iPhone X",
+        "IsArray": false,
+        "Tag": 272,
+        "ExifType": 2,
+        "Name": "Camera Model",
+        "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Software = paint.net 4.3.4",
+        "IsArray": false,
+        "Tag": 305,
+        "ExifType": 2,
+        "Name": "Software",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTime = 22/11/2021 15:02:58",
+        "Tag": 306,
+        "ExifType": 12,
+        "Name": "DateTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "Artist = Dan Petitt",
+        "IsArray": false,
+        "Tag": 315,
+        "ExifType": 2,
+        "Name": "Artist",
+        "Description": ""
+      },
+      {
+        "StringValue": "HostComputer = iPhone X",
+        "IsArray": false,
+        "Tag": 316,
+        "ExifType": 2,
+        "Name": "HostComputer",
+        "Description": ""
+      },
+      {
+        "StringValue": "Copyright = Copyright Dan Petitt and CodeRanger.com. All rights reserved.",
+        "IsArray": false,
+        "Tag": 33432,
+        "ExifType": 2,
+        "Name": "Copyright",
+        "Description": ""
+      },
+      {
+        "StringValue": "XPTitle = Bath's Royal Crescent",
+        "IsArray": false,
+        "Tag": 40091,
+        "ExifType": 2,
+        "Name": "XPTitle",
+        "Description": ""
+      },
+      {
+        "StringValue": "XPComment = The Royal Crescent was built between 1767 and 1775 to the design of John Wood the Younger, and forms a semi-ellipse of thirty Grade I listed houses arranged around a great Lawn",
+        "IsArray": false,
+        "Tag": 40092,
+        "ExifType": 2,
+        "Name": "XPComment",
+        "Description": ""
+      },
+      {
+        "StringValue": "XPAuthor = Dan Petitt",
+        "IsArray": false,
+        "Tag": 40093,
+        "ExifType": 2,
+        "Name": "XPAuthor",
+        "Description": ""
+      },
+      {
+        "StringValue": "XPKeywords = bath;royal crescent",
+        "IsArray": false,
+        "Tag": 40094,
+        "ExifType": 2,
+        "Name": "XPKeywords",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureTime = 1/1130 (0.0008849557522123894D)",
+        "IsArray": false,
+        "Tag": 33434,
+        "ExifType": 10,
+        "Name": "ExposureTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "FNumber = 9/5 (1.8D)",
+        "IsArray": false,
+        "Tag": 33437,
+        "ExifType": 10,
+        "Name": "FNumber",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureProgram = 2",
+        "IsArray": false,
+        "Tag": 34850,
+        "ExifType": 3,
+        "Name": "ExposureProgram",
+        "Description": ""
+      },
+      {
+        "StringValue": "ISOSpeedRatings = 20",
+        "IsArray": false,
+        "Tag": 34855,
+        "ExifType": 3,
+        "Name": "ISOSpeedRatings",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTimeOriginal = 22/11/2021 15:02:58",
+        "Tag": 36867,
+        "ExifType": 12,
+        "Name": "DateTimeOriginal",
+        "Description": ""
+      },
+      {
+        "StringValue": "ShutterSpeedValue = 103966/10251 (10.142034923422106D)",
+        "IsArray": false,
+        "Tag": 37377,
+        "ExifType": 9,
+        "Name": "ShutterSpeedValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ApertureValue = 54823/32325 (1.6959938128383605D)",
+        "IsArray": false,
+        "Tag": 37378,
+        "ExifType": 10,
+        "Name": "ApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "BrightnessValue = 44255/4911 (9.011402972917939D)",
+        "IsArray": false,
+        "Tag": 37379,
+        "ExifType": 9,
+        "Name": "BrightnessValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureBiasValue = 0/1 (0D)",
+        "IsArray": false,
+        "Tag": 37380,
+        "ExifType": 9,
+        "Name": "ExposureBiasValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MeteringMode = 5",
+        "IsArray": false,
+        "Tag": 37383,
+        "ExifType": 3,
+        "Name": "MeteringMode",
+        "Description": ""
+      },
+      {
+        "StringValue": "Flash = 16",
+        "IsArray": false,
+        "Tag": 37385,
+        "ExifType": 3,
+        "Name": "Flash",
+        "Description": ""
+      },
+      {
+        "StringValue": "FocalLength = 4/1 (4D)",
+        "IsArray": false,
+        "Tag": 37386,
+        "ExifType": 10,
+        "Name": "FocalLength",
+        "Description": ""
+      },
+      {
+        "StringValue": "SubjectLocation = 2015 / 1511 / 2217 / 1330",
+        "IsArray": true,
+        "Tag": 37396,
+        "ExifType": 3,
+        "Name": "SubjectLocation",
+        "Description": ""
+      }
+    ],
+    "Gps": [
+      {
+        "StringValue": "GPS Latitude Reference = N",
+        "IsArray": false,
+        "Tag": 1,
+        "ExifType": 2,
+        "Name": "GPS Latitude Reference",
+        "Description": "Indicates whether the latitude is North or South longitude; 'N' denotes North longitude, 'S' denotes South longitude"
+      },
+      {
+        "StringValue": "GPS Latitude = 51/1 (51D) / 23/1 (23D) / 1184/100 (11.84D)",
+        "IsArray": true,
+        "Tag": 2,
+        "ExifType": 10,
+        "Name": "GPS Latitude",
+        "Description": "Indicates the latitude as three Rational values giving the degress, minutes and seconds respectively"
+      },
+      {
+        "StringValue": "GPS Longitude Reference = W",
+        "IsArray": false,
+        "Tag": 3,
+        "ExifType": 2,
+        "Name": "GPS Longitude Reference",
+        "Description": "Indicates whether the longitude is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude"
+      },
+      {
+        "StringValue": "GPS Longitude = 2/1 (2D) / 22/1 (22D) / 439/100 (4.39D)",
+        "IsArray": true,
+        "Tag": 4,
+        "ExifType": 10,
+        "Name": "GPS Longitude",
+        "Description": "Indicates the longitude as three Rational values giving the degress, minutes and seconds respectively"
+      },
+      {
+        "StringValue": "GPS Altitude Reference = 0",
+        "IsArray": false,
+        "Tag": 5,
+        "ExifType": 1,
+        "Name": "GPS Altitude Reference",
+        "Description": "Indicates the altitude reference used for GPSAltitude; '0' denotes altitude above sea level, '1' denotes altitude below sea level"
+      },
+      {
+        "StringValue": "GPS Altitude = 143324/2677 (53.53903623459096D)",
+        "IsArray": false,
+        "Tag": 6,
+        "ExifType": 10,
+        "Name": "GPS Altitude",
+        "Description": "Indicates the altitude based on the reference in GPSAltitudeRef and expressed in meters"
+      },
+      {
+        "StringValue": "GPS Speed Reference = K",
+        "IsArray": false,
+        "Tag": 12,
+        "ExifType": 2,
+        "Name": "GPS Speed Reference",
+        "Description": "Indicates the unit used to express the GPS receiver speed of movement; 'K' denotes km/h, 'M' denotes miles per hour, 'N' denotes knots"
+      },
+      {
+        "StringValue": "GPS Speed = 14754/90053 (0.16383685163181683D)",
+        "IsArray": false,
+        "Tag": 13,
+        "ExifType": 10,
+        "Name": "GPS Speed",
+        "Description": "Indicates the speed of GPS receiver movement"
+      },
+      {
+        "StringValue": "GPS Image Direction Reference = T",
+        "IsArray": false,
+        "Tag": 16,
+        "ExifType": 2,
+        "Name": "GPS Image Direction Reference",
+        "Description": "Indicates the reference for giving the direction of the image when it is captured; 'T' denotes True Direction, 'M' denotes Magnetic Direction"
+      },
+      {
+        "StringValue": "GPS Image Direction = 552745/1611 (343.10676598386095D)",
+        "IsArray": false,
+        "Tag": 17,
+        "ExifType": 10,
+        "Name": "GPS Image Direction",
+        "Description": "Indicates the direction of the image when it was captured"
+      },
+      {
+        "StringValue": "GPS Destination Bearing Reference = T",
+        "IsArray": false,
+        "Tag": 23,
+        "ExifType": 2,
+        "Name": "GPS Destination Bearing Reference",
+        "Description": "Indicates the reference used for giving the bearing to the destination point; 'T' denotes true direction and 'M' is magnetic direction"
+      },
+      {
+        "StringValue": "GPS Destination Bearing = 552745/1611 (343.10676598386095D)",
+        "IsArray": false,
+        "Tag": 24,
+        "ExifType": 10,
+        "Name": "GPS Destination Bearing",
+        "Description": "Indicates the bearing to the destination point. The range of values is from 0.00 to 359.99"
+      },
+      {
+        "StringValue": "GPS Date Stamp = 22/11/2021",
+        "IsArray": false,
+        "Tag": 29,
+        "ExifType": 11,
+        "Name": "GPS Date Stamp",
+        "Description": "Recording date and time information relative to UTC (Coordinated Universal Time)"
+      },
+      {
+        "StringValue": "GPS Horizontal Positioning Error = 64/1 (64D)",
+        "IsArray": false,
+        "Tag": 31,
+        "ExifType": 10,
+        "Name": "GPS Horizontal Positioning Error",
+        "Description": "Indicates horizontal positioning errors in meters"
+      }
+    ]
   }
 }

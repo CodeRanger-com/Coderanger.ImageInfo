@@ -1,0 +1,2996 @@
+{
+  "fujifilm-dx10.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Camera Make = FUJIFILM",
+        "IsArray": false,
+        "Tag": 271,
+        "ExifType": 2,
+        "Name": "Camera Make",
+        "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Camera Model = DX-10",
+        "IsArray": false,
+        "Tag": 272,
+        "ExifType": 2,
+        "Name": "Camera Model",
+        "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Software = Digital Camera DX-10 Ver1.00",
+        "IsArray": false,
+        "Tag": 305,
+        "ExifType": 2,
+        "Name": "Software",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTime = 12/04/2001 20:33:14",
+        "Tag": 306,
+        "ExifType": 12,
+        "Name": "DateTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 2",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Copyright = J P Bowen ",
+        "IsArray": false,
+        "Tag": 33432,
+        "ExifType": 2,
+        "Name": "Copyright",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "Tag": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 856",
+        "IsArray": false,
+        "Tag": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 10274",
+        "IsArray": false,
+        "Tag": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 2",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "FNumber = 42/10 (4.2D)",
+        "IsArray": false,
+        "Tag": 33437,
+        "ExifType": 10,
+        "Name": "FNumber",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureProgram = 2",
+        "IsArray": false,
+        "Tag": 34850,
+        "ExifType": 3,
+        "Name": "ExposureProgram",
+        "Description": ""
+      },
+      {
+        "StringValue": "ISOSpeedRatings = 150",
+        "IsArray": false,
+        "Tag": 34855,
+        "ExifType": 3,
+        "Name": "ISOSpeedRatings",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTimeOriginal = 12/04/2001 20:33:14",
+        "Tag": 36867,
+        "ExifType": 12,
+        "Name": "DateTimeOriginal",
+        "Description": ""
+      },
+      {
+        "StringValue": "CompressedBitsPerPixel = 14/10 (1.4D)",
+        "IsArray": false,
+        "Tag": 37122,
+        "ExifType": 10,
+        "Name": "CompressedBitsPerPixel",
+        "Description": ""
+      },
+      {
+        "StringValue": "ShutterSpeedValue = 66/10 (6.6D)",
+        "IsArray": false,
+        "Tag": 37377,
+        "ExifType": 9,
+        "Name": "ShutterSpeedValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ApertureValue = 41/10 (4.1D)",
+        "IsArray": false,
+        "Tag": 37378,
+        "ExifType": 10,
+        "Name": "ApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "BrightnessValue = -27/10 (-2.7D)",
+        "IsArray": false,
+        "Tag": 37379,
+        "ExifType": 9,
+        "Name": "BrightnessValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureBiasValue = 0/10 (0D)",
+        "IsArray": false,
+        "Tag": 37380,
+        "ExifType": 9,
+        "Name": "ExposureBiasValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MaxApertureValue = 41/10 (4.1D)",
+        "IsArray": false,
+        "Tag": 37381,
+        "ExifType": 10,
+        "Name": "MaxApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MeteringMode = 5",
+        "IsArray": false,
+        "Tag": 37383,
+        "ExifType": 3,
+        "Name": "MeteringMode",
+        "Description": ""
+      },
+      {
+        "StringValue": "Flash = 1",
+        "IsArray": false,
+        "Tag": 37385,
+        "ExifType": 3,
+        "Name": "Flash",
+        "Description": ""
+      },
+      {
+        "StringValue": "FocalLength = 58/10 (5.8D)",
+        "IsArray": false,
+        "Tag": 37386,
+        "ExifType": 10,
+        "Name": "FocalLength",
+        "Description": ""
+      }
+    ],
+    "Interoperability": [
+      {
+        "StringValue": "Interoperability Index = R98",
+        "IsArray": false,
+        "Tag": 8193,
+        "ExifType": 2,
+        "Name": "Interoperability Index",
+        "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
+      },
+      {
+        "StringValue": "Interoperability Version = 0100",
+        "IsArray": false,
+        "Tag": 8194,
+        "ExifType": 2,
+        "Name": "Interoperability Version",
+        "Description": "Indicates the Interoperability version"
+      }
+    ]
+  },
+  "fujifilm-finepix40i.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Camera Make = FUJIFILM",
+        "IsArray": false,
+        "Tag": 271,
+        "ExifType": 2,
+        "Name": "Camera Make",
+        "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Camera Model = FinePix40i",
+        "IsArray": false,
+        "Tag": 272,
+        "ExifType": 2,
+        "Name": "Camera Model",
+        "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Software = Digital Camera FinePix40i Ver1.39",
+        "IsArray": false,
+        "Tag": 305,
+        "ExifType": 2,
+        "Name": "Software",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTime = 04/08/2000 18:22:57",
+        "Tag": 306,
+        "ExifType": 12,
+        "Name": "DateTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 2",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Copyright =           ",
+        "IsArray": false,
+        "Tag": 33432,
+        "ExifType": 2,
+        "Name": "Copyright",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "Tag": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 1074",
+        "IsArray": false,
+        "Tag": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 8691",
+        "IsArray": false,
+        "Tag": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 2",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "FNumber = 280/100 (2.8D)",
+        "IsArray": false,
+        "Tag": 33437,
+        "ExifType": 10,
+        "Name": "FNumber",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureProgram = 2",
+        "IsArray": false,
+        "Tag": 34850,
+        "ExifType": 3,
+        "Name": "ExposureProgram",
+        "Description": ""
+      },
+      {
+        "StringValue": "ISOSpeedRatings = 200",
+        "IsArray": false,
+        "Tag": 34855,
+        "ExifType": 3,
+        "Name": "ISOSpeedRatings",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTimeOriginal = 04/08/2000 18:22:57",
+        "Tag": 36867,
+        "ExifType": 12,
+        "Name": "DateTimeOriginal",
+        "Description": ""
+      },
+      {
+        "StringValue": "CompressedBitsPerPixel = 15/10 (1.5D)",
+        "IsArray": false,
+        "Tag": 37122,
+        "ExifType": 10,
+        "Name": "CompressedBitsPerPixel",
+        "Description": ""
+      },
+      {
+        "StringValue": "ShutterSpeedValue = 550/100 (5.5D)",
+        "IsArray": false,
+        "Tag": 37377,
+        "ExifType": 9,
+        "Name": "ShutterSpeedValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ApertureValue = 300/100 (3D)",
+        "IsArray": false,
+        "Tag": 37378,
+        "ExifType": 10,
+        "Name": "ApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "BrightnessValue = 26/100 (0.26D)",
+        "IsArray": false,
+        "Tag": 37379,
+        "ExifType": 9,
+        "Name": "BrightnessValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureBiasValue = 0/100 (0D)",
+        "IsArray": false,
+        "Tag": 37380,
+        "ExifType": 9,
+        "Name": "ExposureBiasValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MaxApertureValue = 300/100 (3D)",
+        "IsArray": false,
+        "Tag": 37381,
+        "ExifType": 10,
+        "Name": "MaxApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MeteringMode = 5",
+        "IsArray": false,
+        "Tag": 37383,
+        "ExifType": 3,
+        "Name": "MeteringMode",
+        "Description": ""
+      },
+      {
+        "StringValue": "Flash = 1",
+        "IsArray": false,
+        "Tag": 37385,
+        "ExifType": 3,
+        "Name": "Flash",
+        "Description": ""
+      },
+      {
+        "StringValue": "FocalLength = 870/100 (8.7D)",
+        "IsArray": false,
+        "Tag": 37386,
+        "ExifType": 10,
+        "Name": "FocalLength",
+        "Description": ""
+      }
+    ],
+    "Interoperability": [
+      {
+        "StringValue": "Interoperability Index = R98",
+        "IsArray": false,
+        "Tag": 8193,
+        "ExifType": 2,
+        "Name": "Interoperability Index",
+        "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
+      },
+      {
+        "StringValue": "Interoperability Version = 0100",
+        "IsArray": false,
+        "Tag": 8194,
+        "ExifType": 2,
+        "Name": "Interoperability Version",
+        "Description": "Indicates the Interoperability version"
+      }
+    ]
+  },
+  "fujifilm-mx1700.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Camera Make = FUJIFILM",
+        "IsArray": false,
+        "Tag": 271,
+        "ExifType": 2,
+        "Name": "Camera Make",
+        "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Camera Model = MX-1700ZOOM",
+        "IsArray": false,
+        "Tag": 272,
+        "ExifType": 2,
+        "Name": "Camera Model",
+        "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Software = Digital Camera MX-1700ZOOM Ver1.00",
+        "IsArray": false,
+        "Tag": 305,
+        "ExifType": 2,
+        "Name": "Software",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTime = 02/09/2000 14:30:10",
+        "Tag": 306,
+        "ExifType": 12,
+        "Name": "DateTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 2",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Copyright =           ",
+        "IsArray": false,
+        "Tag": 33432,
+        "ExifType": 2,
+        "Name": "Copyright",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "Tag": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 856",
+        "IsArray": false,
+        "Tag": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 4354",
+        "IsArray": false,
+        "Tag": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 2",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "FNumber = 70/10 (7D)",
+        "IsArray": false,
+        "Tag": 33437,
+        "ExifType": 10,
+        "Name": "FNumber",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureProgram = 2",
+        "IsArray": false,
+        "Tag": 34850,
+        "ExifType": 3,
+        "Name": "ExposureProgram",
+        "Description": ""
+      },
+      {
+        "StringValue": "ISOSpeedRatings = 125",
+        "IsArray": false,
+        "Tag": 34855,
+        "ExifType": 3,
+        "Name": "ISOSpeedRatings",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTimeOriginal = 02/09/2000 14:30:10",
+        "Tag": 36867,
+        "ExifType": 12,
+        "Name": "DateTimeOriginal",
+        "Description": ""
+      },
+      {
+        "StringValue": "CompressedBitsPerPixel = 2/1 (2D)",
+        "IsArray": false,
+        "Tag": 37122,
+        "ExifType": 10,
+        "Name": "CompressedBitsPerPixel",
+        "Description": ""
+      },
+      {
+        "StringValue": "ShutterSpeedValue = 74/10 (7.4D)",
+        "IsArray": false,
+        "Tag": 37377,
+        "ExifType": 9,
+        "Name": "ShutterSpeedValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ApertureValue = 56/10 (5.6D)",
+        "IsArray": false,
+        "Tag": 37378,
+        "ExifType": 10,
+        "Name": "ApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "BrightnessValue = 76/10 (7.6D)",
+        "IsArray": false,
+        "Tag": 37379,
+        "ExifType": 9,
+        "Name": "BrightnessValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureBiasValue = 0/10 (0D)",
+        "IsArray": false,
+        "Tag": 37380,
+        "ExifType": 9,
+        "Name": "ExposureBiasValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MaxApertureValue = 33/10 (3.3D)",
+        "IsArray": false,
+        "Tag": 37381,
+        "ExifType": 10,
+        "Name": "MaxApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MeteringMode = 5",
+        "IsArray": false,
+        "Tag": 37383,
+        "ExifType": 3,
+        "Name": "MeteringMode",
+        "Description": ""
+      },
+      {
+        "StringValue": "Flash = 0",
+        "IsArray": false,
+        "Tag": 37385,
+        "ExifType": 3,
+        "Name": "Flash",
+        "Description": ""
+      },
+      {
+        "StringValue": "FocalLength = 99/10 (9.9D)",
+        "IsArray": false,
+        "Tag": 37386,
+        "ExifType": 10,
+        "Name": "FocalLength",
+        "Description": ""
+      }
+    ],
+    "Interoperability": [
+      {
+        "StringValue": "Interoperability Index = R98",
+        "IsArray": false,
+        "Tag": 8193,
+        "ExifType": 2,
+        "Name": "Interoperability Index",
+        "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
+      },
+      {
+        "StringValue": "Interoperability Version = 0100",
+        "IsArray": false,
+        "Tag": 8194,
+        "ExifType": 2,
+        "Name": "Interoperability Version",
+        "Description": "Indicates the Interoperability version"
+      }
+    ]
+  },
+  "kodak-dc210.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Image Description = ",
+        "IsArray": false,
+        "Tag": 270,
+        "ExifType": 2,
+        "Name": "Image Description",
+        "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+      },
+      {
+        "StringValue": "Camera Make = Eastman Kodak Company",
+        "IsArray": false,
+        "Tag": 271,
+        "ExifType": 2,
+        "Name": "Camera Make",
+        "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Camera Model = DC210 Zoom (V05.00)",
+        "IsArray": false,
+        "Tag": 272,
+        "ExifType": 2,
+        "Name": "Camera Model",
+        "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 216/1 (216D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 216/1 (216D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 1",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Copyright = ",
+        "IsArray": false,
+        "Tag": 33432,
+        "ExifType": 2,
+        "Name": "Copyright",
+        "Description": ""
+      },
+      {
+        "StringValue": "ImageWidth = 96",
+        "IsArray": false,
+        "Tag": 256,
+        "ExifType": 3,
+        "Name": "ImageWidth",
+        "Description": ""
+      },
+      {
+        "StringValue": "ImageHeight = 72",
+        "IsArray": false,
+        "Tag": 257,
+        "ExifType": 3,
+        "Name": "ImageHeight",
+        "Description": ""
+      },
+      {
+        "StringValue": "BitsPerSample = 8 / 8 / 8",
+        "IsArray": true,
+        "Tag": 258,
+        "ExifType": 3,
+        "Name": "BitsPerSample",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 1",
+        "IsArray": false,
+        "Tag": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "PhotometricInterpretation = 2",
+        "IsArray": false,
+        "Tag": 262,
+        "ExifType": 3,
+        "Name": "PhotometricInterpretation",
+        "Description": ""
+      },
+      {
+        "StringValue": "StripOffsets = 60817408",
+        "IsArray": false,
+        "Tag": 273,
+        "ExifType": 6,
+        "Name": "StripOffsets",
+        "Description": ""
+      },
+      {
+        "StringValue": "SamplesPerPixel = 3",
+        "IsArray": false,
+        "Tag": 277,
+        "ExifType": 3,
+        "Name": "SamplesPerPixel",
+        "Description": ""
+      },
+      {
+        "StringValue": "RowsPerStrip = 4718592",
+        "IsArray": false,
+        "Tag": 278,
+        "ExifType": 6,
+        "Name": "RowsPerStrip",
+        "Description": ""
+      },
+      {
+        "StringValue": "StripByteCounts = 1358954496",
+        "IsArray": false,
+        "Tag": 279,
+        "ExifType": 6,
+        "Name": "StripByteCounts",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureTime = 1/30 (0.03333333333333333D)",
+        "IsArray": false,
+        "Tag": 33434,
+        "ExifType": 10,
+        "Name": "ExposureTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "FNumber = 40/10 (4D)",
+        "IsArray": false,
+        "Tag": 33437,
+        "ExifType": 10,
+        "Name": "FNumber",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTimeOriginal = 26/10/2000 16:46:51",
+        "Tag": 36867,
+        "ExifType": 12,
+        "Name": "DateTimeOriginal",
+        "Description": ""
+      },
+      {
+        "StringValue": "CompressedBitsPerPixel = 0/0 (NaND)",
+        "IsArray": false,
+        "Tag": 37122,
+        "ExifType": 10,
+        "Name": "CompressedBitsPerPixel",
+        "Description": ""
+      },
+      {
+        "StringValue": "ShutterSpeedValue = 50/10 (5D)",
+        "IsArray": false,
+        "Tag": 37377,
+        "ExifType": 9,
+        "Name": "ShutterSpeedValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ApertureValue = 40/10 (4D)",
+        "IsArray": false,
+        "Tag": 37378,
+        "ExifType": 10,
+        "Name": "ApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "BrightnessValue = 15/10 (1.5D)",
+        "IsArray": false,
+        "Tag": 37379,
+        "ExifType": 9,
+        "Name": "BrightnessValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureBiasValue = 0/10 (0D)",
+        "IsArray": false,
+        "Tag": 37380,
+        "ExifType": 9,
+        "Name": "ExposureBiasValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MaxApertureValue = 400/100 (4D)",
+        "IsArray": false,
+        "Tag": 37381,
+        "ExifType": 10,
+        "Name": "MaxApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "SubjectDistance = 0/0 (NaND)",
+        "IsArray": false,
+        "Tag": 37382,
+        "ExifType": 9,
+        "Name": "SubjectDistance",
+        "Description": ""
+      },
+      {
+        "StringValue": "MeteringMode = 2",
+        "IsArray": false,
+        "Tag": 37383,
+        "ExifType": 3,
+        "Name": "MeteringMode",
+        "Description": ""
+      },
+      {
+        "StringValue": "LightSource = 0",
+        "IsArray": false,
+        "Tag": 37384,
+        "ExifType": 3,
+        "Name": "LightSource",
+        "Description": ""
+      },
+      {
+        "StringValue": "Flash = 1",
+        "IsArray": false,
+        "Tag": 37385,
+        "ExifType": 3,
+        "Name": "Flash",
+        "Description": ""
+      },
+      {
+        "StringValue": "FocalLength = 44/10 (4.4D)",
+        "IsArray": false,
+        "Tag": 37386,
+        "ExifType": 10,
+        "Name": "FocalLength",
+        "Description": ""
+      }
+    ]
+  },
+  "kodak-dc240.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Camera Make = EASTMAN KODAK COMPANY",
+        "IsArray": false,
+        "Tag": 271,
+        "ExifType": 2,
+        "Name": "Camera Make",
+        "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Camera Model = KODAK DC240 ZOOM DIGITAL CAMERA",
+        "IsArray": false,
+        "Tag": 272,
+        "ExifType": 2,
+        "Name": "Camera Model",
+        "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 192/1 (192D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 192/1 (192D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 1",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Copyright = KODAK DC240 ZOOM DIGITAL CAMERA ",
+        "IsArray": false,
+        "Tag": 33432,
+        "ExifType": 2,
+        "Name": "Copyright",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "Tag": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 1480",
+        "IsArray": false,
+        "Tag": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 6934",
+        "IsArray": false,
+        "Tag": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureTime = 1/30 (0.03333333333333333D)",
+        "IsArray": false,
+        "Tag": 33434,
+        "ExifType": 10,
+        "Name": "ExposureTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "FNumber = 4/1 (4D)",
+        "IsArray": false,
+        "Tag": 33437,
+        "ExifType": 10,
+        "Name": "FNumber",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTimeOriginal = 25/05/1999 21:00:09",
+        "Tag": 36867,
+        "ExifType": 12,
+        "Name": "DateTimeOriginal",
+        "Description": ""
+      },
+      {
+        "StringValue": "ShutterSpeedValue = 50/10 (5D)",
+        "IsArray": false,
+        "Tag": 37377,
+        "ExifType": 9,
+        "Name": "ShutterSpeedValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ApertureValue = 40/10 (4D)",
+        "IsArray": false,
+        "Tag": 37378,
+        "ExifType": 10,
+        "Name": "ApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureBiasValue = 0/100 (0D)",
+        "IsArray": false,
+        "Tag": 37380,
+        "ExifType": 9,
+        "Name": "ExposureBiasValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MaxApertureValue = 38/10 (3.8D)",
+        "IsArray": false,
+        "Tag": 37381,
+        "ExifType": 10,
+        "Name": "MaxApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MeteringMode = 1",
+        "IsArray": false,
+        "Tag": 37383,
+        "ExifType": 3,
+        "Name": "MeteringMode",
+        "Description": ""
+      },
+      {
+        "StringValue": "LightSource = 0",
+        "IsArray": false,
+        "Tag": 37384,
+        "ExifType": 3,
+        "Name": "LightSource",
+        "Description": ""
+      },
+      {
+        "StringValue": "Flash = 1",
+        "IsArray": false,
+        "Tag": 37385,
+        "ExifType": 3,
+        "Name": "Flash",
+        "Description": ""
+      },
+      {
+        "StringValue": "FocalLength = 140/10 (14D)",
+        "IsArray": false,
+        "Tag": 37386,
+        "ExifType": 10,
+        "Name": "FocalLength",
+        "Description": ""
+      }
+    ],
+    "Interoperability": [
+      {
+        "StringValue": "Interoperability Index = R98",
+        "IsArray": false,
+        "Tag": 8193,
+        "ExifType": 2,
+        "Name": "Interoperability Index",
+        "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
+      },
+      {
+        "StringValue": "Interoperability Version = 0100",
+        "IsArray": false,
+        "Tag": 8194,
+        "ExifType": 2,
+        "Name": "Interoperability Version",
+        "Description": "Indicates the Interoperability version"
+      }
+    ]
+  },
+  "nikon-e950.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Image Description =           ",
+        "IsArray": false,
+        "Tag": 270,
+        "ExifType": 2,
+        "Name": "Image Description",
+        "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+      },
+      {
+        "StringValue": "Camera Make = NIKON",
+        "IsArray": false,
+        "Tag": 271,
+        "ExifType": 2,
+        "Name": "Camera Make",
+        "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Camera Model = E950",
+        "IsArray": false,
+        "Tag": 272,
+        "ExifType": 2,
+        "Name": "Camera Model",
+        "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 300/1 (300D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 300/1 (300D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Software = v981-79",
+        "IsArray": false,
+        "Tag": 305,
+        "ExifType": 2,
+        "Name": "Software",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTime = 06/04/2001 11:51:40",
+        "Tag": 306,
+        "ExifType": 12,
+        "Name": "DateTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 2",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "Tag": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 300/1 (300D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 300/1 (300D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 2036",
+        "IsArray": false,
+        "Tag": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 4662",
+        "IsArray": false,
+        "Tag": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureTime = 10/770 (0.012987012987012988D)",
+        "IsArray": false,
+        "Tag": 33434,
+        "ExifType": 10,
+        "Name": "ExposureTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "FNumber = 55/10 (5.5D)",
+        "IsArray": false,
+        "Tag": 33437,
+        "ExifType": 10,
+        "Name": "FNumber",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureProgram = 2",
+        "IsArray": false,
+        "Tag": 34850,
+        "ExifType": 3,
+        "Name": "ExposureProgram",
+        "Description": ""
+      },
+      {
+        "StringValue": "ISOSpeedRatings = 80",
+        "IsArray": false,
+        "Tag": 34855,
+        "ExifType": 3,
+        "Name": "ISOSpeedRatings",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTimeOriginal = 06/04/2001 11:51:40",
+        "Tag": 36867,
+        "ExifType": 12,
+        "Name": "DateTimeOriginal",
+        "Description": ""
+      },
+      {
+        "StringValue": "CompressedBitsPerPixel = 4/1 (4D)",
+        "IsArray": false,
+        "Tag": 37122,
+        "ExifType": 10,
+        "Name": "CompressedBitsPerPixel",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureBiasValue = 0/10 (0D)",
+        "IsArray": false,
+        "Tag": 37380,
+        "ExifType": 9,
+        "Name": "ExposureBiasValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MaxApertureValue = 26/10 (2.6D)",
+        "IsArray": false,
+        "Tag": 37381,
+        "ExifType": 10,
+        "Name": "MaxApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MeteringMode = 5",
+        "IsArray": false,
+        "Tag": 37383,
+        "ExifType": 3,
+        "Name": "MeteringMode",
+        "Description": ""
+      },
+      {
+        "StringValue": "LightSource = 0",
+        "IsArray": false,
+        "Tag": 37384,
+        "ExifType": 3,
+        "Name": "LightSource",
+        "Description": ""
+      },
+      {
+        "StringValue": "Flash = 0",
+        "IsArray": false,
+        "Tag": 37385,
+        "ExifType": 3,
+        "Name": "Flash",
+        "Description": ""
+      },
+      {
+        "StringValue": "FocalLength = 128/10 (12.8D)",
+        "IsArray": false,
+        "Tag": 37386,
+        "ExifType": 10,
+        "Name": "FocalLength",
+        "Description": ""
+      }
+    ],
+    "Interoperability": [
+      {
+        "StringValue": "Interoperability Index = R98",
+        "IsArray": false,
+        "Tag": 8193,
+        "ExifType": 2,
+        "Name": "Interoperability Index",
+        "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
+      },
+      {
+        "StringValue": "Interoperability Version = 0100",
+        "IsArray": false,
+        "Tag": 8194,
+        "ExifType": 2,
+        "Name": "Interoperability Version",
+        "Description": "Indicates the Interoperability version"
+      }
+    ]
+  },
+  "olympus-c960.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Image Description = OLYMPUS DIGITAL CAMERA         ",
+        "IsArray": false,
+        "Tag": 270,
+        "ExifType": 2,
+        "Name": "Image Description",
+        "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+      },
+      {
+        "StringValue": "Camera Make = OLYMPUS OPTICAL CO.,LTD",
+        "IsArray": false,
+        "Tag": 271,
+        "ExifType": 2,
+        "Name": "Camera Make",
+        "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Camera Model = C960Z,D460Z",
+        "IsArray": false,
+        "Tag": 272,
+        "ExifType": 2,
+        "Name": "Camera Model",
+        "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Software = OLYMPUS CAMEDIA Master",
+        "IsArray": false,
+        "Tag": 305,
+        "ExifType": 2,
+        "Name": "Software",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTime = 08/11/2000 20:14:38",
+        "Tag": 306,
+        "ExifType": 12,
+        "Name": "DateTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 2",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "Tag": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 2012",
+        "IsArray": false,
+        "Tag": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 5145",
+        "IsArray": false,
+        "Tag": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureTime = 1/345 (0.002898550724637681D)",
+        "IsArray": false,
+        "Tag": 33434,
+        "ExifType": 10,
+        "Name": "ExposureTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "FNumber = 80/10 (8D)",
+        "IsArray": false,
+        "Tag": 33437,
+        "ExifType": 10,
+        "Name": "FNumber",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureProgram = 2",
+        "IsArray": false,
+        "Tag": 34850,
+        "ExifType": 3,
+        "Name": "ExposureProgram",
+        "Description": ""
+      },
+      {
+        "StringValue": "ISOSpeedRatings = 125",
+        "IsArray": false,
+        "Tag": 34855,
+        "ExifType": 3,
+        "Name": "ISOSpeedRatings",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTimeOriginal = 07/11/2000 10:41:43",
+        "Tag": 36867,
+        "ExifType": 12,
+        "Name": "DateTimeOriginal",
+        "Description": ""
+      },
+      {
+        "StringValue": "CompressedBitsPerPixel = 1/1 (1D)",
+        "IsArray": false,
+        "Tag": 37122,
+        "ExifType": 10,
+        "Name": "CompressedBitsPerPixel",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureBiasValue = 0/10 (0D)",
+        "IsArray": false,
+        "Tag": 37380,
+        "ExifType": 9,
+        "Name": "ExposureBiasValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MaxApertureValue = 3/1 (3D)",
+        "IsArray": false,
+        "Tag": 37381,
+        "ExifType": 10,
+        "Name": "MaxApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MeteringMode = 5",
+        "IsArray": false,
+        "Tag": 37383,
+        "ExifType": 3,
+        "Name": "MeteringMode",
+        "Description": ""
+      },
+      {
+        "StringValue": "LightSource = 0",
+        "IsArray": false,
+        "Tag": 37384,
+        "ExifType": 3,
+        "Name": "LightSource",
+        "Description": ""
+      },
+      {
+        "StringValue": "Flash = 0",
+        "IsArray": false,
+        "Tag": 37385,
+        "ExifType": 3,
+        "Name": "Flash",
+        "Description": ""
+      },
+      {
+        "StringValue": "FocalLength = 56/10 (5.6D)",
+        "IsArray": false,
+        "Tag": 37386,
+        "ExifType": 10,
+        "Name": "FocalLength",
+        "Description": ""
+      }
+    ],
+    "Interoperability": [
+      {
+        "StringValue": "Interoperability Index = R98",
+        "IsArray": false,
+        "Tag": 8193,
+        "ExifType": 2,
+        "Name": "Interoperability Index",
+        "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
+      },
+      {
+        "StringValue": "Interoperability Version = 0100",
+        "IsArray": false,
+        "Tag": 8194,
+        "ExifType": 2,
+        "Name": "Interoperability Version",
+        "Description": "Indicates the Interoperability version"
+      }
+    ]
+  },
+  "ricoh-rdc5300.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Camera Make = RICOH      ",
+        "IsArray": false,
+        "Tag": 271,
+        "ExifType": 2,
+        "Name": "Camera Make",
+        "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Camera Model = RDC-5300       ",
+        "IsArray": false,
+        "Tag": 272,
+        "ExifType": 2,
+        "Name": "Camera Model",
+        "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 2",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Copyright = (C) by RDC-5300 User     ",
+        "IsArray": false,
+        "Tag": 33432,
+        "ExifType": 2,
+        "Name": "Copyright",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "Tag": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 1061",
+        "IsArray": false,
+        "Tag": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 5046",
+        "IsArray": false,
+        "Tag": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTimeOriginal = 31/05/2000 21:50:40",
+        "Tag": 36867,
+        "ExifType": 12,
+        "Name": "DateTimeOriginal",
+        "Description": ""
+      },
+      {
+        "StringValue": "CompressedBitsPerPixel = 300/100 (3D)",
+        "IsArray": false,
+        "Tag": 37122,
+        "ExifType": 10,
+        "Name": "CompressedBitsPerPixel",
+        "Description": ""
+      },
+      {
+        "StringValue": "ShutterSpeedValue = 65/10 (6.5D)",
+        "IsArray": false,
+        "Tag": 37377,
+        "ExifType": 9,
+        "Name": "ShutterSpeedValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ApertureValue = 40/10 (4D)",
+        "IsArray": false,
+        "Tag": 37378,
+        "ExifType": 10,
+        "Name": "ApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "BrightnessValue = -20/10 (-2D)",
+        "IsArray": false,
+        "Tag": 37379,
+        "ExifType": 9,
+        "Name": "BrightnessValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureBiasValue = 0/10 (0D)",
+        "IsArray": false,
+        "Tag": 37380,
+        "ExifType": 9,
+        "Name": "ExposureBiasValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MaxApertureValue = 39/10 (3.9D)",
+        "IsArray": false,
+        "Tag": 37381,
+        "ExifType": 10,
+        "Name": "MaxApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "LightSource = 0",
+        "IsArray": false,
+        "Tag": 37384,
+        "ExifType": 3,
+        "Name": "LightSource",
+        "Description": ""
+      },
+      {
+        "StringValue": "Flash = 1",
+        "IsArray": false,
+        "Tag": 37385,
+        "ExifType": 3,
+        "Name": "Flash",
+        "Description": ""
+      },
+      {
+        "StringValue": "FocalLength = 133/10 (13.3D)",
+        "IsArray": false,
+        "Tag": 37386,
+        "ExifType": 10,
+        "Name": "FocalLength",
+        "Description": ""
+      }
+    ],
+    "Interoperability": [
+      {
+        "StringValue": "Interoperability Index = R98",
+        "IsArray": false,
+        "Tag": 8193,
+        "ExifType": 2,
+        "Name": "Interoperability Index",
+        "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
+      },
+      {
+        "StringValue": "Interoperability Version = 0100",
+        "IsArray": false,
+        "Tag": 8194,
+        "ExifType": 2,
+        "Name": "Interoperability Version",
+        "Description": "Indicates the Interoperability version"
+      }
+    ]
+  },
+  "sanyo-vpcg250.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Image Description = SANYO DIGITAL CAMERA",
+        "IsArray": false,
+        "Tag": 270,
+        "ExifType": 2,
+        "Name": "Image Description",
+        "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+      },
+      {
+        "StringValue": "Camera Make = SANYO Electric Co.,Ltd.",
+        "IsArray": false,
+        "Tag": 271,
+        "ExifType": 2,
+        "Name": "Camera Make",
+        "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Camera Model = SR6 ",
+        "IsArray": false,
+        "Tag": 272,
+        "ExifType": 2,
+        "Name": "Camera Model",
+        "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Software = V06P-74",
+        "IsArray": false,
+        "Tag": 305,
+        "ExifType": 2,
+        "Name": "Software",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTime = 01/01/1998 00:00:00",
+        "Tag": 306,
+        "ExifType": 12,
+        "Name": "DateTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 2",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "Tag": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 877",
+        "IsArray": false,
+        "Tag": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 3602",
+        "IsArray": false,
+        "Tag": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureTime = 1/171 (0.005847953216374269D)",
+        "IsArray": false,
+        "Tag": 33434,
+        "ExifType": 10,
+        "Name": "ExposureTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "FNumber = 80/10 (8D)",
+        "IsArray": false,
+        "Tag": 33437,
+        "ExifType": 10,
+        "Name": "FNumber",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTimeOriginal = 01/01/1998 00:00:00",
+        "Tag": 36867,
+        "ExifType": 12,
+        "Name": "DateTimeOriginal",
+        "Description": ""
+      },
+      {
+        "StringValue": "CompressedBitsPerPixel = 17/10 (1.7D)",
+        "IsArray": false,
+        "Tag": 37122,
+        "ExifType": 10,
+        "Name": "CompressedBitsPerPixel",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureBiasValue = 0/10 (0D)",
+        "IsArray": false,
+        "Tag": 37380,
+        "ExifType": 9,
+        "Name": "ExposureBiasValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MaxApertureValue = 3/1 (3D)",
+        "IsArray": false,
+        "Tag": 37381,
+        "ExifType": 10,
+        "Name": "MaxApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MeteringMode = 2",
+        "IsArray": false,
+        "Tag": 37383,
+        "ExifType": 3,
+        "Name": "MeteringMode",
+        "Description": ""
+      },
+      {
+        "StringValue": "LightSource = 0",
+        "IsArray": false,
+        "Tag": 37384,
+        "ExifType": 3,
+        "Name": "LightSource",
+        "Description": ""
+      },
+      {
+        "StringValue": "Flash = 1",
+        "IsArray": false,
+        "Tag": 37385,
+        "ExifType": 3,
+        "Name": "Flash",
+        "Description": ""
+      },
+      {
+        "StringValue": "FocalLength = 60/10 (6D)",
+        "IsArray": false,
+        "Tag": 37386,
+        "ExifType": 10,
+        "Name": "FocalLength",
+        "Description": ""
+      }
+    ]
+  },
+  "sanyo-vpcsx550.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Image Description = SANYO DIGITAL CAMERA",
+        "IsArray": false,
+        "Tag": 270,
+        "ExifType": 2,
+        "Name": "Image Description",
+        "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+      },
+      {
+        "StringValue": "Camera Make = SANYO Electric Co.,Ltd.",
+        "IsArray": false,
+        "Tag": 271,
+        "ExifType": 2,
+        "Name": "Camera Make",
+        "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Camera Model = SX113 ",
+        "IsArray": false,
+        "Tag": 272,
+        "ExifType": 2,
+        "Name": "Camera Model",
+        "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Software = V113p-73",
+        "IsArray": false,
+        "Tag": 305,
+        "ExifType": 2,
+        "Name": "Software",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTime = 18/11/2000 21:14:19",
+        "Tag": 306,
+        "ExifType": 12,
+        "Name": "DateTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 2",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "Tag": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 1070",
+        "IsArray": false,
+        "Tag": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 13234",
+        "IsArray": false,
+        "Tag": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureTime = 10/483 (0.020703933747412008D)",
+        "IsArray": false,
+        "Tag": 33434,
+        "ExifType": 10,
+        "Name": "ExposureTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "FNumber = 24/10 (2.4D)",
+        "IsArray": false,
+        "Tag": 33437,
+        "ExifType": 10,
+        "Name": "FNumber",
+        "Description": ""
+      },
+      {
+        "StringValue": "ISOSpeedRatings = 400",
+        "IsArray": false,
+        "Tag": 34855,
+        "ExifType": 3,
+        "Name": "ISOSpeedRatings",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTimeOriginal = 18/11/2000 21:14:19",
+        "Tag": 36867,
+        "ExifType": 12,
+        "Name": "DateTimeOriginal",
+        "Description": ""
+      },
+      {
+        "StringValue": "CompressedBitsPerPixel = 17/10 (1.7D)",
+        "IsArray": false,
+        "Tag": 37122,
+        "ExifType": 10,
+        "Name": "CompressedBitsPerPixel",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureBiasValue = 0/10 (0D)",
+        "IsArray": false,
+        "Tag": 37380,
+        "ExifType": 9,
+        "Name": "ExposureBiasValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MaxApertureValue = 3/1 (3D)",
+        "IsArray": false,
+        "Tag": 37381,
+        "ExifType": 10,
+        "Name": "MaxApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MeteringMode = 2",
+        "IsArray": false,
+        "Tag": 37383,
+        "ExifType": 3,
+        "Name": "MeteringMode",
+        "Description": ""
+      },
+      {
+        "StringValue": "LightSource = 0",
+        "IsArray": false,
+        "Tag": 37384,
+        "ExifType": 3,
+        "Name": "LightSource",
+        "Description": ""
+      },
+      {
+        "StringValue": "Flash = 0",
+        "IsArray": false,
+        "Tag": 37385,
+        "ExifType": 3,
+        "Name": "Flash",
+        "Description": ""
+      },
+      {
+        "StringValue": "FocalLength = 60/10 (6D)",
+        "IsArray": false,
+        "Tag": 37386,
+        "ExifType": 10,
+        "Name": "FocalLength",
+        "Description": ""
+      }
+    ],
+    "Interoperability": [
+      {
+        "StringValue": "Interoperability Index = R98",
+        "IsArray": false,
+        "Tag": 8193,
+        "ExifType": 2,
+        "Name": "Interoperability Index",
+        "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
+      },
+      {
+        "StringValue": "Interoperability Version = 0100",
+        "IsArray": false,
+        "Tag": 8194,
+        "ExifType": 2,
+        "Name": "Interoperability Version",
+        "Description": "Indicates the Interoperability version"
+      }
+    ]
+  },
+  "sony-cybershot.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Image Description =                                ",
+        "IsArray": false,
+        "Tag": 270,
+        "ExifType": 2,
+        "Name": "Image Description",
+        "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+      },
+      {
+        "StringValue": "Camera Make = SONY",
+        "IsArray": false,
+        "Tag": 271,
+        "ExifType": 2,
+        "Name": "Camera Make",
+        "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Camera Model = CYBERSHOT",
+        "IsArray": false,
+        "Tag": 272,
+        "ExifType": 2,
+        "Name": "Camera Model",
+        "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTime = 30/09/2000 10:59:45",
+        "Tag": 306,
+        "ExifType": 12,
+        "Name": "DateTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 2",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "Tag": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "Camera Make = SONY",
+        "IsArray": false,
+        "Tag": 271,
+        "ExifType": 2,
+        "Name": "Camera Make",
+        "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Camera Model = CYBERSHOT",
+        "IsArray": false,
+        "Tag": 272,
+        "ExifType": 2,
+        "Name": "Camera Model",
+        "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTime = 30/09/2000 10:59:45",
+        "Tag": 306,
+        "ExifType": 12,
+        "Name": "DateTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 797",
+        "IsArray": false,
+        "Tag": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 2959",
+        "IsArray": false,
+        "Tag": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureTime = 1/197 (0.005076142131979695D)",
+        "IsArray": false,
+        "Tag": 33434,
+        "ExifType": 10,
+        "Name": "ExposureTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "FNumber = 40/10 (4D)",
+        "IsArray": false,
+        "Tag": 33437,
+        "ExifType": 10,
+        "Name": "FNumber",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureProgram = 2",
+        "IsArray": false,
+        "Tag": 34850,
+        "ExifType": 3,
+        "Name": "ExposureProgram",
+        "Description": ""
+      },
+      {
+        "StringValue": "ISOSpeedRatings = 100",
+        "IsArray": false,
+        "Tag": 34855,
+        "ExifType": 3,
+        "Name": "ISOSpeedRatings",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTimeOriginal = 30/09/2000 10:59:45",
+        "Tag": 36867,
+        "ExifType": 12,
+        "Name": "DateTimeOriginal",
+        "Description": ""
+      },
+      {
+        "StringValue": "CompressedBitsPerPixel = 2/1 (2D)",
+        "IsArray": false,
+        "Tag": 37122,
+        "ExifType": 10,
+        "Name": "CompressedBitsPerPixel",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureBiasValue = 0/10 (0D)",
+        "IsArray": false,
+        "Tag": 37380,
+        "ExifType": 9,
+        "Name": "ExposureBiasValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MaxApertureValue = 3/1 (3D)",
+        "IsArray": false,
+        "Tag": 37381,
+        "ExifType": 10,
+        "Name": "MaxApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MeteringMode = 2",
+        "IsArray": false,
+        "Tag": 37383,
+        "ExifType": 3,
+        "Name": "MeteringMode",
+        "Description": ""
+      },
+      {
+        "StringValue": "LightSource = 0",
+        "IsArray": false,
+        "Tag": 37384,
+        "ExifType": 3,
+        "Name": "LightSource",
+        "Description": ""
+      },
+      {
+        "StringValue": "Flash = 0",
+        "IsArray": false,
+        "Tag": 37385,
+        "ExifType": 3,
+        "Name": "Flash",
+        "Description": ""
+      },
+      {
+        "StringValue": "FocalLength = 216/10 (21.6D)",
+        "IsArray": false,
+        "Tag": 37386,
+        "ExifType": 10,
+        "Name": "FocalLength",
+        "Description": ""
+      }
+    ],
+    "Interoperability": [
+      {
+        "StringValue": "Interoperability Index = R98",
+        "IsArray": false,
+        "Tag": 8193,
+        "ExifType": 2,
+        "Name": "Interoperability Index",
+        "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
+      },
+      {
+        "StringValue": "Interoperability Version = 0100",
+        "IsArray": false,
+        "Tag": 8194,
+        "ExifType": 2,
+        "Name": "Interoperability Version",
+        "Description": "Indicates the Interoperability version"
+      }
+    ]
+  },
+  "sony-d700.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Image Description = ",
+        "IsArray": false,
+        "Tag": 270,
+        "ExifType": 2,
+        "Name": "Image Description",
+        "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+      },
+      {
+        "StringValue": "Camera Make = SONY",
+        "IsArray": false,
+        "Tag": 271,
+        "ExifType": 2,
+        "Name": "Camera Make",
+        "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Camera Model = DSC-D700",
+        "IsArray": false,
+        "Tag": 272,
+        "ExifType": 2,
+        "Name": "Camera Model",
+        "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
+      },
+      {
+        "StringValue": "Orientation = 1",
+        "IsArray": false,
+        "Tag": 274,
+        "ExifType": 3,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTime = 01/12/1998 14:22:36",
+        "Tag": 306,
+        "ExifType": 12,
+        "Name": "DateTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "YCbCrPositioning = 1",
+        "IsArray": false,
+        "Tag": 531,
+        "ExifType": 3,
+        "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "ImageWidth = 0",
+        "IsArray": false,
+        "Tag": 256,
+        "ExifType": 3,
+        "Name": "ImageWidth",
+        "Description": ""
+      },
+      {
+        "StringValue": "ImageHeight = 0",
+        "IsArray": false,
+        "Tag": 257,
+        "ExifType": 3,
+        "Name": "ImageHeight",
+        "Description": ""
+      },
+      {
+        "StringValue": "BitsPerSample = 8 / 8 / 8",
+        "IsArray": true,
+        "Tag": 258,
+        "ExifType": 3,
+        "Name": "BitsPerSample",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 1",
+        "IsArray": false,
+        "Tag": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "PhotometricInterpretation = 2",
+        "IsArray": false,
+        "Tag": 262,
+        "ExifType": 3,
+        "Name": "PhotometricInterpretation",
+        "Description": ""
+      },
+      {
+        "StringValue": "StripOffsets = 648",
+        "IsArray": false,
+        "Tag": 273,
+        "ExifType": 6,
+        "Name": "StripOffsets",
+        "Description": ""
+      },
+      {
+        "StringValue": "SamplesPerPixel = 3",
+        "IsArray": false,
+        "Tag": 277,
+        "ExifType": 3,
+        "Name": "SamplesPerPixel",
+        "Description": ""
+      },
+      {
+        "StringValue": "RowsPerStrip = 60",
+        "IsArray": false,
+        "Tag": 278,
+        "ExifType": 6,
+        "Name": "RowsPerStrip",
+        "Description": ""
+      },
+      {
+        "StringValue": "StripByteCounts = 14400",
+        "IsArray": false,
+        "Tag": 279,
+        "ExifType": 6,
+        "Name": "StripByteCounts",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "Tag": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2",
+        "IsArray": false,
+        "Tag": 296,
+        "ExifType": 3,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureProgram = 3",
+        "IsArray": false,
+        "Tag": 34850,
+        "ExifType": 3,
+        "Name": "ExposureProgram",
+        "Description": ""
+      },
+      {
+        "StringValue": "ISOSpeedRatings = 200",
+        "IsArray": false,
+        "Tag": 34855,
+        "ExifType": 3,
+        "Name": "ISOSpeedRatings",
+        "Description": ""
+      },
+      {
+        "IsArray": false,
+        "StringValue": "DateTimeOriginal = 01/12/1998 14:22:36",
+        "Tag": 36867,
+        "ExifType": 12,
+        "Name": "DateTimeOriginal",
+        "Description": ""
+      },
+      {
+        "StringValue": "CompressedBitsPerPixel = 6/1 (6D)",
+        "IsArray": false,
+        "Tag": 37122,
+        "ExifType": 10,
+        "Name": "CompressedBitsPerPixel",
+        "Description": ""
+      },
+      {
+        "StringValue": "ShutterSpeedValue = 500/100 (5D)",
+        "IsArray": false,
+        "Tag": 37377,
+        "ExifType": 9,
+        "Name": "ShutterSpeedValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ApertureValue = 250/100 (2.5D)",
+        "IsArray": false,
+        "Tag": 37378,
+        "ExifType": 10,
+        "Name": "ApertureValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "ExposureBiasValue = 0/100 (0D)",
+        "IsArray": false,
+        "Tag": 37380,
+        "ExifType": 9,
+        "Name": "ExposureBiasValue",
+        "Description": ""
+      },
+      {
+        "StringValue": "MeteringMode = 2",
+        "IsArray": false,
+        "Tag": 37383,
+        "ExifType": 3,
+        "Name": "MeteringMode",
+        "Description": ""
+      },
+      {
+        "StringValue": "Flash = 0",
+        "IsArray": false,
+        "Tag": 37385,
+        "ExifType": 3,
+        "Name": "Flash",
+        "Description": ""
+      }
+    ]
+  }
+}

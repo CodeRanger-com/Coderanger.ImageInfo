@@ -3,7 +3,7 @@
 //     CodeRanger.com. All rights reserved
 // </copyright>
 // <author>Dan Petitt</author>
-// <comment></comment>
+// <comment>Manages all the decoders</comment>
 // -----------------------------------------------------------------------
 
 namespace Coderanger.ImageInfo.Decoders;

@@ -4,15 +4,11 @@
 // </copyright>
 // <author>Dan Petitt</author>
 // <comment>
-// JPEGs are written in Big Endian format; but may contain EXIFs stored as
-// TIFF segments which define what encoding is used
+// JPEGs are written in Big Endian format
 // Specifications:
 // https://en.wikipedia.org/wiki/JPEG_File_Interchange_Format
 // https://www.w3.org/Graphics/JPEG/itu-t81.pdf
 // https://www.w3.org/Graphics/JPEG/jfif3.pdf
-// Exif:
-// https://www.cipa.jp/std/documents/e/DC-008-2012_E.pdf
-// https://www.media.mit.edu/pia/Research/deepview/exif.html
 // </comment>
 // -----------------------------------------------------------------------
 
@@ -28,13 +24,13 @@ internal class DecodeJpeg : IDecoder
 {
   public IDecoder? DetectFormat( BinaryReader reader )
   {
-    // Set it to the start
+    // Set it to the start of the stream
     reader.BaseStream.Position = 0;
 
-    // Valid the stream is long enough
+    // Validate the stream is long enough
     if( JpegConstants.MagicNumber.Length >= reader.BaseStream.Length )
     {
-      // Cant be a valid JPEG format but perhaps its another one
+      // Cant be a valid format but perhaps its another one
       return null;
     }
 
@@ -49,6 +45,10 @@ internal class DecodeJpeg : IDecoder
 
   public ImageDetails Decode( BinaryReader reader )
   {
+    // Stream will be at the position it was last left at when
+    // detecting the format, so it will be at the end of the signature
+    // header
+
     Reset();
 
     bool eof = false;

@@ -4,8 +4,12 @@
 // </copyright>
 // <author>Dan Petitt</author>
 // <comment>
+// Exifs state which endian format is used within the header segment:
+// https://en.wikipedia.org/wiki/Exif
+// Specifications:
 // https://www.cipa.jp/std/documents/e/DC-008-2012_E.pdf
 // https://www.media.mit.edu/pia/Research/deepview/exif.html
+// https://www.exiv2.org/tags.html
 // </comment>
 // -----------------------------------------------------------------------
 
