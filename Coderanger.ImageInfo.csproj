@@ -16,7 +16,6 @@
     <Folder Include="Decoders\Bmp\" />
     <Folder Include="Decoders\Gif\" />
     <Folder Include="Decoders\WebP\" />
-    <Folder Include="Decoders\Png\" />
   </ItemGroup>
 
 </Project>

@@ -9,8 +9,6 @@
 namespace Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 using Coderanger.ImageInfo.Decoders.Exif.Types;
-using System.ComponentModel;
-
 using System.Text;
 
 /// <summary>
@@ -225,7 +223,7 @@ internal static class DataConversion
   /// <param name="offset">Offset from start of buffer to start conversion</param>
   /// <returns>Converted Int16 or short</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static short Int16FromBigEndianBuffer( byte[] buffer, int offset )
+  internal static short Int16FromBigEndianBuffer( byte[] buffer, int offset = 0 )
   {
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( short ) > buffer.Length )
@@ -252,7 +250,7 @@ internal static class DataConversion
   /// <param name="offset">Offset from start of buffer to start conversion</param>
   /// <returns>Converted UInt16 or ushort</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static ushort UInt16FromBigEndianBuffer( byte[] buffer, int offset )
+  internal static ushort UInt16FromBigEndianBuffer( byte[] buffer, int offset = 0 )
   {
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( ushort ) > buffer.Length )
@@ -278,7 +276,7 @@ internal static class DataConversion
   /// <param name="offset">Offset from start of buffer to start conversion</param>
   /// <returns>Converted signed integer</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static int Int32FromBigEndianBuffer( byte[] buffer, int offset )
+  internal static int Int32FromBigEndianBuffer( byte[] buffer, int offset = 0 )
   {
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( int ) > buffer.Length )
@@ -305,7 +303,7 @@ internal static class DataConversion
   /// <param name="offset">Offset from start of buffer to start conversion</param>
   /// <returns>Converted signed integer</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static uint UInt32FromBigEndianBuffer( byte[] buffer, int offset )
+  internal static uint UInt32FromBigEndianBuffer( byte[] buffer, int offset = 0 )
   {
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( uint ) > buffer.Length )
@@ -331,7 +329,7 @@ internal static class DataConversion
   /// <param name="offset">Offset from start of buffer to start conversion</param>
   /// <returns>Converted signed integer</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static float FloatFromBigEndianBuffer( byte[] buffer, int offset )
+  internal static float FloatFromBigEndianBuffer( byte[] buffer, int offset = 0 )
   {
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( float ) > buffer.Length )
@@ -358,7 +356,7 @@ internal static class DataConversion
   /// <param name="offset">Offset from start of buffer to start conversion</param>
   /// <returns>Converted signed integer</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static double DoubleFromBigEndianBuffer( byte[] buffer, int offset )
+  internal static double DoubleFromBigEndianBuffer( byte[] buffer, int offset = 0 )
   {
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( double ) > buffer.Length )
@@ -385,7 +383,7 @@ internal static class DataConversion
   /// <param name="offset">Offset from start of buffer to start conversion</param>
   /// <returns>Converted signed integer</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static long Int64FromBigEndianBuffer( byte[] buffer, int offset )
+  internal static long Int64FromBigEndianBuffer( byte[] buffer, int offset = 0 )
   {
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( long ) > buffer.Length )
@@ -412,7 +410,7 @@ internal static class DataConversion
   /// <param name="offset">Offset from start of buffer to start conversion</param>
   /// <returns>Converted signed integer</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static ulong UInt64FromBigEndianBuffer( byte[] buffer, int offset )
+  internal static ulong UInt64FromBigEndianBuffer( byte[] buffer, int offset = 0 )
   {
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( ulong ) > buffer.Length )
@@ -440,7 +438,7 @@ internal static class DataConversion
     }
   }
 
-  private static byte[] ReverseBytes( byte[] buffer, int size, int offset )
+  private static byte[] ReverseBytes( byte[] buffer, int size, int offset = 0 )
   {
     var reversed = new byte[ size ];
     for( int i = 0; i < reversed.Length; i++ )

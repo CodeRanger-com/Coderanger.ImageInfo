@@ -9,6 +9,7 @@
 namespace Coderanger.ImageInfo.Decoders;
 
 using Coderanger.ImageInfo.Decoders.Jpeg;
+using Coderanger.ImageInfo.Decoders.Png;
 
 internal class FormatManager
 {
@@ -20,5 +21,8 @@ internal class FormatManager
     }
   }
 
-  private readonly List<IDecoder> _decoders = new() { new DecodeJpeg() };
+  private readonly List<IDecoder> _decoders = new() { 
+    new DecodeJpeg(),
+    new DecodePng(),
+  };
 }

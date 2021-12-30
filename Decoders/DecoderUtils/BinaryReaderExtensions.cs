@@ -16,7 +16,7 @@ internal static class BinaryReaderExtensions
 
     if( reader.BaseStream.Position + jumpFromCurrent > reader.BaseStream.Length )
     {
-      throw new ImageFormatException( "Bad IBD offset in TIFF header" );
+      throw new ImageFormatException( $"Bad offset {jumpFromCurrent} + {reader.BaseStream.Position} is greater than stream length" );
     }
 
     reader.BaseStream.Seek( jumpFromCurrent, SeekOrigin.Current );
@@ -29,7 +29,7 @@ internal static class BinaryReaderExtensions
   internal static int ReadBigEndianInt32( this BinaryReader reader )
   {
     var bytes = reader.ReadBytes( sizeof( int ) );
-    return DataConversion.Int32FromBigEndianBuffer( bytes, 0 );
+    return DataConversion.Int32FromBigEndianBuffer( bytes );
 
     //if( BitConverter.IsLittleEndian )
     //{
@@ -47,7 +47,7 @@ internal static class BinaryReaderExtensions
   internal static uint ReadBigEndianUInt32( this BinaryReader reader )
   {
     var bytes = reader.ReadBytes( sizeof( uint ) );
-    return DataConversion.UInt32FromBigEndianBuffer( bytes, 0 );
+    return DataConversion.UInt32FromBigEndianBuffer( bytes );
 
     //if( BitConverter.IsLittleEndian )
     //{
@@ -69,7 +69,7 @@ internal static class BinaryReaderExtensions
   internal static short ReadBigEndianInt16( this BinaryReader reader )
   {
     var bytes = reader.ReadBytes( sizeof( short ) );
-    return DataConversion.Int16FromBigEndianBuffer( bytes, 0 );
+    return DataConversion.Int16FromBigEndianBuffer( bytes );
 
     //if( BitConverter.IsLittleEndian )
     //{
@@ -95,7 +95,7 @@ internal static class BinaryReaderExtensions
   internal static ushort ReadBigEndianUInt16( this BinaryReader reader )
   {
     var bytes = reader.ReadBytes( sizeof( ushort ) );
-    return DataConversion.UInt16FromBigEndianBuffer( bytes, 0 );
+    return DataConversion.UInt16FromBigEndianBuffer( bytes );
 
     //if( BitConverter.IsLittleEndian )
     //{
