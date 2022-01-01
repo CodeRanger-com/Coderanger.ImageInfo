@@ -49,6 +49,37 @@ internal static class DataConversion
   }
 
   /// <summary>
+  /// Converts buffer span to a string in given encoding
+  /// </summary>
+  /// <param name="buffer">Span of string data bytes</param>
+  /// <param name="encoding">Encoding type</param>
+  /// <returns>Converted string or empty</returns>
+  internal static string ConvertBuffer( ReadOnlySpan<byte> buffer, StringEncoding encoding )
+  {
+    if( buffer.Length > 0 )
+    {
+      if( encoding == StringEncoding.Ascii )
+      {
+        // Buffer will be null terminated so remove any zero bytes from the end
+        return Encoding.UTF8.GetString( buffer ).TrimEnd( (char)0 );
+      }
+      else if( encoding == StringEncoding.Ucs2 )
+      {
+        // Buffer will be null terminated so remove any zero bytes from the end
+        return Encoding.GetEncoding( "UCS-2" ).GetString( buffer ).TrimEnd( (char)0 );
+      }
+      else
+      {
+        // UTF8 is best for unknown encoding, as it decodes ascii as well as dbcs characters
+        // Buffer will be null terminated so remove any zero bytes from the end
+        return Encoding.UTF8.GetString( buffer ).TrimEnd( (char)0 );
+      }
+    }
+
+    return string.Empty;
+  }
+
+  /// <summary>
   /// Convert data from buffer determined by the buffer order, into a 2 byte 16bit
   /// signed integer (short or Int16)
   /// </summary>
@@ -228,7 +259,7 @@ internal static class DataConversion
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( short ) > buffer.Length )
     {
-      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( Int16FromBigEndianBuffer ) );
+      throw new ArgumentException( $"Invalid buffer size and offset passed to {nameof( Int16FromBigEndianBuffer )}", nameof( offset ) );
     }
 
     if( BitConverter.IsLittleEndian )
@@ -255,7 +286,7 @@ internal static class DataConversion
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( ushort ) > buffer.Length )
     {
-      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( UInt16FromBigEndianBuffer ) );
+      throw new ArgumentException( $"Invalid buffer size and offset passed to {nameof( UInt16FromBigEndianBuffer )}", nameof( offset ) );
     }
 
     if( BitConverter.IsLittleEndian )
@@ -281,7 +312,7 @@ internal static class DataConversion
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( int ) > buffer.Length )
     {
-      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( Int32FromBigEndianBuffer ) );
+      throw new ArgumentException( $"Invalid buffer size and offset passed to {nameof( Int32FromBigEndianBuffer )}", nameof( offset ) );
     }
 
     if( BitConverter.IsLittleEndian )
@@ -308,7 +339,7 @@ internal static class DataConversion
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( uint ) > buffer.Length )
     {
-      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( UInt32FromBigEndianBuffer ) );
+      throw new ArgumentException( $"Invalid buffer size and offset passed to {nameof( UInt32FromBigEndianBuffer )}", nameof( offset ) );
     }
 
     if( BitConverter.IsLittleEndian )
@@ -334,7 +365,7 @@ internal static class DataConversion
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( float ) > buffer.Length )
     {
-      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( FloatFromBigEndianBuffer ) );
+      throw new ArgumentException( $"Invalid buffer size and offset passed to {nameof( FloatFromBigEndianBuffer )}", nameof( offset ) );
     }
 
     if( BitConverter.IsLittleEndian )
@@ -361,7 +392,7 @@ internal static class DataConversion
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( double ) > buffer.Length )
     {
-      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( DoubleFromBigEndianBuffer ) );
+      throw new ArgumentException( $"Invalid buffer size and offset passed to {nameof( DoubleFromBigEndianBuffer )}", nameof( offset ) );
     }
 
     if( BitConverter.IsLittleEndian )
@@ -388,7 +419,7 @@ internal static class DataConversion
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( long ) > buffer.Length )
     {
-      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( Int64FromBigEndianBuffer ) );
+      throw new ArgumentException( $"Invalid buffer size and offset passed to {nameof( Int64FromBigEndianBuffer )}", nameof( offset ) );
     }
 
     if( BitConverter.IsLittleEndian )
@@ -415,7 +446,7 @@ internal static class DataConversion
     // Ensure no conversion beyond buffer bounds
     if( offset + sizeof( ulong ) > buffer.Length )
     {
-      throw new ArgumentException( "Invalid buffer size and offset passed", nameof( UInt64FromBigEndianBuffer ) );
+      throw new ArgumentException( $"Invalid buffer size and offset passed to {nameof( UInt64FromBigEndianBuffer )}", nameof( offset ) );
     }
 
     if( BitConverter.IsLittleEndian )

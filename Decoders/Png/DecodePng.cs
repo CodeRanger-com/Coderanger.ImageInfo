@@ -15,8 +15,11 @@
 namespace Coderanger.ImageInfo.Decoders.Png;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
-using Coderanger.ImageInfo.Decoders.Exif;
-using Coderanger.ImageInfo.Decoders.Png.Chunks;
+using Coderanger.ImageInfo.Decoders.Metadata.Exif;
+using Coderanger.ImageInfo.Decoders.Png.Helpers;
+using Coderanger.ImageInfo.Decoders.Png.ChunkParts;
+using Coderanger.ImageInfo.Decoders.Metadata;
+using Coderanger.ImageInfo.Decoders.Metadata.Png;
 
 /// <summary>
 /// Decoder for the PNG image format
@@ -79,6 +82,30 @@ internal class DecodePng : IDecoder
       {
         time.LoadData( reader );
       }
+      else if( chunk is TextChunk txt )
+      {
+        txt.LoadData( reader );
+        if( txt.Text != null )
+        {
+          _metadataItems.Add( txt.Text );
+        }
+      }
+      else if( chunk is TextCompressedChunk txtCompressed )
+      {
+        txtCompressed.LoadData( reader );
+        if( txtCompressed.Text != null )
+        {
+          _metadataItems.Add( txtCompressed.Text );
+        }
+      }
+      else if( chunk is TextInternationalChunk txtInternational )
+      {
+        txtInternational.LoadData( reader );
+        if( txtInternational.Text != null )
+        {
+          _metadataItems.Add( txtInternational.Text );
+        }
+      }
       else if( chunk is ExifChunk exif )
       {
         exif.LoadData( reader );
@@ -95,17 +122,64 @@ internal class DecodePng : IDecoder
 
     if( _width > 0 && _height > 0 )
     {
-      return new ImageDetails( _width, _height, _resolutionX, _resolutionY, "image/png", _exifDecoder?.GetProfileTags() );
+      var metadata = FillMetadataItems();
+      return new ImageDetails( _width, _height, _resolutionX, _resolutionY, "image/png", metadata );
     }
 
     throw ExceptionHelper.Throw( reader, ErrorMessage );
+  }
+
+  private Dictionary<MetadataProfileType, List<IMetadataTypedValue>>? FillMetadataItems()
+  {
+    if( _metadataItems.Count == 0 )
+    {
+      return null;
+    }
+
+    var metadata = new Dictionary<MetadataProfileType, List<IMetadataTypedValue>>();
+
+    // Add PNG metadata
+    foreach( var data in _metadataItems )
+    {
+      if( !metadata.TryGetValue( MetadataProfileType.PngText, out var value ) )
+      {
+        value = new List<IMetadataTypedValue>();
+        metadata.Add( MetadataProfileType.PngText, value );
+      }
+
+      value.Add( new PngMetadata( data ) );
+    }
+
+    // Add exif values
+    var exifProfiles = _exifDecoder?.GetProfileTags();
+    if( exifProfiles != null )
+    {
+      foreach( var profile in exifProfiles.Keys )
+      {
+        if( !metadata.TryGetValue( profile, out var value ) )
+        {
+          value = new List<IMetadataTypedValue>();
+        }
+
+        if( exifProfiles.TryGetValue( profile, out var tagValues ) && tagValues != null )
+        {
+          foreach( var tag in tagValues )
+          {
+            value.Add( tag );
+          }
+        }
+      }
+    }
+
+    return metadata;
   }
 
   private long _width;
   private long _height;
   private int _resolutionX = -1;
   private int _resolutionY = -1;
-  private DecodeExif? _exifDecoder;
+  private readonly List<PngText> _metadataItems = new();
+  private readonly DecodeExif? _exifDecoder;
 
   const string ErrorMessage = "Invalid PNG format";
 }

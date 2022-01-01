@@ -6,7 +6,7 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Metadata.Exif;
+namespace Coderanger.ImageInfo.Decoders.Metadata;
 
 public enum MetadataProfileType
 {

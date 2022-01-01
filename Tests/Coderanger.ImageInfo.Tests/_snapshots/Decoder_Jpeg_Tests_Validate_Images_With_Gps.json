@@ -4,7 +4,7 @@
       {
         "StringValue": "Image Description =                                ",
         "IsArray": false,
-        "Tag": 270,
+        "TagId": 270,
         "ExifType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
@@ -12,7 +12,7 @@
       {
         "StringValue": "Camera Make = NIKON",
         "IsArray": false,
-        "Tag": 271,
+        "TagId": 271,
         "ExifType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -20,7 +20,7 @@
       {
         "StringValue": "Camera Model = COOLPIX P6000",
         "IsArray": false,
-        "Tag": 272,
+        "TagId": 272,
         "ExifType": 2,
         "Name": "Camera Model",
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -28,7 +28,7 @@
       {
         "StringValue": "Orientation = 1",
         "IsArray": false,
-        "Tag": 274,
+        "TagId": 274,
         "ExifType": 3,
         "Name": "Orientation",
         "Description": ""
@@ -36,7 +36,7 @@
       {
         "StringValue": "XResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -44,7 +44,7 @@
       {
         "StringValue": "YResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -52,7 +52,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -60,7 +60,7 @@
       {
         "StringValue": "Software = Nikon Transfer 1.1 W",
         "IsArray": false,
-        "Tag": 305,
+        "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
         "Description": ""
@@ -68,7 +68,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTime = 01/11/2008 21:15:07",
-        "Tag": 306,
+        "TagId": 306,
         "ExifType": 12,
         "Name": "DateTime",
         "Description": ""
@@ -76,7 +76,7 @@
       {
         "StringValue": "YCbCrPositioning = 1",
         "IsArray": false,
-        "Tag": 531,
+        "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
         "Description": ""
@@ -84,7 +84,7 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
-        "Tag": 259,
+        "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
         "Description": ""
@@ -92,7 +92,7 @@
       {
         "StringValue": "XResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -100,7 +100,7 @@
       {
         "StringValue": "YResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -108,7 +108,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -116,7 +116,7 @@
       {
         "StringValue": "JPEGInterchangeFormat = 4548",
         "IsArray": false,
-        "Tag": 513,
+        "TagId": 513,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormat",
         "Description": ""
@@ -124,7 +124,7 @@
       {
         "StringValue": "JPEGInterchangeFormatLength = 6702",
         "IsArray": false,
-        "Tag": 514,
+        "TagId": 514,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormatLength",
         "Description": ""
@@ -132,7 +132,7 @@
       {
         "StringValue": "ExposureTime = 4/300 (0.013333333333333334D)",
         "IsArray": false,
-        "Tag": 33434,
+        "TagId": 33434,
         "ExifType": 10,
         "Name": "ExposureTime",
         "Description": ""
@@ -140,7 +140,7 @@
       {
         "StringValue": "FNumber = 59/10 (5.9D)",
         "IsArray": false,
-        "Tag": 33437,
+        "TagId": 33437,
         "ExifType": 10,
         "Name": "FNumber",
         "Description": ""
@@ -148,7 +148,7 @@
       {
         "StringValue": "ExposureProgram = 2",
         "IsArray": false,
-        "Tag": 34850,
+        "TagId": 34850,
         "ExifType": 3,
         "Name": "ExposureProgram",
         "Description": ""
@@ -156,7 +156,7 @@
       {
         "StringValue": "ISOSpeedRatings = 64",
         "IsArray": false,
-        "Tag": 34855,
+        "TagId": 34855,
         "ExifType": 3,
         "Name": "ISOSpeedRatings",
         "Description": ""
@@ -164,7 +164,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 22/10/2008 16:28:39",
-        "Tag": 36867,
+        "TagId": 36867,
         "ExifType": 12,
         "Name": "DateTimeOriginal",
         "Description": ""
@@ -172,7 +172,7 @@
       {
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
-        "Tag": 37380,
+        "TagId": 37380,
         "ExifType": 9,
         "Name": "ExposureBiasValue",
         "Description": ""
@@ -180,7 +180,7 @@
       {
         "StringValue": "MaxApertureValue = 29/10 (2.9D)",
         "IsArray": false,
-        "Tag": 37381,
+        "TagId": 37381,
         "ExifType": 10,
         "Name": "MaxApertureValue",
         "Description": ""
@@ -188,7 +188,7 @@
       {
         "StringValue": "MeteringMode = 5",
         "IsArray": false,
-        "Tag": 37383,
+        "TagId": 37383,
         "ExifType": 3,
         "Name": "MeteringMode",
         "Description": ""
@@ -196,7 +196,7 @@
       {
         "StringValue": "LightSource = 0",
         "IsArray": false,
-        "Tag": 37384,
+        "TagId": 37384,
         "ExifType": 3,
         "Name": "LightSource",
         "Description": ""
@@ -204,7 +204,7 @@
       {
         "StringValue": "Flash = 16",
         "IsArray": false,
-        "Tag": 37385,
+        "TagId": 37385,
         "ExifType": 3,
         "Name": "Flash",
         "Description": ""
@@ -212,7 +212,7 @@
       {
         "StringValue": "FocalLength = 24/1 (24D)",
         "IsArray": false,
-        "Tag": 37386,
+        "TagId": 37386,
         "ExifType": 10,
         "Name": "FocalLength",
         "Description": ""
@@ -222,7 +222,7 @@
       {
         "StringValue": "GPS Latitude Reference = N",
         "IsArray": false,
-        "Tag": 1,
+        "TagId": 1,
         "ExifType": 2,
         "Name": "GPS Latitude Reference",
         "Description": "Indicates whether the latitude is North or South longitude; 'N' denotes North longitude, 'S' denotes South longitude"
@@ -230,7 +230,7 @@
       {
         "StringValue": "GPS Latitude = 43/1 (43D) / 28/1 (28D) / 281400000/100000000 (2.814D)",
         "IsArray": true,
-        "Tag": 2,
+        "TagId": 2,
         "ExifType": 10,
         "Name": "GPS Latitude",
         "Description": "Indicates the latitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -238,7 +238,7 @@
       {
         "StringValue": "GPS Longitude Reference = E",
         "IsArray": false,
-        "Tag": 3,
+        "TagId": 3,
         "ExifType": 2,
         "Name": "GPS Longitude Reference",
         "Description": "Indicates whether the longitude is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude"
@@ -246,7 +246,7 @@
       {
         "StringValue": "GPS Longitude = 11/1 (11D) / 53/1 (53D) / 645599999/100000000 (6.45599999D)",
         "IsArray": true,
-        "Tag": 4,
+        "TagId": 4,
         "ExifType": 10,
         "Name": "GPS Longitude",
         "Description": "Indicates the longitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -254,7 +254,7 @@
       {
         "StringValue": "GPS Altitude Reference = 0",
         "IsArray": false,
-        "Tag": 5,
+        "TagId": 5,
         "ExifType": 1,
         "Name": "GPS Altitude Reference",
         "Description": "Indicates the altitude reference used for GPSAltitude; '0' denotes altitude above sea level, '1' denotes altitude below sea level"
@@ -262,7 +262,7 @@
       {
         "StringValue": "GPS TimeStamp = 14/1 (14D) / 27/1 (27D) / 724/100 (7.24D)",
         "IsArray": true,
-        "Tag": 7,
+        "TagId": 7,
         "ExifType": 10,
         "Name": "GPS TimeStamp",
         "Description": "Indicates the UTC time expressed as three Rational values giving the hour, minute and second"
@@ -270,7 +270,7 @@
       {
         "StringValue": "GPS Satellites = 06",
         "IsArray": false,
-        "Tag": 8,
+        "TagId": 8,
         "ExifType": 2,
         "Name": "GPS Satellites",
         "Description": "Indicates the GPS satellites used for measurements; the tag can be used to describe the number of satellites, their ID number, angle of elevation, azimuth, SNR and other information"
@@ -278,7 +278,7 @@
       {
         "StringValue": "GPS Image Direction Reference = ",
         "IsArray": false,
-        "Tag": 16,
+        "TagId": 16,
         "ExifType": 2,
         "Name": "GPS Image Direction Reference",
         "Description": "Indicates the reference for giving the direction of the image when it is captured; 'T' denotes True Direction, 'M' denotes Magnetic Direction"
@@ -286,7 +286,7 @@
       {
         "StringValue": "GPS Map Datum = WGS-84   ",
         "IsArray": false,
-        "Tag": 18,
+        "TagId": 18,
         "ExifType": 2,
         "Name": "GPS Map Datum",
         "Description": "Indicates the geodetic survey data used by the GPS receiver"
@@ -294,7 +294,7 @@
       {
         "StringValue": "GPS Date Stamp = 23/10/2008",
         "IsArray": false,
-        "Tag": 29,
+        "TagId": 29,
         "ExifType": 11,
         "Name": "GPS Date Stamp",
         "Description": "Recording date and time information relative to UTC (Coordinated Universal Time)"
@@ -304,7 +304,7 @@
       {
         "StringValue": "Interoperability Index = R98",
         "IsArray": false,
-        "Tag": 8193,
+        "TagId": 8193,
         "ExifType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
@@ -312,7 +312,7 @@
       {
         "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
-        "Tag": 8194,
+        "TagId": 8194,
         "ExifType": 2,
         "Name": "Interoperability Version",
         "Description": "Indicates the Interoperability version"
@@ -324,7 +324,7 @@
       {
         "StringValue": "Image Description =                                ",
         "IsArray": false,
-        "Tag": 270,
+        "TagId": 270,
         "ExifType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
@@ -332,7 +332,7 @@
       {
         "StringValue": "Camera Make = NIKON",
         "IsArray": false,
-        "Tag": 271,
+        "TagId": 271,
         "ExifType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -340,7 +340,7 @@
       {
         "StringValue": "Camera Model = COOLPIX P6000",
         "IsArray": false,
-        "Tag": 272,
+        "TagId": 272,
         "ExifType": 2,
         "Name": "Camera Model",
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -348,7 +348,7 @@
       {
         "StringValue": "Orientation = 1",
         "IsArray": false,
-        "Tag": 274,
+        "TagId": 274,
         "ExifType": 3,
         "Name": "Orientation",
         "Description": ""
@@ -356,7 +356,7 @@
       {
         "StringValue": "XResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -364,7 +364,7 @@
       {
         "StringValue": "YResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -372,7 +372,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -380,7 +380,7 @@
       {
         "StringValue": "Software = Nikon Transfer 1.1 W",
         "IsArray": false,
-        "Tag": 305,
+        "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
         "Description": ""
@@ -388,7 +388,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTime = 01/11/2008 21:15:07",
-        "Tag": 306,
+        "TagId": 306,
         "ExifType": 12,
         "Name": "DateTime",
         "Description": ""
@@ -396,7 +396,7 @@
       {
         "StringValue": "YCbCrPositioning = 1",
         "IsArray": false,
-        "Tag": 531,
+        "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
         "Description": ""
@@ -404,7 +404,7 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
-        "Tag": 259,
+        "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
         "Description": ""
@@ -412,7 +412,7 @@
       {
         "StringValue": "XResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -420,7 +420,7 @@
       {
         "StringValue": "YResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -428,7 +428,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -436,7 +436,7 @@
       {
         "StringValue": "JPEGInterchangeFormat = 4548",
         "IsArray": false,
-        "Tag": 513,
+        "TagId": 513,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormat",
         "Description": ""
@@ -444,7 +444,7 @@
       {
         "StringValue": "JPEGInterchangeFormatLength = 6339",
         "IsArray": false,
-        "Tag": 514,
+        "TagId": 514,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormatLength",
         "Description": ""
@@ -452,7 +452,7 @@
       {
         "StringValue": "ExposureTime = 560852/100000000 (0.00560852D)",
         "IsArray": false,
-        "Tag": 33434,
+        "TagId": 33434,
         "ExifType": 10,
         "Name": "ExposureTime",
         "Description": ""
@@ -460,7 +460,7 @@
       {
         "StringValue": "FNumber = 45/10 (4.5D)",
         "IsArray": false,
-        "Tag": 33437,
+        "TagId": 33437,
         "ExifType": 10,
         "Name": "FNumber",
         "Description": ""
@@ -468,7 +468,7 @@
       {
         "StringValue": "ExposureProgram = 2",
         "IsArray": false,
-        "Tag": 34850,
+        "TagId": 34850,
         "ExifType": 3,
         "Name": "ExposureProgram",
         "Description": ""
@@ -476,7 +476,7 @@
       {
         "StringValue": "ISOSpeedRatings = 64",
         "IsArray": false,
-        "Tag": 34855,
+        "TagId": 34855,
         "ExifType": 3,
         "Name": "ISOSpeedRatings",
         "Description": ""
@@ -484,7 +484,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 22/10/2008 16:29:49",
-        "Tag": 36867,
+        "TagId": 36867,
         "ExifType": 12,
         "Name": "DateTimeOriginal",
         "Description": ""
@@ -492,7 +492,7 @@
       {
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
-        "Tag": 37380,
+        "TagId": 37380,
         "ExifType": 9,
         "Name": "ExposureBiasValue",
         "Description": ""
@@ -500,7 +500,7 @@
       {
         "StringValue": "MaxApertureValue = 29/10 (2.9D)",
         "IsArray": false,
-        "Tag": 37381,
+        "TagId": 37381,
         "ExifType": 10,
         "Name": "MaxApertureValue",
         "Description": ""
@@ -508,7 +508,7 @@
       {
         "StringValue": "MeteringMode = 5",
         "IsArray": false,
-        "Tag": 37383,
+        "TagId": 37383,
         "ExifType": 3,
         "Name": "MeteringMode",
         "Description": ""
@@ -516,7 +516,7 @@
       {
         "StringValue": "LightSource = 0",
         "IsArray": false,
-        "Tag": 37384,
+        "TagId": 37384,
         "ExifType": 3,
         "Name": "LightSource",
         "Description": ""
@@ -524,7 +524,7 @@
       {
         "StringValue": "Flash = 16",
         "IsArray": false,
-        "Tag": 37385,
+        "TagId": 37385,
         "ExifType": 3,
         "Name": "Flash",
         "Description": ""
@@ -532,7 +532,7 @@
       {
         "StringValue": "FocalLength = 6/1 (6D)",
         "IsArray": false,
-        "Tag": 37386,
+        "TagId": 37386,
         "ExifType": 10,
         "Name": "FocalLength",
         "Description": ""
@@ -542,7 +542,7 @@
       {
         "StringValue": "GPS Latitude Reference = N",
         "IsArray": false,
-        "Tag": 1,
+        "TagId": 1,
         "ExifType": 2,
         "Name": "GPS Latitude Reference",
         "Description": "Indicates whether the latitude is North or South longitude; 'N' denotes North longitude, 'S' denotes South longitude"
@@ -550,7 +550,7 @@
       {
         "StringValue": "GPS Latitude = 43/1 (43D) / 28/1 (28D) / 176399999/100000000 (1.76399999D)",
         "IsArray": true,
-        "Tag": 2,
+        "TagId": 2,
         "ExifType": 10,
         "Name": "GPS Latitude",
         "Description": "Indicates the latitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -558,7 +558,7 @@
       {
         "StringValue": "GPS Longitude Reference = E",
         "IsArray": false,
-        "Tag": 3,
+        "TagId": 3,
         "ExifType": 2,
         "Name": "GPS Longitude Reference",
         "Description": "Indicates whether the longitude is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude"
@@ -566,7 +566,7 @@
       {
         "StringValue": "GPS Longitude = 11/1 (11D) / 53/1 (53D) / 742199999/100000000 (7.42199999D)",
         "IsArray": true,
-        "Tag": 4,
+        "TagId": 4,
         "ExifType": 10,
         "Name": "GPS Longitude",
         "Description": "Indicates the longitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -574,7 +574,7 @@
       {
         "StringValue": "GPS Altitude Reference = 0",
         "IsArray": false,
-        "Tag": 5,
+        "TagId": 5,
         "ExifType": 1,
         "Name": "GPS Altitude Reference",
         "Description": "Indicates the altitude reference used for GPSAltitude; '0' denotes altitude above sea level, '1' denotes altitude below sea level"
@@ -582,7 +582,7 @@
       {
         "StringValue": "GPS TimeStamp = 14/1 (14D) / 28/1 (28D) / 17240/1000 (17.24D)",
         "IsArray": true,
-        "Tag": 7,
+        "TagId": 7,
         "ExifType": 10,
         "Name": "GPS TimeStamp",
         "Description": "Indicates the UTC time expressed as three Rational values giving the hour, minute and second"
@@ -590,7 +590,7 @@
       {
         "StringValue": "GPS Satellites = 06",
         "IsArray": false,
-        "Tag": 8,
+        "TagId": 8,
         "ExifType": 2,
         "Name": "GPS Satellites",
         "Description": "Indicates the GPS satellites used for measurements; the tag can be used to describe the number of satellites, their ID number, angle of elevation, azimuth, SNR and other information"
@@ -598,7 +598,7 @@
       {
         "StringValue": "GPS Image Direction Reference = ",
         "IsArray": false,
-        "Tag": 16,
+        "TagId": 16,
         "ExifType": 2,
         "Name": "GPS Image Direction Reference",
         "Description": "Indicates the reference for giving the direction of the image when it is captured; 'T' denotes True Direction, 'M' denotes Magnetic Direction"
@@ -606,7 +606,7 @@
       {
         "StringValue": "GPS Map Datum = WGS-84   ",
         "IsArray": false,
-        "Tag": 18,
+        "TagId": 18,
         "ExifType": 2,
         "Name": "GPS Map Datum",
         "Description": "Indicates the geodetic survey data used by the GPS receiver"
@@ -614,7 +614,7 @@
       {
         "StringValue": "GPS Date Stamp = 23/10/2008",
         "IsArray": false,
-        "Tag": 29,
+        "TagId": 29,
         "ExifType": 11,
         "Name": "GPS Date Stamp",
         "Description": "Recording date and time information relative to UTC (Coordinated Universal Time)"
@@ -624,7 +624,7 @@
       {
         "StringValue": "Interoperability Index = R98",
         "IsArray": false,
-        "Tag": 8193,
+        "TagId": 8193,
         "ExifType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
@@ -632,7 +632,7 @@
       {
         "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
-        "Tag": 8194,
+        "TagId": 8194,
         "ExifType": 2,
         "Name": "Interoperability Version",
         "Description": "Indicates the Interoperability version"
@@ -644,7 +644,7 @@
       {
         "StringValue": "Image Description =                                ",
         "IsArray": false,
-        "Tag": 270,
+        "TagId": 270,
         "ExifType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
@@ -652,7 +652,7 @@
       {
         "StringValue": "Camera Make = NIKON",
         "IsArray": false,
-        "Tag": 271,
+        "TagId": 271,
         "ExifType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -660,7 +660,7 @@
       {
         "StringValue": "Camera Model = COOLPIX P6000",
         "IsArray": false,
-        "Tag": 272,
+        "TagId": 272,
         "ExifType": 2,
         "Name": "Camera Model",
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -668,7 +668,7 @@
       {
         "StringValue": "Orientation = 1",
         "IsArray": false,
-        "Tag": 274,
+        "TagId": 274,
         "ExifType": 3,
         "Name": "Orientation",
         "Description": ""
@@ -676,7 +676,7 @@
       {
         "StringValue": "XResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -684,7 +684,7 @@
       {
         "StringValue": "YResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -692,7 +692,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -700,7 +700,7 @@
       {
         "StringValue": "Software = Nikon Transfer 1.1 W",
         "IsArray": false,
-        "Tag": 305,
+        "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
         "Description": ""
@@ -708,7 +708,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTime = 01/11/2008 21:15:08",
-        "Tag": 306,
+        "TagId": 306,
         "ExifType": 12,
         "Name": "DateTime",
         "Description": ""
@@ -716,7 +716,7 @@
       {
         "StringValue": "YCbCrPositioning = 1",
         "IsArray": false,
-        "Tag": 531,
+        "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
         "Description": ""
@@ -724,7 +724,7 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
-        "Tag": 259,
+        "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
         "Description": ""
@@ -732,7 +732,7 @@
       {
         "StringValue": "XResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -740,7 +740,7 @@
       {
         "StringValue": "YResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -748,7 +748,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -756,7 +756,7 @@
       {
         "StringValue": "JPEGInterchangeFormat = 4548",
         "IsArray": false,
-        "Tag": 513,
+        "TagId": 513,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormat",
         "Description": ""
@@ -764,7 +764,7 @@
       {
         "StringValue": "JPEGInterchangeFormatLength = 6307",
         "IsArray": false,
-        "Tag": 514,
+        "TagId": 514,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormatLength",
         "Description": ""
@@ -772,7 +772,7 @@
       {
         "StringValue": "ExposureTime = 1044932/100000000 (0.01044932D)",
         "IsArray": false,
-        "Tag": 33434,
+        "TagId": 33434,
         "ExifType": 10,
         "Name": "ExposureTime",
         "Description": ""
@@ -780,7 +780,7 @@
       {
         "StringValue": "FNumber = 47/10 (4.7D)",
         "IsArray": false,
-        "Tag": 33437,
+        "TagId": 33437,
         "ExifType": 10,
         "Name": "FNumber",
         "Description": ""
@@ -788,7 +788,7 @@
       {
         "StringValue": "ExposureProgram = 2",
         "IsArray": false,
-        "Tag": 34850,
+        "TagId": 34850,
         "ExifType": 3,
         "Name": "ExposureProgram",
         "Description": ""
@@ -796,7 +796,7 @@
       {
         "StringValue": "ISOSpeedRatings = 64",
         "IsArray": false,
-        "Tag": 34855,
+        "TagId": 34855,
         "ExifType": 3,
         "Name": "ISOSpeedRatings",
         "Description": ""
@@ -804,7 +804,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 22/10/2008 16:38:20",
-        "Tag": 36867,
+        "TagId": 36867,
         "ExifType": 12,
         "Name": "DateTimeOriginal",
         "Description": ""
@@ -812,7 +812,7 @@
       {
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
-        "Tag": 37380,
+        "TagId": 37380,
         "ExifType": 9,
         "Name": "ExposureBiasValue",
         "Description": ""
@@ -820,7 +820,7 @@
       {
         "StringValue": "MaxApertureValue = 29/10 (2.9D)",
         "IsArray": false,
-        "Tag": 37381,
+        "TagId": 37381,
         "ExifType": 10,
         "Name": "MaxApertureValue",
         "Description": ""
@@ -828,7 +828,7 @@
       {
         "StringValue": "MeteringMode = 5",
         "IsArray": false,
-        "Tag": 37383,
+        "TagId": 37383,
         "ExifType": 3,
         "Name": "MeteringMode",
         "Description": ""
@@ -836,7 +836,7 @@
       {
         "StringValue": "LightSource = 0",
         "IsArray": false,
-        "Tag": 37384,
+        "TagId": 37384,
         "ExifType": 3,
         "Name": "LightSource",
         "Description": ""
@@ -844,7 +844,7 @@
       {
         "StringValue": "Flash = 16",
         "IsArray": false,
-        "Tag": 37385,
+        "TagId": 37385,
         "ExifType": 3,
         "Name": "Flash",
         "Description": ""
@@ -852,7 +852,7 @@
       {
         "StringValue": "FocalLength = 166/10 (16.6D)",
         "IsArray": false,
-        "Tag": 37386,
+        "TagId": 37386,
         "ExifType": 10,
         "Name": "FocalLength",
         "Description": ""
@@ -862,7 +862,7 @@
       {
         "StringValue": "GPS Latitude Reference = N",
         "IsArray": false,
-        "Tag": 1,
+        "TagId": 1,
         "ExifType": 2,
         "Name": "GPS Latitude Reference",
         "Description": "Indicates whether the latitude is North or South longitude; 'N' denotes North longitude, 'S' denotes South longitude"
@@ -870,7 +870,7 @@
       {
         "StringValue": "GPS Latitude = 43/1 (43D) / 28/1 (28D) / 149399999/100000000 (1.49399999D)",
         "IsArray": true,
-        "Tag": 2,
+        "TagId": 2,
         "ExifType": 10,
         "Name": "GPS Latitude",
         "Description": "Indicates the latitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -878,7 +878,7 @@
       {
         "StringValue": "GPS Longitude Reference = E",
         "IsArray": false,
-        "Tag": 3,
+        "TagId": 3,
         "ExifType": 2,
         "Name": "GPS Longitude Reference",
         "Description": "Indicates whether the longitude is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude"
@@ -886,7 +886,7 @@
       {
         "StringValue": "GPS Longitude = 11/1 (11D) / 53/1 (53D) / 433799999/100000000 (4.33799999D)",
         "IsArray": true,
-        "Tag": 4,
+        "TagId": 4,
         "ExifType": 10,
         "Name": "GPS Longitude",
         "Description": "Indicates the longitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -894,7 +894,7 @@
       {
         "StringValue": "GPS Altitude Reference = 0",
         "IsArray": false,
-        "Tag": 5,
+        "TagId": 5,
         "ExifType": 1,
         "Name": "GPS Altitude Reference",
         "Description": "Indicates the altitude reference used for GPSAltitude; '0' denotes altitude above sea level, '1' denotes altitude below sea level"
@@ -902,7 +902,7 @@
       {
         "StringValue": "GPS TimeStamp = 14/1 (14D) / 36/1 (36D) / 4723/100 (47.23D)",
         "IsArray": true,
-        "Tag": 7,
+        "TagId": 7,
         "ExifType": 10,
         "Name": "GPS TimeStamp",
         "Description": "Indicates the UTC time expressed as three Rational values giving the hour, minute and second"
@@ -910,7 +910,7 @@
       {
         "StringValue": "GPS Satellites = 06",
         "IsArray": false,
-        "Tag": 8,
+        "TagId": 8,
         "ExifType": 2,
         "Name": "GPS Satellites",
         "Description": "Indicates the GPS satellites used for measurements; the tag can be used to describe the number of satellites, their ID number, angle of elevation, azimuth, SNR and other information"
@@ -918,7 +918,7 @@
       {
         "StringValue": "GPS Image Direction Reference = ",
         "IsArray": false,
-        "Tag": 16,
+        "TagId": 16,
         "ExifType": 2,
         "Name": "GPS Image Direction Reference",
         "Description": "Indicates the reference for giving the direction of the image when it is captured; 'T' denotes True Direction, 'M' denotes Magnetic Direction"
@@ -926,7 +926,7 @@
       {
         "StringValue": "GPS Map Datum = WGS-84   ",
         "IsArray": false,
-        "Tag": 18,
+        "TagId": 18,
         "ExifType": 2,
         "Name": "GPS Map Datum",
         "Description": "Indicates the geodetic survey data used by the GPS receiver"
@@ -934,7 +934,7 @@
       {
         "StringValue": "GPS Date Stamp = 23/10/2008",
         "IsArray": false,
-        "Tag": 29,
+        "TagId": 29,
         "ExifType": 11,
         "Name": "GPS Date Stamp",
         "Description": "Recording date and time information relative to UTC (Coordinated Universal Time)"
@@ -944,7 +944,7 @@
       {
         "StringValue": "Interoperability Index = R98",
         "IsArray": false,
-        "Tag": 8193,
+        "TagId": 8193,
         "ExifType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
@@ -952,7 +952,7 @@
       {
         "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
-        "Tag": 8194,
+        "TagId": 8194,
         "ExifType": 2,
         "Name": "Interoperability Version",
         "Description": "Indicates the Interoperability version"
@@ -964,7 +964,7 @@
       {
         "StringValue": "Image Description =                                ",
         "IsArray": false,
-        "Tag": 270,
+        "TagId": 270,
         "ExifType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
@@ -972,7 +972,7 @@
       {
         "StringValue": "Camera Make = NIKON",
         "IsArray": false,
-        "Tag": 271,
+        "TagId": 271,
         "ExifType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -980,7 +980,7 @@
       {
         "StringValue": "Camera Model = COOLPIX P6000",
         "IsArray": false,
-        "Tag": 272,
+        "TagId": 272,
         "ExifType": 2,
         "Name": "Camera Model",
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -988,7 +988,7 @@
       {
         "StringValue": "Orientation = 1",
         "IsArray": false,
-        "Tag": 274,
+        "TagId": 274,
         "ExifType": 3,
         "Name": "Orientation",
         "Description": ""
@@ -996,7 +996,7 @@
       {
         "StringValue": "XResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -1004,7 +1004,7 @@
       {
         "StringValue": "YResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -1012,7 +1012,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -1020,7 +1020,7 @@
       {
         "StringValue": "Software = Nikon Transfer 1.1 W",
         "IsArray": false,
-        "Tag": 305,
+        "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
         "Description": ""
@@ -1028,7 +1028,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTime = 01/11/2008 21:15:09",
-        "Tag": 306,
+        "TagId": 306,
         "ExifType": 12,
         "Name": "DateTime",
         "Description": ""
@@ -1036,7 +1036,7 @@
       {
         "StringValue": "YCbCrPositioning = 1",
         "IsArray": false,
-        "Tag": 531,
+        "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
         "Description": ""
@@ -1044,7 +1044,7 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
-        "Tag": 259,
+        "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
         "Description": ""
@@ -1052,7 +1052,7 @@
       {
         "StringValue": "XResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -1060,7 +1060,7 @@
       {
         "StringValue": "YResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -1068,7 +1068,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -1076,7 +1076,7 @@
       {
         "StringValue": "JPEGInterchangeFormat = 4548",
         "IsArray": false,
-        "Tag": 513,
+        "TagId": 513,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormat",
         "Description": ""
@@ -1084,7 +1084,7 @@
       {
         "StringValue": "JPEGInterchangeFormatLength = 5628",
         "IsArray": false,
-        "Tag": 514,
+        "TagId": 514,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormatLength",
         "Description": ""
@@ -1092,7 +1092,7 @@
       {
         "StringValue": "ExposureTime = 813669/100000000 (0.00813669D)",
         "IsArray": false,
-        "Tag": 33434,
+        "TagId": 33434,
         "ExifType": 10,
         "Name": "ExposureTime",
         "Description": ""
@@ -1100,7 +1100,7 @@
       {
         "StringValue": "FNumber = 37/10 (3.7D)",
         "IsArray": false,
-        "Tag": 33437,
+        "TagId": 33437,
         "ExifType": 10,
         "Name": "FNumber",
         "Description": ""
@@ -1108,7 +1108,7 @@
       {
         "StringValue": "ExposureProgram = 2",
         "IsArray": false,
-        "Tag": 34850,
+        "TagId": 34850,
         "ExifType": 3,
         "Name": "ExposureProgram",
         "Description": ""
@@ -1116,7 +1116,7 @@
       {
         "StringValue": "ISOSpeedRatings = 64",
         "IsArray": false,
-        "Tag": 34855,
+        "TagId": 34855,
         "ExifType": 3,
         "Name": "ISOSpeedRatings",
         "Description": ""
@@ -1124,7 +1124,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 22/10/2008 16:43:21",
-        "Tag": 36867,
+        "TagId": 36867,
         "ExifType": 12,
         "Name": "DateTimeOriginal",
         "Description": ""
@@ -1132,7 +1132,7 @@
       {
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
-        "Tag": 37380,
+        "TagId": 37380,
         "ExifType": 9,
         "Name": "ExposureBiasValue",
         "Description": ""
@@ -1140,7 +1140,7 @@
       {
         "StringValue": "MaxApertureValue = 29/10 (2.9D)",
         "IsArray": false,
-        "Tag": 37381,
+        "TagId": 37381,
         "ExifType": 10,
         "Name": "MaxApertureValue",
         "Description": ""
@@ -1148,7 +1148,7 @@
       {
         "StringValue": "MeteringMode = 5",
         "IsArray": false,
-        "Tag": 37383,
+        "TagId": 37383,
         "ExifType": 3,
         "Name": "MeteringMode",
         "Description": ""
@@ -1156,7 +1156,7 @@
       {
         "StringValue": "LightSource = 0",
         "IsArray": false,
-        "Tag": 37384,
+        "TagId": 37384,
         "ExifType": 3,
         "Name": "LightSource",
         "Description": ""
@@ -1164,7 +1164,7 @@
       {
         "StringValue": "Flash = 16",
         "IsArray": false,
-        "Tag": 37385,
+        "TagId": 37385,
         "ExifType": 3,
         "Name": "Flash",
         "Description": ""
@@ -1172,7 +1172,7 @@
       {
         "StringValue": "FocalLength = 81/10 (8.1D)",
         "IsArray": false,
-        "Tag": 37386,
+        "TagId": 37386,
         "ExifType": 10,
         "Name": "FocalLength",
         "Description": ""
@@ -1182,7 +1182,7 @@
       {
         "StringValue": "GPS Latitude Reference = N",
         "IsArray": false,
-        "Tag": 1,
+        "TagId": 1,
         "ExifType": 2,
         "Name": "GPS Latitude Reference",
         "Description": "Indicates whether the latitude is North or South longitude; 'N' denotes North longitude, 'S' denotes South longitude"
@@ -1190,7 +1190,7 @@
       {
         "StringValue": "GPS Latitude = 43/1 (43D) / 28/1 (28D) / 611400000/100000000 (6.114D)",
         "IsArray": true,
-        "Tag": 2,
+        "TagId": 2,
         "ExifType": 10,
         "Name": "GPS Latitude",
         "Description": "Indicates the latitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -1198,7 +1198,7 @@
       {
         "StringValue": "GPS Longitude Reference = E",
         "IsArray": false,
-        "Tag": 3,
+        "TagId": 3,
         "ExifType": 2,
         "Name": "GPS Longitude Reference",
         "Description": "Indicates whether the longitude is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude"
@@ -1206,7 +1206,7 @@
       {
         "StringValue": "GPS Longitude = 11/1 (11D) / 52/1 (52D) / 538859999/10000000 (53.8859999D)",
         "IsArray": true,
-        "Tag": 4,
+        "TagId": 4,
         "ExifType": 10,
         "Name": "GPS Longitude",
         "Description": "Indicates the longitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -1214,7 +1214,7 @@
       {
         "StringValue": "GPS Altitude Reference = 0",
         "IsArray": false,
-        "Tag": 5,
+        "TagId": 5,
         "ExifType": 1,
         "Name": "GPS Altitude Reference",
         "Description": "Indicates the altitude reference used for GPSAltitude; '0' denotes altitude above sea level, '1' denotes altitude below sea level"
@@ -1222,7 +1222,7 @@
       {
         "StringValue": "GPS TimeStamp = 14/1 (14D) / 41/1 (41D) / 4903/100 (49.03D)",
         "IsArray": true,
-        "Tag": 7,
+        "TagId": 7,
         "ExifType": 10,
         "Name": "GPS TimeStamp",
         "Description": "Indicates the UTC time expressed as three Rational values giving the hour, minute and second"
@@ -1230,7 +1230,7 @@
       {
         "StringValue": "GPS Satellites = 05",
         "IsArray": false,
-        "Tag": 8,
+        "TagId": 8,
         "ExifType": 2,
         "Name": "GPS Satellites",
         "Description": "Indicates the GPS satellites used for measurements; the tag can be used to describe the number of satellites, their ID number, angle of elevation, azimuth, SNR and other information"
@@ -1238,7 +1238,7 @@
       {
         "StringValue": "GPS Image Direction Reference = ",
         "IsArray": false,
-        "Tag": 16,
+        "TagId": 16,
         "ExifType": 2,
         "Name": "GPS Image Direction Reference",
         "Description": "Indicates the reference for giving the direction of the image when it is captured; 'T' denotes True Direction, 'M' denotes Magnetic Direction"
@@ -1246,7 +1246,7 @@
       {
         "StringValue": "GPS Map Datum = WGS-84   ",
         "IsArray": false,
-        "Tag": 18,
+        "TagId": 18,
         "ExifType": 2,
         "Name": "GPS Map Datum",
         "Description": "Indicates the geodetic survey data used by the GPS receiver"
@@ -1254,7 +1254,7 @@
       {
         "StringValue": "GPS Date Stamp = 23/10/2008",
         "IsArray": false,
-        "Tag": 29,
+        "TagId": 29,
         "ExifType": 11,
         "Name": "GPS Date Stamp",
         "Description": "Recording date and time information relative to UTC (Coordinated Universal Time)"
@@ -1264,7 +1264,7 @@
       {
         "StringValue": "Interoperability Index = R98",
         "IsArray": false,
-        "Tag": 8193,
+        "TagId": 8193,
         "ExifType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
@@ -1272,7 +1272,7 @@
       {
         "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
-        "Tag": 8194,
+        "TagId": 8194,
         "ExifType": 2,
         "Name": "Interoperability Version",
         "Description": "Indicates the Interoperability version"
@@ -1284,7 +1284,7 @@
       {
         "StringValue": "Image Description =                                ",
         "IsArray": false,
-        "Tag": 270,
+        "TagId": 270,
         "ExifType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
@@ -1292,7 +1292,7 @@
       {
         "StringValue": "Camera Make = NIKON",
         "IsArray": false,
-        "Tag": 271,
+        "TagId": 271,
         "ExifType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -1300,7 +1300,7 @@
       {
         "StringValue": "Camera Model = COOLPIX P6000",
         "IsArray": false,
-        "Tag": 272,
+        "TagId": 272,
         "ExifType": 2,
         "Name": "Camera Model",
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -1308,7 +1308,7 @@
       {
         "StringValue": "Orientation = 1",
         "IsArray": false,
-        "Tag": 274,
+        "TagId": 274,
         "ExifType": 3,
         "Name": "Orientation",
         "Description": ""
@@ -1316,7 +1316,7 @@
       {
         "StringValue": "XResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -1324,7 +1324,7 @@
       {
         "StringValue": "YResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -1332,7 +1332,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -1340,7 +1340,7 @@
       {
         "StringValue": "Software = Nikon Transfer 1.1 W",
         "IsArray": false,
-        "Tag": 305,
+        "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
         "Description": ""
@@ -1348,7 +1348,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTime = 01/11/2008 21:15:09",
-        "Tag": 306,
+        "TagId": 306,
         "ExifType": 12,
         "Name": "DateTime",
         "Description": ""
@@ -1356,7 +1356,7 @@
       {
         "StringValue": "YCbCrPositioning = 1",
         "IsArray": false,
-        "Tag": 531,
+        "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
         "Description": ""
@@ -1364,7 +1364,7 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
-        "Tag": 259,
+        "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
         "Description": ""
@@ -1372,7 +1372,7 @@
       {
         "StringValue": "XResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -1380,7 +1380,7 @@
       {
         "StringValue": "YResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -1388,7 +1388,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -1396,7 +1396,7 @@
       {
         "StringValue": "JPEGInterchangeFormat = 4548",
         "IsArray": false,
-        "Tag": 513,
+        "TagId": 513,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormat",
         "Description": ""
@@ -1404,7 +1404,7 @@
       {
         "StringValue": "JPEGInterchangeFormatLength = 5803",
         "IsArray": false,
-        "Tag": 514,
+        "TagId": 514,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormatLength",
         "Description": ""
@@ -1412,7 +1412,7 @@
       {
         "StringValue": "ExposureTime = 676132/100000000 (0.00676132D)",
         "IsArray": false,
-        "Tag": 33434,
+        "TagId": 33434,
         "ExifType": 10,
         "Name": "ExposureTime",
         "Description": ""
@@ -1420,7 +1420,7 @@
       {
         "StringValue": "FNumber = 41/10 (4.1D)",
         "IsArray": false,
-        "Tag": 33437,
+        "TagId": 33437,
         "ExifType": 10,
         "Name": "FNumber",
         "Description": ""
@@ -1428,7 +1428,7 @@
       {
         "StringValue": "ExposureProgram = 2",
         "IsArray": false,
-        "Tag": 34850,
+        "TagId": 34850,
         "ExifType": 3,
         "Name": "ExposureProgram",
         "Description": ""
@@ -1436,7 +1436,7 @@
       {
         "StringValue": "ISOSpeedRatings = 64",
         "IsArray": false,
-        "Tag": 34855,
+        "TagId": 34855,
         "ExifType": 3,
         "Name": "ISOSpeedRatings",
         "Description": ""
@@ -1444,7 +1444,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 22/10/2008 16:44:01",
-        "Tag": 36867,
+        "TagId": 36867,
         "ExifType": 12,
         "Name": "DateTimeOriginal",
         "Description": ""
@@ -1452,7 +1452,7 @@
       {
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
-        "Tag": 37380,
+        "TagId": 37380,
         "ExifType": 9,
         "Name": "ExposureBiasValue",
         "Description": ""
@@ -1460,7 +1460,7 @@
       {
         "StringValue": "MaxApertureValue = 29/10 (2.9D)",
         "IsArray": false,
-        "Tag": 37381,
+        "TagId": 37381,
         "ExifType": 10,
         "Name": "MaxApertureValue",
         "Description": ""
@@ -1468,7 +1468,7 @@
       {
         "StringValue": "MeteringMode = 5",
         "IsArray": false,
-        "Tag": 37383,
+        "TagId": 37383,
         "ExifType": 3,
         "Name": "MeteringMode",
         "Description": ""
@@ -1476,7 +1476,7 @@
       {
         "StringValue": "LightSource = 0",
         "IsArray": false,
-        "Tag": 37384,
+        "TagId": 37384,
         "ExifType": 3,
         "Name": "LightSource",
         "Description": ""
@@ -1484,7 +1484,7 @@
       {
         "StringValue": "Flash = 16",
         "IsArray": false,
-        "Tag": 37385,
+        "TagId": 37385,
         "ExifType": 3,
         "Name": "Flash",
         "Description": ""
@@ -1492,7 +1492,7 @@
       {
         "StringValue": "FocalLength = 6/1 (6D)",
         "IsArray": false,
-        "Tag": 37386,
+        "TagId": 37386,
         "ExifType": 10,
         "Name": "FocalLength",
         "Description": ""
@@ -1502,7 +1502,7 @@
       {
         "StringValue": "GPS Latitude Reference = N",
         "IsArray": false,
-        "Tag": 1,
+        "TagId": 1,
         "ExifType": 2,
         "Name": "GPS Latitude Reference",
         "Description": "Indicates whether the latitude is North or South longitude; 'N' denotes North longitude, 'S' denotes South longitude"
@@ -1510,7 +1510,7 @@
       {
         "StringValue": "GPS Latitude = 43/1 (43D) / 28/1 (28D) / 639000000/100000000 (6.39D)",
         "IsArray": true,
-        "Tag": 2,
+        "TagId": 2,
         "ExifType": 10,
         "Name": "GPS Latitude",
         "Description": "Indicates the latitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -1518,7 +1518,7 @@
       {
         "StringValue": "GPS Longitude Reference = E",
         "IsArray": false,
-        "Tag": 3,
+        "TagId": 3,
         "ExifType": 2,
         "Name": "GPS Longitude Reference",
         "Description": "Indicates whether the longitude is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude"
@@ -1526,7 +1526,7 @@
       {
         "StringValue": "GPS Longitude = 11/1 (11D) / 52/1 (52D) / 534540000/10000000 (53.454D)",
         "IsArray": true,
-        "Tag": 4,
+        "TagId": 4,
         "ExifType": 10,
         "Name": "GPS Longitude",
         "Description": "Indicates the longitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -1534,7 +1534,7 @@
       {
         "StringValue": "GPS Altitude Reference = 0",
         "IsArray": false,
-        "Tag": 5,
+        "TagId": 5,
         "ExifType": 1,
         "Name": "GPS Altitude Reference",
         "Description": "Indicates the altitude reference used for GPSAltitude; '0' denotes altitude above sea level, '1' denotes altitude below sea level"
@@ -1542,7 +1542,7 @@
       {
         "StringValue": "GPS TimeStamp = 14/1 (14D) / 42/1 (42D) / 2903/100 (29.03D)",
         "IsArray": true,
-        "Tag": 7,
+        "TagId": 7,
         "ExifType": 10,
         "Name": "GPS TimeStamp",
         "Description": "Indicates the UTC time expressed as three Rational values giving the hour, minute and second"
@@ -1550,7 +1550,7 @@
       {
         "StringValue": "GPS Satellites = 05",
         "IsArray": false,
-        "Tag": 8,
+        "TagId": 8,
         "ExifType": 2,
         "Name": "GPS Satellites",
         "Description": "Indicates the GPS satellites used for measurements; the tag can be used to describe the number of satellites, their ID number, angle of elevation, azimuth, SNR and other information"
@@ -1558,7 +1558,7 @@
       {
         "StringValue": "GPS Image Direction Reference = ",
         "IsArray": false,
-        "Tag": 16,
+        "TagId": 16,
         "ExifType": 2,
         "Name": "GPS Image Direction Reference",
         "Description": "Indicates the reference for giving the direction of the image when it is captured; 'T' denotes True Direction, 'M' denotes Magnetic Direction"
@@ -1566,7 +1566,7 @@
       {
         "StringValue": "GPS Map Datum = WGS-84   ",
         "IsArray": false,
-        "Tag": 18,
+        "TagId": 18,
         "ExifType": 2,
         "Name": "GPS Map Datum",
         "Description": "Indicates the geodetic survey data used by the GPS receiver"
@@ -1574,7 +1574,7 @@
       {
         "StringValue": "GPS Date Stamp = 23/10/2008",
         "IsArray": false,
-        "Tag": 29,
+        "TagId": 29,
         "ExifType": 11,
         "Name": "GPS Date Stamp",
         "Description": "Recording date and time information relative to UTC (Coordinated Universal Time)"
@@ -1584,7 +1584,7 @@
       {
         "StringValue": "Interoperability Index = R98",
         "IsArray": false,
-        "Tag": 8193,
+        "TagId": 8193,
         "ExifType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
@@ -1592,7 +1592,7 @@
       {
         "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
-        "Tag": 8194,
+        "TagId": 8194,
         "ExifType": 2,
         "Name": "Interoperability Version",
         "Description": "Indicates the Interoperability version"
@@ -1604,7 +1604,7 @@
       {
         "StringValue": "Image Description =                                ",
         "IsArray": false,
-        "Tag": 270,
+        "TagId": 270,
         "ExifType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
@@ -1612,7 +1612,7 @@
       {
         "StringValue": "Camera Make = NIKON",
         "IsArray": false,
-        "Tag": 271,
+        "TagId": 271,
         "ExifType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -1620,7 +1620,7 @@
       {
         "StringValue": "Camera Model = COOLPIX P6000",
         "IsArray": false,
-        "Tag": 272,
+        "TagId": 272,
         "ExifType": 2,
         "Name": "Camera Model",
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -1628,7 +1628,7 @@
       {
         "StringValue": "Orientation = 1",
         "IsArray": false,
-        "Tag": 274,
+        "TagId": 274,
         "ExifType": 3,
         "Name": "Orientation",
         "Description": ""
@@ -1636,7 +1636,7 @@
       {
         "StringValue": "XResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -1644,7 +1644,7 @@
       {
         "StringValue": "YResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -1652,7 +1652,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -1660,7 +1660,7 @@
       {
         "StringValue": "Software = Nikon Transfer 1.1 W",
         "IsArray": false,
-        "Tag": 305,
+        "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
         "Description": ""
@@ -1668,7 +1668,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTime = 01/11/2008 21:15:11",
-        "Tag": 306,
+        "TagId": 306,
         "ExifType": 12,
         "Name": "DateTime",
         "Description": ""
@@ -1676,7 +1676,7 @@
       {
         "StringValue": "YCbCrPositioning = 1",
         "IsArray": false,
-        "Tag": 531,
+        "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
         "Description": ""
@@ -1684,7 +1684,7 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
-        "Tag": 259,
+        "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
         "Description": ""
@@ -1692,7 +1692,7 @@
       {
         "StringValue": "XResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -1700,7 +1700,7 @@
       {
         "StringValue": "YResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -1708,7 +1708,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -1716,7 +1716,7 @@
       {
         "StringValue": "JPEGInterchangeFormat = 4548",
         "IsArray": false,
-        "Tag": 513,
+        "TagId": 513,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormat",
         "Description": ""
@@ -1724,7 +1724,7 @@
       {
         "StringValue": "JPEGInterchangeFormatLength = 6112",
         "IsArray": false,
-        "Tag": 514,
+        "TagId": 514,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormatLength",
         "Description": ""
@@ -1732,7 +1732,7 @@
       {
         "StringValue": "ExposureTime = 1555209/100000000 (0.01555209D)",
         "IsArray": false,
-        "Tag": 33434,
+        "TagId": 33434,
         "ExifType": 10,
         "Name": "ExposureTime",
         "Description": ""
@@ -1740,7 +1740,7 @@
       {
         "StringValue": "FNumber = 59/10 (5.9D)",
         "IsArray": false,
-        "Tag": 33437,
+        "TagId": 33437,
         "ExifType": 10,
         "Name": "FNumber",
         "Description": ""
@@ -1748,7 +1748,7 @@
       {
         "StringValue": "ExposureProgram = 2",
         "IsArray": false,
-        "Tag": 34850,
+        "TagId": 34850,
         "ExifType": 3,
         "Name": "ExposureProgram",
         "Description": ""
@@ -1756,7 +1756,7 @@
       {
         "StringValue": "ISOSpeedRatings = 103",
         "IsArray": false,
-        "Tag": 34855,
+        "TagId": 34855,
         "ExifType": 3,
         "Name": "ISOSpeedRatings",
         "Description": ""
@@ -1764,7 +1764,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 22/10/2008 16:52:15",
-        "Tag": 36867,
+        "TagId": 36867,
         "ExifType": 12,
         "Name": "DateTimeOriginal",
         "Description": ""
@@ -1772,7 +1772,7 @@
       {
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
-        "Tag": 37380,
+        "TagId": 37380,
         "ExifType": 9,
         "Name": "ExposureBiasValue",
         "Description": ""
@@ -1780,7 +1780,7 @@
       {
         "StringValue": "MaxApertureValue = 29/10 (2.9D)",
         "IsArray": false,
-        "Tag": 37381,
+        "TagId": 37381,
         "ExifType": 10,
         "Name": "MaxApertureValue",
         "Description": ""
@@ -1788,7 +1788,7 @@
       {
         "StringValue": "MeteringMode = 5",
         "IsArray": false,
-        "Tag": 37383,
+        "TagId": 37383,
         "ExifType": 3,
         "Name": "MeteringMode",
         "Description": ""
@@ -1796,7 +1796,7 @@
       {
         "StringValue": "LightSource = 0",
         "IsArray": false,
-        "Tag": 37384,
+        "TagId": 37384,
         "ExifType": 3,
         "Name": "LightSource",
         "Description": ""
@@ -1804,7 +1804,7 @@
       {
         "StringValue": "Flash = 16",
         "IsArray": false,
-        "Tag": 37385,
+        "TagId": 37385,
         "ExifType": 3,
         "Name": "Flash",
         "Description": ""
@@ -1812,7 +1812,7 @@
       {
         "StringValue": "FocalLength = 24/1 (24D)",
         "IsArray": false,
-        "Tag": 37386,
+        "TagId": 37386,
         "ExifType": 10,
         "Name": "FocalLength",
         "Description": ""
@@ -1822,7 +1822,7 @@
       {
         "StringValue": "GPS Latitude Reference = N",
         "IsArray": false,
-        "Tag": 1,
+        "TagId": 1,
         "ExifType": 2,
         "Name": "GPS Latitude Reference",
         "Description": "Indicates whether the latitude is North or South longitude; 'N' denotes North longitude, 'S' denotes South longitude"
@@ -1830,7 +1830,7 @@
       {
         "StringValue": "GPS Latitude = 43/1 (43D) / 28/1 (28D) / 211799999/100000000 (2.11799999D)",
         "IsArray": true,
-        "Tag": 2,
+        "TagId": 2,
         "ExifType": 10,
         "Name": "GPS Latitude",
         "Description": "Indicates the latitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -1838,7 +1838,7 @@
       {
         "StringValue": "GPS Longitude Reference = E",
         "IsArray": false,
-        "Tag": 3,
+        "TagId": 3,
         "ExifType": 2,
         "Name": "GPS Longitude Reference",
         "Description": "Indicates whether the longitude is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude"
@@ -1846,7 +1846,7 @@
       {
         "StringValue": "GPS Longitude = 11/1 (11D) / 52/1 (52D) / 451680000/10000000 (45.168D)",
         "IsArray": true,
-        "Tag": 4,
+        "TagId": 4,
         "ExifType": 10,
         "Name": "GPS Longitude",
         "Description": "Indicates the longitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -1854,7 +1854,7 @@
       {
         "StringValue": "GPS Altitude Reference = 0",
         "IsArray": false,
-        "Tag": 5,
+        "TagId": 5,
         "ExifType": 1,
         "Name": "GPS Altitude Reference",
         "Description": "Indicates the altitude reference used for GPSAltitude; '0' denotes altitude above sea level, '1' denotes altitude below sea level"
@@ -1862,7 +1862,7 @@
       {
         "StringValue": "GPS TimeStamp = 14/1 (14D) / 50/1 (50D) / 409/10 (40.9D)",
         "IsArray": true,
-        "Tag": 7,
+        "TagId": 7,
         "ExifType": 10,
         "Name": "GPS TimeStamp",
         "Description": "Indicates the UTC time expressed as three Rational values giving the hour, minute and second"
@@ -1870,7 +1870,7 @@
       {
         "StringValue": "GPS Satellites = 04",
         "IsArray": false,
-        "Tag": 8,
+        "TagId": 8,
         "ExifType": 2,
         "Name": "GPS Satellites",
         "Description": "Indicates the GPS satellites used for measurements; the tag can be used to describe the number of satellites, their ID number, angle of elevation, azimuth, SNR and other information"
@@ -1878,7 +1878,7 @@
       {
         "StringValue": "GPS Image Direction Reference = ",
         "IsArray": false,
-        "Tag": 16,
+        "TagId": 16,
         "ExifType": 2,
         "Name": "GPS Image Direction Reference",
         "Description": "Indicates the reference for giving the direction of the image when it is captured; 'T' denotes True Direction, 'M' denotes Magnetic Direction"
@@ -1886,7 +1886,7 @@
       {
         "StringValue": "GPS Map Datum = WGS-84   ",
         "IsArray": false,
-        "Tag": 18,
+        "TagId": 18,
         "ExifType": 2,
         "Name": "GPS Map Datum",
         "Description": "Indicates the geodetic survey data used by the GPS receiver"
@@ -1894,7 +1894,7 @@
       {
         "StringValue": "GPS Date Stamp = 23/10/2008",
         "IsArray": false,
-        "Tag": 29,
+        "TagId": 29,
         "ExifType": 11,
         "Name": "GPS Date Stamp",
         "Description": "Recording date and time information relative to UTC (Coordinated Universal Time)"
@@ -1904,7 +1904,7 @@
       {
         "StringValue": "Interoperability Index = R98",
         "IsArray": false,
-        "Tag": 8193,
+        "TagId": 8193,
         "ExifType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
@@ -1912,7 +1912,7 @@
       {
         "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
-        "Tag": 8194,
+        "TagId": 8194,
         "ExifType": 2,
         "Name": "Interoperability Version",
         "Description": "Indicates the Interoperability version"
@@ -1924,7 +1924,7 @@
       {
         "StringValue": "Image Description =                                ",
         "IsArray": false,
-        "Tag": 270,
+        "TagId": 270,
         "ExifType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
@@ -1932,7 +1932,7 @@
       {
         "StringValue": "Camera Make = NIKON",
         "IsArray": false,
-        "Tag": 271,
+        "TagId": 271,
         "ExifType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -1940,7 +1940,7 @@
       {
         "StringValue": "Camera Model = COOLPIX P6000",
         "IsArray": false,
-        "Tag": 272,
+        "TagId": 272,
         "ExifType": 2,
         "Name": "Camera Model",
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -1948,7 +1948,7 @@
       {
         "StringValue": "Orientation = 1",
         "IsArray": false,
-        "Tag": 274,
+        "TagId": 274,
         "ExifType": 3,
         "Name": "Orientation",
         "Description": ""
@@ -1956,7 +1956,7 @@
       {
         "StringValue": "XResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -1964,7 +1964,7 @@
       {
         "StringValue": "YResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -1972,7 +1972,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -1980,7 +1980,7 @@
       {
         "StringValue": "Software = Nikon Transfer 1.1 W",
         "IsArray": false,
-        "Tag": 305,
+        "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
         "Description": ""
@@ -1988,7 +1988,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTime = 01/11/2008 21:15:11",
-        "Tag": 306,
+        "TagId": 306,
         "ExifType": 12,
         "Name": "DateTime",
         "Description": ""
@@ -1996,7 +1996,7 @@
       {
         "StringValue": "YCbCrPositioning = 1",
         "IsArray": false,
-        "Tag": 531,
+        "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
         "Description": ""
@@ -2004,7 +2004,7 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
-        "Tag": 259,
+        "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
         "Description": ""
@@ -2012,7 +2012,7 @@
       {
         "StringValue": "XResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -2020,7 +2020,7 @@
       {
         "StringValue": "YResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -2028,7 +2028,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -2036,7 +2036,7 @@
       {
         "StringValue": "JPEGInterchangeFormat = 4548",
         "IsArray": false,
-        "Tag": 513,
+        "TagId": 513,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormat",
         "Description": ""
@@ -2044,7 +2044,7 @@
       {
         "StringValue": "JPEGInterchangeFormatLength = 5159",
         "IsArray": false,
-        "Tag": 514,
+        "TagId": 514,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormatLength",
         "Description": ""
@@ -2052,7 +2052,7 @@
       {
         "StringValue": "ExposureTime = 761035/100000000 (0.00761035D)",
         "IsArray": false,
-        "Tag": 33434,
+        "TagId": 33434,
         "ExifType": 10,
         "Name": "ExposureTime",
         "Description": ""
@@ -2060,7 +2060,7 @@
       {
         "StringValue": "FNumber = 41/10 (4.1D)",
         "IsArray": false,
-        "Tag": 33437,
+        "TagId": 33437,
         "ExifType": 10,
         "Name": "FNumber",
         "Description": ""
@@ -2068,7 +2068,7 @@
       {
         "StringValue": "ExposureProgram = 2",
         "IsArray": false,
-        "Tag": 34850,
+        "TagId": 34850,
         "ExifType": 3,
         "Name": "ExposureProgram",
         "Description": ""
@@ -2076,7 +2076,7 @@
       {
         "StringValue": "ISOSpeedRatings = 64",
         "IsArray": false,
-        "Tag": 34855,
+        "TagId": 34855,
         "ExifType": 3,
         "Name": "ISOSpeedRatings",
         "Description": ""
@@ -2084,7 +2084,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 22/10/2008 16:55:37",
-        "Tag": 36867,
+        "TagId": 36867,
         "ExifType": 12,
         "Name": "DateTimeOriginal",
         "Description": ""
@@ -2092,7 +2092,7 @@
       {
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
-        "Tag": 37380,
+        "TagId": 37380,
         "ExifType": 9,
         "Name": "ExposureBiasValue",
         "Description": ""
@@ -2100,7 +2100,7 @@
       {
         "StringValue": "MaxApertureValue = 29/10 (2.9D)",
         "IsArray": false,
-        "Tag": 37381,
+        "TagId": 37381,
         "ExifType": 10,
         "Name": "MaxApertureValue",
         "Description": ""
@@ -2108,7 +2108,7 @@
       {
         "StringValue": "MeteringMode = 5",
         "IsArray": false,
-        "Tag": 37383,
+        "TagId": 37383,
         "ExifType": 3,
         "Name": "MeteringMode",
         "Description": ""
@@ -2116,7 +2116,7 @@
       {
         "StringValue": "LightSource = 0",
         "IsArray": false,
-        "Tag": 37384,
+        "TagId": 37384,
         "ExifType": 3,
         "Name": "LightSource",
         "Description": ""
@@ -2124,7 +2124,7 @@
       {
         "StringValue": "Flash = 16",
         "IsArray": false,
-        "Tag": 37385,
+        "TagId": 37385,
         "ExifType": 3,
         "Name": "Flash",
         "Description": ""
@@ -2132,7 +2132,7 @@
       {
         "StringValue": "FocalLength = 6/1 (6D)",
         "IsArray": false,
-        "Tag": 37386,
+        "TagId": 37386,
         "ExifType": 10,
         "Name": "FocalLength",
         "Description": ""
@@ -2142,7 +2142,7 @@
       {
         "StringValue": "GPS Latitude Reference = N",
         "IsArray": false,
-        "Tag": 1,
+        "TagId": 1,
         "ExifType": 2,
         "Name": "GPS Latitude Reference",
         "Description": "Indicates whether the latitude is North or South longitude; 'N' denotes North longitude, 'S' denotes South longitude"
@@ -2150,7 +2150,7 @@
       {
         "StringValue": "GPS Latitude = 43/1 (43D) / 27/1 (27D) / 576419999/10000000 (57.6419999D)",
         "IsArray": true,
-        "Tag": 2,
+        "TagId": 2,
         "ExifType": 10,
         "Name": "GPS Latitude",
         "Description": "Indicates the latitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -2158,7 +2158,7 @@
       {
         "StringValue": "GPS Longitude Reference = E",
         "IsArray": false,
-        "Tag": 3,
+        "TagId": 3,
         "ExifType": 2,
         "Name": "GPS Longitude Reference",
         "Description": "Indicates whether the longitude is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude"
@@ -2166,7 +2166,7 @@
       {
         "StringValue": "GPS Longitude = 11/1 (11D) / 52/1 (52D) / 448019999/10000000 (44.8019999D)",
         "IsArray": true,
-        "Tag": 4,
+        "TagId": 4,
         "ExifType": 10,
         "Name": "GPS Longitude",
         "Description": "Indicates the longitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -2174,7 +2174,7 @@
       {
         "StringValue": "GPS Altitude Reference = 0",
         "IsArray": false,
-        "Tag": 5,
+        "TagId": 5,
         "ExifType": 1,
         "Name": "GPS Altitude Reference",
         "Description": "Indicates the altitude reference used for GPSAltitude; '0' denotes altitude above sea level, '1' denotes altitude below sea level"
@@ -2182,7 +2182,7 @@
       {
         "StringValue": "GPS TimeStamp = 14/1 (14D) / 54/1 (54D) / 19/100 (0.19D)",
         "IsArray": true,
-        "Tag": 7,
+        "TagId": 7,
         "ExifType": 10,
         "Name": "GPS TimeStamp",
         "Description": "Indicates the UTC time expressed as three Rational values giving the hour, minute and second"
@@ -2190,7 +2190,7 @@
       {
         "StringValue": "GPS Satellites = 04",
         "IsArray": false,
-        "Tag": 8,
+        "TagId": 8,
         "ExifType": 2,
         "Name": "GPS Satellites",
         "Description": "Indicates the GPS satellites used for measurements; the tag can be used to describe the number of satellites, their ID number, angle of elevation, azimuth, SNR and other information"
@@ -2198,7 +2198,7 @@
       {
         "StringValue": "GPS Image Direction Reference = ",
         "IsArray": false,
-        "Tag": 16,
+        "TagId": 16,
         "ExifType": 2,
         "Name": "GPS Image Direction Reference",
         "Description": "Indicates the reference for giving the direction of the image when it is captured; 'T' denotes True Direction, 'M' denotes Magnetic Direction"
@@ -2206,7 +2206,7 @@
       {
         "StringValue": "GPS Map Datum = WGS-84   ",
         "IsArray": false,
-        "Tag": 18,
+        "TagId": 18,
         "ExifType": 2,
         "Name": "GPS Map Datum",
         "Description": "Indicates the geodetic survey data used by the GPS receiver"
@@ -2214,7 +2214,7 @@
       {
         "StringValue": "GPS Date Stamp = 23/10/2008",
         "IsArray": false,
-        "Tag": 29,
+        "TagId": 29,
         "ExifType": 11,
         "Name": "GPS Date Stamp",
         "Description": "Recording date and time information relative to UTC (Coordinated Universal Time)"
@@ -2224,7 +2224,7 @@
       {
         "StringValue": "Interoperability Index = R98",
         "IsArray": false,
-        "Tag": 8193,
+        "TagId": 8193,
         "ExifType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
@@ -2232,7 +2232,7 @@
       {
         "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
-        "Tag": 8194,
+        "TagId": 8194,
         "ExifType": 2,
         "Name": "Interoperability Version",
         "Description": "Indicates the Interoperability version"
@@ -2244,7 +2244,7 @@
       {
         "StringValue": "Image Description =                                ",
         "IsArray": false,
-        "Tag": 270,
+        "TagId": 270,
         "ExifType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
@@ -2252,7 +2252,7 @@
       {
         "StringValue": "Camera Make = NIKON",
         "IsArray": false,
-        "Tag": 271,
+        "TagId": 271,
         "ExifType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -2260,7 +2260,7 @@
       {
         "StringValue": "Camera Model = COOLPIX P6000",
         "IsArray": false,
-        "Tag": 272,
+        "TagId": 272,
         "ExifType": 2,
         "Name": "Camera Model",
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
@@ -2268,7 +2268,7 @@
       {
         "StringValue": "Orientation = 1",
         "IsArray": false,
-        "Tag": 274,
+        "TagId": 274,
         "ExifType": 3,
         "Name": "Orientation",
         "Description": ""
@@ -2276,7 +2276,7 @@
       {
         "StringValue": "XResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -2284,7 +2284,7 @@
       {
         "StringValue": "YResolution = 300/1 (300D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -2292,7 +2292,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -2300,7 +2300,7 @@
       {
         "StringValue": "Software = Nikon Transfer 1.1 W",
         "IsArray": false,
-        "Tag": 305,
+        "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
         "Description": ""
@@ -2308,7 +2308,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTime = 01/11/2008 21:15:11",
-        "Tag": 306,
+        "TagId": 306,
         "ExifType": 12,
         "Name": "DateTime",
         "Description": ""
@@ -2316,7 +2316,7 @@
       {
         "StringValue": "YCbCrPositioning = 1",
         "IsArray": false,
-        "Tag": 531,
+        "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
         "Description": ""
@@ -2324,7 +2324,7 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
-        "Tag": 259,
+        "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
         "Description": ""
@@ -2332,7 +2332,7 @@
       {
         "StringValue": "XResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 282,
+        "TagId": 282,
         "ExifType": 10,
         "Name": "XResolution",
         "Description": ""
@@ -2340,7 +2340,7 @@
       {
         "StringValue": "YResolution = 72/1 (72D)",
         "IsArray": false,
-        "Tag": 283,
+        "TagId": 283,
         "ExifType": 10,
         "Name": "YResolution",
         "Description": ""
@@ -2348,7 +2348,7 @@
       {
         "StringValue": "ResolutionUnit = 2",
         "IsArray": false,
-        "Tag": 296,
+        "TagId": 296,
         "ExifType": 3,
         "Name": "ResolutionUnit",
         "Description": ""
@@ -2356,7 +2356,7 @@
       {
         "StringValue": "JPEGInterchangeFormat = 4548",
         "IsArray": false,
-        "Tag": 513,
+        "TagId": 513,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormat",
         "Description": ""
@@ -2364,7 +2364,7 @@
       {
         "StringValue": "JPEGInterchangeFormatLength = 6474",
         "IsArray": false,
-        "Tag": 514,
+        "TagId": 514,
         "ExifType": 5,
         "Name": "JPEGInterchangeFormatLength",
         "Description": ""
@@ -2372,7 +2372,7 @@
       {
         "StringValue": "ExposureTime = 1/100 (0.01D)",
         "IsArray": false,
-        "Tag": 33434,
+        "TagId": 33434,
         "ExifType": 10,
         "Name": "ExposureTime",
         "Description": ""
@@ -2380,7 +2380,7 @@
       {
         "StringValue": "FNumber = 44/10 (4.4D)",
         "IsArray": false,
-        "Tag": 33437,
+        "TagId": 33437,
         "ExifType": 10,
         "Name": "FNumber",
         "Description": ""
@@ -2388,7 +2388,7 @@
       {
         "StringValue": "ExposureProgram = 2",
         "IsArray": false,
-        "Tag": 34850,
+        "TagId": 34850,
         "ExifType": 3,
         "Name": "ExposureProgram",
         "Description": ""
@@ -2396,7 +2396,7 @@
       {
         "StringValue": "ISOSpeedRatings = 64",
         "IsArray": false,
-        "Tag": 34855,
+        "TagId": 34855,
         "ExifType": 3,
         "Name": "ISOSpeedRatings",
         "Description": ""
@@ -2404,7 +2404,7 @@
       {
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 22/10/2008 17:00:07",
-        "Tag": 36867,
+        "TagId": 36867,
         "ExifType": 12,
         "Name": "DateTimeOriginal",
         "Description": ""
@@ -2412,7 +2412,7 @@
       {
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
-        "Tag": 37380,
+        "TagId": 37380,
         "ExifType": 9,
         "Name": "ExposureBiasValue",
         "Description": ""
@@ -2420,7 +2420,7 @@
       {
         "StringValue": "MaxApertureValue = 29/10 (2.9D)",
         "IsArray": false,
-        "Tag": 37381,
+        "TagId": 37381,
         "ExifType": 10,
         "Name": "MaxApertureValue",
         "Description": ""
@@ -2428,7 +2428,7 @@
       {
         "StringValue": "MeteringMode = 5",
         "IsArray": false,
-        "Tag": 37383,
+        "TagId": 37383,
         "ExifType": 3,
         "Name": "MeteringMode",
         "Description": ""
@@ -2436,7 +2436,7 @@
       {
         "StringValue": "LightSource = 0",
         "IsArray": false,
-        "Tag": 37384,
+        "TagId": 37384,
         "ExifType": 3,
         "Name": "LightSource",
         "Description": ""
@@ -2444,7 +2444,7 @@
       {
         "StringValue": "Flash = 16",
         "IsArray": false,
-        "Tag": 37385,
+        "TagId": 37385,
         "ExifType": 3,
         "Name": "Flash",
         "Description": ""
@@ -2452,7 +2452,7 @@
       {
         "StringValue": "FocalLength = 15/1 (15D)",
         "IsArray": false,
-        "Tag": 37386,
+        "TagId": 37386,
         "ExifType": 10,
         "Name": "FocalLength",
         "Description": ""
@@ -2462,7 +2462,7 @@
       {
         "StringValue": "GPS Latitude Reference = N",
         "IsArray": false,
-        "Tag": 1,
+        "TagId": 1,
         "ExifType": 2,
         "Name": "GPS Latitude Reference",
         "Description": "Indicates whether the latitude is North or South longitude; 'N' denotes North longitude, 'S' denotes South longitude"
@@ -2470,7 +2470,7 @@
       {
         "StringValue": "GPS Latitude = 43/1 (43D) / 27/1 (27D) / 520380000/10000000 (52.038D)",
         "IsArray": true,
-        "Tag": 2,
+        "TagId": 2,
         "ExifType": 10,
         "Name": "GPS Latitude",
         "Description": "Indicates the latitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -2478,7 +2478,7 @@
       {
         "StringValue": "GPS Longitude Reference = E",
         "IsArray": false,
-        "Tag": 3,
+        "TagId": 3,
         "ExifType": 2,
         "Name": "GPS Longitude Reference",
         "Description": "Indicates whether the longitude is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude"
@@ -2486,7 +2486,7 @@
       {
         "StringValue": "GPS Longitude = 11/1 (11D) / 52/1 (52D) / 53322/1000 (53.322D)",
         "IsArray": true,
-        "Tag": 4,
+        "TagId": 4,
         "ExifType": 10,
         "Name": "GPS Longitude",
         "Description": "Indicates the longitude as three Rational values giving the degress, minutes and seconds respectively"
@@ -2494,7 +2494,7 @@
       {
         "StringValue": "GPS Altitude Reference = 0",
         "IsArray": false,
-        "Tag": 5,
+        "TagId": 5,
         "ExifType": 1,
         "Name": "GPS Altitude Reference",
         "Description": "Indicates the altitude reference used for GPSAltitude; '0' denotes altitude above sea level, '1' denotes altitude below sea level"
@@ -2502,7 +2502,7 @@
       {
         "StringValue": "GPS TimeStamp = 14/1 (14D) / 57/1 (57D) / 4137/100 (41.37D)",
         "IsArray": true,
-        "Tag": 7,
+        "TagId": 7,
         "ExifType": 10,
         "Name": "GPS TimeStamp",
         "Description": "Indicates the UTC time expressed as three Rational values giving the hour, minute and second"
@@ -2510,7 +2510,7 @@
       {
         "StringValue": "GPS Satellites = 04",
         "IsArray": false,
-        "Tag": 8,
+        "TagId": 8,
         "ExifType": 2,
         "Name": "GPS Satellites",
         "Description": "Indicates the GPS satellites used for measurements; the tag can be used to describe the number of satellites, their ID number, angle of elevation, azimuth, SNR and other information"
@@ -2518,7 +2518,7 @@
       {
         "StringValue": "GPS Image Direction Reference = ",
         "IsArray": false,
-        "Tag": 16,
+        "TagId": 16,
         "ExifType": 2,
         "Name": "GPS Image Direction Reference",
         "Description": "Indicates the reference for giving the direction of the image when it is captured; 'T' denotes True Direction, 'M' denotes Magnetic Direction"
@@ -2526,7 +2526,7 @@
       {
         "StringValue": "GPS Map Datum = WGS-84   ",
         "IsArray": false,
-        "Tag": 18,
+        "TagId": 18,
         "ExifType": 2,
         "Name": "GPS Map Datum",
         "Description": "Indicates the geodetic survey data used by the GPS receiver"
@@ -2534,7 +2534,7 @@
       {
         "StringValue": "GPS Date Stamp = 23/10/2008",
         "IsArray": false,
-        "Tag": 29,
+        "TagId": 29,
         "ExifType": 11,
         "Name": "GPS Date Stamp",
         "Description": "Recording date and time information relative to UTC (Coordinated Universal Time)"
@@ -2544,7 +2544,7 @@
       {
         "StringValue": "Interoperability Index = R98",
         "IsArray": false,
-        "Tag": 8193,
+        "TagId": 8193,
         "ExifType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
@@ -2552,7 +2552,7 @@
       {
         "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
-        "Tag": 8194,
+        "TagId": 8194,
         "ExifType": 2,
         "Name": "Interoperability Version",
         "Description": "Indicates the Interoperability version"

@@ -38,6 +38,21 @@ internal static class PngConstants
     internal static byte[] ITime = new byte[] { (byte)'t', (byte)'I', (byte)'M', (byte)'E' };
 
     /// <summary>
+    /// Start of an ASCII text chunk
+    /// </summary>
+    internal static byte[] IText = new byte[] { (byte)'t', (byte)'E', (byte)'X', (byte)'t' };
+
+    /// <summary>
+    /// Start of a compressed ASCII text chunk
+    /// </summary>
+    internal static byte[] ITextCompressed = new byte[] { (byte)'z', (byte)'T', (byte)'X', (byte)'t' };
+
+    /// <summary>
+    /// Start of a compressed International UTF8 text chunk
+    /// </summary>
+    internal static byte[] ITextInternational = new byte[] { (byte)'i', (byte)'T', (byte)'X', (byte)'t' };
+
+    /// <summary>
     /// Start of the IEND file end chunk which marks the end of the PNG datastream
     /// </summary>
     internal static byte[] IEnd = new byte[] { (byte)'I', (byte)'E', (byte)'N', (byte)'D' };

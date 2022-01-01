@@ -1,0 +1,80 @@
+{
+  "metadata-save.png": {
+    "PngText": [
+      {
+        "IsArray": false,
+        "TagId": 2,
+        "StringValue": "Author = Dan Petitt",
+        "Name": "Author",
+        "Description": "Name of image's creator"
+      },
+      {
+        "IsArray": false,
+        "TagId": 1,
+        "StringValue": "Title = A bit of test metadata which should be compressed",
+        "Name": "Title",
+        "Description": "Short (one line) title or caption for image"
+      },
+      {
+        "IsArray": false,
+        "TagId": 3,
+        "StringValue": "Description = International & uncompressed",
+        "Name": "Description",
+        "Description": "Possibly long description of image"
+      },
+      {
+        "IsArray": false,
+        "TagId": 10,
+        "StringValue": "Comment (Комментарии) = A bit of international/Russian (международный) test metadata which should be compressed (ru-RU)",
+        "Name": "Comment",
+        "Description": "Miscellaneous comment"
+      },
+      {
+        "IsArray": false,
+        "TagId": 255,
+        "StringValue": "Custom Keyword (Пользовательское ключевое слово) = Custom международный text metadata which should also be compressed (ru-RU)",
+        "Name": "Custom Keyword",
+        "Description": ""
+      }
+    ]
+  },
+  "metadata.png": {
+    "PngText": [
+      {
+        "IsArray": false,
+        "TagId": 2,
+        "StringValue": "Author = Dan Petitt",
+        "Name": "Author",
+        "Description": "Name of image's creator"
+      },
+      {
+        "IsArray": false,
+        "TagId": 1,
+        "StringValue": "Title = A bit of test metadata which should be compressed",
+        "Name": "Title",
+        "Description": "Short (one line) title or caption for image"
+      },
+      {
+        "IsArray": false,
+        "TagId": 3,
+        "StringValue": "Description = International & uncompressed",
+        "Name": "Description",
+        "Description": "Possibly long description of image"
+      },
+      {
+        "IsArray": false,
+        "TagId": 10,
+        "StringValue": "Comment (Комментарии) = A bit of international/Russian (международный) test metadata which should be compressed (ru-RU)",
+        "Name": "Comment",
+        "Description": "Miscellaneous comment"
+      },
+      {
+        "IsArray": false,
+        "TagId": 255,
+        "StringValue": "Custom Keyword (Пользовательское ключевое слово) = Custom международный text metadata which should also be compressed (ru-RU)",
+        "Name": "Custom Keyword",
+        "Description": ""
+      }
+    ]
+  }
+}

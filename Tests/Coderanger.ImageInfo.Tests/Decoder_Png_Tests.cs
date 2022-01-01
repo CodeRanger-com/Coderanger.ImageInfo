@@ -14,6 +14,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Coderanger.ImageInfo.Tests.Helpers;
+
 using FluentAssertions;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -42,12 +44,41 @@ public class Decoder_Png_Tests
       info.HorizontalDpi.Should().Be( hdpi );
       info.VerticalDpi.Should().Be( vdpi );
       info.MimeType.Should().Be( mime );
+      info.Metadata.Should().BeNull();
 
       // Assert tag information
       //info.ExifProfiles?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
 
       // Output data to console
       //OutputTags( info.ExifProfiles );
+    }
+  }
+
+  [TestMethod]
+  [DataRow( "metadata.png", 50, 50, 96, 96, "image/png" )]
+  public void Validate_Images_With_Metadata( string filename, int width, int height, int hdpi, int vdpi, string mime )
+  {
+    // Arrange
+    using var stream = new FileStream( $"./Fixtures/Png/{filename}", FileMode.Open, FileAccess.Read );
+
+    // Act
+    var info = ImageInfo.DecodeFromStream( stream );
+
+    // Assert
+    info.Should().NotBeNull();
+    if( info != null )
+    {
+      info.Width.Should().Be( width );
+      info.Height.Should().Be( height );
+      info.HorizontalDpi.Should().Be( hdpi );
+      info.VerticalDpi.Should().Be( vdpi );
+      info.MimeType.Should().Be( mime );
+
+      // Assert tag information
+      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}" );
+
+      // Output data to console
+      MetadataHelpers.Output( info.Metadata );
     }
   }
 }

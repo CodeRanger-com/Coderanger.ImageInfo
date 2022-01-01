@@ -10,13 +10,13 @@ namespace Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 internal static class BinaryReaderExtensions
 {
-  internal static void Skip( this BinaryReader reader, int jumpFromCurrent )
+  internal static void Skip( this BinaryReader reader, long jumpFromCurrent )
   {
     if( jumpFromCurrent == 0 ) return;
 
     if( reader.BaseStream.Position + jumpFromCurrent > reader.BaseStream.Length )
     {
-      throw new ImageFormatException( $"Bad offset {jumpFromCurrent} + {reader.BaseStream.Position} is greater than stream length" );
+      throw new ImageFormatException( $"Bad offset {jumpFromCurrent} + {reader.BaseStream.Position} is greater than stream length", nameof( jumpFromCurrent ) );
     }
 
     reader.BaseStream.Seek( jumpFromCurrent, SeekOrigin.Current );

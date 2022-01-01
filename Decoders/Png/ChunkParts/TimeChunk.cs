@@ -6,9 +6,10 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Png.Chunks;
+namespace Coderanger.ImageInfo.Decoders.Png.ChunkParts;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
+using Coderanger.ImageInfo.Decoders.Png.Helpers;
 
 internal struct TimeChunk : IChunk
 {

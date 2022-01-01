@@ -6,9 +6,10 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Png.Chunks;
+namespace Coderanger.ImageInfo.Decoders.Png.Helpers;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
+using Coderanger.ImageInfo.Decoders.Png.ChunkParts;
 
 internal class ChunkManager
 {
@@ -30,6 +31,9 @@ internal class ChunkManager
     { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.IHeader ), HeaderChunk.Create },
     { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.IPhys ), PhysicalDimensionsChunk.Create },
     { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.ITime ), TimeChunk.Create },
+    { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.IText ), TextChunk.Create },
+    { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.ITextCompressed ), TextCompressedChunk.Create },
+    { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.ITextInternational ), TextInternationalChunk.Create },
     { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.IExif ), ExifChunk.Create },
     { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.IEnd ), EndChunk.Create },
   };

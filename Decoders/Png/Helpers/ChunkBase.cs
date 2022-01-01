@@ -4,21 +4,23 @@
 // </copyright>
 // <author>Dan Petitt</author>
 // <comment>
-// Provides a simple record storing info on a PNG chunk
+// Provides a simple record storing info on a PNG chunk and providing some
+// base functionality
 // </comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Png.Chunks;
+namespace Coderanger.ImageInfo.Decoders.Png.Helpers;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 /// <summary>
-/// Provides a simple record storing info on a PNG chunk
+/// Provides a simple record storing info on a PNG chunk and providing some
+/// base functionality
 /// </summary>
 internal record ChunkBase( long DataLength, byte[] ChunkType, long DataStartPosition )
 {
   /// <summary>
-  /// Lazy load the data segment when required, with optional max limit on bytes
+  /// Lazy load the data segment when required
   /// </summary>
   /// <param name="reader"></param>
   /// <param name="maxBytesToRead"></param>
@@ -56,14 +58,18 @@ internal record ChunkBase( long DataLength, byte[] ChunkType, long DataStartPosi
   }
 
   /// <summary>
-  /// Helper method to jump to the end of this chunk
+  /// Helper method to jump forward to the end of this chunk
   /// </summary>
   /// <param name="reader"></param>
   internal void SkipToEnd( BinaryReader reader )
   {
-    // Length does not include the 4 Length bytes or the 4 CRC bytes at the end so seek
-    // accordingly
-    reader.BaseStream.Seek( DataStartPosition + DataLength + 4 + 4, SeekOrigin.Begin );
+    // DataLength does not include the 4 Length bytes or the 4 CRC bytes at the end
+    // so seek accordingly
+    var skipForward = DataStartPosition + DataLength + 4 + 4 - reader.BaseStream.Position;
+    if( skipForward > 0 )
+    {
+      reader.Skip( skipForward );
+    }
   }
 
   /// <summary>

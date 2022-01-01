@@ -6,7 +6,7 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Png.Chunks;
+namespace Coderanger.ImageInfo.Decoders.Png.ChunkParts;
 
 internal interface IChunk
 {

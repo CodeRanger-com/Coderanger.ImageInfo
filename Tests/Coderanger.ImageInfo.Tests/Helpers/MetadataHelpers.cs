@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 using Coderanger.ImageInfo.Decoders.Metadata.Exif;
 using Coderanger.ImageInfo.Decoders.Metadata;
+using Coderanger.ImageInfo.Decoders.Metadata.Png;
 
 internal static class MetadataHelpers
 {
@@ -120,6 +121,11 @@ internal static class MetadataHelpers
 
       case MetadataType.String:
         Console.Write( $"{(string)tagValue.Value}" );
+        break;
+
+      case MetadataType.PngText:
+        var val = (PngText)tagValue.Value;
+        Console.Write( val );
         break;
 
       default:

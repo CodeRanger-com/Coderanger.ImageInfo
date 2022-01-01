@@ -1,32 +1,28 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="ExifChunk.cs" company="CodeRanger.com">
+// <copyright file="UnknownChunk.cs" company="CodeRanger.com">
 //     CodeRanger.com. All rights reserved
 // </copyright>
 // <author>Dan Petitt</author>
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Png.Chunks;
+namespace Coderanger.ImageInfo.Decoders.Png.ChunkParts;
 
-internal struct ExifChunk : IChunk
+using Coderanger.ImageInfo.Decoders.Png.Helpers;
+
+/// <summary>
+/// Special chunk which stores the base chunk and so allows the ability
+/// to skip without any additional logic
+/// </summary>
+internal struct UnknownChunk : IChunk
 {
-  internal static IChunk Create( ChunkBase chunk )
-  {
-    return new ExifChunk( chunk );
-  }
-
-  internal ExifChunk( ChunkBase chunk )
+  internal UnknownChunk( ChunkBase chunk )
   {
     _chunk = chunk;
   }
 
   public void LoadData( BinaryReader reader )
   {
-    _chunk.LoadData( reader );
-    if( _chunk.Data != null )
-    {
-      ///
-    }
   }
 
   public void SkipToEnd( BinaryReader reader )

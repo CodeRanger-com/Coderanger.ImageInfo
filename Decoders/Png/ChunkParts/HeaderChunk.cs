@@ -6,9 +6,10 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Png.Chunks;
+namespace Coderanger.ImageInfo.Decoders.Png.ChunkParts;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
+using Coderanger.ImageInfo.Decoders.Png.Helpers;
 
 internal struct HeaderChunk : IChunk
 {
@@ -17,25 +18,10 @@ internal struct HeaderChunk : IChunk
     return new HeaderChunk( chunk );
   }
 
-  //internal HeaderChunk( byte[] signature )
-  //{
-  //  _signature = signature;
-  //}
-
   internal HeaderChunk( ChunkBase chunk )
   {
     _chunk = chunk;
   }
-
-  //public bool IsOfType( byte[] chunkTypeSignature )
-  //{
-  //  if( _signature.Length != chunkTypeSignature.Length )
-  //  {
-  //    return false;
-  //  }
-
-  //  return chunkTypeSignature.SequenceEqual( _signature );
-  //}
 
   public void LoadData( BinaryReader reader )
   {
@@ -64,5 +50,4 @@ internal struct HeaderChunk : IChunk
   public uint Height { get; private set; } = 0;
 
   private readonly ChunkBase _chunk;
-  //private readonly byte[] _signature;
 }
