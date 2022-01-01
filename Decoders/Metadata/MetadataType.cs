@@ -1,14 +1,14 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="ExifType.cs" company="CodeRanger.com">
+// <copyright file="MetadataType.cs" company="CodeRanger.com">
 //     CodeRanger.com. All rights reserved
 // </copyright>
 // <author>Dan Petitt</author>
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif.Types;
+namespace Coderanger.ImageInfo.Decoders.Metadata;
 
-public enum ExifType
+public enum MetadataType
 {
   Unknown,
   Byte,
@@ -23,4 +23,5 @@ public enum ExifType
   URational,
   Date,
   DateTime,
+  PngText,
 }

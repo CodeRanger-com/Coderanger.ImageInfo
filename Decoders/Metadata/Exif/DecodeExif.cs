@@ -13,10 +13,10 @@
 // </comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif;
+namespace Coderanger.ImageInfo.Decoders.Metadata.Exif;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
-using Coderanger.ImageInfo.Decoders.Exif.Types;
+using Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 
 /// <summary>
 /// 
@@ -95,17 +95,17 @@ internal class DecodeExif
   {
     // Offset is from the beginning of this header (i.e. at the point of the byte order marker)
     var ifdOffset = DataConversion.Int32FromBuffer( data, 4, _exifByteOrder );
-    ExtractTagsFromIfd( ExifProfileType.Exif, ifdOffset );
+    ExtractTagsFromIfd( MetadataProfileType.Exif, ifdOffset );
 
-    ExtractTagsFromIfd( ExifProfileType.Exif, _ifdSubExifOffset );
-    ExtractTagsFromIfd( ExifProfileType.Gps, _ifdGpsOffset );
-    ExtractTagsFromIfd( ExifProfileType.Interoperability, _ifdInterOffset );
+    ExtractTagsFromIfd( MetadataProfileType.Exif, _ifdSubExifOffset );
+    ExtractTagsFromIfd( MetadataProfileType.Gps, _ifdGpsOffset );
+    ExtractTagsFromIfd( MetadataProfileType.Interoperability, _ifdInterOffset );
 
     // Finished all IFDs
     _processed = true;
   }
 
-  private void ExtractTagsFromIfd( ExifProfileType profile, int ifdOffset )
+  private void ExtractTagsFromIfd( MetadataProfileType profile, int ifdOffset )
   {
     if( ifdOffset > 0 )
     {
@@ -124,7 +124,7 @@ internal class DecodeExif
           {
             if( !_profileTags.TryGetValue( profile, out var tags ) )
              {
-              tags = new List<IExifValue>();
+              tags = new List<IMetadataTypedValue>();
               _profileTags.Add( profile, tags );
             }
 
@@ -143,7 +143,7 @@ internal class DecodeExif
   internal int HorizontalDpi { get; set; } = 0;
   internal int VerticalDpi { get; set; } = 0;
 
-  internal Dictionary<ExifProfileType, List<IExifValue>> GetProfileTags()
+  internal Dictionary<MetadataProfileType, List<IMetadataTypedValue>> GetProfileTags()
   {
     return _profileTags;
   }
@@ -189,14 +189,14 @@ internal class DecodeExif
   /// </summary>
   private void ExtractResolutionInfo()
   {
-    if( _profileTags.TryGetValue( ExifProfileType.Exif, out var tags ) )
+    if( _profileTags.TryGetValue( MetadataProfileType.Exif, out var tags ) )
     {
       if( tags == null )
       {
         return;
       }
 
-      var resUnitTag = tags.Find( t => t.Tag == ExifTag.ResolutionUnit );
+      var resUnitTag = tags.Find( t => t.TagId == ExifTag.ResolutionUnit );
       if( resUnitTag != null )
       {
         DensityUnit? exifDensityUnit = null;
@@ -216,7 +216,7 @@ internal class DecodeExif
           return;
         }
 
-        var xResTag = tags.Find( t => t.Tag == ExifTag.XResolution );
+        var xResTag = tags.Find( t => t.TagId == ExifTag.XResolution );
         if( xResTag != null )
         {
           if( xResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value is not null )
@@ -226,7 +226,7 @@ internal class DecodeExif
           }
         }
 
-        var yResTag = tags.Find( t => t.Tag == ExifTag.YResolution );
+        var yResTag = tags.Find( t => t.TagId == ExifTag.YResolution );
         if( yResTag != null )
         {
           if( yResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value != null )
@@ -239,7 +239,7 @@ internal class DecodeExif
     }
   }
 
-  private readonly Dictionary<ExifProfileType, List<IExifValue>> _profileTags = new();
+  private readonly Dictionary<MetadataProfileType, List<IMetadataTypedValue>> _profileTags = new();
 
   private long _segmentStart = 0;
   private bool _processed = false;

@@ -6,7 +6,7 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif;
+namespace Coderanger.ImageInfo.Decoders.Metadata.Exif;
 
 internal static class ExifConstants
 {

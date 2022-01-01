@@ -8,8 +8,8 @@
 
 namespace Coderanger.ImageInfo;
 
-using Coderanger.ImageInfo.Decoders.Exif;
-using Coderanger.ImageInfo.Decoders.Exif.Types;
+using Coderanger.ImageInfo.Decoders.Metadata;
+using Coderanger.ImageInfo.Decoders.Metadata.Exif;
 
 /// <summary>
 /// Provides read-only information on the decoded image
@@ -18,6 +18,6 @@ using Coderanger.ImageInfo.Decoders.Exif.Types;
 /// <param name="Height">Pixel height</param>
 /// <param name="HorizontalResolution">Resolution in Dots per Inch</param>
 /// <param name="VerticalResolution">Resolution in Dots per Inch</param>
-/// <param name="ExifProfiles">Dictionary of profiles to list of exif, gps and photo tags; or null if none have been extracted</param>
+/// <param name="Metadata">Dictionary of profiles to list of exif, gps, photo or private keyword tags; or null if none have been extracted</param>
 /// <param name="MimeType">Mime type as 'image/type'</param>
-internal record ImageDetails( long Width, long Height, int HorizontalResolution, int VerticalResolution, string MimeType, Dictionary<ExifProfileType, List<IExifValue>>? ExifProfiles );
+internal record ImageDetails( long Width, long Height, int HorizontalResolution, int VerticalResolution, string MimeType, Dictionary<MetadataProfileType, List<IMetadataTypedValue>>? Metadata );

@@ -6,14 +6,12 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif;
+namespace Coderanger.ImageInfo.Decoders.Metadata.Exif;
 
 using System;
 using System.Reflection;
-using System.Reflection.Metadata;
 
 internal record ExifTagDetails( string Name, string Description );
-
 
 [AttributeUsage( AttributeTargets.Field, AllowMultiple = false )]
 internal sealed class ExifTagDetailsAttribute : Attribute
@@ -34,7 +32,7 @@ internal sealed class ExifTagDetailsAttribute : Attribute
   /// <returns>
   /// The <see cref="string"/>.
   /// </returns>
-  public static ExifTagDetails? GetDescription( ExifTag type, ushort tag )
+  public static ExifTagDetails? GetTagDetails( ExifTag type, ushort tag )
   {
     var fieldInfos = type.GetType().GetFields(
       // Gets all public and static fields
@@ -81,33 +79,5 @@ internal sealed class ExifTagDetailsAttribute : Attribute
     }
 
     return null;
-
-    /*
-    // Return an array of FieldInfos
-    return (FieldInfo[])constants.ToArray( typeof( FieldInfo ) );
-
-    var tagValue = (ushort)tag;
-
-    var field = tag.GetType().GetTypeInfo().GetDeclaredField( tagValue.ToString() );
-    if( field is null )
-    {
-      return string.Empty;
-    }
-
-    foreach( var customAttribute in field.CustomAttributes )
-    {
-      var attr = customAttribute?.ConstructorArguments[ 0 ].Value;
-      if( attr is not null )
-      {
-        return (string)attr;
-      }
-      //if( Equals( attributeValue, value ) )
-      //{
-      //  return (string)customAttribute.ConstructorArguments[ 1 ].Value;
-      //}
-    }
-
-    return string.Empty;
-    */
   }
 }

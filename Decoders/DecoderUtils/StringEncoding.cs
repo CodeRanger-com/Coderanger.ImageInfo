@@ -1,16 +1,17 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="ExifProfileType" company="CodeRanger.com">
+// <copyright file="StringEncoding.cs" company="CodeRanger.com">
 //     CodeRanger.com. All rights reserved
 // </copyright>
 // <author>Dan Petitt</author>
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif;
+namespace Coderanger.ImageInfo.Decoders.DecoderUtils;
 
-public enum ExifProfileType
+public enum StringEncoding
 {
-  Exif,
-  Gps,
-  Interoperability,
+  None,
+  Ascii,
+  Ucs2,
+  Utf8,
 }

@@ -8,7 +8,7 @@
 
 namespace Coderanger.ImageInfo.Decoders.DecoderUtils;
 
-using Coderanger.ImageInfo.Decoders.Exif.Types;
+using Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 using System.Text;
 
 /// <summary>
@@ -23,16 +23,16 @@ internal static class DataConversion
   /// <param name="count">Count of characters in buffer</param>
   /// <param name="encoding">Encoding type</param>
   /// <returns>Converted string or empty</returns>
-  internal static string ConvertBuffer( byte[] buffer, int count, ExifStringEncoding encoding )
+  internal static string ConvertBuffer( byte[] buffer, int count, StringEncoding encoding )
   {
     if( buffer?.Length > 0 )
-{
-      if( encoding == ExifStringEncoding.Ascii )
+    {
+      if( encoding == StringEncoding.Ascii )
       {
-// Buffer will be null terminated so remove any zero bytes from the end
+        // Buffer will be null terminated so remove any zero bytes from the end
         return Encoding.UTF8.GetString( buffer, 0, count ).TrimEnd( (char)0 );
       }
-      else if( encoding == ExifStringEncoding.Ucs2 )
+      else if( encoding == StringEncoding.Ucs2 )
       {
         // Buffer will be null terminated so remove any zero bytes from the end
         return Encoding.GetEncoding( "UCS-2" ).GetString( buffer, 0, count ).TrimEnd( (char)0 );

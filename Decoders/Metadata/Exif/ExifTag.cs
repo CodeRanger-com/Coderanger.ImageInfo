@@ -6,17 +6,13 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif;
-
-public interface IExifTag
-{
-}
+namespace Coderanger.ImageInfo.Decoders.Metadata.Exif;
 
 /// <summary>
 /// Tag constants
 /// https://www.exiv2.org/tags.html
 /// </summary>
-public class ExifTag : IExifTag
+public class ExifTag : IMetadataTag
 {
   /// <summary>
   /// A pointer to the Exif IFD. Exif IFD has the same structure as that of the IFD specified

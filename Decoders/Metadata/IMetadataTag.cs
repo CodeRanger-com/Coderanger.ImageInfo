@@ -1,17 +1,13 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="ExifString.cs" company="CodeRanger.com">
+// <copyright file="IMetadataTag.cs" company="CodeRanger.com">
 //     CodeRanger.com. All rights reserved
 // </copyright>
 // <author>Dan Petitt</author>
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif.Types;
+namespace Coderanger.ImageInfo.Decoders.Metadata;
 
-public enum ExifStringEncoding
+public interface IMetadataTag
 {
-  None,
-  Ascii,
-  Ucs2,
-  Utf8,
 }

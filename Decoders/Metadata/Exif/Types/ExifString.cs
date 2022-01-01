@@ -6,18 +6,17 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif.Types;
+namespace Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 
-using System.Text;
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 /// <summary>
 /// 
 /// </summary>
-public class ExifString : ExifTypeValue, IExifValue
+public class ExifString : ExifTypeValue, IMetadataTypedValue
 {
-  internal ExifString( ExifStringEncoding encoding, BinaryReader reader, ExifComponent component )
-    : base( ExifType.String, reader, component )
+  internal ExifString( StringEncoding encoding, BinaryReader reader, ExifComponent component )
+    : base( MetadataType.String, reader, component )
   {
     _encoding = encoding;
   }
@@ -30,7 +29,7 @@ public class ExifString : ExifTypeValue, IExifValue
   /// </summary>
   public override bool IsArray => false;
 
-  void IExifValue.SetValue()
+  void IMetadataTypedValue.SetValue()
   {
     ProcessData();
   }
@@ -38,14 +37,14 @@ public class ExifString : ExifTypeValue, IExifValue
   /// <summary>
   /// Processes the data buffer for each type value
   /// </summary>
-  internal override IEnumerable<ExifTagValue> ExtractValues()
+  internal override IEnumerable<MetadataTagValue> ExtractValues()
   {
     var byteCount = Component.ComponentCount * Component.ComponentSize;
 
     // If the size * count is within the 4 byte buffer, can just iterate it and yield the string
     if( Component.ComponentCount * Component.ComponentSize <= BufferByteSize )
     {
-      yield return new ExifTagValue( Type: ExifType, IsArray: false, TagId: Tag, TagName: Name, Value: DataConversion.ConvertBuffer( Component.DataValueBuffer, byteCount, _encoding ) );
+      yield return new MetadataTagValue( Type: ExifType, IsArray: false, TagId: TagId, TagName: Name, Value: DataConversion.ConvertBuffer( Component.DataValueBuffer, byteCount, _encoding ) );
     }
     else
     {
@@ -56,9 +55,9 @@ public class ExifString : ExifTypeValue, IExifValue
 
       var buffer = Reader.ReadBytes( Component.ComponentCount );
 
-      yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: DataConversion.ConvertBuffer( buffer, byteCount, _encoding ) );
+      yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: DataConversion.ConvertBuffer( buffer, byteCount, _encoding ) );
     }
   }
 
-  private readonly ExifStringEncoding _encoding;
+  private readonly StringEncoding _encoding;
 }

@@ -9,13 +9,14 @@
 namespace Coderanger.ImageInfo.Tests;
 
 using System.IO;
-using Coderanger.ImageInfo.Decoders.Exif.Types;
+using Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using Snapper;
-using Coderanger.ImageInfo.Decoders.Exif;
+using Coderanger.ImageInfo.Decoders.Metadata.Exif;
+using Coderanger.ImageInfo.Decoders.Metadata;
 
 [TestClass]
 public class Decoder_Jpeg_Tests
@@ -59,7 +60,7 @@ public class Decoder_Jpeg_Tests
       info.MimeType.Should().Be( mime );
 
       // Assert tag information
-      info.ExifProfiles?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
+      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
 
       // Output data to console
       OutputTags( info.ExifProfiles );
@@ -94,7 +95,7 @@ public class Decoder_Jpeg_Tests
       info.MimeType.Should().Be( mime );
 
       // Assert tag information
-      info.ExifProfiles?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
+      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
 
       // Output data to console
       OutputTags( info.ExifProfiles );

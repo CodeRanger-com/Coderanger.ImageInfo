@@ -6,28 +6,28 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif.Types;
+namespace Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 /// <summary>
 /// 
 /// </summary>
-public class ExifShort : ExifTypeValue, IExifValue
+public class ExifShort : ExifTypeValue, IMetadataTypedValue
 {
   internal ExifShort( BinaryReader reader, ExifComponent component )
-    : base( ExifType.Short, reader, component )
+    : base( MetadataType.Short, reader, component )
   {
   }
 
   public string StringValue => ToString();
 
-  void IExifValue.SetValue()
+  void IMetadataTypedValue.SetValue()
   {
     ProcessData();
   }
 
-  internal override IEnumerable<ExifTagValue> ExtractValues()
+  internal override IEnumerable<MetadataTagValue> ExtractValues()
   {
     // If the size * count is within the 4 byte buffer, can just iterate it and yield the short
     if( Component.ComponentCount * Component.ComponentSize <= BufferByteSize )
@@ -35,7 +35,7 @@ public class ExifShort : ExifTypeValue, IExifValue
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
         var value = DataConversion.Int16FromBuffer( Component.DataValueBuffer, 0 + (i * Component.ComponentSize), Component.ByteOrder );
-        yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
+        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
       }
     }
     else
@@ -49,7 +49,7 @@ public class ExifShort : ExifTypeValue, IExifValue
       {
         var dataValue = Reader.ReadBytes( Component.ComponentSize );
         var value = DataConversion.Int16FromBuffer( dataValue, 0, Component.ByteOrder );
-        yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
+        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
       }
     }
   }
@@ -58,21 +58,21 @@ public class ExifShort : ExifTypeValue, IExifValue
 /// <summary>
 /// 
 /// </summary>
-public class ExifUShort : ExifTypeValue, IExifValue
+public class ExifUShort : ExifTypeValue, IMetadataTypedValue
 {
   internal ExifUShort( BinaryReader reader, ExifComponent component )
-    : base( ExifType.UShort, reader, component )
+    : base( MetadataType.UShort, reader, component )
   {
   }
 
   public string StringValue => ToString();
 
-  void IExifValue.SetValue()
+  void IMetadataTypedValue.SetValue()
   {
     ProcessData();
   }
 
-  internal override IEnumerable<ExifTagValue> ExtractValues()
+  internal override IEnumerable<MetadataTagValue> ExtractValues()
   {
     // If the size * count is within the 4 byte buffer, can just iterate it and yield the short
     if( Component.ComponentCount * Component.ComponentSize <= BufferByteSize )
@@ -80,7 +80,7 @@ public class ExifUShort : ExifTypeValue, IExifValue
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
         var value = DataConversion.UInt16FromBuffer( Component.DataValueBuffer, 0 + ( i * Component.ComponentSize ), Component.ByteOrder );
-        yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
+        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
       }
     }
     else
@@ -94,7 +94,7 @@ public class ExifUShort : ExifTypeValue, IExifValue
       {
         var dataValue = Reader.ReadBytes( Component.ComponentSize );
         var value = DataConversion.UInt16FromBuffer( dataValue, 0, Component.ByteOrder );
-        yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
+        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
       }
     }
   }

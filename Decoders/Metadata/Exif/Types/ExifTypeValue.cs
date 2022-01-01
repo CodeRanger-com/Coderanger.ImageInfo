@@ -6,7 +6,7 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif.Types;
+namespace Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 
 /// <summary>
 /// 
@@ -16,14 +16,14 @@ public abstract class ExifTypeValue
   // Just used for reflection in the custom description attribute
   private static readonly ExifTag ReflectionExifTag = new();
 
-  internal ExifTypeValue( ExifType type, BinaryReader reader, ExifComponent component )
+  internal ExifTypeValue( MetadataType type, BinaryReader reader, ExifComponent component )
   {
-    Tag = component.Tag;
+    TagId = component.Tag;
     ExifType = type;
     Reader = reader;
     Component = component;
 
-    var tagDetails = ExifTagDetailsAttribute.GetDescription( ReflectionExifTag, Tag );
+    var tagDetails = ExifTagDetailsAttribute.GetTagDetails( ReflectionExifTag, TagId );
     if( tagDetails != null )
     {
       Name = tagDetails.Name;
@@ -31,14 +31,14 @@ public abstract class ExifTypeValue
     }
   }
 
-  public bool TryGetValue( out ExifTagValue? value )
+  public bool TryGetValue( out MetadataTagValue? value )
   {
     ProcessData();
     value = _convertedValue;
     return true;
   }
 
-  public bool TryGetValueArray( out List<ExifTagValue>? value )
+  public bool TryGetValueArray( out List<MetadataTagValue>? value )
   {
     ProcessData();
     value = _convertedValueArray;
@@ -87,17 +87,17 @@ public abstract class ExifTypeValue
   /// Override to process the data buffer for each type
   /// </summary>
   /// <returns></returns>
-  internal abstract IEnumerable<ExifTagValue> ExtractValues();
+  internal abstract IEnumerable<MetadataTagValue> ExtractValues();
 
   /// <summary>
   /// Tag identifier
   /// </summary>
-  public ushort Tag { get; init; }
+  public ushort TagId { get; init; }
 
   /// <summary>
   /// Exif tag type
   /// </summary>
-  public ExifType ExifType { get; init; }
+  public MetadataType ExifType { get; init; }
 
   /// <summary>
   /// Name of tag
@@ -112,8 +112,8 @@ public abstract class ExifTypeValue
   internal BinaryReader Reader { get; init; }
   internal ExifComponent Component { get; init; }
 
-  protected ExifTagValue? _convertedValue;
-  protected readonly List<ExifTagValue> _convertedValueArray = new();
+  protected MetadataTagValue? _convertedValue;
+  protected readonly List<MetadataTagValue> _convertedValueArray = new();
 
   protected const byte BufferByteSize = 4;
 

@@ -15,7 +15,7 @@
 namespace Coderanger.ImageInfo.Decoders.Jpeg;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
-using Coderanger.ImageInfo.Decoders.Exif;
+using Coderanger.ImageInfo.Decoders.Metadata.Exif;
 
 /// <summary>
 /// Decoder for the JPEG image format

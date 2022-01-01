@@ -6,7 +6,7 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif.Types;
+namespace Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 
 /// <summary>
 /// Simple record type holding a rational number

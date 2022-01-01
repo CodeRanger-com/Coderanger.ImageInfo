@@ -6,28 +6,28 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif.Types;
+namespace Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 /// <summary>
 /// 
 /// </summary>
-public class ExifRational: ExifTypeValue, IExifValue
+public class ExifRational: ExifTypeValue, IMetadataTypedValue
 {
   internal ExifRational( BinaryReader reader, ExifComponent component )
-    : base( ExifType.Rational, reader, component )
+    : base( MetadataType.Rational, reader, component )
   {
   }
 
   public string StringValue => ToString();
 
-  void IExifValue.SetValue()
+  void IMetadataTypedValue.SetValue()
   {
     ProcessData();
   }
 
-  internal override IEnumerable<ExifTagValue> ExtractValues()
+  internal override IEnumerable<MetadataTagValue> ExtractValues()
   {
     // Rational type is 8 bytes so will always be above the 4 byte buffer so the buffer
     // will contain a reference to the data elsewhere in the IFD, therefore move to
@@ -42,7 +42,7 @@ public class ExifRational: ExifTypeValue, IExifValue
       var numerator = DataConversion.Int32FromBuffer( dataValue, 0, Component.ByteOrder );
       var denominator = DataConversion.Int32FromBuffer( dataValue, 4, Component.ByteOrder );
 
-      yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: new Rational( numerator, denominator ) );
+      yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new Rational( numerator, denominator ) );
     }
   }
 }
@@ -50,21 +50,21 @@ public class ExifRational: ExifTypeValue, IExifValue
 /// <summary>
 /// 
 /// </summary>
-public class ExifURational : ExifTypeValue, IExifValue
+public class ExifURational : ExifTypeValue, IMetadataTypedValue
 {
   internal ExifURational( BinaryReader reader, ExifComponent component )
-    : base( ExifType.URational, reader, component )
+    : base( MetadataType.URational, reader, component )
   {
   }
 
   public string StringValue => ToString();
 
-  void IExifValue.SetValue()
+  void IMetadataTypedValue.SetValue()
   {
     ProcessData();
   }
 
-  internal override IEnumerable<ExifTagValue> ExtractValues()
+  internal override IEnumerable<MetadataTagValue> ExtractValues()
   {
     // Rational type is 8 bytes so will always be above the 4 byte buffer so the buffer
     // will contain a reference to the data elsewhere in the IFD, therefore move to
@@ -79,7 +79,7 @@ public class ExifURational : ExifTypeValue, IExifValue
       var numerator = DataConversion.Int32FromBuffer( dataValue, 0, Component.ByteOrder );
       var denominator = DataConversion.Int32FromBuffer( dataValue, 4, Component.ByteOrder );
 
-      yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: new Rational( numerator, denominator ) );
+      yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new Rational( numerator, denominator ) );
     }
   }
 }

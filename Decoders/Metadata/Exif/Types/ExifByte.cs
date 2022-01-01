@@ -6,35 +6,35 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif.Types;
+namespace Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 /// <summary>
 /// 
 /// </summary>
-public class ExifByte : ExifTypeValue, IExifValue
+public class ExifByte : ExifTypeValue, IMetadataTypedValue
 {
   internal ExifByte( BinaryReader reader, ExifComponent component )
-    : base( ExifType.Byte, reader, component )
+    : base( MetadataType.Byte, reader, component )
   {
   }
 
   public string StringValue => ToString();
 
-  void IExifValue.SetValue()
+  void IMetadataTypedValue.SetValue()
   {
     ProcessData();
   }
 
-  internal override IEnumerable<ExifTagValue> ExtractValues()
+  internal override IEnumerable<MetadataTagValue> ExtractValues()
   {
     // If the size * count is within the 4 byte buffer, can just iterate it and yield the byte
     if( Component.ComponentCount * Component.ComponentSize <= BufferByteSize )
     {
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
-        yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: Component.DataValueBuffer[ i ] );
+        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: Component.DataValueBuffer[ i ] );
       }
     }
     else
@@ -47,7 +47,7 @@ public class ExifByte : ExifTypeValue, IExifValue
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
         var dataValue = Reader.ReadByte();
-        yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: dataValue );
+        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: dataValue );
       }
     }
   }

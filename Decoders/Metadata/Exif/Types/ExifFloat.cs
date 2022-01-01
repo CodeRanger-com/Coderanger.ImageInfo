@@ -6,34 +6,34 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif.Types;
+namespace Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 /// <summary>
 /// 
 /// </summary>
-public class ExifFloat : ExifTypeValue, IExifValue
+public class ExifFloat : ExifTypeValue, IMetadataTypedValue
 {
   internal ExifFloat( BinaryReader reader, ExifComponent component )
-    : base( ExifType.Float, reader, component )
+    : base( MetadataType.Float, reader, component )
   {
   }
 
   public string StringValue => ToString();
 
-  void IExifValue.SetValue()
+  void IMetadataTypedValue.SetValue()
   {
     ProcessData();
   }
 
-  internal override IEnumerable<ExifTagValue> ExtractValues()
+  internal override IEnumerable<MetadataTagValue> ExtractValues()
   {
     // Float type is 4 bytes so may be within our existing 4 byte buffer if there is only one
     if( Component.ComponentCount == 1 )
     {
       var value = DataConversion.FloatFromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
-      yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
+      yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
     }
     else
     {
@@ -47,7 +47,7 @@ public class ExifFloat : ExifTypeValue, IExifValue
         var dataValue = Reader.ReadBytes( Component.ComponentSize );
 
         var value = DataConversion.FloatFromBuffer( dataValue, 0, Component.ByteOrder );
-        yield return new ExifTagValue( Type: ExifType, IsArray: IsArray, TagId: Tag, TagName: Name, Value: value );
+        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
       }
     }
   }

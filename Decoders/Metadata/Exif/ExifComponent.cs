@@ -6,13 +6,13 @@
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Exif;
+namespace Coderanger.ImageInfo.Decoders.Metadata.Exif;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 internal struct ExifComponent
 {
-  public ExifComponent( ExifProfileType profile, ushort tag, short dataType, int componentCount, byte[] dataValueBuffer, long dataStart, TiffByteOrder byteOrder )
+  public ExifComponent( MetadataProfileType profile, ushort tag, short dataType, int componentCount, byte[] dataValueBuffer, long dataStart, TiffByteOrder byteOrder )
   {
     Profile = profile;
     Tag = tag;
@@ -23,7 +23,7 @@ internal struct ExifComponent
     DataStart = dataStart;
   }
 
-  public ExifProfileType Profile { get; init; }
+  public MetadataProfileType Profile { get; init; }
   public ushort Tag { get; set; }
   public short DataType { get; init; }
   public int ComponentCount { get; init; }
