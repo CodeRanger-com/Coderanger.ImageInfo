@@ -7,19 +7,11 @@
 // -----------------------------------------------------------------------
 
 namespace Coderanger.ImageInfo.Tests;
-using System;
-using System.Collections.Generic;
+
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Coderanger.ImageInfo.Tests.Helpers;
-
 using FluentAssertions;
-
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using Snapper;
 
 [TestClass]
@@ -47,10 +39,10 @@ public class Decoder_Png_Tests
       info.Metadata.Should().BeNull();
 
       // Assert tag information
-      //info.ExifProfiles?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
+      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}" );
 
       // Output data to console
-      //OutputTags( info.ExifProfiles );
+      MetadataHelpers.Output( info.Metadata );
     }
   }
 

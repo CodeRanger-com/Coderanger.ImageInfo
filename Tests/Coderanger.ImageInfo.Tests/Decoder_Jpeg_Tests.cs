@@ -9,15 +9,10 @@
 namespace Coderanger.ImageInfo.Tests;
 
 using System.IO;
-using Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
+using Coderanger.ImageInfo.Tests.Helpers;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
 using Snapper;
-using Coderanger.ImageInfo.Decoders.Metadata.Exif;
-using Coderanger.ImageInfo.Decoders.Metadata;
-using Coderanger.ImageInfo.Tests.Helpers;
 
 [TestClass]
 public class Decoder_Jpeg_Tests

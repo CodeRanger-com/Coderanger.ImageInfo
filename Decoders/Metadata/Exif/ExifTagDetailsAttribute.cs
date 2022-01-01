@@ -11,8 +11,14 @@ namespace Coderanger.ImageInfo.Decoders.Metadata.Exif;
 using System;
 using System.Reflection;
 
+/// <summary>
+/// Helper record to return keyword information to caller
+/// </summary>
 internal record ExifTagDetails( string Name, string Description );
 
+/// <summary>
+/// Attribute to allow each tag constant to be decorated with additional information
+/// </summary>
 [AttributeUsage( AttributeTargets.Field, AllowMultiple = false )]
 internal sealed class ExifTagDetailsAttribute : Attribute
 {
@@ -28,10 +34,6 @@ internal sealed class ExifTagDetailsAttribute : Attribute
   /// <summary>
   /// Gets the tag description from any custom attributes
   /// </summary>
-  /// <param name="tag">The tag.</param>
-  /// <returns>
-  /// The <see cref="string"/>.
-  /// </returns>
   public static ExifTagDetails? GetTagDetails( ExifTag type, ushort tag )
   {
     var fieldInfos = type.GetType().GetFields(

@@ -9,11 +9,10 @@
 namespace Coderanger.ImageInfo.Decoders.Metadata.Png;
 
 using System.Collections.Generic;
-using Coderanger.ImageInfo.Decoders.Png.ChunkParts;
 
 public class PngMetadata : IMetadataTypedValue
 {
-  // Just used for reflection in the custom description attribute
+  // Hack: Just used for reflection in the custom description attribute
   private static readonly PngKeyword ReflectionPngKeyword = new();
 
   internal PngMetadata( PngText data )
@@ -26,6 +25,9 @@ public class PngMetadata : IMetadataTypedValue
     Description = _details?.Description ?? string.Empty;
   }
 
+  /// <summary>
+  /// PNG Metadata does not support arrays
+  /// </summary>
   public bool IsArray => false;
 
   public ushort TagId => _details?.Id ?? PngKeyword.Custom;

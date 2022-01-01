@@ -13,7 +13,7 @@ namespace Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 /// </summary>
 public abstract class ExifTypeValue
 {
-  // Just used for reflection in the custom description attribute
+  // Hack: Just used for reflection in the custom description attribute
   private static readonly ExifTag ReflectionExifTag = new();
 
   internal ExifTypeValue( MetadataType type, BinaryReader reader, ExifComponent component )

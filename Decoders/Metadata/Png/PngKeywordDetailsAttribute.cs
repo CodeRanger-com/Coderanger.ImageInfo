@@ -11,8 +11,14 @@ namespace Coderanger.ImageInfo.Decoders.Metadata.Png;
 using System;
 using System.Reflection;
 
+/// <summary>
+/// Helper record to return keyword information to caller
+/// </summary>
 internal record PngKeywordDetails( ushort Id, string Name, string Description );
 
+/// <summary>
+/// Attribute to allow each keyword constant to be decorated with additional information
+/// </summary>
 [AttributeUsage( AttributeTargets.Field, AllowMultiple = false )]
 internal sealed class PngKeywordDetailsAttribute : Attribute
 {
@@ -28,10 +34,6 @@ internal sealed class PngKeywordDetailsAttribute : Attribute
   /// <summary>
   /// Gets the tag description from any custom attributes
   /// </summary>
-  /// <param name="tag">The tag.</param>
-  /// <returns>
-  /// The <see cref="string"/>.
-  /// </returns>
   public static PngKeywordDetails? GetTagDetails( PngKeyword type, string tagName )
   {
     var fieldInfos = type.GetType().GetFields(
