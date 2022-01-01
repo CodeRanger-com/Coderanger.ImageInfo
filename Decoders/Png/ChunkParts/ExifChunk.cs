@@ -8,6 +8,7 @@
 
 namespace Coderanger.ImageInfo.Decoders.Png.ChunkParts;
 
+using Coderanger.ImageInfo.Decoders.Metadata.Exif;
 using Coderanger.ImageInfo.Decoders.Png.Helpers;
 
 internal struct ExifChunk : IChunk
@@ -27,7 +28,7 @@ internal struct ExifChunk : IChunk
     _chunk.LoadData( reader );
     if( _chunk.Data != null )
     {
-      ///
+      ExifData = DecodeExif.DecodeFromBuffer( _chunk.Data, (int)_chunk.DataLength, false );
     }
   }
 
@@ -35,6 +36,8 @@ internal struct ExifChunk : IChunk
   {
     _chunk.SkipToEnd( reader );
   }
+
+  public DecodeExif? ExifData { get; private set; } = null;
 
   private readonly ChunkBase _chunk;
 }

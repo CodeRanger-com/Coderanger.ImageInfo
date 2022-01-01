@@ -108,11 +108,7 @@ internal class DecodeJpeg : IDecoder
         }
         else if( markerType == ExifConstants.App )
         {
-          var decoder = DecodeExif.DecodeFromReader( reader );
-          if( decoder != null )
-          {
-            _exifDecoder = decoder;
-          }
+          _exifDecoder = DecodeExif.DecodeFromReader( reader );
         }
         else if( markerType == JpegConstants.Markers.BaselineStart
                 || markerType == JpegConstants.Markers.ExtendedSequentialStart

@@ -39,12 +39,26 @@ internal class DecodeExif
     return null;
   }
 
+  internal static DecodeExif? DecodeFromBuffer( byte[] buffer, int count, bool validateSignature )
+  {
+    using var stream = new MemoryStream( buffer, 0, count );
+    using var reader = new BinaryReader( stream );
+
+    var decoder = new DecodeExif( reader );
+    if( decoder.Decode( validateSignature ) )
+    {
+      return decoder;
+    }
+
+    return null;
+  }
+
   private DecodeExif( BinaryReader reader )
   {
     _reader = reader;
   }
 
-  private bool Decode()
+  private bool Decode( bool validateSignature = true )
   {
     if( _processed )
     {
@@ -53,20 +67,23 @@ internal class DecodeExif
     }
 
     // Buffer only the data we need
-    var data = _reader.ReadBytes( ExifConstants.MagicBytes.Length );
-    if( DecoderHelper.MatchesMagic( data, ExifConstants.MagicBytes ) )
+    if( validateSignature )
     {
-      _segmentStart = _reader.BaseStream.Position;
-
-      var segmentData = ValidateHeader();
-      ExtractTagsFromSegment( segmentData );
-
-      ExtractResolutionInfo();
-
-      return true;
+      var data = _reader.ReadBytes( ExifConstants.MagicBytes.Length );
+      if( !DecoderHelper.MatchesMagic( data, ExifConstants.MagicBytes ) )
+      {
+        return false;
+      }
     }
 
-    return false;
+    _segmentStart = _reader.BaseStream.Position;
+
+    var segmentData = ValidateHeader();
+    ExtractTagsFromSegment( segmentData );
+
+    ExtractResolutionInfo();
+
+    return true;
   }
 
   /// <summary>
