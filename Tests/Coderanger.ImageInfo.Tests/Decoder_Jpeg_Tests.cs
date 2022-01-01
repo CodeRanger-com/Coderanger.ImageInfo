@@ -17,6 +17,7 @@ using System.Collections.Generic;
 using Snapper;
 using Coderanger.ImageInfo.Decoders.Metadata.Exif;
 using Coderanger.ImageInfo.Decoders.Metadata;
+using Coderanger.ImageInfo.Tests.Helpers;
 
 [TestClass]
 public class Decoder_Jpeg_Tests
@@ -63,7 +64,7 @@ public class Decoder_Jpeg_Tests
       info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
 
       // Output data to console
-      OutputTags( info.ExifProfiles );
+      MetadataHelpers.Output( info.Metadata );
     }
   }
 
@@ -98,7 +99,7 @@ public class Decoder_Jpeg_Tests
       info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
 
       // Output data to console
-      OutputTags( info.ExifProfiles );
+      MetadataHelpers.Output( info.Metadata );
     }
   }
 
@@ -136,127 +137,10 @@ public class Decoder_Jpeg_Tests
       info.MimeType.Should().Be( mime );
 
       // Assert tag information
-      info.ExifProfiles?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
+      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
 
       // Output data to console
-      OutputTags( info.ExifProfiles );
-    }
-  }
-
-  private static void OutputTags( Dictionary<ExifProfileType, List<IExifValue>>? profiles )
-  {
-    if( profiles == null )
-    {
-      return;
-    }
-
-    foreach( var profile in profiles.Keys )
-    {
-      Console.Write( $"\n{profile} Tags" );
-      if( profiles.TryGetValue( profile, out var profileTags ) && profileTags != null )
-      {
-        foreach( var exifValue in profileTags )
-        {
-          if( exifValue == null )
-          {
-            Console.Write( "\n\t(none)" );
-            return;
-          }
-
-          if( exifValue.IsArray )
-          {
-            if( exifValue.TryGetValueArray( out var tagValues ) && tagValues != null )
-            {
-              var isFirst = true;
-              foreach( var tagValue in tagValues )
-              {
-                Decoder_Jpeg_Tests.OutputValue( tagValue, outputTagDetails: isFirst, isArray: true );
-                isFirst = false;
-              }
-            }
-          }
-          else
-          {
-            if( exifValue.TryGetValue( out var tagValue ) && tagValue != null )
-            {
-              Decoder_Jpeg_Tests.OutputValue( tagValue, outputTagDetails: true, isArray: false );
-            }
-          }
-        }
-
-        Console.WriteLine( string.Empty );
-      }
-      else
-      {
-        Console.Write( "\n\t(none)" );
-      }
-    }
-  }
-
-  private static void OutputValue( ExifTagValue? tagValue, bool outputTagDetails, bool isArray )
-  {
-    if( tagValue == null || tagValue.Value == null )
-    {
-      return;
-    }
-
-    if( outputTagDetails )
-    {
-      Console.Write( $"\n\t{tagValue.TagName} (0x{tagValue.TagId:X}) = " );
-    }
-
-    switch( tagValue.Type )
-    {
-      case ExifType.Byte:
-        Console.Write( $"{(byte)tagValue.Value}" );
-        break;
-
-      case ExifType.Date:
-        Console.Write( $"{(DateOnly)tagValue.Value}" );
-        break;
-
-      case ExifType.DateTime:
-        Console.Write( $"{(DateTime)tagValue.Value}" );
-        break;
-
-      case ExifType.Float:
-        Console.Write( $"{(float)tagValue.Value}" );
-        break;
-
-      case ExifType.Int:
-        Console.Write( $"{(int)tagValue.Value}" );
-        break;
-
-      case ExifType.UInt:
-        Console.Write( $"{(uint)tagValue.Value}" );
-        break;
-
-      case ExifType.Rational:
-      case ExifType.URational:
-        var rational = (Rational)tagValue.Value;
-        Console.Write( rational );
-        break;
-
-      case ExifType.Short:
-        Console.Write( $"{(short)tagValue.Value}" );
-        break;
-
-      case ExifType.UShort:
-        Console.Write( $"{(ushort)tagValue.Value}" );
-        break;
-
-      case ExifType.String:
-        Console.Write( $"{(string)tagValue.Value}" );
-        break;
-
-      default:
-        Console.Write( $"unknown value" );
-        break;
-    }
-
-    if( isArray )
-    {
-      Console.Write( $", " );
+      MetadataHelpers.Output( info.Metadata );
     }
   }
 }
