@@ -124,33 +124,57 @@ internal class DecodeExif
 
   private void ExtractTagsFromIfd( MetadataProfileType profile, int ifdOffset )
   {
+    _valueOffsetReferenceStart = 0;
     if( ifdOffset > 0 )
     {
       do
       {
+        if( _segmentStart + ifdOffset > _reader.BaseStream.Length )
+        {
+          break;
+        }
+
         _reader.BaseStream.Seek( _segmentStart + ifdOffset, SeekOrigin.Begin );
 
         var ifdDirectoryBuffer = _reader.ReadBytes( 2 );
         var directoryCount = DataConversion.Int16FromBuffer( ifdDirectoryBuffer, 0, _exifByteOrder );
         for( var directoryIndex = 0; directoryIndex < directoryCount; directoryIndex++ )
         {
-          DiscoverIfdOffsets();
-
-          var dataValue = ExifTagValueFactory.Create( profile, _reader, _segmentStart, _exifByteOrder );
-          if( dataValue != null )
+          var isIfdOffset = DiscoverIfdOffsets();
+          if( !isIfdOffset )
           {
-            if( !_profileTags.TryGetValue( profile, out var tags ) )
-             {
-              tags = new List<IMetadataTypedValue>();
-              _profileTags.Add( profile, tags );
-            }
+            var dataValue = ExifTagValueFactory.Create( profile, _reader, _segmentStart, _exifByteOrder );
+            if( dataValue != null )
+            {
+              if( !_profileTags.TryGetValue( profile, out var tags ) )
+              {
+                tags = new List<IMetadataTypedValue>();
+                _profileTags.Add( profile, tags );
+              }
 
-            dataValue.SetValue();
-            tags.Add( dataValue );
+              dataValue.SetValue();
+              _valueOffsetReferenceStart = _valueOffsetReferenceStart == 0 
+                ? dataValue.ValueOffsetReferenceStart 
+                : Math.Min( _valueOffsetReferenceStart, dataValue.ValueOffsetReferenceStart );
+              tags.Add( dataValue );
+            }
+          }
+          else
+          {
+            _reader.Skip( ExifConstants.ExifDirectorySize );
           }
         }
 
-        // Last entry after directories is the offset to next IFD
+        // Last entry after directories should be the offset to next IFD or 4 nulls,
+        // but this isnt always the case as sometimes, the data section which contains
+        // values for exif 'offset' types is straight after, so add a check to ensure
+        // it isnt at that point
+        if( _reader.Position() >= _reader.Length() 
+          || _reader.Position() >= _valueOffsetReferenceStart )
+        {
+          break;
+        }
+
         var nextIfdBuffer = _reader.ReadBytes( 4 );
         ifdOffset = DataConversion.Int32FromBuffer( nextIfdBuffer, 0, _exifByteOrder );
       } while( ifdOffset != 0 );
@@ -259,6 +283,7 @@ internal class DecodeExif
   private readonly Dictionary<MetadataProfileType, List<IMetadataTypedValue>> _profileTags = new();
 
   private long _segmentStart = 0;
+  private long _valueOffsetReferenceStart = 0;
   private bool _processed = false;
   private TiffByteOrder _exifByteOrder = TiffByteOrder.Unknown;
 

@@ -13,7 +13,7 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 /// <summary>
 /// 
 /// </summary>
-public class ExifShort : ExifTypeValue, IMetadataTypedValue
+public class ExifShort : ExifTypeBase, IMetadataTypedValue
 {
   internal ExifShort( BinaryReader reader, ExifComponent component )
     : base( MetadataType.Short, reader, component )
@@ -25,6 +25,18 @@ public class ExifShort : ExifTypeValue, IMetadataTypedValue
   void IMetadataTypedValue.SetValue()
   {
     ProcessData();
+  }
+
+  long IMetadataTypedValue.ValueOffsetReferenceStart
+  {
+    get
+    {
+      return base.ValueOffsetReferenceStart;
+    }
+    set
+    {
+      base.ValueOffsetReferenceStart = value;
+    }
   }
 
   internal override IEnumerable<MetadataTagValue> ExtractValues()
@@ -45,6 +57,8 @@ public class ExifShort : ExifTypeValue, IMetadataTypedValue
       var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
       Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
 
+      ValueOffsetReferenceStart = Component.DataStart + exifValue;
+
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
         var dataValue = Reader.ReadBytes( Component.ComponentSize );
@@ -58,7 +72,7 @@ public class ExifShort : ExifTypeValue, IMetadataTypedValue
 /// <summary>
 /// 
 /// </summary>
-public class ExifUShort : ExifTypeValue, IMetadataTypedValue
+public class ExifUShort : ExifTypeBase, IMetadataTypedValue
 {
   internal ExifUShort( BinaryReader reader, ExifComponent component )
     : base( MetadataType.UShort, reader, component )
@@ -70,6 +84,18 @@ public class ExifUShort : ExifTypeValue, IMetadataTypedValue
   void IMetadataTypedValue.SetValue()
   {
     ProcessData();
+  }
+
+  long IMetadataTypedValue.ValueOffsetReferenceStart
+  {
+    get
+    {
+      return base.ValueOffsetReferenceStart;
+    }
+    set
+    {
+      base.ValueOffsetReferenceStart = value;
+    }
   }
 
   internal override IEnumerable<MetadataTagValue> ExtractValues()

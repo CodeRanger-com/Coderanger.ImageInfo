@@ -13,7 +13,7 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 /// <summary>
 /// 
 /// </summary>
-public class ExifRational: ExifTypeValue, IMetadataTypedValue
+public class ExifRational: ExifTypeBase, IMetadataTypedValue
 {
   internal ExifRational( BinaryReader reader, ExifComponent component )
     : base( MetadataType.Rational, reader, component )
@@ -27,6 +27,18 @@ public class ExifRational: ExifTypeValue, IMetadataTypedValue
     ProcessData();
   }
 
+  long IMetadataTypedValue.ValueOffsetReferenceStart
+  {
+    get
+    {
+      return base.ValueOffsetReferenceStart;
+    }
+    set
+    {
+      base.ValueOffsetReferenceStart = value;
+    }
+  }
+
   internal override IEnumerable<MetadataTagValue> ExtractValues()
   {
     // Rational type is 8 bytes so will always be above the 4 byte buffer so the buffer
@@ -34,6 +46,8 @@ public class ExifRational: ExifTypeValue, IMetadataTypedValue
     // that position and read enough bytes for conversion x number of components saved
     var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
     Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
+
+    ValueOffsetReferenceStart = Component.DataStart + exifValue;
 
     for( var i = 0; i < Component.ComponentCount; i++ )
     {
@@ -50,7 +64,7 @@ public class ExifRational: ExifTypeValue, IMetadataTypedValue
 /// <summary>
 /// 
 /// </summary>
-public class ExifURational : ExifTypeValue, IMetadataTypedValue
+public class ExifURational : ExifTypeBase, IMetadataTypedValue
 {
   internal ExifURational( BinaryReader reader, ExifComponent component )
     : base( MetadataType.URational, reader, component )
@@ -62,6 +76,18 @@ public class ExifURational : ExifTypeValue, IMetadataTypedValue
   void IMetadataTypedValue.SetValue()
   {
     ProcessData();
+  }
+
+  long IMetadataTypedValue.ValueOffsetReferenceStart
+  {
+    get
+    {
+      return base.ValueOffsetReferenceStart;
+    }
+    set
+    {
+      base.ValueOffsetReferenceStart = value;
+    }
   }
 
   internal override IEnumerable<MetadataTagValue> ExtractValues()

@@ -11,12 +11,12 @@ namespace Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 /// <summary>
 /// 
 /// </summary>
-public abstract class ExifTypeValue
+public abstract class ExifTypeBase
 {
   // Hack: Just used for reflection in the custom description attribute
   private static readonly ExifTag ReflectionExifTag = new();
 
-  internal ExifTypeValue( MetadataType type, BinaryReader reader, ExifComponent component )
+  internal ExifTypeBase( MetadataType type, BinaryReader reader, ExifComponent component )
   {
     TagId = component.Tag;
     ExifType = type;
@@ -111,6 +111,24 @@ public abstract class ExifTypeValue
 
   internal BinaryReader Reader { get; init; }
   internal ExifComponent Component { get; init; }
+
+  /// <summary>
+  /// The beginning of any value reference data
+  /// </summary>
+  internal long ValueOffsetReferenceStart
+  { 
+    get
+    {
+      return _valueOffsetReferenceStart;
+    }
+    set
+    {
+      _valueOffsetReferenceStart = _valueOffsetReferenceStart == 0 
+        ? value 
+        : Math.Min( _valueOffsetReferenceStart, value );
+    }
+  }
+  private long _valueOffsetReferenceStart;
 
   protected MetadataTagValue? _convertedValue;
   protected readonly List<MetadataTagValue> _convertedValueArray = new();

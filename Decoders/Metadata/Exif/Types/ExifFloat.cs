@@ -13,7 +13,7 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 /// <summary>
 /// 
 /// </summary>
-public class ExifFloat : ExifTypeValue, IMetadataTypedValue
+public class ExifFloat : ExifTypeBase, IMetadataTypedValue
 {
   internal ExifFloat( BinaryReader reader, ExifComponent component )
     : base( MetadataType.Float, reader, component )
@@ -25,6 +25,18 @@ public class ExifFloat : ExifTypeValue, IMetadataTypedValue
   void IMetadataTypedValue.SetValue()
   {
     ProcessData();
+  }
+
+  long IMetadataTypedValue.ValueOffsetReferenceStart
+  {
+    get
+    {
+      return base.ValueOffsetReferenceStart;
+    }
+    set
+    {
+      base.ValueOffsetReferenceStart = value;
+    }
   }
 
   internal override IEnumerable<MetadataTagValue> ExtractValues()
@@ -41,6 +53,8 @@ public class ExifFloat : ExifTypeValue, IMetadataTypedValue
       // that position and read enough bytes for conversion x number of components saved
       var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
       Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
+
+      ValueOffsetReferenceStart = Component.DataStart + exifValue;
 
       for( var i = 0; i < Component.ComponentCount; i++ )
       {

@@ -13,7 +13,7 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 /// <summary>
 /// 
 /// </summary>
-public class ExifDouble : ExifTypeValue, IMetadataTypedValue
+public class ExifDouble : ExifTypeBase, IMetadataTypedValue
 {
   internal ExifDouble( BinaryReader reader, ExifComponent component )
     : base( MetadataType.Double, reader, component )
@@ -27,6 +27,18 @@ public class ExifDouble : ExifTypeValue, IMetadataTypedValue
     ProcessData();
   }
 
+  long IMetadataTypedValue.ValueOffsetReferenceStart
+  {
+    get
+    {
+      return base.ValueOffsetReferenceStart;
+    }
+    set
+    {
+      base.ValueOffsetReferenceStart = value;
+    }
+  }
+
   internal override IEnumerable<MetadataTagValue> ExtractValues()
   {
     // Double type is 8 bytes so will always be above the 4 byte buffer so the buffer
@@ -34,6 +46,8 @@ public class ExifDouble : ExifTypeValue, IMetadataTypedValue
     // that position and read enough bytes for conversion x number of components saved
     var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
     Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
+
+    ValueOffsetReferenceStart = Component.DataStart + exifValue;
 
     for( var i = 0; i < Component.ComponentCount; i++ )
     {
