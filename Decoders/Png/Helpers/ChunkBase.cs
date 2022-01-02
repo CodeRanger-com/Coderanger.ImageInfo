@@ -65,7 +65,7 @@ internal record ChunkBase( long DataLength, byte[] ChunkType, long DataStartPosi
   {
     // DataLength does not include the 4 Length bytes or the 4 CRC bytes at the end
     // so seek accordingly
-    var skipForward = DataStartPosition + DataLength + 4 + 4 - reader.BaseStream.Position;
+    var skipForward = DataStartPosition + DataLength + 4 + 4 - reader.Position();
     if( skipForward > 0 )
     {
       reader.Skip( skipForward );

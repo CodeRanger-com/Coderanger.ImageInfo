@@ -10,6 +10,7 @@
 // https://www.cipa.jp/std/documents/e/DC-008-2012_E.pdf
 // https://www.media.mit.edu/pia/Research/deepview/exif.html
 // https://www.exiv2.org/tags.html
+// http://www.exif.org/Exif2-2.PDF
 // </comment>
 // -----------------------------------------------------------------------
 
@@ -76,7 +77,7 @@ internal class DecodeExif
       }
     }
 
-    _segmentStart = _reader.BaseStream.Position;
+    _segmentStart = _reader.Position();
 
     var segmentData = ValidateHeader();
     ExtractTagsFromSegment( segmentData );
@@ -125,12 +126,14 @@ internal class DecodeExif
   private void ExtractTagsFromIfd( MetadataProfileType profile, int ifdOffset )
   {
     _valueOffsetReferenceStart = 0;
+
     if( ifdOffset > 0 )
     {
       do
       {
-        if( _segmentStart + ifdOffset > _reader.BaseStream.Length )
+        if( _segmentStart + ifdOffset > _reader.Length() )
         {
+          // Ensure we havent gone out of bounds
           break;
         }
 

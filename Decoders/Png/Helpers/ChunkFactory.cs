@@ -24,7 +24,7 @@ internal static class ChunkFactory
 
     // Chunk length starts from the type and does not include the length
     // or SRC so store the position for skipping to the end later
-    var dataStart = reader.BaseStream.Position;
+    var dataStart = reader.Position();
 
     var chunkType = reader.ReadBytes( 4 );
 

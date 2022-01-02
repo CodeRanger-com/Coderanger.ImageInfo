@@ -29,10 +29,10 @@ internal class DecodePng : IDecoder
   public IDecoder? DetectFormat( BinaryReader reader )
   {
     // Set it to the start of the stream
-    reader.BaseStream.Position = 0;
+    reader.Position( 0 );
 
     // Validate the stream is long enough
-    if( PngConstants.MagicNumber.Length >= reader.BaseStream.Length )
+    if( PngConstants.MagicNumber.Length >= reader.Length() )
     {
       // Cant be a valid format but perhaps its another one
       return null;
@@ -56,7 +56,7 @@ internal class DecodePng : IDecoder
     bool eof = false;
     while( !eof )
     {
-      if( reader.BaseStream.Position >= reader.BaseStream.Length )
+      if( reader.Position() >= reader.Length() )
       {
         eof = true;
         continue;
@@ -109,6 +109,7 @@ internal class DecodePng : IDecoder
       else if( chunk is ExifChunk exif )
       {
         exif.LoadData( reader );
+        _exifDecoder = exif.ExifData;
       }
       else if( chunk is EndChunk )
       {
@@ -159,6 +160,7 @@ internal class DecodePng : IDecoder
         if( !metadata.TryGetValue( profile, out var value ) )
         {
           value = new List<IMetadataTypedValue>();
+          metadata.Add( profile, value );
         }
 
         if( exifProfiles.TryGetValue( profile, out var tagValues ) && tagValues != null )
@@ -179,7 +181,7 @@ internal class DecodePng : IDecoder
   private int _resolutionX = -1;
   private int _resolutionY = -1;
   private readonly List<PngText> _metadataItems = new();
-  private readonly DecodeExif? _exifDecoder;
+  private DecodeExif? _exifDecoder;
 
   const string ErrorMessage = "Invalid PNG format";
 }

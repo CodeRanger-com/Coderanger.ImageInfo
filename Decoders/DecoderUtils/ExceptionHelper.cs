@@ -26,7 +26,7 @@ internal static class ExceptionHelper
   /// <returns></returns>
   internal static ImageFormatException Throw( BinaryReader reader, string message )
   {
-    reader.BaseStream.Position = 0;
+    reader.Position( 0 );
     return new ImageFormatException( message );
   }
 }

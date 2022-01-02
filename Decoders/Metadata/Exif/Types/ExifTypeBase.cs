@@ -8,6 +8,8 @@
 
 namespace Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 
+using Coderanger.ImageInfo.Decoders.DecoderUtils;
+
 /// <summary>
 /// 
 /// </summary>
@@ -64,7 +66,7 @@ public abstract class ExifTypeBase
     if( !_processed )
     {
       // Store current reader position for restoring later
-      var currentStreamPosition = Reader.BaseStream.Position;
+      var currentStreamPosition = Reader.Position();
 
       foreach( var value in ExtractValues() )
       {
@@ -77,7 +79,7 @@ public abstract class ExifTypeBase
       }
 
       // Reset position
-      Reader.BaseStream.Position = currentStreamPosition;
+      Reader.Position( currentStreamPosition );
 
       _processed = true;
     }

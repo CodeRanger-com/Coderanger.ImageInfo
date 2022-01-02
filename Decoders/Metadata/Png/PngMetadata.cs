@@ -44,11 +44,13 @@ public class PngMetadata : IMetadataTypedValue
   /// </summary>
   public string Description { get; init; } = string.Empty;
 
-
+  // Not needed for PNG metadata
   void IMetadataTypedValue.SetValue()
   {
-    // Not needed
+    throw new NotImplementedException();
   }
+  // Not needed for PNG metadata
+  long IMetadataTypedValue.ValueOffsetReferenceStart { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
   public bool TryGetValue( out MetadataTagValue? value )
   {

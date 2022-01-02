@@ -9,8 +9,8 @@
 namespace Coderanger.ImageInfo;
 
 using Coderanger.ImageInfo.Decoders;
+using Coderanger.ImageInfo.Decoders.DecoderUtils;
 using Coderanger.ImageInfo.Decoders.Metadata;
-using Coderanger.ImageInfo.Decoders.Metadata.Exif;
 using Coderanger.ImageInfo.Exceptions;
 
 public sealed class ImageInfo
@@ -126,7 +126,7 @@ public sealed class ImageInfo
   {
     foreach( var formatDetector in FormatManager.Get() )
     {
-      reader.BaseStream.Position = 0;
+      reader.Position( 0 );
       var decoder = formatDetector.DetectFormat( reader );
       if( decoder != null )
       {

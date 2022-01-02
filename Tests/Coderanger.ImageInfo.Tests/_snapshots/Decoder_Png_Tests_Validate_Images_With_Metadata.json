@@ -36,6 +36,32 @@
         "Name": "Custom Keyword",
         "Description": ""
       }
+    ],
+    "Exif": [
+      {
+        "StringValue": "XPAuthor = Dan Petitt",
+        "IsArray": false,
+        "TagId": 40093,
+        "ExifType": 2,
+        "Name": "XPAuthor",
+        "Description": ""
+      },
+      {
+        "StringValue": "XPTitle = A bit of test metadata which should be compressed",
+        "IsArray": false,
+        "TagId": 40091,
+        "ExifType": 2,
+        "Name": "XPTitle",
+        "Description": ""
+      },
+      {
+        "StringValue": "PhotoUserComment = A bit of normal comment text",
+        "IsArray": false,
+        "TagId": 37510,
+        "ExifType": 2,
+        "Name": "PhotoUserComment",
+        "Description": ""
+      }
     ]
   }
 }

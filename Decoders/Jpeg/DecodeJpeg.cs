@@ -25,10 +25,10 @@ internal class DecodeJpeg : IDecoder
   public IDecoder? DetectFormat( BinaryReader reader )
   {
     // Set it to the start of the stream
-    reader.BaseStream.Position = 0;
+    reader.Position( 0 );
 
     // Validate the stream is long enough
-    if( JpegConstants.MagicNumber.Length >= reader.BaseStream.Length )
+    if( JpegConstants.MagicNumber.Length >= reader.Length() )
     {
       // Cant be a valid format but perhaps its another one
       return null;
@@ -54,7 +54,7 @@ internal class DecodeJpeg : IDecoder
     bool eof = false;
     while( !eof )
     {
-      if( reader.BaseStream.Position >= reader.BaseStream.Length )
+      if( reader.Position() >= reader.Length() )
       {
         eof = true;
         continue;
@@ -96,7 +96,7 @@ internal class DecodeJpeg : IDecoder
       // Process the data in the frame
       if( _remainingInFrame > 0 )
       {
-        var startOfSegment = reader.BaseStream.Position;
+        var startOfSegment = reader.Position();
 
         if( markerType == JpegConstants.Markers.Jfif.App )
         {
