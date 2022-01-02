@@ -45,5 +45,25 @@ internal static class ExifConstants
     Inter = 0xA005, // 40965
   }
 
+  internal static class EncodingSignature
+  {
+    internal static byte[] Ascii => new[]
+    {
+      (byte)'A', (byte)'S', (byte)'C', (byte)'I', (byte)'I', (byte)'\0', (byte)'\0', (byte)'\0'
+    };
+
+    internal static byte[] Unicode => new[]
+    {
+      (byte)'U', (byte)'N', (byte)'I', (byte)'C', (byte)'O', (byte)'D', (byte)'E', (byte)'\0'
+    };
+
+    internal static byte[] Jis => new[]
+    {
+      (byte)'J', (byte)'I', (byte)'S', (byte)'\0', (byte)'\0', (byte)'\0', (byte)'\0', (byte)'\0'
+    };
+  }
+
   internal const ushort InteroperabilityOffsetFix = 0x2000;
+
+  internal const int ExifDirectorySize = 12;
 }

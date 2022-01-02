@@ -27,20 +27,26 @@ internal static class DataConversion
   {
     if( buffer?.Length > 0 )
     {
+      // Buffer will be null terminated so remove any zero bytes from the end
       if( encoding == StringEncoding.Ascii )
       {
-        // Buffer will be null terminated so remove any zero bytes from the end
         return Encoding.UTF8.GetString( buffer, 0, count ).TrimEnd( (char)0 );
+      }
+      else if( encoding == StringEncoding.Unicode )
+      {
+        return Encoding.Unicode.GetString( buffer, 0, count ).TrimEnd( (char)0 );
       }
       else if( encoding == StringEncoding.Ucs2 )
       {
-        // Buffer will be null terminated so remove any zero bytes from the end
         return Encoding.GetEncoding( "UCS-2" ).GetString( buffer, 0, count ).TrimEnd( (char)0 );
+      }
+      else if( encoding == StringEncoding.Jis )
+      {
+        return Encoding.GetEncoding( "EUC-JP" ).GetString( buffer, 0, count ).TrimEnd( (char)0 );
       }
       else
       {
         // UTF8 is best for unknown encoding, as it decodes ascii as well as dbcs characters
-        // Buffer will be null terminated so remove any zero bytes from the end
         return Encoding.UTF8.GetString( buffer, 0, count ).TrimEnd( (char)0 );
       }
     }
@@ -58,20 +64,22 @@ internal static class DataConversion
   {
     if( buffer.Length > 0 )
     {
+      // Buffer will be null terminated so remove any zero bytes from the end
       if( encoding == StringEncoding.Ascii )
       {
-        // Buffer will be null terminated so remove any zero bytes from the end
         return Encoding.UTF8.GetString( buffer ).TrimEnd( (char)0 );
+      }
+      else if( encoding == StringEncoding.Unicode )
+      {
+        return Encoding.Unicode.GetString( buffer ).TrimEnd( (char)0 );
       }
       else if( encoding == StringEncoding.Ucs2 )
       {
-        // Buffer will be null terminated so remove any zero bytes from the end
         return Encoding.GetEncoding( "UCS-2" ).GetString( buffer ).TrimEnd( (char)0 );
       }
       else
       {
         // UTF8 is best for unknown encoding, as it decodes ascii as well as dbcs characters
-        // Buffer will be null terminated so remove any zero bytes from the end
         return Encoding.UTF8.GetString( buffer ).TrimEnd( (char)0 );
       }
     }

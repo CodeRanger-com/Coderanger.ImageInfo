@@ -16,7 +16,7 @@ internal static class ExifTagValueFactory
 {
   internal static IMetadataTypedValue? Create( MetadataProfileType profile, BinaryReader reader, long dataStart, TiffByteOrder byteOrder )
   {
-    var directoryBuffer = reader.ReadBytes( ExifDirectorySize );
+    var directoryBuffer = reader.ReadBytes( ExifConstants.ExifDirectorySize );
     var component = ExtractComponent( profile, directoryBuffer, dataStart, byteOrder );
     switch( profile )
     {
@@ -281,8 +281,8 @@ internal static class ExifTagValueFactory
           ExifTag.GPSDestBearing => new ExifURational( reader, component ),
           ExifTag.GPSDestDistanceRef => new ExifString( StringEncoding.Ascii, reader, component ),
           ExifTag.GPSDestDistance => new ExifURational( reader, component ),
-          ExifTag.GPSProcessingMethod => new ExifString( StringEncoding.Ascii, reader, component ),
-          ExifTag.GPSAreaInformation => new ExifString( StringEncoding.Ascii, reader, component ),
+          ExifTag.GPSProcessingMethod => new ExifString( StringEncoding.Undefined, reader, component ),
+          ExifTag.GPSAreaInformation => new ExifString( StringEncoding.Undefined, reader, component ),
           ExifTag.GPSDateStamp => new ExifDate( reader, component ),
           ExifTag.GPSDifferential => new ExifUShort( reader, component ),
           ExifTag.GPSHPositioningError => new ExifURational( reader, component ),
@@ -322,7 +322,6 @@ internal static class ExifTagValueFactory
   private static ExifComponent ExtractComponent( MetadataProfileType profile, byte[] directoryBuffer, long dataStart, TiffByteOrder byteOrder )
   {
     var (tag, dataType, componentCount, valueBuffer) = CrackData( directoryBuffer, byteOrder );
-
     return new ExifComponent( profile: profile,
                               tag: tag,
                               dataType: dataType,
@@ -332,7 +331,6 @@ internal static class ExifTagValueFactory
                               byteOrder: byteOrder );
   }
 
-  private const int ExifDirectorySize = 12;
   private const int TagByteStart = 0;
   private const int TypeByteStart = 2;
   private const int ComponentCountByteStart = 4;

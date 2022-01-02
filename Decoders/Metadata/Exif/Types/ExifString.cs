@@ -9,6 +9,7 @@
 namespace Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
+using static Coderanger.ImageInfo.Decoders.Metadata.Exif.ExifConstants;
 
 /// <summary>
 /// 
@@ -54,7 +55,8 @@ public class ExifString : ExifTypeBase, IMetadataTypedValue
     var byteCount = Component.ComponentCount * Component.ComponentSize;
 
     // If the size * count is within the 4 byte buffer, can just iterate it and yield the string
-    if( Component.ComponentCount * Component.ComponentSize <= BufferByteSize )
+    // Unless its an undefined type which means that the first 8 bytes would be the encoding
+    if( Component.ComponentCount * Component.ComponentSize <= BufferByteSize && _encoding != StringEncoding.Undefined )
     {
       yield return new MetadataTagValue( Type: ExifType, IsArray: false, TagId: TagId, TagName: Name, Value: DataConversion.ConvertBuffer( Component.DataValueBuffer, byteCount, _encoding ) );
     }
@@ -68,8 +70,43 @@ public class ExifString : ExifTypeBase, IMetadataTypedValue
       ValueOffsetReferenceStart = Component.DataStart + exifValue;
 
       var buffer = Reader.ReadBytes( Component.ComponentCount );
+      var encoding = _encoding;
+      if( encoding == StringEncoding.Undefined )
+      {
+        // First 8 bytes should be encoding type
+        var signatureSpan = buffer.AsSpan( 0, 8 );
+        if( signatureSpan.SequenceEqual( EncodingSignature.Ascii ) )
+        {
+          encoding = StringEncoding.Ascii;
 
-      yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: DataConversion.ConvertBuffer( buffer, byteCount, _encoding ) );
+          // Reset conversion buffer to be past the signature to the end
+          buffer = buffer.AsSpan( 8 ).ToArray();
+          byteCount -= 8;
+        }
+        else if( signatureSpan.SequenceEqual( EncodingSignature.Unicode ) )
+        {
+          encoding = StringEncoding.Unicode;
+
+          // Reset conversion buffer to be past the signature to the end
+          buffer = buffer.AsSpan( 8 ).ToArray();
+          byteCount -= 8;
+        }
+        else if( signatureSpan.SequenceEqual( EncodingSignature.Jis ) )
+        {
+          encoding = StringEncoding.Jis;
+
+          // Reset conversion buffer to be past the signature to the end
+          buffer = buffer.AsSpan( 8 ).ToArray();
+          byteCount -= 8;
+        }
+        else
+        {
+          // Assume no signature and ascii
+          encoding = StringEncoding.Ascii;
+        }
+      }
+
+      yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: DataConversion.ConvertBuffer( buffer, byteCount, encoding ) );
     }
   }
 

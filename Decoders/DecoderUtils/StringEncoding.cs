@@ -14,4 +14,7 @@ public enum StringEncoding
   Ascii,
   Ucs2,
   Utf8,
+  Unicode,
+  Jis,
+  Undefined,
 }
