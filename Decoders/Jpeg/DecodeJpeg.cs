@@ -196,12 +196,12 @@ internal class DecodeJpeg : IDecoder
           _verticalDpi = yDpi;
         }
       }
+    }
 
-      if( _jfifWidth != 0 && _jfifHeight != 0 )
-      {
-        _width = _jfifWidth;
-        _height = _jfifHeight;
-      }
+    if( _jfifWidth != 0 && _jfifHeight != 0 )
+    {
+      _width = _jfifWidth;
+      _height = _jfifHeight;
     }
   }
 
