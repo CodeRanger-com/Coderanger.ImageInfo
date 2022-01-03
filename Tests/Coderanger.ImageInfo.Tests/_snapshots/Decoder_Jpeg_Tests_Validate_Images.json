@@ -1,4 +1,24 @@
 {
+  "bad_image_end.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "PhotoPixelXDimension = 1000",
+        "IsArray": false,
+        "TagId": 40962,
+        "ExifType": 5,
+        "Name": "PhotoPixelXDimension",
+        "Description": ""
+      },
+      {
+        "StringValue": "PhotoPixelYDimension = 1000",
+        "IsArray": false,
+        "TagId": 40963,
+        "ExifType": 5,
+        "Name": "PhotoPixelYDimension",
+        "Description": ""
+      }
+    ]
+  },
   "large_test.jpg-exiftags": {
     "Exif": [
       {
@@ -18,10 +38,10 @@
         "Description": ""
       },
       {
-        "StringValue": "ResolutionUnit = 2",
+        "StringValue": "ResolutionUnit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "ResolutionUnit",
         "Description": ""
       },
@@ -54,10 +74,10 @@
         "Description": ""
       },
       {
-        "StringValue": "ResolutionUnit = 2",
+        "StringValue": "ResolutionUnit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "ResolutionUnit",
         "Description": ""
       },
@@ -106,10 +126,10 @@
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Orientation = 1",
+        "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "Orientation",
         "Description": ""
       },
@@ -130,10 +150,10 @@
         "Description": ""
       },
       {
-        "StringValue": "ResolutionUnit = 2",
+        "StringValue": "ResolutionUnit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "ResolutionUnit",
         "Description": ""
       },
@@ -159,6 +179,70 @@
         "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "ImageWidth = 512",
+        "IsArray": false,
+        "TagId": 256,
+        "ExifType": 3,
+        "Name": "ImageWidth",
+        "Description": ""
+      },
+      {
+        "StringValue": "ImageHeight = 384",
+        "IsArray": false,
+        "TagId": 257,
+        "ExifType": 3,
+        "Name": "ImageHeight",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "TagId": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2 (inches)",
+        "IsArray": false,
+        "TagId": 296,
+        "ExifType": 13,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 762",
+        "IsArray": false,
+        "TagId": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 25112",
+        "IsArray": false,
+        "TagId": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
         "Description": ""
       },
       {
@@ -258,10 +342,10 @@
         "Description": ""
       },
       {
-        "StringValue": "MeteringMode = 2",
+        "StringValue": "MeteringMode = 2 (Center-weighted average)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -355,26 +439,6 @@
       }
     ]
   },
-  "bad_image_end.jpg-exiftags": {
-    "Exif": [
-      {
-        "StringValue": "PhotoPixelXDimension = 1000",
-        "IsArray": false,
-        "TagId": 40962,
-        "ExifType": 5,
-        "Name": "PhotoPixelXDimension",
-        "Description": ""
-      },
-      {
-        "StringValue": "PhotoPixelYDimension = 1000",
-        "IsArray": false,
-        "TagId": 40963,
-        "ExifType": 5,
-        "Name": "PhotoPixelYDimension",
-        "Description": ""
-      }
-    ]
-  },
   "dakar-rally-toby-price.jpg-exiftags": {
     "Exif": [
       {
@@ -410,10 +474,10 @@
         "Description": ""
       },
       {
-        "StringValue": "Orientation = 1",
+        "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "Orientation",
         "Description": ""
       },
@@ -442,10 +506,10 @@
         "Description": ""
       },
       {
-        "StringValue": "ResolutionUnit = 2",
+        "StringValue": "ResolutionUnit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "ResolutionUnit",
         "Description": ""
       },
@@ -490,10 +554,10 @@
         "Description": ""
       },
       {
-        "StringValue": "ResolutionUnit = 2",
+        "StringValue": "ResolutionUnit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "ResolutionUnit",
         "Description": ""
       },

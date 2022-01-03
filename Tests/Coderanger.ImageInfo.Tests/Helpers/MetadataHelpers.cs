@@ -119,6 +119,11 @@ internal static class MetadataHelpers
         Console.Write( $"{(ushort)tagValue.Value}" );
         break;
 
+      case MetadataType.Enum:
+        var shortEnum = (ShortEnum)tagValue.Value;
+        Console.Write( $"{shortEnum.EnumValue} = {shortEnum.Information}" );
+        break;
+
       case MetadataType.String:
         Console.Write( $"{(string)tagValue.Value}" );
         break;

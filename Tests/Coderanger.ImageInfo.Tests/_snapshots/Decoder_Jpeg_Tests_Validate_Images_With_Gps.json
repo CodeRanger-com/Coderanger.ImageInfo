@@ -26,10 +26,10 @@
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Orientation = 1",
+        "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "Orientation",
         "Description": ""
       },
@@ -50,10 +50,10 @@
         "Description": ""
       },
       {
-        "StringValue": "ResolutionUnit = 2",
+        "StringValue": "ResolutionUnit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "ResolutionUnit",
         "Description": ""
       },
@@ -79,6 +79,54 @@
         "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "TagId": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2 (inches)",
+        "IsArray": false,
+        "TagId": 296,
+        "ExifType": 13,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 4548",
+        "IsArray": false,
+        "TagId": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 6702",
+        "IsArray": false,
+        "TagId": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
         "Description": ""
       },
       {
@@ -162,10 +210,10 @@
         "Description": ""
       },
       {
-        "StringValue": "MeteringMode = 5",
+        "StringValue": "MeteringMode = 5 (Multi-segment)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -258,10 +306,10 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoCustomRendered = 0",
+        "StringValue": "PhotoCustomRendered = 0 (Normal)",
         "IsArray": false,
         "TagId": 41985,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "PhotoCustomRendered",
         "Description": ""
       },
@@ -474,10 +522,10 @@
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Orientation = 1",
+        "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "Orientation",
         "Description": ""
       },
@@ -498,10 +546,10 @@
         "Description": ""
       },
       {
-        "StringValue": "ResolutionUnit = 2",
+        "StringValue": "ResolutionUnit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "ResolutionUnit",
         "Description": ""
       },
@@ -527,6 +575,54 @@
         "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "TagId": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2 (inches)",
+        "IsArray": false,
+        "TagId": 296,
+        "ExifType": 13,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 4548",
+        "IsArray": false,
+        "TagId": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 6339",
+        "IsArray": false,
+        "TagId": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
         "Description": ""
       },
       {
@@ -610,10 +706,10 @@
         "Description": ""
       },
       {
-        "StringValue": "MeteringMode = 5",
+        "StringValue": "MeteringMode = 5 (Multi-segment)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -706,10 +802,10 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoCustomRendered = 0",
+        "StringValue": "PhotoCustomRendered = 0 (Normal)",
         "IsArray": false,
         "TagId": 41985,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "PhotoCustomRendered",
         "Description": ""
       },
@@ -922,10 +1018,10 @@
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Orientation = 1",
+        "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "Orientation",
         "Description": ""
       },
@@ -946,10 +1042,10 @@
         "Description": ""
       },
       {
-        "StringValue": "ResolutionUnit = 2",
+        "StringValue": "ResolutionUnit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "ResolutionUnit",
         "Description": ""
       },
@@ -975,6 +1071,54 @@
         "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "TagId": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2 (inches)",
+        "IsArray": false,
+        "TagId": 296,
+        "ExifType": 13,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 4548",
+        "IsArray": false,
+        "TagId": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 6307",
+        "IsArray": false,
+        "TagId": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
         "Description": ""
       },
       {
@@ -1058,10 +1202,10 @@
         "Description": ""
       },
       {
-        "StringValue": "MeteringMode = 5",
+        "StringValue": "MeteringMode = 5 (Multi-segment)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -1154,10 +1298,10 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoCustomRendered = 0",
+        "StringValue": "PhotoCustomRendered = 0 (Normal)",
         "IsArray": false,
         "TagId": 41985,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "PhotoCustomRendered",
         "Description": ""
       },
@@ -1370,10 +1514,10 @@
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Orientation = 1",
+        "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "Orientation",
         "Description": ""
       },
@@ -1394,10 +1538,10 @@
         "Description": ""
       },
       {
-        "StringValue": "ResolutionUnit = 2",
+        "StringValue": "ResolutionUnit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "ResolutionUnit",
         "Description": ""
       },
@@ -1423,6 +1567,54 @@
         "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "TagId": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2 (inches)",
+        "IsArray": false,
+        "TagId": 296,
+        "ExifType": 13,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 4548",
+        "IsArray": false,
+        "TagId": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 5628",
+        "IsArray": false,
+        "TagId": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
         "Description": ""
       },
       {
@@ -1506,10 +1698,10 @@
         "Description": ""
       },
       {
-        "StringValue": "MeteringMode = 5",
+        "StringValue": "MeteringMode = 5 (Multi-segment)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -1602,10 +1794,10 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoCustomRendered = 0",
+        "StringValue": "PhotoCustomRendered = 0 (Normal)",
         "IsArray": false,
         "TagId": 41985,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "PhotoCustomRendered",
         "Description": ""
       },
@@ -1818,10 +2010,10 @@
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Orientation = 1",
+        "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "Orientation",
         "Description": ""
       },
@@ -1842,10 +2034,10 @@
         "Description": ""
       },
       {
-        "StringValue": "ResolutionUnit = 2",
+        "StringValue": "ResolutionUnit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "ResolutionUnit",
         "Description": ""
       },
@@ -1871,6 +2063,54 @@
         "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "TagId": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2 (inches)",
+        "IsArray": false,
+        "TagId": 296,
+        "ExifType": 13,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 4548",
+        "IsArray": false,
+        "TagId": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 5803",
+        "IsArray": false,
+        "TagId": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
         "Description": ""
       },
       {
@@ -1954,10 +2194,10 @@
         "Description": ""
       },
       {
-        "StringValue": "MeteringMode = 5",
+        "StringValue": "MeteringMode = 5 (Multi-segment)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -2050,10 +2290,10 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoCustomRendered = 0",
+        "StringValue": "PhotoCustomRendered = 0 (Normal)",
         "IsArray": false,
         "TagId": 41985,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "PhotoCustomRendered",
         "Description": ""
       },
@@ -2266,10 +2506,10 @@
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Orientation = 1",
+        "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "Orientation",
         "Description": ""
       },
@@ -2290,10 +2530,10 @@
         "Description": ""
       },
       {
-        "StringValue": "ResolutionUnit = 2",
+        "StringValue": "ResolutionUnit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "ResolutionUnit",
         "Description": ""
       },
@@ -2319,6 +2559,54 @@
         "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "TagId": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2 (inches)",
+        "IsArray": false,
+        "TagId": 296,
+        "ExifType": 13,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 4548",
+        "IsArray": false,
+        "TagId": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 6112",
+        "IsArray": false,
+        "TagId": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
         "Description": ""
       },
       {
@@ -2402,10 +2690,10 @@
         "Description": ""
       },
       {
-        "StringValue": "MeteringMode = 5",
+        "StringValue": "MeteringMode = 5 (Multi-segment)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -2498,10 +2786,10 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoCustomRendered = 0",
+        "StringValue": "PhotoCustomRendered = 0 (Normal)",
         "IsArray": false,
         "TagId": 41985,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "PhotoCustomRendered",
         "Description": ""
       },
@@ -2714,10 +3002,10 @@
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Orientation = 1",
+        "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "Orientation",
         "Description": ""
       },
@@ -2738,10 +3026,10 @@
         "Description": ""
       },
       {
-        "StringValue": "ResolutionUnit = 2",
+        "StringValue": "ResolutionUnit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "ResolutionUnit",
         "Description": ""
       },
@@ -2767,6 +3055,54 @@
         "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "TagId": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2 (inches)",
+        "IsArray": false,
+        "TagId": 296,
+        "ExifType": 13,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 4548",
+        "IsArray": false,
+        "TagId": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 5159",
+        "IsArray": false,
+        "TagId": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
         "Description": ""
       },
       {
@@ -2850,10 +3186,10 @@
         "Description": ""
       },
       {
-        "StringValue": "MeteringMode = 5",
+        "StringValue": "MeteringMode = 5 (Multi-segment)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -2946,10 +3282,10 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoCustomRendered = 0",
+        "StringValue": "PhotoCustomRendered = 0 (Normal)",
         "IsArray": false,
         "TagId": 41985,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "PhotoCustomRendered",
         "Description": ""
       },
@@ -3162,10 +3498,10 @@
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Orientation = 1",
+        "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "Orientation",
         "Description": ""
       },
@@ -3186,10 +3522,10 @@
         "Description": ""
       },
       {
-        "StringValue": "ResolutionUnit = 2",
+        "StringValue": "ResolutionUnit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "ResolutionUnit",
         "Description": ""
       },
@@ -3215,6 +3551,54 @@
         "TagId": 531,
         "ExifType": 3,
         "Name": "YCbCrPositioning",
+        "Description": ""
+      },
+      {
+        "StringValue": "Compression = 6",
+        "IsArray": false,
+        "TagId": 259,
+        "ExifType": 3,
+        "Name": "Compression",
+        "Description": ""
+      },
+      {
+        "StringValue": "XResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 282,
+        "ExifType": 10,
+        "Name": "XResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "YResolution = 72/1 (72D)",
+        "IsArray": false,
+        "TagId": 283,
+        "ExifType": 10,
+        "Name": "YResolution",
+        "Description": ""
+      },
+      {
+        "StringValue": "ResolutionUnit = 2 (inches)",
+        "IsArray": false,
+        "TagId": 296,
+        "ExifType": 13,
+        "Name": "ResolutionUnit",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormat = 4548",
+        "IsArray": false,
+        "TagId": 513,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormat",
+        "Description": ""
+      },
+      {
+        "StringValue": "JPEGInterchangeFormatLength = 6474",
+        "IsArray": false,
+        "TagId": 514,
+        "ExifType": 5,
+        "Name": "JPEGInterchangeFormatLength",
         "Description": ""
       },
       {
@@ -3298,10 +3682,10 @@
         "Description": ""
       },
       {
-        "StringValue": "MeteringMode = 5",
+        "StringValue": "MeteringMode = 5 (Multi-segment)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -3394,10 +3778,10 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoCustomRendered = 0",
+        "StringValue": "PhotoCustomRendered = 0 (Normal)",
         "IsArray": false,
         "TagId": 41985,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "PhotoCustomRendered",
         "Description": ""
       },

@@ -16,7 +16,7 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 public abstract class ExifTypeBase
 {
   // Hack: Just used for reflection in the custom description attribute
-  private static readonly ExifTag ReflectionExifTag = new();
+  internal static readonly ExifTag ReflectionExifTag = new();
 
   internal ExifTypeBase( MetadataType type, BinaryReader reader, ExifComponent component )
   {

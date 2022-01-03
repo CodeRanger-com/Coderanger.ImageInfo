@@ -15,13 +15,13 @@ public record MetadataTagValue( MetadataType Type, bool IsArray, ushort TagId, s
 {
   public override string ToString()
   {
+    var value = Value?.ToString() ?? string.Empty;
+
     if( IsArray )
     {
-      return $"{string.Join( " / ", Value )}";
+      return $"{string.Join( " / ", value )}";
     }
-    else
-    {
-      return Value?.ToString() ?? string.Empty;
-    }
+
+    return value;
   }
 }

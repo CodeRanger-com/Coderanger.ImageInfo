@@ -136,6 +136,14 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// The image orientation viewed in terms of rows and columns.
   /// </summary>
+  [ExifTagEnum( 1, "Horizontal (normal)" )]
+  [ExifTagEnum( 2, "Mirror horizontal" )]
+  [ExifTagEnum( 3, "Rotate 180" )]
+  [ExifTagEnum( 4, "Mirror vertical" )]
+  [ExifTagEnum( 5, "Mirror horizontal and rotate 270 CW" )]
+  [ExifTagEnum( 6, "Rotate 90 CW" )]
+  [ExifTagEnum( 7, "Mirror horizontal and rotate 90 CW" )]
+  [ExifTagEnum( 8, "Rotate 270 CW" )]
   public const ushort Orientation = 0x0112;
 
   /// <summary>
@@ -191,6 +199,9 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// The unit for measuring <XResolution> and <YResolution>. The same unit is used for both <XResolution> and <YResolution>. If the image resolution is unknown; 2 (inches) is designated.
   /// </summary>
+  [ExifTagEnum( 1, "None" )]
+  [ExifTagEnum( 2, "inches" )]
+  [ExifTagEnum( 3, "cm" )]
   public const ushort ResolutionUnit = 0x0128;
 
   /// <summary>
@@ -226,6 +237,13 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// A predictor is a mathematical operator that is applied to the image data before an encoding scheme is applied.
   /// </summary>
+  [ExifTagEnum( 1, "None" )]
+  [ExifTagEnum( 2, "Horizontal differencing" )]
+  [ExifTagEnum( 3, "Floating point" )]
+  [ExifTagEnum( 34892, "Horizontal difference X2" )]
+  [ExifTagEnum( 34893, "Horizontal difference X4" )]
+  [ExifTagEnum( 34894, "Floating point X2" )]
+  [ExifTagEnum( 34895, "Floating point X4" )]
   public const ushort Predictor = 0x013d;
 
   /// <summary>
@@ -296,11 +314,20 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// Specifies that each pixel has m extra components whose interpretation is defined by one of the values listed below.
   /// </summary>
+  [ExifTagEnum( 0, "Unspecified" )]
+  [ExifTagEnum( 1, "Associated Alpha" )]
+  [ExifTagEnum( 3, "Associated Alpha" )]
   public const ushort ExtraSamples = 0x0152;
 
   /// <summary>
   /// This field specifies how to interpret each data sample in a pixel.
   /// </summary>
+  [ExifTagEnum( 1, "Unsigned" )]
+  [ExifTagEnum( 2, "Signed" )]
+  [ExifTagEnum( 3, "Float" )]
+  [ExifTagEnum( 4, "Undefined" )]
+  [ExifTagEnum( 5, "Complex int" )]
+  [ExifTagEnum( 6, "Complex float" )]
   public const ushort SampleFormat = 0x0153;
 
   /// <summary>
@@ -496,6 +523,16 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// The class of the program used by the camera to set exposure when the picture is taken.
   /// </summary>
+  [ExifTagEnum( 0, "Not Defined" )]
+  [ExifTagEnum( 1, "Manual" )]
+  [ExifTagEnum( 2, "Program AE" )]
+  [ExifTagEnum( 3, "Aperture-priority AE" )]
+  [ExifTagEnum( 4, "Shutter speed priority AE" )]
+  [ExifTagEnum( 5, "Creative (Slow speed)" )]
+  [ExifTagEnum( 6, "Action (High speed)" )]
+  [ExifTagEnum( 7, "Portrait" )]
+  [ExifTagEnum( 8, "Landscape" )]
+  [ExifTagEnum( 9, "Bulb" )]
   public const ushort ExposureProgram = 0x8822;
 
   /// <summary>
@@ -571,6 +608,14 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// The metering mode.
   /// </summary>
+  [ExifTagEnum( 0, "Unknown" )]
+  [ExifTagEnum( 1, "Average" )]
+  [ExifTagEnum( 2, "Center-weighted average" )]
+  [ExifTagEnum( 3, "Spot" )]
+  [ExifTagEnum( 4, "Multi-spot" )]
+  [ExifTagEnum( 5, "Multi-segment" )]
+  [ExifTagEnum( 6, "Partial" )]
+  [ExifTagEnum( 255, "Other" )]
   public const ushort MeteringMode = 0x9207;
 
   /// <summary>
@@ -616,6 +661,11 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// Unit of measurement for FocalPlaneXResolution(37390) and FocalPlaneYResolution(37391).
   /// </summary>
+  [ExifTagEnum( 1, "None" )]
+  [ExifTagEnum( 2, "inches" )]
+  [ExifTagEnum( 3, "cm" )]
+  [ExifTagEnum( 4, "mm" )]
+  [ExifTagEnum( 5, "um" )]
   public const ushort FocalPlaneResolutionUnit = 0x9210;
 
   /// <summary>
@@ -1248,44 +1298,16 @@ public class ExifTag : IMetadataTag
   // Photo section
 
   /// <summary>
-  /// Exposure time; given in seconds (sec).
-  /// </summary>
-  /// Duplicated with ExposureTime
-  //PhotoExposureTime = 0x829a;
-
-  /// <summary>
-  /// The F number.
-  /// </summary>
-  /// Duplicated with FNumber
-  //PhotoFNumber = 0x829d;
-
-  /// <summary>
-  /// The class of the program used by the camera to set exposure when the picture is taken.
-  /// </summary>
-  /// Duplicated with ExposureProgram
-  //PhotoExposureProgram = 0x8822;
-
-  /// <summary>
-  /// Indicates the spectral sensitivity of each channel of the camera used. The tag value is an ASCII string compatible with the standard developed by the ASTM Technical Committee.
-  /// </summary>
-  /// Duplicated with SpectralSensitivity
-  //PhotoSpectralSensitivity = 0x8824;
-
-  /// <summary>
-  /// Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232.
-  /// </summary>
-  /// Duplicated with ISOSpeedRatings
-  //PhotoISOSpeedRatings = 0x8827;
-
-  /// <summary>
-  /// (undefined type) Indicates the Opto-Electoric Conversion Function (OECF) specified in ISO 14524. <OECF> is the relationship between the camera optical input and the image values.
-  /// </summary>
-  /// Duplicated with OECF
-  //PhotoOECF = 0x8828;
-
-  /// <summary>
   /// The SensitivityType tag indicates which one of the parameters of ISO12232 is the PhotographicSensitivity tag. Although it is an optional tag; it should be recorded when a PhotographicSensitivity tag is recorded. Value = 4; 5; 6; or 7 may be used in case that the values of plural parameters are the same.
   /// </summary>
+  [ExifTagDetails( "Sensitivity Type", "The SensitivityType tag indicates which one of the parameters of ISO12232 is the ISOSpeedRatings tag" )]
+  [ExifTagEnum( 1, "Standard output sensitivity" )]
+  [ExifTagEnum( 2, "Recommended exposure index" )]
+  [ExifTagEnum( 3, "ISO speed" )]
+  [ExifTagEnum( 4, "Standard output sensitivity and recommended exposure index" )]
+  [ExifTagEnum( 5, "Standard output sensitivity and ISO speed" )]
+  [ExifTagEnum( 6, "Recommended exposure index and ISO speed" )]
+  [ExifTagEnum( 7, "Standard output sensitivity, recommended exposure index and ISO speed" )]
   public const ushort PhotoSensitivityType = 0x8830;
 
   /// <summary>
@@ -1348,78 +1370,6 @@ public class ExifTag : IMetadataTag
   /// (undefined type) Information specific to compressed data. The channels of each component are arranged in order from the 1st component to the 4th. For uncompressed data the data arrangement is given in the <PhotometricInterpretation> tag. However; since <PhotometricInterpretation> can only express the order of Y; Cb and Cr; this tag is provided for cases when compressed data uses components other than Y; Cb; and Cr and to enable support of other sequences.
   /// </summary>
   public const ushort PhotoComponentsConfiguration = 0x9101;
-
-  /// <summary>
-  /// Information specific to compressed data. The compression mode used for a compressed image is indicated in unit bits per pixel.
-  /// </summary>
-  /// Duplicated with CompressedBitsPerPixel
-  //PhotoCompressedBitsPerPixel = 0x9102;
-
-  /// <summary>
-  /// Shutter speed. The unit is the APEX (Additive System of Photographic Exposure) setting.
-  /// </summary>
-  /// Duplicated with ShutterSpeedValue
-  //PhotoShutterSpeedValue = 0x9201;
-
-  /// <summary>
-  /// The lens aperture. The unit is the APEX value.
-  /// </summary>
-  /// Duplicated with ApertureValue
-  //PhotoApertureValue = 0x9202;
-
-  /// <summary>
-  /// The value of brightness. The unit is the APEX value. Ordinarily it is given in the range of -99.99 to 99.99.
-  /// </summary>
-  /// Duplicated with BrightnessValue
-  //PhotoBrightnessValue = 0x9203;
-
-  /// <summary>
-  /// The exposure bias. The units is the APEX value. Ordinarily it is given in the range of -99.99 to 99.99.
-  /// </summary>
-  /// Duplicated with ExposureBiasValue
-  //PhotoExposureBiasValue = 0x9204;
-
-  /// <summary>
-  /// The smallest F number of the lens. The unit is the APEX value. Ordinarily it is given in the range of 00.00 to 99.99; but it is not limited to this range.
-  /// </summary>
-  /// Duplicated with MaxApertureValue
-  //PhotoMaxApertureValue = 0x9205;
-
-  /// <summary>
-  /// The distance to the subject; given in meters.
-  /// </summary>
-  /// Duplicated with SubjectDistance
-  //PhotoSubjectDistance = 0x9206;
-
-  /// <summary>
-  /// The metering mode.
-  /// </summary>
-  /// Duplicated with MeteringMode
-  //PhotoMeteringMode = 0x9207;
-
-  /// <summary>
-  /// The kind of light source.
-  /// </summary>
-  /// Duplicated with LightSource
-  //PhotoLightSource = 0x9208;
-
-  /// <summary>
-  /// This tag is recorded when an image is taken using a strobe light (flash).
-  /// </summary>
-  /// Duplicated with Flash
-  //PhotoFlash = 0x9209;
-
-  /// <summary>
-  /// The actual focal length of the lens; in mm. Conversion is not made to the focal length of a 35 mm film camera.
-  /// </summary>
-  /// Duplicated with FocalLength
-  //PhotoFocalLength = 0x920a;
-
-  /// <summary>
-  /// This tag indicates the location and area of the main subject in the overall scene.
-  /// </summary>
-  /// Duplicated with SubjectLocation
-  //PhotoSubjectArea = 0x9214;
 
   /// <summary>
   /// (undefined type) A tag for manufacturers of Exif writers to record any desired information. The contents are up to the manufacturer.
@@ -1559,6 +1509,8 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// This tag indicates the use of special processing on image data; such as rendering geared to output. When special processing is performed; the reader is expected to disable or minimize any further processing.
   /// </summary>
+  [ExifTagEnum( 0, "Normal" )]
+  [ExifTagEnum( 1, "Custom" )]
   public const ushort PhotoCustomRendered = 0xa401;
 
   /// <summary>

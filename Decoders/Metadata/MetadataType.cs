@@ -23,5 +23,6 @@ public enum MetadataType
   URational,
   Date,
   DateTime,
+  Enum,
   PngText,
 }

@@ -159,6 +159,7 @@ internal class DecodeExif
               _valueOffsetReferenceStart = _valueOffsetReferenceStart == 0 
                 ? dataValue.ValueOffsetReferenceStart 
                 : Math.Min( _valueOffsetReferenceStart, dataValue.ValueOffsetReferenceStart );
+
               tags.Add( dataValue );
             }
           }
@@ -245,9 +246,11 @@ internal class DecodeExif
       {
         DensityUnit? exifDensityUnit = null;
 
-        if( ( (ExifUShort)resUnitTag ).TryGetValue( out var unitVal ) )
+        if( resUnitTag.TryGetValue( out var unitVal ) && unitVal != null )
         {
-          exifDensityUnit = unitVal?.Value switch
+          var enumValue = (ShortEnum)unitVal.Value;
+
+          exifDensityUnit = enumValue.EnumValue switch
           {
             2 => DensityUnit.PixelsPerInch,
             3 => DensityUnit.PixelsPerCentimeter,
