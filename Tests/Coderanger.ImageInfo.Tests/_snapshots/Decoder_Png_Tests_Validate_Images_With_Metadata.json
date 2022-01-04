@@ -47,7 +47,7 @@
         "Description": ""
       },
       {
-        "StringValue": "XPTitle = A bit of test metadata which should be compressed",
+        "StringValue": "XPTitle = A bit of test metadata for image title",
         "IsArray": false,
         "TagId": 40091,
         "ExifType": 2,
@@ -55,7 +55,7 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoUserComment = A bit of normal comment text",
+        "StringValue": "PhotoUserComment = A bit of normal международный comment text",
         "IsArray": false,
         "TagId": 37510,
         "ExifType": 2,

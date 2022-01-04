@@ -35,18 +35,6 @@ public class ExifString : ExifTypeBase, IMetadataTypedValue
     ProcessData();
   }
 
-  long IMetadataTypedValue.ValueOffsetReferenceStart
-  {
-    get
-    {
-      return base.ValueOffsetReferenceStart;
-    }
-    set
-    {
-      base.ValueOffsetReferenceStart = value;
-    }
-  }
-
   /// <summary>
   /// Processes the data buffer for each type value
   /// </summary>
@@ -66,8 +54,6 @@ public class ExifString : ExifTypeBase, IMetadataTypedValue
       // that position and read enough bytes for conversion x number of components saved
       var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
       Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
-
-      ValueOffsetReferenceStart = Component.DataStart + exifValue;
 
       var buffer = Reader.ReadBytes( Component.ComponentCount );
       var encoding = _encoding;

@@ -27,18 +27,6 @@ public class ExifFloat : ExifTypeBase, IMetadataTypedValue
     ProcessData();
   }
 
-  long IMetadataTypedValue.ValueOffsetReferenceStart
-  {
-    get
-    {
-      return base.ValueOffsetReferenceStart;
-    }
-    set
-    {
-      base.ValueOffsetReferenceStart = value;
-    }
-  }
-
   internal override IEnumerable<MetadataTagValue> ExtractValues()
   {
     // Float type is 4 bytes so may be within our existing 4 byte buffer if there is only one
@@ -53,8 +41,6 @@ public class ExifFloat : ExifTypeBase, IMetadataTypedValue
       // that position and read enough bytes for conversion x number of components saved
       var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
       Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
-
-      ValueOffsetReferenceStart = Component.DataStart + exifValue;
 
       for( var i = 0; i < Component.ComponentCount; i++ )
       {

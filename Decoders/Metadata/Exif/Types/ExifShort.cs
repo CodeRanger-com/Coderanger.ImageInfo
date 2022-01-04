@@ -27,18 +27,6 @@ public class ExifShort : ExifTypeBase, IMetadataTypedValue
     ProcessData();
   }
 
-  long IMetadataTypedValue.ValueOffsetReferenceStart
-  {
-    get
-    {
-      return base.ValueOffsetReferenceStart;
-    }
-    set
-    {
-      base.ValueOffsetReferenceStart = value;
-    }
-  }
-
   internal override IEnumerable<MetadataTagValue> ExtractValues()
   {
     // If the size * count is within the 4 byte buffer, can just iterate it and yield the short
@@ -56,8 +44,6 @@ public class ExifShort : ExifTypeBase, IMetadataTypedValue
       // that position and read enough bytes for conversion x number of components saved
       var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
       Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
-
-      ValueOffsetReferenceStart = Component.DataStart + exifValue;
 
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
@@ -84,18 +70,6 @@ public class ExifUShort : ExifTypeBase, IMetadataTypedValue
   void IMetadataTypedValue.SetValue()
   {
     ProcessData();
-  }
-
-  long IMetadataTypedValue.ValueOffsetReferenceStart
-  {
-    get
-    {
-      return base.ValueOffsetReferenceStart;
-    }
-    set
-    {
-      base.ValueOffsetReferenceStart = value;
-    }
   }
 
   internal override IEnumerable<MetadataTagValue> ExtractValues()

@@ -49,8 +49,6 @@ public class PngMetadata : IMetadataTypedValue
   {
     throw new NotImplementedException();
   }
-  // Not needed for PNG metadata
-  long IMetadataTypedValue.ValueOffsetReferenceStart { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
   public bool TryGetValue( out MetadataTagValue? value )
   {

@@ -27,18 +27,6 @@ public class ExifEnum : ExifTypeBase, IMetadataTypedValue
     ProcessData();
   }
 
-  long IMetadataTypedValue.ValueOffsetReferenceStart
-  {
-    get
-    {
-      return base.ValueOffsetReferenceStart;
-    }
-    set
-    {
-      base.ValueOffsetReferenceStart = value;
-    }
-  }
-
   internal override IEnumerable<MetadataTagValue> ExtractValues()
   {
     // If the size * count is within the 4 byte buffer, can just iterate it and yield the short

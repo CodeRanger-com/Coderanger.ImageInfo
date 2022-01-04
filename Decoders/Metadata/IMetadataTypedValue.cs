@@ -20,5 +20,4 @@ public interface IMetadataTypedValue
   public bool IsArray { get; }
   public ushort TagId { get; }
   public string StringValue { get; }
-  internal long ValueOffsetReferenceStart { get; set; }
 }

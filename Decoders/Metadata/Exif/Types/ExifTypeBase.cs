@@ -114,24 +114,6 @@ public abstract class ExifTypeBase
   internal BinaryReader Reader { get; init; }
   internal ExifComponent Component { get; init; }
 
-  /// <summary>
-  /// The beginning of any value reference data
-  /// </summary>
-  internal long ValueOffsetReferenceStart
-  { 
-    get
-    {
-      return _valueOffsetReferenceStart;
-    }
-    set
-    {
-      _valueOffsetReferenceStart = _valueOffsetReferenceStart == 0 
-        ? value 
-        : Math.Min( _valueOffsetReferenceStart, value );
-    }
-  }
-  private long _valueOffsetReferenceStart;
-
   protected MetadataTagValue? _convertedValue;
   protected readonly List<MetadataTagValue> _convertedValueArray = new();
 

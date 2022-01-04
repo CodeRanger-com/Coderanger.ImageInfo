@@ -40,18 +40,6 @@ public class ExifDate : ExifTypeBase, IMetadataTypedValue
     ProcessData();
   }
 
-  long IMetadataTypedValue.ValueOffsetReferenceStart
-  {
-    get
-    {
-      return base.ValueOffsetReferenceStart;
-    }
-    set
-    {
-      base.ValueOffsetReferenceStart = value;
-    }
-  }
-
   internal override IEnumerable<MetadataTagValue> ExtractValues()
   {
     // Date data is always 10 characters: yyyy:MM:dd
@@ -60,8 +48,6 @@ public class ExifDate : ExifTypeBase, IMetadataTypedValue
     // that position and read enough bytes for conversion x number of components saved
     var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
     Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
-
-    ValueOffsetReferenceStart = Component.DataStart + exifValue;
 
     var buffer = Reader.ReadBytes( Component.ComponentCount );
     var byteCount = Component.ComponentCount * Component.ComponentSize;
