@@ -15,7 +15,7 @@ internal class ChunkManager
 {
   internal static bool TryGetChunkForType( byte[] chunkTypeBuffer, ChunkBase chunkBase, out IChunk? chunk )
   {
-    var chunkType = DataConversion.UInt16FromBigEndianBuffer( chunkTypeBuffer );
+    var chunkType = DataConversion.UInt32FromBigEndianBuffer( chunkTypeBuffer );
     if( RegisteredChunks.TryGetValue( chunkType, out var chunkCreator ) && chunkCreator != null )
     {
       chunk = chunkCreator( chunkBase );
@@ -28,13 +28,13 @@ internal class ChunkManager
 
   private static readonly Dictionary<uint, Func<ChunkBase, IChunk>> RegisteredChunks = new()
   {
-    { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.IHeader ), HeaderChunk.Create },
-    { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.IPhys ), PhysicalDimensionsChunk.Create },
-    { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.ITime ), TimeChunk.Create },
-    { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.IText ), TextChunk.Create },
-    { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.ITextCompressed ), TextCompressedChunk.Create },
-    { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.ITextInternational ), TextInternationalChunk.Create },
-    { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.IExif ), ExifChunk.Create },
-    { DataConversion.UInt16FromBigEndianBuffer( PngConstants.Chunks.IEnd ), EndChunk.Create },
+    { DataConversion.UInt32FromBigEndianBuffer( PngConstants.Chunks.IHeader ), HeaderChunk.Create },
+    { DataConversion.UInt32FromBigEndianBuffer( PngConstants.Chunks.IPhys ), PhysicalDimensionsChunk.Create },
+    { DataConversion.UInt32FromBigEndianBuffer( PngConstants.Chunks.ITime ), TimeChunk.Create },
+    { DataConversion.UInt32FromBigEndianBuffer( PngConstants.Chunks.IText ), TextChunk.Create },
+    { DataConversion.UInt32FromBigEndianBuffer( PngConstants.Chunks.ITextCompressed ), TextCompressedChunk.Create },
+    { DataConversion.UInt32FromBigEndianBuffer( PngConstants.Chunks.ITextInternational ), TextInternationalChunk.Create },
+    { DataConversion.UInt32FromBigEndianBuffer( PngConstants.Chunks.IExif ), ExifChunk.Create },
+    { DataConversion.UInt32FromBigEndianBuffer( PngConstants.Chunks.IEnd ), EndChunk.Create },
   };
 }

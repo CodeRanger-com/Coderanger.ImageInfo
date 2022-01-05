@@ -28,8 +28,8 @@ internal struct PhysicalDimensionsChunk : IChunk
     _chunk.LoadData( reader );
     if( _chunk.Data != null )
     {
-      var xPixels = DataConversion.UInt32FromBigEndianBuffer( _chunk.Data, 0 );
-      var yPixels = DataConversion.UInt32FromBigEndianBuffer( _chunk.Data, 4 );
+      var xPixels = DataConversion.UInt32FromBigEndianBuffer( _chunk.Data.AsSpan( 0, 4 ) );
+      var yPixels = DataConversion.UInt32FromBigEndianBuffer( _chunk.Data.AsSpan( 4, 4 ) );
 
       var unit = _chunk.Data[ 8 ];
       switch( unit )

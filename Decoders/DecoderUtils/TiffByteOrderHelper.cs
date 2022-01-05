@@ -25,13 +25,13 @@ internal enum TiffByteOrder
 /// </summary>
 internal static class TiffByteOrderHelper
 {
-  internal static TiffByteOrder GetTiffByteOrder( byte[] data )
+  internal static TiffByteOrder GetTiffByteOrder( ReadOnlySpan<byte> dataSpan )
   {
-    if( data.AsSpan( 0, 2 ).SequenceEqual( TiffConstants.ByteOrder.BigEndian ) )
+    if( dataSpan.SequenceEqual( TiffConstants.ByteOrder.BigEndian ) )
     {
       return TiffByteOrder.BigEndian;
     }
-    else if( data.AsSpan( 0, 2 ).SequenceEqual( TiffConstants.ByteOrder.LittleEndian ) )
+    else if( dataSpan.SequenceEqual( TiffConstants.ByteOrder.LittleEndian ) )
     {
       return TiffByteOrder.LittleEndian;
     }

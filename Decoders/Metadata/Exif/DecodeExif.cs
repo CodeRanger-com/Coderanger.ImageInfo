@@ -81,7 +81,7 @@ internal class DecodeExif
     _segmentStart = _reader.Position();
 
     var segmentData = ValidateHeader();
-    ExtractTagsFromSegment( segmentData );
+    ExtractTagsFromSegment( segmentData.AsSpan() );
 
     ExtractResolutionInfo();
 
@@ -95,9 +95,9 @@ internal class DecodeExif
   private byte[] ValidateHeader()
   {
     byte[] data = _reader.ReadBytes( TiffConstants.HeaderLength );
-    _exifByteOrder = TiffByteOrderHelper.GetTiffByteOrder( data );
+    _exifByteOrder = TiffByteOrderHelper.GetTiffByteOrder( data.AsSpan( 0, 2 ) );
 
-    var signature = DataConversion.Int16FromBuffer( data, 2, _exifByteOrder );
+    var signature = DataConversion.Int16FromBuffer( data.AsSpan( 2, 2 ), _exifByteOrder );
     if( signature != TiffSignatureValue )
     {
       ExceptionHelper.Throw( _reader, "Invalid TIFF header signature" );
@@ -110,10 +110,10 @@ internal class DecodeExif
   /// Extract all EXIF tags from all directories in the chunk
   /// </summary>
   /// <param name="data"></param>
-  private void ExtractTagsFromSegment( byte[] data )
+  private void ExtractTagsFromSegment( ReadOnlySpan<byte> data )
   {
     // Offset is from the beginning of this header (i.e. at the point of the byte order marker)
-    var ifdOffset = DataConversion.Int32FromBuffer( data, 4, _exifByteOrder );
+    var ifdOffset = DataConversion.Int32FromBuffer( data.Slice( 4 ), _exifByteOrder );
     ExtractTagsFromIfd( MetadataProfileType.Exif, ifdOffset );
 
     ExtractTagsFromIfd( MetadataProfileType.Exif, _ifdSubExifOffset );
@@ -140,7 +140,7 @@ internal class DecodeExif
         _reader.BaseStream.Seek( _segmentStart + ifdOffset, SeekOrigin.Begin );
 
         var ifdDirectoryBuffer = _reader.ReadBytes( 2 );
-        var directoryCount = DataConversion.Int16FromBuffer( ifdDirectoryBuffer, 0, _exifByteOrder );
+        var directoryCount = DataConversion.Int16FromBuffer( ifdDirectoryBuffer.AsSpan( 0, 2 ), _exifByteOrder );
         for( var directoryIndex = 0; directoryIndex < directoryCount; directoryIndex++ )
         {
           var isIfdOffset = DiscoverIfdOffsets();
@@ -173,7 +173,7 @@ internal class DecodeExif
         {
           break;
         }
-        ifdOffset = DataConversion.Int32FromBuffer( nextIfdBuffer, 0, _exifByteOrder );
+        ifdOffset = DataConversion.Int32FromBuffer( nextIfdBuffer.AsSpan( 0, 4 ), _exifByteOrder );
       } while( ifdOffset != 0 );
     }
   }
@@ -191,10 +191,10 @@ internal class DecodeExif
     try
     {
       var directoryBuffer = _reader.ReadBytes( IfdOffsetSegmentSize );
-      var (tag, _, _, valueBuffer) = ExifTagValueFactory.CrackData( directoryBuffer, _exifByteOrder );
-      var value = DataConversion.Int32FromBuffer( valueBuffer, 0, _exifByteOrder );
+      var crackedData = ExifTagValueFactory.CrackedData.Create( directoryBuffer.AsSpan(), _exifByteOrder );
+      var value = DataConversion.Int32FromBuffer( crackedData.DataBuffer, _exifByteOrder );
 
-      switch( tag )
+      switch( crackedData.Tag )
       {
         case (ushort)ExifConstants.IfdOffset.Exif:
           _ifdSubExifOffset = value;

@@ -36,8 +36,8 @@ internal struct HeaderChunk : IChunk
       // 1 byte = compression method
       // 1 byte = filter method
       // 1 byte = interlace method
-      Width = DataConversion.UInt32FromBigEndianBuffer( _chunk.Data, 0 );
-      Height = DataConversion.UInt32FromBigEndianBuffer( _chunk.Data, 4 );
+      Width = DataConversion.UInt32FromBigEndianBuffer( _chunk.Data.AsSpan( 0, 4 ) );
+      Height = DataConversion.UInt32FromBigEndianBuffer( _chunk.Data.AsSpan( 4, 4 ) );
     }
   }
 

@@ -28,7 +28,7 @@ internal class DecodeJpeg : IDecoder
     reader.Position( 0 );
 
     // Validate the stream is long enough
-    if( JpegConstants.MagicNumber.Length >= reader.Length() )
+    if( reader.Length() < JpegConstants.MagicNumber.Length )
     {
       // Cant be a valid format but perhaps its another one
       return null;
@@ -121,8 +121,8 @@ internal class DecodeJpeg : IDecoder
           var frameBuffer = reader.ReadBytes( 4 );
 
           // 2 byte width/height values
-          _jfifHeight = DataConversion.Int16FromBigEndianBuffer( frameBuffer, 0 );
-          _jfifWidth = DataConversion.Int16FromBigEndianBuffer( frameBuffer, 2 );
+          _jfifHeight = DataConversion.Int16FromBigEndianBuffer( frameBuffer.AsSpan( 0, 2 ) );
+          _jfifWidth = DataConversion.Int16FromBigEndianBuffer( frameBuffer.AsSpan( 2, 2 ) );
 
           _remainingInFrame -= 5; // buffer + bitplane
         }
@@ -155,8 +155,8 @@ internal class DecodeJpeg : IDecoder
       // Ignore Position 5 = majorVersion
       // Ignore Position 6 = minorVersion
       var densityUnits = (DensityUnit)data[ 7 ];
-      short xDensity = DataConversion.Int16FromBigEndianBuffer( data, 8 );
-      short yDensity = DataConversion.Int16FromBigEndianBuffer( data, 10 );
+      short xDensity = DataConversion.Int16FromBigEndianBuffer( data.AsSpan( 8, 2 ) );
+      short yDensity = DataConversion.Int16FromBigEndianBuffer( data.AsSpan( 10, 2 ) );
       if( xDensity > 0 && yDensity > 0 )
       {
         _jfifDensityUnits = densityUnits;

@@ -48,7 +48,7 @@ internal static class ExifTagValueFactory
           ExifTag.XResolution => new ExifURational( reader, component ),
           ExifTag.YResolution => new ExifURational( reader, component ),
           ExifTag.PlanarConfiguration => new ExifUShort( reader, component ),
-          ExifTag.GrayResponseUnit => new ExifUShort( reader, component ),
+          ExifTag.GrayResponseUnit => new ExifEnum( reader, component ),
           ExifTag.GrayResponseCurve => new ExifUShort( reader, component ),
           ExifTag.T4Options => new ExifLong( reader, component ),
           ExifTag.T6Options => new ExifLong( reader, component ),
@@ -280,22 +280,22 @@ internal static class ExifTagValueFactory
           ExifTag.PhotoFocalPlaneResolutionUnit => new ExifUShort( reader, component ),
           ExifTag.PhotoSubjectLocation => new ExifUShort( reader, component ),
           ExifTag.PhotoExposureIndex => new ExifURational( reader, component ),
-          ExifTag.PhotoSensingMethod => new ExifUShort( reader, component ),
-          ExifTag.PhotoFileSource => new ExifByte( reader, component ),
+          ExifTag.PhotoSensingMethod => new ExifEnum( reader, component ),
+          ExifTag.PhotoFileSource => new ExifEnum( reader, component ),
           ExifTag.PhotoSceneType => new ExifByte( reader, component ),
           ExifTag.PhotoCFAPattern => new ExifByte( reader, component ),
           ExifTag.PhotoCustomRendered => new ExifEnum( reader, component ),
-          ExifTag.PhotoExposureMode => new ExifUShort( reader, component ),
-          ExifTag.PhotoWhiteBalance => new ExifUShort( reader, component ),
+          ExifTag.PhotoExposureMode => new ExifEnum( reader, component ),
+          ExifTag.PhotoWhiteBalance => new ExifEnum( reader, component ),
           ExifTag.PhotoDigitalZoomRatio => new ExifURational( reader, component ),
           ExifTag.PhotoFocalLengthIn35mmFilm => new ExifUShort( reader, component ),
-          ExifTag.PhotoSceneCaptureType => new ExifUShort( reader, component ),
-          ExifTag.PhotoGainControl => new ExifUShort( reader, component ),
-          ExifTag.PhotoContrast => new ExifUShort( reader, component ),
-          ExifTag.PhotoSaturation => new ExifUShort( reader, component ),
-          ExifTag.PhotoSharpness => new ExifUShort( reader, component ),
+          ExifTag.PhotoSceneCaptureType => new ExifEnum( reader, component ),
+          ExifTag.PhotoGainControl => new ExifEnum( reader, component ),
+          ExifTag.PhotoContrast => new ExifEnum( reader, component ),
+          ExifTag.PhotoSaturation => new ExifEnum( reader, component ),
+          ExifTag.PhotoSharpness => new ExifEnum( reader, component ),
           ExifTag.PhotoDeviceSettingDescription => new ExifByte( reader, component ),
-          ExifTag.PhotoSubjectDistanceRange => new ExifUShort( reader, component ),
+          ExifTag.PhotoSubjectDistanceRange => new ExifEnum( reader, component ),
           ExifTag.PhotoImageUniqueID => new ExifString( StringEncoding.Ascii, reader, component ),
           ExifTag.PhotoCameraOwnerName => new ExifString( StringEncoding.Ascii, reader, component ),
           ExifTag.PhotoBodySerialNumber => new ExifString( StringEncoding.Ascii, reader, component ),
@@ -372,29 +372,47 @@ internal static class ExifTagValueFactory
     return null;
   }
 
-  internal static (ushort Tag, short DataType, int ComponentCount, byte[] Data ) CrackData( byte[] directoryBuffer, TiffByteOrder byteOrder )
+  internal ref struct CrackedData
   {
-    var tag = DataConversion.UInt16FromBuffer( directoryBuffer, TagByteStart, byteOrder );
-    var dataType = DataConversion.Int16FromBuffer( directoryBuffer, TypeByteStart, byteOrder );
-    var componentCount = DataConversion.Int32FromBuffer( directoryBuffer, ComponentCountByteStart, byteOrder );
-    var valueBuffer = directoryBuffer.AsSpan( DataByteStart, 4 ).ToArray();
-    return (tag, dataType, componentCount, valueBuffer);
+    private CrackedData( ushort tag, short dataType, int componentCount, ReadOnlySpan<byte> data )
+    {
+      Tag = tag;
+      DataType = dataType;
+      ComponentCount = componentCount;
+      DataBuffer = data;
+    }
+
+    internal static CrackedData Create( ReadOnlySpan<byte> directoryBuffer, TiffByteOrder byteOrder )
+    {
+      var tag = DataConversion.UInt16FromBuffer( directoryBuffer.Slice( TagByteStart, 2 ), byteOrder );
+      var dataType = DataConversion.Int16FromBuffer( directoryBuffer.Slice( TypeByteStart, 2 ), byteOrder );
+      var componentCount = DataConversion.Int32FromBuffer( directoryBuffer.Slice( ComponentCountByteStart, 4 ), byteOrder );
+      var valueBuffer = directoryBuffer.Slice( DataByteStart, 4 );
+
+      return new CrackedData( tag, dataType, componentCount, valueBuffer );
+    }
+      
+    internal readonly ushort Tag { get; init; }
+    internal readonly short DataType { get; init; }
+    internal readonly int ComponentCount { get; init; }
+    internal readonly ReadOnlySpan<byte> DataBuffer { get; init; }
+
+    private const int TagByteStart = 0;
+    private const int TypeByteStart = 2;
+    private const int ComponentCountByteStart = 4;
+    private const int DataByteStart = 8;
   }
 
-  private static ExifComponent ExtractComponent( MetadataProfileType profile, byte[] directoryBuffer, long dataStart, TiffByteOrder byteOrder )
+  private static ExifComponent ExtractComponent( MetadataProfileType profile, ReadOnlySpan<byte> directoryBuffer, long dataStart, TiffByteOrder byteOrder )
   {
-    var (tag, dataType, componentCount, valueBuffer) = CrackData( directoryBuffer, byteOrder );
+    var data = CrackedData.Create( directoryBuffer, byteOrder );
+    //CrackData( directoryBuffer, byteOrder );
     return new ExifComponent( profile: profile,
-                              tag: tag,
-                              dataType: dataType,
-                              componentCount: componentCount,
-                              dataValueBuffer: valueBuffer,
+                              tag: data.Tag,
+                              dataType: data.DataType,
+                              componentCount: data.ComponentCount,
+                              dataValueBuffer: data.DataBuffer,
                               dataStart: dataStart,
                               byteOrder: byteOrder );
   }
-
-  private const int TagByteStart = 0;
-  private const int TypeByteStart = 2;
-  private const int ComponentCountByteStart = 4;
-  private const int DataByteStart = 8;
 }

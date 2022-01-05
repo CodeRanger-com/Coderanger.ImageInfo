@@ -34,7 +34,7 @@ public class ExifEnum : ExifTypeBase, IMetadataTypedValue
     {
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
-        var value = DataConversion.UInt16FromBuffer( Component.DataValueBuffer, 0 + ( i * Component.ComponentSize ), Component.ByteOrder );
+        var value = DataConversion.UInt16FromBuffer( Component.DataValueBuffer.AsSpan( 0 + ( i * Component.ComponentSize ) ), Component.ByteOrder );
         yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new ShortEnum( value, GetEnumValue( value ) ) );
       }
     }
@@ -42,13 +42,15 @@ public class ExifEnum : ExifTypeBase, IMetadataTypedValue
     {
       // Buffer will contain a reference to the data elsewhere in the IFD, therefore move to
       // that position and read enough bytes for conversion x number of components saved
-      var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+      var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer.AsSpan(), Component.ByteOrder );
       Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
+
+      var dataValue = Reader.ReadBytes( Component.ComponentCount * Component.ComponentSize );
 
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
-        var dataValue = Reader.ReadBytes( Component.ComponentSize );
-        var value = DataConversion.UInt16FromBuffer( dataValue, 0, Component.ByteOrder );
+        var buff = dataValue.AsSpan( i * Component.ComponentSize, 2 );
+        var value = DataConversion.UInt16FromBuffer( buff, Component.ByteOrder );
         yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new ShortEnum( value, GetEnumValue( value ) ) );
       }
     }

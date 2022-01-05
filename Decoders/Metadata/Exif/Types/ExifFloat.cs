@@ -32,21 +32,23 @@ public class ExifFloat : ExifTypeBase, IMetadataTypedValue
     // Float type is 4 bytes so may be within our existing 4 byte buffer if there is only one
     if( Component.ComponentCount == 1 )
     {
-      var value = DataConversion.FloatFromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+      var value = DataConversion.FloatFromBuffer( Component.DataValueBuffer, Component.ByteOrder );
       yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
     }
     else
     {
       // Buffer will contain a reference to the data elsewhere in the IFD, therefore move to
       // that position and read enough bytes for conversion x number of components saved
-      var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+      var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, Component.ByteOrder );
       Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
+
+      var dataValue = Reader.ReadBytes( Component.ComponentCount * Component.ComponentSize );
 
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
-        var dataValue = Reader.ReadBytes( Component.ComponentSize );
+        var buff = dataValue.AsSpan( i * Component.ComponentSize, Component.ComponentSize );
 
-        var value = DataConversion.FloatFromBuffer( dataValue, 0, Component.ByteOrder );
+        var value = DataConversion.FloatFromBuffer( buff, Component.ByteOrder );
         yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
       }
     }

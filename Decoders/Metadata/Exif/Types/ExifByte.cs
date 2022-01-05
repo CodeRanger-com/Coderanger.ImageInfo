@@ -41,7 +41,7 @@ public class ExifByte : ExifTypeBase, IMetadataTypedValue
     {
       // Buffer will contain a reference to the data elsewhere in the IFD, therefore move to
       // that position and read enough bytes for conversion x number of components saved
-      var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+      var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, Component.ByteOrder );
       Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
 
       for( var i = 0; i < Component.ComponentCount; i++ )

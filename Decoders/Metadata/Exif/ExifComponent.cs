@@ -12,13 +12,13 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 internal struct ExifComponent
 {
-  public ExifComponent( MetadataProfileType profile, ushort tag, short dataType, int componentCount, byte[] dataValueBuffer, long dataStart, TiffByteOrder byteOrder )
+  public ExifComponent( MetadataProfileType profile, ushort tag, short dataType, int componentCount, ReadOnlySpan<byte> dataValueBuffer, long dataStart, TiffByteOrder byteOrder )
   {
     Profile = profile;
     Tag = tag;
     DataType = dataType;
     ComponentCount = componentCount;
-    DataValueBuffer = dataValueBuffer;
+    DataValueBuffer = dataValueBuffer.ToArray();
     ByteOrder = byteOrder;
     DataStart = dataStart;
   }

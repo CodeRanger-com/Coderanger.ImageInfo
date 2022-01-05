@@ -46,13 +46,13 @@ public class ExifString : ExifTypeBase, IMetadataTypedValue
     // Unless its an undefined type which means that the first 8 bytes would be the encoding
     if( Component.ComponentCount * Component.ComponentSize <= BufferByteSize && _encoding != StringEncoding.Undefined )
     {
-      yield return new MetadataTagValue( Type: ExifType, IsArray: false, TagId: TagId, TagName: Name, Value: DataConversion.ConvertBuffer( Component.DataValueBuffer, byteCount, _encoding ) );
+      yield return new MetadataTagValue( Type: ExifType, IsArray: false, TagId: TagId, TagName: Name, Value: DataConversion.ConvertBuffer( Component.DataValueBuffer.AsSpan( 0, byteCount ), _encoding ) );
     }
     else
     {
       // Buffer will contain a reference to the data elsewhere in the IFD, therefore move to
       // that position and read enough bytes for conversion x number of components saved
-      var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer, 0, Component.ByteOrder );
+      var exifValue = DataConversion.Int32FromBuffer( Component.DataValueBuffer.AsSpan(), Component.ByteOrder );
       Reader.BaseStream.Seek( Component.DataStart + exifValue, SeekOrigin.Begin );
 
       var buffer = Reader.ReadBytes( Component.ComponentCount );
@@ -92,7 +92,7 @@ public class ExifString : ExifTypeBase, IMetadataTypedValue
         }
       }
 
-      yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: DataConversion.ConvertBuffer( buffer, byteCount, encoding ) );
+      yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: DataConversion.ConvertBuffer( buffer.AsSpan( 0, byteCount ), encoding ) );
     }
   }
 

@@ -17,14 +17,14 @@ using System.Reflection;
 [AttributeUsage( AttributeTargets.Field, AllowMultiple = true )]
 internal sealed class ExifTagEnumAttribute : Attribute
 {
-  public ExifTagEnumAttribute( ushort enumValue, string information )
+  public ExifTagEnumAttribute( ushort code, string information )
   {
-    EnumValue = enumValue;
-    EnumInformation = information;
+    Code = code;
+    Information = information;
   }
 
-  public ushort EnumValue { get; init; }
-  public string EnumInformation { get; init; }
+  public ushort Code { get; init; }
+  public string Information { get; init; }
 
   /// <summary>
   /// Gets the tag enum values from any custom attributes
@@ -63,9 +63,9 @@ internal sealed class ExifTagEnumAttribute : Attribute
           var customAttributes = fi.GetCustomAttributes<ExifTagEnumAttribute>();
           foreach( var detailsAttribute in customAttributes )
           {
-            if( detailsAttribute != null && detailsAttribute.EnumValue == enumValue )
+            if( detailsAttribute != null && detailsAttribute.Code == enumValue )
             {
-              return detailsAttribute.EnumInformation;
+              return detailsAttribute.Information;
             }
           }
         }
