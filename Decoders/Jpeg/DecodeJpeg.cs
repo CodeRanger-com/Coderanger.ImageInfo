@@ -98,7 +98,7 @@ internal class DecodeJpeg : IDecoder
       {
         var startOfSegment = reader.Position();
 
-        if( markerType == JpegConstants.Markers.Jfif.App )
+        if( markerType == JpegConstants.Markers.App0 )
         {
           // Check there is a valid APP0/JFIF marker
           if( _remainingInFrame >= JpegConstants.Markers.Jfif.SegmentLength )
@@ -106,7 +106,7 @@ internal class DecodeJpeg : IDecoder
             DecodeJfif( reader );
           }
         }
-        else if( markerType == ExifConstants.App )
+        else if( markerType == JpegConstants.Markers.App1 )
         {
           _exifDecoder = DecodeExif.DecodeFromReader( reader );
         }

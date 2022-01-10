@@ -53,20 +53,20 @@ internal static class JpegConstants
     internal const byte ProgressiveStart = 0xC2;
 
     /// <summary>
+    /// Application specific marker for jpeg jfif segment
+    /// </summary>
+    internal const byte App0 = 0xE0;
+
+    /// <summary>
+    /// Application specific marker for jpeg exif segment
+    /// </summary>
+    internal const byte App1 = 0xE1;
+
+    /// <summary>
     /// Marker constants for JFIF segment of JPEG
     /// </summary>
     internal static class Jfif
     {
-      /// <summary>
-      /// Application specific marker for jpeg jfif segment
-      /// </summary>
-      internal const byte App = 0xE0;
-
-      /// <summary>
-      /// Length of JFIF Marker segment
-      /// </summary>
-      internal const int SegmentLength = 13;
-
       /// <summary>
       /// Header signature for JFIF header marker
       /// </summary>
@@ -74,6 +74,11 @@ internal static class JpegConstants
       {
         (byte)'J', (byte)'F', (byte)'I', (byte)'F', (byte)'\0'
       };
+
+      /// <summary>
+      /// Length of JFIF Marker segment
+      /// </summary>
+      internal const int SegmentLength = 13;
     }
   }
 }

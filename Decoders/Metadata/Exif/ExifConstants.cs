@@ -11,11 +11,6 @@ namespace Coderanger.ImageInfo.Decoders.Metadata.Exif;
 internal static class ExifConstants
 {
   /// <summary>
-  /// Application specific marker for jpeg exif segment
-  /// </summary>
-  internal const byte App = 0xE1;
-
-  /// <summary>
   /// Header signature for EXIF header marker
   /// </summary>
   internal static byte[] MagicBytes => new[]
