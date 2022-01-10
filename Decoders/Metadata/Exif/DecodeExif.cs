@@ -71,8 +71,9 @@ internal class DecodeExif
     // Buffer only the data we need
     if( validateSignature )
     {
-      var data = _reader.ReadBytes( ExifConstants.MagicBytes.Length );
-      if( !DecoderHelper.MatchesMagic( data, ExifConstants.MagicBytes ) )
+      var signature = _reader.ReadBytes( ExifConstants.MagicBytes.Length );
+      var signatureValue = DataConversion.UInt32FromBigEndianBuffer( signature.AsSpan( 0, 4 ) );
+      if( signatureValue != ExifConstants.MagicBytesVersion )
       {
         return false;
       }

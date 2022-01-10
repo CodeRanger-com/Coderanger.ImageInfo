@@ -14,6 +14,7 @@ internal static class PngConstants
   /// Header signature for a PNG image format
   /// </summary>
   internal static readonly byte[] MagicNumber = new byte[] { 0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A };
+  internal const ulong MagicNumberValue = 0x_89_50_4E_47_0D_0A_1A_0A;
 
   internal static class Chunks
   {

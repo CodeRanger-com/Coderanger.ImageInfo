@@ -9,7 +9,6 @@
 namespace Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
-using static Coderanger.ImageInfo.Decoders.Metadata.Exif.ExifConstants;
 
 /// <summary>
 /// 
@@ -60,35 +59,37 @@ public class ExifString : ExifTypeBase, IMetadataTypedValue
       if( encoding == StringEncoding.Undefined )
       {
         // First 8 bytes should be encoding type
-        var signatureSpan = buffer.AsSpan( 0, 8 );
-        if( signatureSpan.SequenceEqual( EncodingSignature.Ascii ) )
+        var signature = DataConversion.UInt64FromBigEndianBuffer( buffer.AsSpan( 0, 8 ) );
+        switch( signature )
         {
-          encoding = StringEncoding.Ascii;
+          case ExifConstants.EncodingSignature.AsciiValue:
+            encoding = StringEncoding.Ascii;
 
-          // Reset conversion buffer to be past the signature to the end
-          buffer = buffer.AsSpan( 8 ).ToArray();
-          byteCount -= 8;
-        }
-        else if( signatureSpan.SequenceEqual( EncodingSignature.Unicode ) )
-        {
-          encoding = StringEncoding.Unicode;
+            // Reset conversion buffer to be past the signature to the end
+            buffer = buffer.AsSpan( 8 ).ToArray();
+            byteCount -= 8;
+            break;
 
-          // Reset conversion buffer to be past the signature to the end
-          buffer = buffer.AsSpan( 8 ).ToArray();
-          byteCount -= 8;
-        }
-        else if( signatureSpan.SequenceEqual( EncodingSignature.Jis ) )
-        {
-          encoding = StringEncoding.Jis;
+          case ExifConstants.EncodingSignature.UnicodeValue:
+            encoding = StringEncoding.Unicode;
 
-          // Reset conversion buffer to be past the signature to the end
-          buffer = buffer.AsSpan( 8 ).ToArray();
-          byteCount -= 8;
-        }
-        else
-        {
-          // Assume no signature and ascii
-          encoding = StringEncoding.Ascii;
+            // Reset conversion buffer to be past the signature to the end
+            buffer = buffer.AsSpan( 8 ).ToArray();
+            byteCount -= 8;
+            break;
+
+          case ExifConstants.EncodingSignature.JisValue:
+            encoding = StringEncoding.Jis;
+
+            // Reset conversion buffer to be past the signature to the end
+            buffer = buffer.AsSpan( 8 ).ToArray();
+            byteCount -= 8;
+            break;
+
+          default:
+            // Assume no signature and ascii
+            encoding = StringEncoding.Ascii;
+            break;
         }
       }
 

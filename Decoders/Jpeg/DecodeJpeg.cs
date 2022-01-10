@@ -35,7 +35,8 @@ internal class DecodeJpeg : IDecoder
     }
 
     var header = reader.ReadBytes( JpegConstants.MagicNumber.Length );
-    if( header.SequenceEqual( JpegConstants.MagicNumber ) )
+    var headerValue = DataConversion.UInt32FromBigEndianBuffer( new byte[] { 0, 0, header[ 0 ], header[ 1 ] }.AsSpan() );
+    if( headerValue == JpegConstants.MagicNumberValue )
     {
       return this;
     }
@@ -147,8 +148,9 @@ internal class DecodeJpeg : IDecoder
     // Buffer only the data we need
     var data = reader.ReadBytes( 12 );
 
-    if( data.Length >= JpegConstants.Markers.Jfif.MagicBytes.Length
-      && data.AsSpan( 0, JpegConstants.Markers.Jfif.MagicBytes.Length ).SequenceEqual( JpegConstants.Markers.Jfif.MagicBytes ) )
+    // Valid the signature
+    var jfifMagicBytes = DataConversion.UInt32FromBigEndianBuffer( data.AsSpan( 0, 4 ) );
+    if( jfifMagicBytes == JpegConstants.Markers.Jfif.MagicBytesValue )
     {
       _processedJfif = true;
 

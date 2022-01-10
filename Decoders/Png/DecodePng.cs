@@ -39,7 +39,8 @@ internal class DecodePng : IDecoder
     }
 
     var header = reader.ReadBytes( PngConstants.MagicNumber.Length );
-    if( header.SequenceEqual( PngConstants.MagicNumber ) )
+    var headerValue = DataConversion.UInt64FromBigEndianBuffer( header );
+    if( headerValue == PngConstants.MagicNumberValue )
     {
       return this;
     }

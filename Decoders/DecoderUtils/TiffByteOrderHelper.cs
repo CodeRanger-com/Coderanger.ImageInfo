@@ -27,15 +27,11 @@ internal static class TiffByteOrderHelper
 {
   internal static TiffByteOrder GetTiffByteOrder( ReadOnlySpan<byte> dataSpan )
   {
-    if( dataSpan.SequenceEqual( TiffConstants.ByteOrder.BigEndian ) )
+    return DataConversion.UInt16FromBigEndianBuffer( dataSpan ) switch
     {
-      return TiffByteOrder.BigEndian;
-    }
-    else if( dataSpan.SequenceEqual( TiffConstants.ByteOrder.LittleEndian ) )
-    {
-      return TiffByteOrder.LittleEndian;
-    }
-
-    throw new ArgumentException( "Unknown byte order in JPEG TIFF header" );
+      TiffConstants.ByteOrder.BigEndianValue => TiffByteOrder.BigEndian,
+      TiffConstants.ByteOrder.LittleEndianValue => TiffByteOrder.LittleEndian,
+      _ => throw new ArgumentException( "Unknown byte order in JPEG TIFF header" ),
+    };
   }
 }

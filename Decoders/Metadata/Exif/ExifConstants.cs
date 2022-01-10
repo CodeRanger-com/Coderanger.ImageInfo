@@ -18,6 +18,7 @@ internal static class ExifConstants
     // 0x45, 0x78, 0x69, 0x66
     (byte)'E', (byte)'x', (byte)'i', (byte)'f', (byte)'\0', (byte)'\0'
   };
+  internal const uint MagicBytesVersion = 0x_45_78_69_66;
 
   /// <summary>
   /// IFD Offsets
@@ -46,16 +47,19 @@ internal static class ExifConstants
     {
       (byte)'A', (byte)'S', (byte)'C', (byte)'I', (byte)'I', (byte)'\0', (byte)'\0', (byte)'\0'
     };
+    internal const ulong AsciiValue = 0x_41_53_43_49_49_00_00_00;
 
     internal static byte[] Unicode => new[]
     {
       (byte)'U', (byte)'N', (byte)'I', (byte)'C', (byte)'O', (byte)'D', (byte)'E', (byte)'\0'
     };
+    internal const ulong UnicodeValue = 0x_55_4E_49_43_4F_44_45_00;
 
     internal static byte[] Jis => new[]
     {
       (byte)'J', (byte)'I', (byte)'S', (byte)'\0', (byte)'\0', (byte)'\0', (byte)'\0', (byte)'\0'
     };
+    internal const ulong JisValue = 0x_4A_49_53_00_00_00_00_00;
   }
 
   internal const ushort InteroperabilityOffsetFix = 0x2000;

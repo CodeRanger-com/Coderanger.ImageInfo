@@ -14,6 +14,7 @@ internal static class JpegConstants
   /// Header signature for a JPEG image format
   /// </summary>
   internal static readonly byte[] MagicNumber = new byte[] { 0xff, 0xd8 };
+  internal static readonly int MagicNumberValue = 0x_00_00_ff_d8;
 
   internal static class Markers
   {
@@ -74,6 +75,7 @@ internal static class JpegConstants
       {
         (byte)'J', (byte)'F', (byte)'I', (byte)'F', (byte)'\0'
       };
+      internal static uint MagicBytesValue = 0x_4A_46_49_46;
 
       /// <summary>
       /// Length of JFIF Marker segment
