@@ -44,46 +44,55 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// The name and version of the software used to post-process the picture.
   /// </summary>
+  [ExifTagDetails( "Processing Software", "Name and version of the software used to post-process the picture" )]
   public const ushort ProcessingSoftware = 0x000b;
 
   /// <summary>
   /// A general indication of the kind of data contained in this subfile.
   /// </summary>
+  [ExifTagDetails( "New Subfile Type", "General indication of the kind of data contained in this subfile" )]
   public const ushort NewSubfileType = 0x00fe;
 
   /// <summary>
   /// A general indication of the kind of data contained in this subfile. This field is deprecated. The NewSubfileType field should be used instead.
   /// </summary>
+  [ExifTagDetails( "Subfile Type", "General indication of the kind of data contained in this subfile" )]
   public const ushort SubfileType = 0x00ff;
 
   /// <summary>
   /// The number of columns of image data; equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag.
   /// </summary>
+  [ExifTagDetails( "Image Width", "Number of columns of image data, equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag" )]
   public const ushort ImageWidth = 0x0100;
 
   /// <summary>
   /// The number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag.
   /// </summary>
+  [ExifTagDetails( "Image Height", "Number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag" )]
   public const ushort ImageHeight = 0x0101;
 
   /// <summary>
   /// The number of bits per image component. In this standard each component of the image is 8 bits; so the value for this tag is 8. See also <SamplesPerPixel>. In JPEG compressed data a JPEG marker is used instead of this tag.
   /// </summary>
+  [ExifTagDetails( "Bits Per Sample", "Number of bits per image component" )]
   public const ushort BitsPerSample = 0x0102;
 
   /// <summary>
   /// The compression scheme used for the image data. When a primary image is JPEG compressed; this designation is not necessary and is omitted. When thumbnails use JPEG compression; this tag value is set to 6.
   /// </summary>
+  [ExifTagDetails( "Compression", "Compression scheme used for the image data" )]
   public const ushort Compression = 0x0103;
 
   /// <summary>
   /// The pixel composition. In JPEG compressed data a JPEG marker is used instead of this tag.
   /// </summary>
+  [ExifTagDetails( "Photometric Interpretation", "The pixel composition" )]
   public const ushort PhotometricInterpretation = 0x0106;
 
   /// <summary>
   /// For black and white TIFF files that represent shades of gray; the technique used to convert from gray to black and white pixels.
   /// </summary>
+  [ExifTagDetails( "Thresholding", "For black and white TIFF files that represent shades of gray, the technique used to convert from gray to black and white pixels" )]
   public const ushort Thresholding = 0x0107;
 
   /// <summary>
@@ -131,6 +140,7 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// For each strip; the byte offset of that strip. It is recommended that this be selected so the number of strip bytes does not exceed 64 Kbytes. With JPEG compressed data this designation is not needed and is omitted. See also <RowsPerStrip> and <StripByteCounts>.
   /// </summary>
+  [ExifTagDetails( "Strip Offsets", "For each strip, the byte offset of that strip" )]
   public const ushort StripOffsets = 0x0111;
 
   /// <summary>
@@ -149,51 +159,66 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// The number of components per pixel. Since this standard applies to RGB and YCbCr images; the value set for this tag is 3. In JPEG compressed data a JPEG marker is used instead of this tag.
   /// </summary>
+  [ExifTagDetails( "Samples Per Pixel", "Number of components per pixel; since this standard applies to RGB and YCbCr images, the value set for this tag is 3" )]
   public const ushort SamplesPerPixel = 0x0115;
 
   /// <summary>
   /// The number of rows per strip. This is the number of rows in the image of one strip when an image is divided into strips. With JPEG compressed data this designation is not needed and is omitted. See also <StripOffsets> and <StripByteCounts>.
   /// </summary>
+  [ExifTagDetails( "Rows Per Strip", "Number of rows in the image per strip when an image is divided into strips" )]
   public const ushort RowsPerStrip = 0x0116;
 
   /// <summary>
   /// The total number of bytes in each strip. With JPEG compressed data this designation is not needed and is omitted.
   /// </summary>
+  [ExifTagDetails( "Strip Byte Counts", "Total number of bytes in each strip" )]
   public const ushort StripByteCounts = 0x0117;
 
   /// <summary>
   /// The number of pixels per <ResolutionUnit> in the <ImageWidth> direction. When the image resolution is unknown; 72 [dpi] is designated.
   /// </summary>
+  [ExifTagDetails( "Horizontal Resolution", "Number of pixels per ResolutionUnit" )]
   public const ushort XResolution = 0x011a;
 
   /// <summary>
   /// The number of pixels per <ResolutionUnit> in the <ImageLength> direction. The same value as <XResolution> is designated.
   /// </summary>
+  [ExifTagDetails( "Vertical Resolution", "Number of pixels per ResolutionUnit" )]
   public const ushort YResolution = 0x011b;
 
   /// <summary>
   /// Indicates whether pixel components are recorded in a chunky or planar format. In JPEG compressed files a JPEG marker is used instead of this tag. If this field does not exist; the TIFF default of 1 (chunky) is assumed.
   /// </summary>
+  [ExifTagDetails( "Planar Configuration", "Indicates whether pixel components are recorded in a chunky or planar format" )]
   public const ushort PlanarConfiguration = 0x011c;
 
   /// <summary>
   /// The precision of the information contained in the GrayResponseCurve.
   /// </summary>
+  [ExifTagEnum( 1, "0.1" )]
+  [ExifTagEnum( 2, "0.001" )]
+  [ExifTagEnum( 3, "0.0001" )]
+  [ExifTagEnum( 4, "1e-05" )]
+  [ExifTagEnum( 5, "1e-06" )]
+  [ExifTagDetails( "Gray Response Unit", "Precision of the information contained in the GrayResponseCurve" )]
   public const ushort GrayResponseUnit = 0x0122;
 
   /// <summary>
   /// For grayscale data; the optical density of each possible pixel value.
   /// </summary>
+  [ExifTagDetails( "Gray Response Curve", "The optical density of each possible pixel value for grayscale data" )]
   public const ushort GrayResponseCurve = 0x0123;
 
   /// <summary>
-  /// T.4-encoding options.
+  /// T.4-encoding options; Bit '0' denotes 2-Dimensional encoding, Bit '1' denotes Uncompressed, Bit '2' denotes Fill bits added
   /// </summary>
+  [ExifTagDetails( "T4 Options", "T.4 encoding options" )]
   public const ushort T4Options = 0x0124;
 
   /// <summary>
-  /// T.6-encoding options.
+  /// T.6-encoding options; Bit '1' denotes Uncompressed
   /// </summary>
+  [ExifTagDetails( "T6 Options", "T.6 encoding options" )]
   public const ushort T6Options = 0x0125;
 
   /// <summary>
@@ -202,36 +227,43 @@ public class ExifTag : IMetadataTag
   [ExifTagEnum( 1, "None" )]
   [ExifTagEnum( 2, "inches" )]
   [ExifTagEnum( 3, "cm" )]
+  [ExifTagDetails( "Resolution Unit", "Unit for measuring Horizontal and Vertical resolutions" )]
   public const ushort ResolutionUnit = 0x0128;
 
   /// <summary>
   /// The page number of the page from which this image was scanned.
   /// </summary>
+  [ExifTagDetails( "Page Number", "Page number of the page from which this image was scanned" )]
   public const ushort PageNumber = 0x0129;
 
   /// <summary>
   /// A transfer function for the image; described in tabular style. Normally this tag is not necessary; since color space is specified in the color space information tag (<ColorSpace>).
   /// </summary>
+  [ExifTagDetails( "Transfer Function", "Transfer function for the image described in tabular style" )]
   public const ushort TransferFunction = 0x012d;
 
   /// <summary>
   /// This tag records the name and version of the software or firmware of the camera or image input device used to generate the image. The detailed format is not specified; but it is recommended that the example shown below be followed. When the field is left blank; it is treated as unknown.
   /// </summary>
+  [ExifTagDetails( "Software", "Records the name and version of the software or firmware of the camera or image input device used to generate the image" )]
   public const ushort Software = 0x0131;
 
   /// <summary>
   /// The date and time of image creation. In Exif standard; it is the date and time the file was changed.
   /// </summary>
+  [ExifTagDetails( "Date Time", "Date and time of image creation or when last modified" )]
   public const ushort DateTime = 0x0132;
 
   /// <summary>
   /// This tag records the name of the camera owner; photographer or image creator. The detailed format is not specified; but it is recommended that the information be written as in the example below for ease of Interoperability. When the field is left blank; it is treated as unknown. Ex.) "Camera owner; John Smith; Photographer; Michael Brown; Image creator; Ken James"
   /// </summary>
+  [ExifTagDetails( "Artist", "Records the name of the camera owner, photographer or image creator" )]
   public const ushort Artist = 0x013b;
 
   /// <summary>
   /// This tag records information about the host computer used to generate the image.
   /// </summary>
+  [ExifTagDetails( "Host Computer", "Records information about the host computer used to generate the image" )]
   public const ushort HostComputer = 0x013c;
 
   /// <summary>
@@ -244,79 +276,94 @@ public class ExifTag : IMetadataTag
   [ExifTagEnum( 34893, "Horizontal difference X4" )]
   [ExifTagEnum( 34894, "Floating point X2" )]
   [ExifTagEnum( 34895, "Floating point X4" )]
+  [ExifTagDetails( "Predictor", "Mathematical operator that is applied to the image data before an encoding scheme is applied" )]
   public const ushort Predictor = 0x013d;
 
   /// <summary>
   /// The chromaticity of the white point of the image. Normally this tag is not necessary; since color space is specified in the colorspace information tag (<ColorSpace>).
   /// </summary>
+  [ExifTagDetails( "White Point", "Chromaticity of the white point of the image" )]
   public const ushort WhitePoint = 0x013e;
 
   /// <summary>
   /// The chromaticity of the three primary colors of the image. Normally this tag is not necessary; since colorspace is specified in the colorspace information tag (<ColorSpace>).
   /// </summary>
+  [ExifTagDetails( "Primary Chromaticities", "Chromaticity of the three primary colors of the image" )]
   public const ushort PrimaryChromaticities = 0x013f;
 
   /// <summary>
   /// A color map for palette color images. This field defines a Red-Green-Blue color map (often called a lookup table) for palette-color images. In a palette-color image; a pixel value is used to index into an RGB lookup table.
   /// </summary>
+  [ExifTagDetails( "Color Map", "Defines a Red-Green-Blue color map, or lookup table, for palette-color images where a pixel value is used to index into the map" )]
   public const ushort ColorMap = 0x0140;
 
   /// <summary>
   /// The purpose of the HalftoneHints field is to convey to the halftone function the range of gray levels within a colorimetrically-specified image that should retain tonal detail.
   /// </summary>
+  [ExifTagDetails( "Halftone Hints", "Conveys to the halftone function the range of gray levels within a colorimetrically-specified image that should retain tonal detail" )]
   public const ushort HalftoneHints = 0x0141;
 
   /// <summary>
   /// The tile width in pixels. This is the number of columns in each tile.
   /// </summary>
+  [ExifTagDetails( "Tile Width", "Number of columns/pixels in each tile" )]
   public const ushort TileWidth = 0x0142;
 
   /// <summary>
   /// The tile length (height) in pixels. This is the number of rows in each tile.
   /// </summary>
+  [ExifTagDetails( "Tile Height", "Number of rows in each tile" )]
   public const ushort TileLength = 0x0143;
 
   /// <summary>
   /// For each tile; the byte offset of that tile; as compressed and stored on disk. The offset is specified with respect to the beginning of the TIFF file. Note that this implies that each tile has a location independent of the locations of other tiles.
   /// </summary>
+  [ExifTagDetails( "Tile Offsets", "Byte offset of each tile as compressed and stored on disk" )]
   public const ushort TileOffsets = 0x0144;
 
   /// <summary>
   /// For each tile; the number of (compressed) bytes in that tile. See TileOffsets for a description of how the byte counts are ordered.
   /// </summary>
+  [ExifTagDetails( "Tile Byte Counts", "Number of (compressed) bytes in the tile" )]
   public const ushort TileByteCounts = 0x0145;
 
   /// <summary>
   /// The set of inks used in a separated (PhotometricInterpretation=5) image.
   /// </summary>
+  [ExifTagDetails( "Ink Set", "Set of inks used in a separated (PhotometricInterpretation) image" )]
   public const ushort InkSet = 0x014c;
 
   /// <summary>
   /// The name of each ink used in a separated (PhotometricInterpretation=5) image.
   /// </summary>
+  [ExifTagDetails( "Ink Names", "Name of each ink used in a separated (PhotometricInterpretation) image" )]
   public const ushort InkNames = 0x014d;
 
   /// <summary>
   /// The number of inks. Usually equal to SamplesPerPixel; unless there are extra samples.
   /// </summary>
+  [ExifTagDetails( "Number Of Inks", "Number of inks, usually equal to SamplesPerPixel" )]
   public const ushort NumberOfInks = 0x014e;
 
   /// <summary>
   /// The component values that correspond to a 0% dot and 100% dot.
   /// </summary>
+  [ExifTagDetails( "Dot Range", "Component values that correspond to a 0% dot and 100% dot" )]
   public const ushort DotRange = 0x0150;
 
   /// <summary>
   /// A description of the printing environment for which this separation is intended.
   /// </summary>
+  [ExifTagDetails( "Target Printer", "Description of the printing environment for which this separation is intended" )]
   public const ushort TargetPrinter = 0x0151;
 
   /// <summary>
-  /// Specifies that each pixel has m extra components whose interpretation is defined by one of the values listed below.
+  /// Specifies that each pixel has extra components whose interpretation is defined by one of the values listed in SampleFormat.
   /// </summary>
   [ExifTagEnum( 0, "Unspecified" )]
   [ExifTagEnum( 1, "Associated Alpha" )]
   [ExifTagEnum( 3, "Associated Alpha" )]
+  [ExifTagDetails( "Extra Samples", "Specifies that each pixel has extra components whose interpretation is defined by one of the values listed in SampleFormat" )]
   public const ushort ExtraSamples = 0x0152;
 
   /// <summary>
@@ -328,186 +375,223 @@ public class ExifTag : IMetadataTag
   [ExifTagEnum( 4, "Undefined" )]
   [ExifTagEnum( 5, "Complex int" )]
   [ExifTagEnum( 6, "Complex float" )]
+  [ExifTagDetails( "Sample Format", "Specifies how to interpret each data sample in a pixel" )]
   public const ushort SampleFormat = 0x0153;
 
   /// <summary>
   /// This field specifies the minimum sample value.
   /// </summary>
+  [ExifTagDetails( "Minimum Sample Value", "Specifies the minimum sample value" )]
   public const ushort SMinSampleValue = 0x0154;
 
   /// <summary>
   /// This field specifies the maximum sample value.
   /// </summary>
+  [ExifTagDetails( "Maximum Sample Value", "Specifies the maximum sample value" )]
   public const ushort SMaxSampleValue = 0x0155;
 
   /// <summary>
   /// Expands the range of the TransferFunction
   /// </summary>
+  [ExifTagDetails( "Transfer Range", "Expands the range of the TransferFunction" )]
   public const ushort TransferRange = 0x0156;
 
   /// <summary>
   /// A TIFF ClipPath is intended to mirror the essentials of PostScript's path creation functionality.
   /// </summary>
+  [ExifTagDetails( "Clip Path", "Intended to mirror the essentials of PostScript's path creation functionality" )]
   public const ushort ClipPath = 0x0157;
 
   /// <summary>
   /// The number of units that span the width of the image; in terms of integer ClipPath coordinates.
   /// </summary>
+  [ExifTagDetails( "X Clip Path Units", "Number of units that span the width of the image" )]
   public const ushort XClipPathUnits = 0x0158;
 
   /// <summary>
   /// The number of units that span the height of the image; in terms of integer ClipPath coordinates.
   /// </summary>
+  [ExifTagDetails( "Y Clip Path Units", "Number of units that span the height of the image" )]
   public const ushort YClipPathUnits = 0x0159;
 
   /// <summary>
   /// Indexed images are images where the 'pixels' do not represent color values; but rather an index (usually 8-bit) into a separate color table; the ColorMap.
   /// </summary>
+  [ExifTagDetails( "Indexed", "Indexed images are images where the 'pixels' do not represent color values but an index into a separate color map" )]
   public const ushort Indexed = 0x015a;
 
   /// <summary>
-  /// (undefined type) This optional tag may be used to encode the JPEG quantization and Huffman tables for subsequent use by the JPEG decompression process.
+  /// This optional tag may be used to encode the JPEG quantization and Huffman tables for subsequent use by the JPEG decompression process.
   /// </summary>
+  [ExifTagDetails( "JPEG Tables", "May be used to encode the JPEG quantization and Huffman tables for subsequent use by the JPEG decompression process" )]
   public const ushort JPEGTables = 0x015b;
 
   /// <summary>
   /// OPIProxy gives information concerning whether this image is a low-resolution proxy of a high-resolution image (Adobe OPI).
   /// </summary>
+  [ExifTagDetails( "OPI Proxy", "Gives information concerning whether this image is a low-resolution proxy of a high-resolution image" )]
   public const ushort OPIProxy = 0x015f;
 
   /// <summary>
   /// This field indicates the process used to produce the compressed data
   /// </summary>
+  [ExifTagDetails( "JPEG Process", "Indicates the process used to produce the compressed data" )]
   public const ushort JPEGProc = 0x0200;
 
   /// <summary>
   /// The offset to the start byte (SOI) of JPEG compressed thumbnail data. This is not used for primary image JPEG data.
   /// </summary>
+  [ExifTagDetails( "JPEG Interchange Format", "Offset to the start byte of the JPEG compressed thumbnail data" )]
   public const ushort JPEGInterchangeFormat = 0x0201;
 
   /// <summary>
   /// The number of bytes of JPEG compressed thumbnail data. This is not used for primary image JPEG data. JPEG thumbnails are not divided but are recorded as a continuous JPEG bitstream from SOI to EOI. Appn and COM markers should not be recorded. Compressed thumbnails must be recorded in no more than 64 Kbytes; including all other data to be recorded in APP1.
   /// </summary>
+  [ExifTagDetails( "JPEG Interchange Format Length", "Number of bytes of JPEG compressed thumbnail data" )]
   public const ushort JPEGInterchangeFormatLength = 0x0202;
 
   /// <summary>
   /// This Field indicates the length of the restart interval used in the compressed image data.
   /// </summary>
+  [ExifTagDetails( "JPEG Restart Interval", "Indicates the length of the restart interval used in the compressed image data" )]
   public const ushort JPEGRestartInterval = 0x0203;
 
   /// <summary>
   /// This Field points to a list of lossless predictor-selection values; one per component.
   /// </summary>
+  [ExifTagDetails( "JPEG Lossless Predictors", "Points to a list of lossless predictor/selection values, one per component" )]
   public const ushort JPEGLosslessPredictors = 0x0205;
 
   /// <summary>
   /// This Field points to a list of point transform values; one per component.
   /// </summary>
+  [ExifTagDetails( "JPEG Point Transforms", "Points to a list of point transform, one per component" )]
   public const ushort JPEGPointTransforms = 0x0206;
 
   /// <summary>
   /// This Field points to a list of offsets to the quantization tables; one per component.
   /// </summary>
+  [ExifTagDetails( "JPEG Quantization Tables", "Points to a list of offsets to the quantization tables, one per component" )]
   public const ushort JPEGQTables = 0x0207;
 
   /// <summary>
   /// This Field points to a list of offsets to the DC Huffman tables or the lossless Huffman tables; one per component.
   /// </summary>
+  [ExifTagDetails( "JPEG DC Huffman Tables", "Points to a list of offsets to the DC Huffman or lossless Huffman tables, one per component" )]
   public const ushort JPEGDCTables = 0x0208;
 
   /// <summary>
   /// This Field points to a list of offsets to the Huffman AC tables; one per component.
   /// </summary>
+  [ExifTagDetails( "JPEG Huffman AC Tables", "Points to a list of offsets to the Huffman AC tables, one per component" )]
   public const ushort JPEGACTables = 0x0209;
 
   /// <summary>
   /// The matrix coefficients for transformation from RGB to YCbCr image data. No default is given in TIFF; but here the value given in Appendix E; "Color Space Guidelines"; is used as the default. The color space is declared in a color space information tag; with the default being the value that gives the optimal image characteristics Interoperability this condition.
   /// </summary>
+  [ExifTagDetails( "YCbCr Coefficients", "Matrix coefficients for transformation from RGB to YCbCr image data" )]
   public const ushort YCbCrCoefficients = 0x0211;
 
   /// <summary>
   /// The sampling ratio of chrominance components in relation to the luminance component. In JPEG compressed data a JPEG marker is used instead of this tag.
   /// </summary>
+  [ExifTagDetails( "YCbCr SubSampling", "Sampling ratio of chrominance components in relation to the luminance component" )]
   public const ushort YCbCrSubSampling = 0x0212;
 
   /// <summary>
   /// The position of chrominance components in relation to the luminance component. This field is designated only for JPEG compressed data or uncompressed YCbCr data. The TIFF default is 1 (centered); but when Y:Cb:Cr = 4:2:2 it is recommended in this standard that 2 (co-sited) be used to record data; in order to improve the image quality when viewed on TV systems. When this field does not exist; the reader shall assume the TIFF default. In the case of Y:Cb:Cr = 4:2:0; the TIFF default (centered) is recommended. If the reader does not have the capability of supporting both kinds of <YCbCrPositioning>; it shall follow the TIFF default regardless of the value in this field. It is preferable that readers be able to support both centered and co-sited positioning.
   /// </summary>
+  [ExifTagDetails( "YCbCr Positioning", "Position of chrominance components in relation to the luminance component" )]
   public const ushort YCbCrPositioning = 0x0213;
 
   /// <summary>
   /// The reference black point value and reference white point value. No defaults are given in TIFF; but the values below are given as defaults here. The color space is declared in a color space information tag; with the default being the value that gives the optimal image characteristics Interoperability these conditions.
   /// </summary>
+  [ExifTagDetails( "Reference Black White", "Reference black point value and reference white point value" )]
   public const ushort ReferenceBlackWhite = 0x0214;
 
   /// <summary>
   /// XMP Metadata (Adobe technote 9-14-02)
   /// </summary>
+  [ExifTagDetails( "XML Packet", "XMP metadata" )]
   public const ushort XMLPacket = 0x02bc;
 
   /// <summary>
   /// Rating tag used by Windows
   /// </summary>
+  [ExifTagDetails( "Rating", "Windows rating value" )]
   public const ushort Rating = 0x4746;
 
   /// <summary>
   /// Rating tag used by Windows; value in percent
   /// </summary>
+  [ExifTagDetails( "Rating Percent", "Windows rating percentage value" )]
   public const ushort RatingPercent = 0x4749;
 
   /// <summary>
   /// Sony vignetting correction parameters
   /// </summary>
+  [ExifTagDetails( "Vignetting Correction Parameters", "Sony vignetting correction parameters" )]
   public const ushort VignettingCorrParams = 0x7032;
 
   /// <summary>
   /// Sony chromatic aberration correction parameters
   /// </summary>
+  [ExifTagDetails( "Chromatic Aberration Correction Parameters", "Sony chromatic aberration correction parameters" )]
   public const ushort ChromaticAberrationCorrParams = 0x7035;
 
   /// <summary>
   /// Sony distortion correction parameters
   /// </summary>
+  [ExifTagDetails( "Distortion Correction Parameters", "Sony distortion correction parameters" )]
   public const ushort DistortionCorrParams = 0x7037;
 
   /// <summary>
   /// ImageID is the full pathname of the original; high-resolution image; or any other identifying string that uniquely identifies the original image (Adobe OPI).
   /// </summary>
+  [ExifTagDetails( "Image ID", "Full pathname of the original, high-resolution image; or any other identifying string that uniquely identifies the original image" )]
   public const ushort ImageID = 0x800d;
 
   /// <summary>
   /// Contains two values representing the minimum rows and columns to define the repeating patterns of the color filter array
   /// </summary>
+  [ExifTagDetails( "CFA Repeat Pattern Dim", "Representing the minimum rows and columns to define the repeating patterns of the color filter array (CFA)" )]
   public const ushort CFARepeatPatternDim = 0x828d;
 
   /// <summary>
   /// Indicates the color filter array (CFA) geometric pattern of the image sensor when a one-chip color area sensor is used. It does not apply to all sensing methods
   /// </summary>
+  [ExifTagDetails( "CFA Pattern", "The color filter array (CFA) geometric pattern of the image sensor when a one-chip color area sensor is used" )]
   public const ushort CFAPattern = 0x828e;
 
   /// <summary>
   /// Contains a value of the battery level as a fraction or string
   /// </summary>
+  [ExifTagDetails( "Battery Level", "Value of the battery level as a fraction or string" )]
   public const ushort BatteryLevel = 0x828f;
 
   /// <summary>
   /// Copyright information. In this standard the tag is used to indicate both the photographer and editor copyrights. It is the copyright notice of the person or organization claiming rights to the image. The Interoperability copyright statement including date and rights should be written in this field; e.g.; "Copyright; John Smith; 19xx. All rights reserved.". In this standard the field records both the photographer and editor copyrights; with each recorded in a separate part of the statement. When there is a clear distinction between the photographer and editor copyrights; these are to be written in the order of photographer followed by editor copyright; separated by NULL (in this case since the statement also ends with a NULL; there are two NULL codes). When only the photographer copyright is given; it is terminated by one NULL code. When only the editor copyright is given; the photographer copyright part consists of one space followed by a terminating NULL code; then the editor copyright is given. When the field is left blank; it is treated as unknown.
   /// </summary>
+  [ExifTagDetails( "Copyright", "Indicates both the photographer and editor copyrights; it is the copyright notice of the person or organization claiming rights to the image" )]
   public const ushort Copyright = 0x8298;
 
   /// <summary>
   /// Exposure time; given in seconds.
   /// </summary>
+  [ExifTagDetails( "Exposure Time", "Exposure time in seconds" )]
   public const ushort ExposureTime = 0x829a;
 
   /// <summary>
   /// The F number.
   /// </summary>
+  [ExifTagDetails( "F Number", "Camera F number" )]
   public const ushort FNumber = 0x829d;
 
   /// <summary>
   /// Contains an IPTC/NAA record
   /// </summary>
+  [ExifTagDetails( "IPTC/NAA Record", "Contains the IPTC/NAA record" )]
   public const ushort IPTCNAA = 0x83bb;
 
   /// <summary>
@@ -674,8 +758,9 @@ public class ExifTag : IMetadataTag
   public const ushort ImageNumber = 0x9211;
 
   /// <summary>
-  /// Security classification assigned to the image.
+  /// Security classification assigned to the image; 'C' denotes Confidential, 'R' denotes Restricted, 'S' denotes Secret, 'T' denotes Top Secret, 'U' denotes Unclassified.
   /// </summary>
+  [ExifTagDetails( "Security Classification", "Security classification assigned to the image; 'C' denotes Confidential, 'R' denotes Restricted, 'S' denotes Secret, 'T' denotes Top Secret, 'U' denotes Unclassified" )]
   public const ushort SecurityClassification = 0x9212;
 
   /// <summary>
@@ -1489,11 +1574,21 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// Indicates the image sensor type on the camera or input device.
   /// </summary>
+  [ExifTagEnum( 1, "Not defined" )]
+  [ExifTagEnum( 2, "One-chip color area" )]
+  [ExifTagEnum( 3, "Two-chip color area" )]
+  [ExifTagEnum( 4, "Three-chip color area" )]
+  [ExifTagEnum( 5, "Color sequential area" )]
+  [ExifTagEnum( 7, "Trilinear" )]
+  [ExifTagEnum( 8, "Color sequential linear" )]
   public const ushort PhotoSensingMethod = 0xa217;
 
   /// <summary>
   /// (undefined type) Indicates the image source. If a DSC recorded the image; this tag value of this tag always be set to 3; indicating that the image was recorded on a DSC.
   /// </summary>
+  [ExifTagEnum( 1, "Film Scanner" )]
+  [ExifTagEnum( 2, "Reflection Print Scanner" )]
+  [ExifTagEnum( 3, "Digital Camera" )]
   public const ushort PhotoFileSource = 0xa300;
 
   /// <summary>
@@ -1511,16 +1606,27 @@ public class ExifTag : IMetadataTag
   /// </summary>
   [ExifTagEnum( 0, "Normal" )]
   [ExifTagEnum( 1, "Custom" )]
+  [ExifTagEnum( 2, "HDR (no original saved)" )]
+  [ExifTagEnum( 3, "HDR (original saved)" )]
+  [ExifTagEnum( 4, "Original (for HDR)" )]
+  [ExifTagEnum( 6, "Panorama" )]
+  [ExifTagEnum( 7, "Portrait HDR" )]
+  [ExifTagEnum( 8, "Portrait" )]
   public const ushort PhotoCustomRendered = 0xa401;
 
   /// <summary>
   /// This tag indicates the exposure mode set when the image was shot. In auto-bracketing mode; the camera shoots a series of frames of the same scene at different exposure settings.
   /// </summary>
+  [ExifTagEnum( 0, "Auto" )]
+  [ExifTagEnum( 1, "Manual" )]
+  [ExifTagEnum( 2, "Auto bracket" )]
   public const ushort PhotoExposureMode = 0xa402;
 
   /// <summary>
   /// This tag indicates the white balance mode set when the image was shot.
   /// </summary>
+  [ExifTagEnum( 0, "Auto" )]
+  [ExifTagEnum( 1, "Manual" )]
   public const ushort PhotoWhiteBalance = 0xa403;
 
   /// <summary>
@@ -1536,26 +1642,45 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// This tag indicates the type of scene that was shot. It can also be used to record the mode in which the image was shot. Note that this differs from the <SceneType> tag.
   /// </summary>
+  [ExifTagEnum( 0, "Standard" )]
+  [ExifTagEnum( 1, "Landscape" )]
+  [ExifTagEnum( 2, "Portrait" )]
+  [ExifTagEnum( 3, "Night" )]
+  [ExifTagEnum( 4, "Other" )]
   public const ushort PhotoSceneCaptureType = 0xa406;
 
   /// <summary>
   /// This tag indicates the degree of overall image gain adjustment.
   /// </summary>
+  [ExifTagEnum( 0, "None" )]
+  [ExifTagEnum( 1, "Low gain up" )]
+  [ExifTagEnum( 2, "High gain up" )]
+  [ExifTagEnum( 3, "Low gain down" )]
+  [ExifTagEnum( 4, "High gain down" )]
   public const ushort PhotoGainControl = 0xa407;
 
   /// <summary>
   /// This tag indicates the direction of contrast processing applied by the camera when the image was shot.
   /// </summary>
+  [ExifTagEnum( 0, "Normal" )]
+  [ExifTagEnum( 1, "Low" )]
+  [ExifTagEnum( 2, "High" )]
   public const ushort PhotoContrast = 0xa408;
 
   /// <summary>
   /// This tag indicates the direction of saturation processing applied by the camera when the image was shot.
   /// </summary>
+  [ExifTagEnum( 0, "Normal" )]
+  [ExifTagEnum( 1, "Low" )]
+  [ExifTagEnum( 2, "High" )]
   public const ushort PhotoSaturation = 0xa409;
 
   /// <summary>
   /// This tag indicates the direction of sharpness processing applied by the camera when the image was shot.
   /// </summary>
+  [ExifTagEnum( 0, "Normal" )]
+  [ExifTagEnum( 1, "Soft" )]
+  [ExifTagEnum( 2, "Hard" )]
   public const ushort PhotoSharpness = 0xa40a;
 
   /// <summary>
@@ -1566,6 +1691,10 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// This tag indicates the distance to the subject.
   /// </summary>
+  [ExifTagEnum( 0, "Unknown" )]
+  [ExifTagEnum( 1, "Macro" )]
+  [ExifTagEnum( 2, "Close" )]
+  [ExifTagEnum( 2, "Distant" )]
   public const ushort PhotoSubjectDistanceRange = 0xa40c;
 
   /// <summary>

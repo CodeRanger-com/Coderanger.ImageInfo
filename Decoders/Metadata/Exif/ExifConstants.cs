@@ -32,17 +32,17 @@ internal static class ExifConstants
     /// <summary>
     /// Exif IFD
     /// </summary>
-    Exif = 0x8769, // 34665
+    Exif = 0x8769,
 
     /// <summary>
     /// GPS IFD
     /// </summary>
-    Gps = 0x8825, // 34853
+    Gps = 0x8825,
 
     /// <summary>
     /// Interoperability IFD
     /// </summary>
-    Inter = 0xA005, // 40965
+    Inter = 0xA005,
   }
 
   internal static class EncodingSignature

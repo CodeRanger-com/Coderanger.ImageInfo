@@ -26,28 +26,28 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
         "StringValue": "Software = Digital Camera DX-10 Ver1.00",
@@ -55,23 +55,23 @@
         "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
-        "Description": ""
+        "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
       },
       {
         "IsArray": false,
-        "StringValue": "DateTime = 12/04/2001 20:33:14",
+        "StringValue": "Date Time = 12/04/2001 20:33:14",
         "TagId": 306,
         "ExifType": 12,
-        "Name": "DateTime",
-        "Description": ""
+        "Name": "Date Time",
+        "Description": "Date and time of image creation or when last modified"
       },
       {
-        "StringValue": "YCbCrPositioning = 2",
+        "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
         "StringValue": "Copyright = J P Bowen ",
@@ -79,7 +79,7 @@
         "TagId": 33432,
         "ExifType": 2,
         "Name": "Copyright",
-        "Description": ""
+        "Description": "Indicates both the photographer and editor copyrights; it is the copyright notice of the person or organization claiming rights to the image"
       },
       {
         "StringValue": "Compression = 6",
@@ -87,7 +87,7 @@
         "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
-        "Description": ""
+        "Description": "Compression scheme used for the image data"
       },
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
@@ -98,60 +98,60 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "JPEGInterchangeFormat = 856",
+        "StringValue": "JPEG Interchange Format = 856",
         "IsArray": false,
         "TagId": 513,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormat",
-        "Description": ""
+        "Name": "JPEG Interchange Format",
+        "Description": "Offset to the start byte of the JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "JPEGInterchangeFormatLength = 10274",
+        "StringValue": "JPEG Interchange Format Length = 10274",
         "IsArray": false,
         "TagId": 514,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormatLength",
-        "Description": ""
+        "Name": "JPEG Interchange Format Length",
+        "Description": "Number of bytes of JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "YCbCrPositioning = 2",
+        "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
-        "StringValue": "FNumber = 42/10 (4.2D)",
+        "StringValue": "F Number = 42/10 (4.2D)",
         "IsArray": false,
         "TagId": 33437,
         "ExifType": 10,
-        "Name": "FNumber",
-        "Description": ""
+        "Name": "F Number",
+        "Description": "Camera F number"
       },
       {
         "StringValue": "ExposureProgram = 2",
@@ -330,18 +330,18 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoSensingMethod = 2",
+        "StringValue": "PhotoSensingMethod = 2 (One-chip color area)",
         "IsArray": false,
         "TagId": 41495,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "PhotoSensingMethod",
         "Description": ""
       },
       {
-        "StringValue": "PhotoFileSource = 3",
+        "StringValue": "PhotoFileSource = 3 (Digital Camera)",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 1,
+        "ExifType": 13,
         "Name": "PhotoFileSource",
         "Description": ""
       },
@@ -400,28 +400,28 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
         "StringValue": "Software = Digital Camera FinePix40i Ver1.39",
@@ -429,23 +429,23 @@
         "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
-        "Description": ""
+        "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
       },
       {
         "IsArray": false,
-        "StringValue": "DateTime = 04/08/2000 18:22:57",
+        "StringValue": "Date Time = 04/08/2000 18:22:57",
         "TagId": 306,
         "ExifType": 12,
-        "Name": "DateTime",
-        "Description": ""
+        "Name": "Date Time",
+        "Description": "Date and time of image creation or when last modified"
       },
       {
-        "StringValue": "YCbCrPositioning = 2",
+        "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
         "StringValue": "Copyright =           ",
@@ -453,7 +453,7 @@
         "TagId": 33432,
         "ExifType": 2,
         "Name": "Copyright",
-        "Description": ""
+        "Description": "Indicates both the photographer and editor copyrights; it is the copyright notice of the person or organization claiming rights to the image"
       },
       {
         "StringValue": "Compression = 6",
@@ -461,7 +461,7 @@
         "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
-        "Description": ""
+        "Description": "Compression scheme used for the image data"
       },
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
@@ -472,60 +472,60 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "JPEGInterchangeFormat = 1074",
+        "StringValue": "JPEG Interchange Format = 1074",
         "IsArray": false,
         "TagId": 513,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormat",
-        "Description": ""
+        "Name": "JPEG Interchange Format",
+        "Description": "Offset to the start byte of the JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "JPEGInterchangeFormatLength = 8691",
+        "StringValue": "JPEG Interchange Format Length = 8691",
         "IsArray": false,
         "TagId": 514,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormatLength",
-        "Description": ""
+        "Name": "JPEG Interchange Format Length",
+        "Description": "Number of bytes of JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "YCbCrPositioning = 2",
+        "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
-        "StringValue": "FNumber = 280/100 (2.8D)",
+        "StringValue": "F Number = 280/100 (2.8D)",
         "IsArray": false,
         "TagId": 33437,
         "ExifType": 10,
-        "Name": "FNumber",
-        "Description": ""
+        "Name": "F Number",
+        "Description": "Camera F number"
       },
       {
         "StringValue": "ExposureProgram = 2",
@@ -712,18 +712,18 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoSensingMethod = 2",
+        "StringValue": "PhotoSensingMethod = 2 (One-chip color area)",
         "IsArray": false,
         "TagId": 41495,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "PhotoSensingMethod",
         "Description": ""
       },
       {
-        "StringValue": "PhotoFileSource = 3",
+        "StringValue": "PhotoFileSource = 768 ()",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 1,
+        "ExifType": 13,
         "Name": "PhotoFileSource",
         "Description": ""
       },
@@ -782,28 +782,28 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
         "StringValue": "Software = Digital Camera MX-1700ZOOM Ver1.00",
@@ -811,23 +811,23 @@
         "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
-        "Description": ""
+        "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
       },
       {
         "IsArray": false,
-        "StringValue": "DateTime = 02/09/2000 14:30:10",
+        "StringValue": "Date Time = 02/09/2000 14:30:10",
         "TagId": 306,
         "ExifType": 12,
-        "Name": "DateTime",
-        "Description": ""
+        "Name": "Date Time",
+        "Description": "Date and time of image creation or when last modified"
       },
       {
-        "StringValue": "YCbCrPositioning = 2",
+        "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
         "StringValue": "Copyright =           ",
@@ -835,7 +835,7 @@
         "TagId": 33432,
         "ExifType": 2,
         "Name": "Copyright",
-        "Description": ""
+        "Description": "Indicates both the photographer and editor copyrights; it is the copyright notice of the person or organization claiming rights to the image"
       },
       {
         "StringValue": "Compression = 6",
@@ -843,7 +843,7 @@
         "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
-        "Description": ""
+        "Description": "Compression scheme used for the image data"
       },
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
@@ -854,60 +854,60 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "JPEGInterchangeFormat = 856",
+        "StringValue": "JPEG Interchange Format = 856",
         "IsArray": false,
         "TagId": 513,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormat",
-        "Description": ""
+        "Name": "JPEG Interchange Format",
+        "Description": "Offset to the start byte of the JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "JPEGInterchangeFormatLength = 4354",
+        "StringValue": "JPEG Interchange Format Length = 4354",
         "IsArray": false,
         "TagId": 514,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormatLength",
-        "Description": ""
+        "Name": "JPEG Interchange Format Length",
+        "Description": "Number of bytes of JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "YCbCrPositioning = 2",
+        "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
-        "StringValue": "FNumber = 70/10 (7D)",
+        "StringValue": "F Number = 70/10 (7D)",
         "IsArray": false,
         "TagId": 33437,
         "ExifType": 10,
-        "Name": "FNumber",
-        "Description": ""
+        "Name": "F Number",
+        "Description": "Camera F number"
       },
       {
         "StringValue": "ExposureProgram = 2",
@@ -1086,18 +1086,18 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoSensingMethod = 2",
+        "StringValue": "PhotoSensingMethod = 2 (One-chip color area)",
         "IsArray": false,
         "TagId": 41495,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "PhotoSensingMethod",
         "Description": ""
       },
       {
-        "StringValue": "PhotoFileSource = 3",
+        "StringValue": "PhotoFileSource = 3 (Digital Camera)",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 1,
+        "ExifType": 13,
         "Name": "PhotoFileSource",
         "Description": ""
       },
@@ -1164,36 +1164,36 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 216/1 (216D)",
+        "StringValue": "Horizontal Resolution = 216/1 (216D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 216/1 (216D)",
+        "StringValue": "Vertical Resolution = 216/1 (216D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "YCbCrPositioning = 1",
+        "StringValue": "YCbCr Positioning = 1",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
         "StringValue": "Copyright = ",
@@ -1201,31 +1201,31 @@
         "TagId": 33432,
         "ExifType": 2,
         "Name": "Copyright",
-        "Description": ""
+        "Description": "Indicates both the photographer and editor copyrights; it is the copyright notice of the person or organization claiming rights to the image"
       },
       {
-        "StringValue": "ImageWidth = 96",
+        "StringValue": "Image Width = 96",
         "IsArray": false,
         "TagId": 256,
         "ExifType": 3,
-        "Name": "ImageWidth",
-        "Description": ""
+        "Name": "Image Width",
+        "Description": "Number of columns of image data, equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
       {
-        "StringValue": "ImageHeight = 72",
+        "StringValue": "Image Height = 72",
         "IsArray": false,
         "TagId": 257,
         "ExifType": 3,
-        "Name": "ImageHeight",
-        "Description": ""
+        "Name": "Image Height",
+        "Description": "Number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
       {
-        "StringValue": "BitsPerSample = 8 / 8 / 8",
+        "StringValue": "Bits Per Sample = 8 / 8 / 8",
         "IsArray": true,
         "TagId": 258,
         "ExifType": 3,
-        "Name": "BitsPerSample",
-        "Description": ""
+        "Name": "Bits Per Sample",
+        "Description": "Number of bits per image component"
       },
       {
         "StringValue": "Compression = 1",
@@ -1233,87 +1233,87 @@
         "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
-        "Description": ""
+        "Description": "Compression scheme used for the image data"
       },
       {
-        "StringValue": "PhotometricInterpretation = 2",
+        "StringValue": "Photometric Interpretation = 2",
         "IsArray": false,
         "TagId": 262,
         "ExifType": 3,
-        "Name": "PhotometricInterpretation",
-        "Description": ""
+        "Name": "Photometric Interpretation",
+        "Description": "The pixel composition"
       },
       {
-        "StringValue": "StripOffsets = 60817408",
+        "StringValue": "Strip Offsets = 60817408",
         "IsArray": false,
         "TagId": 273,
         "ExifType": 6,
-        "Name": "StripOffsets",
-        "Description": ""
+        "Name": "Strip Offsets",
+        "Description": "For each strip, the byte offset of that strip"
       },
       {
-        "StringValue": "SamplesPerPixel = 3",
+        "StringValue": "Samples Per Pixel = 3",
         "IsArray": false,
         "TagId": 277,
         "ExifType": 3,
-        "Name": "SamplesPerPixel",
-        "Description": ""
+        "Name": "Samples Per Pixel",
+        "Description": "Number of components per pixel; since this standard applies to RGB and YCbCr images, the value set for this tag is 3"
       },
       {
-        "StringValue": "RowsPerStrip = 4718592",
+        "StringValue": "Rows Per Strip = 4718592",
         "IsArray": false,
         "TagId": 278,
         "ExifType": 6,
-        "Name": "RowsPerStrip",
-        "Description": ""
+        "Name": "Rows Per Strip",
+        "Description": "Number of rows in the image per strip when an image is divided into strips"
       },
       {
-        "StringValue": "StripByteCounts = 1358954496",
+        "StringValue": "Strip Byte Counts = 1358954496",
         "IsArray": false,
         "TagId": 279,
         "ExifType": 6,
-        "Name": "StripByteCounts",
-        "Description": ""
+        "Name": "Strip Byte Counts",
+        "Description": "Total number of bytes in each strip"
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "ExposureTime = 1/30 (0.03333333333333333D)",
+        "StringValue": "Exposure Time = 1/30 (0.03333333333333333D)",
         "IsArray": false,
         "TagId": 33434,
         "ExifType": 10,
-        "Name": "ExposureTime",
-        "Description": ""
+        "Name": "Exposure Time",
+        "Description": "Exposure time in seconds"
       },
       {
-        "StringValue": "FNumber = 40/10 (4D)",
+        "StringValue": "F Number = 40/10 (4D)",
         "IsArray": false,
         "TagId": 33437,
         "ExifType": 10,
-        "Name": "FNumber",
-        "Description": ""
+        "Name": "F Number",
+        "Description": "Camera F number"
       },
       {
         "StringValue": "PhotoExifVersion = 48 / 49 / 49 / 48",
@@ -1464,36 +1464,36 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 192/1 (192D)",
+        "StringValue": "Horizontal Resolution = 192/1 (192D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 192/1 (192D)",
+        "StringValue": "Vertical Resolution = 192/1 (192D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "YCbCrPositioning = 1",
+        "StringValue": "YCbCr Positioning = 1",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
         "StringValue": "Copyright = KODAK DC240 ZOOM DIGITAL CAMERA ",
@@ -1501,7 +1501,7 @@
         "TagId": 33432,
         "ExifType": 2,
         "Name": "Copyright",
-        "Description": ""
+        "Description": "Indicates both the photographer and editor copyrights; it is the copyright notice of the person or organization claiming rights to the image"
       },
       {
         "StringValue": "Compression = 6",
@@ -1509,7 +1509,7 @@
         "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
-        "Description": ""
+        "Description": "Compression scheme used for the image data"
       },
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
@@ -1520,60 +1520,60 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "JPEGInterchangeFormat = 1480",
+        "StringValue": "JPEG Interchange Format = 1480",
         "IsArray": false,
         "TagId": 513,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormat",
-        "Description": ""
+        "Name": "JPEG Interchange Format",
+        "Description": "Offset to the start byte of the JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "JPEGInterchangeFormatLength = 6934",
+        "StringValue": "JPEG Interchange Format Length = 6934",
         "IsArray": false,
         "TagId": 514,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormatLength",
-        "Description": ""
+        "Name": "JPEG Interchange Format Length",
+        "Description": "Number of bytes of JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "ExposureTime = 1/30 (0.03333333333333333D)",
+        "StringValue": "Exposure Time = 1/30 (0.03333333333333333D)",
         "IsArray": false,
         "TagId": 33434,
         "ExifType": 10,
-        "Name": "ExposureTime",
-        "Description": ""
+        "Name": "Exposure Time",
+        "Description": "Exposure time in seconds"
       },
       {
-        "StringValue": "FNumber = 4/1 (4D)",
+        "StringValue": "F Number = 4/1 (4D)",
         "IsArray": false,
         "TagId": 33437,
         "ExifType": 10,
-        "Name": "FNumber",
-        "Description": ""
+        "Name": "F Number",
+        "Description": "Camera F number"
       },
       {
         "StringValue": "PhotoExifVersion = 48 / 50 / 49 / 48",
@@ -1720,18 +1720,18 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoSensingMethod = 2",
+        "StringValue": "PhotoSensingMethod = 2 (One-chip color area)",
         "IsArray": false,
         "TagId": 41495,
-        "ExifType": 3,
+        "ExifType": 13,
         "Name": "PhotoSensingMethod",
         "Description": ""
       },
       {
-        "StringValue": "PhotoFileSource = 3",
+        "StringValue": "PhotoFileSource = 768 ()",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 1,
+        "ExifType": 13,
         "Name": "PhotoFileSource",
         "Description": ""
       },
@@ -1798,28 +1798,28 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 300/1 (300D)",
+        "StringValue": "Horizontal Resolution = 300/1 (300D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 300/1 (300D)",
+        "StringValue": "Vertical Resolution = 300/1 (300D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
         "StringValue": "Software = v981-79",
@@ -1827,23 +1827,23 @@
         "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
-        "Description": ""
+        "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
       },
       {
         "IsArray": false,
-        "StringValue": "DateTime = 06/04/2001 11:51:40",
+        "StringValue": "Date Time = 06/04/2001 11:51:40",
         "TagId": 306,
         "ExifType": 12,
-        "Name": "DateTime",
-        "Description": ""
+        "Name": "Date Time",
+        "Description": "Date and time of image creation or when last modified"
       },
       {
-        "StringValue": "YCbCrPositioning = 2",
+        "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
         "StringValue": "Compression = 6",
@@ -1851,63 +1851,63 @@
         "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
-        "Description": ""
+        "Description": "Compression scheme used for the image data"
       },
       {
-        "StringValue": "XResolution = 300/1 (300D)",
+        "StringValue": "Horizontal Resolution = 300/1 (300D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 300/1 (300D)",
+        "StringValue": "Vertical Resolution = 300/1 (300D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "JPEGInterchangeFormat = 2036",
+        "StringValue": "JPEG Interchange Format = 2036",
         "IsArray": false,
         "TagId": 513,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormat",
-        "Description": ""
+        "Name": "JPEG Interchange Format",
+        "Description": "Offset to the start byte of the JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "JPEGInterchangeFormatLength = 4662",
+        "StringValue": "JPEG Interchange Format Length = 4662",
         "IsArray": false,
         "TagId": 514,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormatLength",
-        "Description": ""
+        "Name": "JPEG Interchange Format Length",
+        "Description": "Number of bytes of JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "ExposureTime = 10/770 (0.012987012987012988D)",
+        "StringValue": "Exposure Time = 10/770 (0.012987012987012988D)",
         "IsArray": false,
         "TagId": 33434,
         "ExifType": 10,
-        "Name": "ExposureTime",
-        "Description": ""
+        "Name": "Exposure Time",
+        "Description": "Exposure time in seconds"
       },
       {
-        "StringValue": "FNumber = 55/10 (5.5D)",
+        "StringValue": "F Number = 55/10 (5.5D)",
         "IsArray": false,
         "TagId": 33437,
         "ExifType": 10,
-        "Name": "FNumber",
-        "Description": ""
+        "Name": "F Number",
+        "Description": "Camera F number"
       },
       {
         "StringValue": "ExposureProgram = 2",
@@ -2062,10 +2062,10 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoFileSource = 3",
+        "StringValue": "PhotoFileSource = 3 (Digital Camera)",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 1,
+        "ExifType": 13,
         "Name": "PhotoFileSource",
         "Description": ""
       },
@@ -2132,28 +2132,28 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
         "StringValue": "Software = OLYMPUS CAMEDIA Master",
@@ -2161,23 +2161,23 @@
         "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
-        "Description": ""
+        "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
       },
       {
         "IsArray": false,
-        "StringValue": "DateTime = 08/11/2000 20:14:38",
+        "StringValue": "Date Time = 08/11/2000 20:14:38",
         "TagId": 306,
         "ExifType": 12,
-        "Name": "DateTime",
-        "Description": ""
+        "Name": "Date Time",
+        "Description": "Date and time of image creation or when last modified"
       },
       {
-        "StringValue": "YCbCrPositioning = 2",
+        "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
         "StringValue": "Compression = 6",
@@ -2185,63 +2185,63 @@
         "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
-        "Description": ""
+        "Description": "Compression scheme used for the image data"
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "JPEGInterchangeFormat = 2012",
+        "StringValue": "JPEG Interchange Format = 2012",
         "IsArray": false,
         "TagId": 513,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormat",
-        "Description": ""
+        "Name": "JPEG Interchange Format",
+        "Description": "Offset to the start byte of the JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "JPEGInterchangeFormatLength = 5145",
+        "StringValue": "JPEG Interchange Format Length = 5145",
         "IsArray": false,
         "TagId": 514,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormatLength",
-        "Description": ""
+        "Name": "JPEG Interchange Format Length",
+        "Description": "Number of bytes of JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "ExposureTime = 1/345 (0.002898550724637681D)",
+        "StringValue": "Exposure Time = 1/345 (0.002898550724637681D)",
         "IsArray": false,
         "TagId": 33434,
         "ExifType": 10,
-        "Name": "ExposureTime",
-        "Description": ""
+        "Name": "Exposure Time",
+        "Description": "Exposure time in seconds"
       },
       {
-        "StringValue": "FNumber = 80/10 (8D)",
+        "StringValue": "F Number = 80/10 (8D)",
         "IsArray": false,
         "TagId": 33437,
         "ExifType": 10,
-        "Name": "FNumber",
-        "Description": ""
+        "Name": "F Number",
+        "Description": "Camera F number"
       },
       {
         "StringValue": "ExposureProgram = 2",
@@ -2396,10 +2396,10 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoFileSource = 3",
+        "StringValue": "PhotoFileSource = 3 (Digital Camera)",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 1,
+        "ExifType": 13,
         "Name": "PhotoFileSource",
         "Description": ""
       },
@@ -2458,36 +2458,36 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "YCbCrPositioning = 2",
+        "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
         "StringValue": "Copyright = (C) by RDC-5300 User     ",
@@ -2495,7 +2495,7 @@
         "TagId": 33432,
         "ExifType": 2,
         "Name": "Copyright",
-        "Description": ""
+        "Description": "Indicates both the photographer and editor copyrights; it is the copyright notice of the person or organization claiming rights to the image"
       },
       {
         "StringValue": "Compression = 6",
@@ -2503,47 +2503,47 @@
         "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
-        "Description": ""
+        "Description": "Compression scheme used for the image data"
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "JPEGInterchangeFormat = 1061",
+        "StringValue": "JPEG Interchange Format = 1061",
         "IsArray": false,
         "TagId": 513,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormat",
-        "Description": ""
+        "Name": "JPEG Interchange Format",
+        "Description": "Offset to the start byte of the JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "JPEGInterchangeFormatLength = 5046",
+        "StringValue": "JPEG Interchange Format Length = 5046",
         "IsArray": false,
         "TagId": 514,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormatLength",
-        "Description": ""
+        "Name": "JPEG Interchange Format Length",
+        "Description": "Number of bytes of JPEG compressed thumbnail data"
       },
       {
         "StringValue": "PhotoExifVersion = 48 / 50 / 49 / 48",
@@ -2760,28 +2760,28 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
         "StringValue": "Software = V06P-74",
@@ -2789,23 +2789,23 @@
         "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
-        "Description": ""
+        "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
       },
       {
         "IsArray": false,
-        "StringValue": "DateTime = 01/01/1998 00:00:00",
+        "StringValue": "Date Time = 01/01/1998 00:00:00",
         "TagId": 306,
         "ExifType": 12,
-        "Name": "DateTime",
-        "Description": ""
+        "Name": "Date Time",
+        "Description": "Date and time of image creation or when last modified"
       },
       {
-        "StringValue": "YCbCrPositioning = 2",
+        "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
         "StringValue": "Compression = 6",
@@ -2813,63 +2813,63 @@
         "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
-        "Description": ""
+        "Description": "Compression scheme used for the image data"
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "JPEGInterchangeFormat = 877",
+        "StringValue": "JPEG Interchange Format = 877",
         "IsArray": false,
         "TagId": 513,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormat",
-        "Description": ""
+        "Name": "JPEG Interchange Format",
+        "Description": "Offset to the start byte of the JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "JPEGInterchangeFormatLength = 3602",
+        "StringValue": "JPEG Interchange Format Length = 3602",
         "IsArray": false,
         "TagId": 514,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormatLength",
-        "Description": ""
+        "Name": "JPEG Interchange Format Length",
+        "Description": "Number of bytes of JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "ExposureTime = 1/171 (0.005847953216374269D)",
+        "StringValue": "Exposure Time = 1/171 (0.005847953216374269D)",
         "IsArray": false,
         "TagId": 33434,
         "ExifType": 10,
-        "Name": "ExposureTime",
-        "Description": ""
+        "Name": "Exposure Time",
+        "Description": "Exposure time in seconds"
       },
       {
-        "StringValue": "FNumber = 80/10 (8D)",
+        "StringValue": "F Number = 80/10 (8D)",
         "IsArray": false,
         "TagId": 33437,
         "ExifType": 10,
-        "Name": "FNumber",
-        "Description": ""
+        "Name": "F Number",
+        "Description": "Camera F number"
       },
       {
         "StringValue": "PhotoExifVersion = 48 / 50 / 48 / 48",
@@ -3008,10 +3008,10 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoFileSource = 3",
+        "StringValue": "PhotoFileSource = 3 (Digital Camera)",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 1,
+        "ExifType": 13,
         "Name": "PhotoFileSource",
         "Description": ""
       }
@@ -3052,28 +3052,28 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
         "StringValue": "Software = V113p-73",
@@ -3081,23 +3081,23 @@
         "TagId": 305,
         "ExifType": 2,
         "Name": "Software",
-        "Description": ""
+        "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
       },
       {
         "IsArray": false,
-        "StringValue": "DateTime = 18/11/2000 21:14:19",
+        "StringValue": "Date Time = 18/11/2000 21:14:19",
         "TagId": 306,
         "ExifType": 12,
-        "Name": "DateTime",
-        "Description": ""
+        "Name": "Date Time",
+        "Description": "Date and time of image creation or when last modified"
       },
       {
-        "StringValue": "YCbCrPositioning = 2",
+        "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
         "StringValue": "Compression = 6",
@@ -3105,63 +3105,63 @@
         "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
-        "Description": ""
+        "Description": "Compression scheme used for the image data"
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "JPEGInterchangeFormat = 1070",
+        "StringValue": "JPEG Interchange Format = 1070",
         "IsArray": false,
         "TagId": 513,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormat",
-        "Description": ""
+        "Name": "JPEG Interchange Format",
+        "Description": "Offset to the start byte of the JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "JPEGInterchangeFormatLength = 13234",
+        "StringValue": "JPEG Interchange Format Length = 13234",
         "IsArray": false,
         "TagId": 514,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormatLength",
-        "Description": ""
+        "Name": "JPEG Interchange Format Length",
+        "Description": "Number of bytes of JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "ExposureTime = 10/483 (0.020703933747412008D)",
+        "StringValue": "Exposure Time = 10/483 (0.020703933747412008D)",
         "IsArray": false,
         "TagId": 33434,
         "ExifType": 10,
-        "Name": "ExposureTime",
-        "Description": ""
+        "Name": "Exposure Time",
+        "Description": "Exposure time in seconds"
       },
       {
-        "StringValue": "FNumber = 24/10 (2.4D)",
+        "StringValue": "F Number = 24/10 (2.4D)",
         "IsArray": false,
         "TagId": 33437,
         "ExifType": 10,
-        "Name": "FNumber",
-        "Description": ""
+        "Name": "F Number",
+        "Description": "Camera F number"
       },
       {
         "StringValue": "ISOSpeedRatings = 400",
@@ -3308,10 +3308,10 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoFileSource = 3",
+        "StringValue": "PhotoFileSource = 3 (Digital Camera)",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 1,
+        "ExifType": 13,
         "Name": "PhotoFileSource",
         "Description": ""
       }
@@ -3370,44 +3370,44 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
         "IsArray": false,
-        "StringValue": "DateTime = 30/09/2000 10:59:45",
+        "StringValue": "Date Time = 30/09/2000 10:59:45",
         "TagId": 306,
         "ExifType": 12,
-        "Name": "DateTime",
-        "Description": ""
+        "Name": "Date Time",
+        "Description": "Date and time of image creation or when last modified"
       },
       {
-        "StringValue": "YCbCrPositioning = 2",
+        "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
         "StringValue": "Compression = 6",
@@ -3415,7 +3415,7 @@
         "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
-        "Description": ""
+        "Description": "Compression scheme used for the image data"
       },
       {
         "StringValue": "Camera Make = SONY",
@@ -3442,68 +3442,68 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
         "IsArray": false,
-        "StringValue": "DateTime = 30/09/2000 10:59:45",
+        "StringValue": "Date Time = 30/09/2000 10:59:45",
         "TagId": 306,
         "ExifType": 12,
-        "Name": "DateTime",
-        "Description": ""
+        "Name": "Date Time",
+        "Description": "Date and time of image creation or when last modified"
       },
       {
-        "StringValue": "JPEGInterchangeFormat = 797",
+        "StringValue": "JPEG Interchange Format = 797",
         "IsArray": false,
         "TagId": 513,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormat",
-        "Description": ""
+        "Name": "JPEG Interchange Format",
+        "Description": "Offset to the start byte of the JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "JPEGInterchangeFormatLength = 2959",
+        "StringValue": "JPEG Interchange Format Length = 2959",
         "IsArray": false,
         "TagId": 514,
         "ExifType": 5,
-        "Name": "JPEGInterchangeFormatLength",
-        "Description": ""
+        "Name": "JPEG Interchange Format Length",
+        "Description": "Number of bytes of JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "ExposureTime = 1/197 (0.005076142131979695D)",
+        "StringValue": "Exposure Time = 1/197 (0.005076142131979695D)",
         "IsArray": false,
         "TagId": 33434,
         "ExifType": 10,
-        "Name": "ExposureTime",
-        "Description": ""
+        "Name": "Exposure Time",
+        "Description": "Exposure time in seconds"
       },
       {
-        "StringValue": "FNumber = 40/10 (4D)",
+        "StringValue": "F Number = 40/10 (4D)",
         "IsArray": false,
         "TagId": 33437,
         "ExifType": 10,
-        "Name": "FNumber",
-        "Description": ""
+        "Name": "F Number",
+        "Description": "Camera F number"
       },
       {
         "StringValue": "ExposureProgram = 2",
@@ -3642,10 +3642,10 @@
         "Description": ""
       },
       {
-        "StringValue": "PhotoFileSource = 3",
+        "StringValue": "PhotoFileSource = 3 (Digital Camera)",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 1,
+        "ExifType": 13,
         "Name": "PhotoFileSource",
         "Description": ""
       },
@@ -3712,68 +3712,68 @@
         "Description": ""
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
         "IsArray": false,
-        "StringValue": "DateTime = 01/12/1998 14:22:36",
+        "StringValue": "Date Time = 01/12/1998 14:22:36",
         "TagId": 306,
         "ExifType": 12,
-        "Name": "DateTime",
-        "Description": ""
+        "Name": "Date Time",
+        "Description": "Date and time of image creation or when last modified"
       },
       {
-        "StringValue": "YCbCrPositioning = 1",
+        "StringValue": "YCbCr Positioning = 1",
         "IsArray": false,
         "TagId": 531,
         "ExifType": 3,
-        "Name": "YCbCrPositioning",
-        "Description": ""
+        "Name": "YCbCr Positioning",
+        "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
-        "StringValue": "ImageWidth = 0",
+        "StringValue": "Image Width = 0",
         "IsArray": false,
         "TagId": 256,
         "ExifType": 3,
-        "Name": "ImageWidth",
-        "Description": ""
+        "Name": "Image Width",
+        "Description": "Number of columns of image data, equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
       {
-        "StringValue": "ImageHeight = 0",
+        "StringValue": "Image Height = 0",
         "IsArray": false,
         "TagId": 257,
         "ExifType": 3,
-        "Name": "ImageHeight",
-        "Description": ""
+        "Name": "Image Height",
+        "Description": "Number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
       {
-        "StringValue": "BitsPerSample = 8 / 8 / 8",
+        "StringValue": "Bits Per Sample = 8 / 8 / 8",
         "IsArray": true,
         "TagId": 258,
         "ExifType": 3,
-        "Name": "BitsPerSample",
-        "Description": ""
+        "Name": "Bits Per Sample",
+        "Description": "Number of bits per image component"
       },
       {
         "StringValue": "Compression = 1",
@@ -3781,71 +3781,71 @@
         "TagId": 259,
         "ExifType": 3,
         "Name": "Compression",
-        "Description": ""
+        "Description": "Compression scheme used for the image data"
       },
       {
-        "StringValue": "PhotometricInterpretation = 2",
+        "StringValue": "Photometric Interpretation = 2",
         "IsArray": false,
         "TagId": 262,
         "ExifType": 3,
-        "Name": "PhotometricInterpretation",
-        "Description": ""
+        "Name": "Photometric Interpretation",
+        "Description": "The pixel composition"
       },
       {
-        "StringValue": "StripOffsets = 648",
+        "StringValue": "Strip Offsets = 648",
         "IsArray": false,
         "TagId": 273,
         "ExifType": 6,
-        "Name": "StripOffsets",
-        "Description": ""
+        "Name": "Strip Offsets",
+        "Description": "For each strip, the byte offset of that strip"
       },
       {
-        "StringValue": "SamplesPerPixel = 3",
+        "StringValue": "Samples Per Pixel = 3",
         "IsArray": false,
         "TagId": 277,
         "ExifType": 3,
-        "Name": "SamplesPerPixel",
-        "Description": ""
+        "Name": "Samples Per Pixel",
+        "Description": "Number of components per pixel; since this standard applies to RGB and YCbCr images, the value set for this tag is 3"
       },
       {
-        "StringValue": "RowsPerStrip = 60",
+        "StringValue": "Rows Per Strip = 60",
         "IsArray": false,
         "TagId": 278,
         "ExifType": 6,
-        "Name": "RowsPerStrip",
-        "Description": ""
+        "Name": "Rows Per Strip",
+        "Description": "Number of rows in the image per strip when an image is divided into strips"
       },
       {
-        "StringValue": "StripByteCounts = 14400",
+        "StringValue": "Strip Byte Counts = 14400",
         "IsArray": false,
         "TagId": 279,
         "ExifType": 6,
-        "Name": "StripByteCounts",
-        "Description": ""
+        "Name": "Strip Byte Counts",
+        "Description": "Total number of bytes in each strip"
       },
       {
-        "StringValue": "XResolution = 72/1 (72D)",
+        "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
         "ExifType": 10,
-        "Name": "XResolution",
-        "Description": ""
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "YResolution = 72/1 (72D)",
+        "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
         "ExifType": 10,
-        "Name": "YResolution",
-        "Description": ""
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
       },
       {
-        "StringValue": "ResolutionUnit = 2 (inches)",
+        "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
         "ExifType": 13,
-        "Name": "ResolutionUnit",
-        "Description": ""
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
         "StringValue": "ExposureProgram = 3",
