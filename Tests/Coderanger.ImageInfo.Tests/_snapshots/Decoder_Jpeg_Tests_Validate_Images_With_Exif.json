@@ -21,7 +21,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -29,7 +29,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -37,7 +37,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -45,7 +45,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -61,7 +61,7 @@
         "IsArray": false,
         "StringValue": "Date Time = 12/04/2001 20:33:14",
         "TagId": 306,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "Date Time",
         "Description": "Date and time of image creation or when last modified"
       },
@@ -93,7 +93,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -101,7 +101,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -109,7 +109,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -117,7 +117,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -149,7 +149,7 @@
         "StringValue": "F Number = 42/10 (4.2D)",
         "IsArray": false,
         "TagId": 33437,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "F Number",
         "Description": "Camera F number"
       },
@@ -181,7 +181,7 @@
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 12/04/2001 20:33:14",
         "TagId": 36867,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "DateTimeOriginal",
         "Description": ""
       },
@@ -189,7 +189,7 @@
         "IsArray": false,
         "StringValue": "PhotoDateTimeDigitized = 12/04/2001 20:33:14",
         "TagId": 36868,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "PhotoDateTimeDigitized",
         "Description": ""
       },
@@ -205,7 +205,7 @@
         "StringValue": "CompressedBitsPerPixel = 14/10 (1.4D)",
         "IsArray": false,
         "TagId": 37122,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "CompressedBitsPerPixel",
         "Description": ""
       },
@@ -213,7 +213,7 @@
         "StringValue": "ShutterSpeedValue = 66/10 (6.6D)",
         "IsArray": false,
         "TagId": 37377,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ShutterSpeedValue",
         "Description": ""
       },
@@ -221,7 +221,7 @@
         "StringValue": "ApertureValue = 41/10 (4.1D)",
         "IsArray": false,
         "TagId": 37378,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "ApertureValue",
         "Description": ""
       },
@@ -229,7 +229,7 @@
         "StringValue": "BrightnessValue = -27/10 (-2.7D)",
         "IsArray": false,
         "TagId": 37379,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "BrightnessValue",
         "Description": ""
       },
@@ -237,7 +237,7 @@
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
         "TagId": 37380,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ExposureBiasValue",
         "Description": ""
       },
@@ -245,7 +245,7 @@
         "StringValue": "MaxApertureValue = 41/10 (4.1D)",
         "IsArray": false,
         "TagId": 37381,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "MaxApertureValue",
         "Description": ""
       },
@@ -253,7 +253,7 @@
         "StringValue": "MeteringMode = 5 (Multi-segment)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -269,7 +269,7 @@
         "StringValue": "FocalLength = 58/10 (5.8D)",
         "IsArray": false,
         "TagId": 37386,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "FocalLength",
         "Description": ""
       },
@@ -309,7 +309,7 @@
         "StringValue": "PhotoFocalPlaneXResolution = 2151/1 (2151D)",
         "IsArray": false,
         "TagId": 41486,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "PhotoFocalPlaneXResolution",
         "Description": ""
       },
@@ -317,7 +317,7 @@
         "StringValue": "PhotoFocalPlaneYResolution = 2151/1 (2151D)",
         "IsArray": false,
         "TagId": 41487,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "PhotoFocalPlaneYResolution",
         "Description": ""
       },
@@ -333,7 +333,7 @@
         "StringValue": "PhotoSensingMethod = 2 (One-chip color area)",
         "IsArray": false,
         "TagId": 41495,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "PhotoSensingMethod",
         "Description": ""
       },
@@ -341,7 +341,7 @@
         "StringValue": "PhotoFileSource = 3 (Digital Camera)",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "PhotoFileSource",
         "Description": ""
       },
@@ -395,7 +395,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -403,7 +403,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -411,7 +411,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -419,7 +419,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -435,7 +435,7 @@
         "IsArray": false,
         "StringValue": "Date Time = 04/08/2000 18:22:57",
         "TagId": 306,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "Date Time",
         "Description": "Date and time of image creation or when last modified"
       },
@@ -467,7 +467,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -475,7 +475,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -483,7 +483,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -491,7 +491,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -523,7 +523,7 @@
         "StringValue": "F Number = 280/100 (2.8D)",
         "IsArray": false,
         "TagId": 33437,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "F Number",
         "Description": "Camera F number"
       },
@@ -555,7 +555,7 @@
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 04/08/2000 18:22:57",
         "TagId": 36867,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "DateTimeOriginal",
         "Description": ""
       },
@@ -563,7 +563,7 @@
         "IsArray": false,
         "StringValue": "PhotoDateTimeDigitized = 04/08/2000 18:22:57",
         "TagId": 36868,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "PhotoDateTimeDigitized",
         "Description": ""
       },
@@ -579,7 +579,7 @@
         "StringValue": "CompressedBitsPerPixel = 15/10 (1.5D)",
         "IsArray": false,
         "TagId": 37122,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "CompressedBitsPerPixel",
         "Description": ""
       },
@@ -587,7 +587,7 @@
         "StringValue": "ShutterSpeedValue = 550/100 (5.5D)",
         "IsArray": false,
         "TagId": 37377,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ShutterSpeedValue",
         "Description": ""
       },
@@ -595,7 +595,7 @@
         "StringValue": "ApertureValue = 300/100 (3D)",
         "IsArray": false,
         "TagId": 37378,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "ApertureValue",
         "Description": ""
       },
@@ -603,7 +603,7 @@
         "StringValue": "BrightnessValue = 26/100 (0.26D)",
         "IsArray": false,
         "TagId": 37379,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "BrightnessValue",
         "Description": ""
       },
@@ -611,7 +611,7 @@
         "StringValue": "ExposureBiasValue = 0/100 (0D)",
         "IsArray": false,
         "TagId": 37380,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ExposureBiasValue",
         "Description": ""
       },
@@ -619,7 +619,7 @@
         "StringValue": "MaxApertureValue = 300/100 (3D)",
         "IsArray": false,
         "TagId": 37381,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "MaxApertureValue",
         "Description": ""
       },
@@ -627,7 +627,7 @@
         "StringValue": "MeteringMode = 5 (Multi-segment)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -643,7 +643,7 @@
         "StringValue": "FocalLength = 870/100 (8.7D)",
         "IsArray": false,
         "TagId": 37386,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "FocalLength",
         "Description": ""
       },
@@ -691,7 +691,7 @@
         "StringValue": "PhotoFocalPlaneXResolution = 2381/1 (2381D)",
         "IsArray": false,
         "TagId": 41486,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "PhotoFocalPlaneXResolution",
         "Description": ""
       },
@@ -699,7 +699,7 @@
         "StringValue": "PhotoFocalPlaneYResolution = 2381/1 (2381D)",
         "IsArray": false,
         "TagId": 41487,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "PhotoFocalPlaneYResolution",
         "Description": ""
       },
@@ -715,7 +715,7 @@
         "StringValue": "PhotoSensingMethod = 2 (One-chip color area)",
         "IsArray": false,
         "TagId": 41495,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "PhotoSensingMethod",
         "Description": ""
       },
@@ -723,7 +723,7 @@
         "StringValue": "PhotoFileSource = 768 ()",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "PhotoFileSource",
         "Description": ""
       },
@@ -777,7 +777,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -785,7 +785,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -793,7 +793,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -801,7 +801,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -817,7 +817,7 @@
         "IsArray": false,
         "StringValue": "Date Time = 02/09/2000 14:30:10",
         "TagId": 306,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "Date Time",
         "Description": "Date and time of image creation or when last modified"
       },
@@ -849,7 +849,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -857,7 +857,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -865,7 +865,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -873,7 +873,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -905,7 +905,7 @@
         "StringValue": "F Number = 70/10 (7D)",
         "IsArray": false,
         "TagId": 33437,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "F Number",
         "Description": "Camera F number"
       },
@@ -937,7 +937,7 @@
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 02/09/2000 14:30:10",
         "TagId": 36867,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "DateTimeOriginal",
         "Description": ""
       },
@@ -945,7 +945,7 @@
         "IsArray": false,
         "StringValue": "PhotoDateTimeDigitized = 02/09/2000 14:30:10",
         "TagId": 36868,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "PhotoDateTimeDigitized",
         "Description": ""
       },
@@ -961,7 +961,7 @@
         "StringValue": "CompressedBitsPerPixel = 2/1 (2D)",
         "IsArray": false,
         "TagId": 37122,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "CompressedBitsPerPixel",
         "Description": ""
       },
@@ -969,7 +969,7 @@
         "StringValue": "ShutterSpeedValue = 74/10 (7.4D)",
         "IsArray": false,
         "TagId": 37377,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ShutterSpeedValue",
         "Description": ""
       },
@@ -977,7 +977,7 @@
         "StringValue": "ApertureValue = 56/10 (5.6D)",
         "IsArray": false,
         "TagId": 37378,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "ApertureValue",
         "Description": ""
       },
@@ -985,7 +985,7 @@
         "StringValue": "BrightnessValue = 76/10 (7.6D)",
         "IsArray": false,
         "TagId": 37379,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "BrightnessValue",
         "Description": ""
       },
@@ -993,7 +993,7 @@
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
         "TagId": 37380,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ExposureBiasValue",
         "Description": ""
       },
@@ -1001,7 +1001,7 @@
         "StringValue": "MaxApertureValue = 33/10 (3.3D)",
         "IsArray": false,
         "TagId": 37381,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "MaxApertureValue",
         "Description": ""
       },
@@ -1009,7 +1009,7 @@
         "StringValue": "MeteringMode = 5 (Multi-segment)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -1025,7 +1025,7 @@
         "StringValue": "FocalLength = 99/10 (9.9D)",
         "IsArray": false,
         "TagId": 37386,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "FocalLength",
         "Description": ""
       },
@@ -1065,7 +1065,7 @@
         "StringValue": "PhotoFocalPlaneXResolution = 1087/1 (1087D)",
         "IsArray": false,
         "TagId": 41486,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "PhotoFocalPlaneXResolution",
         "Description": ""
       },
@@ -1073,7 +1073,7 @@
         "StringValue": "PhotoFocalPlaneYResolution = 1087/1 (1087D)",
         "IsArray": false,
         "TagId": 41487,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "PhotoFocalPlaneYResolution",
         "Description": ""
       },
@@ -1089,7 +1089,7 @@
         "StringValue": "PhotoSensingMethod = 2 (One-chip color area)",
         "IsArray": false,
         "TagId": 41495,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "PhotoSensingMethod",
         "Description": ""
       },
@@ -1097,7 +1097,7 @@
         "StringValue": "PhotoFileSource = 3 (Digital Camera)",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "PhotoFileSource",
         "Description": ""
       },
@@ -1159,7 +1159,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -1167,7 +1167,7 @@
         "StringValue": "Horizontal Resolution = 216/1 (216D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1175,7 +1175,7 @@
         "StringValue": "Vertical Resolution = 216/1 (216D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1183,7 +1183,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -1279,7 +1279,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1287,7 +1287,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1295,7 +1295,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -1303,7 +1303,7 @@
         "StringValue": "Exposure Time = 1/30 (0.03333333333333333D)",
         "IsArray": false,
         "TagId": 33434,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Exposure Time",
         "Description": "Exposure time in seconds"
       },
@@ -1311,7 +1311,7 @@
         "StringValue": "F Number = 40/10 (4D)",
         "IsArray": false,
         "TagId": 33437,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "F Number",
         "Description": "Camera F number"
       },
@@ -1327,7 +1327,7 @@
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 26/10/2000 16:46:51",
         "TagId": 36867,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "DateTimeOriginal",
         "Description": ""
       },
@@ -1343,7 +1343,7 @@
         "StringValue": "CompressedBitsPerPixel = 0/0 (NaND)",
         "IsArray": false,
         "TagId": 37122,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "CompressedBitsPerPixel",
         "Description": ""
       },
@@ -1351,7 +1351,7 @@
         "StringValue": "ShutterSpeedValue = 50/10 (5D)",
         "IsArray": false,
         "TagId": 37377,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ShutterSpeedValue",
         "Description": ""
       },
@@ -1359,7 +1359,7 @@
         "StringValue": "ApertureValue = 40/10 (4D)",
         "IsArray": false,
         "TagId": 37378,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "ApertureValue",
         "Description": ""
       },
@@ -1367,7 +1367,7 @@
         "StringValue": "BrightnessValue = 15/10 (1.5D)",
         "IsArray": false,
         "TagId": 37379,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "BrightnessValue",
         "Description": ""
       },
@@ -1375,7 +1375,7 @@
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
         "TagId": 37380,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ExposureBiasValue",
         "Description": ""
       },
@@ -1383,7 +1383,7 @@
         "StringValue": "MaxApertureValue = 400/100 (4D)",
         "IsArray": false,
         "TagId": 37381,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "MaxApertureValue",
         "Description": ""
       },
@@ -1391,7 +1391,7 @@
         "StringValue": "SubjectDistance = 0/0 (NaND)",
         "IsArray": false,
         "TagId": 37382,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "SubjectDistance",
         "Description": ""
       },
@@ -1399,7 +1399,7 @@
         "StringValue": "MeteringMode = 2 (Center-weighted average)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -1423,7 +1423,7 @@
         "StringValue": "FocalLength = 44/10 (4.4D)",
         "IsArray": false,
         "TagId": 37386,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "FocalLength",
         "Description": ""
       },
@@ -1459,7 +1459,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -1467,7 +1467,7 @@
         "StringValue": "Horizontal Resolution = 192/1 (192D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1475,7 +1475,7 @@
         "StringValue": "Vertical Resolution = 192/1 (192D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1483,7 +1483,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -1515,7 +1515,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -1523,7 +1523,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1531,7 +1531,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1539,7 +1539,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -1563,7 +1563,7 @@
         "StringValue": "Exposure Time = 1/30 (0.03333333333333333D)",
         "IsArray": false,
         "TagId": 33434,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Exposure Time",
         "Description": "Exposure time in seconds"
       },
@@ -1571,7 +1571,7 @@
         "StringValue": "F Number = 4/1 (4D)",
         "IsArray": false,
         "TagId": 33437,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "F Number",
         "Description": "Camera F number"
       },
@@ -1587,7 +1587,7 @@
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 25/05/1999 21:00:09",
         "TagId": 36867,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "DateTimeOriginal",
         "Description": ""
       },
@@ -1595,7 +1595,7 @@
         "IsArray": false,
         "StringValue": "PhotoDateTimeDigitized = 25/05/1999 21:00:09",
         "TagId": 36868,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "PhotoDateTimeDigitized",
         "Description": ""
       },
@@ -1611,7 +1611,7 @@
         "StringValue": "ShutterSpeedValue = 50/10 (5D)",
         "IsArray": false,
         "TagId": 37377,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ShutterSpeedValue",
         "Description": ""
       },
@@ -1619,7 +1619,7 @@
         "StringValue": "ApertureValue = 40/10 (4D)",
         "IsArray": false,
         "TagId": 37378,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "ApertureValue",
         "Description": ""
       },
@@ -1627,7 +1627,7 @@
         "StringValue": "ExposureBiasValue = 0/100 (0D)",
         "IsArray": false,
         "TagId": 37380,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ExposureBiasValue",
         "Description": ""
       },
@@ -1635,7 +1635,7 @@
         "StringValue": "MaxApertureValue = 38/10 (3.8D)",
         "IsArray": false,
         "TagId": 37381,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "MaxApertureValue",
         "Description": ""
       },
@@ -1643,7 +1643,7 @@
         "StringValue": "MeteringMode = 1 (Average)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -1667,7 +1667,7 @@
         "StringValue": "FocalLength = 140/10 (14D)",
         "IsArray": false,
         "TagId": 37386,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "FocalLength",
         "Description": ""
       },
@@ -1715,7 +1715,7 @@
         "StringValue": "PhotoExposureIndex = 140/1 (140D)",
         "IsArray": false,
         "TagId": 41493,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "PhotoExposureIndex",
         "Description": ""
       },
@@ -1723,7 +1723,7 @@
         "StringValue": "PhotoSensingMethod = 2 (One-chip color area)",
         "IsArray": false,
         "TagId": 41495,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "PhotoSensingMethod",
         "Description": ""
       },
@@ -1731,7 +1731,7 @@
         "StringValue": "PhotoFileSource = 768 ()",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "PhotoFileSource",
         "Description": ""
       },
@@ -1793,7 +1793,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -1801,7 +1801,7 @@
         "StringValue": "Horizontal Resolution = 300/1 (300D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1809,7 +1809,7 @@
         "StringValue": "Vertical Resolution = 300/1 (300D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1817,7 +1817,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -1833,7 +1833,7 @@
         "IsArray": false,
         "StringValue": "Date Time = 06/04/2001 11:51:40",
         "TagId": 306,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "Date Time",
         "Description": "Date and time of image creation or when last modified"
       },
@@ -1857,7 +1857,7 @@
         "StringValue": "Horizontal Resolution = 300/1 (300D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1865,7 +1865,7 @@
         "StringValue": "Vertical Resolution = 300/1 (300D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1873,7 +1873,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -1897,7 +1897,7 @@
         "StringValue": "Exposure Time = 10/770 (0.012987012987012988D)",
         "IsArray": false,
         "TagId": 33434,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Exposure Time",
         "Description": "Exposure time in seconds"
       },
@@ -1905,7 +1905,7 @@
         "StringValue": "F Number = 55/10 (5.5D)",
         "IsArray": false,
         "TagId": 33437,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "F Number",
         "Description": "Camera F number"
       },
@@ -1937,7 +1937,7 @@
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 06/04/2001 11:51:40",
         "TagId": 36867,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "DateTimeOriginal",
         "Description": ""
       },
@@ -1945,7 +1945,7 @@
         "IsArray": false,
         "StringValue": "PhotoDateTimeDigitized = 06/04/2001 11:51:40",
         "TagId": 36868,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "PhotoDateTimeDigitized",
         "Description": ""
       },
@@ -1961,7 +1961,7 @@
         "StringValue": "CompressedBitsPerPixel = 4/1 (4D)",
         "IsArray": false,
         "TagId": 37122,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "CompressedBitsPerPixel",
         "Description": ""
       },
@@ -1969,7 +1969,7 @@
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
         "TagId": 37380,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ExposureBiasValue",
         "Description": ""
       },
@@ -1977,7 +1977,7 @@
         "StringValue": "MaxApertureValue = 26/10 (2.6D)",
         "IsArray": false,
         "TagId": 37381,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "MaxApertureValue",
         "Description": ""
       },
@@ -1985,7 +1985,7 @@
         "StringValue": "MeteringMode = 5 (Multi-segment)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -2009,7 +2009,7 @@
         "StringValue": "FocalLength = 128/10 (12.8D)",
         "IsArray": false,
         "TagId": 37386,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "FocalLength",
         "Description": ""
       },
@@ -2065,7 +2065,7 @@
         "StringValue": "PhotoFileSource = 3 (Digital Camera)",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "PhotoFileSource",
         "Description": ""
       },
@@ -2127,7 +2127,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -2135,7 +2135,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -2143,7 +2143,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -2151,7 +2151,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -2167,7 +2167,7 @@
         "IsArray": false,
         "StringValue": "Date Time = 08/11/2000 20:14:38",
         "TagId": 306,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "Date Time",
         "Description": "Date and time of image creation or when last modified"
       },
@@ -2191,7 +2191,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -2199,7 +2199,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -2207,7 +2207,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -2231,7 +2231,7 @@
         "StringValue": "Exposure Time = 1/345 (0.002898550724637681D)",
         "IsArray": false,
         "TagId": 33434,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Exposure Time",
         "Description": "Exposure time in seconds"
       },
@@ -2239,7 +2239,7 @@
         "StringValue": "F Number = 80/10 (8D)",
         "IsArray": false,
         "TagId": 33437,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "F Number",
         "Description": "Camera F number"
       },
@@ -2271,7 +2271,7 @@
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 07/11/2000 10:41:43",
         "TagId": 36867,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "DateTimeOriginal",
         "Description": ""
       },
@@ -2279,7 +2279,7 @@
         "IsArray": false,
         "StringValue": "PhotoDateTimeDigitized = 07/11/2000 10:41:43",
         "TagId": 36868,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "PhotoDateTimeDigitized",
         "Description": ""
       },
@@ -2295,7 +2295,7 @@
         "StringValue": "CompressedBitsPerPixel = 1/1 (1D)",
         "IsArray": false,
         "TagId": 37122,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "CompressedBitsPerPixel",
         "Description": ""
       },
@@ -2303,7 +2303,7 @@
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
         "TagId": 37380,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ExposureBiasValue",
         "Description": ""
       },
@@ -2311,7 +2311,7 @@
         "StringValue": "MaxApertureValue = 3/1 (3D)",
         "IsArray": false,
         "TagId": 37381,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "MaxApertureValue",
         "Description": ""
       },
@@ -2319,7 +2319,7 @@
         "StringValue": "MeteringMode = 5 (Multi-segment)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -2343,7 +2343,7 @@
         "StringValue": "FocalLength = 56/10 (5.6D)",
         "IsArray": false,
         "TagId": 37386,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "FocalLength",
         "Description": ""
       },
@@ -2399,7 +2399,7 @@
         "StringValue": "PhotoFileSource = 3 (Digital Camera)",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "PhotoFileSource",
         "Description": ""
       },
@@ -2453,7 +2453,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -2461,7 +2461,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -2469,7 +2469,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -2477,7 +2477,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -2509,7 +2509,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -2517,7 +2517,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -2525,7 +2525,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -2557,7 +2557,7 @@
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 31/05/2000 21:50:40",
         "TagId": 36867,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "DateTimeOriginal",
         "Description": ""
       },
@@ -2565,7 +2565,7 @@
         "IsArray": false,
         "StringValue": "PhotoDateTimeDigitized = 31/05/2000 21:50:40",
         "TagId": 36868,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "PhotoDateTimeDigitized",
         "Description": ""
       },
@@ -2581,7 +2581,7 @@
         "StringValue": "CompressedBitsPerPixel = 300/100 (3D)",
         "IsArray": false,
         "TagId": 37122,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "CompressedBitsPerPixel",
         "Description": ""
       },
@@ -2589,7 +2589,7 @@
         "StringValue": "ShutterSpeedValue = 65/10 (6.5D)",
         "IsArray": false,
         "TagId": 37377,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ShutterSpeedValue",
         "Description": ""
       },
@@ -2597,7 +2597,7 @@
         "StringValue": "ApertureValue = 40/10 (4D)",
         "IsArray": false,
         "TagId": 37378,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "ApertureValue",
         "Description": ""
       },
@@ -2605,7 +2605,7 @@
         "StringValue": "BrightnessValue = -20/10 (-2D)",
         "IsArray": false,
         "TagId": 37379,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "BrightnessValue",
         "Description": ""
       },
@@ -2613,7 +2613,7 @@
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
         "TagId": 37380,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ExposureBiasValue",
         "Description": ""
       },
@@ -2621,7 +2621,7 @@
         "StringValue": "MaxApertureValue = 39/10 (3.9D)",
         "IsArray": false,
         "TagId": 37381,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "MaxApertureValue",
         "Description": ""
       },
@@ -2645,7 +2645,7 @@
         "StringValue": "FocalLength = 133/10 (13.3D)",
         "IsArray": false,
         "TagId": 37386,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "FocalLength",
         "Description": ""
       },
@@ -2755,7 +2755,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -2763,7 +2763,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -2771,7 +2771,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -2779,7 +2779,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -2795,7 +2795,7 @@
         "IsArray": false,
         "StringValue": "Date Time = 01/01/1998 00:00:00",
         "TagId": 306,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "Date Time",
         "Description": "Date and time of image creation or when last modified"
       },
@@ -2819,7 +2819,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -2827,7 +2827,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -2835,7 +2835,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -2859,7 +2859,7 @@
         "StringValue": "Exposure Time = 1/171 (0.005847953216374269D)",
         "IsArray": false,
         "TagId": 33434,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Exposure Time",
         "Description": "Exposure time in seconds"
       },
@@ -2867,7 +2867,7 @@
         "StringValue": "F Number = 80/10 (8D)",
         "IsArray": false,
         "TagId": 33437,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "F Number",
         "Description": "Camera F number"
       },
@@ -2883,7 +2883,7 @@
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 01/01/1998 00:00:00",
         "TagId": 36867,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "DateTimeOriginal",
         "Description": ""
       },
@@ -2891,7 +2891,7 @@
         "IsArray": false,
         "StringValue": "PhotoDateTimeDigitized = 01/01/1998 00:00:00",
         "TagId": 36868,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "PhotoDateTimeDigitized",
         "Description": ""
       },
@@ -2907,7 +2907,7 @@
         "StringValue": "CompressedBitsPerPixel = 17/10 (1.7D)",
         "IsArray": false,
         "TagId": 37122,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "CompressedBitsPerPixel",
         "Description": ""
       },
@@ -2915,7 +2915,7 @@
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
         "TagId": 37380,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ExposureBiasValue",
         "Description": ""
       },
@@ -2923,7 +2923,7 @@
         "StringValue": "MaxApertureValue = 3/1 (3D)",
         "IsArray": false,
         "TagId": 37381,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "MaxApertureValue",
         "Description": ""
       },
@@ -2931,7 +2931,7 @@
         "StringValue": "MeteringMode = 2 (Center-weighted average)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -2955,7 +2955,7 @@
         "StringValue": "FocalLength = 60/10 (6D)",
         "IsArray": false,
         "TagId": 37386,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "FocalLength",
         "Description": ""
       },
@@ -3011,7 +3011,7 @@
         "StringValue": "PhotoFileSource = 3 (Digital Camera)",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "PhotoFileSource",
         "Description": ""
       }
@@ -3047,7 +3047,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -3055,7 +3055,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -3063,7 +3063,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -3071,7 +3071,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -3087,7 +3087,7 @@
         "IsArray": false,
         "StringValue": "Date Time = 18/11/2000 21:14:19",
         "TagId": 306,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "Date Time",
         "Description": "Date and time of image creation or when last modified"
       },
@@ -3111,7 +3111,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -3119,7 +3119,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -3127,7 +3127,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -3151,7 +3151,7 @@
         "StringValue": "Exposure Time = 10/483 (0.020703933747412008D)",
         "IsArray": false,
         "TagId": 33434,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Exposure Time",
         "Description": "Exposure time in seconds"
       },
@@ -3159,7 +3159,7 @@
         "StringValue": "F Number = 24/10 (2.4D)",
         "IsArray": false,
         "TagId": 33437,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "F Number",
         "Description": "Camera F number"
       },
@@ -3183,7 +3183,7 @@
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 18/11/2000 21:14:19",
         "TagId": 36867,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "DateTimeOriginal",
         "Description": ""
       },
@@ -3191,7 +3191,7 @@
         "IsArray": false,
         "StringValue": "PhotoDateTimeDigitized = 18/11/2000 21:14:19",
         "TagId": 36868,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "PhotoDateTimeDigitized",
         "Description": ""
       },
@@ -3207,7 +3207,7 @@
         "StringValue": "CompressedBitsPerPixel = 17/10 (1.7D)",
         "IsArray": false,
         "TagId": 37122,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "CompressedBitsPerPixel",
         "Description": ""
       },
@@ -3215,7 +3215,7 @@
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
         "TagId": 37380,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ExposureBiasValue",
         "Description": ""
       },
@@ -3223,7 +3223,7 @@
         "StringValue": "MaxApertureValue = 3/1 (3D)",
         "IsArray": false,
         "TagId": 37381,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "MaxApertureValue",
         "Description": ""
       },
@@ -3231,7 +3231,7 @@
         "StringValue": "MeteringMode = 2 (Center-weighted average)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -3255,7 +3255,7 @@
         "StringValue": "FocalLength = 60/10 (6D)",
         "IsArray": false,
         "TagId": 37386,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "FocalLength",
         "Description": ""
       },
@@ -3311,7 +3311,7 @@
         "StringValue": "PhotoFileSource = 3 (Digital Camera)",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "PhotoFileSource",
         "Description": ""
       }
@@ -3365,7 +3365,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -3373,7 +3373,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -3381,7 +3381,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -3389,7 +3389,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -3397,7 +3397,7 @@
         "IsArray": false,
         "StringValue": "Date Time = 30/09/2000 10:59:45",
         "TagId": 306,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "Date Time",
         "Description": "Date and time of image creation or when last modified"
       },
@@ -3437,7 +3437,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -3445,7 +3445,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -3453,7 +3453,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -3461,7 +3461,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -3469,7 +3469,7 @@
         "IsArray": false,
         "StringValue": "Date Time = 30/09/2000 10:59:45",
         "TagId": 306,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "Date Time",
         "Description": "Date and time of image creation or when last modified"
       },
@@ -3493,7 +3493,7 @@
         "StringValue": "Exposure Time = 1/197 (0.005076142131979695D)",
         "IsArray": false,
         "TagId": 33434,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Exposure Time",
         "Description": "Exposure time in seconds"
       },
@@ -3501,7 +3501,7 @@
         "StringValue": "F Number = 40/10 (4D)",
         "IsArray": false,
         "TagId": 33437,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "F Number",
         "Description": "Camera F number"
       },
@@ -3533,7 +3533,7 @@
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 30/09/2000 10:59:45",
         "TagId": 36867,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "DateTimeOriginal",
         "Description": ""
       },
@@ -3541,7 +3541,7 @@
         "IsArray": false,
         "StringValue": "PhotoDateTimeDigitized = 30/09/2000 10:59:45",
         "TagId": 36868,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "PhotoDateTimeDigitized",
         "Description": ""
       },
@@ -3557,7 +3557,7 @@
         "StringValue": "CompressedBitsPerPixel = 2/1 (2D)",
         "IsArray": false,
         "TagId": 37122,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "CompressedBitsPerPixel",
         "Description": ""
       },
@@ -3565,7 +3565,7 @@
         "StringValue": "ExposureBiasValue = 0/10 (0D)",
         "IsArray": false,
         "TagId": 37380,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ExposureBiasValue",
         "Description": ""
       },
@@ -3573,7 +3573,7 @@
         "StringValue": "MaxApertureValue = 3/1 (3D)",
         "IsArray": false,
         "TagId": 37381,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "MaxApertureValue",
         "Description": ""
       },
@@ -3581,7 +3581,7 @@
         "StringValue": "MeteringMode = 2 (Center-weighted average)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -3605,7 +3605,7 @@
         "StringValue": "FocalLength = 216/10 (21.6D)",
         "IsArray": false,
         "TagId": 37386,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "FocalLength",
         "Description": ""
       },
@@ -3645,7 +3645,7 @@
         "StringValue": "PhotoFileSource = 3 (Digital Camera)",
         "IsArray": false,
         "TagId": 41728,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "PhotoFileSource",
         "Description": ""
       },
@@ -3707,7 +3707,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -3715,7 +3715,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -3723,7 +3723,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -3731,7 +3731,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -3739,7 +3739,7 @@
         "IsArray": false,
         "StringValue": "Date Time = 01/12/1998 14:22:36",
         "TagId": 306,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "Date Time",
         "Description": "Date and time of image creation or when last modified"
       },
@@ -3827,7 +3827,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -3835,7 +3835,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -3843,7 +3843,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -3875,7 +3875,7 @@
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 01/12/1998 14:22:36",
         "TagId": 36867,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "DateTimeOriginal",
         "Description": ""
       },
@@ -3883,7 +3883,7 @@
         "IsArray": false,
         "StringValue": "PhotoDateTimeDigitized = 01/12/1998 14:22:36",
         "TagId": 36868,
-        "ExifType": 12,
+        "ExifType": 15,
         "Name": "PhotoDateTimeDigitized",
         "Description": ""
       },
@@ -3899,7 +3899,7 @@
         "StringValue": "CompressedBitsPerPixel = 6/1 (6D)",
         "IsArray": false,
         "TagId": 37122,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "CompressedBitsPerPixel",
         "Description": ""
       },
@@ -3907,7 +3907,7 @@
         "StringValue": "ShutterSpeedValue = 500/100 (5D)",
         "IsArray": false,
         "TagId": 37377,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ShutterSpeedValue",
         "Description": ""
       },
@@ -3915,7 +3915,7 @@
         "StringValue": "ApertureValue = 250/100 (2.5D)",
         "IsArray": false,
         "TagId": 37378,
-        "ExifType": 10,
+        "ExifType": 12,
         "Name": "ApertureValue",
         "Description": ""
       },
@@ -3923,7 +3923,7 @@
         "StringValue": "ExposureBiasValue = 0/100 (0D)",
         "IsArray": false,
         "TagId": 37380,
-        "ExifType": 9,
+        "ExifType": 11,
         "Name": "ExposureBiasValue",
         "Description": ""
       },
@@ -3931,7 +3931,7 @@
         "StringValue": "MeteringMode = 2 (Center-weighted average)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 13,
+        "ExifType": 16,
         "Name": "MeteringMode",
         "Description": ""
       },
