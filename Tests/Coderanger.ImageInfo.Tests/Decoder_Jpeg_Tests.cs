@@ -138,4 +138,32 @@ public class Decoder_Jpeg_Tests
       MetadataHelpers.Output( info.Metadata );
     }
   }
+
+  [TestMethod]
+  [DataRow( "bath.jpg", 4032, 3024, 72, 72, "image/jpeg" )]
+  public void Validate_Images_With_Iptc( string filename, int width, int height, int hdpi, int vdpi, string mime )
+  {
+    // Arrange
+    using var stream = new FileStream( $"./Fixtures/Jpeg/iptc/{filename}", FileMode.Open, FileAccess.Read );
+
+    // Act
+    var info = ImageInfo.DecodeFromStream( stream );
+
+    // Assert
+    info.Should().NotBeNull();
+    if( info != null )
+    {
+      info.Width.Should().Be( width );
+      info.Height.Should().Be( height );
+      info.HorizontalDpi.Should().Be( hdpi );
+      info.VerticalDpi.Should().Be( vdpi );
+      info.MimeType.Should().Be( mime );
+
+      // Assert tag information
+      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-iptctags" );
+
+      // Output data to console
+      MetadataHelpers.Output( info.Metadata );
+    }
+  }
 }

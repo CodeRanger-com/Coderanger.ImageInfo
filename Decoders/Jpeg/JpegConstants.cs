@@ -64,6 +64,11 @@ internal static class JpegConstants
     internal const byte App1 = 0xE1;
 
     /// <summary>
+    /// Application specific marker for storing IPTC metadata
+    /// </summary>
+    internal const byte App13 = 0xED;
+
+    /// <summary>
     /// Marker constants for JFIF segment of JPEG
     /// </summary>
     internal static class Jfif

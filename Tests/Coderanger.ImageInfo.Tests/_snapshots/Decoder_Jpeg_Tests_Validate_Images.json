@@ -1,73 +1,417 @@
 {
-  "large_test.jpg-exiftags": {
-    "Exif": [
+  "dakar-rally-bike.jpg-exiftags": {
+    "Iptc": [
       {
-        "StringValue": "Horizontal Resolution = 96/1 (96D)",
+        "StringValue": "Record Version = 0",
         "IsArray": false,
-        "TagId": 282,
-        "ExifType": 12,
-        "Name": "Horizontal Resolution",
-        "Description": "Number of pixels per ResolutionUnit"
+        "TagId": 0,
+        "ExifType": 3,
+        "Name": "Record Version",
+        "Description": "Identifies the version of the Information Interchange Model"
       },
       {
-        "StringValue": "Vertical Resolution = 96/1 (96D)",
+        "StringValue": "Caption = CS Santosh seen in action during the shakedown before the start of the Dakar Rally in Jeddah, Saudi Arabia on December 30th, 2020 // Ishaan Bhataiya / Red Bull Content Pool // SI202101040188 // Usage for editorial use only // ",
         "IsArray": false,
-        "TagId": 283,
-        "ExifType": 12,
-        "Name": "Vertical Resolution",
-        "Description": "Number of pixels per ResolutionUnit"
-      },
-      {
-        "StringValue": "Resolution Unit = 2 (inches)",
-        "IsArray": false,
-        "TagId": 296,
-        "ExifType": 16,
-        "Name": "Resolution Unit",
-        "Description": "Unit for measuring Horizontal and Vertical resolutions"
-      },
-      {
-        "StringValue": "Software = paint.net 4.3.3",
-        "IsArray": false,
-        "TagId": 305,
+        "TagId": 120,
         "ExifType": 2,
-        "Name": "Software",
-        "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
+        "Name": "Caption",
+        "Description": ""
+      },
+      {
+        "StringValue": "Headline = CS Santosh",
+        "IsArray": false,
+        "TagId": 105,
+        "ExifType": 2,
+        "Name": "Headline",
+        "Description": "Publishable entry providing a synopsis of the contents of the object"
+      },
+      {
+        "StringValue": "SpecialInstructions = This image may only be used for editorial purpose in one-time publications and strictly limited to the purpose of use stated in the terms and conditions of the service where you retrieved the image. It must not be altered or modified. Publication must be ",
+        "IsArray": false,
+        "TagId": 40,
+        "ExifType": 2,
+        "Name": "SpecialInstructions",
+        "Description": ""
+      },
+      {
+        "StringValue": "Source = www.redbullmediahouse.com",
+        "IsArray": false,
+        "TagId": 115,
+        "ExifType": 2,
+        "Name": "Source",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedDate = ",
+        "IsArray": false,
+        "TagId": 55,
+        "ExifType": 13,
+        "Name": "CreatedDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "Keywords = SI202101040188",
+        "IsArray": false,
+        "TagId": 25,
+        "ExifType": 2,
+        "Name": "Keywords",
+        "Description": ""
+      },
+      {
+        "StringValue": "CopyrightNotice = Ishaan Bhataiya / Red Bull Content Pool",
+        "IsArray": false,
+        "TagId": 116,
+        "ExifType": 2,
+        "Name": "CopyrightNotice",
+        "Description": ""
       }
     ]
   },
-  "large_test_progressive.jpg-exiftags": {
-    "Exif": [
+  "freediving.jpeg-exiftags": {
+    "Iptc": [
       {
-        "StringValue": "Horizontal Resolution = 96/1 (96D)",
+        "StringValue": "Record Version = 4",
         "IsArray": false,
-        "TagId": 282,
-        "ExifType": 12,
-        "Name": "Horizontal Resolution",
-        "Description": "Number of pixels per ResolutionUnit"
+        "TagId": 0,
+        "ExifType": 3,
+        "Name": "Record Version",
+        "Description": "Identifies the version of the Information Interchange Model"
       },
       {
-        "StringValue": "Vertical Resolution = 96/1 (96D)",
+        "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
-        "TagId": 283,
-        "ExifType": 12,
-        "Name": "Vertical Resolution",
-        "Description": "Number of pixels per ResolutionUnit"
-      },
-      {
-        "StringValue": "Resolution Unit = 2 (inches)",
-        "IsArray": false,
-        "TagId": 296,
-        "ExifType": 16,
-        "Name": "Resolution Unit",
-        "Description": "Unit for measuring Horizontal and Vertical resolutions"
-      },
-      {
-        "StringValue": "Software = paint.net 4.3.3",
-        "IsArray": false,
-        "TagId": 305,
+        "TagId": 5,
         "ExifType": 2,
-        "Name": "Software",
-        "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
+        "Name": "Object Name",
+        "Description": "Used as a shorthand reference for the object"
+      },
+      {
+        "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
+        "IsArray": true,
+        "TagId": 25,
+        "ExifType": 2,
+        "Name": "Keywords",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 55,
+        "ExifType": 13,
+        "Name": "CreatedDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedTime = ",
+        "IsArray": false,
+        "TagId": 60,
+        "ExifType": 14,
+        "Name": "CreatedTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 62,
+        "ExifType": 13,
+        "Name": "DigitalCreationDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationTime = ",
+        "IsArray": false,
+        "TagId": 63,
+        "ExifType": 14,
+        "Name": "DigitalCreationTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "By-line = Dudarev Mikhail",
+        "IsArray": false,
+        "TagId": 80,
+        "ExifType": 2,
+        "Name": "By-line",
+        "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
+      },
+      {
+        "StringValue": "Country/Primary Location Name = Russian Federation",
+        "IsArray": false,
+        "TagId": 101,
+        "ExifType": 2,
+        "Name": "Country/Primary Location Name",
+        "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
+      },
+      {
+        "StringValue": "Headline = Two free divers ascending from the depth",
+        "IsArray": false,
+        "TagId": 105,
+        "ExifType": 2,
+        "Name": "Headline",
+        "Description": "Publishable entry providing a synopsis of the contents of the object"
+      },
+      {
+        "StringValue": "Credit = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 110,
+        "ExifType": 2,
+        "Name": "Credit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Source = 135309776",
+        "IsArray": false,
+        "TagId": 115,
+        "ExifType": 2,
+        "Name": "Source",
+        "Description": ""
+      },
+      {
+        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 116,
+        "ExifType": 2,
+        "Name": "CopyrightNotice",
+        "Description": ""
+      },
+      {
+        "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 120,
+        "ExifType": 2,
+        "Name": "Caption",
+        "Description": ""
+      }
+    ]
+  },
+  "sample-image-file-very-small.jpg-exiftags": {
+    "Iptc": [
+      {
+        "StringValue": "Record Version = 4",
+        "IsArray": false,
+        "TagId": 0,
+        "ExifType": 3,
+        "Name": "Record Version",
+        "Description": "Identifies the version of the Information Interchange Model"
+      },
+      {
+        "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 5,
+        "ExifType": 2,
+        "Name": "Object Name",
+        "Description": "Used as a shorthand reference for the object"
+      },
+      {
+        "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
+        "IsArray": true,
+        "TagId": 25,
+        "ExifType": 2,
+        "Name": "Keywords",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 55,
+        "ExifType": 13,
+        "Name": "CreatedDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedTime = ",
+        "IsArray": false,
+        "TagId": 60,
+        "ExifType": 14,
+        "Name": "CreatedTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 62,
+        "ExifType": 13,
+        "Name": "DigitalCreationDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationTime = ",
+        "IsArray": false,
+        "TagId": 63,
+        "ExifType": 14,
+        "Name": "DigitalCreationTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "By-line = Dudarev Mikhail",
+        "IsArray": false,
+        "TagId": 80,
+        "ExifType": 2,
+        "Name": "By-line",
+        "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
+      },
+      {
+        "StringValue": "Country/Primary Location Name = Russian Federation",
+        "IsArray": false,
+        "TagId": 101,
+        "ExifType": 2,
+        "Name": "Country/Primary Location Name",
+        "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
+      },
+      {
+        "StringValue": "Headline = Two free divers ascending from the depth",
+        "IsArray": false,
+        "TagId": 105,
+        "ExifType": 2,
+        "Name": "Headline",
+        "Description": "Publishable entry providing a synopsis of the contents of the object"
+      },
+      {
+        "StringValue": "Credit = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 110,
+        "ExifType": 2,
+        "Name": "Credit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Source = 135309776",
+        "IsArray": false,
+        "TagId": 115,
+        "ExifType": 2,
+        "Name": "Source",
+        "Description": ""
+      },
+      {
+        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 116,
+        "ExifType": 2,
+        "Name": "CopyrightNotice",
+        "Description": ""
+      },
+      {
+        "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 120,
+        "ExifType": 2,
+        "Name": "Caption",
+        "Description": ""
+      }
+    ]
+  },
+  "sample-image-file-medium.jpg-exiftags": {
+    "Iptc": [
+      {
+        "StringValue": "Record Version = 4",
+        "IsArray": false,
+        "TagId": 0,
+        "ExifType": 3,
+        "Name": "Record Version",
+        "Description": "Identifies the version of the Information Interchange Model"
+      },
+      {
+        "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 5,
+        "ExifType": 2,
+        "Name": "Object Name",
+        "Description": "Used as a shorthand reference for the object"
+      },
+      {
+        "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
+        "IsArray": true,
+        "TagId": 25,
+        "ExifType": 2,
+        "Name": "Keywords",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 55,
+        "ExifType": 13,
+        "Name": "CreatedDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedTime = ",
+        "IsArray": false,
+        "TagId": 60,
+        "ExifType": 14,
+        "Name": "CreatedTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 62,
+        "ExifType": 13,
+        "Name": "DigitalCreationDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationTime = ",
+        "IsArray": false,
+        "TagId": 63,
+        "ExifType": 14,
+        "Name": "DigitalCreationTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "By-line = Dudarev Mikhail",
+        "IsArray": false,
+        "TagId": 80,
+        "ExifType": 2,
+        "Name": "By-line",
+        "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
+      },
+      {
+        "StringValue": "Country/Primary Location Name = Russian Federation",
+        "IsArray": false,
+        "TagId": 101,
+        "ExifType": 2,
+        "Name": "Country/Primary Location Name",
+        "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
+      },
+      {
+        "StringValue": "Headline = Two free divers ascending from the depth",
+        "IsArray": false,
+        "TagId": 105,
+        "ExifType": 2,
+        "Name": "Headline",
+        "Description": "Publishable entry providing a synopsis of the contents of the object"
+      },
+      {
+        "StringValue": "Credit = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 110,
+        "ExifType": 2,
+        "Name": "Credit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Source = 135309776",
+        "IsArray": false,
+        "TagId": 115,
+        "ExifType": 2,
+        "Name": "Source",
+        "Description": ""
+      },
+      {
+        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 116,
+        "ExifType": 2,
+        "Name": "CopyrightNotice",
+        "Description": ""
+      },
+      {
+        "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 120,
+        "ExifType": 2,
+        "Name": "Caption",
+        "Description": ""
       }
     ]
   },
@@ -417,24 +761,500 @@
         "Name": "PhotoImageUniqueID",
         "Description": ""
       }
-    ]
-  },
-  "bad_image_end.jpg-exiftags": {
-    "Exif": [
+    ],
+    "Iptc": [
       {
-        "StringValue": "PhotoPixelXDimension = 1000",
+        "StringValue": "Record Version = 4",
         "IsArray": false,
-        "TagId": 40962,
-        "ExifType": 5,
-        "Name": "PhotoPixelXDimension",
+        "TagId": 0,
+        "ExifType": 3,
+        "Name": "Record Version",
+        "Description": "Identifies the version of the Information Interchange Model"
+      },
+      {
+        "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 5,
+        "ExifType": 2,
+        "Name": "Object Name",
+        "Description": "Used as a shorthand reference for the object"
+      },
+      {
+        "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
+        "IsArray": true,
+        "TagId": 25,
+        "ExifType": 2,
+        "Name": "Keywords",
         "Description": ""
       },
       {
-        "StringValue": "PhotoPixelYDimension = 1000",
+        "StringValue": "CreatedDate = 17/10/2014",
         "IsArray": false,
-        "TagId": 40963,
-        "ExifType": 5,
-        "Name": "PhotoPixelYDimension",
+        "TagId": 55,
+        "ExifType": 13,
+        "Name": "CreatedDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedTime = ",
+        "IsArray": false,
+        "TagId": 60,
+        "ExifType": 14,
+        "Name": "CreatedTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 62,
+        "ExifType": 13,
+        "Name": "DigitalCreationDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationTime = ",
+        "IsArray": false,
+        "TagId": 63,
+        "ExifType": 14,
+        "Name": "DigitalCreationTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "By-line = Dudarev Mikhail",
+        "IsArray": false,
+        "TagId": 80,
+        "ExifType": 2,
+        "Name": "By-line",
+        "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
+      },
+      {
+        "StringValue": "Country/Primary Location Name = Russian Federation",
+        "IsArray": false,
+        "TagId": 101,
+        "ExifType": 2,
+        "Name": "Country/Primary Location Name",
+        "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
+      },
+      {
+        "StringValue": "Headline = Two free divers ascending from the depth",
+        "IsArray": false,
+        "TagId": 105,
+        "ExifType": 2,
+        "Name": "Headline",
+        "Description": "Publishable entry providing a synopsis of the contents of the object"
+      },
+      {
+        "StringValue": "Credit = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 110,
+        "ExifType": 2,
+        "Name": "Credit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Source = 135309776",
+        "IsArray": false,
+        "TagId": 115,
+        "ExifType": 2,
+        "Name": "Source",
+        "Description": ""
+      },
+      {
+        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 116,
+        "ExifType": 2,
+        "Name": "CopyrightNotice",
+        "Description": ""
+      },
+      {
+        "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 120,
+        "ExifType": 2,
+        "Name": "Caption",
+        "Description": ""
+      }
+    ]
+  },
+  "large_test_progressive.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Horizontal Resolution = 96/1 (96D)",
+        "IsArray": false,
+        "TagId": 282,
+        "ExifType": 12,
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
+      },
+      {
+        "StringValue": "Vertical Resolution = 96/1 (96D)",
+        "IsArray": false,
+        "TagId": 283,
+        "ExifType": 12,
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
+      },
+      {
+        "StringValue": "Resolution Unit = 2 (inches)",
+        "IsArray": false,
+        "TagId": 296,
+        "ExifType": 16,
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
+      },
+      {
+        "StringValue": "Software = paint.net 4.3.3",
+        "IsArray": false,
+        "TagId": 305,
+        "ExifType": 2,
+        "Name": "Software",
+        "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
+      }
+    ],
+    "Iptc": [
+      {
+        "StringValue": "Record Version = 4",
+        "IsArray": false,
+        "TagId": 0,
+        "ExifType": 3,
+        "Name": "Record Version",
+        "Description": "Identifies the version of the Information Interchange Model"
+      },
+      {
+        "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 5,
+        "ExifType": 2,
+        "Name": "Object Name",
+        "Description": "Used as a shorthand reference for the object"
+      },
+      {
+        "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
+        "IsArray": true,
+        "TagId": 25,
+        "ExifType": 2,
+        "Name": "Keywords",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 55,
+        "ExifType": 13,
+        "Name": "CreatedDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedTime = ",
+        "IsArray": false,
+        "TagId": 60,
+        "ExifType": 14,
+        "Name": "CreatedTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 62,
+        "ExifType": 13,
+        "Name": "DigitalCreationDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationTime = ",
+        "IsArray": false,
+        "TagId": 63,
+        "ExifType": 14,
+        "Name": "DigitalCreationTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "By-line = Dudarev Mikhail",
+        "IsArray": false,
+        "TagId": 80,
+        "ExifType": 2,
+        "Name": "By-line",
+        "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
+      },
+      {
+        "StringValue": "Country/Primary Location Name = Russian Federation",
+        "IsArray": false,
+        "TagId": 101,
+        "ExifType": 2,
+        "Name": "Country/Primary Location Name",
+        "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
+      },
+      {
+        "StringValue": "Headline = Two free divers ascending from the depth",
+        "IsArray": false,
+        "TagId": 105,
+        "ExifType": 2,
+        "Name": "Headline",
+        "Description": "Publishable entry providing a synopsis of the contents of the object"
+      },
+      {
+        "StringValue": "Credit = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 110,
+        "ExifType": 2,
+        "Name": "Credit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Source = 135309776",
+        "IsArray": false,
+        "TagId": 115,
+        "ExifType": 2,
+        "Name": "Source",
+        "Description": ""
+      },
+      {
+        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 116,
+        "ExifType": 2,
+        "Name": "CopyrightNotice",
+        "Description": ""
+      },
+      {
+        "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 120,
+        "ExifType": 2,
+        "Name": "Caption",
+        "Description": ""
+      }
+    ]
+  },
+  "high-res.jpg-exiftags": {
+    "Iptc": [
+      {
+        "StringValue": "Record Version = 4",
+        "IsArray": false,
+        "TagId": 0,
+        "ExifType": 3,
+        "Name": "Record Version",
+        "Description": "Identifies the version of the Information Interchange Model"
+      },
+      {
+        "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 5,
+        "ExifType": 2,
+        "Name": "Object Name",
+        "Description": "Used as a shorthand reference for the object"
+      },
+      {
+        "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
+        "IsArray": true,
+        "TagId": 25,
+        "ExifType": 2,
+        "Name": "Keywords",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 55,
+        "ExifType": 13,
+        "Name": "CreatedDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedTime = ",
+        "IsArray": false,
+        "TagId": 60,
+        "ExifType": 14,
+        "Name": "CreatedTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 62,
+        "ExifType": 13,
+        "Name": "DigitalCreationDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationTime = ",
+        "IsArray": false,
+        "TagId": 63,
+        "ExifType": 14,
+        "Name": "DigitalCreationTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "By-line = Dudarev Mikhail",
+        "IsArray": false,
+        "TagId": 80,
+        "ExifType": 2,
+        "Name": "By-line",
+        "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
+      },
+      {
+        "StringValue": "Country/Primary Location Name = Russian Federation",
+        "IsArray": false,
+        "TagId": 101,
+        "ExifType": 2,
+        "Name": "Country/Primary Location Name",
+        "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
+      },
+      {
+        "StringValue": "Headline = Two free divers ascending from the depth",
+        "IsArray": false,
+        "TagId": 105,
+        "ExifType": 2,
+        "Name": "Headline",
+        "Description": "Publishable entry providing a synopsis of the contents of the object"
+      },
+      {
+        "StringValue": "Credit = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 110,
+        "ExifType": 2,
+        "Name": "Credit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Source = 135309776",
+        "IsArray": false,
+        "TagId": 115,
+        "ExifType": 2,
+        "Name": "Source",
+        "Description": ""
+      },
+      {
+        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 116,
+        "ExifType": 2,
+        "Name": "CopyrightNotice",
+        "Description": ""
+      },
+      {
+        "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 120,
+        "ExifType": 2,
+        "Name": "Caption",
+        "Description": ""
+      }
+    ]
+  },
+  "sample-birch-400x300.jpg-exiftags": {
+    "Iptc": [
+      {
+        "StringValue": "Record Version = 4",
+        "IsArray": false,
+        "TagId": 0,
+        "ExifType": 3,
+        "Name": "Record Version",
+        "Description": "Identifies the version of the Information Interchange Model"
+      },
+      {
+        "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 5,
+        "ExifType": 2,
+        "Name": "Object Name",
+        "Description": "Used as a shorthand reference for the object"
+      },
+      {
+        "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
+        "IsArray": true,
+        "TagId": 25,
+        "ExifType": 2,
+        "Name": "Keywords",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 55,
+        "ExifType": 13,
+        "Name": "CreatedDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedTime = ",
+        "IsArray": false,
+        "TagId": 60,
+        "ExifType": 14,
+        "Name": "CreatedTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 62,
+        "ExifType": 13,
+        "Name": "DigitalCreationDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationTime = ",
+        "IsArray": false,
+        "TagId": 63,
+        "ExifType": 14,
+        "Name": "DigitalCreationTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "By-line = Dudarev Mikhail",
+        "IsArray": false,
+        "TagId": 80,
+        "ExifType": 2,
+        "Name": "By-line",
+        "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
+      },
+      {
+        "StringValue": "Country/Primary Location Name = Russian Federation",
+        "IsArray": false,
+        "TagId": 101,
+        "ExifType": 2,
+        "Name": "Country/Primary Location Name",
+        "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
+      },
+      {
+        "StringValue": "Headline = Two free divers ascending from the depth",
+        "IsArray": false,
+        "TagId": 105,
+        "ExifType": 2,
+        "Name": "Headline",
+        "Description": "Publishable entry providing a synopsis of the contents of the object"
+      },
+      {
+        "StringValue": "Credit = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 110,
+        "ExifType": 2,
+        "Name": "Credit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Source = 135309776",
+        "IsArray": false,
+        "TagId": 115,
+        "ExifType": 2,
+        "Name": "Source",
+        "Description": ""
+      },
+      {
+        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 116,
+        "ExifType": 2,
+        "Name": "CopyrightNotice",
+        "Description": ""
+      },
+      {
+        "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 120,
+        "ExifType": 2,
+        "Name": "Caption",
         "Description": ""
       }
     ]
@@ -599,6 +1419,312 @@
         "TagId": 40963,
         "ExifType": 5,
         "Name": "PhotoPixelYDimension",
+        "Description": ""
+      }
+    ],
+    "Iptc": [
+      {
+        "StringValue": "Record Version = 4",
+        "IsArray": false,
+        "TagId": 0,
+        "ExifType": 3,
+        "Name": "Record Version",
+        "Description": "Identifies the version of the Information Interchange Model"
+      },
+      {
+        "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 5,
+        "ExifType": 2,
+        "Name": "Object Name",
+        "Description": "Used as a shorthand reference for the object"
+      },
+      {
+        "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
+        "IsArray": true,
+        "TagId": 25,
+        "ExifType": 2,
+        "Name": "Keywords",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 55,
+        "ExifType": 13,
+        "Name": "CreatedDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedTime = ",
+        "IsArray": false,
+        "TagId": 60,
+        "ExifType": 14,
+        "Name": "CreatedTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "IsArray": false,
+        "TagId": 62,
+        "ExifType": 13,
+        "Name": "DigitalCreationDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "DigitalCreationTime = ",
+        "IsArray": false,
+        "TagId": 63,
+        "ExifType": 14,
+        "Name": "DigitalCreationTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "By-line = Dudarev Mikhail",
+        "IsArray": false,
+        "TagId": 80,
+        "ExifType": 2,
+        "Name": "By-line",
+        "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
+      },
+      {
+        "StringValue": "Country/Primary Location Name = Russian Federation",
+        "IsArray": false,
+        "TagId": 101,
+        "ExifType": 2,
+        "Name": "Country/Primary Location Name",
+        "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
+      },
+      {
+        "StringValue": "Headline = Two free divers ascending from the depth",
+        "IsArray": false,
+        "TagId": 105,
+        "ExifType": 2,
+        "Name": "Headline",
+        "Description": "Publishable entry providing a synopsis of the contents of the object"
+      },
+      {
+        "StringValue": "Credit = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 110,
+        "ExifType": 2,
+        "Name": "Credit",
+        "Description": ""
+      },
+      {
+        "StringValue": "Source = 135309776",
+        "IsArray": false,
+        "TagId": 115,
+        "ExifType": 2,
+        "Name": "Source",
+        "Description": ""
+      },
+      {
+        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "IsArray": false,
+        "TagId": 116,
+        "ExifType": 2,
+        "Name": "CopyrightNotice",
+        "Description": ""
+      },
+      {
+        "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
+        "IsArray": false,
+        "TagId": 120,
+        "ExifType": 2,
+        "Name": "Caption",
+        "Description": ""
+      }
+    ]
+  },
+  "bad_image_end.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "PhotoPixelXDimension = 1000",
+        "IsArray": false,
+        "TagId": 40962,
+        "ExifType": 5,
+        "Name": "PhotoPixelXDimension",
+        "Description": ""
+      },
+      {
+        "StringValue": "PhotoPixelYDimension = 1000",
+        "IsArray": false,
+        "TagId": 40963,
+        "ExifType": 5,
+        "Name": "PhotoPixelYDimension",
+        "Description": ""
+      }
+    ]
+  },
+  "large_test.jpg-exiftags": {
+    "Exif": [
+      {
+        "StringValue": "Horizontal Resolution = 96/1 (96D)",
+        "IsArray": false,
+        "TagId": 282,
+        "ExifType": 12,
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
+      },
+      {
+        "StringValue": "Vertical Resolution = 96/1 (96D)",
+        "IsArray": false,
+        "TagId": 283,
+        "ExifType": 12,
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
+      },
+      {
+        "StringValue": "Resolution Unit = 2 (inches)",
+        "IsArray": false,
+        "TagId": 296,
+        "ExifType": 16,
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
+      },
+      {
+        "StringValue": "Software = paint.net 4.3.3",
+        "IsArray": false,
+        "TagId": 305,
+        "ExifType": 2,
+        "Name": "Software",
+        "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
+      }
+    ]
+  },
+  "sample-clouds-400x300.jpg-exiftags": {
+    "Iptc": [
+      {
+        "StringValue": "Record Version = 0",
+        "IsArray": false,
+        "TagId": 0,
+        "ExifType": 3,
+        "Name": "Record Version",
+        "Description": "Identifies the version of the Information Interchange Model"
+      },
+      {
+        "StringValue": "Caption = CS Santosh seen in action during the shakedown before the start of the Dakar Rally in Jeddah, Saudi Arabia on December 30th, 2020 // Ishaan Bhataiya / Red Bull Content Pool // SI202101040188 // Usage for editorial use only // ",
+        "IsArray": false,
+        "TagId": 120,
+        "ExifType": 2,
+        "Name": "Caption",
+        "Description": ""
+      },
+      {
+        "StringValue": "Headline = CS Santosh",
+        "IsArray": false,
+        "TagId": 105,
+        "ExifType": 2,
+        "Name": "Headline",
+        "Description": "Publishable entry providing a synopsis of the contents of the object"
+      },
+      {
+        "StringValue": "SpecialInstructions = This image may only be used for editorial purpose in one-time publications and strictly limited to the purpose of use stated in the terms and conditions of the service where you retrieved the image. It must not be altered or modified. Publication must be ",
+        "IsArray": false,
+        "TagId": 40,
+        "ExifType": 2,
+        "Name": "SpecialInstructions",
+        "Description": ""
+      },
+      {
+        "StringValue": "Source = www.redbullmediahouse.com",
+        "IsArray": false,
+        "TagId": 115,
+        "ExifType": 2,
+        "Name": "Source",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedDate = ",
+        "IsArray": false,
+        "TagId": 55,
+        "ExifType": 13,
+        "Name": "CreatedDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "Keywords = SI202101040188",
+        "IsArray": false,
+        "TagId": 25,
+        "ExifType": 2,
+        "Name": "Keywords",
+        "Description": ""
+      },
+      {
+        "StringValue": "CopyrightNotice = Ishaan Bhataiya / Red Bull Content Pool",
+        "IsArray": false,
+        "TagId": 116,
+        "ExifType": 2,
+        "Name": "CopyrightNotice",
+        "Description": ""
+      }
+    ]
+  },
+  "sample-city-park-400x300.jpg-exiftags": {
+    "Iptc": [
+      {
+        "StringValue": "Record Version = 0",
+        "IsArray": false,
+        "TagId": 0,
+        "ExifType": 3,
+        "Name": "Record Version",
+        "Description": "Identifies the version of the Information Interchange Model"
+      },
+      {
+        "StringValue": "Caption = CS Santosh seen in action during the shakedown before the start of the Dakar Rally in Jeddah, Saudi Arabia on December 30th, 2020 // Ishaan Bhataiya / Red Bull Content Pool // SI202101040188 // Usage for editorial use only // ",
+        "IsArray": false,
+        "TagId": 120,
+        "ExifType": 2,
+        "Name": "Caption",
+        "Description": ""
+      },
+      {
+        "StringValue": "Headline = CS Santosh",
+        "IsArray": false,
+        "TagId": 105,
+        "ExifType": 2,
+        "Name": "Headline",
+        "Description": "Publishable entry providing a synopsis of the contents of the object"
+      },
+      {
+        "StringValue": "SpecialInstructions = This image may only be used for editorial purpose in one-time publications and strictly limited to the purpose of use stated in the terms and conditions of the service where you retrieved the image. It must not be altered or modified. Publication must be ",
+        "IsArray": false,
+        "TagId": 40,
+        "ExifType": 2,
+        "Name": "SpecialInstructions",
+        "Description": ""
+      },
+      {
+        "StringValue": "Source = www.redbullmediahouse.com",
+        "IsArray": false,
+        "TagId": 115,
+        "ExifType": 2,
+        "Name": "Source",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedDate = ",
+        "IsArray": false,
+        "TagId": 55,
+        "ExifType": 13,
+        "Name": "CreatedDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "Keywords = SI202101040188",
+        "IsArray": false,
+        "TagId": 25,
+        "ExifType": 2,
+        "Name": "Keywords",
+        "Description": ""
+      },
+      {
+        "StringValue": "CopyrightNotice = Ishaan Bhataiya / Red Bull Content Pool",
+        "IsArray": false,
+        "TagId": 116,
+        "ExifType": 2,
+        "Name": "CopyrightNotice",
         "Description": ""
       }
     ]

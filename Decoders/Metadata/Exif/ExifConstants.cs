@@ -36,6 +36,16 @@ internal static class ExifConstants
     Gps = 0x8825,
 
     /// <summary>
+    /// IPTC Record IFD
+    /// </summary>
+    Iptc = 0x83bb,
+
+    /// <summary>
+    /// XMP Packet IFD
+    /// </summary>
+    Xmp = 0x02bc,
+
+    /// <summary>
     /// Interoperability IFD
     /// </summary>
     Inter = 0xA005,

@@ -44,554 +44,554 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// The name and version of the software used to post-process the picture.
   /// </summary>
-  [ExifTagDetails( "Processing Software", "Name and version of the software used to post-process the picture" )]
+  [MetadataTagDetails( "Processing Software", "Name and version of the software used to post-process the picture" )]
   public const ushort ProcessingSoftware = 0x000b;
 
   /// <summary>
   /// A general indication of the kind of data contained in this subfile.
   /// </summary>
-  [ExifTagDetails( "New Subfile Type", "General indication of the kind of data contained in this subfile" )]
+  [MetadataTagDetails( "New Subfile Type", "General indication of the kind of data contained in this subfile" )]
   public const ushort NewSubfileType = 0x00fe;
 
   /// <summary>
   /// A general indication of the kind of data contained in this subfile. This field is deprecated. The NewSubfileType field should be used instead.
   /// </summary>
-  [ExifTagDetails( "Subfile Type", "General indication of the kind of data contained in this subfile" )]
+  [MetadataTagDetails( "Subfile Type", "General indication of the kind of data contained in this subfile" )]
   public const ushort SubfileType = 0x00ff;
 
   /// <summary>
   /// The number of columns of image data; equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag.
   /// </summary>
-  [ExifTagDetails( "Image Width", "Number of columns of image data, equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag" )]
+  [MetadataTagDetails( "Image Width", "Number of columns of image data, equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag" )]
   public const ushort ImageWidth = 0x0100;
 
   /// <summary>
   /// The number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag.
   /// </summary>
-  [ExifTagDetails( "Image Height", "Number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag" )]
+  [MetadataTagDetails( "Image Height", "Number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag" )]
   public const ushort ImageHeight = 0x0101;
 
   /// <summary>
   /// The number of bits per image component. In this standard each component of the image is 8 bits; so the value for this tag is 8. See also <SamplesPerPixel>. In JPEG compressed data a JPEG marker is used instead of this tag.
   /// </summary>
-  [ExifTagDetails( "Bits Per Sample", "Number of bits per image component" )]
+  [MetadataTagDetails( "Bits Per Sample", "Number of bits per image component" )]
   public const ushort BitsPerSample = 0x0102;
 
   /// <summary>
   /// The compression scheme used for the image data. When a primary image is JPEG compressed; this designation is not necessary and is omitted. When thumbnails use JPEG compression; this tag value is set to 6.
   /// </summary>
-  [ExifTagDetails( "Compression", "Compression scheme used for the image data" )]
+  [MetadataTagDetails( "Compression", "Compression scheme used for the image data" )]
   public const ushort Compression = 0x0103;
 
   /// <summary>
   /// The pixel composition. In JPEG compressed data a JPEG marker is used instead of this tag.
   /// </summary>
-  [ExifTagDetails( "Photometric Interpretation", "The pixel composition" )]
+  [MetadataTagDetails( "Photometric Interpretation", "The pixel composition" )]
   public const ushort PhotometricInterpretation = 0x0106;
 
   /// <summary>
   /// For black and white TIFF files that represent shades of gray; the technique used to convert from gray to black and white pixels.
   /// </summary>
-  [ExifTagDetails( "Thresholding", "For black and white TIFF files that represent shades of gray, the technique used to convert from gray to black and white pixels" )]
+  [MetadataTagDetails( "Thresholding", "For black and white TIFF files that represent shades of gray, the technique used to convert from gray to black and white pixels" )]
   public const ushort Thresholding = 0x0107;
 
   /// <summary>
   /// The width of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file.
   /// </summary>
-  [ExifTagDetails( "Cell Width", "Width of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file" )]
+  [MetadataTagDetails( "Cell Width", "Width of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file" )]
   public const ushort CellWidth = 0x0108;
 
   /// <summary>
   /// The length of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file.
   /// </summary>
-  [ExifTagDetails( "Cell Length", "Length of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file" )]
+  [MetadataTagDetails( "Cell Length", "Length of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file" )]
   public const ushort CellLength = 0x0109;
 
   /// <summary>
   /// The logical order of bits within a byte
   /// </summary>
-  [ExifTagDetails( "Fill Order", "Logical order of bits within a byte" )]
+  [MetadataTagDetails( "Fill Order", "Logical order of bits within a byte" )]
   public const ushort FillOrder = 0x010a;
 
   /// <summary>
   /// The name of the document from which this image was scanned
   /// </summary>
-  [ExifTagDetails( "Document Name", "Name of the document from which this image was scanned" )]
+  [MetadataTagDetails( "Document Name", "Name of the document from which this image was scanned" )]
   public const ushort DocumentName = 0x010d;
 
   /// <summary>
   /// Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used
   /// </summary>
-  [ExifTagDetails( "Image Description", "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used" )]
+  [MetadataTagDetails( "Image Description", "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used" )]
   public const ushort ImageDescription = 0x010e;
 
   /// <summary>
   /// The manufacturer of the recording equipment
   /// </summary>
-  [ExifTagDetails( "Camera Make", "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown" )]
+  [MetadataTagDetails( "Camera Make", "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown" )]
   public const ushort Make = 0x010f;
 
   /// <summary>
   /// The model name or model number of the equipment
   /// </summary>
-  [ExifTagDetails( "Camera Model", "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown" )]
+  [MetadataTagDetails( "Camera Model", "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown" )]
   public const ushort Model = 0x0110;
 
   /// <summary>
   /// For each strip; the byte offset of that strip. It is recommended that this be selected so the number of strip bytes does not exceed 64 Kbytes. With JPEG compressed data this designation is not needed and is omitted. See also <RowsPerStrip> and <StripByteCounts>.
   /// </summary>
-  [ExifTagDetails( "Strip Offsets", "For each strip, the byte offset of that strip" )]
+  [MetadataTagDetails( "Strip Offsets", "For each strip, the byte offset of that strip" )]
   public const ushort StripOffsets = 0x0111;
 
   /// <summary>
   /// The image orientation viewed in terms of rows and columns.
   /// </summary>
-  [ExifTagEnum( 1, "Horizontal (normal)" )]
-  [ExifTagEnum( 2, "Mirror horizontal" )]
-  [ExifTagEnum( 3, "Rotate 180" )]
-  [ExifTagEnum( 4, "Mirror vertical" )]
-  [ExifTagEnum( 5, "Mirror horizontal and rotate 270 CW" )]
-  [ExifTagEnum( 6, "Rotate 90 CW" )]
-  [ExifTagEnum( 7, "Mirror horizontal and rotate 90 CW" )]
-  [ExifTagEnum( 8, "Rotate 270 CW" )]
+  [MetadataTagEnum( 1, "Horizontal (normal)" )]
+  [MetadataTagEnum( 2, "Mirror horizontal" )]
+  [MetadataTagEnum( 3, "Rotate 180" )]
+  [MetadataTagEnum( 4, "Mirror vertical" )]
+  [MetadataTagEnum( 5, "Mirror horizontal and rotate 270 CW" )]
+  [MetadataTagEnum( 6, "Rotate 90 CW" )]
+  [MetadataTagEnum( 7, "Mirror horizontal and rotate 90 CW" )]
+  [MetadataTagEnum( 8, "Rotate 270 CW" )]
   public const ushort Orientation = 0x0112;
 
   /// <summary>
   /// The number of components per pixel. Since this standard applies to RGB and YCbCr images; the value set for this tag is 3. In JPEG compressed data a JPEG marker is used instead of this tag.
   /// </summary>
-  [ExifTagDetails( "Samples Per Pixel", "Number of components per pixel; since this standard applies to RGB and YCbCr images, the value set for this tag is 3" )]
+  [MetadataTagDetails( "Samples Per Pixel", "Number of components per pixel; since this standard applies to RGB and YCbCr images, the value set for this tag is 3" )]
   public const ushort SamplesPerPixel = 0x0115;
 
   /// <summary>
   /// The number of rows per strip. This is the number of rows in the image of one strip when an image is divided into strips. With JPEG compressed data this designation is not needed and is omitted. See also <StripOffsets> and <StripByteCounts>.
   /// </summary>
-  [ExifTagDetails( "Rows Per Strip", "Number of rows in the image per strip when an image is divided into strips" )]
+  [MetadataTagDetails( "Rows Per Strip", "Number of rows in the image per strip when an image is divided into strips" )]
   public const ushort RowsPerStrip = 0x0116;
 
   /// <summary>
   /// The total number of bytes in each strip. With JPEG compressed data this designation is not needed and is omitted.
   /// </summary>
-  [ExifTagDetails( "Strip Byte Counts", "Total number of bytes in each strip" )]
+  [MetadataTagDetails( "Strip Byte Counts", "Total number of bytes in each strip" )]
   public const ushort StripByteCounts = 0x0117;
 
   /// <summary>
   /// The number of pixels per <ResolutionUnit> in the <ImageWidth> direction. When the image resolution is unknown; 72 [dpi] is designated.
   /// </summary>
-  [ExifTagDetails( "Horizontal Resolution", "Number of pixels per ResolutionUnit" )]
+  [MetadataTagDetails( "Horizontal Resolution", "Number of pixels per ResolutionUnit" )]
   public const ushort XResolution = 0x011a;
 
   /// <summary>
   /// The number of pixels per <ResolutionUnit> in the <ImageLength> direction. The same value as <XResolution> is designated.
   /// </summary>
-  [ExifTagDetails( "Vertical Resolution", "Number of pixels per ResolutionUnit" )]
+  [MetadataTagDetails( "Vertical Resolution", "Number of pixels per ResolutionUnit" )]
   public const ushort YResolution = 0x011b;
 
   /// <summary>
   /// Indicates whether pixel components are recorded in a chunky or planar format. In JPEG compressed files a JPEG marker is used instead of this tag. If this field does not exist; the TIFF default of 1 (chunky) is assumed.
   /// </summary>
-  [ExifTagDetails( "Planar Configuration", "Indicates whether pixel components are recorded in a chunky or planar format" )]
+  [MetadataTagDetails( "Planar Configuration", "Indicates whether pixel components are recorded in a chunky or planar format" )]
   public const ushort PlanarConfiguration = 0x011c;
 
   /// <summary>
   /// The precision of the information contained in the GrayResponseCurve.
   /// </summary>
-  [ExifTagEnum( 1, "0.1" )]
-  [ExifTagEnum( 2, "0.001" )]
-  [ExifTagEnum( 3, "0.0001" )]
-  [ExifTagEnum( 4, "1e-05" )]
-  [ExifTagEnum( 5, "1e-06" )]
-  [ExifTagDetails( "Gray Response Unit", "Precision of the information contained in the GrayResponseCurve" )]
+  [MetadataTagEnum( 1, "0.1" )]
+  [MetadataTagEnum( 2, "0.001" )]
+  [MetadataTagEnum( 3, "0.0001" )]
+  [MetadataTagEnum( 4, "1e-05" )]
+  [MetadataTagEnum( 5, "1e-06" )]
+  [MetadataTagDetails( "Gray Response Unit", "Precision of the information contained in the GrayResponseCurve" )]
   public const ushort GrayResponseUnit = 0x0122;
 
   /// <summary>
   /// For grayscale data; the optical density of each possible pixel value.
   /// </summary>
-  [ExifTagDetails( "Gray Response Curve", "The optical density of each possible pixel value for grayscale data" )]
+  [MetadataTagDetails( "Gray Response Curve", "The optical density of each possible pixel value for grayscale data" )]
   public const ushort GrayResponseCurve = 0x0123;
 
   /// <summary>
   /// T.4-encoding options; Bit '0' denotes 2-Dimensional encoding, Bit '1' denotes Uncompressed, Bit '2' denotes Fill bits added
   /// </summary>
-  [ExifTagDetails( "T4 Options", "T.4 encoding options" )]
+  [MetadataTagDetails( "T4 Options", "T.4 encoding options" )]
   public const ushort T4Options = 0x0124;
 
   /// <summary>
   /// T.6-encoding options; Bit '1' denotes Uncompressed
   /// </summary>
-  [ExifTagDetails( "T6 Options", "T.6 encoding options" )]
+  [MetadataTagDetails( "T6 Options", "T.6 encoding options" )]
   public const ushort T6Options = 0x0125;
 
   /// <summary>
   /// The unit for measuring <XResolution> and <YResolution>. The same unit is used for both <XResolution> and <YResolution>. If the image resolution is unknown; 2 (inches) is designated.
   /// </summary>
-  [ExifTagEnum( 1, "None" )]
-  [ExifTagEnum( 2, "inches" )]
-  [ExifTagEnum( 3, "cm" )]
-  [ExifTagDetails( "Resolution Unit", "Unit for measuring Horizontal and Vertical resolutions" )]
+  [MetadataTagEnum( 1, "None" )]
+  [MetadataTagEnum( 2, "inches" )]
+  [MetadataTagEnum( 3, "cm" )]
+  [MetadataTagDetails( "Resolution Unit", "Unit for measuring Horizontal and Vertical resolutions" )]
   public const ushort ResolutionUnit = 0x0128;
 
   /// <summary>
   /// The page number of the page from which this image was scanned.
   /// </summary>
-  [ExifTagDetails( "Page Number", "Page number of the page from which this image was scanned" )]
+  [MetadataTagDetails( "Page Number", "Page number of the page from which this image was scanned" )]
   public const ushort PageNumber = 0x0129;
 
   /// <summary>
   /// A transfer function for the image; described in tabular style. Normally this tag is not necessary; since color space is specified in the color space information tag (<ColorSpace>).
   /// </summary>
-  [ExifTagDetails( "Transfer Function", "Transfer function for the image described in tabular style" )]
+  [MetadataTagDetails( "Transfer Function", "Transfer function for the image described in tabular style" )]
   public const ushort TransferFunction = 0x012d;
 
   /// <summary>
   /// This tag records the name and version of the software or firmware of the camera or image input device used to generate the image. The detailed format is not specified; but it is recommended that the example shown below be followed. When the field is left blank; it is treated as unknown.
   /// </summary>
-  [ExifTagDetails( "Software", "Records the name and version of the software or firmware of the camera or image input device used to generate the image" )]
+  [MetadataTagDetails( "Software", "Records the name and version of the software or firmware of the camera or image input device used to generate the image" )]
   public const ushort Software = 0x0131;
 
   /// <summary>
   /// The date and time of image creation. In Exif standard; it is the date and time the file was changed.
   /// </summary>
-  [ExifTagDetails( "Date Time", "Date and time of image creation or when last modified" )]
+  [MetadataTagDetails( "Date Time", "Date and time of image creation or when last modified" )]
   public const ushort DateTime = 0x0132;
 
   /// <summary>
   /// This tag records the name of the camera owner; photographer or image creator. The detailed format is not specified; but it is recommended that the information be written as in the example below for ease of Interoperability. When the field is left blank; it is treated as unknown. Ex.) "Camera owner; John Smith; Photographer; Michael Brown; Image creator; Ken James"
   /// </summary>
-  [ExifTagDetails( "Artist", "Records the name of the camera owner, photographer or image creator" )]
+  [MetadataTagDetails( "Artist", "Records the name of the camera owner, photographer or image creator" )]
   public const ushort Artist = 0x013b;
 
   /// <summary>
   /// This tag records information about the host computer used to generate the image.
   /// </summary>
-  [ExifTagDetails( "Host Computer", "Records information about the host computer used to generate the image" )]
+  [MetadataTagDetails( "Host Computer", "Records information about the host computer used to generate the image" )]
   public const ushort HostComputer = 0x013c;
 
   /// <summary>
   /// A predictor is a mathematical operator that is applied to the image data before an encoding scheme is applied.
   /// </summary>
-  [ExifTagEnum( 1, "None" )]
-  [ExifTagEnum( 2, "Horizontal differencing" )]
-  [ExifTagEnum( 3, "Floating point" )]
-  [ExifTagEnum( 34892, "Horizontal difference X2" )]
-  [ExifTagEnum( 34893, "Horizontal difference X4" )]
-  [ExifTagEnum( 34894, "Floating point X2" )]
-  [ExifTagEnum( 34895, "Floating point X4" )]
-  [ExifTagDetails( "Predictor", "Mathematical operator that is applied to the image data before an encoding scheme is applied" )]
+  [MetadataTagEnum( 1, "None" )]
+  [MetadataTagEnum( 2, "Horizontal differencing" )]
+  [MetadataTagEnum( 3, "Floating point" )]
+  [MetadataTagEnum( 34892, "Horizontal difference X2" )]
+  [MetadataTagEnum( 34893, "Horizontal difference X4" )]
+  [MetadataTagEnum( 34894, "Floating point X2" )]
+  [MetadataTagEnum( 34895, "Floating point X4" )]
+  [MetadataTagDetails( "Predictor", "Mathematical operator that is applied to the image data before an encoding scheme is applied" )]
   public const ushort Predictor = 0x013d;
 
   /// <summary>
   /// The chromaticity of the white point of the image. Normally this tag is not necessary; since color space is specified in the colorspace information tag (<ColorSpace>).
   /// </summary>
-  [ExifTagDetails( "White Point", "Chromaticity of the white point of the image" )]
+  [MetadataTagDetails( "White Point", "Chromaticity of the white point of the image" )]
   public const ushort WhitePoint = 0x013e;
 
   /// <summary>
   /// The chromaticity of the three primary colors of the image. Normally this tag is not necessary; since colorspace is specified in the colorspace information tag (<ColorSpace>).
   /// </summary>
-  [ExifTagDetails( "Primary Chromaticities", "Chromaticity of the three primary colors of the image" )]
+  [MetadataTagDetails( "Primary Chromaticities", "Chromaticity of the three primary colors of the image" )]
   public const ushort PrimaryChromaticities = 0x013f;
 
   /// <summary>
   /// A color map for palette color images. This field defines a Red-Green-Blue color map (often called a lookup table) for palette-color images. In a palette-color image; a pixel value is used to index into an RGB lookup table.
   /// </summary>
-  [ExifTagDetails( "Color Map", "Defines a Red-Green-Blue color map, or lookup table, for palette-color images where a pixel value is used to index into the map" )]
+  [MetadataTagDetails( "Color Map", "Defines a Red-Green-Blue color map, or lookup table, for palette-color images where a pixel value is used to index into the map" )]
   public const ushort ColorMap = 0x0140;
 
   /// <summary>
   /// The purpose of the HalftoneHints field is to convey to the halftone function the range of gray levels within a colorimetrically-specified image that should retain tonal detail.
   /// </summary>
-  [ExifTagDetails( "Halftone Hints", "Conveys to the halftone function the range of gray levels within a colorimetrically-specified image that should retain tonal detail" )]
+  [MetadataTagDetails( "Halftone Hints", "Conveys to the halftone function the range of gray levels within a colorimetrically-specified image that should retain tonal detail" )]
   public const ushort HalftoneHints = 0x0141;
 
   /// <summary>
   /// The tile width in pixels. This is the number of columns in each tile.
   /// </summary>
-  [ExifTagDetails( "Tile Width", "Number of columns/pixels in each tile" )]
+  [MetadataTagDetails( "Tile Width", "Number of columns/pixels in each tile" )]
   public const ushort TileWidth = 0x0142;
 
   /// <summary>
   /// The tile length (height) in pixels. This is the number of rows in each tile.
   /// </summary>
-  [ExifTagDetails( "Tile Height", "Number of rows in each tile" )]
+  [MetadataTagDetails( "Tile Height", "Number of rows in each tile" )]
   public const ushort TileLength = 0x0143;
 
   /// <summary>
   /// For each tile; the byte offset of that tile; as compressed and stored on disk. The offset is specified with respect to the beginning of the TIFF file. Note that this implies that each tile has a location independent of the locations of other tiles.
   /// </summary>
-  [ExifTagDetails( "Tile Offsets", "Byte offset of each tile as compressed and stored on disk" )]
+  [MetadataTagDetails( "Tile Offsets", "Byte offset of each tile as compressed and stored on disk" )]
   public const ushort TileOffsets = 0x0144;
 
   /// <summary>
   /// For each tile; the number of (compressed) bytes in that tile. See TileOffsets for a description of how the byte counts are ordered.
   /// </summary>
-  [ExifTagDetails( "Tile Byte Counts", "Number of (compressed) bytes in the tile" )]
+  [MetadataTagDetails( "Tile Byte Counts", "Number of (compressed) bytes in the tile" )]
   public const ushort TileByteCounts = 0x0145;
 
   /// <summary>
   /// The set of inks used in a separated (PhotometricInterpretation=5) image.
   /// </summary>
-  [ExifTagDetails( "Ink Set", "Set of inks used in a separated (PhotometricInterpretation) image" )]
+  [MetadataTagDetails( "Ink Set", "Set of inks used in a separated (PhotometricInterpretation) image" )]
   public const ushort InkSet = 0x014c;
 
   /// <summary>
   /// The name of each ink used in a separated (PhotometricInterpretation=5) image.
   /// </summary>
-  [ExifTagDetails( "Ink Names", "Name of each ink used in a separated (PhotometricInterpretation) image" )]
+  [MetadataTagDetails( "Ink Names", "Name of each ink used in a separated (PhotometricInterpretation) image" )]
   public const ushort InkNames = 0x014d;
 
   /// <summary>
   /// The number of inks. Usually equal to SamplesPerPixel; unless there are extra samples.
   /// </summary>
-  [ExifTagDetails( "Number Of Inks", "Number of inks, usually equal to SamplesPerPixel" )]
+  [MetadataTagDetails( "Number Of Inks", "Number of inks, usually equal to SamplesPerPixel" )]
   public const ushort NumberOfInks = 0x014e;
 
   /// <summary>
   /// The component values that correspond to a 0% dot and 100% dot.
   /// </summary>
-  [ExifTagDetails( "Dot Range", "Component values that correspond to a 0% dot and 100% dot" )]
+  [MetadataTagDetails( "Dot Range", "Component values that correspond to a 0% dot and 100% dot" )]
   public const ushort DotRange = 0x0150;
 
   /// <summary>
   /// A description of the printing environment for which this separation is intended.
   /// </summary>
-  [ExifTagDetails( "Target Printer", "Description of the printing environment for which this separation is intended" )]
+  [MetadataTagDetails( "Target Printer", "Description of the printing environment for which this separation is intended" )]
   public const ushort TargetPrinter = 0x0151;
 
   /// <summary>
   /// Specifies that each pixel has extra components whose interpretation is defined by one of the values listed in SampleFormat.
   /// </summary>
-  [ExifTagEnum( 0, "Unspecified" )]
-  [ExifTagEnum( 1, "Associated Alpha" )]
-  [ExifTagEnum( 3, "Associated Alpha" )]
-  [ExifTagDetails( "Extra Samples", "Specifies that each pixel has extra components whose interpretation is defined by one of the values listed in SampleFormat" )]
+  [MetadataTagEnum( 0, "Unspecified" )]
+  [MetadataTagEnum( 1, "Associated Alpha" )]
+  [MetadataTagEnum( 3, "Associated Alpha" )]
+  [MetadataTagDetails( "Extra Samples", "Specifies that each pixel has extra components whose interpretation is defined by one of the values listed in SampleFormat" )]
   public const ushort ExtraSamples = 0x0152;
 
   /// <summary>
   /// This field specifies how to interpret each data sample in a pixel.
   /// </summary>
-  [ExifTagEnum( 1, "Unsigned" )]
-  [ExifTagEnum( 2, "Signed" )]
-  [ExifTagEnum( 3, "Float" )]
-  [ExifTagEnum( 4, "Undefined" )]
-  [ExifTagEnum( 5, "Complex int" )]
-  [ExifTagEnum( 6, "Complex float" )]
-  [ExifTagDetails( "Sample Format", "Specifies how to interpret each data sample in a pixel" )]
+  [MetadataTagEnum( 1, "Unsigned" )]
+  [MetadataTagEnum( 2, "Signed" )]
+  [MetadataTagEnum( 3, "Float" )]
+  [MetadataTagEnum( 4, "Undefined" )]
+  [MetadataTagEnum( 5, "Complex int" )]
+  [MetadataTagEnum( 6, "Complex float" )]
+  [MetadataTagDetails( "Sample Format", "Specifies how to interpret each data sample in a pixel" )]
   public const ushort SampleFormat = 0x0153;
 
   /// <summary>
   /// This field specifies the minimum sample value.
   /// </summary>
-  [ExifTagDetails( "Minimum Sample Value", "Specifies the minimum sample value" )]
+  [MetadataTagDetails( "Minimum Sample Value", "Specifies the minimum sample value" )]
   public const ushort SMinSampleValue = 0x0154;
 
   /// <summary>
   /// This field specifies the maximum sample value.
   /// </summary>
-  [ExifTagDetails( "Maximum Sample Value", "Specifies the maximum sample value" )]
+  [MetadataTagDetails( "Maximum Sample Value", "Specifies the maximum sample value" )]
   public const ushort SMaxSampleValue = 0x0155;
 
   /// <summary>
   /// Expands the range of the TransferFunction
   /// </summary>
-  [ExifTagDetails( "Transfer Range", "Expands the range of the TransferFunction" )]
+  [MetadataTagDetails( "Transfer Range", "Expands the range of the TransferFunction" )]
   public const ushort TransferRange = 0x0156;
 
   /// <summary>
   /// A TIFF ClipPath is intended to mirror the essentials of PostScript's path creation functionality.
   /// </summary>
-  [ExifTagDetails( "Clip Path", "Intended to mirror the essentials of PostScript's path creation functionality" )]
+  [MetadataTagDetails( "Clip Path", "Intended to mirror the essentials of PostScript's path creation functionality" )]
   public const ushort ClipPath = 0x0157;
 
   /// <summary>
   /// The number of units that span the width of the image; in terms of integer ClipPath coordinates.
   /// </summary>
-  [ExifTagDetails( "X Clip Path Units", "Number of units that span the width of the image" )]
+  [MetadataTagDetails( "X Clip Path Units", "Number of units that span the width of the image" )]
   public const ushort XClipPathUnits = 0x0158;
 
   /// <summary>
   /// The number of units that span the height of the image; in terms of integer ClipPath coordinates.
   /// </summary>
-  [ExifTagDetails( "Y Clip Path Units", "Number of units that span the height of the image" )]
+  [MetadataTagDetails( "Y Clip Path Units", "Number of units that span the height of the image" )]
   public const ushort YClipPathUnits = 0x0159;
 
   /// <summary>
   /// Indexed images are images where the 'pixels' do not represent color values; but rather an index (usually 8-bit) into a separate color table; the ColorMap.
   /// </summary>
-  [ExifTagDetails( "Indexed", "Indexed images are images where the 'pixels' do not represent color values but an index into a separate color map" )]
+  [MetadataTagDetails( "Indexed", "Indexed images are images where the 'pixels' do not represent color values but an index into a separate color map" )]
   public const ushort Indexed = 0x015a;
 
   /// <summary>
   /// This optional tag may be used to encode the JPEG quantization and Huffman tables for subsequent use by the JPEG decompression process.
   /// </summary>
-  [ExifTagDetails( "JPEG Tables", "May be used to encode the JPEG quantization and Huffman tables for subsequent use by the JPEG decompression process" )]
+  [MetadataTagDetails( "JPEG Tables", "May be used to encode the JPEG quantization and Huffman tables for subsequent use by the JPEG decompression process" )]
   public const ushort JPEGTables = 0x015b;
 
   /// <summary>
   /// OPIProxy gives information concerning whether this image is a low-resolution proxy of a high-resolution image (Adobe OPI).
   /// </summary>
-  [ExifTagDetails( "OPI Proxy", "Gives information concerning whether this image is a low-resolution proxy of a high-resolution image" )]
+  [MetadataTagDetails( "OPI Proxy", "Gives information concerning whether this image is a low-resolution proxy of a high-resolution image" )]
   public const ushort OPIProxy = 0x015f;
 
   /// <summary>
   /// This field indicates the process used to produce the compressed data
   /// </summary>
-  [ExifTagDetails( "JPEG Process", "Indicates the process used to produce the compressed data" )]
+  [MetadataTagDetails( "JPEG Process", "Indicates the process used to produce the compressed data" )]
   public const ushort JPEGProc = 0x0200;
 
   /// <summary>
   /// The offset to the start byte (SOI) of JPEG compressed thumbnail data. This is not used for primary image JPEG data.
   /// </summary>
-  [ExifTagDetails( "JPEG Interchange Format", "Offset to the start byte of the JPEG compressed thumbnail data" )]
+  [MetadataTagDetails( "JPEG Interchange Format", "Offset to the start byte of the JPEG compressed thumbnail data" )]
   public const ushort JPEGInterchangeFormat = 0x0201;
 
   /// <summary>
   /// The number of bytes of JPEG compressed thumbnail data. This is not used for primary image JPEG data. JPEG thumbnails are not divided but are recorded as a continuous JPEG bitstream from SOI to EOI. Appn and COM markers should not be recorded. Compressed thumbnails must be recorded in no more than 64 Kbytes; including all other data to be recorded in APP1.
   /// </summary>
-  [ExifTagDetails( "JPEG Interchange Format Length", "Number of bytes of JPEG compressed thumbnail data" )]
+  [MetadataTagDetails( "JPEG Interchange Format Length", "Number of bytes of JPEG compressed thumbnail data" )]
   public const ushort JPEGInterchangeFormatLength = 0x0202;
 
   /// <summary>
   /// This Field indicates the length of the restart interval used in the compressed image data.
   /// </summary>
-  [ExifTagDetails( "JPEG Restart Interval", "Indicates the length of the restart interval used in the compressed image data" )]
+  [MetadataTagDetails( "JPEG Restart Interval", "Indicates the length of the restart interval used in the compressed image data" )]
   public const ushort JPEGRestartInterval = 0x0203;
 
   /// <summary>
   /// This Field points to a list of lossless predictor-selection values; one per component.
   /// </summary>
-  [ExifTagDetails( "JPEG Lossless Predictors", "Points to a list of lossless predictor/selection values, one per component" )]
+  [MetadataTagDetails( "JPEG Lossless Predictors", "Points to a list of lossless predictor/selection values, one per component" )]
   public const ushort JPEGLosslessPredictors = 0x0205;
 
   /// <summary>
   /// This Field points to a list of point transform values; one per component.
   /// </summary>
-  [ExifTagDetails( "JPEG Point Transforms", "Points to a list of point transform, one per component" )]
+  [MetadataTagDetails( "JPEG Point Transforms", "Points to a list of point transform, one per component" )]
   public const ushort JPEGPointTransforms = 0x0206;
 
   /// <summary>
   /// This Field points to a list of offsets to the quantization tables; one per component.
   /// </summary>
-  [ExifTagDetails( "JPEG Quantization Tables", "Points to a list of offsets to the quantization tables, one per component" )]
+  [MetadataTagDetails( "JPEG Quantization Tables", "Points to a list of offsets to the quantization tables, one per component" )]
   public const ushort JPEGQTables = 0x0207;
 
   /// <summary>
   /// This Field points to a list of offsets to the DC Huffman tables or the lossless Huffman tables; one per component.
   /// </summary>
-  [ExifTagDetails( "JPEG DC Huffman Tables", "Points to a list of offsets to the DC Huffman or lossless Huffman tables, one per component" )]
+  [MetadataTagDetails( "JPEG DC Huffman Tables", "Points to a list of offsets to the DC Huffman or lossless Huffman tables, one per component" )]
   public const ushort JPEGDCTables = 0x0208;
 
   /// <summary>
   /// This Field points to a list of offsets to the Huffman AC tables; one per component.
   /// </summary>
-  [ExifTagDetails( "JPEG Huffman AC Tables", "Points to a list of offsets to the Huffman AC tables, one per component" )]
+  [MetadataTagDetails( "JPEG Huffman AC Tables", "Points to a list of offsets to the Huffman AC tables, one per component" )]
   public const ushort JPEGACTables = 0x0209;
 
   /// <summary>
   /// The matrix coefficients for transformation from RGB to YCbCr image data. No default is given in TIFF; but here the value given in Appendix E; "Color Space Guidelines"; is used as the default. The color space is declared in a color space information tag; with the default being the value that gives the optimal image characteristics Interoperability this condition.
   /// </summary>
-  [ExifTagDetails( "YCbCr Coefficients", "Matrix coefficients for transformation from RGB to YCbCr image data" )]
+  [MetadataTagDetails( "YCbCr Coefficients", "Matrix coefficients for transformation from RGB to YCbCr image data" )]
   public const ushort YCbCrCoefficients = 0x0211;
 
   /// <summary>
   /// The sampling ratio of chrominance components in relation to the luminance component. In JPEG compressed data a JPEG marker is used instead of this tag.
   /// </summary>
-  [ExifTagDetails( "YCbCr SubSampling", "Sampling ratio of chrominance components in relation to the luminance component" )]
+  [MetadataTagDetails( "YCbCr SubSampling", "Sampling ratio of chrominance components in relation to the luminance component" )]
   public const ushort YCbCrSubSampling = 0x0212;
 
   /// <summary>
   /// The position of chrominance components in relation to the luminance component. This field is designated only for JPEG compressed data or uncompressed YCbCr data. The TIFF default is 1 (centered); but when Y:Cb:Cr = 4:2:2 it is recommended in this standard that 2 (co-sited) be used to record data; in order to improve the image quality when viewed on TV systems. When this field does not exist; the reader shall assume the TIFF default. In the case of Y:Cb:Cr = 4:2:0; the TIFF default (centered) is recommended. If the reader does not have the capability of supporting both kinds of <YCbCrPositioning>; it shall follow the TIFF default regardless of the value in this field. It is preferable that readers be able to support both centered and co-sited positioning.
   /// </summary>
-  [ExifTagDetails( "YCbCr Positioning", "Position of chrominance components in relation to the luminance component" )]
+  [MetadataTagDetails( "YCbCr Positioning", "Position of chrominance components in relation to the luminance component" )]
   public const ushort YCbCrPositioning = 0x0213;
 
   /// <summary>
   /// The reference black point value and reference white point value. No defaults are given in TIFF; but the values below are given as defaults here. The color space is declared in a color space information tag; with the default being the value that gives the optimal image characteristics Interoperability these conditions.
   /// </summary>
-  [ExifTagDetails( "Reference Black White", "Reference black point value and reference white point value" )]
+  [MetadataTagDetails( "Reference Black White", "Reference black point value and reference white point value" )]
   public const ushort ReferenceBlackWhite = 0x0214;
 
   /// <summary>
   /// XMP Metadata (Adobe technote 9-14-02)
   /// </summary>
-  [ExifTagDetails( "XML Packet", "XMP metadata" )]
+  [MetadataTagDetails( "XML Packet", "XMP metadata" )]
   public const ushort XMLPacket = 0x02bc;
 
   /// <summary>
   /// Rating tag used by Windows
   /// </summary>
-  [ExifTagDetails( "Rating", "Windows rating value" )]
+  [MetadataTagDetails( "Rating", "Windows rating value" )]
   public const ushort Rating = 0x4746;
 
   /// <summary>
   /// Rating tag used by Windows; value in percent
   /// </summary>
-  [ExifTagDetails( "Rating Percent", "Windows rating percentage value" )]
+  [MetadataTagDetails( "Rating Percent", "Windows rating percentage value" )]
   public const ushort RatingPercent = 0x4749;
 
   /// <summary>
   /// Sony vignetting correction parameters
   /// </summary>
-  [ExifTagDetails( "Vignetting Correction Parameters", "Sony vignetting correction parameters" )]
+  [MetadataTagDetails( "Vignetting Correction Parameters", "Sony vignetting correction parameters" )]
   public const ushort VignettingCorrParams = 0x7032;
 
   /// <summary>
   /// Sony chromatic aberration correction parameters
   /// </summary>
-  [ExifTagDetails( "Chromatic Aberration Correction Parameters", "Sony chromatic aberration correction parameters" )]
+  [MetadataTagDetails( "Chromatic Aberration Correction Parameters", "Sony chromatic aberration correction parameters" )]
   public const ushort ChromaticAberrationCorrParams = 0x7035;
 
   /// <summary>
   /// Sony distortion correction parameters
   /// </summary>
-  [ExifTagDetails( "Distortion Correction Parameters", "Sony distortion correction parameters" )]
+  [MetadataTagDetails( "Distortion Correction Parameters", "Sony distortion correction parameters" )]
   public const ushort DistortionCorrParams = 0x7037;
 
   /// <summary>
   /// ImageID is the full pathname of the original; high-resolution image; or any other identifying string that uniquely identifies the original image (Adobe OPI).
   /// </summary>
-  [ExifTagDetails( "Image ID", "Full pathname of the original, high-resolution image; or any other identifying string that uniquely identifies the original image" )]
+  [MetadataTagDetails( "Image ID", "Full pathname of the original, high-resolution image; or any other identifying string that uniquely identifies the original image" )]
   public const ushort ImageID = 0x800d;
 
   /// <summary>
   /// Contains two values representing the minimum rows and columns to define the repeating patterns of the color filter array
   /// </summary>
-  [ExifTagDetails( "CFA Repeat Pattern Dim", "Representing the minimum rows and columns to define the repeating patterns of the color filter array (CFA)" )]
+  [MetadataTagDetails( "CFA Repeat Pattern Dim", "Representing the minimum rows and columns to define the repeating patterns of the color filter array (CFA)" )]
   public const ushort CFARepeatPatternDim = 0x828d;
 
   /// <summary>
   /// Indicates the color filter array (CFA) geometric pattern of the image sensor when a one-chip color area sensor is used. It does not apply to all sensing methods
   /// </summary>
-  [ExifTagDetails( "CFA Pattern", "The color filter array (CFA) geometric pattern of the image sensor when a one-chip color area sensor is used" )]
+  [MetadataTagDetails( "CFA Pattern", "The color filter array (CFA) geometric pattern of the image sensor when a one-chip color area sensor is used" )]
   public const ushort CFAPattern = 0x828e;
 
   /// <summary>
   /// Contains a value of the battery level as a fraction or string
   /// </summary>
-  [ExifTagDetails( "Battery Level", "Value of the battery level as a fraction or string" )]
+  [MetadataTagDetails( "Battery Level", "Value of the battery level as a fraction or string" )]
   public const ushort BatteryLevel = 0x828f;
 
   /// <summary>
   /// Copyright information. In this standard the tag is used to indicate both the photographer and editor copyrights. It is the copyright notice of the person or organization claiming rights to the image. The Interoperability copyright statement including date and rights should be written in this field; e.g.; "Copyright; John Smith; 19xx. All rights reserved.". In this standard the field records both the photographer and editor copyrights; with each recorded in a separate part of the statement. When there is a clear distinction between the photographer and editor copyrights; these are to be written in the order of photographer followed by editor copyright; separated by NULL (in this case since the statement also ends with a NULL; there are two NULL codes). When only the photographer copyright is given; it is terminated by one NULL code. When only the editor copyright is given; the photographer copyright part consists of one space followed by a terminating NULL code; then the editor copyright is given. When the field is left blank; it is treated as unknown.
   /// </summary>
-  [ExifTagDetails( "Copyright", "Indicates both the photographer and editor copyrights; it is the copyright notice of the person or organization claiming rights to the image" )]
+  [MetadataTagDetails( "Copyright", "Indicates both the photographer and editor copyrights; it is the copyright notice of the person or organization claiming rights to the image" )]
   public const ushort Copyright = 0x8298;
 
   /// <summary>
   /// Exposure time; given in seconds.
   /// </summary>
-  [ExifTagDetails( "Exposure Time", "Exposure time in seconds" )]
+  [MetadataTagDetails( "Exposure Time", "Exposure time in seconds" )]
   public const ushort ExposureTime = 0x829a;
 
   /// <summary>
   /// The F number.
   /// </summary>
-  [ExifTagDetails( "F Number", "Camera F number" )]
+  [MetadataTagDetails( "F Number", "Camera F number" )]
   public const ushort FNumber = 0x829d;
 
   /// <summary>
   /// Contains an IPTC/NAA record
   /// </summary>
-  [ExifTagDetails( "IPTC/NAA Record", "Contains the IPTC/NAA record" )]
+  [MetadataTagDetails( "IPTC/NAA Record", "Contains the IPTC/NAA record" )]
   public const ushort IPTCNAA = 0x83bb;
 
   /// <summary>
@@ -607,16 +607,16 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// The class of the program used by the camera to set exposure when the picture is taken.
   /// </summary>
-  [ExifTagEnum( 0, "Not Defined" )]
-  [ExifTagEnum( 1, "Manual" )]
-  [ExifTagEnum( 2, "Program AE" )]
-  [ExifTagEnum( 3, "Aperture-priority AE" )]
-  [ExifTagEnum( 4, "Shutter speed priority AE" )]
-  [ExifTagEnum( 5, "Creative (Slow speed)" )]
-  [ExifTagEnum( 6, "Action (High speed)" )]
-  [ExifTagEnum( 7, "Portrait" )]
-  [ExifTagEnum( 8, "Landscape" )]
-  [ExifTagEnum( 9, "Bulb" )]
+  [MetadataTagEnum( 0, "Not Defined" )]
+  [MetadataTagEnum( 1, "Manual" )]
+  [MetadataTagEnum( 2, "Program AE" )]
+  [MetadataTagEnum( 3, "Aperture-priority AE" )]
+  [MetadataTagEnum( 4, "Shutter speed priority AE" )]
+  [MetadataTagEnum( 5, "Creative (Slow speed)" )]
+  [MetadataTagEnum( 6, "Action (High speed)" )]
+  [MetadataTagEnum( 7, "Portrait" )]
+  [MetadataTagEnum( 8, "Landscape" )]
+  [MetadataTagEnum( 9, "Bulb" )]
   public const ushort ExposureProgram = 0x8822;
 
   /// <summary>
@@ -692,14 +692,14 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// The metering mode.
   /// </summary>
-  [ExifTagEnum( 0, "Unknown" )]
-  [ExifTagEnum( 1, "Average" )]
-  [ExifTagEnum( 2, "Center-weighted average" )]
-  [ExifTagEnum( 3, "Spot" )]
-  [ExifTagEnum( 4, "Multi-spot" )]
-  [ExifTagEnum( 5, "Multi-segment" )]
-  [ExifTagEnum( 6, "Partial" )]
-  [ExifTagEnum( 255, "Other" )]
+  [MetadataTagEnum( 0, "Unknown" )]
+  [MetadataTagEnum( 1, "Average" )]
+  [MetadataTagEnum( 2, "Center-weighted average" )]
+  [MetadataTagEnum( 3, "Spot" )]
+  [MetadataTagEnum( 4, "Multi-spot" )]
+  [MetadataTagEnum( 5, "Multi-segment" )]
+  [MetadataTagEnum( 6, "Partial" )]
+  [MetadataTagEnum( 255, "Other" )]
   public const ushort MeteringMode = 0x9207;
 
   /// <summary>
@@ -745,11 +745,11 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// Unit of measurement for FocalPlaneXResolution(37390) and FocalPlaneYResolution(37391).
   /// </summary>
-  [ExifTagEnum( 1, "None" )]
-  [ExifTagEnum( 2, "inches" )]
-  [ExifTagEnum( 3, "cm" )]
-  [ExifTagEnum( 4, "mm" )]
-  [ExifTagEnum( 5, "um" )]
+  [MetadataTagEnum( 1, "None" )]
+  [MetadataTagEnum( 2, "inches" )]
+  [MetadataTagEnum( 3, "cm" )]
+  [MetadataTagEnum( 4, "mm" )]
+  [MetadataTagEnum( 5, "um" )]
   public const ushort FocalPlaneResolutionUnit = 0x9210;
 
   /// <summary>
@@ -760,7 +760,7 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// Security classification assigned to the image; 'C' denotes Confidential, 'R' denotes Restricted, 'S' denotes Secret, 'T' denotes Top Secret, 'U' denotes Unclassified.
   /// </summary>
-  [ExifTagDetails( "Security Classification", "Security classification assigned to the image; 'C' denotes Confidential, 'R' denotes Restricted, 'S' denotes Secret, 'T' denotes Top Secret, 'U' denotes Unclassified" )]
+  [MetadataTagDetails( "Security Classification", "Security classification assigned to the image; 'C' denotes Confidential, 'R' denotes Restricted, 'S' denotes Secret, 'T' denotes Top Secret, 'U' denotes Unclassified" )]
   public const ushort SecurityClassification = 0x9212;
 
   /// <summary>
@@ -1385,14 +1385,14 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// The SensitivityType tag indicates which one of the parameters of ISO12232 is the PhotographicSensitivity tag. Although it is an optional tag; it should be recorded when a PhotographicSensitivity tag is recorded. Value = 4; 5; 6; or 7 may be used in case that the values of plural parameters are the same.
   /// </summary>
-  [ExifTagDetails( "Sensitivity Type", "The SensitivityType tag indicates which one of the parameters of ISO12232 is the ISOSpeedRatings tag" )]
-  [ExifTagEnum( 1, "Standard output sensitivity" )]
-  [ExifTagEnum( 2, "Recommended exposure index" )]
-  [ExifTagEnum( 3, "ISO speed" )]
-  [ExifTagEnum( 4, "Standard output sensitivity and recommended exposure index" )]
-  [ExifTagEnum( 5, "Standard output sensitivity and ISO speed" )]
-  [ExifTagEnum( 6, "Recommended exposure index and ISO speed" )]
-  [ExifTagEnum( 7, "Standard output sensitivity, recommended exposure index and ISO speed" )]
+  [MetadataTagDetails( "Sensitivity Type", "The SensitivityType tag indicates which one of the parameters of ISO12232 is the ISOSpeedRatings tag" )]
+  [MetadataTagEnum( 1, "Standard output sensitivity" )]
+  [MetadataTagEnum( 2, "Recommended exposure index" )]
+  [MetadataTagEnum( 3, "ISO speed" )]
+  [MetadataTagEnum( 4, "Standard output sensitivity and recommended exposure index" )]
+  [MetadataTagEnum( 5, "Standard output sensitivity and ISO speed" )]
+  [MetadataTagEnum( 6, "Recommended exposure index and ISO speed" )]
+  [MetadataTagEnum( 7, "Standard output sensitivity, recommended exposure index and ISO speed" )]
   public const ushort PhotoSensitivityType = 0x8830;
 
   /// <summary>
@@ -1574,21 +1574,21 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// Indicates the image sensor type on the camera or input device.
   /// </summary>
-  [ExifTagEnum( 1, "Not defined" )]
-  [ExifTagEnum( 2, "One-chip color area" )]
-  [ExifTagEnum( 3, "Two-chip color area" )]
-  [ExifTagEnum( 4, "Three-chip color area" )]
-  [ExifTagEnum( 5, "Color sequential area" )]
-  [ExifTagEnum( 7, "Trilinear" )]
-  [ExifTagEnum( 8, "Color sequential linear" )]
+  [MetadataTagEnum( 1, "Not defined" )]
+  [MetadataTagEnum( 2, "One-chip color area" )]
+  [MetadataTagEnum( 3, "Two-chip color area" )]
+  [MetadataTagEnum( 4, "Three-chip color area" )]
+  [MetadataTagEnum( 5, "Color sequential area" )]
+  [MetadataTagEnum( 7, "Trilinear" )]
+  [MetadataTagEnum( 8, "Color sequential linear" )]
   public const ushort PhotoSensingMethod = 0xa217;
 
   /// <summary>
   /// (undefined type) Indicates the image source. If a DSC recorded the image; this tag value of this tag always be set to 3; indicating that the image was recorded on a DSC.
   /// </summary>
-  [ExifTagEnum( 1, "Film Scanner" )]
-  [ExifTagEnum( 2, "Reflection Print Scanner" )]
-  [ExifTagEnum( 3, "Digital Camera" )]
+  [MetadataTagEnum( 1, "Film Scanner" )]
+  [MetadataTagEnum( 2, "Reflection Print Scanner" )]
+  [MetadataTagEnum( 3, "Digital Camera" )]
   public const ushort PhotoFileSource = 0xa300;
 
   /// <summary>
@@ -1604,29 +1604,29 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// This tag indicates the use of special processing on image data; such as rendering geared to output. When special processing is performed; the reader is expected to disable or minimize any further processing.
   /// </summary>
-  [ExifTagEnum( 0, "Normal" )]
-  [ExifTagEnum( 1, "Custom" )]
-  [ExifTagEnum( 2, "HDR (no original saved)" )]
-  [ExifTagEnum( 3, "HDR (original saved)" )]
-  [ExifTagEnum( 4, "Original (for HDR)" )]
-  [ExifTagEnum( 6, "Panorama" )]
-  [ExifTagEnum( 7, "Portrait HDR" )]
-  [ExifTagEnum( 8, "Portrait" )]
+  [MetadataTagEnum( 0, "Normal" )]
+  [MetadataTagEnum( 1, "Custom" )]
+  [MetadataTagEnum( 2, "HDR (no original saved)" )]
+  [MetadataTagEnum( 3, "HDR (original saved)" )]
+  [MetadataTagEnum( 4, "Original (for HDR)" )]
+  [MetadataTagEnum( 6, "Panorama" )]
+  [MetadataTagEnum( 7, "Portrait HDR" )]
+  [MetadataTagEnum( 8, "Portrait" )]
   public const ushort PhotoCustomRendered = 0xa401;
 
   /// <summary>
   /// This tag indicates the exposure mode set when the image was shot. In auto-bracketing mode; the camera shoots a series of frames of the same scene at different exposure settings.
   /// </summary>
-  [ExifTagEnum( 0, "Auto" )]
-  [ExifTagEnum( 1, "Manual" )]
-  [ExifTagEnum( 2, "Auto bracket" )]
+  [MetadataTagEnum( 0, "Auto" )]
+  [MetadataTagEnum( 1, "Manual" )]
+  [MetadataTagEnum( 2, "Auto bracket" )]
   public const ushort PhotoExposureMode = 0xa402;
 
   /// <summary>
   /// This tag indicates the white balance mode set when the image was shot.
   /// </summary>
-  [ExifTagEnum( 0, "Auto" )]
-  [ExifTagEnum( 1, "Manual" )]
+  [MetadataTagEnum( 0, "Auto" )]
+  [MetadataTagEnum( 1, "Manual" )]
   public const ushort PhotoWhiteBalance = 0xa403;
 
   /// <summary>
@@ -1642,45 +1642,45 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// This tag indicates the type of scene that was shot. It can also be used to record the mode in which the image was shot. Note that this differs from the <SceneType> tag.
   /// </summary>
-  [ExifTagEnum( 0, "Standard" )]
-  [ExifTagEnum( 1, "Landscape" )]
-  [ExifTagEnum( 2, "Portrait" )]
-  [ExifTagEnum( 3, "Night" )]
-  [ExifTagEnum( 4, "Other" )]
+  [MetadataTagEnum( 0, "Standard" )]
+  [MetadataTagEnum( 1, "Landscape" )]
+  [MetadataTagEnum( 2, "Portrait" )]
+  [MetadataTagEnum( 3, "Night" )]
+  [MetadataTagEnum( 4, "Other" )]
   public const ushort PhotoSceneCaptureType = 0xa406;
 
   /// <summary>
   /// This tag indicates the degree of overall image gain adjustment.
   /// </summary>
-  [ExifTagEnum( 0, "None" )]
-  [ExifTagEnum( 1, "Low gain up" )]
-  [ExifTagEnum( 2, "High gain up" )]
-  [ExifTagEnum( 3, "Low gain down" )]
-  [ExifTagEnum( 4, "High gain down" )]
+  [MetadataTagEnum( 0, "None" )]
+  [MetadataTagEnum( 1, "Low gain up" )]
+  [MetadataTagEnum( 2, "High gain up" )]
+  [MetadataTagEnum( 3, "Low gain down" )]
+  [MetadataTagEnum( 4, "High gain down" )]
   public const ushort PhotoGainControl = 0xa407;
 
   /// <summary>
   /// This tag indicates the direction of contrast processing applied by the camera when the image was shot.
   /// </summary>
-  [ExifTagEnum( 0, "Normal" )]
-  [ExifTagEnum( 1, "Low" )]
-  [ExifTagEnum( 2, "High" )]
+  [MetadataTagEnum( 0, "Normal" )]
+  [MetadataTagEnum( 1, "Low" )]
+  [MetadataTagEnum( 2, "High" )]
   public const ushort PhotoContrast = 0xa408;
 
   /// <summary>
   /// This tag indicates the direction of saturation processing applied by the camera when the image was shot.
   /// </summary>
-  [ExifTagEnum( 0, "Normal" )]
-  [ExifTagEnum( 1, "Low" )]
-  [ExifTagEnum( 2, "High" )]
+  [MetadataTagEnum( 0, "Normal" )]
+  [MetadataTagEnum( 1, "Low" )]
+  [MetadataTagEnum( 2, "High" )]
   public const ushort PhotoSaturation = 0xa409;
 
   /// <summary>
   /// This tag indicates the direction of sharpness processing applied by the camera when the image was shot.
   /// </summary>
-  [ExifTagEnum( 0, "Normal" )]
-  [ExifTagEnum( 1, "Soft" )]
-  [ExifTagEnum( 2, "Hard" )]
+  [MetadataTagEnum( 0, "Normal" )]
+  [MetadataTagEnum( 1, "Soft" )]
+  [MetadataTagEnum( 2, "Hard" )]
   public const ushort PhotoSharpness = 0xa40a;
 
   /// <summary>
@@ -1691,10 +1691,10 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// This tag indicates the distance to the subject.
   /// </summary>
-  [ExifTagEnum( 0, "Unknown" )]
-  [ExifTagEnum( 1, "Macro" )]
-  [ExifTagEnum( 2, "Close" )]
-  [ExifTagEnum( 2, "Distant" )]
+  [MetadataTagEnum( 0, "Unknown" )]
+  [MetadataTagEnum( 1, "Macro" )]
+  [MetadataTagEnum( 2, "Close" )]
+  [MetadataTagEnum( 2, "Distant" )]
   public const ushort PhotoSubjectDistanceRange = 0xa40c;
 
   /// <summary>
@@ -1759,193 +1759,193 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// Indicates the version of <GPSInfoIFD>. The version is given as 2.0.0.0. This tag is mandatory when <GPSInfo> tag is present. (Note: The <GPSVersionID> tag is given in bytes; unlike the <ExifVersion> tag. When the version is 2.0.0.0; the tag value is 02000000.H).
   /// </summary>
-  [ExifTagDetails( "GPS Version ID", "Indicates the version of the GPS Info IFD" )]
+  [MetadataTagDetails( "GPS Version ID", "Indicates the version of the GPS Info IFD" )]
   public const ushort GPSVersionID = 0x0000;
 
   /// <summary>
   /// Indicates whether the latitude is north or south latitude. The ASCII value 'N' indicates north latitude; and 'S' is south latitude.
   /// </summary>
-  [ExifTagDetails( "GPS Latitude Reference", "Indicates whether the latitude is North or South longitude; 'N' denotes North longitude, 'S' denotes South longitude" )]
+  [MetadataTagDetails( "GPS Latitude Reference", "Indicates whether the latitude is North or South longitude; 'N' denotes North longitude, 'S' denotes South longitude" )]
   public const ushort GPSLatitudeRef = 0x0001;
 
   /// <summary>
   /// Indicates the latitude. The latitude is expressed as three RATIONAL values giving the degrees; minutes; and seconds; respectively. When degrees; minutes and seconds are expressed; the format is dd/1;mm/1;ss/1. When degrees and minutes are used and; for example; fractions of minutes are given up to two decimal places; the format is dd/1;mmmm/100;0/1.
   /// </summary>
-  [ExifTagDetails( "GPS Latitude", "Indicates the latitude as three Rational values giving the degress, minutes and seconds respectively" )]
+  [MetadataTagDetails( "GPS Latitude", "Indicates the latitude as three Rational values giving the degress, minutes and seconds respectively" )]
   public const ushort GPSLatitude = 0x0002;
 
   /// <summary>
   /// Indicates whether the longitude is east or west longitude. ASCII 'E' indicates east longitude; and 'W' is west longitude.
   /// </summary>
-  [ExifTagDetails( "GPS Longitude Reference", "Indicates whether the longitude is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude" )]
+  [MetadataTagDetails( "GPS Longitude Reference", "Indicates whether the longitude is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude" )]
   public const ushort GPSLongitudeRef = 0x0003;
 
   /// <summary>
   /// Indicates the longitude. The longitude is expressed as three RATIONAL values giving the degrees; minutes; and seconds; respectively. When degrees; minutes and seconds are expressed; the format is ddd/1;mm/1;ss/1. When degrees and minutes are used and; for example; fractions of minutes are given up to two decimal places; the format is ddd/1;mmmm/100;0/1.
   /// </summary>
-  [ExifTagDetails( "GPS Longitude", "Indicates the longitude as three Rational values giving the degress, minutes and seconds respectively" )]
+  [MetadataTagDetails( "GPS Longitude", "Indicates the longitude as three Rational values giving the degress, minutes and seconds respectively" )]
   public const ushort GPSLongitude = 0x0004;
 
   /// <summary>
   /// Indicates the altitude used as the reference altitude. If the reference is sea level and the altitude is above sea level; 0 is given. If the altitude is below sea level; a value of 1 is given and the altitude is indicated as an absolute value in the GSPAltitude tag. The reference unit is meters. Note that this tag is BYTE type; unlike other reference tags.
   /// </summary>
-  [ExifTagDetails( "GPS Altitude Reference", "Indicates the altitude reference used for GPSAltitude; '0' denotes altitude above sea level, '1' denotes altitude below sea level" )]
+  [MetadataTagDetails( "GPS Altitude Reference", "Indicates the altitude reference used for GPSAltitude; '0' denotes altitude above sea level, '1' denotes altitude below sea level" )]
   public const ushort GPSAltitudeRef = 0x0005;
 
   /// <summary>
   /// Indicates the altitude based on the reference in GPSAltitudeRef. Altitude is expressed as one RATIONAL value. The reference unit is meters.
   /// </summary>
-  [ExifTagDetails( "GPS Altitude", "Indicates the altitude based on the reference in GPSAltitudeRef and expressed in meters" )]
+  [MetadataTagDetails( "GPS Altitude", "Indicates the altitude based on the reference in GPSAltitudeRef and expressed in meters" )]
   public const ushort GPSAltitude = 0x0006;
 
   /// <summary>
   /// Indicates the time as UTC (Coordinated Universal Time). <TimeStamp> is expressed as three RATIONAL values giving the hour; minute; and second (atomic clock).
   /// </summary>
-  [ExifTagDetails( "GPS TimeStamp", "Indicates the UTC time expressed as three Rational values giving the hour, minute and second" )]
+  [MetadataTagDetails( "GPS TimeStamp", "Indicates the UTC time expressed as three Rational values giving the hour, minute and second" )]
   public const ushort GPSTimeStamp = 0x0007;
 
   /// <summary>
   /// Indicates the GPS satellites used for measurements. This tag can be used to describe the number of satellites; their ID number; angle of elevation; azimuth; SNR and other information in ASCII notation. The format is not specified. If the GPS receiver is incapable of taking measurements; value of the tag is set to NULL.
   /// </summary>
-  [ExifTagDetails( "GPS Satellites", "Indicates the GPS satellites used for measurements; the tag can be used to describe the number of satellites, their ID number, angle of elevation, azimuth, SNR and other information" )]
+  [MetadataTagDetails( "GPS Satellites", "Indicates the GPS satellites used for measurements; the tag can be used to describe the number of satellites, their ID number, angle of elevation, azimuth, SNR and other information" )]
   public const ushort GPSSatellites = 0x0008;
 
   /// <summary>
   /// Indicates the status of the GPS receiver when the image is recorded. "A" means measurement is in progress; and "V" means the measurement is Interoperability.
   /// </summary>
-  [ExifTagDetails( "GPS Status", "Indicates the status of the GPS receiver when the image is recorded; 'A' denotes measurement is in-progress, 'V' denotes the measurement is Interoperability" )]
+  [MetadataTagDetails( "GPS Status", "Indicates the status of the GPS receiver when the image is recorded; 'A' denotes measurement is in-progress, 'V' denotes the measurement is Interoperability" )]
   public const ushort GPSStatus = 0x0009;
 
   /// <summary>
   /// Indicates the GPS measurement mode. "2" means two-dimensional measurement and "3" means three-dimensional measurement is in progress.
   /// </summary>
-  [ExifTagDetails( "GPS Measurement Mode", "Indicates the GPS measurement mode; '2' means two-dimensional, '3' means three-dimensional measurement is in progress" )]
+  [MetadataTagDetails( "GPS Measurement Mode", "Indicates the GPS measurement mode; '2' means two-dimensional, '3' means three-dimensional measurement is in progress" )]
   public const ushort GPSMeasureMode = 0x000a;
 
   /// <summary>
   /// Indicates the GPS DOP (data degree of precision). An HDOP value is written during two-dimensional measurement; and PDOP during three-dimensional measurement.
   /// </summary>
-  [ExifTagDetails( "GPS Data Degree of Precision", "Indicates the GPS data degree of precision. An HDOP value is written during two-dimensional measurement; and PDOP during three-dimensional measurement" )]
+  [MetadataTagDetails( "GPS Data Degree of Precision", "Indicates the GPS data degree of precision. An HDOP value is written during two-dimensional measurement; and PDOP during three-dimensional measurement" )]
   public const ushort GPSDOP = 0x000b;
 
   /// <summary>
   /// Indicates the unit used to express the GPS receiver speed of movement. "K" "M" and "N" represents kilometers per hour; miles per hour; and knots.
   /// </summary>
-  [ExifTagDetails( "GPS Speed Reference", "Indicates the unit used to express the GPS receiver speed of movement; 'K' denotes km/h, 'M' denotes miles per hour, 'N' denotes knots" )]
+  [MetadataTagDetails( "GPS Speed Reference", "Indicates the unit used to express the GPS receiver speed of movement; 'K' denotes km/h, 'M' denotes miles per hour, 'N' denotes knots" )]
   public const ushort GPSSpeedRef = 0x000c;
 
   /// <summary>
   /// Indicates the speed of GPS receiver movement.
   /// </summary>
-  [ExifTagDetails( "GPS Speed", "Indicates the speed of GPS receiver movement" )]
+  [MetadataTagDetails( "GPS Speed", "Indicates the speed of GPS receiver movement" )]
   public const ushort GPSSpeed = 0x000d;
 
   /// <summary>
   /// Indicates the reference for giving the direction of GPS receiver movement. "T" denotes true direction and "M" is magnetic direction.
   /// </summary>
-  [ExifTagDetails( "GPS Track Reference", "Indicates the reference for giving the direction of GPS receiver movement; 'T' denotes True Direction, 'M' denotes Magnetic Direction" )]
+  [MetadataTagDetails( "GPS Track Reference", "Indicates the reference for giving the direction of GPS receiver movement; 'T' denotes True Direction, 'M' denotes Magnetic Direction" )]
   public const ushort GPSTrackRef = 0x000e;
 
   /// <summary>
   /// Indicates the direction of GPS receiver movement. The range of values is from 0.00 to 359.99.
   /// </summary>
-  [ExifTagDetails( "GPS Track", "Indicates the direction of GPS receiver movement" )]
+  [MetadataTagDetails( "GPS Track", "Indicates the direction of GPS receiver movement" )]
   public const ushort GPSTrack = 0x000f;
 
   /// <summary>
   /// Indicates the reference for giving the direction of the image when it is captured. "T" denotes true direction and "M" is magnetic direction.
   /// </summary>
-  [ExifTagDetails( "GPS Image Direction Reference", "Indicates the reference for giving the direction of the image when it is captured; 'T' denotes True Direction, 'M' denotes Magnetic Direction" )]
+  [MetadataTagDetails( "GPS Image Direction Reference", "Indicates the reference for giving the direction of the image when it is captured; 'T' denotes True Direction, 'M' denotes Magnetic Direction" )]
   public const ushort GPSImgDirectionRef = 0x0010;
 
   /// <summary>
   /// Indicates the direction of the image when it was captured. The range of values is from 0.00 to 359.99.
   /// </summary>
-  [ExifTagDetails( "GPS Image Direction", "Indicates the direction of the image when it was captured" )]
+  [MetadataTagDetails( "GPS Image Direction", "Indicates the direction of the image when it was captured" )]
   public const ushort GPSImgDirection = 0x0011;
 
   /// <summary>
   /// Indicates the geodetic survey data used by the GPS receiver. If the survey data is restricted to Japan; the value of this tag is "TOKYO" or "WGS-84".
   /// </summary>
-  [ExifTagDetails( "GPS Map Datum", "Indicates the geodetic survey data used by the GPS receiver" )]
+  [MetadataTagDetails( "GPS Map Datum", "Indicates the geodetic survey data used by the GPS receiver" )]
   public const ushort GPSMapDatum = 0x0012;
 
   /// <summary>
   /// Indicates whether the latitude of the destination point is north or south latitude. The ASCII value "N" indicates north latitude; and "S" is south latitude.
   /// </summary>
-  [ExifTagDetails( "GPS Destination Latitude Reference", "Indicates whether the latitude of the destination point is North or South latitude; 'N' denotes North latitude, 'S' denotes South latitude" )]
+  [MetadataTagDetails( "GPS Destination Latitude Reference", "Indicates whether the latitude of the destination point is North or South latitude; 'N' denotes North latitude, 'S' denotes South latitude" )]
   public const ushort GPSDestLatitudeRef = 0x0013;
 
   /// <summary>
   /// Indicates the latitude of the destination point. The latitude is expressed as three RATIONAL values giving the degrees; minutes; and seconds; respectively. If latitude is expressed as degrees; minutes and seconds; a typical format would be dd/1;mm/1;ss/1. When degrees and minutes are used and; for example; fractions of minutes are given up to two decimal places; the format would be dd/1;mmmm/100;0/1.
   /// </summary>
-  [ExifTagDetails( "GPS Destination Latitude", "Indicates the latitude of the destination point as three Rational values giving the degress, minutes and seconds respectively" )]
+  [MetadataTagDetails( "GPS Destination Latitude", "Indicates the latitude of the destination point as three Rational values giving the degress, minutes and seconds respectively" )]
   public const ushort GPSDestLatitude = 0x0014;
 
   /// <summary>
   /// Indicates whether the longitude of the destination point is east or west longitude. ASCII "E" indicates east longitude; and "W" is west longitude.
   /// </summary>
-  [ExifTagDetails( "GPS Destination Longitude Reference", "Indicates whether the longitude of the destination point is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude" )]
+  [MetadataTagDetails( "GPS Destination Longitude Reference", "Indicates whether the longitude of the destination point is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude" )]
   public const ushort GPSDestLongitudeRef = 0x0015;
 
   /// <summary>
   /// Indicates the longitude of the destination point. The longitude is expressed as three RATIONAL values giving the degrees; minutes; and seconds; respectively. If longitude is expressed as degrees; minutes and seconds; a typical format would be ddd/1;mm/1;ss/1. When degrees and minutes are used and; for example; fractions of minutes are given up to two decimal places; the format would be ddd/1;mmmm/100;0/1.
   /// </summary>
-  [ExifTagDetails( "GPS Destination Longitude", "Indicates the longitude of the destination point as three Rational values giving the degress, minutes and seconds respectively" )]
+  [MetadataTagDetails( "GPS Destination Longitude", "Indicates the longitude of the destination point as three Rational values giving the degress, minutes and seconds respectively" )]
   public const ushort GPSDestLongitude = 0x0016;
 
   /// <summary>
   /// Indicates the reference used for giving the bearing to the destination point. "T" denotes true direction and "M" is magnetic direction.
   /// </summary>
-  [ExifTagDetails( "GPS Destination Bearing Reference", "Indicates the reference used for giving the bearing to the destination point; 'T' denotes true direction and 'M' is magnetic direction" )]
+  [MetadataTagDetails( "GPS Destination Bearing Reference", "Indicates the reference used for giving the bearing to the destination point; 'T' denotes true direction and 'M' is magnetic direction" )]
   public const ushort GPSDestBearingRef = 0x0017;
 
   /// <summary>
   /// Indicates the bearing to the destination point. The range of values is from 0.00 to 359.99.
   /// </summary>
-  [ExifTagDetails( "GPS Destination Bearing", "Indicates the bearing to the destination point. The range of values is from 0.00 to 359.99" )]
+  [MetadataTagDetails( "GPS Destination Bearing", "Indicates the bearing to the destination point. The range of values is from 0.00 to 359.99" )]
   public const ushort GPSDestBearing = 0x0018;
 
   /// <summary>
   /// Indicates the unit used to express the distance to the destination point. "K"; "M" and "N" represent kilometers; miles and knots.
   /// </summary>
-  [ExifTagDetails( "GPS Destination Distance Reference", "Indicates the unit used to express the distance to the destination point; 'K', 'M' and 'N' represent kilometers, miles and knots" )]
+  [MetadataTagDetails( "GPS Destination Distance Reference", "Indicates the unit used to express the distance to the destination point; 'K', 'M' and 'N' represent kilometers, miles and knots" )]
   public const ushort GPSDestDistanceRef = 0x0019;
 
   /// <summary>
   /// Indicates the distance to the destination point.
   /// </summary>
-  [ExifTagDetails( "GPS Destination Distance", "Indicates the distance to the destination point" )]
+  [MetadataTagDetails( "GPS Destination Distance", "Indicates the distance to the destination point" )]
   public const ushort GPSDestDistance = 0x001a;
 
   /// <summary>
   /// A character string recording the name of the method used for location finding. The string encoding is defined using the same scheme as UserComment.
   /// </summary>
-  [ExifTagDetails( "GPS Processing Method", "Recording the name of the method used for location finding" )]
+  [MetadataTagDetails( "GPS Processing Method", "Recording the name of the method used for location finding" )]
   public const ushort GPSProcessingMethod = 0x001b;
 
   /// <summary>
   /// A character string recording the name of the GPS area. The string encoding is defined using the same scheme as UserComment.
   /// </summary>
-  [ExifTagDetails( "GPS Area Information", "Recording the name of the GPS area" )]
+  [MetadataTagDetails( "GPS Area Information", "Recording the name of the GPS area" )]
   public const ushort GPSAreaInformation = 0x001c;
 
   /// <summary>
   /// A character string recording date and time information relative to UTC (Coordinated Universal Time). The format is "YYYY:MM:DD.".
   /// </summary>
-  [ExifTagDetails( "GPS Date Stamp", "Recording date and time information relative to UTC (Coordinated Universal Time)" )]
+  [MetadataTagDetails( "GPS Date Stamp", "Recording date and time information relative to UTC (Coordinated Universal Time)" )]
   public const ushort GPSDateStamp = 0x001d;
 
   /// <summary>
   /// Indicates whether differential correction is applied to the GPS receiver.
   /// </summary>
-  [ExifTagDetails( "GPS Differential", "Indicates whether differential correction is applied to the GPS receiver" )]
+  [MetadataTagDetails( "GPS Differential", "Indicates whether differential correction is applied to the GPS receiver" )]
   public const ushort GPSDifferential = 0x001e;
 
   /// <summary>
   /// This tag indicates horizontal positioning errors in meters
   /// </summary>
-  [ExifTagDetails( "GPS Horizontal Positioning Error", "Indicates horizontal positioning errors in meters" )]
+  [MetadataTagDetails( "GPS Horizontal Positioning Error", "Indicates horizontal positioning errors in meters" )]
   public const ushort GPSHPositioningError = 0x001f;
 
 
@@ -1956,30 +1956,30 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// Indicates the identification of the Interoperability rule. Use "R98" for stating ExifR98 Rules. Four bytes used including the termination code (NULL). see the separate volume of Recommended Exif Interoperability Rules (ExifR98) for other tags used for ExifR98.
   /// </summary>
-  [ExifTagDetails( "Interoperability Index", "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules" )]
+  [MetadataTagDetails( "Interoperability Index", "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules" )]
   public const ushort InteroperabilityIndex = 0x0001 + ExifConstants.InteroperabilityOffsetFix;
 
   /// <summary>
   /// (undefined type) Interoperability version
   /// </summary>
-  [ExifTagDetails( "Interoperability Version", "Indicates the Interoperability version" )]
+  [MetadataTagDetails( "Interoperability Version", "Indicates the Interoperability version" )]
   public const ushort InteroperabilityVersion = 0x0002 + ExifConstants.InteroperabilityOffsetFix;
 
   /// <summary>
   /// File format of image file
   /// </summary>
-  [ExifTagDetails( "Related Image File Format", "File format of image file" )]
+  [MetadataTagDetails( "Related Image File Format", "File format of image file" )]
   public const ushort RelatedImageFileFormat = 0x1000 + ExifConstants.InteroperabilityOffsetFix;
 
   /// <summary>
   /// Image width
   /// </summary>
-  [ExifTagDetails( "Related Image Width", "Image width" )]
+  [MetadataTagDetails( "Related Image Width", "Image width" )]
   public const ushort RelatedImageWidth = 0x1001 + ExifConstants.InteroperabilityOffsetFix;
 
   /// <summary>
   /// Image height
   /// </summary>
-  [ExifTagDetails( "Related Image Height", "Image height" )]
+  [MetadataTagDetails( "Related Image Height", "Image height" )]
   public const ushort RelatedImageLength = 0x1002 + ExifConstants.InteroperabilityOffsetFix;
 }

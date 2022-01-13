@@ -15,6 +15,10 @@ namespace Coderanger.ImageInfo.Decoders.Metadata;
 public interface IMetadataTypedValue
 {
   internal void SetValue();
+  internal void AddToExistingValue( byte[] value )
+  {
+    // default implementation
+  }
   public bool TryGetValue( out MetadataTagValue? value );
   public bool TryGetValueArray( out List<MetadataTagValue>? value );
   public bool IsArray { get; }

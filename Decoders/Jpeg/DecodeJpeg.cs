@@ -15,7 +15,9 @@
 namespace Coderanger.ImageInfo.Decoders.Jpeg;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
+using Coderanger.ImageInfo.Decoders.Metadata;
 using Coderanger.ImageInfo.Decoders.Metadata.Exif;
+using Coderanger.ImageInfo.Decoders.Metadata.Iptc;
 
 /// <summary>
 /// Decoder for the JPEG image format
@@ -111,6 +113,10 @@ internal class DecodeJpeg : IDecoder
         {
           _exifDecoder = DecodeExif.DecodeFromReader( reader );
         }
+        else if( markerType == JpegConstants.Markers.App13 )
+        {
+          _iptcDecoder = DecodeIptc.DecodeFromReader( reader, _remainingInFrame );
+        }
         else if( markerType == JpegConstants.Markers.BaselineStart
                 || markerType == JpegConstants.Markers.ExtendedSequentialStart
                 || markerType == JpegConstants.Markers.ProgressiveStart )
@@ -137,7 +143,19 @@ internal class DecodeJpeg : IDecoder
 
     if( _width > 0 && _height > 0 )
     {
-      return new ImageDetails( _width, _height, _horizontalDpi, _verticalDpi, "image/jpeg", _exifDecoder?.GetProfileTags() );
+      Dictionary<MetadataProfileType, List<IMetadataTypedValue>> tags = new();
+
+      if( _exifDecoder?.HasTags() ?? false )
+      {
+        _exifDecoder.AddTagsToProfile( ref tags );
+      }
+
+      if( _iptcDecoder?.HasTags() ?? false )
+      {
+        _iptcDecoder.AddTagsToProfile( ref tags );
+      }
+
+      return new ImageDetails( _width, _height, _horizontalDpi, _verticalDpi, "image/jpeg", tags.Count > 0 ? tags : null );
     }
 
     throw ExceptionHelper.Throw( reader, ErrorMessage );
@@ -228,6 +246,7 @@ internal class DecodeJpeg : IDecoder
   private int _verticalDpi = 0;
 
   private DecodeExif? _exifDecoder = null;
+  private DecodeIptc? _iptcDecoder = null;
 
   private bool _processedJfif = false;
   private long _jfifWidth = 0;

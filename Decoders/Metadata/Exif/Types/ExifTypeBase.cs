@@ -25,7 +25,7 @@ public abstract class ExifTypeBase
     Reader = reader;
     Component = component;
 
-    var tagDetails = ExifTagDetailsAttribute.GetTagDetails( ReflectionExifTag, TagId );
+    var tagDetails = MetadataTagDetailsAttribute.GetTagDetails( ReflectionExifTag, TagId );
     if( tagDetails != null )
     {
       Name = tagDetails.Name;

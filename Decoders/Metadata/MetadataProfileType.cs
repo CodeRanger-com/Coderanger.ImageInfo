@@ -13,5 +13,6 @@ public enum MetadataProfileType
   Exif,
   Gps,
   Interoperability,
+  Iptc,
   PngText,
 }

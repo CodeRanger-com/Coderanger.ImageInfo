@@ -1,0 +1,134 @@
+{
+  "bath.jpg-iptctags": {
+    "Iptc": [
+      {
+        "StringValue": "Record Version = 4",
+        "IsArray": false,
+        "TagId": 0,
+        "ExifType": 3,
+        "Name": "Record Version",
+        "Description": "Identifies the version of the Information Interchange Model"
+      },
+      {
+        "StringValue": "Object Name = Bath's Royal Crescent",
+        "IsArray": false,
+        "TagId": 5,
+        "ExifType": 2,
+        "Name": "Object Name",
+        "Description": "Used as a shorthand reference for the object"
+      },
+      {
+        "StringValue": "Urgency = 7 (Priority 7 Less Urgent)",
+        "IsArray": false,
+        "TagId": 10,
+        "ExifType": 16,
+        "Name": "Urgency",
+        "Description": "Specifies the editorial urgency of content and not necessarily the envelope handling priority"
+      },
+      {
+        "StringValue": "Keywords = bath / royal crescent",
+        "IsArray": true,
+        "TagId": 25,
+        "ExifType": 2,
+        "Name": "Keywords",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedDate = 22/11/2021",
+        "IsArray": false,
+        "TagId": 55,
+        "ExifType": 13,
+        "Name": "CreatedDate",
+        "Description": ""
+      },
+      {
+        "StringValue": "CreatedTime = 15:02",
+        "IsArray": false,
+        "TagId": 60,
+        "ExifType": 14,
+        "Name": "CreatedTime",
+        "Description": ""
+      },
+      {
+        "StringValue": "By-line = Dan Petitt / Another Person",
+        "IsArray": true,
+        "TagId": 80,
+        "ExifType": 2,
+        "Name": "By-line",
+        "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
+      },
+      {
+        "StringValue": "By-line Title = Developer",
+        "IsArray": false,
+        "TagId": 85,
+        "ExifType": 2,
+        "Name": "By-line Title",
+        "Description": "Title of the creator or creators. Where used, a By-line Title should follow the By-line it modifies"
+      },
+      {
+        "StringValue": "City = Bath",
+        "IsArray": false,
+        "TagId": 90,
+        "ExifType": 2,
+        "Name": "City",
+        "Description": "Identifies city of origin from which the object originates, according to guidelines established by the provider"
+      },
+      {
+        "StringValue": "Sub-location = Crescent",
+        "IsArray": false,
+        "TagId": 92,
+        "ExifType": 2,
+        "Name": "Sub-location",
+        "Description": "Identifies the location within a city from which the object originates, according to guidelines established by the provider"
+      },
+      {
+        "StringValue": "Province/State = Somerset",
+        "IsArray": false,
+        "TagId": 95,
+        "ExifType": 2,
+        "Name": "Province/State",
+        "Description": "Identifies Province/State of origin from which the object originates"
+      },
+      {
+        "StringValue": "Country/Primary Location Code = GBR",
+        "IsArray": false,
+        "TagId": 100,
+        "ExifType": 2,
+        "Name": "Country/Primary Location Code",
+        "Description": "Indicates the ISO 3166 code of the country/primary location where the intellectual property of the object was created"
+      },
+      {
+        "StringValue": "Country/Primary Location Name = UK",
+        "IsArray": false,
+        "TagId": 101,
+        "ExifType": 2,
+        "Name": "Country/Primary Location Name",
+        "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
+      },
+      {
+        "StringValue": "Headline = Bath's Royal Crescent",
+        "IsArray": false,
+        "TagId": 105,
+        "ExifType": 2,
+        "Name": "Headline",
+        "Description": "Publishable entry providing a synopsis of the contents of the object"
+      },
+      {
+        "StringValue": "CopyrightNotice = Copyright Dan Petitt and CodeRanger.com. All rights reserved.",
+        "IsArray": false,
+        "TagId": 116,
+        "ExifType": 2,
+        "Name": "CopyrightNotice",
+        "Description": ""
+      },
+      {
+        "StringValue": "Caption = View of Bath's Royal Crescent from the lower lawn showing the 'ha-ha'",
+        "IsArray": false,
+        "TagId": 120,
+        "ExifType": 2,
+        "Name": "Caption",
+        "Description": ""
+      }
+    ]
+  }
+}

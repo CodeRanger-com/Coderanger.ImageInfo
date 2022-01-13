@@ -121,9 +121,42 @@ internal class DecodeExif
     ExtractTagsFromIfd( MetadataProfileType.Gps, _ifdGpsOffset );
     ExtractTagsFromIfd( MetadataProfileType.Interoperability, _ifdInterOffset );
 
+    //ExtractIptc();
+    //ExtractXmp();
+
     // Finished all IFDs
     _processed = true;
   }
+
+  //private void ExtractIptc()
+  //{
+  //  if( _ifdIptcOffset > 0 )
+  //  {
+  //    if( _segmentStart + _ifdIptcOffset + ExifConstants.ExifDirectorySize >= _reader.Length() )
+  //    {
+  //      // Ensure we havent gone out of bounds and there are actually 12 bytes
+  //      // left for the whole IFD chunk
+  //      return;
+  //    }
+
+  //    _reader.BaseStream.Seek( _segmentStart + _ifdIptcOffset, SeekOrigin.Begin );
+  //  }
+  //}
+
+  //private void ExtractXmp()
+  //{
+  //  if( _idXmpOffset > 0 )
+  //  {
+  //    if( _segmentStart + _idXmpOffset + ExifConstants.ExifDirectorySize >= _reader.Length() )
+  //    {
+  //      // Ensure we havent gone out of bounds and there are actually 12 bytes
+  //      // left for the whole IFD chunk
+  //      return;
+  //    }
+
+  //    _reader.BaseStream.Seek( _segmentStart + _idXmpOffset, SeekOrigin.Begin );
+  //  }
+  //}
 
   private void ExtractTagsFromIfd( MetadataProfileType profile, int ifdOffset )
   {
@@ -182,10 +215,32 @@ internal class DecodeExif
   internal int HorizontalDpi { get; set; } = 0;
   internal int VerticalDpi { get; set; } = 0;
 
-  internal Dictionary<MetadataProfileType, List<IMetadataTypedValue>> GetProfileTags()
+  internal bool HasTags()
   {
-    return _profileTags;
+    return _profileTags.Count > 0;
   }
+
+  internal bool AddTagsToProfile( ref Dictionary<MetadataProfileType, List<IMetadataTypedValue>> tags )
+  {
+    if( HasTags() )
+    {
+      foreach( var profile in _profileTags.Keys )
+      {
+        if( _profileTags.TryGetValue( profile, out var profileTags ) )
+        {
+          tags.Add( profile, profileTags );
+        }
+      }
+      return true;
+    }
+
+    return false;
+  }
+
+  //internal Dictionary<MetadataProfileType, List<IMetadataTypedValue>> GetProfileTags()
+  //{
+  //  return _profileTags;
+  //}
 
   private bool DiscoverIfdOffsets()
   {
@@ -205,6 +260,14 @@ internal class DecodeExif
           _ifdGpsOffset = value;
           return true;
 
+        case (ushort)ExifConstants.IfdOffset.Iptc:
+          _ifdIptcOffset = value;
+          return true;
+
+        case (ushort)ExifConstants.IfdOffset.Xmp:
+          _idXmpOffset = value;
+          return true;
+
         case (ushort)ExifConstants.IfdOffset.Inter:
           _ifdInterOffset = value;
           return true;
@@ -221,6 +284,8 @@ internal class DecodeExif
 
   private int _ifdSubExifOffset = -1;
   private int _ifdGpsOffset = -1;
+  private int _ifdIptcOffset = -1;
+  private int _idXmpOffset = -1;
   private int _ifdInterOffset = -1;
 
   /// <summary>
@@ -242,7 +307,7 @@ internal class DecodeExif
 
         if( resUnitTag.TryGetValue( out var unitVal ) && unitVal != null )
         {
-          var enumValue = (ShortEnum)unitVal.Value;
+          var enumValue = (MetadataEnumValue)unitVal.Value;
 
           exifDensityUnit = enumValue.EnumValue switch
           {

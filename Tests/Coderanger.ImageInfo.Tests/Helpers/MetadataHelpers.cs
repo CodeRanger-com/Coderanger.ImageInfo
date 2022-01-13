@@ -120,7 +120,7 @@ internal static class MetadataHelpers
         break;
 
       case MetadataType.Enum:
-        var shortEnum = (ShortEnum)tagValue.Value;
+        var shortEnum = (MetadataEnumValue)tagValue.Value;
         Console.Write( $"{shortEnum.EnumValue} = {shortEnum.Information}" );
         break;
 

@@ -35,7 +35,7 @@ public class ExifEnum : ExifTypeBase, IMetadataTypedValue
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
         var value = DataConversion.UInt16FromBuffer( Component.DataValueBuffer.AsSpan( 0 + ( i * Component.ComponentSize ) ), Component.ByteOrder );
-        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new ShortEnum( value, GetEnumValue( value ) ) );
+        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new MetadataEnumValue( value, GetEnumValue( value ) ) );
       }
     }
     else
@@ -51,14 +51,14 @@ public class ExifEnum : ExifTypeBase, IMetadataTypedValue
       {
         var buff = dataValue.AsSpan( i * Component.ComponentSize, 2 );
         var value = DataConversion.UInt16FromBuffer( buff, Component.ByteOrder );
-        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new ShortEnum( value, GetEnumValue( value ) ) );
+        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new MetadataEnumValue( value, GetEnumValue( value ) ) );
       }
     }
   }
 
   private string GetEnumValue( ushort enumValue )
   {
-    var enumVal = ExifTagEnumAttribute.GetTagEnumValue( ReflectionExifTag, Component.Tag, enumValue );
+    var enumVal = MetadataTagEnumAttribute.GetTagEnumValue( ReflectionExifTag, Component.Tag, enumValue );
     if( enumVal != null )
     {
       return enumVal;
