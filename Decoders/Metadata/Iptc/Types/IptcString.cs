@@ -45,7 +45,7 @@ public class IptcString : IptcTypeBase, IMetadataTypedValue
   private MetadataTagValue Create( byte[] value )
   {
     var bufferValue = DataConversion.ConvertBuffer( value, StringEncoding.Utf8 );
-    return new MetadataTagValue( Type: ExifType, IsArray: false, TagId: TagId, TagName: Name, Value: bufferValue );
+    return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: bufferValue );
   }
 
   private readonly byte[] _data;

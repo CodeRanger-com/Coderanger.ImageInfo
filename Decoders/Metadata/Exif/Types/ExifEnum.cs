@@ -35,7 +35,7 @@ public class ExifEnum : ExifTypeBase, IMetadataTypedValue
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
         var value = DataConversion.UInt16FromBuffer( Component.DataValueBuffer.AsSpan( 0 + ( i * Component.ComponentSize ) ), Component.ByteOrder );
-        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new MetadataEnumValue( value, GetEnumValue( value ) ) );
+        yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new MetadataEnumValue( value, GetEnumValue( value ) ) );
       }
     }
     else
@@ -51,7 +51,7 @@ public class ExifEnum : ExifTypeBase, IMetadataTypedValue
       {
         var buff = dataValue.AsSpan( i * Component.ComponentSize, 2 );
         var value = DataConversion.UInt16FromBuffer( buff, Component.ByteOrder );
-        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new MetadataEnumValue( value, GetEnumValue( value ) ) );
+        yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new MetadataEnumValue( value, GetEnumValue( value ) ) );
       }
     }
   }

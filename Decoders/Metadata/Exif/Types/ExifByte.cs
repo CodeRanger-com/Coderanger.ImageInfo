@@ -34,7 +34,7 @@ public class ExifByte : ExifTypeBase, IMetadataTypedValue
     {
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
-        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: Component.DataValueBuffer[ i ] );
+        yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: Component.DataValueBuffer[ i ] );
       }
     }
     else
@@ -47,7 +47,7 @@ public class ExifByte : ExifTypeBase, IMetadataTypedValue
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
         var dataValue = Reader.ReadByte();
-        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: dataValue );
+        yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: dataValue );
       }
     }
   }

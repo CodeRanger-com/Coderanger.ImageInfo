@@ -15,7 +15,7 @@ public abstract class IptcTypeBase
 
   internal IptcTypeBase( MetadataType type, ushort tagId )
   {
-    ExifType = type;
+    TagType = type;
     TagId = tagId;
 
     var tagDetails = MetadataTagDetailsAttribute.GetTagDetails( ReflectionIptcTag, TagId );
@@ -103,7 +103,7 @@ public abstract class IptcTypeBase
   /// <summary>
   /// Exif tag type
   /// </summary>
-  public MetadataType ExifType { get; init; }
+  public MetadataType TagType { get; init; }
 
   /// <summary>
   /// Name of tag

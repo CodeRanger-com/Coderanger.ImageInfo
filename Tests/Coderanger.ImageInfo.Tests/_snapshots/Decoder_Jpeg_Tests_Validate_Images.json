@@ -5,7 +5,7 @@
         "StringValue": "Record Version = 0",
         "IsArray": false,
         "TagId": 0,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Record Version",
         "Description": "Identifies the version of the Information Interchange Model"
       },
@@ -13,7 +13,7 @@
         "StringValue": "Caption = CS Santosh seen in action during the shakedown before the start of the Dakar Rally in Jeddah, Saudi Arabia on December 30th, 2020 // Ishaan Bhataiya / Red Bull Content Pool // SI202101040188 // Usage for editorial use only // ",
         "IsArray": false,
         "TagId": 120,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Caption",
         "Description": ""
       },
@@ -21,7 +21,7 @@
         "StringValue": "Headline = CS Santosh",
         "IsArray": false,
         "TagId": 105,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Headline",
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
@@ -29,7 +29,7 @@
         "StringValue": "SpecialInstructions = This image may only be used for editorial purpose in one-time publications and strictly limited to the purpose of use stated in the terms and conditions of the service where you retrieved the image. It must not be altered or modified. Publication must be ",
         "IsArray": false,
         "TagId": 40,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "SpecialInstructions",
         "Description": ""
       },
@@ -37,7 +37,7 @@
         "StringValue": "Source = www.redbullmediahouse.com",
         "IsArray": false,
         "TagId": 115,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Source",
         "Description": ""
       },
@@ -45,7 +45,7 @@
         "StringValue": "CreatedDate = ",
         "IsArray": false,
         "TagId": 55,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "CreatedDate",
         "Description": ""
       },
@@ -53,7 +53,7 @@
         "StringValue": "Keywords = SI202101040188",
         "IsArray": false,
         "TagId": 25,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Keywords",
         "Description": ""
       },
@@ -61,7 +61,7 @@
         "StringValue": "CopyrightNotice = Ishaan Bhataiya / Red Bull Content Pool",
         "IsArray": false,
         "TagId": 116,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "CopyrightNotice",
         "Description": ""
       }
@@ -73,7 +73,7 @@
         "StringValue": "Record Version = 4",
         "IsArray": false,
         "TagId": 0,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Record Version",
         "Description": "Identifies the version of the Information Interchange Model"
       },
@@ -81,7 +81,7 @@
         "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 5,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Object Name",
         "Description": "Used as a shorthand reference for the object"
       },
@@ -89,7 +89,7 @@
         "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
         "IsArray": true,
         "TagId": 25,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Keywords",
         "Description": ""
       },
@@ -97,7 +97,7 @@
         "StringValue": "CreatedDate = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "CreatedDate",
         "Description": ""
       },
@@ -105,7 +105,7 @@
         "StringValue": "CreatedTime = ",
         "IsArray": false,
         "TagId": 60,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "CreatedTime",
         "Description": ""
       },
@@ -113,7 +113,7 @@
         "StringValue": "DigitalCreationDate = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "DigitalCreationDate",
         "Description": ""
       },
@@ -121,7 +121,7 @@
         "StringValue": "DigitalCreationTime = ",
         "IsArray": false,
         "TagId": 63,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "DigitalCreationTime",
         "Description": ""
       },
@@ -129,7 +129,7 @@
         "StringValue": "By-line = Dudarev Mikhail",
         "IsArray": false,
         "TagId": 80,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "By-line",
         "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
       },
@@ -137,7 +137,7 @@
         "StringValue": "Country/Primary Location Name = Russian Federation",
         "IsArray": false,
         "TagId": 101,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Country/Primary Location Name",
         "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
       },
@@ -145,7 +145,7 @@
         "StringValue": "Headline = Two free divers ascending from the depth",
         "IsArray": false,
         "TagId": 105,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Headline",
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
@@ -153,7 +153,7 @@
         "StringValue": "Credit = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 110,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Credit",
         "Description": ""
       },
@@ -161,7 +161,7 @@
         "StringValue": "Source = 135309776",
         "IsArray": false,
         "TagId": 115,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Source",
         "Description": ""
       },
@@ -169,7 +169,7 @@
         "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "CopyrightNotice",
         "Description": ""
       },
@@ -177,7 +177,7 @@
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 120,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Caption",
         "Description": ""
       }
@@ -189,7 +189,7 @@
         "StringValue": "Record Version = 4",
         "IsArray": false,
         "TagId": 0,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Record Version",
         "Description": "Identifies the version of the Information Interchange Model"
       },
@@ -197,7 +197,7 @@
         "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 5,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Object Name",
         "Description": "Used as a shorthand reference for the object"
       },
@@ -205,7 +205,7 @@
         "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
         "IsArray": true,
         "TagId": 25,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Keywords",
         "Description": ""
       },
@@ -213,7 +213,7 @@
         "StringValue": "CreatedDate = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "CreatedDate",
         "Description": ""
       },
@@ -221,7 +221,7 @@
         "StringValue": "CreatedTime = ",
         "IsArray": false,
         "TagId": 60,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "CreatedTime",
         "Description": ""
       },
@@ -229,7 +229,7 @@
         "StringValue": "DigitalCreationDate = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "DigitalCreationDate",
         "Description": ""
       },
@@ -237,7 +237,7 @@
         "StringValue": "DigitalCreationTime = ",
         "IsArray": false,
         "TagId": 63,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "DigitalCreationTime",
         "Description": ""
       },
@@ -245,7 +245,7 @@
         "StringValue": "By-line = Dudarev Mikhail",
         "IsArray": false,
         "TagId": 80,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "By-line",
         "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
       },
@@ -253,7 +253,7 @@
         "StringValue": "Country/Primary Location Name = Russian Federation",
         "IsArray": false,
         "TagId": 101,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Country/Primary Location Name",
         "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
       },
@@ -261,7 +261,7 @@
         "StringValue": "Headline = Two free divers ascending from the depth",
         "IsArray": false,
         "TagId": 105,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Headline",
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
@@ -269,7 +269,7 @@
         "StringValue": "Credit = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 110,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Credit",
         "Description": ""
       },
@@ -277,7 +277,7 @@
         "StringValue": "Source = 135309776",
         "IsArray": false,
         "TagId": 115,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Source",
         "Description": ""
       },
@@ -285,7 +285,7 @@
         "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "CopyrightNotice",
         "Description": ""
       },
@@ -293,7 +293,7 @@
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 120,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Caption",
         "Description": ""
       }
@@ -305,7 +305,7 @@
         "StringValue": "Record Version = 4",
         "IsArray": false,
         "TagId": 0,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Record Version",
         "Description": "Identifies the version of the Information Interchange Model"
       },
@@ -313,7 +313,7 @@
         "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 5,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Object Name",
         "Description": "Used as a shorthand reference for the object"
       },
@@ -321,7 +321,7 @@
         "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
         "IsArray": true,
         "TagId": 25,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Keywords",
         "Description": ""
       },
@@ -329,7 +329,7 @@
         "StringValue": "CreatedDate = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "CreatedDate",
         "Description": ""
       },
@@ -337,7 +337,7 @@
         "StringValue": "CreatedTime = ",
         "IsArray": false,
         "TagId": 60,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "CreatedTime",
         "Description": ""
       },
@@ -345,7 +345,7 @@
         "StringValue": "DigitalCreationDate = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "DigitalCreationDate",
         "Description": ""
       },
@@ -353,7 +353,7 @@
         "StringValue": "DigitalCreationTime = ",
         "IsArray": false,
         "TagId": 63,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "DigitalCreationTime",
         "Description": ""
       },
@@ -361,7 +361,7 @@
         "StringValue": "By-line = Dudarev Mikhail",
         "IsArray": false,
         "TagId": 80,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "By-line",
         "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
       },
@@ -369,7 +369,7 @@
         "StringValue": "Country/Primary Location Name = Russian Federation",
         "IsArray": false,
         "TagId": 101,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Country/Primary Location Name",
         "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
       },
@@ -377,7 +377,7 @@
         "StringValue": "Headline = Two free divers ascending from the depth",
         "IsArray": false,
         "TagId": 105,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Headline",
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
@@ -385,7 +385,7 @@
         "StringValue": "Credit = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 110,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Credit",
         "Description": ""
       },
@@ -393,7 +393,7 @@
         "StringValue": "Source = 135309776",
         "IsArray": false,
         "TagId": 115,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Source",
         "Description": ""
       },
@@ -401,7 +401,7 @@
         "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "CopyrightNotice",
         "Description": ""
       },
@@ -409,7 +409,7 @@
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 120,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Caption",
         "Description": ""
       }
@@ -421,7 +421,7 @@
         "StringValue": "Image Width = 8000",
         "IsArray": false,
         "TagId": 256,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Image Width",
         "Description": "Number of columns of image data, equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
@@ -429,7 +429,7 @@
         "StringValue": "Image Height = 6000",
         "IsArray": false,
         "TagId": 257,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Image Height",
         "Description": "Number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
@@ -437,7 +437,7 @@
         "StringValue": "Camera Make = samsung",
         "IsArray": false,
         "TagId": 271,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
@@ -445,7 +445,7 @@
         "StringValue": "Camera Model = SM-M307F",
         "IsArray": false,
         "TagId": 272,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Camera Model",
         "Description": "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
@@ -453,7 +453,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 16,
+        "TagType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -461,7 +461,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -469,7 +469,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -477,7 +477,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 16,
+        "TagType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -485,7 +485,7 @@
         "StringValue": "Software = M307FXXU3BTG1",
         "IsArray": false,
         "TagId": 305,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Software",
         "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
       },
@@ -493,7 +493,7 @@
         "IsArray": false,
         "StringValue": "Date Time = 29/07/2020 18:09:57",
         "TagId": 306,
-        "ExifType": 15,
+        "TagType": 15,
         "Name": "Date Time",
         "Description": "Date and time of image creation or when last modified"
       },
@@ -501,7 +501,7 @@
         "StringValue": "YCbCr Positioning = 1",
         "IsArray": false,
         "TagId": 531,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "YCbCr Positioning",
         "Description": "Position of chrominance components in relation to the luminance component"
       },
@@ -509,7 +509,7 @@
         "StringValue": "Image Width = 512",
         "IsArray": false,
         "TagId": 256,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Image Width",
         "Description": "Number of columns of image data, equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
@@ -517,7 +517,7 @@
         "StringValue": "Image Height = 384",
         "IsArray": false,
         "TagId": 257,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Image Height",
         "Description": "Number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
@@ -525,7 +525,7 @@
         "StringValue": "Compression = 6",
         "IsArray": false,
         "TagId": 259,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Compression",
         "Description": "Compression scheme used for the image data"
       },
@@ -533,7 +533,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -541,7 +541,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -549,7 +549,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 16,
+        "TagType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -557,7 +557,7 @@
         "StringValue": "JPEG Interchange Format = 762",
         "IsArray": false,
         "TagId": 513,
-        "ExifType": 5,
+        "TagType": 5,
         "Name": "JPEG Interchange Format",
         "Description": "Offset to the start byte of the JPEG compressed thumbnail data"
       },
@@ -565,7 +565,7 @@
         "StringValue": "JPEG Interchange Format Length = 25112",
         "IsArray": false,
         "TagId": 514,
-        "ExifType": 5,
+        "TagType": 5,
         "Name": "JPEG Interchange Format Length",
         "Description": "Number of bytes of JPEG compressed thumbnail data"
       },
@@ -573,7 +573,7 @@
         "StringValue": "Exposure Time = 1/409 (0.0024449877750611247D)",
         "IsArray": false,
         "TagId": 33434,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "Exposure Time",
         "Description": "Exposure time in seconds"
       },
@@ -581,7 +581,7 @@
         "StringValue": "F Number = 200/100 (2D)",
         "IsArray": false,
         "TagId": 33437,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "F Number",
         "Description": "Camera F number"
       },
@@ -589,7 +589,7 @@
         "StringValue": "ExposureProgram = 2",
         "IsArray": false,
         "TagId": 34850,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "ExposureProgram",
         "Description": ""
       },
@@ -597,7 +597,7 @@
         "StringValue": "ISOSpeedRatings = 100",
         "IsArray": false,
         "TagId": 34855,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "ISOSpeedRatings",
         "Description": ""
       },
@@ -605,7 +605,7 @@
         "StringValue": "PhotoExifVersion = 48 / 50 / 50 / 48",
         "IsArray": true,
         "TagId": 36864,
-        "ExifType": 1,
+        "TagType": 1,
         "Name": "PhotoExifVersion",
         "Description": ""
       },
@@ -613,7 +613,7 @@
         "IsArray": false,
         "StringValue": "DateTimeOriginal = 29/07/2020 18:09:57",
         "TagId": 36867,
-        "ExifType": 15,
+        "TagType": 15,
         "Name": "DateTimeOriginal",
         "Description": ""
       },
@@ -621,7 +621,7 @@
         "IsArray": false,
         "StringValue": "PhotoDateTimeDigitized = 29/07/2020 18:09:57",
         "TagId": 36868,
-        "ExifType": 15,
+        "TagType": 15,
         "Name": "PhotoDateTimeDigitized",
         "Description": ""
       },
@@ -629,7 +629,7 @@
         "StringValue": "ShutterSpeedValue = 1/409 (0.0024449877750611247D)",
         "IsArray": false,
         "TagId": 37377,
-        "ExifType": 11,
+        "TagType": 11,
         "Name": "ShutterSpeedValue",
         "Description": ""
       },
@@ -637,7 +637,7 @@
         "StringValue": "ApertureValue = 200/100 (2D)",
         "IsArray": false,
         "TagId": 37378,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "ApertureValue",
         "Description": ""
       },
@@ -645,7 +645,7 @@
         "StringValue": "BrightnessValue = 1705/100 (17.05D)",
         "IsArray": false,
         "TagId": 37379,
-        "ExifType": 11,
+        "TagType": 11,
         "Name": "BrightnessValue",
         "Description": ""
       },
@@ -653,7 +653,7 @@
         "StringValue": "ExposureBiasValue = 0/100 (0D)",
         "IsArray": false,
         "TagId": 37380,
-        "ExifType": 11,
+        "TagType": 11,
         "Name": "ExposureBiasValue",
         "Description": ""
       },
@@ -661,7 +661,7 @@
         "StringValue": "MaxApertureValue = 200/100 (2D)",
         "IsArray": false,
         "TagId": 37381,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "MaxApertureValue",
         "Description": ""
       },
@@ -669,7 +669,7 @@
         "StringValue": "MeteringMode = 2 (Center-weighted average)",
         "IsArray": false,
         "TagId": 37383,
-        "ExifType": 16,
+        "TagType": 16,
         "Name": "MeteringMode",
         "Description": ""
       },
@@ -677,7 +677,7 @@
         "StringValue": "Flash = 0",
         "IsArray": false,
         "TagId": 37385,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Flash",
         "Description": ""
       },
@@ -685,7 +685,7 @@
         "StringValue": "FocalLength = 460/100 (4.6D)",
         "IsArray": false,
         "TagId": 37386,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "FocalLength",
         "Description": ""
       },
@@ -693,7 +693,7 @@
         "StringValue": "PhotoColorSpace = 1",
         "IsArray": false,
         "TagId": 40961,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "PhotoColorSpace",
         "Description": ""
       },
@@ -701,7 +701,7 @@
         "StringValue": "PhotoPixelXDimension = 8000",
         "IsArray": false,
         "TagId": 40962,
-        "ExifType": 5,
+        "TagType": 5,
         "Name": "PhotoPixelXDimension",
         "Description": ""
       },
@@ -709,7 +709,7 @@
         "StringValue": "PhotoPixelYDimension = 6000",
         "IsArray": false,
         "TagId": 40963,
-        "ExifType": 5,
+        "TagType": 5,
         "Name": "PhotoPixelYDimension",
         "Description": ""
       },
@@ -717,7 +717,7 @@
         "StringValue": "PhotoExposureMode = 0 (Auto)",
         "IsArray": false,
         "TagId": 41986,
-        "ExifType": 16,
+        "TagType": 16,
         "Name": "PhotoExposureMode",
         "Description": ""
       },
@@ -725,7 +725,7 @@
         "StringValue": "PhotoWhiteBalance = 0 (Auto)",
         "IsArray": false,
         "TagId": 41987,
-        "ExifType": 16,
+        "TagType": 16,
         "Name": "PhotoWhiteBalance",
         "Description": ""
       },
@@ -733,7 +733,7 @@
         "StringValue": "PhotoDigitalZoomRatio = 100/100 (1D)",
         "IsArray": false,
         "TagId": 41988,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "PhotoDigitalZoomRatio",
         "Description": ""
       },
@@ -741,7 +741,7 @@
         "StringValue": "PhotoFocalLengthIn35mmFilm = 25",
         "IsArray": false,
         "TagId": 41989,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "PhotoFocalLengthIn35mmFilm",
         "Description": ""
       },
@@ -749,7 +749,7 @@
         "StringValue": "PhotoSceneCaptureType = 0 (Standard)",
         "IsArray": false,
         "TagId": 41990,
-        "ExifType": 16,
+        "TagType": 16,
         "Name": "PhotoSceneCaptureType",
         "Description": ""
       },
@@ -757,7 +757,7 @@
         "StringValue": "PhotoImageUniqueID = L48LLMF01PM",
         "IsArray": false,
         "TagId": 42016,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "PhotoImageUniqueID",
         "Description": ""
       }
@@ -767,7 +767,7 @@
         "StringValue": "Record Version = 4",
         "IsArray": false,
         "TagId": 0,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Record Version",
         "Description": "Identifies the version of the Information Interchange Model"
       },
@@ -775,7 +775,7 @@
         "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 5,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Object Name",
         "Description": "Used as a shorthand reference for the object"
       },
@@ -783,7 +783,7 @@
         "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
         "IsArray": true,
         "TagId": 25,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Keywords",
         "Description": ""
       },
@@ -791,7 +791,7 @@
         "StringValue": "CreatedDate = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "CreatedDate",
         "Description": ""
       },
@@ -799,7 +799,7 @@
         "StringValue": "CreatedTime = ",
         "IsArray": false,
         "TagId": 60,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "CreatedTime",
         "Description": ""
       },
@@ -807,7 +807,7 @@
         "StringValue": "DigitalCreationDate = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "DigitalCreationDate",
         "Description": ""
       },
@@ -815,7 +815,7 @@
         "StringValue": "DigitalCreationTime = ",
         "IsArray": false,
         "TagId": 63,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "DigitalCreationTime",
         "Description": ""
       },
@@ -823,7 +823,7 @@
         "StringValue": "By-line = Dudarev Mikhail",
         "IsArray": false,
         "TagId": 80,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "By-line",
         "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
       },
@@ -831,7 +831,7 @@
         "StringValue": "Country/Primary Location Name = Russian Federation",
         "IsArray": false,
         "TagId": 101,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Country/Primary Location Name",
         "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
       },
@@ -839,7 +839,7 @@
         "StringValue": "Headline = Two free divers ascending from the depth",
         "IsArray": false,
         "TagId": 105,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Headline",
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
@@ -847,7 +847,7 @@
         "StringValue": "Credit = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 110,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Credit",
         "Description": ""
       },
@@ -855,7 +855,7 @@
         "StringValue": "Source = 135309776",
         "IsArray": false,
         "TagId": 115,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Source",
         "Description": ""
       },
@@ -863,7 +863,7 @@
         "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "CopyrightNotice",
         "Description": ""
       },
@@ -871,7 +871,7 @@
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 120,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Caption",
         "Description": ""
       }
@@ -883,7 +883,7 @@
         "StringValue": "Horizontal Resolution = 96/1 (96D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -891,7 +891,7 @@
         "StringValue": "Vertical Resolution = 96/1 (96D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -899,7 +899,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 16,
+        "TagType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -907,7 +907,7 @@
         "StringValue": "Software = paint.net 4.3.3",
         "IsArray": false,
         "TagId": 305,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Software",
         "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
       }
@@ -917,7 +917,7 @@
         "StringValue": "Record Version = 4",
         "IsArray": false,
         "TagId": 0,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Record Version",
         "Description": "Identifies the version of the Information Interchange Model"
       },
@@ -925,7 +925,7 @@
         "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 5,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Object Name",
         "Description": "Used as a shorthand reference for the object"
       },
@@ -933,7 +933,7 @@
         "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
         "IsArray": true,
         "TagId": 25,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Keywords",
         "Description": ""
       },
@@ -941,7 +941,7 @@
         "StringValue": "CreatedDate = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "CreatedDate",
         "Description": ""
       },
@@ -949,7 +949,7 @@
         "StringValue": "CreatedTime = ",
         "IsArray": false,
         "TagId": 60,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "CreatedTime",
         "Description": ""
       },
@@ -957,7 +957,7 @@
         "StringValue": "DigitalCreationDate = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "DigitalCreationDate",
         "Description": ""
       },
@@ -965,7 +965,7 @@
         "StringValue": "DigitalCreationTime = ",
         "IsArray": false,
         "TagId": 63,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "DigitalCreationTime",
         "Description": ""
       },
@@ -973,7 +973,7 @@
         "StringValue": "By-line = Dudarev Mikhail",
         "IsArray": false,
         "TagId": 80,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "By-line",
         "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
       },
@@ -981,7 +981,7 @@
         "StringValue": "Country/Primary Location Name = Russian Federation",
         "IsArray": false,
         "TagId": 101,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Country/Primary Location Name",
         "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
       },
@@ -989,7 +989,7 @@
         "StringValue": "Headline = Two free divers ascending from the depth",
         "IsArray": false,
         "TagId": 105,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Headline",
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
@@ -997,7 +997,7 @@
         "StringValue": "Credit = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 110,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Credit",
         "Description": ""
       },
@@ -1005,7 +1005,7 @@
         "StringValue": "Source = 135309776",
         "IsArray": false,
         "TagId": 115,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Source",
         "Description": ""
       },
@@ -1013,7 +1013,7 @@
         "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "CopyrightNotice",
         "Description": ""
       },
@@ -1021,7 +1021,7 @@
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 120,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Caption",
         "Description": ""
       }
@@ -1033,7 +1033,7 @@
         "StringValue": "Record Version = 4",
         "IsArray": false,
         "TagId": 0,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Record Version",
         "Description": "Identifies the version of the Information Interchange Model"
       },
@@ -1041,7 +1041,7 @@
         "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 5,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Object Name",
         "Description": "Used as a shorthand reference for the object"
       },
@@ -1049,7 +1049,7 @@
         "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
         "IsArray": true,
         "TagId": 25,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Keywords",
         "Description": ""
       },
@@ -1057,7 +1057,7 @@
         "StringValue": "CreatedDate = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "CreatedDate",
         "Description": ""
       },
@@ -1065,7 +1065,7 @@
         "StringValue": "CreatedTime = ",
         "IsArray": false,
         "TagId": 60,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "CreatedTime",
         "Description": ""
       },
@@ -1073,7 +1073,7 @@
         "StringValue": "DigitalCreationDate = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "DigitalCreationDate",
         "Description": ""
       },
@@ -1081,7 +1081,7 @@
         "StringValue": "DigitalCreationTime = ",
         "IsArray": false,
         "TagId": 63,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "DigitalCreationTime",
         "Description": ""
       },
@@ -1089,7 +1089,7 @@
         "StringValue": "By-line = Dudarev Mikhail",
         "IsArray": false,
         "TagId": 80,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "By-line",
         "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
       },
@@ -1097,7 +1097,7 @@
         "StringValue": "Country/Primary Location Name = Russian Federation",
         "IsArray": false,
         "TagId": 101,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Country/Primary Location Name",
         "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
       },
@@ -1105,7 +1105,7 @@
         "StringValue": "Headline = Two free divers ascending from the depth",
         "IsArray": false,
         "TagId": 105,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Headline",
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
@@ -1113,7 +1113,7 @@
         "StringValue": "Credit = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 110,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Credit",
         "Description": ""
       },
@@ -1121,7 +1121,7 @@
         "StringValue": "Source = 135309776",
         "IsArray": false,
         "TagId": 115,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Source",
         "Description": ""
       },
@@ -1129,7 +1129,7 @@
         "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "CopyrightNotice",
         "Description": ""
       },
@@ -1137,7 +1137,7 @@
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 120,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Caption",
         "Description": ""
       }
@@ -1149,7 +1149,7 @@
         "StringValue": "Record Version = 4",
         "IsArray": false,
         "TagId": 0,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Record Version",
         "Description": "Identifies the version of the Information Interchange Model"
       },
@@ -1157,7 +1157,7 @@
         "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 5,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Object Name",
         "Description": "Used as a shorthand reference for the object"
       },
@@ -1165,7 +1165,7 @@
         "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
         "IsArray": true,
         "TagId": 25,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Keywords",
         "Description": ""
       },
@@ -1173,7 +1173,7 @@
         "StringValue": "CreatedDate = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "CreatedDate",
         "Description": ""
       },
@@ -1181,7 +1181,7 @@
         "StringValue": "CreatedTime = ",
         "IsArray": false,
         "TagId": 60,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "CreatedTime",
         "Description": ""
       },
@@ -1189,7 +1189,7 @@
         "StringValue": "DigitalCreationDate = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "DigitalCreationDate",
         "Description": ""
       },
@@ -1197,7 +1197,7 @@
         "StringValue": "DigitalCreationTime = ",
         "IsArray": false,
         "TagId": 63,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "DigitalCreationTime",
         "Description": ""
       },
@@ -1205,7 +1205,7 @@
         "StringValue": "By-line = Dudarev Mikhail",
         "IsArray": false,
         "TagId": 80,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "By-line",
         "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
       },
@@ -1213,7 +1213,7 @@
         "StringValue": "Country/Primary Location Name = Russian Federation",
         "IsArray": false,
         "TagId": 101,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Country/Primary Location Name",
         "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
       },
@@ -1221,7 +1221,7 @@
         "StringValue": "Headline = Two free divers ascending from the depth",
         "IsArray": false,
         "TagId": 105,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Headline",
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
@@ -1229,7 +1229,7 @@
         "StringValue": "Credit = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 110,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Credit",
         "Description": ""
       },
@@ -1237,7 +1237,7 @@
         "StringValue": "Source = 135309776",
         "IsArray": false,
         "TagId": 115,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Source",
         "Description": ""
       },
@@ -1245,7 +1245,7 @@
         "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "CopyrightNotice",
         "Description": ""
       },
@@ -1253,7 +1253,7 @@
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 120,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Caption",
         "Description": ""
       }
@@ -1265,7 +1265,7 @@
         "StringValue": "Image Width = 5000",
         "IsArray": false,
         "TagId": 256,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Image Width",
         "Description": "Number of columns of image data, equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
@@ -1273,7 +1273,7 @@
         "StringValue": "Image Height = 3328",
         "IsArray": false,
         "TagId": 257,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Image Height",
         "Description": "Number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
@@ -1281,7 +1281,7 @@
         "StringValue": "Bits Per Sample = 8 / 8 / 8",
         "IsArray": true,
         "TagId": 258,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Bits Per Sample",
         "Description": "Number of bits per image component"
       },
@@ -1289,7 +1289,7 @@
         "StringValue": "Photometric Interpretation = 2",
         "IsArray": false,
         "TagId": 262,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Photometric Interpretation",
         "Description": "The pixel composition"
       },
@@ -1297,7 +1297,7 @@
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
         "TagId": 274,
-        "ExifType": 16,
+        "TagType": 16,
         "Name": "Orientation",
         "Description": ""
       },
@@ -1305,7 +1305,7 @@
         "StringValue": "Samples Per Pixel = 3",
         "IsArray": false,
         "TagId": 277,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Samples Per Pixel",
         "Description": "Number of components per pixel; since this standard applies to RGB and YCbCr images, the value set for this tag is 3"
       },
@@ -1313,7 +1313,7 @@
         "StringValue": "Horizontal Resolution = 300/1 (300D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1321,7 +1321,7 @@
         "StringValue": "Vertical Resolution = 300/1 (300D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1329,7 +1329,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 16,
+        "TagType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -1337,7 +1337,7 @@
         "StringValue": "Software = Adobe Photoshop 21.0 (Macintosh)",
         "IsArray": false,
         "TagId": 305,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Software",
         "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
       },
@@ -1345,7 +1345,7 @@
         "IsArray": false,
         "StringValue": "Date Time = 12/01/2020 12:09:05",
         "TagId": 306,
-        "ExifType": 15,
+        "TagType": 15,
         "Name": "Date Time",
         "Description": "Date and time of image creation or when last modified"
       },
@@ -1353,7 +1353,7 @@
         "StringValue": "Compression = 6",
         "IsArray": false,
         "TagId": 259,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Compression",
         "Description": "Compression scheme used for the image data"
       },
@@ -1361,7 +1361,7 @@
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1369,7 +1369,7 @@
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1377,7 +1377,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 16,
+        "TagType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -1385,7 +1385,7 @@
         "StringValue": "JPEG Interchange Format = 372",
         "IsArray": false,
         "TagId": 513,
-        "ExifType": 5,
+        "TagType": 5,
         "Name": "JPEG Interchange Format",
         "Description": "Offset to the start byte of the JPEG compressed thumbnail data"
       },
@@ -1393,7 +1393,7 @@
         "StringValue": "JPEG Interchange Format Length = 6049",
         "IsArray": false,
         "TagId": 514,
-        "ExifType": 5,
+        "TagType": 5,
         "Name": "JPEG Interchange Format Length",
         "Description": "Number of bytes of JPEG compressed thumbnail data"
       },
@@ -1401,7 +1401,7 @@
         "StringValue": "PhotoExifVersion = 48 / 50 / 51 / 49",
         "IsArray": true,
         "TagId": 36864,
-        "ExifType": 1,
+        "TagType": 1,
         "Name": "PhotoExifVersion",
         "Description": ""
       },
@@ -1409,7 +1409,7 @@
         "StringValue": "PhotoPixelXDimension = 5000",
         "IsArray": false,
         "TagId": 40962,
-        "ExifType": 5,
+        "TagType": 5,
         "Name": "PhotoPixelXDimension",
         "Description": ""
       },
@@ -1417,7 +1417,7 @@
         "StringValue": "PhotoPixelYDimension = 3328",
         "IsArray": false,
         "TagId": 40963,
-        "ExifType": 5,
+        "TagType": 5,
         "Name": "PhotoPixelYDimension",
         "Description": ""
       }
@@ -1427,7 +1427,7 @@
         "StringValue": "Record Version = 4",
         "IsArray": false,
         "TagId": 0,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Record Version",
         "Description": "Identifies the version of the Information Interchange Model"
       },
@@ -1435,7 +1435,7 @@
         "StringValue": "Object Name = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 5,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Object Name",
         "Description": "Used as a shorthand reference for the object"
       },
@@ -1443,7 +1443,7 @@
         "StringValue": "Keywords = apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit / apnea / ascend / blue / body / breathless / buddy / constant weight / deep / depth / discipline / equalization / equipment / extreme / fin / free / free diving / freedive / freediver / freediving / full / light / line / marine / moving / ocean / people / person / rope / safety / sea / snorkeling / sport / style / sun / sunny / surface / swimming / tropical / two / underwater / water / wet / wetsuit",
         "IsArray": true,
         "TagId": 25,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Keywords",
         "Description": ""
       },
@@ -1451,7 +1451,7 @@
         "StringValue": "CreatedDate = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "CreatedDate",
         "Description": ""
       },
@@ -1459,7 +1459,7 @@
         "StringValue": "CreatedTime = ",
         "IsArray": false,
         "TagId": 60,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "CreatedTime",
         "Description": ""
       },
@@ -1467,7 +1467,7 @@
         "StringValue": "DigitalCreationDate = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "DigitalCreationDate",
         "Description": ""
       },
@@ -1475,7 +1475,7 @@
         "StringValue": "DigitalCreationTime = ",
         "IsArray": false,
         "TagId": 63,
-        "ExifType": 14,
+        "TagType": 14,
         "Name": "DigitalCreationTime",
         "Description": ""
       },
@@ -1483,7 +1483,7 @@
         "StringValue": "By-line = Dudarev Mikhail",
         "IsArray": false,
         "TagId": 80,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "By-line",
         "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
       },
@@ -1491,7 +1491,7 @@
         "StringValue": "Country/Primary Location Name = Russian Federation",
         "IsArray": false,
         "TagId": 101,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Country/Primary Location Name",
         "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
       },
@@ -1499,7 +1499,7 @@
         "StringValue": "Headline = Two free divers ascending from the depth",
         "IsArray": false,
         "TagId": 105,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Headline",
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
@@ -1507,7 +1507,7 @@
         "StringValue": "Credit = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 110,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Credit",
         "Description": ""
       },
@@ -1515,7 +1515,7 @@
         "StringValue": "Source = 135309776",
         "IsArray": false,
         "TagId": 115,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Source",
         "Description": ""
       },
@@ -1523,7 +1523,7 @@
         "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "CopyrightNotice",
         "Description": ""
       },
@@ -1531,7 +1531,7 @@
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
         "IsArray": false,
         "TagId": 120,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Caption",
         "Description": ""
       }
@@ -1543,7 +1543,7 @@
         "StringValue": "PhotoPixelXDimension = 1000",
         "IsArray": false,
         "TagId": 40962,
-        "ExifType": 5,
+        "TagType": 5,
         "Name": "PhotoPixelXDimension",
         "Description": ""
       },
@@ -1551,7 +1551,7 @@
         "StringValue": "PhotoPixelYDimension = 1000",
         "IsArray": false,
         "TagId": 40963,
-        "ExifType": 5,
+        "TagType": 5,
         "Name": "PhotoPixelYDimension",
         "Description": ""
       }
@@ -1563,7 +1563,7 @@
         "StringValue": "Horizontal Resolution = 96/1 (96D)",
         "IsArray": false,
         "TagId": 282,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "Horizontal Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1571,7 +1571,7 @@
         "StringValue": "Vertical Resolution = 96/1 (96D)",
         "IsArray": false,
         "TagId": 283,
-        "ExifType": 12,
+        "TagType": 12,
         "Name": "Vertical Resolution",
         "Description": "Number of pixels per ResolutionUnit"
       },
@@ -1579,7 +1579,7 @@
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
         "TagId": 296,
-        "ExifType": 16,
+        "TagType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
@@ -1587,7 +1587,7 @@
         "StringValue": "Software = paint.net 4.3.3",
         "IsArray": false,
         "TagId": 305,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Software",
         "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
       }
@@ -1599,7 +1599,7 @@
         "StringValue": "Record Version = 0",
         "IsArray": false,
         "TagId": 0,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Record Version",
         "Description": "Identifies the version of the Information Interchange Model"
       },
@@ -1607,7 +1607,7 @@
         "StringValue": "Caption = CS Santosh seen in action during the shakedown before the start of the Dakar Rally in Jeddah, Saudi Arabia on December 30th, 2020 // Ishaan Bhataiya / Red Bull Content Pool // SI202101040188 // Usage for editorial use only // ",
         "IsArray": false,
         "TagId": 120,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Caption",
         "Description": ""
       },
@@ -1615,7 +1615,7 @@
         "StringValue": "Headline = CS Santosh",
         "IsArray": false,
         "TagId": 105,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Headline",
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
@@ -1623,7 +1623,7 @@
         "StringValue": "SpecialInstructions = This image may only be used for editorial purpose in one-time publications and strictly limited to the purpose of use stated in the terms and conditions of the service where you retrieved the image. It must not be altered or modified. Publication must be ",
         "IsArray": false,
         "TagId": 40,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "SpecialInstructions",
         "Description": ""
       },
@@ -1631,7 +1631,7 @@
         "StringValue": "Source = www.redbullmediahouse.com",
         "IsArray": false,
         "TagId": 115,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Source",
         "Description": ""
       },
@@ -1639,7 +1639,7 @@
         "StringValue": "CreatedDate = ",
         "IsArray": false,
         "TagId": 55,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "CreatedDate",
         "Description": ""
       },
@@ -1647,7 +1647,7 @@
         "StringValue": "Keywords = SI202101040188",
         "IsArray": false,
         "TagId": 25,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Keywords",
         "Description": ""
       },
@@ -1655,7 +1655,7 @@
         "StringValue": "CopyrightNotice = Ishaan Bhataiya / Red Bull Content Pool",
         "IsArray": false,
         "TagId": 116,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "CopyrightNotice",
         "Description": ""
       }
@@ -1667,7 +1667,7 @@
         "StringValue": "Record Version = 0",
         "IsArray": false,
         "TagId": 0,
-        "ExifType": 3,
+        "TagType": 3,
         "Name": "Record Version",
         "Description": "Identifies the version of the Information Interchange Model"
       },
@@ -1675,7 +1675,7 @@
         "StringValue": "Caption = CS Santosh seen in action during the shakedown before the start of the Dakar Rally in Jeddah, Saudi Arabia on December 30th, 2020 // Ishaan Bhataiya / Red Bull Content Pool // SI202101040188 // Usage for editorial use only // ",
         "IsArray": false,
         "TagId": 120,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Caption",
         "Description": ""
       },
@@ -1683,7 +1683,7 @@
         "StringValue": "Headline = CS Santosh",
         "IsArray": false,
         "TagId": 105,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Headline",
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
@@ -1691,7 +1691,7 @@
         "StringValue": "SpecialInstructions = This image may only be used for editorial purpose in one-time publications and strictly limited to the purpose of use stated in the terms and conditions of the service where you retrieved the image. It must not be altered or modified. Publication must be ",
         "IsArray": false,
         "TagId": 40,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "SpecialInstructions",
         "Description": ""
       },
@@ -1699,7 +1699,7 @@
         "StringValue": "Source = www.redbullmediahouse.com",
         "IsArray": false,
         "TagId": 115,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Source",
         "Description": ""
       },
@@ -1707,7 +1707,7 @@
         "StringValue": "CreatedDate = ",
         "IsArray": false,
         "TagId": 55,
-        "ExifType": 13,
+        "TagType": 13,
         "Name": "CreatedDate",
         "Description": ""
       },
@@ -1715,7 +1715,7 @@
         "StringValue": "Keywords = SI202101040188",
         "IsArray": false,
         "TagId": 25,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "Keywords",
         "Description": ""
       },
@@ -1723,7 +1723,7 @@
         "StringValue": "CopyrightNotice = Ishaan Bhataiya / Red Bull Content Pool",
         "IsArray": false,
         "TagId": 116,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "CopyrightNotice",
         "Description": ""
       }

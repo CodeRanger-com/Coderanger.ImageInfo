@@ -49,11 +49,11 @@ public class IptcTime : IptcTypeBase, IMetadataTypedValue
     bufferValue = bufferValue.Replace( "+", string.Empty );
     if( TimeOnly.TryParseExact( bufferValue, TimeFormatStringWithZone, null, System.Globalization.DateTimeStyles.AdjustToUniversal, out var timeWithZone ) )
     {
-      return new MetadataTagValue( Type: ExifType, IsArray: false, TagId: TagId, TagName: Name, Value: timeWithZone );
+      return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: timeWithZone );
     }
     else if( TimeOnly.TryParseExact( bufferValue, TimeFormatString, null, System.Globalization.DateTimeStyles.None, out var time ) )
     {
-      return new MetadataTagValue( Type: ExifType, IsArray: false, TagId: TagId, TagName: Name, Value: time );
+      return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: time );
     }
 
     return null;

@@ -49,7 +49,7 @@ public class IptcEnum : IptcTypeBase, IMetadataTypedValue
     var numberValue = Convert.ToUInt16( bufferValue );
 
     var enumValue = new MetadataEnumValue( numberValue, GetEnumValue( numberValue ) );
-    return new MetadataTagValue( Type: ExifType, IsArray: false, TagId: TagId, TagName: Name, Value: enumValue );
+    return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: enumValue );
   }
 
   private string GetEnumValue( ushort value )

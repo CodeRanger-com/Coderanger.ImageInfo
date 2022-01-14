@@ -56,7 +56,7 @@ public class ExifDate : ExifTypeBase, IMetadataTypedValue
     if( DateOnly.TryParseExact( stringValue, DateFormatString, null, System.Globalization.DateTimeStyles.None, out var dt ) )
     {
       // Dates are stored as ASCII strings, but we can do better and make it a proper type
-      yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: dt );
+      yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: dt );
     }
   }
 

@@ -5,7 +5,7 @@
         "StringValue": "XPAuthor = Dan Petitt",
         "IsArray": false,
         "TagId": 40093,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "XPAuthor",
         "Description": ""
       },
@@ -13,7 +13,7 @@
         "StringValue": "XPTitle = A bit of test metadata for image title",
         "IsArray": false,
         "TagId": 40091,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "XPTitle",
         "Description": ""
       },
@@ -21,7 +21,7 @@
         "StringValue": "PhotoUserComment = A bit of normal международный comment text",
         "IsArray": false,
         "TagId": 37510,
-        "ExifType": 2,
+        "TagType": 2,
         "Name": "PhotoUserComment",
         "Description": ""
       }

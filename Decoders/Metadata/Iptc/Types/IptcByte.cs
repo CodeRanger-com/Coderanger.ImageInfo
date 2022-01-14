@@ -43,7 +43,7 @@ public class IptcByte : IptcTypeBase, IMetadataTypedValue
 
   private MetadataTagValue Create( byte[] value )
   {
-    return new MetadataTagValue( Type: ExifType, IsArray: false, TagId: TagId, TagName: Name, Value: value );
+    return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: value );
   }
 
   private readonly byte[] _data;

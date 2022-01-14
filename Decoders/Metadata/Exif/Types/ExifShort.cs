@@ -37,7 +37,7 @@ public class ExifShort : ExifTypeBase, IMetadataTypedValue
         var buff = Component.DataValueBuffer.AsSpan( i * Component.ComponentSize, Component.ComponentSize );
 
         var value = DataConversion.Int16FromBuffer( buff, Component.ByteOrder );
-        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
+        yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
       }
     }
     else
@@ -53,7 +53,7 @@ public class ExifShort : ExifTypeBase, IMetadataTypedValue
       {
         var buff = dataValue.AsSpan( i * Component.ComponentSize, Component.ComponentSize );
         var value = DataConversion.Int16FromBuffer( buff, Component.ByteOrder );
-        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
+        yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
       }
     }
   }
@@ -85,7 +85,7 @@ public class ExifUShort : ExifTypeBase, IMetadataTypedValue
       {
         var buff = Component.DataValueBuffer.AsSpan( i * Component.ComponentSize, Component.ComponentSize );
         var value = DataConversion.UInt16FromBuffer( buff, Component.ByteOrder );
-        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
+        yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
       }
     }
     else
@@ -101,7 +101,7 @@ public class ExifUShort : ExifTypeBase, IMetadataTypedValue
       {
         var buff = dataValue.AsSpan( i * Component.ComponentSize, Component.ComponentSize );
         var value = DataConversion.UInt16FromBuffer( buff, Component.ByteOrder );
-        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
+        yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
       }
     }
   }

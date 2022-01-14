@@ -45,7 +45,7 @@ public class IptcLong : IptcTypeBase, IMetadataTypedValue
   private MetadataTagValue? Create( byte[] value )
   {
     var bufferValue = DataConversion.Int64FromBigEndianBuffer( value );
-    return new MetadataTagValue( Type: ExifType, IsArray: false, TagId: TagId, TagName: Name, Value: bufferValue );
+    return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: bufferValue );
   }
 
   private readonly byte[] _data;
@@ -85,7 +85,7 @@ public class IptcULong : IptcTypeBase, IMetadataTypedValue
   private MetadataTagValue? Create( byte[] value )
   {
     var bufferValue = DataConversion.UInt64FromBigEndianBuffer( value );
-    return new MetadataTagValue( Type: ExifType, IsArray: false, TagId: TagId, TagName: Name, Value: bufferValue );
+    return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: bufferValue );
   }
 
   private readonly byte[] _data;

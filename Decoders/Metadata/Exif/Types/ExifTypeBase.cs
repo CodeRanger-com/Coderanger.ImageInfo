@@ -21,7 +21,7 @@ public abstract class ExifTypeBase
   internal ExifTypeBase( MetadataType type, BinaryReader reader, ExifComponent component )
   {
     TagId = component.Tag;
-    ExifType = type;
+    TagType = type;
     Reader = reader;
     Component = component;
 
@@ -99,7 +99,7 @@ public abstract class ExifTypeBase
   /// <summary>
   /// Exif tag type
   /// </summary>
-  public MetadataType ExifType { get; init; }
+  public MetadataType TagType { get; init; }
 
   /// <summary>
   /// Name of tag

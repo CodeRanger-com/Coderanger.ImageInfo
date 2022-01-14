@@ -33,7 +33,7 @@ public class ExifFloat : ExifTypeBase, IMetadataTypedValue
     if( Component.ComponentCount == 1 )
     {
       var value = DataConversion.FloatFromBuffer( Component.DataValueBuffer, Component.ByteOrder );
-      yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
+      yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
     }
     else
     {
@@ -49,7 +49,7 @@ public class ExifFloat : ExifTypeBase, IMetadataTypedValue
         var buff = dataValue.AsSpan( i * Component.ComponentSize, Component.ComponentSize );
 
         var value = DataConversion.FloatFromBuffer( buff, Component.ByteOrder );
-        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
+        yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
       }
     }
   }

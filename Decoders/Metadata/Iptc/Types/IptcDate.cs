@@ -48,7 +48,7 @@ public class IptcDate : IptcTypeBase, IMetadataTypedValue
     var bufferValue = DataConversion.ConvertBuffer( value, StringEncoding.Ascii );
     if( DateOnly.TryParseExact( bufferValue, DateFormatString, null, System.Globalization.DateTimeStyles.None, out var dt ) )
     {
-      return new MetadataTagValue( Type: ExifType, IsArray: false, TagId: TagId, TagName: Name, Value: dt );
+      return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: dt );
     }
 
     return null;

@@ -33,7 +33,7 @@ internal class ExifInt : ExifTypeBase, IMetadataTypedValue
     if( Component.ComponentCount == 1 )
     {
       var value = DataConversion.Int32FromBuffer( Component.DataValueBuffer, Component.ByteOrder );
-      yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
+      yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
     }
     else
     {
@@ -49,7 +49,7 @@ internal class ExifInt : ExifTypeBase, IMetadataTypedValue
         var buff = dataValue.AsSpan( i * Component.ComponentSize, Component.ComponentSize );
 
         var value = DataConversion.Int32FromBuffer( buff, Component.ByteOrder );
-        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
+        yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
       }
     }
   }
@@ -78,7 +78,7 @@ internal class ExifUInt : ExifTypeBase, IMetadataTypedValue
     if( Component.ComponentCount == 1 )
     {
       var value = DataConversion.UInt32FromBuffer( Component.DataValueBuffer, Component.ByteOrder );
-      yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
+      yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
     }
     else
     {
@@ -94,7 +94,7 @@ internal class ExifUInt : ExifTypeBase, IMetadataTypedValue
         var buff = dataValue.AsSpan( i * Component.ComponentSize, Component.ComponentSize );
 
         var value = DataConversion.UInt32FromBuffer( buff, Component.ByteOrder );
-        yield return new MetadataTagValue( Type: ExifType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
+        yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
       }
     }
   }
