@@ -44,75 +44,37 @@ public class IptcTag : IMetadataTag
   [MetadataTagDetails( "Subject Reference", "A structured definition of the subject matter" )]
   public const ushort SubjectReference = 12;
 
-  [MetadataTagDetails( "Subject Reference", "A structured definition of the subject matter" )]
+  [MetadataTagDetails( "Category", "Identifies the subject of the object in the opinion of the provider" )]
   public const ushort Category = 15;
 
-  /// <summary>
-  /// Supplemental categories. Max length is 32.
-  /// </summary>
+  [MetadataTagDetails( "Supplemental Category", "Supplemental categories further refine the subject of an object" )]
   public const ushort SupplementalCategory = 20;
 
-  /// <summary>
-  /// Fixture identifier; not repeatable. Max length is 32.
-  /// </summary>
+  [MetadataTagDetails( "Fixture Identifier", "Identifies object that recurs often and predictably. Enables users to immediately find or recall such an object" )]
   public const ushort FixtureIdentifier = 22;
 
-  /// <summary>
-  /// Keywords. Max length is 64.
-  /// </summary>
+  [MetadataTagDetails( "Keywords", "Indicates specific information retrieval words" )]
   public const ushort Keywords = 25;
 
-  /// <summary>
-  /// Location code. Max length is 3.
-  /// </summary>
+  [MetadataTagDetails( "Location Code", "Indicates the ISO code of a country/geographical location referenced by the content of the object" )]
   public const ushort LocationCode = 26;
 
-  /// <summary>
-  /// Location name. Max length is 64.
-  /// </summary>
+  [MetadataTagDetails( "Location Name", "Provides a full, publishable name of a country/geographical location referenced by the content of the object" )]
   public const ushort LocationName = 27;
 
-  /// <summary>
-  /// Release date. Format should be CCYYMMDD.
-  /// Not repeatable; max length is 8.
-  /// <example>
-  /// A date will be formatted as CCYYMMDD; e.g. "19890317" for 17 March 1989.
-  /// </example>
-  /// </summary>
+  [MetadataTagDetails( "Release Date", "Indicates the earliest date the provider intends the object to be used" )]
   public const ushort ReleaseDate = 30;
 
-  /// <summary>
-  /// Release time. Format should be HHMMSS±HHMM.
-  /// Not repeatable; max length is 11.
-  /// <example>
-  /// A time value will be formatted as HHMMSS±HHMM; e.g. "090000+0200" for 9 o'clock Berlin time;
-  /// two hours ahead of UTC.
-  /// </example>
-  /// </summary>
+  [MetadataTagDetails( "Release Time", "Indicates the earliest time the provider intends the object to be used" )]
   public const ushort ReleaseTime = 35;
 
-  /// <summary>
-  /// Expiration date. Format should be CCYYMMDD.
-  /// Not repeatable; max length is 8.
-  /// <example>
-  /// A date will be formatted as CCYYMMDD; e.g. "19890317" for 17 March 1989.
-  /// </example>
-  /// </summary>
+  [MetadataTagDetails( "Expiration Date", "Indicates the latest date the provider intends the object to be used" )]
   public const ushort ExpirationDate = 37;
 
-  /// <summary>
-  /// Expiration time. Format should be HHMMSS±HHMM.
-  /// Not repeatable; max length is 11.
-  /// <example>
-  /// A time value will be formatted as HHMMSS±HHMM; e.g. "090000+0200" for 9 o'clock Berlin time;
-  /// two hours ahead of UTC.
-  /// </example>
-  /// </summary>
+  [MetadataTagDetails( "Expiration Time", "Indicates the latest time the provider intends the object to be used" )]
   public const ushort ExpirationTime = 38;
 
-  /// <summary>
-  /// Special instructions; not repeatable. Max length is 256.
-  /// </summary>
+  [MetadataTagDetails( "Special Instructions", "Other editorial instructions concerning the use of the object, such as embargoes and warnings" )]
   public const ushort SpecialInstructions = 40;
 
   /// <summary>
@@ -125,61 +87,25 @@ public class IptcTag : IMetadataTag
   [MetadataTagDetails( "Action Advised", "Indicates the type of action that this object provides to a previous object" )]
   public const ushort ActionAdvised = 42;
 
-  /// <summary>
-  /// Reference service. Max length is 10.
-  /// </summary>
+  [MetadataTagDetails( "Reference Service", "Identifies the Service Identifier of a prior envelope to which the current object refers" )]
   public const ushort ReferenceService = 45;
 
-  /// <summary>
-  /// Reference date. Format should be CCYYMMDD.
-  /// Not repeatable; max length is 8.
-  /// <example>
-  /// A date will be formatted as CCYYMMDD; e.g. "19890317" for 17 March 1989.
-  /// </example>
-  /// </summary>
+  [MetadataTagDetails( "Reference Date", "Identifies the date of a prior envelope to which the current object refers" )]
   public const ushort ReferenceDate = 47;
 
-  /// <summary>
-  /// ReferenceNumber. Max length is 8.
-  /// </summary>
+  [MetadataTagDetails( "Reference Number", "Identifies the Envelope Number of a prior envelope to which the current object refers" )]
   public const ushort ReferenceNumber = 50;
 
-  /// <summary>
-  /// Created date. Format should be CCYYMMDD.
-  /// Not repeatable; max length is 8.
-  /// <example>
-  /// A date will be formatted as CCYYMMDD; e.g. "19890317" for 17 March 1989.
-  /// </example>
-  /// </summary>
+  [MetadataTagDetails( "Created Date", "Indicates the date the intellectual content of the object was created rather than the date of the creation of the physical representation" )]
   public const ushort CreatedDate = 55;
 
-  /// <summary>
-  /// Created time. Format should be HHMMSS±HHMM.
-  /// Not repeatable; max length is 11.
-  /// <example>
-  /// A time value will be formatted as HHMMSS±HHMM; e.g. "090000+0200" for 9 o'clock Berlin time;
-  /// two hours ahead of UTC.
-  /// </example>
-  /// </summary>
+  [MetadataTagDetails( "Created Time", "Indicates the time the intellectual content of the object was created rather than the date of the creation of the physical representation" )]
   public const ushort CreatedTime = 60;
 
-  /// <summary>
-  /// Digital creation date. Format should be CCYYMMDD.
-  /// Not repeatable; max length is 8.
-  /// <example>
-  /// A date will be formatted as CCYYMMDD; e.g. "19890317" for 17 March 1989.
-  /// </example>
-  /// </summary>
+  [MetadataTagDetails( "Digital Creation Date", "Indicates the date the digital representation of the object was created" )]
   public const ushort DigitalCreationDate = 62;
 
-  /// <summary>
-  /// Digital creation time. Format should be HHMMSS±HHMM.
-  /// Not repeatable; max length is 11.
-  /// <example>
-  /// A time value will be formatted as HHMMSS±HHMM; e.g. "090000+0200" for 9 o'clock Berlin time;
-  /// two hours ahead of UTC.
-  /// </example>
-  /// </summary>
+  [MetadataTagDetails( "Digital Creation Time", "Indicates the time the digital representation of the object was created" )]
   public const ushort DigitalCreationTime = 63;
 
   [MetadataTagDetails( "Originating Program", "Identifies the type of program used to originate the object data" )]
@@ -221,53 +147,35 @@ public class IptcTag : IMetadataTag
   [MetadataTagDetails( "Headline", "Publishable entry providing a synopsis of the contents of the object" )]
   public const ushort Headline = 105;
 
-  /// <summary>
-  /// Credit; not repeatable. Max length is 32.
-  /// </summary>
+  [MetadataTagDetails( "Credit", "Identifies the provider of the object, not necessarily the owner/creator" )]
   public const ushort Credit = 110;
 
-  /// <summary>
-  /// Source; not repeatable. Max length is 32.
-  /// </summary>
+  [MetadataTagDetails( "Source", "Identifies the original owner of the intellectual content of the object. This could be an agency, a member of an agency or an individual" )]
   public const ushort Source = 115;
 
-  /// <summary>
-  /// Copyright notice; not repeatable. Max length is 128.
-  /// </summary>
+  [MetadataTagDetails( "Copyright Notice", "Contains any necessary copyright notice" )]
   public const ushort CopyrightNotice = 116;
 
-  /// <summary>
-  /// Contact. Max length 128.
-  /// </summary>
+  [MetadataTagDetails( "Contact", "Identifies the person or organisation which can provide further background information on the object" )]
   public const ushort Contact = 118;
 
-  /// <summary>
-  /// Caption; not repeatable. Max length is 2000.
-  /// </summary>
+  [MetadataTagDetails( "Caption", "Textual description of the object, particularly used where the object is not text" )]
   public const ushort Caption = 120;
 
-  /// <summary>
-  /// Local caption.
-  /// </summary>
-  public const ushort LocalCaption = 121;
-
-  /// <summary>
-  /// Caption writer. Max length is 32.
-  /// </summary>
+  [MetadataTagDetails( "Writer/Editor", "Identification of the name of the person involved in the writing, editing or correcting the object or caption/abstract" )]
   public const ushort WriterEditor = 122;
 
-  /// <summary>
-  /// Image type; not repeatable. Max length is 2.
-  /// </summary>
+  [MetadataTagDetails( "Image Type", "Digit and character which describes the image type" )]
   public const ushort ImageType = 130;
 
-  /// <summary>
-  /// Image orientation; not repeatable. Max length is 1.
-  /// </summary>
   [MetadataTagEnum( "L", "Landscape" )]
   [MetadataTagEnum( "P", "Portrait" )]
   [MetadataTagEnum( "S", "Square" )]
+  [MetadataTagDetails( "Image Orientation", "Indicates the layout of the image area" )]
   public const ushort ImageOrientation = 131;
+
+  [MetadataTagDetails( "Language Identifier", "Describes the major national language of the object, according to the 2-letter codes of ISO 639:1988" )]
+  public const ushort LanguageIdentifier = 135;
 
   [MetadataTagEnum( 0, "No Object Data" )]
   [MetadataTagEnum( 1, "IPTC-NAA Digital Newsphoto Parameter Record" )]
@@ -299,37 +207,9 @@ public class IptcTag : IMetadataTag
   [MetadataTagEnum( 27, "Tidningarnas Telegrambyra NITF version" )]
   [MetadataTagEnum( 28, "Ritzaus Bureau NITF version" )]
   [MetadataTagEnum( 29, "Corel Draw (cdr)" )]
+  [MetadataTagDetails( "Preview File Format", "Represents the file format of the object preview" )]
   public const ushort ObjectPreviewFileFormat = 200;
 
-  /// <summary>
-  /// Custom field 2
-  /// </summary>
+  [MetadataTagDetails( "Preview File Version", "Represents the version of the object preview file format" )]
   public const ushort ObjectPreviewFileVersion = 201;
-
-  public const ushort CustomField3 = 202;
-  public const ushort CustomField4 = 203;
-  public const ushort CustomField5 = 204;
-  public const ushort CustomField6 = 205;
-  public const ushort CustomField7 = 206;
-  public const ushort CustomField8 = 207;
-  public const ushort CustomField9 = 208;
-  public const ushort CustomField10 = 209;
-  public const ushort CustomField11 = 210;
-  public const ushort CustomField12 = 211;
-  public const ushort CustomField13 = 212;
-  public const ushort CustomField14 = 213;
-  public const ushort CustomField15 = 214;
-  public const ushort CustomField16 = 215;
-  public const ushort CustomField17 = 216;
-  public const ushort CustomField18 = 217;
-  public const ushort CustomField19 = 218;
-  public const ushort CustomField20 = 219;
-
-  public const ushort Prefs = 221;
-  public const ushort ClassifyState = 225;
-  public const ushort SimilarityIndex = 228;
-  public const ushort DocumentNotes = 230;
-  public const ushort DocumentHistory = 231;
-  public const ushort ExifCameraInfo = 232;
-  public const ushort CatalogSets = 255;
 }

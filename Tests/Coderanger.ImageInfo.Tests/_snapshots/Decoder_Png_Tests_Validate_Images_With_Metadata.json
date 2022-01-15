@@ -2,27 +2,27 @@
   "metadata.png": {
     "Exif": [
       {
-        "StringValue": "XPAuthor = Dan Petitt",
+        "StringValue": "XP Author = Dan Petitt",
         "IsArray": false,
         "TagId": 40093,
         "TagType": 2,
-        "Name": "XPAuthor",
-        "Description": ""
+        "Name": "XP Author",
+        "Description": "Author tag used by Windows"
       },
       {
-        "StringValue": "XPTitle = A bit of test metadata for image title",
+        "StringValue": "XP Title = A bit of test metadata for image title",
         "IsArray": false,
         "TagId": 40091,
         "TagType": 2,
-        "Name": "XPTitle",
-        "Description": ""
+        "Name": "XP Title",
+        "Description": "Title tag used by Windows"
       },
       {
-        "StringValue": "PhotoUserComment = A bit of normal международный comment text",
+        "StringValue": " = A bit of normal международный comment text",
         "IsArray": false,
         "TagId": 37510,
         "TagType": 2,
-        "Name": "PhotoUserComment",
+        "Name": "",
         "Description": ""
       }
     ],

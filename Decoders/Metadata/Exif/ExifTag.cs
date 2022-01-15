@@ -41,111 +41,145 @@ public class ExifTag : IMetadataTag
 
 
 
-  /// <summary>
-  /// The name and version of the software used to post-process the picture.
-  /// </summary>
   [MetadataTagDetails( "Processing Software", "Name and version of the software used to post-process the picture" )]
   public const ushort ProcessingSoftware = 0x000b;
 
-  /// <summary>
-  /// A general indication of the kind of data contained in this subfile.
-  /// </summary>
-  [MetadataTagDetails( "New Subfile Type", "General indication of the kind of data contained in this subfile" )]
-  public const ushort NewSubfileType = 0x00fe;
-
-  /// <summary>
-  /// A general indication of the kind of data contained in this subfile. This field is deprecated. The NewSubfileType field should be used instead.
-  /// </summary>
+  [MetadataTagEnum( 0, "Full-resolution image" )]
+  [MetadataTagEnum( 1, "Reduced-resolution image" )]
+  [MetadataTagEnum( 2, "Single page of multi-page image" )]
+  [MetadataTagEnum( 3, "Single page of multi-page reduced-resolution image" )]
+  [MetadataTagEnum( 4, "Transparency mask" )]
+  [MetadataTagEnum( 5, "Transparency mask of reduced-resolution image" )]
+  [MetadataTagEnum( 6, "Transparency mask of multi-page image" )]
+  [MetadataTagEnum( 7, "Transparency mask of reduced-resolution multi-page image" )]
+  [MetadataTagEnum( 8, "Depth map" )]
+  [MetadataTagEnum( 9, "Depth map of reduced-resolution image" )]
+  [MetadataTagEnum( 16, "Enhanced image data" )]
+  [MetadataTagEnum( 65537, "Alternate reduced-resolution image" )]
+  [MetadataTagEnum( 65540, "Semantic Mask" )]
+  [MetadataTagEnum( 4294967295, "Invalid" )]
   [MetadataTagDetails( "Subfile Type", "General indication of the kind of data contained in this subfile" )]
-  public const ushort SubfileType = 0x00ff;
+  public const ushort SubfileType = 0x00fe;
 
-  /// <summary>
-  /// The number of columns of image data; equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag.
-  /// </summary>
-  [MetadataTagDetails( "Image Width", "Number of columns of image data, equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag" )]
+  [MetadataTagEnum( 1, "Full-resolution image" )]
+  [MetadataTagEnum( 2, "Reduced-resolution image" )]
+  [MetadataTagEnum( 3, "Single page of multi-page image" )]
+  [MetadataTagDetails( "Old Subfile Type", "General indication of the kind of data contained in this subfile" )]
+  public const ushort OldSubfileType = 0x00ff;
+
+  [MetadataTagDetails( "Image Width", "Number of columns of image data which might not reflect its true size. In JPEG compressed data a JPEG marker is used instead of this tag" )]
   public const ushort ImageWidth = 0x0100;
 
-  /// <summary>
-  /// The number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag.
-  /// </summary>
-  [MetadataTagDetails( "Image Height", "Number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag" )]
+  [MetadataTagDetails( "Image Height", "Number of rows of image data which might not reflect its true size. In JPEG compressed data a JPEG marker is used instead of this tag" )]
   public const ushort ImageHeight = 0x0101;
 
-  /// <summary>
-  /// The number of bits per image component. In this standard each component of the image is 8 bits; so the value for this tag is 8. See also <SamplesPerPixel>. In JPEG compressed data a JPEG marker is used instead of this tag.
-  /// </summary>
   [MetadataTagDetails( "Bits Per Sample", "Number of bits per image component" )]
   public const ushort BitsPerSample = 0x0102;
 
-  /// <summary>
-  /// The compression scheme used for the image data. When a primary image is JPEG compressed; this designation is not necessary and is omitted. When thumbnails use JPEG compression; this tag value is set to 6.
-  /// </summary>
+  [MetadataTagEnum( 1, "Uncompressed" )]
+  [MetadataTagEnum( 2, "CCITT 1D" )]
+  [MetadataTagEnum( 3, "T4/Group 3 Fax" )]
+  [MetadataTagEnum( 4, "T6/Group 4 Fax" )]
+  [MetadataTagEnum( 5, "LZW" )]
+  [MetadataTagEnum( 6, "JPEG (old-style)" )]
+  [MetadataTagEnum( 7, "JPEG" )]
+  [MetadataTagEnum( 8, "Adobe Deflate" )]
+  [MetadataTagEnum( 9, "JBIG B&W" )]
+  [MetadataTagEnum( 10, "JBIG Color" )]
+  [MetadataTagEnum( 99, "JPEG" )]
+  [MetadataTagEnum( 262, "Kodak 262" )]
+  [MetadataTagEnum( 32766, "Next" )]
+  [MetadataTagEnum( 32767, "Sony ARW Compressed" )]
+  [MetadataTagEnum( 32769, "Packed RAW" )]
+  [MetadataTagEnum( 32770, "Samsung SRW Compressed" )]
+  [MetadataTagEnum( 32771, "CCIRLEW" )]
+  [MetadataTagEnum( 32772, "Samsung SRW Compressed 2" )]
+  [MetadataTagEnum( 32773, "PackBits" )]
+  [MetadataTagEnum( 32809, "Thunderscan" )]
+  [MetadataTagEnum( 32867, "Kodak KDC Compressed" )]
+  [MetadataTagEnum( 32895, "IT8CTPAD" )]
+  [MetadataTagEnum( 32896, "IT8LW" )]
+  [MetadataTagEnum( 32897, "IT8MP" )]
+  [MetadataTagEnum( 32898, "IT8BL" )]
+  [MetadataTagEnum( 32908, "PixarFilm" )]
+  [MetadataTagEnum( 32909, "PixarLog" )]
+  [MetadataTagEnum( 32946, "Deflate" )]
+  [MetadataTagEnum( 32947, "DCS" )]
+  [MetadataTagEnum( 33003, "Aperio JPEG 2000 YCbCr" )]
+  [MetadataTagEnum( 33005, "Aperio JPEG 2000 RGB" )]
+  [MetadataTagEnum( 34661, "JBIG" )]
+  [MetadataTagEnum( 34676, "SGILog" )]
+  [MetadataTagEnum( 34677, "SGILog24" )]
+  [MetadataTagEnum( 34712, "JPEG 2000" )]
+  [MetadataTagEnum( 34713, "Nikon NEF Compressed" )]
+  [MetadataTagEnum( 34715, "JBIG2 TIFF FX" )]
+  [MetadataTagEnum( 34718, "Microsoft Document Imaging (MDI) Binary Level Codec" )]
+  [MetadataTagEnum( 34719, "Microsoft Document Imaging (MDI) Progressive Transform Codec" )]
+  [MetadataTagEnum( 34720, "Microsoft Document Imaging (MDI) Vector" )]
+  [MetadataTagEnum( 34887, "ESRI Lerc" )]
+  [MetadataTagEnum( 34892, "Lossy JPEG" )]
+  [MetadataTagEnum( 34925, "LZMA2" )]
+  [MetadataTagEnum( 34926, "Zstd" )]
+  [MetadataTagEnum( 34927, "WebP" )]
+  [MetadataTagEnum( 34933, "PNG" )]
+  [MetadataTagEnum( 34934, "JPEG XR" )]
+  [MetadataTagEnum( 65000, "Kodak DCR Compressed" )]
+  [MetadataTagEnum( 65535, "Pentax PEF Compressed" )]
   [MetadataTagDetails( "Compression", "Compression scheme used for the image data" )]
   public const ushort Compression = 0x0103;
 
-  /// <summary>
-  /// The pixel composition. In JPEG compressed data a JPEG marker is used instead of this tag.
-  /// </summary>
+  [MetadataTagEnum( 0, "WhiteIsZero" )]
+  [MetadataTagEnum( 1, "BlackIsZero" )]
+  [MetadataTagEnum( 2, "RGB" )]
+  [MetadataTagEnum( 3, "RGB Palette" )]
+  [MetadataTagEnum( 4, "Transparency Mask" )]
+  [MetadataTagEnum( 5, "CMYK" )]
+  [MetadataTagEnum( 6, "YCbCr" )]
+  [MetadataTagEnum( 8, "CIELab" )]
+  [MetadataTagEnum( 9, "ICCLab" )]
+  [MetadataTagEnum( 10, "ITULab" )]
+  [MetadataTagEnum( 32803, "Color Filter Array" )]
+  [MetadataTagEnum( 32844, "Pixar LogL" )]
+  [MetadataTagEnum( 32845, "Pixar LogLuv" )]
+  [MetadataTagEnum( 32892, "Sequential Color Filter" )]
+  [MetadataTagEnum( 34892, "Linear Raw" )]
+  [MetadataTagEnum( 51177, "Depth Map" )]
+  [MetadataTagEnum( 52527, "Semantic Mask" )]
   [MetadataTagDetails( "Photometric Interpretation", "The pixel composition" )]
   public const ushort PhotometricInterpretation = 0x0106;
 
-  /// <summary>
-  /// For black and white TIFF files that represent shades of gray; the technique used to convert from gray to black and white pixels.
-  /// </summary>
+  [MetadataTagEnum( 1, "No dithering or halftoning" )]
+  [MetadataTagEnum( 2, "Ordered dither or halftone" )]
+  [MetadataTagEnum( 3, "Randomized dither" )]
   [MetadataTagDetails( "Thresholding", "For black and white TIFF files that represent shades of gray, the technique used to convert from gray to black and white pixels" )]
   public const ushort Thresholding = 0x0107;
 
-  /// <summary>
-  /// The width of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file.
-  /// </summary>
   [MetadataTagDetails( "Cell Width", "Width of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file" )]
   public const ushort CellWidth = 0x0108;
 
-  /// <summary>
-  /// The length of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file.
-  /// </summary>
   [MetadataTagDetails( "Cell Length", "Length of the dithering or halftoning matrix used to create a dithered or halftoned bilevel file" )]
   public const ushort CellLength = 0x0109;
 
-  /// <summary>
-  /// The logical order of bits within a byte
-  /// </summary>
+  [MetadataTagEnum( 1, "Normal" )]
+  [MetadataTagEnum( 2, "Reversed" )]
   [MetadataTagDetails( "Fill Order", "Logical order of bits within a byte" )]
   public const ushort FillOrder = 0x010a;
 
-  /// <summary>
-  /// The name of the document from which this image was scanned
-  /// </summary>
   [MetadataTagDetails( "Document Name", "Name of the document from which this image was scanned" )]
   public const ushort DocumentName = 0x010d;
 
-  /// <summary>
-  /// Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used
-  /// </summary>
   [MetadataTagDetails( "Image Description", "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used" )]
   public const ushort ImageDescription = 0x010e;
 
-  /// <summary>
-  /// The manufacturer of the recording equipment
-  /// </summary>
   [MetadataTagDetails( "Camera Make", "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown" )]
   public const ushort Make = 0x010f;
 
-  /// <summary>
-  /// The model name or model number of the equipment
-  /// </summary>
   [MetadataTagDetails( "Camera Model", "Model name or number of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown" )]
   public const ushort Model = 0x0110;
 
-  /// <summary>
-  /// For each strip; the byte offset of that strip. It is recommended that this be selected so the number of strip bytes does not exceed 64 Kbytes. With JPEG compressed data this designation is not needed and is omitted. See also <RowsPerStrip> and <StripByteCounts>.
-  /// </summary>
   [MetadataTagDetails( "Strip Offsets", "For each strip, the byte offset of that strip" )]
   public const ushort StripOffsets = 0x0111;
 
-  /// <summary>
-  /// The image orientation viewed in terms of rows and columns.
-  /// </summary>
   [MetadataTagEnum( 1, "Horizontal (normal)" )]
   [MetadataTagEnum( 2, "Mirror horizontal" )]
   [MetadataTagEnum( 3, "Rotate 180" )]
@@ -156,45 +190,26 @@ public class ExifTag : IMetadataTag
   [MetadataTagEnum( 8, "Rotate 270 CW" )]
   public const ushort Orientation = 0x0112;
 
-  /// <summary>
-  /// The number of components per pixel. Since this standard applies to RGB and YCbCr images; the value set for this tag is 3. In JPEG compressed data a JPEG marker is used instead of this tag.
-  /// </summary>
   [MetadataTagDetails( "Samples Per Pixel", "Number of components per pixel; since this standard applies to RGB and YCbCr images, the value set for this tag is 3" )]
   public const ushort SamplesPerPixel = 0x0115;
 
-  /// <summary>
-  /// The number of rows per strip. This is the number of rows in the image of one strip when an image is divided into strips. With JPEG compressed data this designation is not needed and is omitted. See also <StripOffsets> and <StripByteCounts>.
-  /// </summary>
   [MetadataTagDetails( "Rows Per Strip", "Number of rows in the image per strip when an image is divided into strips" )]
   public const ushort RowsPerStrip = 0x0116;
 
-  /// <summary>
-  /// The total number of bytes in each strip. With JPEG compressed data this designation is not needed and is omitted.
-  /// </summary>
   [MetadataTagDetails( "Strip Byte Counts", "Total number of bytes in each strip" )]
   public const ushort StripByteCounts = 0x0117;
 
-  /// <summary>
-  /// The number of pixels per <ResolutionUnit> in the <ImageWidth> direction. When the image resolution is unknown; 72 [dpi] is designated.
-  /// </summary>
   [MetadataTagDetails( "Horizontal Resolution", "Number of pixels per ResolutionUnit" )]
   public const ushort XResolution = 0x011a;
 
-  /// <summary>
-  /// The number of pixels per <ResolutionUnit> in the <ImageLength> direction. The same value as <XResolution> is designated.
-  /// </summary>
   [MetadataTagDetails( "Vertical Resolution", "Number of pixels per ResolutionUnit" )]
   public const ushort YResolution = 0x011b;
 
-  /// <summary>
-  /// Indicates whether pixel components are recorded in a chunky or planar format. In JPEG compressed files a JPEG marker is used instead of this tag. If this field does not exist; the TIFF default of 1 (chunky) is assumed.
-  /// </summary>
+  [MetadataTagEnum( 1, "Chunky" )]
+  [MetadataTagEnum( 2, "Planar" )]
   [MetadataTagDetails( "Planar Configuration", "Indicates whether pixel components are recorded in a chunky or planar format" )]
   public const ushort PlanarConfiguration = 0x011c;
 
-  /// <summary>
-  /// The precision of the information contained in the GrayResponseCurve.
-  /// </summary>
   [MetadataTagEnum( 1, "0.1" )]
   [MetadataTagEnum( 2, "0.001" )]
   [MetadataTagEnum( 3, "0.0001" )]
@@ -203,22 +218,13 @@ public class ExifTag : IMetadataTag
   [MetadataTagDetails( "Gray Response Unit", "Precision of the information contained in the GrayResponseCurve" )]
   public const ushort GrayResponseUnit = 0x0122;
 
-  /// <summary>
-  /// For grayscale data; the optical density of each possible pixel value.
-  /// </summary>
   [MetadataTagDetails( "Gray Response Curve", "The optical density of each possible pixel value for grayscale data" )]
   public const ushort GrayResponseCurve = 0x0123;
 
-  /// <summary>
-  /// T.4-encoding options; Bit '0' denotes 2-Dimensional encoding, Bit '1' denotes Uncompressed, Bit '2' denotes Fill bits added
-  /// </summary>
-  [MetadataTagDetails( "T4 Options", "T.4 encoding options" )]
+  [MetadataTagDetails( "T4 Options", "T.4 encoding options; Bit '0' denotes 2-Dimensional encoding, Bit '1' denotes Uncompressed, Bit '2' denotes Fill bits added" )]
   public const ushort T4Options = 0x0124;
 
-  /// <summary>
-  /// T.6-encoding options; Bit '1' denotes Uncompressed
-  /// </summary>
-  [MetadataTagDetails( "T6 Options", "T.6 encoding options" )]
+  [MetadataTagDetails( "T6 Options", "T.6 encoding options; Bit '1' denotes Uncompressed" )]
   public const ushort T6Options = 0x0125;
 
   /// <summary>
@@ -230,45 +236,24 @@ public class ExifTag : IMetadataTag
   [MetadataTagDetails( "Resolution Unit", "Unit for measuring Horizontal and Vertical resolutions" )]
   public const ushort ResolutionUnit = 0x0128;
 
-  /// <summary>
-  /// The page number of the page from which this image was scanned.
-  /// </summary>
   [MetadataTagDetails( "Page Number", "Page number of the page from which this image was scanned" )]
   public const ushort PageNumber = 0x0129;
 
-  /// <summary>
-  /// A transfer function for the image; described in tabular style. Normally this tag is not necessary; since color space is specified in the color space information tag (<ColorSpace>).
-  /// </summary>
   [MetadataTagDetails( "Transfer Function", "Transfer function for the image described in tabular style" )]
   public const ushort TransferFunction = 0x012d;
 
-  /// <summary>
-  /// This tag records the name and version of the software or firmware of the camera or image input device used to generate the image. The detailed format is not specified; but it is recommended that the example shown below be followed. When the field is left blank; it is treated as unknown.
-  /// </summary>
   [MetadataTagDetails( "Software", "Records the name and version of the software or firmware of the camera or image input device used to generate the image" )]
   public const ushort Software = 0x0131;
 
-  /// <summary>
-  /// The date and time of image creation. In Exif standard; it is the date and time the file was changed.
-  /// </summary>
   [MetadataTagDetails( "Date Time", "Date and time of image creation or when last modified" )]
   public const ushort DateTime = 0x0132;
 
-  /// <summary>
-  /// This tag records the name of the camera owner; photographer or image creator. The detailed format is not specified; but it is recommended that the information be written as in the example below for ease of Interoperability. When the field is left blank; it is treated as unknown. Ex.) "Camera owner; John Smith; Photographer; Michael Brown; Image creator; Ken James"
-  /// </summary>
   [MetadataTagDetails( "Artist", "Records the name of the camera owner, photographer or image creator" )]
   public const ushort Artist = 0x013b;
 
-  /// <summary>
-  /// This tag records information about the host computer used to generate the image.
-  /// </summary>
   [MetadataTagDetails( "Host Computer", "Records information about the host computer used to generate the image" )]
   public const ushort HostComputer = 0x013c;
 
-  /// <summary>
-  /// A predictor is a mathematical operator that is applied to the image data before an encoding scheme is applied.
-  /// </summary>
   [MetadataTagEnum( 1, "None" )]
   [MetadataTagEnum( 2, "Horizontal differencing" )]
   [MetadataTagEnum( 3, "Floating point" )]
@@ -279,96 +264,53 @@ public class ExifTag : IMetadataTag
   [MetadataTagDetails( "Predictor", "Mathematical operator that is applied to the image data before an encoding scheme is applied" )]
   public const ushort Predictor = 0x013d;
 
-  /// <summary>
-  /// The chromaticity of the white point of the image. Normally this tag is not necessary; since color space is specified in the colorspace information tag (<ColorSpace>).
-  /// </summary>
   [MetadataTagDetails( "White Point", "Chromaticity of the white point of the image" )]
   public const ushort WhitePoint = 0x013e;
 
-  /// <summary>
-  /// The chromaticity of the three primary colors of the image. Normally this tag is not necessary; since colorspace is specified in the colorspace information tag (<ColorSpace>).
-  /// </summary>
   [MetadataTagDetails( "Primary Chromaticities", "Chromaticity of the three primary colors of the image" )]
   public const ushort PrimaryChromaticities = 0x013f;
 
-  /// <summary>
-  /// A color map for palette color images. This field defines a Red-Green-Blue color map (often called a lookup table) for palette-color images. In a palette-color image; a pixel value is used to index into an RGB lookup table.
-  /// </summary>
   [MetadataTagDetails( "Color Map", "Defines a Red-Green-Blue color map, or lookup table, for palette-color images where a pixel value is used to index into the map" )]
   public const ushort ColorMap = 0x0140;
 
-  /// <summary>
-  /// The purpose of the HalftoneHints field is to convey to the halftone function the range of gray levels within a colorimetrically-specified image that should retain tonal detail.
-  /// </summary>
   [MetadataTagDetails( "Halftone Hints", "Conveys to the halftone function the range of gray levels within a colorimetrically-specified image that should retain tonal detail" )]
   public const ushort HalftoneHints = 0x0141;
 
-  /// <summary>
-  /// The tile width in pixels. This is the number of columns in each tile.
-  /// </summary>
   [MetadataTagDetails( "Tile Width", "Number of columns/pixels in each tile" )]
   public const ushort TileWidth = 0x0142;
 
-  /// <summary>
-  /// The tile length (height) in pixels. This is the number of rows in each tile.
-  /// </summary>
   [MetadataTagDetails( "Tile Height", "Number of rows in each tile" )]
   public const ushort TileLength = 0x0143;
 
-  /// <summary>
-  /// For each tile; the byte offset of that tile; as compressed and stored on disk. The offset is specified with respect to the beginning of the TIFF file. Note that this implies that each tile has a location independent of the locations of other tiles.
-  /// </summary>
   [MetadataTagDetails( "Tile Offsets", "Byte offset of each tile as compressed and stored on disk" )]
   public const ushort TileOffsets = 0x0144;
 
-  /// <summary>
-  /// For each tile; the number of (compressed) bytes in that tile. See TileOffsets for a description of how the byte counts are ordered.
-  /// </summary>
   [MetadataTagDetails( "Tile Byte Counts", "Number of (compressed) bytes in the tile" )]
   public const ushort TileByteCounts = 0x0145;
 
-  /// <summary>
-  /// The set of inks used in a separated (PhotometricInterpretation=5) image.
-  /// </summary>
+  [MetadataTagEnum( 1, "CMYK" )]
+  [MetadataTagEnum( 2, "Not CMYK" )]
   [MetadataTagDetails( "Ink Set", "Set of inks used in a separated (PhotometricInterpretation) image" )]
   public const ushort InkSet = 0x014c;
 
-  /// <summary>
-  /// The name of each ink used in a separated (PhotometricInterpretation=5) image.
-  /// </summary>
   [MetadataTagDetails( "Ink Names", "Name of each ink used in a separated (PhotometricInterpretation) image" )]
   public const ushort InkNames = 0x014d;
 
-  /// <summary>
-  /// The number of inks. Usually equal to SamplesPerPixel; unless there are extra samples.
-  /// </summary>
   [MetadataTagDetails( "Number Of Inks", "Number of inks, usually equal to SamplesPerPixel" )]
   public const ushort NumberOfInks = 0x014e;
 
-  /// <summary>
-  /// The component values that correspond to a 0% dot and 100% dot.
-  /// </summary>
   [MetadataTagDetails( "Dot Range", "Component values that correspond to a 0% dot and 100% dot" )]
   public const ushort DotRange = 0x0150;
 
-  /// <summary>
-  /// A description of the printing environment for which this separation is intended.
-  /// </summary>
   [MetadataTagDetails( "Target Printer", "Description of the printing environment for which this separation is intended" )]
   public const ushort TargetPrinter = 0x0151;
 
-  /// <summary>
-  /// Specifies that each pixel has extra components whose interpretation is defined by one of the values listed in SampleFormat.
-  /// </summary>
   [MetadataTagEnum( 0, "Unspecified" )]
   [MetadataTagEnum( 1, "Associated Alpha" )]
   [MetadataTagEnum( 3, "Associated Alpha" )]
   [MetadataTagDetails( "Extra Samples", "Specifies that each pixel has extra components whose interpretation is defined by one of the values listed in SampleFormat" )]
   public const ushort ExtraSamples = 0x0152;
 
-  /// <summary>
-  /// This field specifies how to interpret each data sample in a pixel.
-  /// </summary>
   [MetadataTagEnum( 1, "Unsigned" )]
   [MetadataTagEnum( 2, "Signed" )]
   [MetadataTagEnum( 3, "Float" )]
@@ -378,235 +320,126 @@ public class ExifTag : IMetadataTag
   [MetadataTagDetails( "Sample Format", "Specifies how to interpret each data sample in a pixel" )]
   public const ushort SampleFormat = 0x0153;
 
-  /// <summary>
-  /// This field specifies the minimum sample value.
-  /// </summary>
   [MetadataTagDetails( "Minimum Sample Value", "Specifies the minimum sample value" )]
   public const ushort SMinSampleValue = 0x0154;
 
-  /// <summary>
-  /// This field specifies the maximum sample value.
-  /// </summary>
   [MetadataTagDetails( "Maximum Sample Value", "Specifies the maximum sample value" )]
   public const ushort SMaxSampleValue = 0x0155;
 
-  /// <summary>
-  /// Expands the range of the TransferFunction
-  /// </summary>
   [MetadataTagDetails( "Transfer Range", "Expands the range of the TransferFunction" )]
   public const ushort TransferRange = 0x0156;
 
-  /// <summary>
-  /// A TIFF ClipPath is intended to mirror the essentials of PostScript's path creation functionality.
-  /// </summary>
   [MetadataTagDetails( "Clip Path", "Intended to mirror the essentials of PostScript's path creation functionality" )]
   public const ushort ClipPath = 0x0157;
 
-  /// <summary>
-  /// The number of units that span the width of the image; in terms of integer ClipPath coordinates.
-  /// </summary>
   [MetadataTagDetails( "X Clip Path Units", "Number of units that span the width of the image" )]
   public const ushort XClipPathUnits = 0x0158;
 
-  /// <summary>
-  /// The number of units that span the height of the image; in terms of integer ClipPath coordinates.
-  /// </summary>
   [MetadataTagDetails( "Y Clip Path Units", "Number of units that span the height of the image" )]
   public const ushort YClipPathUnits = 0x0159;
 
-  /// <summary>
-  /// Indexed images are images where the 'pixels' do not represent color values; but rather an index (usually 8-bit) into a separate color table; the ColorMap.
-  /// </summary>
+  [MetadataTagEnum( 0, "Not indexed" )]
+  [MetadataTagEnum( 1, "Indexed" )]
   [MetadataTagDetails( "Indexed", "Indexed images are images where the 'pixels' do not represent color values but an index into a separate color map" )]
   public const ushort Indexed = 0x015a;
 
-  /// <summary>
-  /// This optional tag may be used to encode the JPEG quantization and Huffman tables for subsequent use by the JPEG decompression process.
-  /// </summary>
   [MetadataTagDetails( "JPEG Tables", "May be used to encode the JPEG quantization and Huffman tables for subsequent use by the JPEG decompression process" )]
   public const ushort JPEGTables = 0x015b;
 
-  /// <summary>
-  /// OPIProxy gives information concerning whether this image is a low-resolution proxy of a high-resolution image (Adobe OPI).
-  /// </summary>
+  [MetadataTagEnum( 0, "Higher resolution image does not exist" )]
+  [MetadataTagEnum( 1, "Higher resolution image exists" )]
   [MetadataTagDetails( "OPI Proxy", "Gives information concerning whether this image is a low-resolution proxy of a high-resolution image" )]
   public const ushort OPIProxy = 0x015f;
 
-  /// <summary>
-  /// This field indicates the process used to produce the compressed data
-  /// </summary>
   [MetadataTagDetails( "JPEG Process", "Indicates the process used to produce the compressed data" )]
   public const ushort JPEGProc = 0x0200;
 
-  /// <summary>
-  /// The offset to the start byte (SOI) of JPEG compressed thumbnail data. This is not used for primary image JPEG data.
-  /// </summary>
   [MetadataTagDetails( "JPEG Interchange Format", "Offset to the start byte of the JPEG compressed thumbnail data" )]
   public const ushort JPEGInterchangeFormat = 0x0201;
 
-  /// <summary>
-  /// The number of bytes of JPEG compressed thumbnail data. This is not used for primary image JPEG data. JPEG thumbnails are not divided but are recorded as a continuous JPEG bitstream from SOI to EOI. Appn and COM markers should not be recorded. Compressed thumbnails must be recorded in no more than 64 Kbytes; including all other data to be recorded in APP1.
-  /// </summary>
   [MetadataTagDetails( "JPEG Interchange Format Length", "Number of bytes of JPEG compressed thumbnail data" )]
   public const ushort JPEGInterchangeFormatLength = 0x0202;
 
-  /// <summary>
-  /// This Field indicates the length of the restart interval used in the compressed image data.
-  /// </summary>
   [MetadataTagDetails( "JPEG Restart Interval", "Indicates the length of the restart interval used in the compressed image data" )]
   public const ushort JPEGRestartInterval = 0x0203;
 
-  /// <summary>
-  /// This Field points to a list of lossless predictor-selection values; one per component.
-  /// </summary>
   [MetadataTagDetails( "JPEG Lossless Predictors", "Points to a list of lossless predictor/selection values, one per component" )]
   public const ushort JPEGLosslessPredictors = 0x0205;
 
-  /// <summary>
-  /// This Field points to a list of point transform values; one per component.
-  /// </summary>
   [MetadataTagDetails( "JPEG Point Transforms", "Points to a list of point transform, one per component" )]
   public const ushort JPEGPointTransforms = 0x0206;
 
-  /// <summary>
-  /// This Field points to a list of offsets to the quantization tables; one per component.
-  /// </summary>
   [MetadataTagDetails( "JPEG Quantization Tables", "Points to a list of offsets to the quantization tables, one per component" )]
   public const ushort JPEGQTables = 0x0207;
 
-  /// <summary>
-  /// This Field points to a list of offsets to the DC Huffman tables or the lossless Huffman tables; one per component.
-  /// </summary>
   [MetadataTagDetails( "JPEG DC Huffman Tables", "Points to a list of offsets to the DC Huffman or lossless Huffman tables, one per component" )]
   public const ushort JPEGDCTables = 0x0208;
 
-  /// <summary>
-  /// This Field points to a list of offsets to the Huffman AC tables; one per component.
-  /// </summary>
   [MetadataTagDetails( "JPEG Huffman AC Tables", "Points to a list of offsets to the Huffman AC tables, one per component" )]
   public const ushort JPEGACTables = 0x0209;
 
-  /// <summary>
-  /// The matrix coefficients for transformation from RGB to YCbCr image data. No default is given in TIFF; but here the value given in Appendix E; "Color Space Guidelines"; is used as the default. The color space is declared in a color space information tag; with the default being the value that gives the optimal image characteristics Interoperability this condition.
-  /// </summary>
   [MetadataTagDetails( "YCbCr Coefficients", "Matrix coefficients for transformation from RGB to YCbCr image data" )]
   public const ushort YCbCrCoefficients = 0x0211;
 
-  /// <summary>
-  /// The sampling ratio of chrominance components in relation to the luminance component. In JPEG compressed data a JPEG marker is used instead of this tag.
-  /// </summary>
   [MetadataTagDetails( "YCbCr SubSampling", "Sampling ratio of chrominance components in relation to the luminance component" )]
   public const ushort YCbCrSubSampling = 0x0212;
 
-  /// <summary>
-  /// The position of chrominance components in relation to the luminance component. This field is designated only for JPEG compressed data or uncompressed YCbCr data. The TIFF default is 1 (centered); but when Y:Cb:Cr = 4:2:2 it is recommended in this standard that 2 (co-sited) be used to record data; in order to improve the image quality when viewed on TV systems. When this field does not exist; the reader shall assume the TIFF default. In the case of Y:Cb:Cr = 4:2:0; the TIFF default (centered) is recommended. If the reader does not have the capability of supporting both kinds of <YCbCrPositioning>; it shall follow the TIFF default regardless of the value in this field. It is preferable that readers be able to support both centered and co-sited positioning.
-  /// </summary>
+  [MetadataTagEnum( 1, "Centered" )]
+  [MetadataTagEnum( 2, "Co-sited" )]
   [MetadataTagDetails( "YCbCr Positioning", "Position of chrominance components in relation to the luminance component" )]
   public const ushort YCbCrPositioning = 0x0213;
 
-  /// <summary>
-  /// The reference black point value and reference white point value. No defaults are given in TIFF; but the values below are given as defaults here. The color space is declared in a color space information tag; with the default being the value that gives the optimal image characteristics Interoperability these conditions.
-  /// </summary>
   [MetadataTagDetails( "Reference Black White", "Reference black point value and reference white point value" )]
   public const ushort ReferenceBlackWhite = 0x0214;
 
-  /// <summary>
-  /// XMP Metadata (Adobe technote 9-14-02)
-  /// </summary>
   [MetadataTagDetails( "XML Packet", "XMP metadata" )]
   public const ushort XMLPacket = 0x02bc;
 
-  /// <summary>
-  /// Rating tag used by Windows
-  /// </summary>
   [MetadataTagDetails( "Rating", "Windows rating value" )]
   public const ushort Rating = 0x4746;
 
-  /// <summary>
-  /// Rating tag used by Windows; value in percent
-  /// </summary>
   [MetadataTagDetails( "Rating Percent", "Windows rating percentage value" )]
   public const ushort RatingPercent = 0x4749;
 
-  /// <summary>
-  /// Sony vignetting correction parameters
-  /// </summary>
   [MetadataTagDetails( "Vignetting Correction Parameters", "Sony vignetting correction parameters" )]
   public const ushort VignettingCorrParams = 0x7032;
 
-  /// <summary>
-  /// Sony chromatic aberration correction parameters
-  /// </summary>
   [MetadataTagDetails( "Chromatic Aberration Correction Parameters", "Sony chromatic aberration correction parameters" )]
   public const ushort ChromaticAberrationCorrParams = 0x7035;
 
-  /// <summary>
-  /// Sony distortion correction parameters
-  /// </summary>
   [MetadataTagDetails( "Distortion Correction Parameters", "Sony distortion correction parameters" )]
   public const ushort DistortionCorrParams = 0x7037;
 
-  /// <summary>
-  /// ImageID is the full pathname of the original; high-resolution image; or any other identifying string that uniquely identifies the original image (Adobe OPI).
-  /// </summary>
   [MetadataTagDetails( "Image ID", "Full pathname of the original, high-resolution image; or any other identifying string that uniquely identifies the original image" )]
   public const ushort ImageID = 0x800d;
 
-  /// <summary>
-  /// Contains two values representing the minimum rows and columns to define the repeating patterns of the color filter array
-  /// </summary>
   [MetadataTagDetails( "CFA Repeat Pattern Dim", "Representing the minimum rows and columns to define the repeating patterns of the color filter array (CFA)" )]
   public const ushort CFARepeatPatternDim = 0x828d;
 
-  /// <summary>
-  /// Indicates the color filter array (CFA) geometric pattern of the image sensor when a one-chip color area sensor is used. It does not apply to all sensing methods
-  /// </summary>
   [MetadataTagDetails( "CFA Pattern", "The color filter array (CFA) geometric pattern of the image sensor when a one-chip color area sensor is used" )]
   public const ushort CFAPattern = 0x828e;
 
-  /// <summary>
-  /// Contains a value of the battery level as a fraction or string
-  /// </summary>
   [MetadataTagDetails( "Battery Level", "Value of the battery level as a fraction or string" )]
   public const ushort BatteryLevel = 0x828f;
 
-  /// <summary>
-  /// Copyright information. In this standard the tag is used to indicate both the photographer and editor copyrights. It is the copyright notice of the person or organization claiming rights to the image. The Interoperability copyright statement including date and rights should be written in this field; e.g.; "Copyright; John Smith; 19xx. All rights reserved.". In this standard the field records both the photographer and editor copyrights; with each recorded in a separate part of the statement. When there is a clear distinction between the photographer and editor copyrights; these are to be written in the order of photographer followed by editor copyright; separated by NULL (in this case since the statement also ends with a NULL; there are two NULL codes). When only the photographer copyright is given; it is terminated by one NULL code. When only the editor copyright is given; the photographer copyright part consists of one space followed by a terminating NULL code; then the editor copyright is given. When the field is left blank; it is treated as unknown.
-  /// </summary>
   [MetadataTagDetails( "Copyright", "Indicates both the photographer and editor copyrights; it is the copyright notice of the person or organization claiming rights to the image" )]
   public const ushort Copyright = 0x8298;
 
-  /// <summary>
-  /// Exposure time; given in seconds.
-  /// </summary>
   [MetadataTagDetails( "Exposure Time", "Exposure time in seconds" )]
   public const ushort ExposureTime = 0x829a;
 
-  /// <summary>
-  /// The F number.
-  /// </summary>
   [MetadataTagDetails( "F Number", "Camera F number" )]
   public const ushort FNumber = 0x829d;
 
-  /// <summary>
-  /// Contains an IPTC/NAA record
-  /// </summary>
   [MetadataTagDetails( "IPTC/NAA Record", "Contains the IPTC/NAA record" )]
   public const ushort IPTCNAA = 0x83bb;
 
-  /// <summary>
-  /// Contains information embedded by the Adobe Photoshop application
-  /// </summary>
+  [MetadataTagDetails( "Image Resources", "Contains information embedded by the Adobe Photoshop application" )]
   public const ushort ImageResources = 0x8649;
 
-  /// <summary>
-  /// (undefined type) Contains an InterColor Consortium (ICC) format color space characterization/profile
-  /// </summary>
+  [MetadataTagDetails( "Inter Color Profile", "Contains an InterColor Consortium (ICC) format color space characterization/profile" )]
   public const ushort InterColorProfile = 0x8773;
 
-  /// <summary>
-  /// The class of the program used by the camera to set exposure when the picture is taken.
-  /// </summary>
   [MetadataTagEnum( 0, "Not Defined" )]
   [MetadataTagEnum( 1, "Manual" )]
   [MetadataTagEnum( 2, "Program AE" )]
@@ -617,81 +450,51 @@ public class ExifTag : IMetadataTag
   [MetadataTagEnum( 7, "Portrait" )]
   [MetadataTagEnum( 8, "Landscape" )]
   [MetadataTagEnum( 9, "Bulb" )]
+  [MetadataTagDetails( "Exposure Program", "Class of the program used by the camera to set exposure when the picture is taken" )]
   public const ushort ExposureProgram = 0x8822;
 
-  /// <summary>
-  /// Indicates the spectral sensitivity of each channel of the camera used.
-  /// </summary>
+  [MetadataTagDetails( "Spectral Sensitivity", "Indicates the spectral sensitivity of each channel of the camera used" )]
   public const ushort SpectralSensitivity = 0x8824;
 
-  /// <summary>
-  /// Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232.
-  /// </summary>
+  [MetadataTagDetails( "ISO Speed Ratings", "Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232" )]
   public const ushort ISOSpeedRatings = 0x8827;
 
-  /// <summary>
-  /// (undefined type) Indicates the Opto-Electric Conversion Function (OECF) specified in ISO 14524.
-  /// </summary>
+  [MetadataTagDetails( "OECF", "Indicates the Opto-Electric Conversion Function (OECF) specified in ISO 14524" )]
   public const ushort OECF = 0x8828;
 
-  /// <summary>
-  /// Indicates the field number of multifield images.
-  /// </summary>
+  [MetadataTagDetails( "Interlace", "Indicates the field number of multifield images" )]
   public const ushort Interlace = 0x8829;
 
-  /// <summary>
-  /// This optional tag encodes the time zone of the camera clock (relative to Greenwich Mean Time) used to create the DataTimeOriginal tag-value when the picture was taken. It may also contain the time zone offset of the clock used to create the DateTime tag-value when the image was modified.
-  /// </summary>
+  [MetadataTagDetails( "Time Zone Offset", "Encodes the time zone of the camera clock (relative to Greenwich Mean Time) used to create the DataTimeOriginal tag-value when the picture was taken" )]
   public const ushort TimeZoneOffset = 0x882a;
 
-  /// <summary>
-  /// Number of seconds image capture was delayed from button press.
-  /// </summary>
+  [MetadataTagDetails( "Self Timer Mode", "Number of seconds image capture was delayed from button press" )]
   public const ushort SelfTimerMode = 0x882b;
 
-  /// <summary>
-  /// The date and time when the original image data was generated.
-  /// </summary>
+  [MetadataTagDetails( "Date Time Original", "Date and time when the original image data was generated" )]
   public const ushort DateTimeOriginal = 0x9003;
 
-  /// <summary>
-  /// Specific to compressed data; states the compressed bits per pixel.
-  /// </summary>
+  [MetadataTagDetails( "Compressed Bits Per Pixel", "Specific to compressed data and states the compressed bits per pixel" )]
   public const ushort CompressedBitsPerPixel = 0x9102;
 
-  /// <summary>
-  /// Shutter speed.
-  /// </summary>
+  [MetadataTagDetails( "Shutter Speed", "Camera shutter speed used for this image" )]
   public const ushort ShutterSpeedValue = 0x9201;
 
-  /// <summary>
-  /// The lens aperture.
-  /// </summary>
+  [MetadataTagDetails( "Lens Aperture", "Camera lens aperture used for this image" )]
   public const ushort ApertureValue = 0x9202;
 
-  /// <summary>
-  /// The value of brightness.
-  /// </summary>
+  [MetadataTagDetails( "Brightness", "Camera brightness value" )]
   public const ushort BrightnessValue = 0x9203;
 
-  /// <summary>
-  /// The exposure bias.
-  /// </summary>
+  [MetadataTagDetails( "Exposure Bias", "Camera exposure bias setting" )]
   public const ushort ExposureBiasValue = 0x9204;
 
-  /// <summary>
-  /// The smallest F number of the lens.
-  /// </summary>
+  [MetadataTagDetails( "Max Exposure", "Smallest F number of the lens" )]
   public const ushort MaxApertureValue = 0x9205;
 
-  /// <summary>
-  /// The distance to the subject; given in meters.
-  /// </summary>
+  [MetadataTagDetails( "Subject Distance", "Distance to the subject (given in meters)" )]
   public const ushort SubjectDistance = 0x9206;
 
-  /// <summary>
-  /// The metering mode.
-  /// </summary>
   [MetadataTagEnum( 0, "Unknown" )]
   [MetadataTagEnum( 1, "Average" )]
   [MetadataTagEnum( 2, "Center-weighted average" )]
@@ -700,67 +503,99 @@ public class ExifTag : IMetadataTag
   [MetadataTagEnum( 5, "Multi-segment" )]
   [MetadataTagEnum( 6, "Partial" )]
   [MetadataTagEnum( 255, "Other" )]
+  [MetadataTagDetails( "Metering Mode", "Metering mode" )]
   public const ushort MeteringMode = 0x9207;
 
-  /// <summary>
-  /// The kind of light source.
-  /// </summary>
+  [MetadataTagEnum( 0, "Unknown" )]
+  [MetadataTagEnum( 1, "Daylight" )]
+  [MetadataTagEnum( 2, "Fluorescent" )]
+  [MetadataTagEnum( 3, "Tungsten (Incandescent)" )]
+  [MetadataTagEnum( 4, "Flash" )]
+  [MetadataTagEnum( 9, "Fine Weather" )]
+  [MetadataTagEnum( 10, "Cloudy" )]
+  [MetadataTagEnum( 11, "Shade" )]
+  [MetadataTagEnum( 12, "Daylight Fluorescent" )]
+  [MetadataTagEnum( 13, "Day White Fluorescent" )]
+  [MetadataTagEnum( 14, "Cool White Fluorescent" )]
+  [MetadataTagEnum( 15, "White Fluorescent" )]
+  [MetadataTagEnum( 16, "Warm White Fluorescent" )]
+  [MetadataTagEnum( 17, "Standard Light A" )]
+  [MetadataTagEnum( 18, "Standard Light B" )]
+  [MetadataTagEnum( 19, "Standard Light C" )]
+  [MetadataTagEnum( 20, "D55" )]
+  [MetadataTagEnum( 21, "D65" )]
+  [MetadataTagEnum( 22, "D75" )]
+  [MetadataTagEnum( 23, "D50" )]
+  [MetadataTagEnum( 24, "ISO Studio Tungsten" )]
+  [MetadataTagEnum( 255, "Other" )]
+  [MetadataTagDetails( "Light Source", "Kind of light source" )]
   public const ushort LightSource = 0x9208;
 
-  /// <summary>
-  /// Indicates the status of flash when the image was shot.
-  /// </summary>
+  [MetadataTagEnum( 0, "No Flash" )]
+  [MetadataTagEnum( 1, "Fired" )]
+  [MetadataTagEnum( 5, "Fired, Return not detected" )]
+  [MetadataTagEnum( 7, "Fired, Return detected" )]
+  [MetadataTagEnum( 8, "On, Did not fire" )]
+  [MetadataTagEnum( 9, "On, Fired" )]
+  [MetadataTagEnum( 13, "On, Return not detected" )]
+  [MetadataTagEnum( 15, "On, Return detected" )]
+  [MetadataTagEnum( 16, "Off, Did not fire" )]
+  [MetadataTagEnum( 20, "Off, Did not fire, Return not detected" )]
+  [MetadataTagEnum( 24, "Auto, Did not fire" )]
+  [MetadataTagEnum( 25, "Auto, Fired" )]
+  [MetadataTagEnum( 29, "Auto, Fired, Return not detected" )]
+  [MetadataTagEnum( 31, "Auto, Fired, Return detected" )]
+  [MetadataTagEnum( 32, "No flash function" )]
+  [MetadataTagEnum( 48, "Off, No flash function" )]
+  [MetadataTagEnum( 65, "Fired, Red-eye reduction" )]
+  [MetadataTagEnum( 69, "Fired, Red-eye reduction, Return not detected" )]
+  [MetadataTagEnum( 71, "Fired, Red-eye reduction, Return detected" )]
+  [MetadataTagEnum( 73, "On, Red-eye reduction" )]
+  [MetadataTagEnum( 77, "On, Red-eye reduction, Return not detected" )]
+  [MetadataTagEnum( 79, "On, Red-eye reduction, Return detected" )]
+  [MetadataTagEnum( 80, "Off, Red-eye reduction" )]
+  [MetadataTagEnum( 88, "Auto, Did not fire, Red-eye reduction" )]
+  [MetadataTagEnum( 89, "Auto, Fired, Red-eye reduction" )]
+  [MetadataTagEnum( 93, "Auto, Fired, Red-eye reduction, Return not detected" )]
+  [MetadataTagEnum( 95, "Auto, Fired, Red-eye reduction, Return detected" )]
+  [MetadataTagDetails( "Flash", "Indicates the status of flash when the image was shot" )]
   public const ushort Flash = 0x9209;
 
-  /// <summary>
-  /// The actual focal length of the lens; in mm.
-  /// </summary>
+  [MetadataTagDetails( "Focal Length", "Actual focal length of the lens in mm" )]
   public const ushort FocalLength = 0x920a;
 
-  /// <summary>
-  /// Amount of flash energy (BCPS).
-  /// </summary>
+  [MetadataTagDetails( "Flash Energy", "Amount of flash energy (BCPS) used" )]
   public const ushort FlashEnergy = 0x920b;
 
-  /// <summary>
-  /// (undefined type) SFR of the camera.
-  /// </summary>
+  [MetadataTagDetails( "Spatial Frequency Response", "Spatial Frequency Response (SFR) of the camera" )]
   public const ushort SpatialFrequencyResponse = 0x920c;
 
-  /// <summary>
-  /// (undefined type) Noise measurement values.
-  /// </summary>
+  [MetadataTagDetails( "Noise", "Noise measurement values" )]
   public const ushort Noise = 0x920d;
 
-  /// <summary>
-  /// Number of pixels per FocalPlaneResolutionUnit (37392) in ImageWidth direction for main image.
-  /// </summary>
+  [MetadataTagDetails( "Focal Plane X Resolution", "Number of pixels per FocalPlaneResolutionUnit in ImageWidth direction for main image" )]
   public const ushort FocalPlaneXResolution = 0x920e;
 
-  /// <summary>
-  /// Number of pixels per FocalPlaneResolutionUnit (37392) in ImageLength direction for main image.
-  /// </summary>
+  [MetadataTagDetails( "Focal Plane Y Resolution", "Number of pixels per FocalPlaneResolutionUnit in ImageHeight direction for main image" )]
   public const ushort FocalPlaneYResolution = 0x920f;
 
-  /// <summary>
-  /// Unit of measurement for FocalPlaneXResolution(37390) and FocalPlaneYResolution(37391).
-  /// </summary>
   [MetadataTagEnum( 1, "None" )]
   [MetadataTagEnum( 2, "inches" )]
   [MetadataTagEnum( 3, "cm" )]
   [MetadataTagEnum( 4, "mm" )]
   [MetadataTagEnum( 5, "um" )]
+  [MetadataTagDetails( "Focal Plane Resolution Unit", "Unit of measurement for FocalPlaneXResolution and FocalPlaneYResolution" )]
   public const ushort FocalPlaneResolutionUnit = 0x9210;
 
-  /// <summary>
-  /// Number assigned to an image; e.g.; in a chained image burst.
-  /// </summary>
+  [MetadataTagDetails( "Image Number", "Number assigned to an image, e.g. in a chained image burst" )]
   public const ushort ImageNumber = 0x9211;
 
-  /// <summary>
-  /// Security classification assigned to the image; 'C' denotes Confidential, 'R' denotes Restricted, 'S' denotes Secret, 'T' denotes Top Secret, 'U' denotes Unclassified.
-  /// </summary>
-  [MetadataTagDetails( "Security Classification", "Security classification assigned to the image; 'C' denotes Confidential, 'R' denotes Restricted, 'S' denotes Secret, 'T' denotes Top Secret, 'U' denotes Unclassified" )]
+  [MetadataTagEnum( "C", "Confidential" )]
+  [MetadataTagEnum( "R", "Restricted" )]
+  [MetadataTagEnum( "S", "Secret" )]
+  [MetadataTagEnum( "T", "Top Secret" )]
+  [MetadataTagEnum( "U", "Unclassified" )]
+  [MetadataTagDetails( "Security Classification", "Security classification assigned to the image" )]
   public const ushort SecurityClassification = 0x9212;
 
   /// <summary>
@@ -1306,11 +1141,17 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// Specifies the measurement units for the DepthNear and DepthFar tags.
   /// </summary>
+  [MetadataTagEnum( 0, "Unknown" )]
+  [MetadataTagEnum( 1, "Meters" )]
+  [MetadataTagDetails( "DepthUnits", "" )]
   public const ushort DepthUnits = 0xc7ec;
 
   /// <summary>
   /// Specifies the measurement geometry for the depth map. Can be unknown; measured along the optical axis; or measured along the optical ray passing through each pixel.
   /// </summary>
+  [MetadataTagEnum( 0, "Unknown" )]
+  [MetadataTagEnum( 1, "Optical Axis" )]
+  [MetadataTagEnum( 2, "Optical Ray" )]
   public const ushort DepthMeasureType = 0xc7ed;
 
   /// <summary>
@@ -1385,7 +1226,6 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// The SensitivityType tag indicates which one of the parameters of ISO12232 is the PhotographicSensitivity tag. Although it is an optional tag; it should be recorded when a PhotographicSensitivity tag is recorded. Value = 4; 5; 6; or 7 may be used in case that the values of plural parameters are the same.
   /// </summary>
-  [MetadataTagDetails( "Sensitivity Type", "The SensitivityType tag indicates which one of the parameters of ISO12232 is the ISOSpeedRatings tag" )]
   [MetadataTagEnum( 1, "Standard output sensitivity" )]
   [MetadataTagEnum( 2, "Recommended exposure index" )]
   [MetadataTagEnum( 3, "ISO speed" )]
@@ -1393,6 +1233,7 @@ public class ExifTag : IMetadataTag
   [MetadataTagEnum( 5, "Standard output sensitivity and ISO speed" )]
   [MetadataTagEnum( 6, "Recommended exposure index and ISO speed" )]
   [MetadataTagEnum( 7, "Standard output sensitivity, recommended exposure index and ISO speed" )]
+  [MetadataTagDetails( "Sensitivity Type", "The SensitivityType tag indicates which one of the parameters of ISO12232 is the ISOSpeedRatings tag" )]
   public const ushort PhotoSensitivityType = 0x8830;
 
   /// <summary>
@@ -1559,6 +1400,11 @@ public class ExifTag : IMetadataTag
   /// <summary>
   /// Indicates the unit for measuring <FocalPlaneXResolution> and <FocalPlaneYResolution>. This value is the same as the <ResolutionUnit>.
   /// </summary>
+  [MetadataTagEnum( 1, "None" )]
+  [MetadataTagEnum( 2, "inches" )]
+  [MetadataTagEnum( 3, "cm" )]
+  [MetadataTagEnum( 4, "mm" )]
+  [MetadataTagEnum( 5, "um" )]
   public const ushort PhotoFocalPlaneResolutionUnit = 0xa210;
 
   /// <summary>
@@ -1766,6 +1612,8 @@ public class ExifTag : IMetadataTag
   /// Indicates whether the latitude is north or south latitude. The ASCII value 'N' indicates north latitude; and 'S' is south latitude.
   /// </summary>
   [MetadataTagDetails( "GPS Latitude Reference", "Indicates whether the latitude is North or South longitude; 'N' denotes North longitude, 'S' denotes South longitude" )]
+  [MetadataTagEnum( "N", "North Latitude" )]
+  [MetadataTagEnum( "S", "South Latitude" )]
   public const ushort GPSLatitudeRef = 0x0001;
 
   /// <summary>
@@ -1778,6 +1626,8 @@ public class ExifTag : IMetadataTag
   /// Indicates whether the longitude is east or west longitude. ASCII 'E' indicates east longitude; and 'W' is west longitude.
   /// </summary>
   [MetadataTagDetails( "GPS Longitude Reference", "Indicates whether the longitude is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude" )]
+  [MetadataTagEnum( "W", "West Longitude" )]
+  [MetadataTagEnum( "E", "East Longitude" )]
   public const ushort GPSLongitudeRef = 0x0003;
 
   /// <summary>
@@ -1790,6 +1640,8 @@ public class ExifTag : IMetadataTag
   /// Indicates the altitude used as the reference altitude. If the reference is sea level and the altitude is above sea level; 0 is given. If the altitude is below sea level; a value of 1 is given and the altitude is indicated as an absolute value in the GSPAltitude tag. The reference unit is meters. Note that this tag is BYTE type; unlike other reference tags.
   /// </summary>
   [MetadataTagDetails( "GPS Altitude Reference", "Indicates the altitude reference used for GPSAltitude; '0' denotes altitude above sea level, '1' denotes altitude below sea level" )]
+  [MetadataTagEnum( 0, "Altitude above sea level" )]
+  [MetadataTagEnum( 1, "Altitude below sea level" )]
   public const ushort GPSAltitudeRef = 0x0005;
 
   /// <summary>
@@ -1814,12 +1666,16 @@ public class ExifTag : IMetadataTag
   /// Indicates the status of the GPS receiver when the image is recorded. "A" means measurement is in progress; and "V" means the measurement is Interoperability.
   /// </summary>
   [MetadataTagDetails( "GPS Status", "Indicates the status of the GPS receiver when the image is recorded; 'A' denotes measurement is in-progress, 'V' denotes the measurement is Interoperability" )]
+  [MetadataTagEnum( "A", "Measurement is in-progress" )]
+  [MetadataTagEnum( "V", "Measurement is Interoperability" )]
   public const ushort GPSStatus = 0x0009;
 
   /// <summary>
   /// Indicates the GPS measurement mode. "2" means two-dimensional measurement and "3" means three-dimensional measurement is in progress.
   /// </summary>
   [MetadataTagDetails( "GPS Measurement Mode", "Indicates the GPS measurement mode; '2' means two-dimensional, '3' means three-dimensional measurement is in progress" )]
+  [MetadataTagEnum( "2", "Two-dimensional measurement" )]
+  [MetadataTagEnum( "3", "Three-dimensional measurement" )]
   public const ushort GPSMeasureMode = 0x000a;
 
   /// <summary>
@@ -1832,6 +1688,9 @@ public class ExifTag : IMetadataTag
   /// Indicates the unit used to express the GPS receiver speed of movement. "K" "M" and "N" represents kilometers per hour; miles per hour; and knots.
   /// </summary>
   [MetadataTagDetails( "GPS Speed Reference", "Indicates the unit used to express the GPS receiver speed of movement; 'K' denotes km/h, 'M' denotes miles per hour, 'N' denotes knots" )]
+  [MetadataTagEnum( "K", "Kilometers per hour" )]
+  [MetadataTagEnum( "M", "Miles per hour" )]
+  [MetadataTagEnum( "N", "Knots" )]
   public const ushort GPSSpeedRef = 0x000c;
 
   /// <summary>
@@ -1844,6 +1703,8 @@ public class ExifTag : IMetadataTag
   /// Indicates the reference for giving the direction of GPS receiver movement. "T" denotes true direction and "M" is magnetic direction.
   /// </summary>
   [MetadataTagDetails( "GPS Track Reference", "Indicates the reference for giving the direction of GPS receiver movement; 'T' denotes True Direction, 'M' denotes Magnetic Direction" )]
+  [MetadataTagEnum( "T", "True Direction" )]
+  [MetadataTagEnum( "M", "Magnetic Direction" )]
   public const ushort GPSTrackRef = 0x000e;
 
   /// <summary>
@@ -1856,6 +1717,8 @@ public class ExifTag : IMetadataTag
   /// Indicates the reference for giving the direction of the image when it is captured. "T" denotes true direction and "M" is magnetic direction.
   /// </summary>
   [MetadataTagDetails( "GPS Image Direction Reference", "Indicates the reference for giving the direction of the image when it is captured; 'T' denotes True Direction, 'M' denotes Magnetic Direction" )]
+  [MetadataTagEnum( "T", "True Direction" )]
+  [MetadataTagEnum( "M", "Magnetic Direction" )]
   public const ushort GPSImgDirectionRef = 0x0010;
 
   /// <summary>
@@ -1874,6 +1737,8 @@ public class ExifTag : IMetadataTag
   /// Indicates whether the latitude of the destination point is north or south latitude. The ASCII value "N" indicates north latitude; and "S" is south latitude.
   /// </summary>
   [MetadataTagDetails( "GPS Destination Latitude Reference", "Indicates whether the latitude of the destination point is North or South latitude; 'N' denotes North latitude, 'S' denotes South latitude" )]
+  [MetadataTagEnum( "N", "North Latitude" )]
+  [MetadataTagEnum( "S", "South Latitude" )]
   public const ushort GPSDestLatitudeRef = 0x0013;
 
   /// <summary>
@@ -1886,6 +1751,8 @@ public class ExifTag : IMetadataTag
   /// Indicates whether the longitude of the destination point is east or west longitude. ASCII "E" indicates east longitude; and "W" is west longitude.
   /// </summary>
   [MetadataTagDetails( "GPS Destination Longitude Reference", "Indicates whether the longitude of the destination point is East or West longitude; 'E' denotes East longitude, 'W' denotes West longitude" )]
+  [MetadataTagEnum( "W", "West Longitude" )]
+  [MetadataTagEnum( "E", "East Longitude" )]
   public const ushort GPSDestLongitudeRef = 0x0015;
 
   /// <summary>
@@ -1898,6 +1765,8 @@ public class ExifTag : IMetadataTag
   /// Indicates the reference used for giving the bearing to the destination point. "T" denotes true direction and "M" is magnetic direction.
   /// </summary>
   [MetadataTagDetails( "GPS Destination Bearing Reference", "Indicates the reference used for giving the bearing to the destination point; 'T' denotes true direction and 'M' is magnetic direction" )]
+  [MetadataTagEnum( "T", "True Direction" )]
+  [MetadataTagEnum( "M", "Magnetic Direction" )]
   public const ushort GPSDestBearingRef = 0x0017;
 
   /// <summary>
@@ -1910,6 +1779,9 @@ public class ExifTag : IMetadataTag
   /// Indicates the unit used to express the distance to the destination point. "K"; "M" and "N" represent kilometers; miles and knots.
   /// </summary>
   [MetadataTagDetails( "GPS Destination Distance Reference", "Indicates the unit used to express the distance to the destination point; 'K', 'M' and 'N' represent kilometers, miles and knots" )]
+  [MetadataTagEnum( "K", "Kilometers per hour" )]
+  [MetadataTagEnum( "M", "Miles per hour" )]
+  [MetadataTagEnum( "N", "Knots" )]
   public const ushort GPSDestDistanceRef = 0x0019;
 
   /// <summary>

@@ -15,9 +15,16 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 /// </summary>
 public class ExifEnum : ExifTypeBase, IMetadataTypedValue
 {
-  internal ExifEnum( BinaryReader reader, ExifComponent component )
+  internal enum EnumType
+  {
+    Numeric,
+    String,
+  }
+
+  internal ExifEnum( BinaryReader reader, ExifComponent component, EnumType enumType )
     : base( MetadataType.Enum, reader, component )
   {
+    _enumType = enumType;
   }
 
   public string StringValue => ToString();
@@ -34,8 +41,12 @@ public class ExifEnum : ExifTypeBase, IMetadataTypedValue
     {
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
-        var value = DataConversion.UInt16FromBuffer( Component.DataValueBuffer.AsSpan( 0 + ( i * Component.ComponentSize ) ), Component.ByteOrder );
-        yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new MetadataEnumValue( value, GetEnumValue( value ) ) );
+        var buff = Component.DataValueBuffer.AsSpan( 0 + ( i * Component.ComponentSize ) );
+        var value = GetEnumFromValue( buff );
+        if( value != null )
+        {
+          yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
+        }
       }
     }
     else
@@ -50,20 +61,35 @@ public class ExifEnum : ExifTypeBase, IMetadataTypedValue
       for( var i = 0; i < Component.ComponentCount; i++ )
       {
         var buff = dataValue.AsSpan( i * Component.ComponentSize, 2 );
-        var value = DataConversion.UInt16FromBuffer( buff, Component.ByteOrder );
-        yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new MetadataEnumValue( value, GetEnumValue( value ) ) );
+        var value = GetEnumFromValue( buff );
+        if( value != null )
+        {
+          yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
+        }
       }
     }
   }
 
-  private string GetEnumValue( ushort enumValue )
+  private MetadataEnumValue? GetEnumFromValue( ReadOnlySpan<byte> value )
   {
-    var enumVal = MetadataTagEnumAttribute.GetTagEnumValue( ReflectionExifTag, Component.Tag, enumValue );
-    if( enumVal != null )
+    if( _enumType == EnumType.String )
     {
-      return enumVal;
+      var bufferValue = DataConversion.ConvertBuffer( value, StringEncoding.Utf8 );
+      if( bufferValue?.Length > 0 )
+      {
+        var attributeInfo = MetadataTagEnumAttribute.GetTagEnumValue( ReflectionExifTag, TagId, bufferValue );
+        return new MetadataEnumValue( bufferValue, attributeInfo ?? string.Empty );
+      }
+    }
+    else
+    {
+      var numberValue = DataConversion.UInt16FromBuffer( value, Component.ByteOrder );
+      var attributeInfo = MetadataTagEnumAttribute.GetTagEnumValue( ReflectionExifTag, TagId, numberValue );
+      return new MetadataEnumValue( numberValue.ToString(), attributeInfo ?? string.Empty );
     }
 
-    return string.Empty;
+    return null;
   }
+
+  private readonly EnumType _enumType;
 }

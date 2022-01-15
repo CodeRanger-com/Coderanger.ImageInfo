@@ -311,8 +311,8 @@ internal class DecodeExif
 
           exifDensityUnit = enumValue.EnumValue switch
           {
-            2 => DensityUnit.PixelsPerInch,
-            3 => DensityUnit.PixelsPerCentimeter,
+            "2" => DensityUnit.PixelsPerInch,
+            "3" => DensityUnit.PixelsPerCentimeter,
             _ => DensityUnit.PixelsPerInch, // Unknown or not set, assume inches
           };
         }

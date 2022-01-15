@@ -8,8 +8,8 @@
 
 namespace Coderanger.ImageInfo.Decoders.Metadata.Iptc.Types;
 
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 /// <summary>
@@ -17,10 +17,17 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 /// </summary>
 public class IptcEnum : IptcTypeBase, IMetadataTypedValue
 {
-  internal IptcEnum( ushort tagId, byte[] data )
+  internal enum EnumType
+  {
+    Numeric,
+    String,
+  }
+
+  internal IptcEnum( ushort tagId, byte[] data, EnumType enumType )
     : base( MetadataType.Enum, tagId )
   {
     _data = data;
+    _enumType = enumType;
   }
 
   public string StringValue => ToString();
@@ -45,23 +52,27 @@ public class IptcEnum : IptcTypeBase, IMetadataTypedValue
 
   private MetadataTagValue Create( byte[] value )
   {
-    var bufferValue = DataConversion.ConvertBuffer( value, StringEncoding.Utf8 );
-    var numberValue = Convert.ToUInt16( bufferValue );
-
-    var enumValue = new MetadataEnumValue( numberValue, GetEnumValue( numberValue ) );
+    var enumValue = GetEnumFromValue( value );
     return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: enumValue );
   }
 
-  private string GetEnumValue( ushort value )
+  private MetadataEnumValue GetEnumFromValue( byte[] value )
   {
-    var enumValue = MetadataTagEnumAttribute.GetTagEnumValue( ReflectionIptcTag, TagId, value );
-    if( enumValue != null )
-    {
-      return enumValue;
-    }
+    var bufferValue = DataConversion.ConvertBuffer( value.AsSpan(), StringEncoding.Utf8 );
 
-    return string.Empty;
+    if( _enumType == EnumType.String )
+    {
+      var attributeInfo = MetadataTagEnumAttribute.GetTagEnumValue( ReflectionIptcTag, TagId, bufferValue );
+      return new MetadataEnumValue( bufferValue, attributeInfo ?? string.Empty );
+    }
+    else
+    {
+      var numberValue = Convert.ToUInt16( bufferValue );
+      var attributeInfo = MetadataTagEnumAttribute.GetTagEnumValue( ReflectionIptcTag, TagId, numberValue );
+      return new MetadataEnumValue( bufferValue, attributeInfo ?? string.Empty );
+    }
   }
 
   private readonly byte[] _data;
+  private readonly EnumType _enumType;
 }

@@ -15,7 +15,7 @@
         "TagId": 120,
         "TagType": 2,
         "Name": "Caption",
-        "Description": ""
+        "Description": "Textual description of the object, particularly used where the object is not text"
       },
       {
         "StringValue": "Headline = CS Santosh",
@@ -26,12 +26,12 @@
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
       {
-        "StringValue": "SpecialInstructions = This image may only be used for editorial purpose in one-time publications and strictly limited to the purpose of use stated in the terms and conditions of the service where you retrieved the image. It must not be altered or modified. Publication must be ",
+        "StringValue": "Special Instructions = This image may only be used for editorial purpose in one-time publications and strictly limited to the purpose of use stated in the terms and conditions of the service where you retrieved the image. It must not be altered or modified. Publication must be ",
         "IsArray": false,
         "TagId": 40,
         "TagType": 2,
-        "Name": "SpecialInstructions",
-        "Description": ""
+        "Name": "Special Instructions",
+        "Description": "Other editorial instructions concerning the use of the object, such as embargoes and warnings"
       },
       {
         "StringValue": "Source = www.redbullmediahouse.com",
@@ -39,15 +39,15 @@
         "TagId": 115,
         "TagType": 2,
         "Name": "Source",
-        "Description": ""
+        "Description": "Identifies the original owner of the intellectual content of the object. This could be an agency, a member of an agency or an individual"
       },
       {
-        "StringValue": "CreatedDate = ",
+        "StringValue": "Created Date = ",
         "IsArray": false,
         "TagId": 55,
         "TagType": 13,
-        "Name": "CreatedDate",
-        "Description": ""
+        "Name": "Created Date",
+        "Description": "Indicates the date the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
         "StringValue": "Keywords = SI202101040188",
@@ -55,15 +55,15 @@
         "TagId": 25,
         "TagType": 2,
         "Name": "Keywords",
-        "Description": ""
+        "Description": "Indicates specific information retrieval words"
       },
       {
-        "StringValue": "CopyrightNotice = Ishaan Bhataiya / Red Bull Content Pool",
+        "StringValue": "Copyright Notice = Ishaan Bhataiya / Red Bull Content Pool",
         "IsArray": false,
         "TagId": 116,
         "TagType": 2,
-        "Name": "CopyrightNotice",
-        "Description": ""
+        "Name": "Copyright Notice",
+        "Description": "Contains any necessary copyright notice"
       }
     ]
   },
@@ -91,39 +91,39 @@
         "TagId": 25,
         "TagType": 2,
         "Name": "Keywords",
-        "Description": ""
+        "Description": "Indicates specific information retrieval words"
       },
       {
-        "StringValue": "CreatedDate = 17/10/2014",
+        "StringValue": "Created Date = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
         "TagType": 13,
-        "Name": "CreatedDate",
-        "Description": ""
+        "Name": "Created Date",
+        "Description": "Indicates the date the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "CreatedTime = ",
+        "StringValue": "Created Time = ",
         "IsArray": false,
         "TagId": 60,
         "TagType": 14,
-        "Name": "CreatedTime",
-        "Description": ""
+        "Name": "Created Time",
+        "Description": "Indicates the time the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "StringValue": "Digital Creation Date = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
         "TagType": 13,
-        "Name": "DigitalCreationDate",
-        "Description": ""
+        "Name": "Digital Creation Date",
+        "Description": "Indicates the date the digital representation of the object was created"
       },
       {
-        "StringValue": "DigitalCreationTime = ",
+        "StringValue": "Digital Creation Time = ",
         "IsArray": false,
         "TagId": 63,
         "TagType": 14,
-        "Name": "DigitalCreationTime",
-        "Description": ""
+        "Name": "Digital Creation Time",
+        "Description": "Indicates the time the digital representation of the object was created"
       },
       {
         "StringValue": "By-line = Dudarev Mikhail",
@@ -155,7 +155,7 @@
         "TagId": 110,
         "TagType": 2,
         "Name": "Credit",
-        "Description": ""
+        "Description": "Identifies the provider of the object, not necessarily the owner/creator"
       },
       {
         "StringValue": "Source = 135309776",
@@ -163,15 +163,15 @@
         "TagId": 115,
         "TagType": 2,
         "Name": "Source",
-        "Description": ""
+        "Description": "Identifies the original owner of the intellectual content of the object. This could be an agency, a member of an agency or an individual"
       },
       {
-        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "StringValue": "Copyright Notice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
         "TagType": 2,
-        "Name": "CopyrightNotice",
-        "Description": ""
+        "Name": "Copyright Notice",
+        "Description": "Contains any necessary copyright notice"
       },
       {
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
@@ -179,7 +179,7 @@
         "TagId": 120,
         "TagType": 2,
         "Name": "Caption",
-        "Description": ""
+        "Description": "Textual description of the object, particularly used where the object is not text"
       }
     ]
   },
@@ -207,39 +207,39 @@
         "TagId": 25,
         "TagType": 2,
         "Name": "Keywords",
-        "Description": ""
+        "Description": "Indicates specific information retrieval words"
       },
       {
-        "StringValue": "CreatedDate = 17/10/2014",
+        "StringValue": "Created Date = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
         "TagType": 13,
-        "Name": "CreatedDate",
-        "Description": ""
+        "Name": "Created Date",
+        "Description": "Indicates the date the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "CreatedTime = ",
+        "StringValue": "Created Time = ",
         "IsArray": false,
         "TagId": 60,
         "TagType": 14,
-        "Name": "CreatedTime",
-        "Description": ""
+        "Name": "Created Time",
+        "Description": "Indicates the time the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "StringValue": "Digital Creation Date = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
         "TagType": 13,
-        "Name": "DigitalCreationDate",
-        "Description": ""
+        "Name": "Digital Creation Date",
+        "Description": "Indicates the date the digital representation of the object was created"
       },
       {
-        "StringValue": "DigitalCreationTime = ",
+        "StringValue": "Digital Creation Time = ",
         "IsArray": false,
         "TagId": 63,
         "TagType": 14,
-        "Name": "DigitalCreationTime",
-        "Description": ""
+        "Name": "Digital Creation Time",
+        "Description": "Indicates the time the digital representation of the object was created"
       },
       {
         "StringValue": "By-line = Dudarev Mikhail",
@@ -271,7 +271,7 @@
         "TagId": 110,
         "TagType": 2,
         "Name": "Credit",
-        "Description": ""
+        "Description": "Identifies the provider of the object, not necessarily the owner/creator"
       },
       {
         "StringValue": "Source = 135309776",
@@ -279,15 +279,15 @@
         "TagId": 115,
         "TagType": 2,
         "Name": "Source",
-        "Description": ""
+        "Description": "Identifies the original owner of the intellectual content of the object. This could be an agency, a member of an agency or an individual"
       },
       {
-        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "StringValue": "Copyright Notice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
         "TagType": 2,
-        "Name": "CopyrightNotice",
-        "Description": ""
+        "Name": "Copyright Notice",
+        "Description": "Contains any necessary copyright notice"
       },
       {
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
@@ -295,7 +295,7 @@
         "TagId": 120,
         "TagType": 2,
         "Name": "Caption",
-        "Description": ""
+        "Description": "Textual description of the object, particularly used where the object is not text"
       }
     ]
   },
@@ -323,39 +323,39 @@
         "TagId": 25,
         "TagType": 2,
         "Name": "Keywords",
-        "Description": ""
+        "Description": "Indicates specific information retrieval words"
       },
       {
-        "StringValue": "CreatedDate = 17/10/2014",
+        "StringValue": "Created Date = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
         "TagType": 13,
-        "Name": "CreatedDate",
-        "Description": ""
+        "Name": "Created Date",
+        "Description": "Indicates the date the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "CreatedTime = ",
+        "StringValue": "Created Time = ",
         "IsArray": false,
         "TagId": 60,
         "TagType": 14,
-        "Name": "CreatedTime",
-        "Description": ""
+        "Name": "Created Time",
+        "Description": "Indicates the time the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "StringValue": "Digital Creation Date = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
         "TagType": 13,
-        "Name": "DigitalCreationDate",
-        "Description": ""
+        "Name": "Digital Creation Date",
+        "Description": "Indicates the date the digital representation of the object was created"
       },
       {
-        "StringValue": "DigitalCreationTime = ",
+        "StringValue": "Digital Creation Time = ",
         "IsArray": false,
         "TagId": 63,
         "TagType": 14,
-        "Name": "DigitalCreationTime",
-        "Description": ""
+        "Name": "Digital Creation Time",
+        "Description": "Indicates the time the digital representation of the object was created"
       },
       {
         "StringValue": "By-line = Dudarev Mikhail",
@@ -387,7 +387,7 @@
         "TagId": 110,
         "TagType": 2,
         "Name": "Credit",
-        "Description": ""
+        "Description": "Identifies the provider of the object, not necessarily the owner/creator"
       },
       {
         "StringValue": "Source = 135309776",
@@ -395,15 +395,15 @@
         "TagId": 115,
         "TagType": 2,
         "Name": "Source",
-        "Description": ""
+        "Description": "Identifies the original owner of the intellectual content of the object. This could be an agency, a member of an agency or an individual"
       },
       {
-        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "StringValue": "Copyright Notice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
         "TagType": 2,
-        "Name": "CopyrightNotice",
-        "Description": ""
+        "Name": "Copyright Notice",
+        "Description": "Contains any necessary copyright notice"
       },
       {
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
@@ -411,7 +411,7 @@
         "TagId": 120,
         "TagType": 2,
         "Name": "Caption",
-        "Description": ""
+        "Description": "Textual description of the object, particularly used where the object is not text"
       }
     ]
   },
@@ -423,7 +423,7 @@
         "TagId": 256,
         "TagType": 3,
         "Name": "Image Width",
-        "Description": "Number of columns of image data, equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag"
+        "Description": "Number of columns of image data which might not reflect its true size. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
       {
         "StringValue": "Image Height = 6000",
@@ -431,7 +431,7 @@
         "TagId": 257,
         "TagType": 3,
         "Name": "Image Height",
-        "Description": "Number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag"
+        "Description": "Number of rows of image data which might not reflect its true size. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
       {
         "StringValue": "Camera Make = samsung",
@@ -511,7 +511,7 @@
         "TagId": 256,
         "TagType": 3,
         "Name": "Image Width",
-        "Description": "Number of columns of image data, equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag"
+        "Description": "Number of columns of image data which might not reflect its true size. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
       {
         "StringValue": "Image Height = 384",
@@ -519,7 +519,7 @@
         "TagId": 257,
         "TagType": 3,
         "Name": "Image Height",
-        "Description": "Number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag"
+        "Description": "Number of rows of image data which might not reflect its true size. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
       {
         "StringValue": "Compression = 6",
@@ -586,92 +586,92 @@
         "Description": "Camera F number"
       },
       {
-        "StringValue": "ExposureProgram = 2",
+        "StringValue": "Exposure Program = 2",
         "IsArray": false,
         "TagId": 34850,
         "TagType": 3,
-        "Name": "ExposureProgram",
-        "Description": ""
+        "Name": "Exposure Program",
+        "Description": "Class of the program used by the camera to set exposure when the picture is taken"
       },
       {
-        "StringValue": "ISOSpeedRatings = 100",
+        "StringValue": "ISO Speed Ratings = 100",
         "IsArray": false,
         "TagId": 34855,
         "TagType": 3,
-        "Name": "ISOSpeedRatings",
-        "Description": ""
+        "Name": "ISO Speed Ratings",
+        "Description": "Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232"
       },
       {
-        "StringValue": "PhotoExifVersion = 48 / 50 / 50 / 48",
+        "StringValue": " = 48 / 50 / 50 / 48",
         "IsArray": true,
         "TagId": 36864,
         "TagType": 1,
-        "Name": "PhotoExifVersion",
+        "Name": "",
         "Description": ""
       },
       {
         "IsArray": false,
-        "StringValue": "DateTimeOriginal = 29/07/2020 18:09:57",
+        "StringValue": "Date Time Original = 29/07/2020 18:09:57",
         "TagId": 36867,
         "TagType": 15,
-        "Name": "DateTimeOriginal",
-        "Description": ""
+        "Name": "Date Time Original",
+        "Description": "Date and time when the original image data was generated"
       },
       {
         "IsArray": false,
-        "StringValue": "PhotoDateTimeDigitized = 29/07/2020 18:09:57",
+        "StringValue": " = 29/07/2020 18:09:57",
         "TagId": 36868,
         "TagType": 15,
-        "Name": "PhotoDateTimeDigitized",
+        "Name": "",
         "Description": ""
       },
       {
-        "StringValue": "ShutterSpeedValue = 1/409 (0.0024449877750611247D)",
+        "StringValue": "Shutter Speed = 1/409 (0.0024449877750611247D)",
         "IsArray": false,
         "TagId": 37377,
         "TagType": 11,
-        "Name": "ShutterSpeedValue",
-        "Description": ""
+        "Name": "Shutter Speed",
+        "Description": "Camera shutter speed used for this image"
       },
       {
-        "StringValue": "ApertureValue = 200/100 (2D)",
+        "StringValue": "Lens Aperture = 200/100 (2D)",
         "IsArray": false,
         "TagId": 37378,
         "TagType": 12,
-        "Name": "ApertureValue",
-        "Description": ""
+        "Name": "Lens Aperture",
+        "Description": "Camera lens aperture used for this image"
       },
       {
-        "StringValue": "BrightnessValue = 1705/100 (17.05D)",
+        "StringValue": "Brightness = 1705/100 (17.05D)",
         "IsArray": false,
         "TagId": 37379,
         "TagType": 11,
-        "Name": "BrightnessValue",
-        "Description": ""
+        "Name": "Brightness",
+        "Description": "Camera brightness value"
       },
       {
-        "StringValue": "ExposureBiasValue = 0/100 (0D)",
+        "StringValue": "Exposure Bias = 0/100 (0D)",
         "IsArray": false,
         "TagId": 37380,
         "TagType": 11,
-        "Name": "ExposureBiasValue",
-        "Description": ""
+        "Name": "Exposure Bias",
+        "Description": "Camera exposure bias setting"
       },
       {
-        "StringValue": "MaxApertureValue = 200/100 (2D)",
+        "StringValue": "Max Exposure = 200/100 (2D)",
         "IsArray": false,
         "TagId": 37381,
         "TagType": 12,
-        "Name": "MaxApertureValue",
-        "Description": ""
+        "Name": "Max Exposure",
+        "Description": "Smallest F number of the lens"
       },
       {
-        "StringValue": "MeteringMode = 2 (Center-weighted average)",
+        "StringValue": "Metering Mode = 2 (Center-weighted average)",
         "IsArray": false,
         "TagId": 37383,
         "TagType": 16,
-        "Name": "MeteringMode",
-        "Description": ""
+        "Name": "Metering Mode",
+        "Description": "Metering mode"
       },
       {
         "StringValue": "Flash = 0",
@@ -679,86 +679,86 @@
         "TagId": 37385,
         "TagType": 3,
         "Name": "Flash",
-        "Description": ""
+        "Description": "Indicates the status of flash when the image was shot"
       },
       {
-        "StringValue": "FocalLength = 460/100 (4.6D)",
+        "StringValue": "Focal Length = 460/100 (4.6D)",
         "IsArray": false,
         "TagId": 37386,
         "TagType": 12,
-        "Name": "FocalLength",
-        "Description": ""
+        "Name": "Focal Length",
+        "Description": "Actual focal length of the lens in mm"
       },
       {
-        "StringValue": "PhotoColorSpace = 1",
+        "StringValue": " = 1",
         "IsArray": false,
         "TagId": 40961,
         "TagType": 3,
-        "Name": "PhotoColorSpace",
+        "Name": "",
         "Description": ""
       },
       {
-        "StringValue": "PhotoPixelXDimension = 8000",
+        "StringValue": " = 8000",
         "IsArray": false,
         "TagId": 40962,
         "TagType": 5,
-        "Name": "PhotoPixelXDimension",
+        "Name": "",
         "Description": ""
       },
       {
-        "StringValue": "PhotoPixelYDimension = 6000",
+        "StringValue": " = 6000",
         "IsArray": false,
         "TagId": 40963,
         "TagType": 5,
-        "Name": "PhotoPixelYDimension",
+        "Name": "",
         "Description": ""
       },
       {
-        "StringValue": "PhotoExposureMode = 0 (Auto)",
+        "StringValue": " = 0 (Auto)",
         "IsArray": false,
         "TagId": 41986,
         "TagType": 16,
-        "Name": "PhotoExposureMode",
+        "Name": "",
         "Description": ""
       },
       {
-        "StringValue": "PhotoWhiteBalance = 0 (Auto)",
+        "StringValue": " = 0 (Auto)",
         "IsArray": false,
         "TagId": 41987,
         "TagType": 16,
-        "Name": "PhotoWhiteBalance",
+        "Name": "",
         "Description": ""
       },
       {
-        "StringValue": "PhotoDigitalZoomRatio = 100/100 (1D)",
+        "StringValue": " = 100/100 (1D)",
         "IsArray": false,
         "TagId": 41988,
         "TagType": 12,
-        "Name": "PhotoDigitalZoomRatio",
+        "Name": "",
         "Description": ""
       },
       {
-        "StringValue": "PhotoFocalLengthIn35mmFilm = 25",
+        "StringValue": " = 25",
         "IsArray": false,
         "TagId": 41989,
         "TagType": 3,
-        "Name": "PhotoFocalLengthIn35mmFilm",
+        "Name": "",
         "Description": ""
       },
       {
-        "StringValue": "PhotoSceneCaptureType = 0 (Standard)",
+        "StringValue": " = 0 (Standard)",
         "IsArray": false,
         "TagId": 41990,
         "TagType": 16,
-        "Name": "PhotoSceneCaptureType",
+        "Name": "",
         "Description": ""
       },
       {
-        "StringValue": "PhotoImageUniqueID = L48LLMF01PM",
+        "StringValue": " = L48LLMF01PM",
         "IsArray": false,
         "TagId": 42016,
         "TagType": 2,
-        "Name": "PhotoImageUniqueID",
+        "Name": "",
         "Description": ""
       }
     ],
@@ -785,39 +785,39 @@
         "TagId": 25,
         "TagType": 2,
         "Name": "Keywords",
-        "Description": ""
+        "Description": "Indicates specific information retrieval words"
       },
       {
-        "StringValue": "CreatedDate = 17/10/2014",
+        "StringValue": "Created Date = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
         "TagType": 13,
-        "Name": "CreatedDate",
-        "Description": ""
+        "Name": "Created Date",
+        "Description": "Indicates the date the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "CreatedTime = ",
+        "StringValue": "Created Time = ",
         "IsArray": false,
         "TagId": 60,
         "TagType": 14,
-        "Name": "CreatedTime",
-        "Description": ""
+        "Name": "Created Time",
+        "Description": "Indicates the time the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "StringValue": "Digital Creation Date = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
         "TagType": 13,
-        "Name": "DigitalCreationDate",
-        "Description": ""
+        "Name": "Digital Creation Date",
+        "Description": "Indicates the date the digital representation of the object was created"
       },
       {
-        "StringValue": "DigitalCreationTime = ",
+        "StringValue": "Digital Creation Time = ",
         "IsArray": false,
         "TagId": 63,
         "TagType": 14,
-        "Name": "DigitalCreationTime",
-        "Description": ""
+        "Name": "Digital Creation Time",
+        "Description": "Indicates the time the digital representation of the object was created"
       },
       {
         "StringValue": "By-line = Dudarev Mikhail",
@@ -849,7 +849,7 @@
         "TagId": 110,
         "TagType": 2,
         "Name": "Credit",
-        "Description": ""
+        "Description": "Identifies the provider of the object, not necessarily the owner/creator"
       },
       {
         "StringValue": "Source = 135309776",
@@ -857,15 +857,15 @@
         "TagId": 115,
         "TagType": 2,
         "Name": "Source",
-        "Description": ""
+        "Description": "Identifies the original owner of the intellectual content of the object. This could be an agency, a member of an agency or an individual"
       },
       {
-        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "StringValue": "Copyright Notice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
         "TagType": 2,
-        "Name": "CopyrightNotice",
-        "Description": ""
+        "Name": "Copyright Notice",
+        "Description": "Contains any necessary copyright notice"
       },
       {
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
@@ -873,7 +873,7 @@
         "TagId": 120,
         "TagType": 2,
         "Name": "Caption",
-        "Description": ""
+        "Description": "Textual description of the object, particularly used where the object is not text"
       }
     ]
   },
@@ -935,39 +935,39 @@
         "TagId": 25,
         "TagType": 2,
         "Name": "Keywords",
-        "Description": ""
+        "Description": "Indicates specific information retrieval words"
       },
       {
-        "StringValue": "CreatedDate = 17/10/2014",
+        "StringValue": "Created Date = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
         "TagType": 13,
-        "Name": "CreatedDate",
-        "Description": ""
+        "Name": "Created Date",
+        "Description": "Indicates the date the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "CreatedTime = ",
+        "StringValue": "Created Time = ",
         "IsArray": false,
         "TagId": 60,
         "TagType": 14,
-        "Name": "CreatedTime",
-        "Description": ""
+        "Name": "Created Time",
+        "Description": "Indicates the time the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "StringValue": "Digital Creation Date = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
         "TagType": 13,
-        "Name": "DigitalCreationDate",
-        "Description": ""
+        "Name": "Digital Creation Date",
+        "Description": "Indicates the date the digital representation of the object was created"
       },
       {
-        "StringValue": "DigitalCreationTime = ",
+        "StringValue": "Digital Creation Time = ",
         "IsArray": false,
         "TagId": 63,
         "TagType": 14,
-        "Name": "DigitalCreationTime",
-        "Description": ""
+        "Name": "Digital Creation Time",
+        "Description": "Indicates the time the digital representation of the object was created"
       },
       {
         "StringValue": "By-line = Dudarev Mikhail",
@@ -999,7 +999,7 @@
         "TagId": 110,
         "TagType": 2,
         "Name": "Credit",
-        "Description": ""
+        "Description": "Identifies the provider of the object, not necessarily the owner/creator"
       },
       {
         "StringValue": "Source = 135309776",
@@ -1007,15 +1007,15 @@
         "TagId": 115,
         "TagType": 2,
         "Name": "Source",
-        "Description": ""
+        "Description": "Identifies the original owner of the intellectual content of the object. This could be an agency, a member of an agency or an individual"
       },
       {
-        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "StringValue": "Copyright Notice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
         "TagType": 2,
-        "Name": "CopyrightNotice",
-        "Description": ""
+        "Name": "Copyright Notice",
+        "Description": "Contains any necessary copyright notice"
       },
       {
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
@@ -1023,7 +1023,7 @@
         "TagId": 120,
         "TagType": 2,
         "Name": "Caption",
-        "Description": ""
+        "Description": "Textual description of the object, particularly used where the object is not text"
       }
     ]
   },
@@ -1051,39 +1051,39 @@
         "TagId": 25,
         "TagType": 2,
         "Name": "Keywords",
-        "Description": ""
+        "Description": "Indicates specific information retrieval words"
       },
       {
-        "StringValue": "CreatedDate = 17/10/2014",
+        "StringValue": "Created Date = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
         "TagType": 13,
-        "Name": "CreatedDate",
-        "Description": ""
+        "Name": "Created Date",
+        "Description": "Indicates the date the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "CreatedTime = ",
+        "StringValue": "Created Time = ",
         "IsArray": false,
         "TagId": 60,
         "TagType": 14,
-        "Name": "CreatedTime",
-        "Description": ""
+        "Name": "Created Time",
+        "Description": "Indicates the time the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "StringValue": "Digital Creation Date = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
         "TagType": 13,
-        "Name": "DigitalCreationDate",
-        "Description": ""
+        "Name": "Digital Creation Date",
+        "Description": "Indicates the date the digital representation of the object was created"
       },
       {
-        "StringValue": "DigitalCreationTime = ",
+        "StringValue": "Digital Creation Time = ",
         "IsArray": false,
         "TagId": 63,
         "TagType": 14,
-        "Name": "DigitalCreationTime",
-        "Description": ""
+        "Name": "Digital Creation Time",
+        "Description": "Indicates the time the digital representation of the object was created"
       },
       {
         "StringValue": "By-line = Dudarev Mikhail",
@@ -1115,7 +1115,7 @@
         "TagId": 110,
         "TagType": 2,
         "Name": "Credit",
-        "Description": ""
+        "Description": "Identifies the provider of the object, not necessarily the owner/creator"
       },
       {
         "StringValue": "Source = 135309776",
@@ -1123,15 +1123,15 @@
         "TagId": 115,
         "TagType": 2,
         "Name": "Source",
-        "Description": ""
+        "Description": "Identifies the original owner of the intellectual content of the object. This could be an agency, a member of an agency or an individual"
       },
       {
-        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "StringValue": "Copyright Notice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
         "TagType": 2,
-        "Name": "CopyrightNotice",
-        "Description": ""
+        "Name": "Copyright Notice",
+        "Description": "Contains any necessary copyright notice"
       },
       {
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
@@ -1139,7 +1139,7 @@
         "TagId": 120,
         "TagType": 2,
         "Name": "Caption",
-        "Description": ""
+        "Description": "Textual description of the object, particularly used where the object is not text"
       }
     ]
   },
@@ -1167,39 +1167,39 @@
         "TagId": 25,
         "TagType": 2,
         "Name": "Keywords",
-        "Description": ""
+        "Description": "Indicates specific information retrieval words"
       },
       {
-        "StringValue": "CreatedDate = 17/10/2014",
+        "StringValue": "Created Date = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
         "TagType": 13,
-        "Name": "CreatedDate",
-        "Description": ""
+        "Name": "Created Date",
+        "Description": "Indicates the date the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "CreatedTime = ",
+        "StringValue": "Created Time = ",
         "IsArray": false,
         "TagId": 60,
         "TagType": 14,
-        "Name": "CreatedTime",
-        "Description": ""
+        "Name": "Created Time",
+        "Description": "Indicates the time the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "StringValue": "Digital Creation Date = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
         "TagType": 13,
-        "Name": "DigitalCreationDate",
-        "Description": ""
+        "Name": "Digital Creation Date",
+        "Description": "Indicates the date the digital representation of the object was created"
       },
       {
-        "StringValue": "DigitalCreationTime = ",
+        "StringValue": "Digital Creation Time = ",
         "IsArray": false,
         "TagId": 63,
         "TagType": 14,
-        "Name": "DigitalCreationTime",
-        "Description": ""
+        "Name": "Digital Creation Time",
+        "Description": "Indicates the time the digital representation of the object was created"
       },
       {
         "StringValue": "By-line = Dudarev Mikhail",
@@ -1231,7 +1231,7 @@
         "TagId": 110,
         "TagType": 2,
         "Name": "Credit",
-        "Description": ""
+        "Description": "Identifies the provider of the object, not necessarily the owner/creator"
       },
       {
         "StringValue": "Source = 135309776",
@@ -1239,15 +1239,15 @@
         "TagId": 115,
         "TagType": 2,
         "Name": "Source",
-        "Description": ""
+        "Description": "Identifies the original owner of the intellectual content of the object. This could be an agency, a member of an agency or an individual"
       },
       {
-        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "StringValue": "Copyright Notice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
         "TagType": 2,
-        "Name": "CopyrightNotice",
-        "Description": ""
+        "Name": "Copyright Notice",
+        "Description": "Contains any necessary copyright notice"
       },
       {
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
@@ -1255,7 +1255,7 @@
         "TagId": 120,
         "TagType": 2,
         "Name": "Caption",
-        "Description": ""
+        "Description": "Textual description of the object, particularly used where the object is not text"
       }
     ]
   },
@@ -1267,7 +1267,7 @@
         "TagId": 256,
         "TagType": 3,
         "Name": "Image Width",
-        "Description": "Number of columns of image data, equal to the number of pixels per row. In JPEG compressed data a JPEG marker is used instead of this tag"
+        "Description": "Number of columns of image data which might not reflect its true size. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
       {
         "StringValue": "Image Height = 3328",
@@ -1275,7 +1275,7 @@
         "TagId": 257,
         "TagType": 3,
         "Name": "Image Height",
-        "Description": "Number of rows of image data. In JPEG compressed data a JPEG marker is used instead of this tag"
+        "Description": "Number of rows of image data which might not reflect its true size. In JPEG compressed data a JPEG marker is used instead of this tag"
       },
       {
         "StringValue": "Bits Per Sample = 8 / 8 / 8",
@@ -1398,27 +1398,27 @@
         "Description": "Number of bytes of JPEG compressed thumbnail data"
       },
       {
-        "StringValue": "PhotoExifVersion = 48 / 50 / 51 / 49",
+        "StringValue": " = 48 / 50 / 51 / 49",
         "IsArray": true,
         "TagId": 36864,
         "TagType": 1,
-        "Name": "PhotoExifVersion",
+        "Name": "",
         "Description": ""
       },
       {
-        "StringValue": "PhotoPixelXDimension = 5000",
+        "StringValue": " = 5000",
         "IsArray": false,
         "TagId": 40962,
         "TagType": 5,
-        "Name": "PhotoPixelXDimension",
+        "Name": "",
         "Description": ""
       },
       {
-        "StringValue": "PhotoPixelYDimension = 3328",
+        "StringValue": " = 3328",
         "IsArray": false,
         "TagId": 40963,
         "TagType": 5,
-        "Name": "PhotoPixelYDimension",
+        "Name": "",
         "Description": ""
       }
     ],
@@ -1445,39 +1445,39 @@
         "TagId": 25,
         "TagType": 2,
         "Name": "Keywords",
-        "Description": ""
+        "Description": "Indicates specific information retrieval words"
       },
       {
-        "StringValue": "CreatedDate = 17/10/2014",
+        "StringValue": "Created Date = 17/10/2014",
         "IsArray": false,
         "TagId": 55,
         "TagType": 13,
-        "Name": "CreatedDate",
-        "Description": ""
+        "Name": "Created Date",
+        "Description": "Indicates the date the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "CreatedTime = ",
+        "StringValue": "Created Time = ",
         "IsArray": false,
         "TagId": 60,
         "TagType": 14,
-        "Name": "CreatedTime",
-        "Description": ""
+        "Name": "Created Time",
+        "Description": "Indicates the time the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "DigitalCreationDate = 17/10/2014",
+        "StringValue": "Digital Creation Date = 17/10/2014",
         "IsArray": false,
         "TagId": 62,
         "TagType": 13,
-        "Name": "DigitalCreationDate",
-        "Description": ""
+        "Name": "Digital Creation Date",
+        "Description": "Indicates the date the digital representation of the object was created"
       },
       {
-        "StringValue": "DigitalCreationTime = ",
+        "StringValue": "Digital Creation Time = ",
         "IsArray": false,
         "TagId": 63,
         "TagType": 14,
-        "Name": "DigitalCreationTime",
-        "Description": ""
+        "Name": "Digital Creation Time",
+        "Description": "Indicates the time the digital representation of the object was created"
       },
       {
         "StringValue": "By-line = Dudarev Mikhail",
@@ -1509,7 +1509,7 @@
         "TagId": 110,
         "TagType": 2,
         "Name": "Credit",
-        "Description": ""
+        "Description": "Identifies the provider of the object, not necessarily the owner/creator"
       },
       {
         "StringValue": "Source = 135309776",
@@ -1517,15 +1517,15 @@
         "TagId": 115,
         "TagType": 2,
         "Name": "Source",
-        "Description": ""
+        "Description": "Identifies the original owner of the intellectual content of the object. This could be an agency, a member of an agency or an individual"
       },
       {
-        "StringValue": "CopyrightNotice = Dudarev Mikhail - Fotolia",
+        "StringValue": "Copyright Notice = Dudarev Mikhail - Fotolia",
         "IsArray": false,
         "TagId": 116,
         "TagType": 2,
-        "Name": "CopyrightNotice",
-        "Description": ""
+        "Name": "Copyright Notice",
+        "Description": "Contains any necessary copyright notice"
       },
       {
         "StringValue": "Caption = Two free divers, man and woman, ascending from the depth",
@@ -1533,26 +1533,26 @@
         "TagId": 120,
         "TagType": 2,
         "Name": "Caption",
-        "Description": ""
+        "Description": "Textual description of the object, particularly used where the object is not text"
       }
     ]
   },
   "bad_image_end.jpg-exiftags": {
     "Exif": [
       {
-        "StringValue": "PhotoPixelXDimension = 1000",
+        "StringValue": " = 1000",
         "IsArray": false,
         "TagId": 40962,
         "TagType": 5,
-        "Name": "PhotoPixelXDimension",
+        "Name": "",
         "Description": ""
       },
       {
-        "StringValue": "PhotoPixelYDimension = 1000",
+        "StringValue": " = 1000",
         "IsArray": false,
         "TagId": 40963,
         "TagType": 5,
-        "Name": "PhotoPixelYDimension",
+        "Name": "",
         "Description": ""
       }
     ]
@@ -1609,7 +1609,7 @@
         "TagId": 120,
         "TagType": 2,
         "Name": "Caption",
-        "Description": ""
+        "Description": "Textual description of the object, particularly used where the object is not text"
       },
       {
         "StringValue": "Headline = CS Santosh",
@@ -1620,12 +1620,12 @@
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
       {
-        "StringValue": "SpecialInstructions = This image may only be used for editorial purpose in one-time publications and strictly limited to the purpose of use stated in the terms and conditions of the service where you retrieved the image. It must not be altered or modified. Publication must be ",
+        "StringValue": "Special Instructions = This image may only be used for editorial purpose in one-time publications and strictly limited to the purpose of use stated in the terms and conditions of the service where you retrieved the image. It must not be altered or modified. Publication must be ",
         "IsArray": false,
         "TagId": 40,
         "TagType": 2,
-        "Name": "SpecialInstructions",
-        "Description": ""
+        "Name": "Special Instructions",
+        "Description": "Other editorial instructions concerning the use of the object, such as embargoes and warnings"
       },
       {
         "StringValue": "Source = www.redbullmediahouse.com",
@@ -1633,15 +1633,15 @@
         "TagId": 115,
         "TagType": 2,
         "Name": "Source",
-        "Description": ""
+        "Description": "Identifies the original owner of the intellectual content of the object. This could be an agency, a member of an agency or an individual"
       },
       {
-        "StringValue": "CreatedDate = ",
+        "StringValue": "Created Date = ",
         "IsArray": false,
         "TagId": 55,
         "TagType": 13,
-        "Name": "CreatedDate",
-        "Description": ""
+        "Name": "Created Date",
+        "Description": "Indicates the date the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
         "StringValue": "Keywords = SI202101040188",
@@ -1649,15 +1649,15 @@
         "TagId": 25,
         "TagType": 2,
         "Name": "Keywords",
-        "Description": ""
+        "Description": "Indicates specific information retrieval words"
       },
       {
-        "StringValue": "CopyrightNotice = Ishaan Bhataiya / Red Bull Content Pool",
+        "StringValue": "Copyright Notice = Ishaan Bhataiya / Red Bull Content Pool",
         "IsArray": false,
         "TagId": 116,
         "TagType": 2,
-        "Name": "CopyrightNotice",
-        "Description": ""
+        "Name": "Copyright Notice",
+        "Description": "Contains any necessary copyright notice"
       }
     ]
   },
@@ -1677,7 +1677,7 @@
         "TagId": 120,
         "TagType": 2,
         "Name": "Caption",
-        "Description": ""
+        "Description": "Textual description of the object, particularly used where the object is not text"
       },
       {
         "StringValue": "Headline = CS Santosh",
@@ -1688,12 +1688,12 @@
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
       {
-        "StringValue": "SpecialInstructions = This image may only be used for editorial purpose in one-time publications and strictly limited to the purpose of use stated in the terms and conditions of the service where you retrieved the image. It must not be altered or modified. Publication must be ",
+        "StringValue": "Special Instructions = This image may only be used for editorial purpose in one-time publications and strictly limited to the purpose of use stated in the terms and conditions of the service where you retrieved the image. It must not be altered or modified. Publication must be ",
         "IsArray": false,
         "TagId": 40,
         "TagType": 2,
-        "Name": "SpecialInstructions",
-        "Description": ""
+        "Name": "Special Instructions",
+        "Description": "Other editorial instructions concerning the use of the object, such as embargoes and warnings"
       },
       {
         "StringValue": "Source = www.redbullmediahouse.com",
@@ -1701,15 +1701,15 @@
         "TagId": 115,
         "TagType": 2,
         "Name": "Source",
-        "Description": ""
+        "Description": "Identifies the original owner of the intellectual content of the object. This could be an agency, a member of an agency or an individual"
       },
       {
-        "StringValue": "CreatedDate = ",
+        "StringValue": "Created Date = ",
         "IsArray": false,
         "TagId": 55,
         "TagType": 13,
-        "Name": "CreatedDate",
-        "Description": ""
+        "Name": "Created Date",
+        "Description": "Indicates the date the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
         "StringValue": "Keywords = SI202101040188",
@@ -1717,15 +1717,15 @@
         "TagId": 25,
         "TagType": 2,
         "Name": "Keywords",
-        "Description": ""
+        "Description": "Indicates specific information retrieval words"
       },
       {
-        "StringValue": "CopyrightNotice = Ishaan Bhataiya / Red Bull Content Pool",
+        "StringValue": "Copyright Notice = Ishaan Bhataiya / Red Bull Content Pool",
         "IsArray": false,
         "TagId": 116,
         "TagType": 2,
-        "Name": "CopyrightNotice",
-        "Description": ""
+        "Name": "Copyright Notice",
+        "Description": "Contains any necessary copyright notice"
       }
     ]
   }

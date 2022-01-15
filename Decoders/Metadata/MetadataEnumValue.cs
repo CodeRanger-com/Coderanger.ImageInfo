@@ -13,7 +13,7 @@ namespace Coderanger.ImageInfo.Decoders.Metadata;
 /// </summary>
 /// <param name="EnumValue"></param>
 /// <param name="Information"></param>
-public record MetadataEnumValue( ushort EnumValue, string Information )
+public record MetadataEnumValue( string EnumValue, string Information )
 {
   public override string ToString()
   {

@@ -47,12 +47,17 @@ internal class IptcTagValueFactory
     switch( tag )
     {
       case IptcTag.Urgency:
-        tagValue = new IptcEnum( tag, data );
+      case IptcTag.ActionAdvised:
+      case IptcTag.ObjectPreviewFileFormat:
+        tagValue = new IptcEnum( tag, data, IptcEnum.EnumType.Numeric );
+        break;
+
+      case IptcTag.ObjectCycle:
+      case IptcTag.ImageOrientation:
+        tagValue = new IptcEnum( tag, data, IptcEnum.EnumType.String );
         break;
 
       case IptcTag.RecordVersion:
-      case IptcTag.ActionAdvised:
-      case IptcTag.ObjectPreviewFileFormat:
       case IptcTag.ObjectPreviewFileVersion:
         tagValue = new IptcUShort( tag, data );
         break;
@@ -73,7 +78,6 @@ internal class IptcTagValueFactory
       case IptcTag.ReferenceService:
       case IptcTag.OriginatingProgram:
       case IptcTag.ProgramVersion:
-      case IptcTag.ObjectCycle:
       case IptcTag.Byline:
       case IptcTag.BylineTitle:
       case IptcTag.SubLocation:
@@ -87,10 +91,8 @@ internal class IptcTagValueFactory
       case IptcTag.CopyrightNotice:
       case IptcTag.Contact:
       case IptcTag.Caption:
-      case IptcTag.LocalCaption:
       case IptcTag.WriterEditor:
       case IptcTag.ImageType:
-      case IptcTag.ImageOrientation:
         tagValue = new IptcString( tag, data );
         break;
 
@@ -117,29 +119,9 @@ internal class IptcTagValueFactory
         tagValue = new IptcULong( tag, data );
         break;
 
-      case IptcTag.CustomField3:
-      case IptcTag.CustomField4:
-      case IptcTag.CustomField5:
-      case IptcTag.CustomField6:
-      case IptcTag.CustomField7:
-      case IptcTag.CustomField8:
-      case IptcTag.CustomField9:
-      case IptcTag.CustomField10:
-      case IptcTag.CustomField11:
-      case IptcTag.CustomField12:
-      case IptcTag.CustomField13:
-      case IptcTag.CustomField14:
-      case IptcTag.CustomField15:
-      case IptcTag.CustomField16:
-      case IptcTag.CustomField17:
-      case IptcTag.CustomField18:
-      case IptcTag.CustomField19:
-      case IptcTag.CustomField20:
+      default:
         tagValue = new IptcByte( tag, data );
         break;
-
-      default:
-        return null;
     }
 
     tagValue.SetValue();

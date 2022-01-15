@@ -17,7 +17,7 @@ using System.Reflection;
 [AttributeUsage( AttributeTargets.Field, AllowMultiple = true )]
 internal sealed class MetadataTagEnumAttribute : Attribute
 {
-  public MetadataTagEnumAttribute( ushort code, string information )
+  public MetadataTagEnumAttribute( uint code, string information )
   {
     Code = code;
     Information = information;
@@ -29,14 +29,14 @@ internal sealed class MetadataTagEnumAttribute : Attribute
     Information = information;
   }
 
-  public ushort? Code { get; init; }
+  public uint? Code { get; init; }
   public string? CodeString { get; init; }
   public string Information { get; init; }
 
   /// <summary>
   /// Gets the tag enum values from any custom attributes
   /// </summary>
-  public static string? GetTagEnumValue( IMetadataTag type, ushort tag, ushort enumValue )
+  public static string? GetTagEnumValue( IMetadataTag type, ushort tag, uint enumValue )
   {
     return FindField( type, tag, (attribute) => attribute.Code != null && attribute.Code == enumValue );
   }

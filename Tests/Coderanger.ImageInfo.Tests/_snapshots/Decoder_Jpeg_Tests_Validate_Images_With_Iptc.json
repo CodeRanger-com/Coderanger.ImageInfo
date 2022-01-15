@@ -31,23 +31,23 @@
         "TagId": 25,
         "TagType": 2,
         "Name": "Keywords",
-        "Description": ""
+        "Description": "Indicates specific information retrieval words"
       },
       {
-        "StringValue": "CreatedDate = 22/11/2021",
+        "StringValue": "Created Date = 22/11/2021",
         "IsArray": false,
         "TagId": 55,
         "TagType": 13,
-        "Name": "CreatedDate",
-        "Description": ""
+        "Name": "Created Date",
+        "Description": "Indicates the date the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
-        "StringValue": "CreatedTime = 15:02",
+        "StringValue": "Created Time = 15:02",
         "IsArray": false,
         "TagId": 60,
         "TagType": 14,
-        "Name": "CreatedTime",
-        "Description": ""
+        "Name": "Created Time",
+        "Description": "Indicates the time the intellectual content of the object was created rather than the date of the creation of the physical representation"
       },
       {
         "StringValue": "By-line = Dan Petitt / Another Person",
@@ -114,12 +114,12 @@
         "Description": "Publishable entry providing a synopsis of the contents of the object"
       },
       {
-        "StringValue": "CopyrightNotice = Copyright Dan Petitt and CodeRanger.com. All rights reserved.",
+        "StringValue": "Copyright Notice = Copyright Dan Petitt and CodeRanger.com. All rights reserved.",
         "IsArray": false,
         "TagId": 116,
         "TagType": 2,
-        "Name": "CopyrightNotice",
-        "Description": ""
+        "Name": "Copyright Notice",
+        "Description": "Contains any necessary copyright notice"
       },
       {
         "StringValue": "Caption = View of Bath's Royal Crescent from the lower lawn showing the 'ha-ha'",
@@ -127,7 +127,7 @@
         "TagId": 120,
         "TagType": 2,
         "Name": "Caption",
-        "Description": ""
+        "Description": "Textual description of the object, particularly used where the object is not text"
       }
     ]
   }
