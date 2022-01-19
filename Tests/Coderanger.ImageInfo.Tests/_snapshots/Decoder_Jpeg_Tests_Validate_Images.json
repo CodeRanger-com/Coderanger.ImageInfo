@@ -602,12 +602,12 @@
         "Description": "Indicates the ISO Speed and ISO Latitude of the camera or input device as specified in ISO 12232"
       },
       {
-        "StringValue": " = 48 / 50 / 50 / 48",
+        "StringValue": "Photo Exif Version = 48 / 50 / 50 / 48",
         "IsArray": true,
         "TagId": 36864,
         "TagType": 1,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Exif Version",
+        "Description": "Records version of this standard which is supported"
       },
       {
         "IsArray": false,
@@ -619,11 +619,11 @@
       },
       {
         "IsArray": false,
-        "StringValue": " = 29/07/2020 18:09:57",
+        "StringValue": "Photo Date Time Digitized = 29/07/2020 18:09:57",
         "TagId": 36868,
         "TagType": 15,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Date Time Digitized",
+        "Description": "Records date and time when the image was stored as digital data"
       },
       {
         "StringValue": "Shutter Speed = 1/409 (0.0024449877750611247D)",
@@ -690,76 +690,76 @@
         "Description": "Actual focal length of the lens in mm"
       },
       {
-        "StringValue": " = 1",
+        "StringValue": "Photo Color Space = 1",
         "IsArray": false,
         "TagId": 40961,
         "TagType": 3,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Color Space",
+        "Description": "Records the color space information"
       },
       {
-        "StringValue": " = 8000",
+        "StringValue": "Photo Pixel X Dimension = 8000",
         "IsArray": false,
         "TagId": 40962,
         "TagType": 5,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Pixel X Dimension",
+        "Description": "Records the valid width of the meaningful image when it has been compressed"
       },
       {
-        "StringValue": " = 6000",
+        "StringValue": "Photo Pixel Y Dimension = 6000",
         "IsArray": false,
         "TagId": 40963,
         "TagType": 5,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Pixel Y Dimension",
+        "Description": "Records the valid height of the meaningful image when it has been compressed"
       },
       {
-        "StringValue": " = 0 (Auto)",
+        "StringValue": "Photo Exposure Mode = 0 (Auto)",
         "IsArray": false,
         "TagId": 41986,
         "TagType": 16,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Exposure Mode",
+        "Description": "Indicates the exposure mode set when the image was shot"
       },
       {
-        "StringValue": " = 0 (Auto)",
+        "StringValue": "Photo White Balance = 0 (Auto)",
         "IsArray": false,
         "TagId": 41987,
         "TagType": 16,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo White Balance",
+        "Description": "Indicates the white balance mode set when the image was shot"
       },
       {
-        "StringValue": " = 100/100 (1D)",
+        "StringValue": "Photo Digital Zoom Ratio = 100/100 (1D)",
         "IsArray": false,
         "TagId": 41988,
         "TagType": 12,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Digital Zoom Ratio",
+        "Description": "Indicates the digital zoom ratio when the image was shot; 0 indeicates that Digital Zoom was not used"
       },
       {
-        "StringValue": " = 25",
+        "StringValue": "Photo Focal Length In 35mm Film = 25",
         "IsArray": false,
         "TagId": 41989,
         "TagType": 3,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Focal Length In 35mm Film",
+        "Description": "Indicates the equivalent focal length, assuming a 35mm film camera, in mm"
       },
       {
-        "StringValue": " = 0 (Standard)",
+        "StringValue": "Photo Scene Capture Type = 0 (Standard)",
         "IsArray": false,
         "TagId": 41990,
         "TagType": 16,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Scene Capture Type",
+        "Description": "Indicates the type of scene that was shot, or the mode in which the image was shot"
       },
       {
-        "StringValue": " = L48LLMF01PM",
+        "StringValue": "Photo Image Unique ID = L48LLMF01PM",
         "IsArray": false,
         "TagId": 42016,
         "TagType": 2,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Image Unique ID",
+        "Description": "Indicates an identifier assigned uniquely to each image"
       }
     ],
     "Iptc": [
@@ -1398,28 +1398,28 @@
         "Description": "Number of bytes of JPEG compressed thumbnail data"
       },
       {
-        "StringValue": " = 48 / 50 / 51 / 49",
+        "StringValue": "Photo Exif Version = 48 / 50 / 51 / 49",
         "IsArray": true,
         "TagId": 36864,
         "TagType": 1,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Exif Version",
+        "Description": "Records version of this standard which is supported"
       },
       {
-        "StringValue": " = 5000",
+        "StringValue": "Photo Pixel X Dimension = 5000",
         "IsArray": false,
         "TagId": 40962,
         "TagType": 5,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Pixel X Dimension",
+        "Description": "Records the valid width of the meaningful image when it has been compressed"
       },
       {
-        "StringValue": " = 3328",
+        "StringValue": "Photo Pixel Y Dimension = 3328",
         "IsArray": false,
         "TagId": 40963,
         "TagType": 5,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Pixel Y Dimension",
+        "Description": "Records the valid height of the meaningful image when it has been compressed"
       }
     ],
     "Iptc": [
@@ -1540,20 +1540,20 @@
   "bad_image_end.jpg-exiftags": {
     "Exif": [
       {
-        "StringValue": " = 1000",
+        "StringValue": "Photo Pixel X Dimension = 1000",
         "IsArray": false,
         "TagId": 40962,
         "TagType": 5,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Pixel X Dimension",
+        "Description": "Records the valid width of the meaningful image when it has been compressed"
       },
       {
-        "StringValue": " = 1000",
+        "StringValue": "Photo Pixel Y Dimension = 1000",
         "IsArray": false,
         "TagId": 40963,
         "TagType": 5,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo Pixel Y Dimension",
+        "Description": "Records the valid height of the meaningful image when it has been compressed"
       }
     ]
   },

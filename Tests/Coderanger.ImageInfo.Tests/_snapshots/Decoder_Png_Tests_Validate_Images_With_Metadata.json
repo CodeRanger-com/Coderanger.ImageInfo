@@ -18,12 +18,12 @@
         "Description": "Title tag used by Windows"
       },
       {
-        "StringValue": " = A bit of normal международный comment text",
+        "StringValue": "Photo User Comment = A bit of normal международный comment text",
         "IsArray": false,
         "TagId": 37510,
         "TagType": 2,
-        "Name": "",
-        "Description": ""
+        "Name": "Photo User Comment",
+        "Description": "Records additional keywords or comments on the image besides those in ImageDescription"
       }
     ],
     "PngText": [
