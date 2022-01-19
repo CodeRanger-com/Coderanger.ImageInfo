@@ -42,88 +42,66 @@ internal class IptcTagValueFactory
       return null;
     }
 
-    IMetadataTypedValue? tagValue;
-
-    switch( tag )
+    IMetadataTypedValue? tagValue = tag switch
     {
-      case IptcTag.Urgency:
-      case IptcTag.ActionAdvised:
-      case IptcTag.ObjectPreviewFileFormat:
-        tagValue = new IptcEnum( tag, data, IptcEnum.EnumType.Numeric );
-        break;
-
-      case IptcTag.ObjectCycle:
-      case IptcTag.ImageOrientation:
-        tagValue = new IptcEnum( tag, data, IptcEnum.EnumType.String );
-        break;
-
-      case IptcTag.RecordVersion:
-      case IptcTag.ObjectPreviewFileVersion:
-        tagValue = new IptcUShort( tag, data );
-        break;
-
-      case IptcTag.ObjectType:
-      case IptcTag.ObjectAttribute:
-      case IptcTag.ObjectName:
-      case IptcTag.EditStatus:
-      case IptcTag.EditorialUpdate:
-      case IptcTag.SubjectReference:
-      case IptcTag.Category:
-      case IptcTag.SupplementalCategory:
-      case IptcTag.FixtureIdentifier:
-      case IptcTag.Keywords:
-      case IptcTag.LocationCode:
-      case IptcTag.LocationName:
-      case IptcTag.SpecialInstructions:
-      case IptcTag.ReferenceService:
-      case IptcTag.OriginatingProgram:
-      case IptcTag.ProgramVersion:
-      case IptcTag.Byline:
-      case IptcTag.BylineTitle:
-      case IptcTag.SubLocation:
-      case IptcTag.ProvinceState:
-      case IptcTag.CountryCode:
-      case IptcTag.Country:
-      case IptcTag.OriginalTransmissionReference:
-      case IptcTag.Headline:
-      case IptcTag.Credit:
-      case IptcTag.Source:
-      case IptcTag.CopyrightNotice:
-      case IptcTag.Contact:
-      case IptcTag.Caption:
-      case IptcTag.WriterEditor:
-      case IptcTag.ImageType:
-        tagValue = new IptcString( tag, data );
-        break;
-
-      case IptcTag.City:
-        tagValue = new IptcString( tag, data );
-        break;
-
-      case IptcTag.ReleaseDate:
-      case IptcTag.ExpirationDate:
-      case IptcTag.CreatedDate:
-      case IptcTag.DigitalCreationDate:
-      case IptcTag.ReferenceDate:
-        tagValue = new IptcDate( tag, data );
-        break;
-
-      case IptcTag.ReleaseTime:
-      case IptcTag.ExpirationTime:
-      case IptcTag.CreatedTime:
-      case IptcTag.DigitalCreationTime:
-        tagValue = new IptcTime( tag, data );
-        break;
-
-      case IptcTag.ReferenceNumber:
-        tagValue = new IptcULong( tag, data );
-        break;
-
-      default:
-        tagValue = new IptcByte( tag, data );
-        break;
-    }
-
+      IptcTag.Urgency 
+      or IptcTag.ActionAdvised 
+      or IptcTag.ObjectPreviewFileFormat => new IptcEnum( tag, data, IptcEnum.EnumType.Numeric ),
+      
+      IptcTag.ObjectCycle 
+      or IptcTag.ImageOrientation => new IptcEnum( tag, data, IptcEnum.EnumType.String ),
+      
+      IptcTag.RecordVersion 
+      or IptcTag.ObjectPreviewFileVersion => new IptcUShort( tag, data ),
+      
+      IptcTag.ObjectType 
+      or IptcTag.ObjectAttribute 
+      or IptcTag.ObjectName 
+      or IptcTag.EditStatus 
+      or IptcTag.EditorialUpdate 
+      or IptcTag.SubjectReference 
+      or IptcTag.Category 
+      or IptcTag.SupplementalCategory 
+      or IptcTag.FixtureIdentifier 
+      or IptcTag.Keywords 
+      or IptcTag.LocationCode 
+      or IptcTag.LocationName 
+      or IptcTag.SpecialInstructions 
+      or IptcTag.ReferenceService 
+      or IptcTag.OriginatingProgram 
+      or IptcTag.ProgramVersion 
+      or IptcTag.Byline 
+      or IptcTag.BylineTitle 
+      or IptcTag.SubLocation 
+      or IptcTag.ProvinceState 
+      or IptcTag.CountryCode 
+      or IptcTag.Country 
+      or IptcTag.OriginalTransmissionReference 
+      or IptcTag.Headline 
+      or IptcTag.Credit 
+      or IptcTag.Source 
+      or IptcTag.CopyrightNotice 
+      or IptcTag.Contact 
+      or IptcTag.Caption 
+      or IptcTag.WriterEditor 
+      or IptcTag.ImageType 
+      or IptcTag.City => new IptcString( tag, data ),
+      
+      IptcTag.ReleaseDate 
+      or IptcTag.ExpirationDate 
+      or IptcTag.CreatedDate 
+      or IptcTag.DigitalCreationDate 
+      or IptcTag.ReferenceDate => new IptcDate( tag, data ),
+      
+      IptcTag.ReleaseTime 
+      or IptcTag.ExpirationTime 
+      or IptcTag.CreatedTime 
+      or IptcTag.DigitalCreationTime => new IptcTime( tag, data ),
+      
+      IptcTag.ReferenceNumber => new IptcULong( tag, data ),
+      
+      _ => new IptcByte( tag, data ),
+    };
     tagValue.SetValue();
 
     return tagValue;

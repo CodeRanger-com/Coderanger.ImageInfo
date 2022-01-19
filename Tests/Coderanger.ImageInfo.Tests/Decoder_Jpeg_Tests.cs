@@ -141,6 +141,8 @@ public class Decoder_Jpeg_Tests
 
   [TestMethod]
   [DataRow( "bath.jpg", 4032, 3024, 72, 72, "image/jpeg" )]
+  [DataRow( "metadata.jpg", 50, 50, 96, 96, "image/jpeg" )]
+  [DataRow( "iptc.jpg", 70, 70, 300, 300, "image/jpeg" )]
   public void Validate_Images_With_Iptc( string filename, int width, int height, int hdpi, int vdpi, string mime )
   {
     // Arrange

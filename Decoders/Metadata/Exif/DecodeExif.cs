@@ -121,42 +121,42 @@ internal class DecodeExif
     ExtractTagsFromIfd( MetadataProfileType.Gps, _ifdGpsOffset );
     ExtractTagsFromIfd( MetadataProfileType.Interoperability, _ifdInterOffset );
 
-    //ExtractIptc();
-    //ExtractXmp();
+    ExtractIptc();
+    ExtractXmp();
 
     // Finished all IFDs
     _processed = true;
   }
 
-  //private void ExtractIptc()
-  //{
-  //  if( _ifdIptcOffset > 0 )
-  //  {
-  //    if( _segmentStart + _ifdIptcOffset + ExifConstants.ExifDirectorySize >= _reader.Length() )
-  //    {
-  //      // Ensure we havent gone out of bounds and there are actually 12 bytes
-  //      // left for the whole IFD chunk
-  //      return;
-  //    }
+  private void ExtractIptc()
+  {
+    if( _ifdIptcOffset > 0 )
+    {
+      if( _segmentStart + _ifdIptcOffset + ExifConstants.ExifDirectorySize >= _reader.Length() )
+      {
+        // Ensure we havent gone out of bounds and there are actually 12 bytes
+        // left for the whole IFD chunk
+        return;
+      }
 
-  //    _reader.BaseStream.Seek( _segmentStart + _ifdIptcOffset, SeekOrigin.Begin );
-  //  }
-  //}
+      _reader.BaseStream.Seek( _segmentStart + _ifdIptcOffset, SeekOrigin.Begin );
+    }
+  }
 
-  //private void ExtractXmp()
-  //{
-  //  if( _idXmpOffset > 0 )
-  //  {
-  //    if( _segmentStart + _idXmpOffset + ExifConstants.ExifDirectorySize >= _reader.Length() )
-  //    {
-  //      // Ensure we havent gone out of bounds and there are actually 12 bytes
-  //      // left for the whole IFD chunk
-  //      return;
-  //    }
+  private void ExtractXmp()
+  {
+    if( _idXmpOffset > 0 )
+    {
+      if( _segmentStart + _idXmpOffset + ExifConstants.ExifDirectorySize >= _reader.Length() )
+      {
+        // Ensure we havent gone out of bounds and there are actually 12 bytes
+        // left for the whole IFD chunk
+        return;
+      }
 
-  //    _reader.BaseStream.Seek( _segmentStart + _idXmpOffset, SeekOrigin.Begin );
-  //  }
-  //}
+      _reader.BaseStream.Seek( _segmentStart + _idXmpOffset, SeekOrigin.Begin );
+    }
+  }
 
   private void ExtractTagsFromIfd( MetadataProfileType profile, int ifdOffset )
   {

@@ -130,5 +130,307 @@
         "Description": "Textual description of the object, particularly used where the object is not text"
       }
     ]
+  },
+  "metadata.jpg-iptctags": {
+    "Exif": [
+      {
+        "StringValue": "XP Author = Dan Petitt",
+        "IsArray": false,
+        "TagId": 40093,
+        "TagType": 2,
+        "Name": "XP Author",
+        "Description": "Author tag used by Windows"
+      }
+    ],
+    "Iptc": [
+      {
+        "StringValue": "By-line = Sample metadata testing image",
+        "IsArray": false,
+        "TagId": 80,
+        "TagType": 2,
+        "Name": "By-line",
+        "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
+      },
+      {
+        "StringValue": "Copyright Notice = Copyright by CodeRanger.com",
+        "IsArray": false,
+        "TagId": 116,
+        "TagType": 2,
+        "Name": "Copyright Notice",
+        "Description": "Contains any necessary copyright notice"
+      },
+      {
+        "StringValue": "Country/Primary Location Name = United Kingdom",
+        "IsArray": false,
+        "TagId": 101,
+        "TagType": 2,
+        "Name": "Country/Primary Location Name",
+        "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
+      }
+    ]
+  },
+  "iptc.jpg-iptctags": {
+    "Exif": [
+      {
+        "StringValue": "Orientation = 1 (Horizontal (normal))",
+        "IsArray": false,
+        "TagId": 274,
+        "TagType": 16,
+        "Name": "Orientation",
+        "Description": ""
+      },
+      {
+        "StringValue": "Horizontal Resolution = 300/1 (300D)",
+        "IsArray": false,
+        "TagId": 282,
+        "TagType": 12,
+        "Name": "Horizontal Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
+      },
+      {
+        "StringValue": "Vertical Resolution = 300/1 (300D)",
+        "IsArray": false,
+        "TagId": 283,
+        "TagType": 12,
+        "Name": "Vertical Resolution",
+        "Description": "Number of pixels per ResolutionUnit"
+      },
+      {
+        "StringValue": "Resolution Unit = 2 (inches)",
+        "IsArray": false,
+        "TagId": 296,
+        "TagType": 16,
+        "Name": "Resolution Unit",
+        "Description": "Unit for measuring Horizontal and Vertical resolutions"
+      },
+      {
+        "StringValue": "Software = Adobe Photoshop CS3 Windows",
+        "IsArray": false,
+        "TagId": 305,
+        "TagType": 2,
+        "Name": "Software",
+        "Description": "Records the name and version of the software or firmware of the camera or image input device used to generate the image"
+      },
+      {
+        "IsArray": false,
+        "StringValue": "Date Time = 24/06/2008 13:58:07",
+        "TagId": 306,
+        "TagType": 15,
+        "Name": "Date Time",
+        "Description": "Date and time of image creation or when last modified"
+      },
+      {
+        "StringValue": "Photo Exif Version = 48 / 50 / 50 / 49",
+        "IsArray": true,
+        "TagId": 36864,
+        "TagType": 1,
+        "Name": "Photo Exif Version",
+        "Description": "Records version of this standard which is supported"
+      },
+      {
+        "StringValue": "Photo Components Configuration = 1 / 2 / 3 / 0",
+        "IsArray": true,
+        "TagId": 37121,
+        "TagType": 1,
+        "Name": "Photo Components Configuration",
+        "Description": "Records information specific to compressed data"
+      },
+      {
+        "StringValue": "Photo Flashpix Version = 48 / 49 / 48 / 48",
+        "IsArray": true,
+        "TagId": 40960,
+        "TagType": 1,
+        "Name": "Photo Flashpix Version",
+        "Description": "FlashPix format version supported by a FPXR file"
+      },
+      {
+        "StringValue": "Photo Color Space = 1",
+        "IsArray": false,
+        "TagId": 40961,
+        "TagType": 3,
+        "Name": "Photo Color Space",
+        "Description": "Records the color space information"
+      },
+      {
+        "StringValue": "Photo Pixel X Dimension = 70",
+        "IsArray": false,
+        "TagId": 40962,
+        "TagType": 5,
+        "Name": "Photo Pixel X Dimension",
+        "Description": "Records the valid width of the meaningful image when it has been compressed"
+      },
+      {
+        "StringValue": "Photo Pixel Y Dimension = 70",
+        "IsArray": false,
+        "TagId": 40963,
+        "TagType": 5,
+        "Name": "Photo Pixel Y Dimension",
+        "Description": "Records the valid height of the meaningful image when it has been compressed"
+      }
+    ],
+    "Interoperability": [
+      {
+        "StringValue": "Interoperability Index = R98",
+        "IsArray": false,
+        "TagId": 8193,
+        "TagType": 2,
+        "Name": "Interoperability Index",
+        "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
+      },
+      {
+        "StringValue": "Interoperability Version = 0100",
+        "IsArray": false,
+        "TagId": 8194,
+        "TagType": 2,
+        "Name": "Interoperability Version",
+        "Description": "Indicates the Interoperability version"
+      }
+    ],
+    "Iptc": [
+      {
+        "StringValue": "Caption = description",
+        "IsArray": false,
+        "TagId": 120,
+        "TagType": 2,
+        "Name": "Caption",
+        "Description": "Textual description of the object, particularly used where the object is not text"
+      },
+      {
+        "StringValue": "Writer/Editor = description writer",
+        "IsArray": false,
+        "TagId": 122,
+        "TagType": 2,
+        "Name": "Writer/Editor",
+        "Description": "Identification of the name of the person involved in the writing, editing or correcting the object or caption/abstract"
+      },
+      {
+        "StringValue": "Headline = headline",
+        "IsArray": false,
+        "TagId": 105,
+        "TagType": 2,
+        "Name": "Headline",
+        "Description": "Publishable entry providing a synopsis of the contents of the object"
+      },
+      {
+        "StringValue": "Special Instructions = special instructions",
+        "IsArray": false,
+        "TagId": 40,
+        "TagType": 2,
+        "Name": "Special Instructions",
+        "Description": "Other editorial instructions concerning the use of the object, such as embargoes and warnings"
+      },
+      {
+        "StringValue": "By-line = author",
+        "IsArray": false,
+        "TagId": 80,
+        "TagType": 2,
+        "Name": "By-line",
+        "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist"
+      },
+      {
+        "StringValue": "By-line Title = author title",
+        "IsArray": false,
+        "TagId": 85,
+        "TagType": 2,
+        "Name": "By-line Title",
+        "Description": "Title of the creator or creators. Where used, a By-line Title should follow the By-line it modifies"
+      },
+      {
+        "StringValue": "Credit = credits",
+        "IsArray": false,
+        "TagId": 110,
+        "TagType": 2,
+        "Name": "Credit",
+        "Description": "Identifies the provider of the object, not necessarily the owner/creator"
+      },
+      {
+        "StringValue": "Source = source",
+        "IsArray": false,
+        "TagId": 115,
+        "TagType": 2,
+        "Name": "Source",
+        "Description": "Identifies the original owner of the intellectual content of the object. This could be an agency, a member of an agency or an individual"
+      },
+      {
+        "StringValue": "Object Name = title",
+        "IsArray": false,
+        "TagId": 5,
+        "TagType": 2,
+        "Name": "Object Name",
+        "Description": "Used as a shorthand reference for the object"
+      },
+      {
+        "StringValue": "Created Date = 14/04/2020",
+        "IsArray": false,
+        "TagId": 55,
+        "TagType": 13,
+        "Name": "Created Date",
+        "Description": "Indicates the date the intellectual content of the object was created rather than the date of the creation of the physical representation"
+      },
+      {
+        "StringValue": "City = city",
+        "IsArray": false,
+        "TagId": 90,
+        "TagType": 2,
+        "Name": "City",
+        "Description": "Identifies city of origin from which the object originates, according to guidelines established by the provider"
+      },
+      {
+        "StringValue": "Sub-location = sublocation",
+        "IsArray": false,
+        "TagId": 92,
+        "TagType": 2,
+        "Name": "Sub-location",
+        "Description": "Identifies the location within a city from which the object originates, according to guidelines established by the provider"
+      },
+      {
+        "StringValue": "Province/State = province-state",
+        "IsArray": false,
+        "TagId": 95,
+        "TagType": 2,
+        "Name": "Province/State",
+        "Description": "Identifies Province/State of origin from which the object originates"
+      },
+      {
+        "StringValue": "Country/Primary Location Name = country",
+        "IsArray": false,
+        "TagId": 101,
+        "TagType": 2,
+        "Name": "Country/Primary Location Name",
+        "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider"
+      },
+      {
+        "StringValue": "Category = category",
+        "IsArray": false,
+        "TagId": 15,
+        "TagType": 2,
+        "Name": "Category",
+        "Description": "Identifies the subject of the object in the opinion of the provider"
+      },
+      {
+        "StringValue": "Urgency = 1 (Priority 0 Most Urgent)",
+        "IsArray": false,
+        "TagId": 10,
+        "TagType": 16,
+        "Name": "Urgency",
+        "Description": "Specifies the editorial urgency of content and not necessarily the envelope handling priority"
+      },
+      {
+        "StringValue": "Keywords = keywords",
+        "IsArray": false,
+        "TagId": 25,
+        "TagType": 2,
+        "Name": "Keywords",
+        "Description": "Indicates specific information retrieval words"
+      },
+      {
+        "StringValue": "Copyright Notice = copyright",
+        "IsArray": false,
+        "TagId": 116,
+        "TagType": 2,
+        "Name": "Copyright Notice",
+        "Description": "Contains any necessary copyright notice"
+      }
+    ]
   }
 }
