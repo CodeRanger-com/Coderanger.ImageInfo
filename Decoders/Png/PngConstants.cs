@@ -54,8 +54,18 @@ internal static class PngConstants
     internal static byte[] ITextInternational = new byte[] { (byte)'i', (byte)'T', (byte)'X', (byte)'t' };
 
     /// <summary>
+    /// Embedded ICC Profile
+    /// </summary>
+    internal static byte[] ICCProfile = new byte[] { (byte)'i', (byte)'C', (byte)'C', (byte)'P' };
+
+    /// <summary>
     /// Start of the IEND file end chunk which marks the end of the PNG datastream
     /// </summary>
     internal static byte[] IEnd = new byte[] { (byte)'I', (byte)'E', (byte)'N', (byte)'D' };
+
+    /// <summary>
+    /// Custom internation text item keyword to denote an XMP chunk
+    /// </summary>
+    internal const string XmpKeyword = "XML:com.adobe.xmp";
   }
 }

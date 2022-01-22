@@ -50,6 +50,15 @@ public class XmpData : IMetadataTypedValue
                                            Value: xmpData );
   }
 
+  public void SetValue( string value )
+  {
+    _metadataValue = new MetadataTagValue( Type: TagType,
+                                           IsArray: false,
+                                           TagId: TagId,
+                                           TagName: "Xmp",
+                                           Value: value );
+  }
+
   public bool TryGetValue( out MetadataTagValue? value )
   {
     value = _metadataValue;

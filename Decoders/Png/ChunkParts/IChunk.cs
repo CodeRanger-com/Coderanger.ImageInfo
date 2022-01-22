@@ -10,7 +10,6 @@ namespace Coderanger.ImageInfo.Decoders.Png.ChunkParts;
 
 internal interface IChunk
 {
-  //public bool IsOfType( byte[] chunkTypeSignature );
   public void LoadData( BinaryReader reader );
   public void SkipToEnd( BinaryReader reader );
 }

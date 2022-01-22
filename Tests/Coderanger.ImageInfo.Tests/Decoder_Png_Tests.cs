@@ -19,6 +19,11 @@ public class Decoder_Png_Tests
 {
   [TestMethod]
   [DataRow( "bath.png", 4032, 3024, 72, 72, "image/png" )]
+  [DataRow( "budleigh-salterton.png", 4032, 3024, 72, 72, "image/png" )]
+  [DataRow( "dakar-rally.png", 6000, 4000, 300, 300, "image/png" )]
+  [DataRow( "dakar-rally-bike.png", 2000, 1333, 300, 300, "image/png" )]
+  [DataRow( "dakar-rally-toby-price.png", 2560, 1704, 300, 300, "image/png" )]
+  [DataRow( "freediving.png", 5760, 3840, 300, 300, "image/png" )]
   public void Validate_Images( string filename, int width, int height, int hdpi, int vdpi, string mime )
   {
     // Arrange
@@ -36,10 +41,9 @@ public class Decoder_Png_Tests
       info.HorizontalDpi.Should().Be( hdpi );
       info.VerticalDpi.Should().Be( vdpi );
       info.MimeType.Should().Be( mime );
-      info.Metadata.Should().BeNull();
 
       // Assert tag information
-      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}" );
+      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-metadata" );
 
       // Output data to console
       MetadataHelpers.Output( info.Metadata );
@@ -47,11 +51,13 @@ public class Decoder_Png_Tests
   }
 
   [TestMethod]
+  [DataRow( "bath.png", 4032, 3024, 72, 72, "image/png" )]
+  [DataRow( "iptc.png", 70, 70, 300, 300, "image/png" )]
   [DataRow( "metadata.png", 50, 50, 96, 96, "image/png" )]
   public void Validate_Images_With_Metadata( string filename, int width, int height, int hdpi, int vdpi, string mime )
   {
     // Arrange
-    using var stream = new FileStream( $"./Fixtures/Png/{filename}", FileMode.Open, FileAccess.Read );
+    using var stream = new FileStream( $"./Fixtures/Png/metadata/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
     var info = ImageInfo.DecodeFromStream( stream );
@@ -67,7 +73,7 @@ public class Decoder_Png_Tests
       info.MimeType.Should().Be( mime );
 
       // Assert tag information
-      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}" );
+      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-metadata" );
 
       // Output data to console
       MetadataHelpers.Output( info.Metadata );

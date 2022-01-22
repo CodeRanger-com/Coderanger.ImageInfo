@@ -20,6 +20,7 @@ using Coderanger.ImageInfo.Decoders.Png.Helpers;
 using Coderanger.ImageInfo.Decoders.Png.ChunkParts;
 using Coderanger.ImageInfo.Decoders.Metadata;
 using Coderanger.ImageInfo.Decoders.Metadata.Png;
+using Coderanger.ImageInfo.Decoders.Metadata.Xmp;
 
 /// <summary>
 /// Decoder for the PNG image format
@@ -104,7 +105,16 @@ internal class DecodePng : IDecoder
         txtInternational.LoadData( reader );
         if( txtInternational.Text != null )
         {
-          _metadataItems.Add( txtInternational.Text );
+          if( txtInternational.Text.Keyword == PngConstants.Chunks.XmpKeyword )
+          {
+            var xmpData = XmpTagFactory.Create();
+            xmpData.SetValue( txtInternational.Text.TextValue );
+            _xmpDataValue = xmpData;
+          }
+          else
+          {
+            _metadataItems.Add( txtInternational.Text );
+          }
         }
       }
       else if( chunk is ExifChunk exif )
@@ -124,26 +134,7 @@ internal class DecodePng : IDecoder
 
     if( _width > 0 && _height > 0 )
     {
-      Dictionary<MetadataProfileType, List<IMetadataTypedValue>> tags = new();
-
-      if( _exifDecoder?.HasTags() ?? false )
-      {
-        _exifDecoder.AddTagsToProfile( ref tags );
-      }
-
-      if( _metadataItems.Count > 0 )
-      {
-        if( !tags.TryGetValue( MetadataProfileType.PngText, out var value ) )
-        {
-          value = new List<IMetadataTypedValue>();
-          tags.Add( MetadataProfileType.PngText, value );
-        }
-
-        foreach( var data in _metadataItems )
-        {
-          value.Add( new PngMetadata( data ) );
-        }
-      }
+      var tags = BuildTagList();
 
       return new ImageDetails( _width, _height, _resolutionX, _resolutionY, "image/png", tags.Count > 0 ? tags : null );
     }
@@ -151,51 +142,42 @@ internal class DecodePng : IDecoder
     throw ExceptionHelper.Throw( reader, ErrorMessage );
   }
 
-  //private Dictionary<MetadataProfileType, List<IMetadataTypedValue>>? FillMetadataItems()
-  //{
-  //  if( _metadataItems.Count == 0 )
-  //  {
-  //    return null;
-  //  }
+  private Dictionary<MetadataProfileType, List<IMetadataTypedValue>> BuildTagList()
+  {
+    Dictionary<MetadataProfileType, List<IMetadataTypedValue>> tags = new();
 
-  //  var metadata = new Dictionary<MetadataProfileType, List<IMetadataTypedValue>>();
+    if( _exifDecoder?.HasTags() ?? false )
+    {
+      _exifDecoder.AddTagsToProfile( ref tags );
+    }
 
-  //  // Add PNG metadata
-  //  foreach( var data in _metadataItems )
-  //  {
-  //    if( !metadata.TryGetValue( MetadataProfileType.PngText, out var value ) )
-  //    {
-  //      value = new List<IMetadataTypedValue>();
-  //      metadata.Add( MetadataProfileType.PngText, value );
-  //    }
+    if( _metadataItems.Count > 0 )
+    {
+      if( !tags.TryGetValue( MetadataProfileType.PngText, out var value ) )
+      {
+        value = new List<IMetadataTypedValue>();
+        tags.Add( MetadataProfileType.PngText, value );
+      }
 
-  //    value.Add( new PngMetadata( data ) );
-  //  }
+      foreach( var data in _metadataItems )
+      {
+        value.Add( new PngMetadata( data ) );
+      }
+    }
 
-  //  // Add exif values
-  //  var exifProfiles = _exifDecoder?.GetProfileTags();
-  //  if( exifProfiles != null )
-  //  {
-  //    foreach( var profile in exifProfiles.Keys )
-  //    {
-  //      if( !metadata.TryGetValue( profile, out var value ) )
-  //      {
-  //        value = new List<IMetadataTypedValue>();
-  //        metadata.Add( profile, value );
-  //      }
+    if( _xmpDataValue != null )
+    {
+      if( !tags.TryGetValue( MetadataProfileType.Xmp, out var value ) )
+      {
+        value = new List<IMetadataTypedValue>();
+        tags.Add( MetadataProfileType.Xmp, value );
+      }
 
-  //      if( exifProfiles.TryGetValue( profile, out var tagValues ) && tagValues != null )
-  //      {
-  //        foreach( var tag in tagValues )
-  //        {
-  //          value.Add( tag );
-  //        }
-  //      }
-  //    }
-  //  }
+      value.Add( _xmpDataValue );
+    }
 
-  //  return metadata;
-  //}
+    return tags;
+  }
 
   private long _width;
   private long _height;
@@ -203,6 +185,7 @@ internal class DecodePng : IDecoder
   private int _resolutionY = -1;
   private readonly List<PngText> _metadataItems = new();
   private DecodeExif? _exifDecoder;
+  private IMetadataTypedValue? _xmpDataValue = null;
 
   const string ErrorMessage = "Invalid PNG format";
 }
