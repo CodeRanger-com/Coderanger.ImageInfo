@@ -9,7 +9,6 @@
 namespace Coderanger.ImageInfo.Decoders.Metadata.Iptc.Types;
 
 using System;
-using System.Collections.Generic;
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 /// <summary>
@@ -23,42 +22,43 @@ public class IptcEnum : IptcTypeBase, IMetadataTypedValue
     String,
   }
 
-  internal IptcEnum( ushort tagId, byte[] data, EnumType enumType )
-    : base( MetadataType.Enum, tagId )
+  internal IptcEnum( ushort tagId, EnumType enumType )
+    : base( tagId, MetadataType.Enum )
   {
-    _data = data;
     _enumType = enumType;
   }
 
-  public string StringValue => ToString();
-
-  void IMetadataTypedValue.SetValue()
+  public void AddToExistingValue( ReadOnlySpan<byte> buffer )
   {
-    ProcessData();
+    var value = Create( buffer );
+    if( value != null )
+    {
+      _metadata.Add( value );
+    }
   }
 
-  void IMetadataTypedValue.AddToExistingValue( byte[] value )
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
-    base.AddToExistingValue( Create( value ) );
+    var value = Create( buffer );
+    if( value != null )
+    {
+      _metadata.Add( value );
+    }
   }
 
-  /// <summary>
-  /// Processes the data buffer for each type value
-  /// </summary>
-  internal override IEnumerable<MetadataTagValue> ExtractValues()
+  private MetadataTagValue Create( ReadOnlySpan<byte> buffer )
   {
-    yield return Create( _data );
+    var enumValue = GetEnumFromValue( buffer );
+    return new MetadataTagValue( Type: TagType,
+                                 IsArray: false,
+                                 TagId: TagId,
+                                 TagName: Name,
+                                 Value: enumValue );
   }
 
-  private MetadataTagValue Create( byte[] value )
+  private MetadataEnumValue GetEnumFromValue( ReadOnlySpan<byte> value )
   {
-    var enumValue = GetEnumFromValue( value );
-    return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: enumValue );
-  }
-
-  private MetadataEnumValue GetEnumFromValue( byte[] value )
-  {
-    var bufferValue = DataConversion.ConvertBuffer( value.AsSpan(), StringEncoding.Utf8 );
+    var bufferValue = DataConversion.ConvertBuffer( value, StringEncoding.Utf8 );
 
     if( _enumType == EnumType.String )
     {
@@ -73,6 +73,5 @@ public class IptcEnum : IptcTypeBase, IMetadataTypedValue
     }
   }
 
-  private readonly byte[] _data;
   private readonly EnumType _enumType;
 }

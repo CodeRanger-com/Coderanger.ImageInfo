@@ -27,9 +27,7 @@ public class ExifEnum : ExifTypeBase, IMetadataTypedValue
     _enumType = enumType;
   }
 
-  public string StringValue => ToString();
-
-  void IMetadataTypedValue.SetValue()
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();
   }

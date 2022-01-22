@@ -133,14 +133,14 @@ internal class DecodePng : IDecoder
 
       if( _metadataItems.Count > 0 )
       {
+        if( !tags.TryGetValue( MetadataProfileType.PngText, out var value ) )
+        {
+          value = new List<IMetadataTypedValue>();
+          tags.Add( MetadataProfileType.PngText, value );
+        }
+
         foreach( var data in _metadataItems )
         {
-          if( !tags.TryGetValue( MetadataProfileType.PngText, out var value ) )
-          {
-            value = new List<IMetadataTypedValue>();
-            tags.Add( MetadataProfileType.PngText, value );
-          }
-
           value.Add( new PngMetadata( data ) );
         }
       }

@@ -23,36 +23,55 @@ public class PngMetadata : IMetadataTypedValue
 
     Name = _data.Keyword;
     Description = _details?.Description ?? string.Empty;
+    TagType = MetadataType.PngText;
   }
 
   /// <summary>
-  /// PNG Metadata does not support arrays
+  /// Simple representation of the data for debugging
   /// </summary>
+  public string StringValue => _data.ToString();
+
+  /// <summary>
+  /// Determines if the data contains an array
+  /// </summary>
+  /// <remarks>
+  /// PNG Metadata does not support arrays
+  /// </remarks>
   public bool IsArray => false;
 
+  /// <summary>
+  /// Id value of the tag
+  /// </summary>
   public ushort TagId => _details?.Id ?? PngKeyword.Custom;
 
-  public string StringValue => _data.ToString();
+  /// <summary>
+  /// Type of data being held
+  /// </summary>
+  public MetadataType TagType { get; init; }
 
   /// <summary>
   /// Friendly name of metadata item
   /// </summary>
-  public string Name { get; init; }
+  internal string Name { get; init; }
 
   /// <summary>
   /// Description with explanation of metadata keyword data
   /// </summary>
-  public string Description { get; init; } = string.Empty;
+  internal string Description { get; init; } = string.Empty;
 
-  // Not needed for PNG metadata
-  void IMetadataTypedValue.SetValue()
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
+    // Not needed for PNG metadata
     throw new NotImplementedException();
   }
 
+  public bool HasValue => _data.TextValue.Length > 0;
+
+  public string TagTypeName => TagType.ToString();
+
   public bool TryGetValue( out MetadataTagValue? value )
   {
-    value = new MetadataTagValue( MetadataType.PngText, false, TagId, _data.Keyword, _data );
+    value = new MetadataTagValue( Type: TagType, IsArray: false, TagId, _data.Keyword, Value: _data );
     return true;
   }
 

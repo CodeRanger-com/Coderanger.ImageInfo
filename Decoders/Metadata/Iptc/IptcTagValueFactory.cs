@@ -34,7 +34,7 @@ internal class IptcTagValueFactory
     };
   }
 
-  internal static IMetadataTypedValue? Create( ushort record, ushort tag, byte[] data )
+  internal static IMetadataTypedValue? Create( ushort record, ushort tag, ReadOnlySpan<byte> data )
   {
     if( record == 1 || record >= 7 )
     {
@@ -46,13 +46,13 @@ internal class IptcTagValueFactory
     {
       IptcTag.Urgency 
       or IptcTag.ActionAdvised 
-      or IptcTag.ObjectPreviewFileFormat => new IptcEnum( tag, data, IptcEnum.EnumType.Numeric ),
+      or IptcTag.ObjectPreviewFileFormat => new IptcEnum( tag, IptcEnum.EnumType.Numeric ),
       
       IptcTag.ObjectCycle 
-      or IptcTag.ImageOrientation => new IptcEnum( tag, data, IptcEnum.EnumType.String ),
+      or IptcTag.ImageOrientation => new IptcEnum( tag, IptcEnum.EnumType.String ),
       
       IptcTag.RecordVersion 
-      or IptcTag.ObjectPreviewFileVersion => new IptcUShort( tag, data ),
+      or IptcTag.ObjectPreviewFileVersion => new IptcUShort( tag ),
       
       IptcTag.ObjectType 
       or IptcTag.ObjectAttribute 
@@ -85,25 +85,30 @@ internal class IptcTagValueFactory
       or IptcTag.Caption 
       or IptcTag.WriterEditor 
       or IptcTag.ImageType 
-      or IptcTag.City => new IptcString( tag, data ),
+      or IptcTag.City => new IptcString( tag ),
       
       IptcTag.ReleaseDate 
       or IptcTag.ExpirationDate 
       or IptcTag.CreatedDate 
       or IptcTag.DigitalCreationDate 
-      or IptcTag.ReferenceDate => new IptcDate( tag, data ),
+      or IptcTag.ReferenceDate => new IptcDate( tag ),
       
       IptcTag.ReleaseTime 
       or IptcTag.ExpirationTime 
       or IptcTag.CreatedTime 
-      or IptcTag.DigitalCreationTime => new IptcTime( tag, data ),
+      or IptcTag.DigitalCreationTime => new IptcTime( tag ),
       
-      IptcTag.ReferenceNumber => new IptcULong( tag, data ),
+      IptcTag.ReferenceNumber => new IptcULong( tag ),
       
-      _ => new IptcByte( tag, data ),
+      _ => new IptcByte( tag ),
     };
-    tagValue.SetValue();
 
-    return tagValue;
+    tagValue.SetValue( data );
+    if( tagValue.HasValue )
+    {
+      return tagValue;
+    }
+
+    return null;
   }
 }

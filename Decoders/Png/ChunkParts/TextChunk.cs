@@ -41,8 +41,10 @@ internal struct TextChunk : IChunk
 
       var valueBuffer = _chunk.Data.AsSpan( dataStart );
       var value = DataConversion.ConvertBuffer( valueBuffer, StringEncoding.Ascii );
-
-      Text = new PngText( keyword.Value, value );
+      if( value.Length > 0 )
+      {
+        Text = new PngText( keyword.Value, TextValue: value );
+      }
     }
   }
 

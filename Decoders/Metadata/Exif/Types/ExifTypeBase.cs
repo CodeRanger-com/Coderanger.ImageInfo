@@ -47,7 +47,16 @@ public abstract class ExifTypeBase
     return true;
   }
 
+  /// <summary>
+  /// Simple representation of the data for debugging
+  /// </summary>
+  public string StringValue => ToString();
+
   public virtual bool IsArray => Component.ComponentCount > 1;
+
+  public bool HasValue => _convertedValueArray.Count > 0 || ((string)(_convertedValue?.Value ?? string.Empty)).Length > 0;
+
+  public string TagTypeName => TagType.ToString();
 
   public override string ToString()
   {

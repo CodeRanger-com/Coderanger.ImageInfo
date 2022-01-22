@@ -48,7 +48,10 @@ internal struct TextCompressedChunk : IChunk
         var decompressor = new TextDecompressor( _chunk.Data.AsSpan( dataStart + 1 ) );
 
         var value = decompressor.GetString( StringEncoding.Ascii );
-        Text = new PngText( keyword.Value, value );
+        if( value.Length > 0 )
+        {
+          Text = new PngText( keyword.Value, TextValue: value );
+        }
       }
       else
       {

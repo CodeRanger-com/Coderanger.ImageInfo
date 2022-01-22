@@ -11,7 +11,6 @@ namespace Coderanger.ImageInfo.Tests.Helpers;
 using System;
 using System.Collections.Generic;
 using Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
-using Coderanger.ImageInfo.Decoders.Metadata.Exif;
 using Coderanger.ImageInfo.Decoders.Metadata;
 using Coderanger.ImageInfo.Decoders.Metadata.Png;
 
@@ -89,6 +88,10 @@ internal static class MetadataHelpers
         Console.Write( $"{(DateOnly)tagValue.Value}" );
         break;
 
+      case MetadataType.Time:
+        Console.Write( $"{(TimeOnly)tagValue.Value}" );
+        break;
+
       case MetadataType.DateTime:
         Console.Write( $"{(DateTime)tagValue.Value}" );
         break;
@@ -103,6 +106,14 @@ internal static class MetadataHelpers
 
       case MetadataType.UInt:
         Console.Write( $"{(uint)tagValue.Value}" );
+        break;
+
+      case MetadataType.Long:
+        Console.Write( $"{(long)tagValue.Value}" );
+        break;
+
+      case MetadataType.ULong:
+        Console.Write( $"{(ulong)tagValue.Value}" );
         break;
 
       case MetadataType.Rational:
@@ -131,6 +142,10 @@ internal static class MetadataHelpers
       case MetadataType.PngText:
         var val = (PngText)tagValue.Value;
         Console.Write( val );
+        break;
+
+      case MetadataType.Xmp:
+        Console.Write( (string)tagValue.Value );
         break;
 
       default:

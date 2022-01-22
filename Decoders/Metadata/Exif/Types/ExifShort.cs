@@ -20,9 +20,7 @@ public class ExifShort : ExifTypeBase, IMetadataTypedValue
   {
   }
 
-  public string StringValue => ToString();
-
-  void IMetadataTypedValue.SetValue()
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();
   }
@@ -69,9 +67,7 @@ public class ExifUShort : ExifTypeBase, IMetadataTypedValue
   {
   }
 
-  public string StringValue => ToString();
-
-  void IMetadataTypedValue.SetValue()
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();
   }

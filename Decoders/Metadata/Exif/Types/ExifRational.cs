@@ -20,9 +20,7 @@ public class ExifRational: ExifTypeBase, IMetadataTypedValue
   {
   }
 
-  public string StringValue => ToString();
-
-  void IMetadataTypedValue.SetValue()
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();
   }
@@ -60,9 +58,7 @@ public class ExifURational : ExifTypeBase, IMetadataTypedValue
   {
   }
 
-  public string StringValue => ToString();
-
-  void IMetadataTypedValue.SetValue()
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();
   }

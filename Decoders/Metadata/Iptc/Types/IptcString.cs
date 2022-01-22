@@ -8,7 +8,7 @@
 
 namespace Coderanger.ImageInfo.Decoders.Metadata.Iptc.Types;
 
-using System.Collections.Generic;
+using System;
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 /// <summary>
@@ -16,37 +16,41 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 /// </summary>
 public class IptcString : IptcTypeBase, IMetadataTypedValue
 {
-  internal IptcString( ushort tagId, byte[] data )
-    : base( MetadataType.String, tagId )
+  internal IptcString( ushort tagId )
+    : base( tagId, MetadataType.String )
   {
-    _data = data;
   }
 
-  public string StringValue => ToString();
-
-  void IMetadataTypedValue.SetValue()
+  public void AddToExistingValue( ReadOnlySpan<byte> buffer )
   {
-    ProcessData();
+    var value = Create( buffer );
+    if( value != null )
+    {
+      _metadata.Add( value );
+    }
   }
 
-  void IMetadataTypedValue.AddToExistingValue( byte[] value )
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
-    base.AddToExistingValue( Create( value ) );
+    var value = Create( buffer );
+    if( value != null )
+    {
+      _metadata.Add( value );
+    }
   }
 
-  /// <summary>
-  /// Processes the data buffer for each type value
-  /// </summary>
-  internal override IEnumerable<MetadataTagValue> ExtractValues()
+  private MetadataTagValue? Create( ReadOnlySpan<byte> buffer )
   {
-    yield return Create( _data );
-  }
+    var bufferValue = DataConversion.ConvertBuffer( buffer, StringEncoding.Utf8 );
+    if( bufferValue.Length > 0 )
+    {
+      return new MetadataTagValue( Type: TagType,
+                                   IsArray: false,
+                                   TagId: TagId,
+                                   TagName: Name,
+                                   Value: bufferValue );
+    }
 
-  private MetadataTagValue Create( byte[] value )
-  {
-    var bufferValue = DataConversion.ConvertBuffer( value, StringEncoding.Utf8 );
-    return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: bufferValue );
+    return null;
   }
-
-  private readonly byte[] _data;
 }

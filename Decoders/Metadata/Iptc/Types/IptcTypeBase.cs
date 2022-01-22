@@ -13,10 +13,10 @@ public abstract class IptcTypeBase
   // Hack: Just used for reflection in the custom description attribute
   internal static readonly IptcTag ReflectionIptcTag = new();
 
-  internal IptcTypeBase( MetadataType type, ushort tagId )
+  internal IptcTypeBase( ushort tagId, MetadataType type )
   {
-    TagType = type;
     TagId = tagId;
+    TagType = type;
 
     var tagDetails = MetadataTagDetailsAttribute.GetTagDetails( ReflectionIptcTag, TagId );
     if( tagDetails != null )
@@ -26,69 +26,10 @@ public abstract class IptcTypeBase
     }
   }
 
-  public bool TryGetValue( out MetadataTagValue? value )
-  {
-    ProcessData();
-    value = _convertedValue;
-    return true;
-  }
-
-  public bool TryGetValueArray( out List<MetadataTagValue>? value )
-  {
-    ProcessData();
-    value = _convertedValueArray;
-    return true;
-  }
-
-  public virtual bool IsArray => _convertedValueArray.Count > 1;
-
-  public override string ToString()
-  {
-    if( IsArray )
-    {
-      return $"{Name} = {string.Join( " / ", _convertedValueArray )}";
-    }
-    else
-    {
-      return $"{Name} = {_convertedValue}";
-    }
-  }
-
-  internal void ProcessData()
-  {
-    if( !_processed )
-    {
-      foreach( var value in ExtractValues() )
-      {
-        if( value != null )
-        {
-          _convertedValueArray.Add( value );
-        }
-      }
-
-      if( _convertedValueArray.Count == 1 )
-{
-        _convertedValue = _convertedValueArray[ 0 ];
-      }
-
-      _processed = true;
-    }
-  }
-
-  internal void AddToExistingValue( MetadataTagValue? value )
-  {
-    if( value != null )
-    {
-      _convertedValueArray.Add( value );
-      _convertedValue = null;
-    }
-  }
-
   /// <summary>
-  /// Override to process the data buffer for each type
+  /// Simple representation of the data for debugging
   /// </summary>
-  /// <returns></returns>
-  internal abstract IEnumerable<MetadataTagValue?> ExtractValues();
+  public string StringValue => ToString();
 
   /// <summary>
   /// Tag identifier
@@ -96,12 +37,7 @@ public abstract class IptcTypeBase
   public ushort TagId { get; init; }
 
   /// <summary>
-  /// Determines if this tag can accept an array of items
-  /// </summary>
-  internal bool Repeatable { get; }
-
-  /// <summary>
-  /// Exif tag type
+  /// Type of data being held
   /// </summary>
   public MetadataType TagType { get; init; }
 
@@ -115,8 +51,49 @@ public abstract class IptcTypeBase
   /// </summary>
   public string Description { get; init; } = string.Empty;
 
-  protected MetadataTagValue? _convertedValue;
-  protected readonly List<MetadataTagValue> _convertedValueArray = new();
+  /// <summary>
+  /// Determines if this value is an array of data
+  /// </summary>
+  public bool IsArray => _metadata.Count > 1;
 
-  private bool _processed = false;
+  public bool HasValue => _metadata.Count > 0;
+
+  public string TagTypeName => TagType.ToString();
+
+  public override string ToString()
+  {
+    return $"{Name} = {string.Join( " / ", _metadata )}";
+  }
+
+  /// <summary>
+  /// Sets the metadata value if there is one and returns true
+  /// </summary>
+  public bool TryGetValue( out MetadataTagValue? value )
+  {
+    if( _metadata.Count == 0 )
+    {
+      value = null;
+      return false;
+    }
+
+    value = _metadata[ 0 ];
+    return true;
+  }
+
+  /// <summary>
+  /// Sets the array of metadata values if there are any and returns true
+  /// </summary>
+  public bool TryGetValueArray( out List<MetadataTagValue>? value )
+  {
+    if( _metadata.Count == 0 )
+    {
+      value = null;
+      return false;
+    }
+
+    value = _metadata;
+    return true;
+  }
+
+  protected readonly List<MetadataTagValue> _metadata = new();
 }

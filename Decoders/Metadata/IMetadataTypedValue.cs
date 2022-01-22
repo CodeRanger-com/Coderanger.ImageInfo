@@ -14,14 +14,19 @@ namespace Coderanger.ImageInfo.Decoders.Metadata;
 /// </summary>
 public interface IMetadataTypedValue
 {
-  internal void SetValue();
-  internal void AddToExistingValue( byte[] value )
+  internal void SetValue( ReadOnlySpan<byte> buffer );
+  internal void AddToExistingValue( ReadOnlySpan<byte> buffer )
   {
     // default implementation
   }
+
   public bool TryGetValue( out MetadataTagValue? value );
   public bool TryGetValueArray( out List<MetadataTagValue>? value );
-  public bool IsArray { get; }
+
+  internal string StringValue { get; }
   public ushort TagId { get; }
-  public string StringValue { get; }
+  public MetadataType TagType { get; }
+  internal string TagTypeName => TagType.ToString();
+  public bool IsArray { get; }
+  public bool HasValue { get; }
 }

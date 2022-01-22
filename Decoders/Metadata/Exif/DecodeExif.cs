@@ -203,7 +203,7 @@ internal class DecodeExif
                 _profileTags.Add( profile, tags );
               }
 
-              dataValue.SetValue();
+              dataValue.SetValue( null );
               tags.Add( dataValue );
             }
           }

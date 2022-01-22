@@ -9,7 +9,6 @@
 namespace Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 using System;
-using System.Runtime.InteropServices;
 using System.Text;
 
 /// <summary>
@@ -30,20 +29,20 @@ internal static class DataConversion
       // Buffer will be null terminated so remove any zero bytes from the end
       if( encoding == StringEncoding.Ascii )
       {
-        return Encoding.UTF8.GetString( buffer ).TrimEnd( (char)0 );
+        return Encoding.UTF8.GetString( buffer ).TrimEnd( (char)0 ).Trim();
       }
       else if( encoding == StringEncoding.Unicode )
       {
-        return Encoding.Unicode.GetString( buffer ).TrimEnd( (char)0 );
+        return Encoding.Unicode.GetString( buffer ).TrimEnd( (char)0 ).Trim();
       }
       else if( encoding == StringEncoding.Ucs2 )
       {
-        return Encoding.GetEncoding( "UCS-2" ).GetString( buffer ).TrimEnd( (char)0 );
+        return Encoding.GetEncoding( "UCS-2" ).GetString( buffer ).TrimEnd( (char)0 ).Trim();
       }
       else
       {
         // UTF8 is best for unknown encoding, as it decodes ascii as well as dbcs characters
-        return Encoding.UTF8.GetString( buffer ).TrimEnd( (char)0 );
+        return Encoding.UTF8.GetString( buffer ).TrimEnd( (char)0 ).Trim();
       }
     }
 

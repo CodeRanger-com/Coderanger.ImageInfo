@@ -68,7 +68,10 @@ internal struct TextInternationalChunk : IChunk
         value = DataConversion.ConvertBuffer( valueBuffer, StringEncoding.Utf8 );
       }
 
-      Text = new PngText( keyword.Value, value, language.Value, translatedKeyword.Value );
+      if( value.Length > 0 )
+      {
+        Text = new PngText( keyword.Value, TextValue: value, language.Value, translatedKeyword.Value );
+      }
     }
   }
 

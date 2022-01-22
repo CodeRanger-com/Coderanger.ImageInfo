@@ -20,9 +20,7 @@ internal class ExifInt : ExifTypeBase, IMetadataTypedValue
   {
   }
 
-  public string StringValue => ToString();
-
-  void IMetadataTypedValue.SetValue()
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();
   }
@@ -65,9 +63,7 @@ internal class ExifUInt : ExifTypeBase, IMetadataTypedValue
   {
   }
 
-  public string StringValue => ToString();
-
-  void IMetadataTypedValue.SetValue()
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();
   }

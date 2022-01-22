@@ -1,25 +1,31 @@
 {
-  "sony-cybershot.jpg-exiftags": {
+  "sony-cybershot.jpg-metadata": {
     "Exif": [
       {
-        "StringValue": "Image Description =                                ",
         "IsArray": false,
+        "StringValue": "Image Description = ",
+        "HasValue": false,
+        "TagTypeName": "String",
         "TagId": 270,
         "TagType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
       },
       {
-        "StringValue": "Camera Make = SONY",
         "IsArray": false,
+        "StringValue": "Camera Make = SONY",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 271,
         "TagType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Camera Model = CYBERSHOT",
         "IsArray": false,
+        "StringValue": "Camera Model = CYBERSHOT",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 272,
         "TagType": 2,
         "Name": "Camera Model",
@@ -28,6 +34,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -36,6 +44,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -44,6 +54,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -52,6 +64,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -60,6 +74,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time = 30/09/2000 10:59:45",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 306,
         "TagType": 15,
         "Name": "Date Time",
@@ -68,6 +84,8 @@
       {
         "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
@@ -76,22 +94,28 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 259,
         "TagType": 3,
         "Name": "Compression",
         "Description": "Compression scheme used for the image data"
       },
       {
-        "StringValue": "Camera Make = SONY",
         "IsArray": false,
+        "StringValue": "Camera Make = SONY",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 271,
         "TagType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Camera Model = CYBERSHOT",
         "IsArray": false,
+        "StringValue": "Camera Model = CYBERSHOT",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 272,
         "TagType": 2,
         "Name": "Camera Model",
@@ -100,6 +124,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -108,6 +134,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -116,6 +144,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -124,6 +154,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -132,6 +164,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time = 30/09/2000 10:59:45",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 306,
         "TagType": 15,
         "Name": "Date Time",
@@ -140,6 +174,8 @@
       {
         "StringValue": "JPEG Interchange Format = 797",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 513,
         "TagType": 5,
         "Name": "JPEG Interchange Format",
@@ -148,6 +184,8 @@
       {
         "StringValue": "JPEG Interchange Format Length = 2959",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 514,
         "TagType": 5,
         "Name": "JPEG Interchange Format Length",
@@ -156,6 +194,8 @@
       {
         "StringValue": "Exposure Time = 1/197 (0.005076142131979695D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33434,
         "TagType": 12,
         "Name": "Exposure Time",
@@ -164,6 +204,8 @@
       {
         "StringValue": "F Number = 40/10 (4D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33437,
         "TagType": 12,
         "Name": "F Number",
@@ -172,6 +214,8 @@
       {
         "StringValue": "Exposure Program = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34850,
         "TagType": 3,
         "Name": "Exposure Program",
@@ -180,6 +224,8 @@
       {
         "StringValue": "ISO Speed Ratings = 100",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34855,
         "TagType": 3,
         "Name": "ISO Speed Ratings",
@@ -188,6 +234,8 @@
       {
         "StringValue": "Photo Exif Version = 48 / 50 / 49 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 36864,
         "TagType": 1,
         "Name": "Photo Exif Version",
@@ -196,6 +244,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time Original = 30/09/2000 10:59:45",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36867,
         "TagType": 15,
         "Name": "Date Time Original",
@@ -204,6 +254,8 @@
       {
         "IsArray": false,
         "StringValue": "Photo Date Time Digitized = 30/09/2000 10:59:45",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36868,
         "TagType": 15,
         "Name": "Photo Date Time Digitized",
@@ -212,6 +264,8 @@
       {
         "StringValue": "Photo Components Configuration = 1 / 2 / 3 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37121,
         "TagType": 1,
         "Name": "Photo Components Configuration",
@@ -220,6 +274,8 @@
       {
         "StringValue": "Compressed Bits Per Pixel = 2/1 (2D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37122,
         "TagType": 12,
         "Name": "Compressed Bits Per Pixel",
@@ -228,6 +284,8 @@
       {
         "StringValue": "Exposure Bias = 0/10 (0D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37380,
         "TagType": 11,
         "Name": "Exposure Bias",
@@ -236,6 +294,8 @@
       {
         "StringValue": "Max Exposure = 3/1 (3D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37381,
         "TagType": 12,
         "Name": "Max Exposure",
@@ -244,6 +304,8 @@
       {
         "StringValue": "Metering Mode = 2 (Center-weighted average)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 37383,
         "TagType": 16,
         "Name": "Metering Mode",
@@ -252,6 +314,8 @@
       {
         "StringValue": "Light Source = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37384,
         "TagType": 3,
         "Name": "Light Source",
@@ -260,6 +324,8 @@
       {
         "StringValue": "Flash = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37385,
         "TagType": 3,
         "Name": "Flash",
@@ -268,6 +334,8 @@
       {
         "StringValue": "Focal Length = 216/10 (21.6D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37386,
         "TagType": 12,
         "Name": "Focal Length",
@@ -276,6 +344,8 @@
       {
         "StringValue": "Photo Flashpix Version = 48 / 49 / 48 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 40960,
         "TagType": 1,
         "Name": "Photo Flashpix Version",
@@ -284,6 +354,8 @@
       {
         "StringValue": "Photo Color Space = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 40961,
         "TagType": 3,
         "Name": "Photo Color Space",
@@ -292,6 +364,8 @@
       {
         "StringValue": "Photo Pixel X Dimension = 640",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40962,
         "TagType": 5,
         "Name": "Photo Pixel X Dimension",
@@ -300,6 +374,8 @@
       {
         "StringValue": "Photo Pixel Y Dimension = 480",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40963,
         "TagType": 5,
         "Name": "Photo Pixel Y Dimension",
@@ -308,6 +384,8 @@
       {
         "StringValue": "Photo File Source = 3 (Digital Camera)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 41728,
         "TagType": 16,
         "Name": "Photo File Source",
@@ -316,6 +394,8 @@
       {
         "StringValue": "Photo Scene Type = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 41729,
         "TagType": 1,
         "Name": "Photo Scene Type",
@@ -324,16 +404,20 @@
     ],
     "Interoperability": [
       {
-        "StringValue": "Interoperability Index = R98",
         "IsArray": false,
+        "StringValue": "Interoperability Index = R98",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8193,
         "TagType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
       },
       {
-        "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
+        "StringValue": "Interoperability Version = 0100",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8194,
         "TagType": 2,
         "Name": "Interoperability Version",
@@ -341,27 +425,33 @@
       }
     ]
   },
-  "sanyo-vpcg250.jpg-exiftags": {
+  "sanyo-vpcg250.jpg-metadata": {
     "Exif": [
       {
-        "StringValue": "Image Description = SANYO DIGITAL CAMERA",
         "IsArray": false,
+        "StringValue": "Image Description = SANYO DIGITAL CAMERA",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 270,
         "TagType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
       },
       {
-        "StringValue": "Camera Make = SANYO Electric Co.,Ltd.",
         "IsArray": false,
+        "StringValue": "Camera Make = SANYO Electric Co.,Ltd.",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 271,
         "TagType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Camera Model = SR6 ",
         "IsArray": false,
+        "StringValue": "Camera Model = SR6",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 272,
         "TagType": 2,
         "Name": "Camera Model",
@@ -370,6 +460,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -378,6 +470,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -386,6 +480,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -394,14 +490,18 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "Software = V06P-74",
         "IsArray": false,
+        "StringValue": "Software = V06P-74",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 305,
         "TagType": 2,
         "Name": "Software",
@@ -410,6 +510,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time = 01/01/1998 00:00:00",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 306,
         "TagType": 15,
         "Name": "Date Time",
@@ -418,6 +520,8 @@
       {
         "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
@@ -426,6 +530,8 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 259,
         "TagType": 3,
         "Name": "Compression",
@@ -434,6 +540,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -442,6 +550,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -450,6 +560,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -458,6 +570,8 @@
       {
         "StringValue": "JPEG Interchange Format = 877",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 513,
         "TagType": 5,
         "Name": "JPEG Interchange Format",
@@ -466,6 +580,8 @@
       {
         "StringValue": "JPEG Interchange Format Length = 3602",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 514,
         "TagType": 5,
         "Name": "JPEG Interchange Format Length",
@@ -474,6 +590,8 @@
       {
         "StringValue": "Exposure Time = 1/171 (0.005847953216374269D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33434,
         "TagType": 12,
         "Name": "Exposure Time",
@@ -482,6 +600,8 @@
       {
         "StringValue": "F Number = 80/10 (8D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33437,
         "TagType": 12,
         "Name": "F Number",
@@ -490,6 +610,8 @@
       {
         "StringValue": "Photo Exif Version = 48 / 50 / 48 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 36864,
         "TagType": 1,
         "Name": "Photo Exif Version",
@@ -498,6 +620,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time Original = 01/01/1998 00:00:00",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36867,
         "TagType": 15,
         "Name": "Date Time Original",
@@ -506,6 +630,8 @@
       {
         "IsArray": false,
         "StringValue": "Photo Date Time Digitized = 01/01/1998 00:00:00",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36868,
         "TagType": 15,
         "Name": "Photo Date Time Digitized",
@@ -514,6 +640,8 @@
       {
         "StringValue": "Photo Components Configuration = 1 / 2 / 3 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37121,
         "TagType": 1,
         "Name": "Photo Components Configuration",
@@ -522,6 +650,8 @@
       {
         "StringValue": "Compressed Bits Per Pixel = 17/10 (1.7D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37122,
         "TagType": 12,
         "Name": "Compressed Bits Per Pixel",
@@ -530,6 +660,8 @@
       {
         "StringValue": "Exposure Bias = 0/10 (0D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37380,
         "TagType": 11,
         "Name": "Exposure Bias",
@@ -538,6 +670,8 @@
       {
         "StringValue": "Max Exposure = 3/1 (3D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37381,
         "TagType": 12,
         "Name": "Max Exposure",
@@ -546,6 +680,8 @@
       {
         "StringValue": "Metering Mode = 2 (Center-weighted average)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 37383,
         "TagType": 16,
         "Name": "Metering Mode",
@@ -554,6 +690,8 @@
       {
         "StringValue": "Light Source = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37384,
         "TagType": 3,
         "Name": "Light Source",
@@ -562,6 +700,8 @@
       {
         "StringValue": "Flash = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37385,
         "TagType": 3,
         "Name": "Flash",
@@ -570,6 +710,8 @@
       {
         "StringValue": "Focal Length = 60/10 (6D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37386,
         "TagType": 12,
         "Name": "Focal Length",
@@ -578,6 +720,8 @@
       {
         "StringValue": "Photo Maker Note = 83 / 65 / 78 / 89 / 79 / 0 / 1 / 0 / 3 / 0 / 0 / 2 / 4 / 0 / 3 / 0 / 0 / 0 / 17 / 3 / 0 / 0 / 1 / 2 / 3 / 0 / 1 / 0 / 0 / 0 / 2 / 0 / 0 / 0 / 0 / 15 / 4 / 0 / 20 / 0 / 0 / 0 / 29 / 3 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 5 / 56 / 0 / 0 / 132 / 214 / 0 / 0 / 25 / 8 / 0 / 0 / 76 / 172 / 0 / 0 / 22 / 192 / 0 / 0 / 2 / 9 / 0 / 0 / 0 / 0 / 0 / 0 / 1 / 6 / 255 / 255 / 249 / 57 / 0 / 0 / 0 / 14 / 0 / 0 / 0 / 16 / 0 / 0 / 0 / 14 / 0 / 0 / 0 / 14 / 0 / 0 / 0 / 32 / 0 / 0 / 0 / 123 / 0 / 0 / 0 / 123 / 0 / 0 / 0 / 123 / 0 / 0 / 0 / 123 / 0 / 0 / 0 / 63 / 0 / 0 / 0 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37500,
         "TagType": 1,
         "Name": "Photo Maker Note",
@@ -586,6 +730,8 @@
       {
         "StringValue": "Photo Flashpix Version = 48 / 49 / 48 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 40960,
         "TagType": 1,
         "Name": "Photo Flashpix Version",
@@ -594,6 +740,8 @@
       {
         "StringValue": "Photo Color Space = 65535",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 40961,
         "TagType": 3,
         "Name": "Photo Color Space",
@@ -602,6 +750,8 @@
       {
         "StringValue": "Photo Pixel X Dimension = 640",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40962,
         "TagType": 5,
         "Name": "Photo Pixel X Dimension",
@@ -610,14 +760,18 @@
       {
         "StringValue": "Photo Pixel Y Dimension = 480",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40963,
         "TagType": 5,
         "Name": "Photo Pixel Y Dimension",
         "Description": "Records the valid height of the meaningful image when it has been compressed"
       },
       {
-        "StringValue": "Photo Related Sound File =             ",
         "IsArray": false,
+        "StringValue": "Photo Related Sound File = ",
+        "HasValue": false,
+        "TagTypeName": "String",
         "TagId": 40964,
         "TagType": 2,
         "Name": "Photo Related Sound File",
@@ -626,6 +780,8 @@
       {
         "StringValue": "Photo File Source = 3 (Digital Camera)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 41728,
         "TagType": 16,
         "Name": "Photo File Source",
@@ -633,27 +789,33 @@
       }
     ]
   },
-  "nikon-e950.jpg-exiftags": {
+  "nikon-e950.jpg-metadata": {
     "Exif": [
       {
-        "StringValue": "Image Description =           ",
         "IsArray": false,
+        "StringValue": "Image Description = ",
+        "HasValue": false,
+        "TagTypeName": "String",
         "TagId": 270,
         "TagType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
       },
       {
-        "StringValue": "Camera Make = NIKON",
         "IsArray": false,
+        "StringValue": "Camera Make = NIKON",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 271,
         "TagType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Camera Model = E950",
         "IsArray": false,
+        "StringValue": "Camera Model = E950",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 272,
         "TagType": 2,
         "Name": "Camera Model",
@@ -662,6 +824,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -670,6 +834,8 @@
       {
         "StringValue": "Horizontal Resolution = 300/1 (300D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -678,6 +844,8 @@
       {
         "StringValue": "Vertical Resolution = 300/1 (300D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -686,14 +854,18 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "Software = v981-79",
         "IsArray": false,
+        "StringValue": "Software = v981-79",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 305,
         "TagType": 2,
         "Name": "Software",
@@ -702,6 +874,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time = 06/04/2001 11:51:40",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 306,
         "TagType": 15,
         "Name": "Date Time",
@@ -710,6 +884,8 @@
       {
         "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
@@ -718,6 +894,8 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 259,
         "TagType": 3,
         "Name": "Compression",
@@ -726,6 +904,8 @@
       {
         "StringValue": "Horizontal Resolution = 300/1 (300D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -734,6 +914,8 @@
       {
         "StringValue": "Vertical Resolution = 300/1 (300D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -742,6 +924,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -750,6 +934,8 @@
       {
         "StringValue": "JPEG Interchange Format = 2036",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 513,
         "TagType": 5,
         "Name": "JPEG Interchange Format",
@@ -758,6 +944,8 @@
       {
         "StringValue": "JPEG Interchange Format Length = 4662",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 514,
         "TagType": 5,
         "Name": "JPEG Interchange Format Length",
@@ -766,6 +954,8 @@
       {
         "StringValue": "Exposure Time = 10/770 (0.012987012987012988D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33434,
         "TagType": 12,
         "Name": "Exposure Time",
@@ -774,6 +964,8 @@
       {
         "StringValue": "F Number = 55/10 (5.5D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33437,
         "TagType": 12,
         "Name": "F Number",
@@ -782,6 +974,8 @@
       {
         "StringValue": "Exposure Program = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34850,
         "TagType": 3,
         "Name": "Exposure Program",
@@ -790,6 +984,8 @@
       {
         "StringValue": "ISO Speed Ratings = 80",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34855,
         "TagType": 3,
         "Name": "ISO Speed Ratings",
@@ -798,6 +994,8 @@
       {
         "StringValue": "Photo Exif Version = 48 / 50 / 49 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 36864,
         "TagType": 1,
         "Name": "Photo Exif Version",
@@ -806,6 +1004,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time Original = 06/04/2001 11:51:40",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36867,
         "TagType": 15,
         "Name": "Date Time Original",
@@ -814,6 +1014,8 @@
       {
         "IsArray": false,
         "StringValue": "Photo Date Time Digitized = 06/04/2001 11:51:40",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36868,
         "TagType": 15,
         "Name": "Photo Date Time Digitized",
@@ -822,6 +1024,8 @@
       {
         "StringValue": "Photo Components Configuration = 1 / 2 / 3 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37121,
         "TagType": 1,
         "Name": "Photo Components Configuration",
@@ -830,6 +1034,8 @@
       {
         "StringValue": "Compressed Bits Per Pixel = 4/1 (4D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37122,
         "TagType": 12,
         "Name": "Compressed Bits Per Pixel",
@@ -838,6 +1044,8 @@
       {
         "StringValue": "Exposure Bias = 0/10 (0D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37380,
         "TagType": 11,
         "Name": "Exposure Bias",
@@ -846,6 +1054,8 @@
       {
         "StringValue": "Max Exposure = 26/10 (2.6D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37381,
         "TagType": 12,
         "Name": "Max Exposure",
@@ -854,6 +1064,8 @@
       {
         "StringValue": "Metering Mode = 5 (Multi-segment)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 37383,
         "TagType": 16,
         "Name": "Metering Mode",
@@ -862,6 +1074,8 @@
       {
         "StringValue": "Light Source = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37384,
         "TagType": 3,
         "Name": "Light Source",
@@ -870,6 +1084,8 @@
       {
         "StringValue": "Flash = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37385,
         "TagType": 3,
         "Name": "Flash",
@@ -878,6 +1094,8 @@
       {
         "StringValue": "Focal Length = 128/10 (12.8D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37386,
         "TagType": 12,
         "Name": "Focal Length",
@@ -886,14 +1104,18 @@
       {
         "StringValue": "Photo Maker Note = 78 / 105 / 107 / 111 / 110 / 0 / 1 / 0 / 11 / 0 / 2 / 0 / 2 / 0 / 6 / 0 / 0 / 0 / 38 / 4 / 0 / 0 / 3 / 0 / 3 / 0 / 1 / 0 / 0 / 0 / 12 / 0 / 0 / 0 / 4 / 0 / 3 / 0 / 1 / 0 / 0 / 0 / 1 / 0 / 0 / 0 / 5 / 0 / 3 / 0 / 1 / 0 / 0 / 0 / 3 / 0 / 0 / 0 / 6 / 0 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 7 / 0 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 8 / 0 / 5 / 0 / 1 / 0 / 0 / 0 / 44 / 4 / 0 / 0 / 9 / 0 / 2 / 0 / 20 / 0 / 0 / 0 / 52 / 4 / 0 / 0 / 10 / 0 / 5 / 0 / 1 / 0 / 0 / 0 / 72 / 4 / 0 / 0 / 11 / 0 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 15 / 4 / 0 / 30 / 0 / 0 / 0 / 80 / 4 / 0 / 0 / 0 / 0 / 0 / 0 / 48 / 56 / 46 / 48 / 48 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 100 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 1 / 0 / 0 / 0 / 0 / 16 / 169 / 21 / 160 / 0 / 0 / 0 / 0 / 17 / 136 / 0 / 0 / 19 / 27 / 0 / 0 / 50 / 63 / 0 / 0 / 20 / 17 / 0 / 0 / 20 / 17 / 0 / 0 / 31 / 6 / 12 / 198 / 0 / 47 / 13 / 201 / 8 / 59 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 7 / 146 / 17 / 0 / 0 / 0 / 19 / 15 / 17 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 64 / 0 / 79 / 50 / 0 / 11 / 74 / 3 / 20 / 100 / 0 / 13 / 86 / 59 / 0 / 88 / 22 / 0 / 22 / 22 / 22 / 22 / 16 / 241 / 69 / 0 / 255 / 0 / 87 / 100 / 50 / 12 / 193 / 6 / 0 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37500,
         "TagType": 1,
         "Name": "Photo Maker Note",
         "Description": "Records additional desired information from the creator of the Exif data"
       },
       {
-        "StringValue": "Photo User Comment = \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000                                                                                                                     ",
         "IsArray": false,
+        "StringValue": "Photo User Comment = \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 37510,
         "TagType": 2,
         "Name": "Photo User Comment",
@@ -902,6 +1124,8 @@
       {
         "StringValue": "Photo Flashpix Version = 48 / 49 / 48 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 40960,
         "TagType": 1,
         "Name": "Photo Flashpix Version",
@@ -910,6 +1134,8 @@
       {
         "StringValue": "Photo Color Space = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 40961,
         "TagType": 3,
         "Name": "Photo Color Space",
@@ -918,6 +1144,8 @@
       {
         "StringValue": "Photo Pixel X Dimension = 1600",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40962,
         "TagType": 5,
         "Name": "Photo Pixel X Dimension",
@@ -926,6 +1154,8 @@
       {
         "StringValue": "Photo Pixel Y Dimension = 1200",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40963,
         "TagType": 5,
         "Name": "Photo Pixel Y Dimension",
@@ -934,6 +1164,8 @@
       {
         "StringValue": "Photo File Source = 3 (Digital Camera)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 41728,
         "TagType": 16,
         "Name": "Photo File Source",
@@ -942,6 +1174,8 @@
       {
         "StringValue": "Photo Scene Type = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 41729,
         "TagType": 1,
         "Name": "Photo Scene Type",
@@ -950,16 +1184,20 @@
     ],
     "Interoperability": [
       {
-        "StringValue": "Interoperability Index = R98",
         "IsArray": false,
+        "StringValue": "Interoperability Index = R98",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8193,
         "TagType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
       },
       {
-        "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
+        "StringValue": "Interoperability Version = 0100",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8194,
         "TagType": 2,
         "Name": "Interoperability Version",
@@ -967,27 +1205,33 @@
       }
     ]
   },
-  "kodak-dc210.jpg-exiftags": {
+  "kodak-dc210.jpg-metadata": {
     "Exif": [
       {
-        "StringValue": "Image Description = ",
         "IsArray": false,
+        "StringValue": "Image Description = ",
+        "HasValue": false,
+        "TagTypeName": "String",
         "TagId": 270,
         "TagType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
       },
       {
-        "StringValue": "Camera Make = Eastman Kodak Company",
         "IsArray": false,
+        "StringValue": "Camera Make = Eastman Kodak Company",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 271,
         "TagType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Camera Model = DC210 Zoom (V05.00)",
         "IsArray": false,
+        "StringValue": "Camera Model = DC210 Zoom (V05.00)",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 272,
         "TagType": 2,
         "Name": "Camera Model",
@@ -996,6 +1240,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -1004,6 +1250,8 @@
       {
         "StringValue": "Horizontal Resolution = 216/1 (216D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -1012,6 +1260,8 @@
       {
         "StringValue": "Vertical Resolution = 216/1 (216D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -1020,6 +1270,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -1028,14 +1280,18 @@
       {
         "StringValue": "YCbCr Positioning = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
         "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
-        "StringValue": "Copyright = ",
         "IsArray": false,
+        "StringValue": "Copyright = ",
+        "HasValue": false,
+        "TagTypeName": "String",
         "TagId": 33432,
         "TagType": 2,
         "Name": "Copyright",
@@ -1044,6 +1300,8 @@
       {
         "StringValue": "Image Width = 96",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 256,
         "TagType": 3,
         "Name": "Image Width",
@@ -1052,6 +1310,8 @@
       {
         "StringValue": "Image Height = 72",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 257,
         "TagType": 3,
         "Name": "Image Height",
@@ -1060,6 +1320,8 @@
       {
         "StringValue": "Bits Per Sample = 8 / 8 / 8",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 258,
         "TagType": 3,
         "Name": "Bits Per Sample",
@@ -1068,6 +1330,8 @@
       {
         "StringValue": "Compression = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 259,
         "TagType": 3,
         "Name": "Compression",
@@ -1076,6 +1340,8 @@
       {
         "StringValue": "Photometric Interpretation = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 262,
         "TagType": 3,
         "Name": "Photometric Interpretation",
@@ -1084,6 +1350,8 @@
       {
         "StringValue": "Strip Offsets = 60817408",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Int",
         "TagId": 273,
         "TagType": 6,
         "Name": "Strip Offsets",
@@ -1092,6 +1360,8 @@
       {
         "StringValue": "Samples Per Pixel = 3",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 277,
         "TagType": 3,
         "Name": "Samples Per Pixel",
@@ -1100,6 +1370,8 @@
       {
         "StringValue": "Rows Per Strip = 4718592",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Int",
         "TagId": 278,
         "TagType": 6,
         "Name": "Rows Per Strip",
@@ -1108,6 +1380,8 @@
       {
         "StringValue": "Strip Byte Counts = 1358954496",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Int",
         "TagId": 279,
         "TagType": 6,
         "Name": "Strip Byte Counts",
@@ -1116,6 +1390,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -1124,6 +1400,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -1132,6 +1410,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -1140,6 +1420,8 @@
       {
         "StringValue": "Exposure Time = 1/30 (0.03333333333333333D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33434,
         "TagType": 12,
         "Name": "Exposure Time",
@@ -1148,6 +1430,8 @@
       {
         "StringValue": "F Number = 40/10 (4D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33437,
         "TagType": 12,
         "Name": "F Number",
@@ -1156,6 +1440,8 @@
       {
         "StringValue": "Photo Exif Version = 48 / 49 / 49 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 36864,
         "TagType": 1,
         "Name": "Photo Exif Version",
@@ -1164,6 +1450,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time Original = 26/10/2000 16:46:51",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36867,
         "TagType": 15,
         "Name": "Date Time Original",
@@ -1172,6 +1460,8 @@
       {
         "StringValue": "Photo Components Configuration = 1 / 2 / 3 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37121,
         "TagType": 1,
         "Name": "Photo Components Configuration",
@@ -1180,6 +1470,8 @@
       {
         "StringValue": "Compressed Bits Per Pixel = 0/0 (NaND)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37122,
         "TagType": 12,
         "Name": "Compressed Bits Per Pixel",
@@ -1188,6 +1480,8 @@
       {
         "StringValue": "Shutter Speed = 50/10 (5D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37377,
         "TagType": 11,
         "Name": "Shutter Speed",
@@ -1196,6 +1490,8 @@
       {
         "StringValue": "Lens Aperture = 40/10 (4D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37378,
         "TagType": 12,
         "Name": "Lens Aperture",
@@ -1204,6 +1500,8 @@
       {
         "StringValue": "Brightness = 15/10 (1.5D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37379,
         "TagType": 11,
         "Name": "Brightness",
@@ -1212,6 +1510,8 @@
       {
         "StringValue": "Exposure Bias = 0/10 (0D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37380,
         "TagType": 11,
         "Name": "Exposure Bias",
@@ -1220,6 +1520,8 @@
       {
         "StringValue": "Max Exposure = 400/100 (4D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37381,
         "TagType": 12,
         "Name": "Max Exposure",
@@ -1228,6 +1530,8 @@
       {
         "StringValue": "Subject Distance = 0/0 (NaND)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37382,
         "TagType": 11,
         "Name": "Subject Distance",
@@ -1236,6 +1540,8 @@
       {
         "StringValue": "Metering Mode = 2 (Center-weighted average)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 37383,
         "TagType": 16,
         "Name": "Metering Mode",
@@ -1244,6 +1550,8 @@
       {
         "StringValue": "Light Source = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37384,
         "TagType": 3,
         "Name": "Light Source",
@@ -1252,6 +1560,8 @@
       {
         "StringValue": "Flash = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37385,
         "TagType": 3,
         "Name": "Flash",
@@ -1260,6 +1570,8 @@
       {
         "StringValue": "Focal Length = 44/10 (4.4D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37386,
         "TagType": 12,
         "Name": "Focal Length",
@@ -1268,6 +1580,8 @@
       {
         "StringValue": "Photo Maker Note = 1 / 4 / 3 / 0 / 2 / 1 / 255 / 255 / 0 / 1 / 55 / 142 / 14 / 93 / 109 / 246 / 1 / 0 / 0 / 251 / 0 / 4 / 255 / 32 / 0 / 0 / 40 / 0 / 0 / 0 / 12 / 53 / 68 / 67 / 80 / 48 / 49 / 48 / 49 / 49 / 46 / 74 / 80 / 71 / 0 / 4 / 0 / 0 / 0 / 1 / 228 / 224 / 0 / 1 / 0 / 0 / 0 / 1 / 145 / 128 / 0 / 1 / 194 / 64 / 0 / 1 / 0 / 0 / 0 / 1 / 222 / 16",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37500,
         "TagType": 1,
         "Name": "Photo Maker Note",
@@ -1275,27 +1589,33 @@
       }
     ]
   },
-  "sony-d700.jpg-exiftags": {
+  "sony-d700.jpg-metadata": {
     "Exif": [
       {
-        "StringValue": "Image Description = ",
         "IsArray": false,
+        "StringValue": "Image Description = ",
+        "HasValue": false,
+        "TagTypeName": "String",
         "TagId": 270,
         "TagType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
       },
       {
-        "StringValue": "Camera Make = SONY",
         "IsArray": false,
+        "StringValue": "Camera Make = SONY",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 271,
         "TagType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Camera Model = DSC-D700",
         "IsArray": false,
+        "StringValue": "Camera Model = DSC-D700",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 272,
         "TagType": 2,
         "Name": "Camera Model",
@@ -1304,6 +1624,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -1312,6 +1634,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -1320,6 +1644,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -1328,6 +1654,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -1336,6 +1664,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time = 01/12/1998 14:22:36",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 306,
         "TagType": 15,
         "Name": "Date Time",
@@ -1344,6 +1674,8 @@
       {
         "StringValue": "YCbCr Positioning = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
@@ -1352,6 +1684,8 @@
       {
         "StringValue": "Image Width = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 256,
         "TagType": 3,
         "Name": "Image Width",
@@ -1360,6 +1694,8 @@
       {
         "StringValue": "Image Height = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 257,
         "TagType": 3,
         "Name": "Image Height",
@@ -1368,6 +1704,8 @@
       {
         "StringValue": "Bits Per Sample = 8 / 8 / 8",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 258,
         "TagType": 3,
         "Name": "Bits Per Sample",
@@ -1376,6 +1714,8 @@
       {
         "StringValue": "Compression = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 259,
         "TagType": 3,
         "Name": "Compression",
@@ -1384,6 +1724,8 @@
       {
         "StringValue": "Photometric Interpretation = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 262,
         "TagType": 3,
         "Name": "Photometric Interpretation",
@@ -1392,6 +1734,8 @@
       {
         "StringValue": "Strip Offsets = 648",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Int",
         "TagId": 273,
         "TagType": 6,
         "Name": "Strip Offsets",
@@ -1400,6 +1744,8 @@
       {
         "StringValue": "Samples Per Pixel = 3",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 277,
         "TagType": 3,
         "Name": "Samples Per Pixel",
@@ -1408,6 +1754,8 @@
       {
         "StringValue": "Rows Per Strip = 60",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Int",
         "TagId": 278,
         "TagType": 6,
         "Name": "Rows Per Strip",
@@ -1416,6 +1764,8 @@
       {
         "StringValue": "Strip Byte Counts = 14400",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Int",
         "TagId": 279,
         "TagType": 6,
         "Name": "Strip Byte Counts",
@@ -1424,6 +1774,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -1432,6 +1784,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -1440,6 +1794,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -1448,6 +1804,8 @@
       {
         "StringValue": "Exposure Program = 3",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34850,
         "TagType": 3,
         "Name": "Exposure Program",
@@ -1456,6 +1814,8 @@
       {
         "StringValue": "ISO Speed Ratings = 200",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34855,
         "TagType": 3,
         "Name": "ISO Speed Ratings",
@@ -1464,6 +1824,8 @@
       {
         "StringValue": "Photo Exif Version = 48 / 50 / 48 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 36864,
         "TagType": 1,
         "Name": "Photo Exif Version",
@@ -1472,6 +1834,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time Original = 01/12/1998 14:22:36",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36867,
         "TagType": 15,
         "Name": "Date Time Original",
@@ -1480,6 +1844,8 @@
       {
         "IsArray": false,
         "StringValue": "Photo Date Time Digitized = 01/12/1998 14:22:36",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36868,
         "TagType": 15,
         "Name": "Photo Date Time Digitized",
@@ -1488,6 +1854,8 @@
       {
         "StringValue": "Photo Components Configuration = 1 / 2 / 3 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37121,
         "TagType": 1,
         "Name": "Photo Components Configuration",
@@ -1496,6 +1864,8 @@
       {
         "StringValue": "Compressed Bits Per Pixel = 6/1 (6D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37122,
         "TagType": 12,
         "Name": "Compressed Bits Per Pixel",
@@ -1504,6 +1874,8 @@
       {
         "StringValue": "Shutter Speed = 500/100 (5D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37377,
         "TagType": 11,
         "Name": "Shutter Speed",
@@ -1512,6 +1884,8 @@
       {
         "StringValue": "Lens Aperture = 250/100 (2.5D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37378,
         "TagType": 12,
         "Name": "Lens Aperture",
@@ -1520,6 +1894,8 @@
       {
         "StringValue": "Exposure Bias = 0/100 (0D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37380,
         "TagType": 11,
         "Name": "Exposure Bias",
@@ -1528,6 +1904,8 @@
       {
         "StringValue": "Metering Mode = 2 (Center-weighted average)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 37383,
         "TagType": 16,
         "Name": "Metering Mode",
@@ -1536,6 +1914,8 @@
       {
         "StringValue": "Flash = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37385,
         "TagType": 3,
         "Name": "Flash",
@@ -1544,6 +1924,8 @@
       {
         "StringValue": "Photo Flashpix Version = 48 / 49 / 48 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 40960,
         "TagType": 1,
         "Name": "Photo Flashpix Version",
@@ -1552,6 +1934,8 @@
       {
         "StringValue": "Photo Color Space = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 40961,
         "TagType": 3,
         "Name": "Photo Color Space",
@@ -1560,6 +1944,8 @@
       {
         "StringValue": "Photo Pixel X Dimension = 1344",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40962,
         "TagType": 5,
         "Name": "Photo Pixel X Dimension",
@@ -1568,6 +1954,8 @@
       {
         "StringValue": "Photo Pixel Y Dimension = 1024",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40963,
         "TagType": 5,
         "Name": "Photo Pixel Y Dimension",
@@ -1575,27 +1963,33 @@
       }
     ]
   },
-  "sanyo-vpcsx550.jpg-exiftags": {
+  "sanyo-vpcsx550.jpg-metadata": {
     "Exif": [
       {
-        "StringValue": "Image Description = SANYO DIGITAL CAMERA",
         "IsArray": false,
+        "StringValue": "Image Description = SANYO DIGITAL CAMERA",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 270,
         "TagType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
       },
       {
-        "StringValue": "Camera Make = SANYO Electric Co.,Ltd.",
         "IsArray": false,
+        "StringValue": "Camera Make = SANYO Electric Co.,Ltd.",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 271,
         "TagType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Camera Model = SX113 ",
         "IsArray": false,
+        "StringValue": "Camera Model = SX113",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 272,
         "TagType": 2,
         "Name": "Camera Model",
@@ -1604,6 +1998,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -1612,6 +2008,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -1620,6 +2018,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -1628,14 +2028,18 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "Software = V113p-73",
         "IsArray": false,
+        "StringValue": "Software = V113p-73",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 305,
         "TagType": 2,
         "Name": "Software",
@@ -1644,6 +2048,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time = 18/11/2000 21:14:19",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 306,
         "TagType": 15,
         "Name": "Date Time",
@@ -1652,6 +2058,8 @@
       {
         "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
@@ -1660,6 +2068,8 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 259,
         "TagType": 3,
         "Name": "Compression",
@@ -1668,6 +2078,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -1676,6 +2088,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -1684,6 +2098,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -1692,6 +2108,8 @@
       {
         "StringValue": "JPEG Interchange Format = 1070",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 513,
         "TagType": 5,
         "Name": "JPEG Interchange Format",
@@ -1700,6 +2118,8 @@
       {
         "StringValue": "JPEG Interchange Format Length = 13234",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 514,
         "TagType": 5,
         "Name": "JPEG Interchange Format Length",
@@ -1708,6 +2128,8 @@
       {
         "StringValue": "Exposure Time = 10/483 (0.020703933747412008D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33434,
         "TagType": 12,
         "Name": "Exposure Time",
@@ -1716,6 +2138,8 @@
       {
         "StringValue": "F Number = 24/10 (2.4D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33437,
         "TagType": 12,
         "Name": "F Number",
@@ -1724,6 +2148,8 @@
       {
         "StringValue": "ISO Speed Ratings = 400",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34855,
         "TagType": 3,
         "Name": "ISO Speed Ratings",
@@ -1732,6 +2158,8 @@
       {
         "StringValue": "Photo Exif Version = 48 / 50 / 49 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 36864,
         "TagType": 1,
         "Name": "Photo Exif Version",
@@ -1740,6 +2168,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time Original = 18/11/2000 21:14:19",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36867,
         "TagType": 15,
         "Name": "Date Time Original",
@@ -1748,6 +2178,8 @@
       {
         "IsArray": false,
         "StringValue": "Photo Date Time Digitized = 18/11/2000 21:14:19",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36868,
         "TagType": 15,
         "Name": "Photo Date Time Digitized",
@@ -1756,6 +2188,8 @@
       {
         "StringValue": "Photo Components Configuration = 1 / 2 / 3 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37121,
         "TagType": 1,
         "Name": "Photo Components Configuration",
@@ -1764,6 +2198,8 @@
       {
         "StringValue": "Compressed Bits Per Pixel = 17/10 (1.7D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37122,
         "TagType": 12,
         "Name": "Compressed Bits Per Pixel",
@@ -1772,6 +2208,8 @@
       {
         "StringValue": "Exposure Bias = 0/10 (0D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37380,
         "TagType": 11,
         "Name": "Exposure Bias",
@@ -1780,6 +2218,8 @@
       {
         "StringValue": "Max Exposure = 3/1 (3D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37381,
         "TagType": 12,
         "Name": "Max Exposure",
@@ -1788,6 +2228,8 @@
       {
         "StringValue": "Metering Mode = 2 (Center-weighted average)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 37383,
         "TagType": 16,
         "Name": "Metering Mode",
@@ -1796,6 +2238,8 @@
       {
         "StringValue": "Light Source = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37384,
         "TagType": 3,
         "Name": "Light Source",
@@ -1804,6 +2248,8 @@
       {
         "StringValue": "Flash = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37385,
         "TagType": 3,
         "Name": "Flash",
@@ -1812,6 +2258,8 @@
       {
         "StringValue": "Focal Length = 60/10 (6D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37386,
         "TagType": 12,
         "Name": "Focal Length",
@@ -1820,14 +2268,18 @@
       {
         "StringValue": "Photo Maker Note = 83 / 65 / 78 / 89 / 79 / 0 / 1 / 0 / 6 / 0 / 0 / 2 / 4 / 0 / 3 / 0 / 0 / 0 / 210 / 3 / 0 / 0 / 1 / 2 / 3 / 0 / 1 / 0 / 0 / 0 / 2 / 1 / 0 / 0 / 2 / 2 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 3 / 2 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 4 / 2 / 5 / 0 / 1 / 0 / 0 / 0 / 222 / 3 / 0 / 0 / 0 / 15 / 4 / 0 / 18 / 0 / 0 / 0 / 230 / 3 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 10 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 40 / 84 / 0 / 0 / 19 / 194 / 0 / 0 / 3 / 248 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 11 / 137 / 159 / 57 / 191 / 224 / 0 / 0 / 40 / 93 / 80 / 193 / 82 / 4 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 69 / 56 / 80 / 193 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 71 / 0 / 208",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37500,
         "TagType": 1,
         "Name": "Photo Maker Note",
         "Description": "Records additional desired information from the creator of the Exif data"
       },
       {
-        "StringValue": "Photo User Comment = \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000                                                                                                                     ",
         "IsArray": false,
+        "StringValue": "Photo User Comment = \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 37510,
         "TagType": 2,
         "Name": "Photo User Comment",
@@ -1836,6 +2288,8 @@
       {
         "StringValue": "Photo Flashpix Version = 48 / 49 / 48 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 40960,
         "TagType": 1,
         "Name": "Photo Flashpix Version",
@@ -1844,6 +2298,8 @@
       {
         "StringValue": "Photo Color Space = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 40961,
         "TagType": 3,
         "Name": "Photo Color Space",
@@ -1852,6 +2308,8 @@
       {
         "StringValue": "Photo Pixel X Dimension = 640",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40962,
         "TagType": 5,
         "Name": "Photo Pixel X Dimension",
@@ -1860,6 +2318,8 @@
       {
         "StringValue": "Photo Pixel Y Dimension = 480",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40963,
         "TagType": 5,
         "Name": "Photo Pixel Y Dimension",
@@ -1868,6 +2328,8 @@
       {
         "StringValue": "Photo File Source = 3 (Digital Camera)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 41728,
         "TagType": 16,
         "Name": "Photo File Source",
@@ -1876,16 +2338,20 @@
     ],
     "Interoperability": [
       {
-        "StringValue": "Interoperability Index = R98",
         "IsArray": false,
+        "StringValue": "Interoperability Index = R98",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8193,
         "TagType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
       },
       {
-        "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
+        "StringValue": "Interoperability Version = 0100",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8194,
         "TagType": 2,
         "Name": "Interoperability Version",
@@ -1893,19 +2359,23 @@
       }
     ]
   },
-  "ricoh-rdc5300.jpg-exiftags": {
+  "ricoh-rdc5300.jpg-metadata": {
     "Exif": [
       {
-        "StringValue": "Camera Make = RICOH      ",
         "IsArray": false,
+        "StringValue": "Camera Make = RICOH",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 271,
         "TagType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Camera Model = RDC-5300       ",
         "IsArray": false,
+        "StringValue": "Camera Model = RDC-5300",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 272,
         "TagType": 2,
         "Name": "Camera Model",
@@ -1914,6 +2384,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -1922,6 +2394,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -1930,6 +2404,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -1938,6 +2414,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -1946,14 +2424,18 @@
       {
         "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
         "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
-        "StringValue": "Copyright = (C) by RDC-5300 User     ",
         "IsArray": false,
+        "StringValue": "Copyright = (C) by RDC-5300 User",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 33432,
         "TagType": 2,
         "Name": "Copyright",
@@ -1962,6 +2444,8 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 259,
         "TagType": 3,
         "Name": "Compression",
@@ -1970,6 +2454,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -1978,6 +2464,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -1986,6 +2474,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -1994,6 +2484,8 @@
       {
         "StringValue": "JPEG Interchange Format = 1061",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 513,
         "TagType": 5,
         "Name": "JPEG Interchange Format",
@@ -2002,6 +2494,8 @@
       {
         "StringValue": "JPEG Interchange Format Length = 5046",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 514,
         "TagType": 5,
         "Name": "JPEG Interchange Format Length",
@@ -2010,6 +2504,8 @@
       {
         "StringValue": "Photo Exif Version = 48 / 50 / 49 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 36864,
         "TagType": 1,
         "Name": "Photo Exif Version",
@@ -2018,6 +2514,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time Original = 31/05/2000 21:50:40",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36867,
         "TagType": 15,
         "Name": "Date Time Original",
@@ -2026,6 +2524,8 @@
       {
         "IsArray": false,
         "StringValue": "Photo Date Time Digitized = 31/05/2000 21:50:40",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36868,
         "TagType": 15,
         "Name": "Photo Date Time Digitized",
@@ -2034,6 +2534,8 @@
       {
         "StringValue": "Photo Components Configuration = 1 / 2 / 3 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37121,
         "TagType": 1,
         "Name": "Photo Components Configuration",
@@ -2042,6 +2544,8 @@
       {
         "StringValue": "Compressed Bits Per Pixel = 300/100 (3D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37122,
         "TagType": 12,
         "Name": "Compressed Bits Per Pixel",
@@ -2050,6 +2554,8 @@
       {
         "StringValue": "Shutter Speed = 65/10 (6.5D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37377,
         "TagType": 11,
         "Name": "Shutter Speed",
@@ -2058,6 +2564,8 @@
       {
         "StringValue": "Lens Aperture = 40/10 (4D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37378,
         "TagType": 12,
         "Name": "Lens Aperture",
@@ -2066,6 +2574,8 @@
       {
         "StringValue": "Brightness = -20/10 (-2D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37379,
         "TagType": 11,
         "Name": "Brightness",
@@ -2074,6 +2584,8 @@
       {
         "StringValue": "Exposure Bias = 0/10 (0D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37380,
         "TagType": 11,
         "Name": "Exposure Bias",
@@ -2082,6 +2594,8 @@
       {
         "StringValue": "Max Exposure = 39/10 (3.9D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37381,
         "TagType": 12,
         "Name": "Max Exposure",
@@ -2090,6 +2604,8 @@
       {
         "StringValue": "Light Source = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37384,
         "TagType": 3,
         "Name": "Light Source",
@@ -2098,6 +2614,8 @@
       {
         "StringValue": "Flash = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37385,
         "TagType": 3,
         "Name": "Flash",
@@ -2106,6 +2624,8 @@
       {
         "StringValue": "Focal Length = 133/10 (13.3D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37386,
         "TagType": 12,
         "Name": "Focal Length",
@@ -2114,14 +2634,18 @@
       {
         "StringValue": "Photo Maker Note = 82 / 118 / 48 / 50 / 48 / 55 / 59 / 83 / 102 / 54 / 67 / 56 / 52 / 59 / 82 / 103 / 55 / 54 / 59 / 66 / 103 / 54 / 48 / 59 / 71 / 103 / 52 / 50 / 59 / 76 / 108 / 48 / 59 / 76 / 100 / 48 / 59 / 65 / 106 / 48 / 48 / 48 / 52 / 59 / 66 / 110 / 48 / 66 / 48 / 50 / 57 / 48 / 48 / 59 / 70 / 112 / 49 / 48 / 66 / 56 / 59 / 77 / 100 / 54 / 55 / 48 / 48 / 59 / 76 / 110 / 49 / 49 / 54 / 57 / 48 / 48 / 48 / 56 / 54 / 68 / 50 / 55 / 59 / 83 / 118 / 50 / 54 / 51 / 58 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 48 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37500,
         "TagType": 1,
         "Name": "Photo Maker Note",
         "Description": "Records additional desired information from the creator of the Exif data"
       },
       {
-        "StringValue": "Photo User Comment = ",
         "IsArray": false,
+        "StringValue": "Photo User Comment = ",
+        "HasValue": false,
+        "TagTypeName": "String",
         "TagId": 37510,
         "TagType": 2,
         "Name": "Photo User Comment",
@@ -2130,6 +2654,8 @@
       {
         "StringValue": "Photo Flashpix Version = 48 / 49 / 48 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 40960,
         "TagType": 1,
         "Name": "Photo Flashpix Version",
@@ -2138,6 +2664,8 @@
       {
         "StringValue": "Photo Color Space = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 40961,
         "TagType": 3,
         "Name": "Photo Color Space",
@@ -2146,6 +2674,8 @@
       {
         "StringValue": "Photo Pixel X Dimension = 1792",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40962,
         "TagType": 5,
         "Name": "Photo Pixel X Dimension",
@@ -2154,14 +2684,18 @@
       {
         "StringValue": "Photo Pixel Y Dimension = 1200",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40963,
         "TagType": 5,
         "Name": "Photo Pixel Y Dimension",
         "Description": "Records the valid height of the meaningful image when it has been compressed"
       },
       {
-        "StringValue": "Photo Related Sound File =             ",
         "IsArray": false,
+        "StringValue": "Photo Related Sound File = ",
+        "HasValue": false,
+        "TagTypeName": "String",
         "TagId": 40964,
         "TagType": 2,
         "Name": "Photo Related Sound File",
@@ -2170,16 +2704,20 @@
     ],
     "Interoperability": [
       {
-        "StringValue": "Interoperability Index = R98",
         "IsArray": false,
+        "StringValue": "Interoperability Index = R98",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8193,
         "TagType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
       },
       {
-        "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
+        "StringValue": "Interoperability Version = 0100",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8194,
         "TagType": 2,
         "Name": "Interoperability Version",
@@ -2187,27 +2725,33 @@
       }
     ]
   },
-  "olympus-c960.jpg-exiftags": {
+  "olympus-c960.jpg-metadata": {
     "Exif": [
       {
-        "StringValue": "Image Description = OLYMPUS DIGITAL CAMERA         ",
         "IsArray": false,
+        "StringValue": "Image Description = OLYMPUS DIGITAL CAMERA",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 270,
         "TagType": 2,
         "Name": "Image Description",
         "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
       },
       {
-        "StringValue": "Camera Make = OLYMPUS OPTICAL CO.,LTD",
         "IsArray": false,
+        "StringValue": "Camera Make = OLYMPUS OPTICAL CO.,LTD",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 271,
         "TagType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Camera Model = C960Z,D460Z",
         "IsArray": false,
+        "StringValue": "Camera Model = C960Z,D460Z",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 272,
         "TagType": 2,
         "Name": "Camera Model",
@@ -2216,6 +2760,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -2224,6 +2770,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -2232,6 +2780,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -2240,14 +2790,18 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "Software = OLYMPUS CAMEDIA Master",
         "IsArray": false,
+        "StringValue": "Software = OLYMPUS CAMEDIA Master",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 305,
         "TagType": 2,
         "Name": "Software",
@@ -2256,6 +2810,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time = 08/11/2000 20:14:38",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 306,
         "TagType": 15,
         "Name": "Date Time",
@@ -2264,6 +2820,8 @@
       {
         "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
@@ -2272,6 +2830,8 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 259,
         "TagType": 3,
         "Name": "Compression",
@@ -2280,6 +2840,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -2288,6 +2850,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -2296,6 +2860,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -2304,6 +2870,8 @@
       {
         "StringValue": "JPEG Interchange Format = 2012",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 513,
         "TagType": 5,
         "Name": "JPEG Interchange Format",
@@ -2312,6 +2880,8 @@
       {
         "StringValue": "JPEG Interchange Format Length = 5145",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 514,
         "TagType": 5,
         "Name": "JPEG Interchange Format Length",
@@ -2320,6 +2890,8 @@
       {
         "StringValue": "Exposure Time = 1/345 (0.002898550724637681D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33434,
         "TagType": 12,
         "Name": "Exposure Time",
@@ -2328,6 +2900,8 @@
       {
         "StringValue": "F Number = 80/10 (8D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33437,
         "TagType": 12,
         "Name": "F Number",
@@ -2336,6 +2910,8 @@
       {
         "StringValue": "Exposure Program = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34850,
         "TagType": 3,
         "Name": "Exposure Program",
@@ -2344,6 +2920,8 @@
       {
         "StringValue": "ISO Speed Ratings = 125",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34855,
         "TagType": 3,
         "Name": "ISO Speed Ratings",
@@ -2352,6 +2930,8 @@
       {
         "StringValue": "Photo Exif Version = 48 / 50 / 49 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 36864,
         "TagType": 1,
         "Name": "Photo Exif Version",
@@ -2360,6 +2940,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time Original = 07/11/2000 10:41:43",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36867,
         "TagType": 15,
         "Name": "Date Time Original",
@@ -2368,6 +2950,8 @@
       {
         "IsArray": false,
         "StringValue": "Photo Date Time Digitized = 07/11/2000 10:41:43",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36868,
         "TagType": 15,
         "Name": "Photo Date Time Digitized",
@@ -2376,6 +2960,8 @@
       {
         "StringValue": "Photo Components Configuration = 1 / 2 / 3 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37121,
         "TagType": 1,
         "Name": "Photo Components Configuration",
@@ -2384,6 +2970,8 @@
       {
         "StringValue": "Compressed Bits Per Pixel = 1/1 (1D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37122,
         "TagType": 12,
         "Name": "Compressed Bits Per Pixel",
@@ -2392,6 +2980,8 @@
       {
         "StringValue": "Exposure Bias = 0/10 (0D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37380,
         "TagType": 11,
         "Name": "Exposure Bias",
@@ -2400,6 +2990,8 @@
       {
         "StringValue": "Max Exposure = 3/1 (3D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37381,
         "TagType": 12,
         "Name": "Max Exposure",
@@ -2408,6 +3000,8 @@
       {
         "StringValue": "Metering Mode = 5 (Multi-segment)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 37383,
         "TagType": 16,
         "Name": "Metering Mode",
@@ -2416,6 +3010,8 @@
       {
         "StringValue": "Light Source = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37384,
         "TagType": 3,
         "Name": "Light Source",
@@ -2424,6 +3020,8 @@
       {
         "StringValue": "Flash = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37385,
         "TagType": 3,
         "Name": "Flash",
@@ -2432,6 +3030,8 @@
       {
         "StringValue": "Focal Length = 56/10 (5.6D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37386,
         "TagType": 12,
         "Name": "Focal Length",
@@ -2440,14 +3040,18 @@
       {
         "StringValue": "Photo Maker Note = 79 / 76 / 89 / 77 / 80 / 0 / 1 / 0 / 8 / 0 / 1 / 2 / 3 / 0 / 1 / 0 / 0 / 0 / 2 / 0 / 0 / 0 / 2 / 2 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 3 / 2 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 4 / 2 / 5 / 0 / 1 / 0 / 0 / 0 / 124 / 3 / 0 / 0 / 5 / 2 / 5 / 0 / 1 / 0 / 0 / 0 / 132 / 3 / 0 / 0 / 6 / 2 / 8 / 0 / 6 / 0 / 0 / 0 / 140 / 3 / 0 / 0 / 7 / 2 / 2 / 0 / 5 / 0 / 0 / 0 / 152 / 3 / 0 / 0 / 9 / 2 / 7 / 0 / 32 / 0 / 0 / 0 / 158 / 3 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 10 / 0 / 0 / 0 / 152 / 2 / 0 / 0 / 100 / 0 / 0 / 0 / 229 / 254 / 244 / 253 / 197 / 253 / 245 / 254 / 27 / 254 / 250 / 253 / 83 / 82 / 56 / 55 / 52 / 0 / 79 / 76 / 89 / 77 / 80 / 85 / 83 / 32 / 68 / 73 / 71 / 73 / 84 / 65 / 76 / 32 / 67 / 65 / 77 / 69 / 82 / 65 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37500,
         "TagType": 1,
         "Name": "Photo Maker Note",
         "Description": "Records additional desired information from the creator of the Exif data"
       },
       {
-        "StringValue": "Photo User Comment = \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000                                                                                                                    ",
         "IsArray": false,
+        "StringValue": "Photo User Comment = \u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 37510,
         "TagType": 2,
         "Name": "Photo User Comment",
@@ -2456,6 +3060,8 @@
       {
         "StringValue": "Photo Flashpix Version = 48 / 49 / 48 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 40960,
         "TagType": 1,
         "Name": "Photo Flashpix Version",
@@ -2464,6 +3070,8 @@
       {
         "StringValue": "Photo Color Space = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 40961,
         "TagType": 3,
         "Name": "Photo Color Space",
@@ -2472,6 +3080,8 @@
       {
         "StringValue": "Photo Pixel X Dimension = 1280",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40962,
         "TagType": 5,
         "Name": "Photo Pixel X Dimension",
@@ -2480,6 +3090,8 @@
       {
         "StringValue": "Photo Pixel Y Dimension = 960",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40963,
         "TagType": 5,
         "Name": "Photo Pixel Y Dimension",
@@ -2488,6 +3100,8 @@
       {
         "StringValue": "Photo File Source = 3 (Digital Camera)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 41728,
         "TagType": 16,
         "Name": "Photo File Source",
@@ -2496,6 +3110,8 @@
       {
         "StringValue": "Photo Scene Type = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 41729,
         "TagType": 1,
         "Name": "Photo Scene Type",
@@ -2504,16 +3120,20 @@
     ],
     "Interoperability": [
       {
-        "StringValue": "Interoperability Index = R98",
         "IsArray": false,
+        "StringValue": "Interoperability Index = R98",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8193,
         "TagType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
       },
       {
-        "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
+        "StringValue": "Interoperability Version = 0100",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8194,
         "TagType": 2,
         "Name": "Interoperability Version",
@@ -2521,19 +3141,23 @@
       }
     ]
   },
-  "kodak-dc240.jpg-exiftags": {
+  "kodak-dc240.jpg-metadata": {
     "Exif": [
       {
-        "StringValue": "Camera Make = EASTMAN KODAK COMPANY",
         "IsArray": false,
+        "StringValue": "Camera Make = EASTMAN KODAK COMPANY",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 271,
         "TagType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Camera Model = KODAK DC240 ZOOM DIGITAL CAMERA",
         "IsArray": false,
+        "StringValue": "Camera Model = KODAK DC240 ZOOM DIGITAL CAMERA",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 272,
         "TagType": 2,
         "Name": "Camera Model",
@@ -2542,6 +3166,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -2550,6 +3176,8 @@
       {
         "StringValue": "Horizontal Resolution = 192/1 (192D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -2558,6 +3186,8 @@
       {
         "StringValue": "Vertical Resolution = 192/1 (192D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -2566,6 +3196,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -2574,14 +3206,18 @@
       {
         "StringValue": "YCbCr Positioning = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
         "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
-        "StringValue": "Copyright = KODAK DC240 ZOOM DIGITAL CAMERA ",
         "IsArray": false,
+        "StringValue": "Copyright = KODAK DC240 ZOOM DIGITAL CAMERA",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 33432,
         "TagType": 2,
         "Name": "Copyright",
@@ -2590,6 +3226,8 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 259,
         "TagType": 3,
         "Name": "Compression",
@@ -2598,6 +3236,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -2606,6 +3246,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -2614,6 +3256,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -2622,6 +3266,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -2630,6 +3276,8 @@
       {
         "StringValue": "JPEG Interchange Format = 1480",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 513,
         "TagType": 5,
         "Name": "JPEG Interchange Format",
@@ -2638,6 +3286,8 @@
       {
         "StringValue": "JPEG Interchange Format Length = 6934",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 514,
         "TagType": 5,
         "Name": "JPEG Interchange Format Length",
@@ -2646,6 +3296,8 @@
       {
         "StringValue": "Exposure Time = 1/30 (0.03333333333333333D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33434,
         "TagType": 12,
         "Name": "Exposure Time",
@@ -2654,6 +3306,8 @@
       {
         "StringValue": "F Number = 4/1 (4D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33437,
         "TagType": 12,
         "Name": "F Number",
@@ -2662,6 +3316,8 @@
       {
         "StringValue": "Photo Exif Version = 48 / 50 / 49 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 36864,
         "TagType": 1,
         "Name": "Photo Exif Version",
@@ -2670,6 +3326,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time Original = 25/05/1999 21:00:09",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36867,
         "TagType": 15,
         "Name": "Date Time Original",
@@ -2678,6 +3336,8 @@
       {
         "IsArray": false,
         "StringValue": "Photo Date Time Digitized = 25/05/1999 21:00:09",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36868,
         "TagType": 15,
         "Name": "Photo Date Time Digitized",
@@ -2686,6 +3346,8 @@
       {
         "StringValue": "Photo Components Configuration = 1 / 2 / 3 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37121,
         "TagType": 1,
         "Name": "Photo Components Configuration",
@@ -2694,6 +3356,8 @@
       {
         "StringValue": "Shutter Speed = 50/10 (5D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37377,
         "TagType": 11,
         "Name": "Shutter Speed",
@@ -2702,6 +3366,8 @@
       {
         "StringValue": "Lens Aperture = 40/10 (4D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37378,
         "TagType": 12,
         "Name": "Lens Aperture",
@@ -2710,6 +3376,8 @@
       {
         "StringValue": "Exposure Bias = 0/100 (0D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37380,
         "TagType": 11,
         "Name": "Exposure Bias",
@@ -2718,6 +3386,8 @@
       {
         "StringValue": "Max Exposure = 38/10 (3.8D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37381,
         "TagType": 12,
         "Name": "Max Exposure",
@@ -2726,6 +3396,8 @@
       {
         "StringValue": "Metering Mode = 1 (Average)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 37383,
         "TagType": 16,
         "Name": "Metering Mode",
@@ -2734,6 +3406,8 @@
       {
         "StringValue": "Light Source = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37384,
         "TagType": 3,
         "Name": "Light Source",
@@ -2742,6 +3416,8 @@
       {
         "StringValue": "Flash = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37385,
         "TagType": 3,
         "Name": "Flash",
@@ -2750,6 +3426,8 @@
       {
         "StringValue": "Focal Length = 140/10 (14D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37386,
         "TagType": 12,
         "Name": "Focal Length",
@@ -2758,6 +3436,8 @@
       {
         "StringValue": "Photo Maker Note = 1 / 5 / 3 / 1 / 2 / 0 / 0 / 0 / 255 / 255 / 255 / 255 / 7 / 207 / 5 / 25 / 21 / 0 / 9 / 62 / 1 / 0 / 0 / 0 / 0 / 0 / 2 / 0 / 0 / 0 / 0 / 230 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 4 / 226 / 0 / 0 / 0 / 100 / 1 / 0 / 0 / 0 / 0 / 0 / 12 / 39 / 1 / 134 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 255 / 255 / 255 / 255 / 255 / 255 / 255 / 255 / 255 / 255 / 255 / 255 / 255 / 255 / 255 / 0 / 1 / 220 / 64 / 0 / 1 / 0 / 0 / 0 / 1 / 199 / 224 / 0 / 2 / 4 / 161 / 0 / 1 / 0 / 0 / 0 / 1 / 161 / 118 / 255 / 255 / 255 / 255 / 255 / 255 / 255 / 255 / 255 / 255 / 239 / 255 / 0 / 1 / 220 / 64 / 0 / 1 / 0 / 0 / 0 / 1 / 199 / 224 / 0 / 66 / 208 / 0 / 0 / 2 / 60 / 40 / 255 / 242 / 237 / 32 / 0 / 90 / 16 / 0 / 0 / 0 / 208 / 0 / 255 / 252 / 184 / 1 / 0 / 17 / 0 / 0 / 0 / 1 / 102 / 0 / 255 / 245 / 131 / 0 / 0 / 57 / 48 / 0 / 255 / 255 / 142 / 204 / 255 / 245 / 132 / 94 / 0 / 38 / 192 / 0 / 255 / 254 / 64 / 0 / 255 / 246 / 192 / 0 / 0 / 0 / 8 / 0 / 0 / 0 / 43 / 128 / 0 / 0 / 0 / 0 / 0 / 0 / 36 / 0 / 0 / 0 / 22 / 64 / 0 / 0 / 184 / 82 / 0 / 1 / 0 / 0 / 0 / 0 / 80 / 164 / 0 / 0 / 230 / 102 / 0 / 0 / 230 / 102 / 0 / 68 / 47 / 20 / 255 / 255 / 252 / 87 / 255 / 248 / 178 / 48 / 60 / 60 / 60 / 60 / 60 / 0 / 255 / 255 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 3 / 255 / 255 / 255 / 255 / 10 / 5 / 10 / 8 / 6 / 9 / 39 / 41 / 25 / 18 / 7 / 3 / 13 / 6 / 5 / 6 / 6 / 13 / 41 / 39 / 37 / 18 / 5 / 8 / 6 / 6 / 10 / 21 / 21 / 34 / 47 / 28 / 18 / 8 / 7 / 10 / 6 / 5 / 13 / 25 / 59 / 59 / 41 / 17 / 6 / 7 / 12 / 10 / 12 / 16 / 46 / 63 / 46 / 34 / 19 / 9 / 5 / 8 / 12 / 11 / 12 / 15 / 21 / 17 / 16 / 13 / 7 / 8 / 13 / 14 / 15 / 12 / 11 / 16 / 11 / 13 / 13 / 11 / 11 / 15 / 17 / 14 / 11 / 13 / 12 / 10 / 14 / 15 / 15 / 15 / 20 / 17 / 16 / 14 / 11 / 15 / 5 / 4 / 9 / 9 / 9 / 26 / 74 / 97 / 86 / 84 / 57 / 44 / 7 / 6 / 7 / 9 / 11 / 26 / 68 / 96 / 113 / 100 / 53 / 59 / 6 / 8 / 15 / 29 / 37 / 63 / 93 / 90 / 81 / 66 / 46 / 44 / 8 / 10 / 24 / 49 / 100 / 107 / 114 / 96 / 73 / 47 / 59 / 49 / 16 / 36 / 95 / 132 / 123 / 136 / 126 / 100 / 68 / 61 / 67 / 63 / 24 / 42 / 91 / 105 / 123 / 125 / 117 / 104 / 87 / 85 / 85 / 76 / 38 / 61 / 63 / 74 / 76 / 73 / 88 / 104 / 119 / 89 / 78 / 96 / 44 / 49 / 67 / 85 / 99 / 103 / 121 / 108 / 103 / 92 / 90 / 109 / 0 / 255 / 255 / 255 / 0 / 0 / 7 / 140 / 0 / 0 / 7 / 140 / 16 / 179 / 0 / 35 / 0 / 19 / 51 / 21 / 28 / 82 / 255 / 255 / 11 / 184 / 19 / 137 / 0 / 0 / 0 / 1 / 6 / 255 / 255 / 255 / 0 / 1 / 87 / 96 / 255 / 255 / 215 / 128 / 255 / 255 / 209 / 32 / 255 / 255 / 192 / 0 / 0 / 1 / 119 / 96 / 255 / 255 / 200 / 160 / 255 / 255 / 251 / 224 / 255 / 255 / 180 / 0 / 0 / 1 / 80 / 32 / 0 / 0 / 12 / 140 / 0 / 0 / 1 / 75 / 0 / 200 / 10 / 10 / 0 / 0 / 0 / 13 / 0 / 0 / 2 / 233 / 6 / 0 / 0 / 1 / 0 / 81 / 0 / 100",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37500,
         "TagType": 1,
         "Name": "Photo Maker Note",
@@ -2766,6 +3446,8 @@
       {
         "StringValue": "Photo Flashpix Version = 48 / 49 / 48 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 40960,
         "TagType": 1,
         "Name": "Photo Flashpix Version",
@@ -2774,6 +3456,8 @@
       {
         "StringValue": "Photo Color Space = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 40961,
         "TagType": 3,
         "Name": "Photo Color Space",
@@ -2782,6 +3466,8 @@
       {
         "StringValue": "Photo Pixel X Dimension = 83886080",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40962,
         "TagType": 5,
         "Name": "Photo Pixel X Dimension",
@@ -2790,6 +3476,8 @@
       {
         "StringValue": "Photo Pixel Y Dimension = 62914560",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40963,
         "TagType": 5,
         "Name": "Photo Pixel Y Dimension",
@@ -2798,6 +3486,8 @@
       {
         "StringValue": "Photo Exposure Index = 140/1 (140D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 41493,
         "TagType": 12,
         "Name": "Photo Exposure Index",
@@ -2806,6 +3496,8 @@
       {
         "StringValue": "Photo Sensing Method = 2 (One-chip color area)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 41495,
         "TagType": 16,
         "Name": "Photo Sensing Method",
@@ -2814,6 +3506,8 @@
       {
         "StringValue": "Photo File Source = 768 ()",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 41728,
         "TagType": 16,
         "Name": "Photo File Source",
@@ -2822,6 +3516,8 @@
       {
         "StringValue": "Photo Scene Type = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 41729,
         "TagType": 1,
         "Name": "Photo Scene Type",
@@ -2830,16 +3526,20 @@
     ],
     "Interoperability": [
       {
-        "StringValue": "Interoperability Index = R98",
         "IsArray": false,
+        "StringValue": "Interoperability Index = R98",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8193,
         "TagType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
       },
       {
-        "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
+        "StringValue": "Interoperability Version = 0100",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8194,
         "TagType": 2,
         "Name": "Interoperability Version",
@@ -2847,19 +3547,23 @@
       }
     ]
   },
-  "fujifilm-mx1700.jpg-exiftags": {
+  "fujifilm-mx1700.jpg-metadata": {
     "Exif": [
       {
-        "StringValue": "Camera Make = FUJIFILM",
         "IsArray": false,
+        "StringValue": "Camera Make = FUJIFILM",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 271,
         "TagType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Camera Model = MX-1700ZOOM",
         "IsArray": false,
+        "StringValue": "Camera Model = MX-1700ZOOM",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 272,
         "TagType": 2,
         "Name": "Camera Model",
@@ -2868,6 +3572,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -2876,6 +3582,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -2884,6 +3592,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -2892,14 +3602,18 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "Software = Digital Camera MX-1700ZOOM Ver1.00",
         "IsArray": false,
+        "StringValue": "Software = Digital Camera MX-1700ZOOM Ver1.00",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 305,
         "TagType": 2,
         "Name": "Software",
@@ -2908,6 +3622,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time = 02/09/2000 14:30:10",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 306,
         "TagType": 15,
         "Name": "Date Time",
@@ -2916,14 +3632,18 @@
       {
         "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
         "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
-        "StringValue": "Copyright =           ",
         "IsArray": false,
+        "StringValue": "Copyright = ",
+        "HasValue": false,
+        "TagTypeName": "String",
         "TagId": 33432,
         "TagType": 2,
         "Name": "Copyright",
@@ -2932,6 +3652,8 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 259,
         "TagType": 3,
         "Name": "Compression",
@@ -2940,6 +3662,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -2948,6 +3672,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -2956,6 +3682,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -2964,6 +3692,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -2972,6 +3702,8 @@
       {
         "StringValue": "JPEG Interchange Format = 856",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 513,
         "TagType": 5,
         "Name": "JPEG Interchange Format",
@@ -2980,6 +3712,8 @@
       {
         "StringValue": "JPEG Interchange Format Length = 4354",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 514,
         "TagType": 5,
         "Name": "JPEG Interchange Format Length",
@@ -2988,6 +3722,8 @@
       {
         "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
@@ -2996,6 +3732,8 @@
       {
         "StringValue": "F Number = 70/10 (7D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33437,
         "TagType": 12,
         "Name": "F Number",
@@ -3004,6 +3742,8 @@
       {
         "StringValue": "Exposure Program = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34850,
         "TagType": 3,
         "Name": "Exposure Program",
@@ -3012,6 +3752,8 @@
       {
         "StringValue": "ISO Speed Ratings = 125",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34855,
         "TagType": 3,
         "Name": "ISO Speed Ratings",
@@ -3020,6 +3762,8 @@
       {
         "StringValue": "Photo Exif Version = 48 / 50 / 49 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 36864,
         "TagType": 1,
         "Name": "Photo Exif Version",
@@ -3028,6 +3772,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time Original = 02/09/2000 14:30:10",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36867,
         "TagType": 15,
         "Name": "Date Time Original",
@@ -3036,6 +3782,8 @@
       {
         "IsArray": false,
         "StringValue": "Photo Date Time Digitized = 02/09/2000 14:30:10",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36868,
         "TagType": 15,
         "Name": "Photo Date Time Digitized",
@@ -3044,6 +3792,8 @@
       {
         "StringValue": "Photo Components Configuration = 1 / 2 / 3 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37121,
         "TagType": 1,
         "Name": "Photo Components Configuration",
@@ -3052,6 +3802,8 @@
       {
         "StringValue": "Compressed Bits Per Pixel = 2/1 (2D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37122,
         "TagType": 12,
         "Name": "Compressed Bits Per Pixel",
@@ -3060,6 +3812,8 @@
       {
         "StringValue": "Shutter Speed = 74/10 (7.4D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37377,
         "TagType": 11,
         "Name": "Shutter Speed",
@@ -3068,6 +3822,8 @@
       {
         "StringValue": "Lens Aperture = 56/10 (5.6D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37378,
         "TagType": 12,
         "Name": "Lens Aperture",
@@ -3076,6 +3832,8 @@
       {
         "StringValue": "Brightness = 76/10 (7.6D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37379,
         "TagType": 11,
         "Name": "Brightness",
@@ -3084,6 +3842,8 @@
       {
         "StringValue": "Exposure Bias = 0/10 (0D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37380,
         "TagType": 11,
         "Name": "Exposure Bias",
@@ -3092,6 +3852,8 @@
       {
         "StringValue": "Max Exposure = 33/10 (3.3D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37381,
         "TagType": 12,
         "Name": "Max Exposure",
@@ -3100,6 +3862,8 @@
       {
         "StringValue": "Metering Mode = 5 (Multi-segment)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 37383,
         "TagType": 16,
         "Name": "Metering Mode",
@@ -3108,6 +3872,8 @@
       {
         "StringValue": "Flash = 0",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37385,
         "TagType": 3,
         "Name": "Flash",
@@ -3116,6 +3882,8 @@
       {
         "StringValue": "Focal Length = 99/10 (9.9D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37386,
         "TagType": 12,
         "Name": "Focal Length",
@@ -3124,6 +3892,8 @@
       {
         "StringValue": "Photo Flashpix Version = 48 / 49 / 48 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 40960,
         "TagType": 1,
         "Name": "Photo Flashpix Version",
@@ -3132,6 +3902,8 @@
       {
         "StringValue": "Photo Color Space = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 40961,
         "TagType": 3,
         "Name": "Photo Color Space",
@@ -3140,6 +3912,8 @@
       {
         "StringValue": "Photo Pixel X Dimension = 640",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40962,
         "TagType": 5,
         "Name": "Photo Pixel X Dimension",
@@ -3148,6 +3922,8 @@
       {
         "StringValue": "Photo Pixel Y Dimension = 480",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40963,
         "TagType": 5,
         "Name": "Photo Pixel Y Dimension",
@@ -3156,6 +3932,8 @@
       {
         "StringValue": "Photo Focal Plane X Resolution = 1087/1 (1087D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 41486,
         "TagType": 12,
         "Name": "Photo Focal Plane X Resolution",
@@ -3164,6 +3942,8 @@
       {
         "StringValue": "Photo Focal Plane Y Resolution = 1087/1 (1087D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 41487,
         "TagType": 12,
         "Name": "Photo Focal Plane Y Resolution",
@@ -3172,6 +3952,8 @@
       {
         "StringValue": "Photo Focal Plane Resolution Unit = 3",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 41488,
         "TagType": 3,
         "Name": "Photo Focal Plane Resolution Unit",
@@ -3180,6 +3962,8 @@
       {
         "StringValue": "Photo Sensing Method = 2 (One-chip color area)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 41495,
         "TagType": 16,
         "Name": "Photo Sensing Method",
@@ -3188,6 +3972,8 @@
       {
         "StringValue": "Photo File Source = 3 (Digital Camera)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 41728,
         "TagType": 16,
         "Name": "Photo File Source",
@@ -3196,6 +3982,8 @@
       {
         "StringValue": "Photo Scene Type = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 41729,
         "TagType": 1,
         "Name": "Photo Scene Type",
@@ -3204,16 +3992,20 @@
     ],
     "Interoperability": [
       {
-        "StringValue": "Interoperability Index = R98",
         "IsArray": false,
+        "StringValue": "Interoperability Index = R98",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8193,
         "TagType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
       },
       {
-        "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
+        "StringValue": "Interoperability Version = 0100",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8194,
         "TagType": 2,
         "Name": "Interoperability Version",
@@ -3221,19 +4013,23 @@
       }
     ]
   },
-  "fujifilm-finepix40i.jpg-exiftags": {
+  "fujifilm-finepix40i.jpg-metadata": {
     "Exif": [
       {
-        "StringValue": "Camera Make = FUJIFILM",
         "IsArray": false,
+        "StringValue": "Camera Make = FUJIFILM",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 271,
         "TagType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Camera Model = FinePix40i",
         "IsArray": false,
+        "StringValue": "Camera Model = FinePix40i",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 272,
         "TagType": 2,
         "Name": "Camera Model",
@@ -3242,6 +4038,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -3250,6 +4048,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -3258,6 +4058,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -3266,14 +4068,18 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "Software = Digital Camera FinePix40i Ver1.39",
         "IsArray": false,
+        "StringValue": "Software = Digital Camera FinePix40i Ver1.39",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 305,
         "TagType": 2,
         "Name": "Software",
@@ -3282,6 +4088,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time = 04/08/2000 18:22:57",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 306,
         "TagType": 15,
         "Name": "Date Time",
@@ -3290,14 +4098,18 @@
       {
         "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
         "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
-        "StringValue": "Copyright =           ",
         "IsArray": false,
+        "StringValue": "Copyright = ",
+        "HasValue": false,
+        "TagTypeName": "String",
         "TagId": 33432,
         "TagType": 2,
         "Name": "Copyright",
@@ -3306,6 +4118,8 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 259,
         "TagType": 3,
         "Name": "Compression",
@@ -3314,6 +4128,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -3322,6 +4138,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -3330,6 +4148,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -3338,6 +4158,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -3346,6 +4168,8 @@
       {
         "StringValue": "JPEG Interchange Format = 1074",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 513,
         "TagType": 5,
         "Name": "JPEG Interchange Format",
@@ -3354,6 +4178,8 @@
       {
         "StringValue": "JPEG Interchange Format Length = 8691",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 514,
         "TagType": 5,
         "Name": "JPEG Interchange Format Length",
@@ -3362,6 +4188,8 @@
       {
         "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
@@ -3370,6 +4198,8 @@
       {
         "StringValue": "F Number = 280/100 (2.8D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33437,
         "TagType": 12,
         "Name": "F Number",
@@ -3378,6 +4208,8 @@
       {
         "StringValue": "Exposure Program = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34850,
         "TagType": 3,
         "Name": "Exposure Program",
@@ -3386,6 +4218,8 @@
       {
         "StringValue": "ISO Speed Ratings = 200",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34855,
         "TagType": 3,
         "Name": "ISO Speed Ratings",
@@ -3394,6 +4228,8 @@
       {
         "StringValue": "Photo Exif Version = 48 / 50 / 49 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 36864,
         "TagType": 1,
         "Name": "Photo Exif Version",
@@ -3402,6 +4238,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time Original = 04/08/2000 18:22:57",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36867,
         "TagType": 15,
         "Name": "Date Time Original",
@@ -3410,6 +4248,8 @@
       {
         "IsArray": false,
         "StringValue": "Photo Date Time Digitized = 04/08/2000 18:22:57",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36868,
         "TagType": 15,
         "Name": "Photo Date Time Digitized",
@@ -3418,6 +4258,8 @@
       {
         "StringValue": "Photo Components Configuration = 1 / 2 / 3 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37121,
         "TagType": 1,
         "Name": "Photo Components Configuration",
@@ -3426,6 +4268,8 @@
       {
         "StringValue": "Compressed Bits Per Pixel = 15/10 (1.5D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37122,
         "TagType": 12,
         "Name": "Compressed Bits Per Pixel",
@@ -3434,6 +4278,8 @@
       {
         "StringValue": "Shutter Speed = 550/100 (5.5D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37377,
         "TagType": 11,
         "Name": "Shutter Speed",
@@ -3442,6 +4288,8 @@
       {
         "StringValue": "Lens Aperture = 300/100 (3D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37378,
         "TagType": 12,
         "Name": "Lens Aperture",
@@ -3450,6 +4298,8 @@
       {
         "StringValue": "Brightness = 26/100 (0.26D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37379,
         "TagType": 11,
         "Name": "Brightness",
@@ -3458,6 +4308,8 @@
       {
         "StringValue": "Exposure Bias = 0/100 (0D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37380,
         "TagType": 11,
         "Name": "Exposure Bias",
@@ -3466,6 +4318,8 @@
       {
         "StringValue": "Max Exposure = 300/100 (3D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37381,
         "TagType": 12,
         "Name": "Max Exposure",
@@ -3474,6 +4328,8 @@
       {
         "StringValue": "Metering Mode = 5 (Multi-segment)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 37383,
         "TagType": 16,
         "Name": "Metering Mode",
@@ -3482,6 +4338,8 @@
       {
         "StringValue": "Flash = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37385,
         "TagType": 3,
         "Name": "Flash",
@@ -3490,6 +4348,8 @@
       {
         "StringValue": "Focal Length = 870/100 (8.7D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37386,
         "TagType": 12,
         "Name": "Focal Length",
@@ -3498,6 +4358,8 @@
       {
         "StringValue": "Photo Maker Note = 70 / 85 / 74 / 73 / 70 / 73 / 76 / 77 / 12 / 0 / 0 / 0 / 15 / 0 / 0 / 0 / 7 / 0 / 4 / 0 / 0 / 0 / 48 / 49 / 51 / 48 / 0 / 16 / 2 / 0 / 8 / 0 / 0 / 0 / 198 / 0 / 0 / 0 / 1 / 16 / 3 / 0 / 1 / 0 / 0 / 0 / 3 / 0 / 0 / 0 / 2 / 16 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 16 / 16 / 3 / 0 / 1 / 0 / 0 / 0 / 1 / 0 / 0 / 0 / 17 / 16 / 10 / 0 / 1 / 0 / 0 / 0 / 206 / 0 / 0 / 0 / 32 / 16 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 33 / 16 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 48 / 16 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 49 / 16 / 3 / 0 / 1 / 0 / 0 / 0 / 1 / 0 / 0 / 0 / 0 / 17 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 18 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 19 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 1 / 19 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 2 / 19 / 3 / 0 / 1 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 0 / 78 / 79 / 82 / 77 / 65 / 76 / 32 / 0 / 0 / 0 / 0 / 0 / 10 / 0 / 0 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37500,
         "TagType": 1,
         "Name": "Photo Maker Note",
@@ -3506,6 +4368,8 @@
       {
         "StringValue": "Photo Flashpix Version = 48 / 49 / 48 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 40960,
         "TagType": 1,
         "Name": "Photo Flashpix Version",
@@ -3514,6 +4378,8 @@
       {
         "StringValue": "Photo Color Space = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 40961,
         "TagType": 3,
         "Name": "Photo Color Space",
@@ -3522,6 +4388,8 @@
       {
         "StringValue": "Photo Pixel X Dimension = 2400",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40962,
         "TagType": 5,
         "Name": "Photo Pixel X Dimension",
@@ -3530,6 +4398,8 @@
       {
         "StringValue": "Photo Pixel Y Dimension = 1800",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40963,
         "TagType": 5,
         "Name": "Photo Pixel Y Dimension",
@@ -3538,6 +4408,8 @@
       {
         "StringValue": "Photo Focal Plane X Resolution = 2381/1 (2381D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 41486,
         "TagType": 12,
         "Name": "Photo Focal Plane X Resolution",
@@ -3546,6 +4418,8 @@
       {
         "StringValue": "Photo Focal Plane Y Resolution = 2381/1 (2381D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 41487,
         "TagType": 12,
         "Name": "Photo Focal Plane Y Resolution",
@@ -3554,6 +4428,8 @@
       {
         "StringValue": "Photo Focal Plane Resolution Unit = 3",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 41488,
         "TagType": 3,
         "Name": "Photo Focal Plane Resolution Unit",
@@ -3562,6 +4438,8 @@
       {
         "StringValue": "Photo Sensing Method = 2 (One-chip color area)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 41495,
         "TagType": 16,
         "Name": "Photo Sensing Method",
@@ -3570,6 +4448,8 @@
       {
         "StringValue": "Photo File Source = 768 ()",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 41728,
         "TagType": 16,
         "Name": "Photo File Source",
@@ -3578,6 +4458,8 @@
       {
         "StringValue": "Photo Scene Type = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 41729,
         "TagType": 1,
         "Name": "Photo Scene Type",
@@ -3586,16 +4468,20 @@
     ],
     "Interoperability": [
       {
-        "StringValue": "Interoperability Index = R98",
         "IsArray": false,
+        "StringValue": "Interoperability Index = R98",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8193,
         "TagType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
       },
       {
-        "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
+        "StringValue": "Interoperability Version = 0100",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8194,
         "TagType": 2,
         "Name": "Interoperability Version",
@@ -3603,19 +4489,23 @@
       }
     ]
   },
-  "fujifilm-dx10.jpg-exiftags": {
+  "fujifilm-dx10.jpg-metadata": {
     "Exif": [
       {
-        "StringValue": "Camera Make = FUJIFILM",
         "IsArray": false,
+        "StringValue": "Camera Make = FUJIFILM",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 271,
         "TagType": 2,
         "Name": "Camera Make",
         "Description": "Manufacturer of the digital still camera (DSC), scanner, video digitizer or other equipment that generated the image. When this is left blank, it is treated as unknown"
       },
       {
-        "StringValue": "Camera Model = DX-10",
         "IsArray": false,
+        "StringValue": "Camera Model = DX-10",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 272,
         "TagType": 2,
         "Name": "Camera Model",
@@ -3624,6 +4514,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -3632,6 +4524,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -3640,6 +4534,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -3648,14 +4544,18 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
         "Description": "Unit for measuring Horizontal and Vertical resolutions"
       },
       {
-        "StringValue": "Software = Digital Camera DX-10 Ver1.00",
         "IsArray": false,
+        "StringValue": "Software = Digital Camera DX-10 Ver1.00",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 305,
         "TagType": 2,
         "Name": "Software",
@@ -3664,6 +4564,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time = 12/04/2001 20:33:14",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 306,
         "TagType": 15,
         "Name": "Date Time",
@@ -3672,14 +4574,18 @@
       {
         "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
         "Description": "Position of chrominance components in relation to the luminance component"
       },
       {
-        "StringValue": "Copyright = J P Bowen ",
         "IsArray": false,
+        "StringValue": "Copyright = J P Bowen",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 33432,
         "TagType": 2,
         "Name": "Copyright",
@@ -3688,6 +4594,8 @@
       {
         "StringValue": "Compression = 6",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 259,
         "TagType": 3,
         "Name": "Compression",
@@ -3696,6 +4604,8 @@
       {
         "StringValue": "Orientation = 1 (Horizontal (normal))",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
@@ -3704,6 +4614,8 @@
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 282,
         "TagType": 12,
         "Name": "Horizontal Resolution",
@@ -3712,6 +4624,8 @@
       {
         "StringValue": "Vertical Resolution = 72/1 (72D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 283,
         "TagType": 12,
         "Name": "Vertical Resolution",
@@ -3720,6 +4634,8 @@
       {
         "StringValue": "Resolution Unit = 2 (inches)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 296,
         "TagType": 16,
         "Name": "Resolution Unit",
@@ -3728,6 +4644,8 @@
       {
         "StringValue": "JPEG Interchange Format = 856",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 513,
         "TagType": 5,
         "Name": "JPEG Interchange Format",
@@ -3736,6 +4654,8 @@
       {
         "StringValue": "JPEG Interchange Format Length = 10274",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 514,
         "TagType": 5,
         "Name": "JPEG Interchange Format Length",
@@ -3744,6 +4664,8 @@
       {
         "StringValue": "YCbCr Positioning = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 531,
         "TagType": 3,
         "Name": "YCbCr Positioning",
@@ -3752,6 +4674,8 @@
       {
         "StringValue": "F Number = 42/10 (4.2D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 33437,
         "TagType": 12,
         "Name": "F Number",
@@ -3760,6 +4684,8 @@
       {
         "StringValue": "Exposure Program = 2",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34850,
         "TagType": 3,
         "Name": "Exposure Program",
@@ -3768,6 +4694,8 @@
       {
         "StringValue": "ISO Speed Ratings = 150",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 34855,
         "TagType": 3,
         "Name": "ISO Speed Ratings",
@@ -3776,6 +4704,8 @@
       {
         "StringValue": "Photo Exif Version = 48 / 50 / 49 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 36864,
         "TagType": 1,
         "Name": "Photo Exif Version",
@@ -3784,6 +4714,8 @@
       {
         "IsArray": false,
         "StringValue": "Date Time Original = 12/04/2001 20:33:14",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36867,
         "TagType": 15,
         "Name": "Date Time Original",
@@ -3792,6 +4724,8 @@
       {
         "IsArray": false,
         "StringValue": "Photo Date Time Digitized = 12/04/2001 20:33:14",
+        "HasValue": true,
+        "TagTypeName": "DateTime",
         "TagId": 36868,
         "TagType": 15,
         "Name": "Photo Date Time Digitized",
@@ -3800,6 +4734,8 @@
       {
         "StringValue": "Photo Components Configuration = 1 / 2 / 3 / 0",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 37121,
         "TagType": 1,
         "Name": "Photo Components Configuration",
@@ -3808,6 +4744,8 @@
       {
         "StringValue": "Compressed Bits Per Pixel = 14/10 (1.4D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37122,
         "TagType": 12,
         "Name": "Compressed Bits Per Pixel",
@@ -3816,6 +4754,8 @@
       {
         "StringValue": "Shutter Speed = 66/10 (6.6D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37377,
         "TagType": 11,
         "Name": "Shutter Speed",
@@ -3824,6 +4764,8 @@
       {
         "StringValue": "Lens Aperture = 41/10 (4.1D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37378,
         "TagType": 12,
         "Name": "Lens Aperture",
@@ -3832,6 +4774,8 @@
       {
         "StringValue": "Brightness = -27/10 (-2.7D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37379,
         "TagType": 11,
         "Name": "Brightness",
@@ -3840,6 +4784,8 @@
       {
         "StringValue": "Exposure Bias = 0/10 (0D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Rational",
         "TagId": 37380,
         "TagType": 11,
         "Name": "Exposure Bias",
@@ -3848,6 +4794,8 @@
       {
         "StringValue": "Max Exposure = 41/10 (4.1D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37381,
         "TagType": 12,
         "Name": "Max Exposure",
@@ -3856,6 +4804,8 @@
       {
         "StringValue": "Metering Mode = 5 (Multi-segment)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 37383,
         "TagType": 16,
         "Name": "Metering Mode",
@@ -3864,6 +4814,8 @@
       {
         "StringValue": "Flash = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 37385,
         "TagType": 3,
         "Name": "Flash",
@@ -3872,6 +4824,8 @@
       {
         "StringValue": "Focal Length = 58/10 (5.8D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 37386,
         "TagType": 12,
         "Name": "Focal Length",
@@ -3880,6 +4834,8 @@
       {
         "StringValue": "Photo Flashpix Version = 48 / 49 / 48 / 48",
         "IsArray": true,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 40960,
         "TagType": 1,
         "Name": "Photo Flashpix Version",
@@ -3888,6 +4844,8 @@
       {
         "StringValue": "Photo Color Space = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 40961,
         "TagType": 3,
         "Name": "Photo Color Space",
@@ -3896,6 +4854,8 @@
       {
         "StringValue": "Photo Pixel X Dimension = 1024",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40962,
         "TagType": 5,
         "Name": "Photo Pixel X Dimension",
@@ -3904,6 +4864,8 @@
       {
         "StringValue": "Photo Pixel Y Dimension = 768",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UInt",
         "TagId": 40963,
         "TagType": 5,
         "Name": "Photo Pixel Y Dimension",
@@ -3912,6 +4874,8 @@
       {
         "StringValue": "Photo Focal Plane X Resolution = 2151/1 (2151D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 41486,
         "TagType": 12,
         "Name": "Photo Focal Plane X Resolution",
@@ -3920,6 +4884,8 @@
       {
         "StringValue": "Photo Focal Plane Y Resolution = 2151/1 (2151D)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "URational",
         "TagId": 41487,
         "TagType": 12,
         "Name": "Photo Focal Plane Y Resolution",
@@ -3928,6 +4894,8 @@
       {
         "StringValue": "Photo Focal Plane Resolution Unit = 3",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "UShort",
         "TagId": 41488,
         "TagType": 3,
         "Name": "Photo Focal Plane Resolution Unit",
@@ -3936,6 +4904,8 @@
       {
         "StringValue": "Photo Sensing Method = 2 (One-chip color area)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 41495,
         "TagType": 16,
         "Name": "Photo Sensing Method",
@@ -3944,6 +4914,8 @@
       {
         "StringValue": "Photo File Source = 3 (Digital Camera)",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Enum",
         "TagId": 41728,
         "TagType": 16,
         "Name": "Photo File Source",
@@ -3952,6 +4924,8 @@
       {
         "StringValue": "Photo Scene Type = 1",
         "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Byte",
         "TagId": 41729,
         "TagType": 1,
         "Name": "Photo Scene Type",
@@ -3960,16 +4934,20 @@
     ],
     "Interoperability": [
       {
-        "StringValue": "Interoperability Index = R98",
         "IsArray": false,
+        "StringValue": "Interoperability Index = R98",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8193,
         "TagType": 2,
         "Name": "Interoperability Index",
         "Description": "Indicates the identification of the Interoperability rule; 'R98' denotes ExifR98 Rules"
       },
       {
-        "StringValue": "Interoperability Version = 0100",
         "IsArray": false,
+        "StringValue": "Interoperability Version = 0100",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 8194,
         "TagType": 2,
         "Name": "Interoperability Version",

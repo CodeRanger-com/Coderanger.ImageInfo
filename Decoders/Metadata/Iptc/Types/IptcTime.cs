@@ -9,7 +9,6 @@
 namespace Coderanger.ImageInfo.Decoders.Metadata.Iptc.Types;
 
 using System;
-using System.Collections.Generic;
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 /// <summary>
@@ -17,49 +16,54 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 /// </summary>
 public class IptcTime : IptcTypeBase, IMetadataTypedValue
 {
-  internal IptcTime( ushort tagId, byte[] data )
-    : base( MetadataType.Time, tagId )
+  internal IptcTime( ushort tagId )
+    : base( tagId, MetadataType.Time )
   {
-    _data = data;
   }
 
-  public string StringValue => ToString();
-
-  void IMetadataTypedValue.SetValue()
+  public void AddToExistingValue( ReadOnlySpan<byte> buffer )
   {
-    ProcessData();
+    var value = Create( buffer );
+    if( value != null )
+    {
+      _metadata.Add( value );
+    }
   }
 
-  void IMetadataTypedValue.AddToExistingValue( byte[] value )
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
-    base.AddToExistingValue( Create( value ) );
+    var value = Create( buffer );
+    if( value != null )
+    {
+      _metadata.Add( value );
+    }
   }
 
-  /// <summary>
-  /// Processes the data buffer for each type value
-  /// </summary>
-  internal override IEnumerable<MetadataTagValue?> ExtractValues()
+  private MetadataTagValue? Create( ReadOnlySpan<byte> buffer )
   {
-    yield return Create( _data );
-  }
-
-  private MetadataTagValue? Create( byte[] value )
-  {
-    var bufferValue = DataConversion.ConvertBuffer( value, StringEncoding.Ascii );
+    var bufferValue = DataConversion.ConvertBuffer( buffer, StringEncoding.Ascii );
     bufferValue = bufferValue.Replace( "+", string.Empty );
+
     if( TimeOnly.TryParseExact( bufferValue, TimeFormatStringWithZone, null, System.Globalization.DateTimeStyles.AdjustToUniversal, out var timeWithZone ) )
     {
-      return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: timeWithZone );
+      return new MetadataTagValue( Type: TagType,
+                                   IsArray: false,
+                                   TagId: TagId,
+                                   TagName: Name,
+                                   Value: timeWithZone );
     }
     else if( TimeOnly.TryParseExact( bufferValue, TimeFormatString, null, System.Globalization.DateTimeStyles.None, out var time ) )
     {
-      return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: time );
+      return new MetadataTagValue( Type: TagType,
+                                   IsArray: false,
+                                   TagId: TagId,
+                                   TagName: Name,
+                                   Value: time );
     }
 
     return null;
   }
 
-  private readonly byte[] _data;
   private const string TimeFormatStringWithZone = "HHmmsszzz";
   private const string TimeFormatString = "HHmmss";
 }

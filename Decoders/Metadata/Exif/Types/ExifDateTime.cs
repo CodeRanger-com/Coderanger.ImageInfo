@@ -28,14 +28,12 @@ public class ExifDateTime : ExifTypeBase, IMetadataTypedValue
   /// </summary>
   public override bool IsArray => false;
 
-  public string StringValue => ToString();
-
   public override string ToString()
   {
     return $"{Name} = {_convertedValue}";
   }
 
-  void IMetadataTypedValue.SetValue()
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();
   }

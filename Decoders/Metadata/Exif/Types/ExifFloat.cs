@@ -20,9 +20,7 @@ public class ExifFloat : ExifTypeBase, IMetadataTypedValue
   {
   }
 
-  public string StringValue => ToString();
-
-  void IMetadataTypedValue.SetValue()
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();
   }

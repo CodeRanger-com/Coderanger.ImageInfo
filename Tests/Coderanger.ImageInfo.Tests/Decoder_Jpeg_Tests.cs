@@ -56,7 +56,7 @@ public class Decoder_Jpeg_Tests
       info.MimeType.Should().Be( mime );
 
       // Assert tag information
-      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
+      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-metadata" );
 
       // Output data to console
       MetadataHelpers.Output( info.Metadata );
@@ -91,7 +91,7 @@ public class Decoder_Jpeg_Tests
       info.MimeType.Should().Be( mime );
 
       // Assert tag information
-      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
+      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-metadata" );
 
       // Output data to console
       MetadataHelpers.Output( info.Metadata );
@@ -132,7 +132,7 @@ public class Decoder_Jpeg_Tests
       info.MimeType.Should().Be( mime );
 
       // Assert tag information
-      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-exiftags" );
+      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-metadata" );
 
       // Output data to console
       MetadataHelpers.Output( info.Metadata );
@@ -146,7 +146,7 @@ public class Decoder_Jpeg_Tests
   public void Validate_Images_With_Iptc( string filename, int width, int height, int hdpi, int vdpi, string mime )
   {
     // Arrange
-    using var stream = new FileStream( $"./Fixtures/Jpeg/iptc/{filename}", FileMode.Open, FileAccess.Read );
+    using var stream = new FileStream( $"./Fixtures/Jpeg/metadata/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
     var info = ImageInfo.DecodeFromStream( stream );
@@ -162,7 +162,35 @@ public class Decoder_Jpeg_Tests
       info.MimeType.Should().Be( mime );
 
       // Assert tag information
-      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-iptctags" );
+      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-metadata" );
+
+      // Output data to console
+      MetadataHelpers.Output( info.Metadata );
+    }
+  }
+
+  [TestMethod]
+  [DataRow( "iptc.jpg", 70, 70, 300, 300, "image/jpeg" )]
+  public void Validate_Images_With_Xmp( string filename, int width, int height, int hdpi, int vdpi, string mime )
+  {
+    // Arrange
+    using var stream = new FileStream( $"./Fixtures/Jpeg/metadata/{filename}", FileMode.Open, FileAccess.Read );
+
+    // Act
+    var info = ImageInfo.DecodeFromStream( stream );
+
+    // Assert
+    info.Should().NotBeNull();
+    if( info != null )
+    {
+      info.Width.Should().Be( width );
+      info.Height.Should().Be( height );
+      info.HorizontalDpi.Should().Be( hdpi );
+      info.VerticalDpi.Should().Be( vdpi );
+      info.MimeType.Should().Be( mime );
+
+      // Assert tag information
+      info.Metadata?.ShouldMatchChildSnapshot( $"{filename}-xmp" );
 
       // Output data to console
       MetadataHelpers.Output( info.Metadata );

@@ -2,24 +2,30 @@
   "metadata.png": {
     "Exif": [
       {
-        "StringValue": "XP Author = Dan Petitt",
         "IsArray": false,
+        "StringValue": "XP Author = Dan Petitt",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 40093,
         "TagType": 2,
         "Name": "XP Author",
         "Description": "Author tag used by Windows"
       },
       {
-        "StringValue": "XP Title = A bit of test metadata for image title",
         "IsArray": false,
+        "StringValue": "XP Title = A bit of test metadata for image title",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 40091,
         "TagType": 2,
         "Name": "XP Title",
         "Description": "Title tag used by Windows"
       },
       {
-        "StringValue": "Photo User Comment = A bit of normal международный comment text",
         "IsArray": false,
+        "StringValue": "Photo User Comment = A bit of normal международный comment text",
+        "HasValue": true,
+        "TagTypeName": "String",
         "TagId": 37510,
         "TagType": 2,
         "Name": "Photo User Comment",
@@ -28,39 +34,44 @@
     ],
     "PngText": [
       {
+        "StringValue": "Author = Dan Petitt",
         "IsArray": false,
         "TagId": 2,
-        "StringValue": "Author = Dan Petitt",
-        "Name": "Author",
-        "Description": "Name of image's creator"
+        "TagType": 17,
+        "HasValue": true,
+        "TagTypeName": "PngText"
       },
       {
+        "StringValue": "Title = A bit of test metadata which should be compressed",
         "IsArray": false,
         "TagId": 1,
-        "StringValue": "Title = A bit of test metadata which should be compressed",
-        "Name": "Title",
-        "Description": "Short (one line) title or caption for image"
+        "TagType": 17,
+        "HasValue": true,
+        "TagTypeName": "PngText"
       },
       {
+        "StringValue": "Description = International & uncompressed",
         "IsArray": false,
         "TagId": 3,
-        "StringValue": "Description = International & uncompressed",
-        "Name": "Description",
-        "Description": "Possibly long description of image"
+        "TagType": 17,
+        "HasValue": true,
+        "TagTypeName": "PngText"
       },
       {
+        "StringValue": "Comment (Комментарии) = A bit of international/Russian (международный) test metadata which should be compressed (ru-RU)",
         "IsArray": false,
         "TagId": 10,
-        "StringValue": "Comment (Комментарии) = A bit of international/Russian (международный) test metadata which should be compressed (ru-RU)",
-        "Name": "Comment",
-        "Description": "Miscellaneous comment"
+        "TagType": 17,
+        "HasValue": true,
+        "TagTypeName": "PngText"
       },
       {
+        "StringValue": "Custom Keyword (Пользовательское ключевое слово) = Custom международный text metadata which should also be compressed (ru-RU)",
         "IsArray": false,
         "TagId": 255,
-        "StringValue": "Custom Keyword (Пользовательское ключевое слово) = Custom международный text metadata which should also be compressed (ru-RU)",
-        "Name": "Custom Keyword",
-        "Description": ""
+        "TagType": 17,
+        "HasValue": true,
+        "TagTypeName": "PngText"
       }
     ]
   }

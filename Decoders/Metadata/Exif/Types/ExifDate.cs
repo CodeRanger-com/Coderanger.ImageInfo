@@ -22,8 +22,6 @@ public class ExifDate : ExifTypeBase, IMetadataTypedValue
   {
   }
 
-  public string StringValue => ToString();
-
   /// <summary>
   /// Override to always set as false for Dates as Component.Count refers to character count
   /// in the string which makes up the Date value
@@ -35,7 +33,7 @@ public class ExifDate : ExifTypeBase, IMetadataTypedValue
     return $"{Name} = {_convertedValue}";
   }
 
-  void IMetadataTypedValue.SetValue()
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();
   }

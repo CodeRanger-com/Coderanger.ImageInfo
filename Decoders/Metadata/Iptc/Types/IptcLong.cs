@@ -8,7 +8,6 @@
 
 namespace Coderanger.ImageInfo.Decoders.Metadata.Iptc.Types;
 
-using System.Collections.Generic;
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 /// <summary>
@@ -16,39 +15,38 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 /// </summary>
 public class IptcLong : IptcTypeBase, IMetadataTypedValue
 {
-  internal IptcLong( ushort tagId, byte[] data )
-    : base( MetadataType.Long, tagId )
+  internal IptcLong( ushort tagId )
+    : base( tagId, MetadataType.Long )
   {
-    _data = data;
   }
 
-  public string StringValue => ToString();
-
-  void IMetadataTypedValue.SetValue()
+  public void AddToExistingValue( ReadOnlySpan<byte> buffer )
   {
-    ProcessData();
+    var value = Create( buffer );
+    if( value != null )
+    {
+      _metadata.Add( value );
+    }
   }
 
-  void IMetadataTypedValue.AddToExistingValue( byte[] value )
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
-    base.AddToExistingValue( Create( value ) );
+    var value = Create( buffer );
+    if( value != null )
+    {
+      _metadata.Add( value );
+    }
   }
 
-  /// <summary>
-  /// Processes the data buffer for each type value
-  /// </summary>
-  internal override IEnumerable<MetadataTagValue?> ExtractValues()
+  private MetadataTagValue Create( ReadOnlySpan<byte> buffer )
   {
-    yield return Create( _data );
+    var bufferValue = DataConversion.Int64FromBigEndianBuffer( buffer );
+    return new MetadataTagValue( Type: TagType,
+                                 IsArray: false,
+                                 TagId: TagId,
+                                 TagName: Name,
+                                 Value: bufferValue );
   }
-
-  private MetadataTagValue? Create( byte[] value )
-  {
-    var bufferValue = DataConversion.Int64FromBigEndianBuffer( value );
-    return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: bufferValue );
-  }
-
-  private readonly byte[] _data;
 }
 
 /// <summary>
@@ -56,37 +54,36 @@ public class IptcLong : IptcTypeBase, IMetadataTypedValue
 /// </summary>
 public class IptcULong : IptcTypeBase, IMetadataTypedValue
 {
-  internal IptcULong( ushort tagId, byte[] data )
-    : base( MetadataType.ULong, tagId )
+  internal IptcULong( ushort tagId )
+    : base( tagId, MetadataType.ULong )
   {
-    _data = data;
   }
 
-  public string StringValue => ToString();
-
-  void IMetadataTypedValue.SetValue()
+  public void AddToExistingValue( ReadOnlySpan<byte> buffer )
   {
-    ProcessData();
+    var value = Create( buffer );
+    if( value != null )
+    {
+      _metadata.Add( value );
+    }
   }
 
-  void IMetadataTypedValue.AddToExistingValue( byte[] value )
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
-    base.AddToExistingValue( Create( value ) );
+    var value = Create( buffer );
+    if( value != null )
+    {
+      _metadata.Add( value );
+    }
   }
 
-  /// <summary>
-  /// Processes the data buffer for each type value
-  /// </summary>
-  internal override IEnumerable<MetadataTagValue?> ExtractValues()
+  private MetadataTagValue Create( ReadOnlySpan<byte> buffer )
   {
-    yield return Create( _data );
+    var bufferValue = DataConversion.UInt64FromBigEndianBuffer( buffer );
+    return new MetadataTagValue( Type: TagType,
+                                 IsArray: false,
+                                 TagId: TagId,
+                                 TagName: Name,
+                                 Value: bufferValue );
   }
-
-  private MetadataTagValue? Create( byte[] value )
-  {
-    var bufferValue = DataConversion.UInt64FromBigEndianBuffer( value );
-    return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: bufferValue );
-  }
-
-  private readonly byte[] _data;
 }

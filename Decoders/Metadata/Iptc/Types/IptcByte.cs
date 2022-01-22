@@ -8,43 +8,32 @@
 
 namespace Coderanger.ImageInfo.Decoders.Metadata.Iptc.Types;
 
-using System.Collections.Generic;
-
 /// <summary>
 /// 
 /// </summary>
 public class IptcByte : IptcTypeBase, IMetadataTypedValue
 {
-  internal IptcByte( ushort tagId, byte[] data )
-    : base( MetadataType.Byte, tagId )
+  internal IptcByte( ushort tagId )
+    : base( tagId, MetadataType.Byte )
   {
-    _data = data;
   }
 
-  public string StringValue => ToString();
-
-  void IMetadataTypedValue.SetValue()
+  public void AddToExistingValue( ReadOnlySpan<byte> buffer )
   {
-    ProcessData();
+    _metadata.Add( Create( buffer ) );
   }
 
-  void IMetadataTypedValue.AddToExistingValue( byte[] value )
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
-    base.AddToExistingValue( Create( value ) );
+    _metadata.Add( Create( buffer ) );
   }
 
-  /// <summary>
-  /// Processes the data buffer for each type value
-  /// </summary>
-  internal override IEnumerable<MetadataTagValue> ExtractValues()
+  private MetadataTagValue Create( ReadOnlySpan<byte> buffer )
   {
-    yield return Create( _data );
+    return new MetadataTagValue( Type: TagType,
+                                 IsArray: false,
+                                 TagId: TagId,
+                                 TagName: Name,
+                                 Value: buffer.ToArray() );
   }
-
-  private MetadataTagValue Create( byte[] value )
-  {
-    return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: value );
-  }
-
-  private readonly byte[] _data;
 }

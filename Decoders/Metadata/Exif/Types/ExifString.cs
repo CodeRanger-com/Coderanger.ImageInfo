@@ -21,15 +21,13 @@ public class ExifString : ExifTypeBase, IMetadataTypedValue
     _encoding = encoding;
   }
 
-  public string StringValue => ToString();
-
   /// <summary>
   /// Override to always set as false for strings as Component.Count refers to character count
   /// in the string
   /// </summary>
   public override bool IsArray => false;
 
-  void IMetadataTypedValue.SetValue()
+  public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();
   }
@@ -45,7 +43,11 @@ public class ExifString : ExifTypeBase, IMetadataTypedValue
     // Unless its an undefined type which means that the first 8 bytes would be the encoding
     if( Component.ComponentCount * Component.ComponentSize <= BufferByteSize && _encoding != StringEncoding.Undefined )
     {
-      yield return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: DataConversion.ConvertBuffer( Component.DataValueBuffer.AsSpan( 0, byteCount ), _encoding ) );
+      var value = DataConversion.ConvertBuffer( Component.DataValueBuffer.AsSpan( 0, byteCount ), _encoding );
+      if( value.Length > 0 )
+      {
+        yield return new MetadataTagValue( Type: TagType, IsArray: false, TagId: TagId, TagName: Name, Value: value );
+      }
     }
     else
     {
@@ -93,7 +95,15 @@ public class ExifString : ExifTypeBase, IMetadataTypedValue
         }
       }
 
-      yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: DataConversion.ConvertBuffer( buffer.AsSpan( 0, byteCount ), encoding ) );
+      var value = DataConversion.ConvertBuffer( buffer.AsSpan( 0, byteCount ), encoding );
+      if( value.Length > 0 )
+      {
+        yield return new MetadataTagValue( Type: TagType,
+                                           IsArray: IsArray,
+                                           TagId: TagId,
+                                           TagName: Name,
+                                           Value: value );
+      }
     }
   }
 
