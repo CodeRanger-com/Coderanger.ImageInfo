@@ -19,6 +19,7 @@ namespace Coderanger.ImageInfo.Decoders.Metadata.Exif;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 using Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
+using Coderanger.ImageInfo.Decoders.Metadata.Xmp;
 
 /// <summary>
 /// 
@@ -145,16 +146,29 @@ internal class DecodeExif
 
   private void ExtractXmp()
   {
-    if( _idXmpOffset > 0 )
+    if( _idXmpOffset > 0 && _idXmpSize > 0 )
     {
-      if( _segmentStart + _idXmpOffset + ExifConstants.ExifDirectorySize >= _reader.Length() )
+      if( _segmentStart + _idXmpOffset + _idXmpSize >= _reader.Length() )
       {
-        // Ensure we havent gone out of bounds and there are actually 12 bytes
-        // left for the whole IFD chunk
+        // Ensure we havent gone out of bounds and there are actually enough
+        // bytes left for the whole XMP chunk
         return;
       }
 
       _reader.BaseStream.Seek( _segmentStart + _idXmpOffset, SeekOrigin.Begin );
+
+      var xmp = _reader.ReadBytes( _idXmpSize );
+
+      if( !_profileTags.TryGetValue( MetadataProfileType.Xmp, out var tags ) )
+      {
+        tags = new List<IMetadataTypedValue>();
+        _profileTags.Add( MetadataProfileType.Xmp, tags );
+      }
+
+      var data = XmpTagFactory.Create();
+      data.SetValue( xmp.AsSpan() );
+      tags.Add( data );
+
     }
   }
 
@@ -266,6 +280,7 @@ internal class DecodeExif
 
         case (ushort)ExifConstants.IfdOffset.Xmp:
           _idXmpOffset = value;
+          _idXmpSize = crackedData.ComponentCount;
           return true;
 
         case (ushort)ExifConstants.IfdOffset.Inter:
@@ -286,6 +301,7 @@ internal class DecodeExif
   private int _ifdGpsOffset = -1;
   private int _ifdIptcOffset = -1;
   private int _idXmpOffset = -1;
+  private int _idXmpSize = 0;
   private int _ifdInterOffset = -1;
 
   /// <summary>

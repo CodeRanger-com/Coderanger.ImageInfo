@@ -1,19 +1,17 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="MetadataProfileType" company="CodeRanger.com">
+// <copyright file="XmpTagFactory.cs" company="CodeRanger.com">
 //     CodeRanger.com. All rights reserved
 // </copyright>
 // <author>Dan Petitt</author>
 // <comment></comment>
 // -----------------------------------------------------------------------
 
-namespace Coderanger.ImageInfo.Decoders.Metadata;
+namespace Coderanger.ImageInfo.Decoders.Metadata.Xmp;
 
-public enum MetadataProfileType
+internal static class XmpTagFactory
 {
-  Exif,
-  Gps,
-  Interoperability,
-  Iptc,
-  Xmp,
-  PngText,
+  internal static IMetadataTypedValue Create()
+  {
+    return new XmpData();
+  }
 }

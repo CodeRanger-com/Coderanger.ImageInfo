@@ -28,4 +28,5 @@ public enum MetadataType
   DateTime,
   Enum,
   PngText,
+  Xmp,
 }
