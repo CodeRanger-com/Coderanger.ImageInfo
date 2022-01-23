@@ -13,7 +13,9 @@ using Coderanger.ImageInfo.Decoders.Png;
 
 internal class FormatManager
 {
-  internal IEnumerable<IDecoder> Get()
+  internal delegate IDecoder? DetectFormatDelegate( BinaryReader reader );
+
+  internal IEnumerable<DetectFormatDelegate> Get()
   {
     foreach( var decoder in _decoders )
     {
@@ -21,8 +23,8 @@ internal class FormatManager
     }
   }
 
-  private readonly List<IDecoder> _decoders = new() { 
-    new DecodeJpeg(),
-    new DecodePng(),
+  private readonly List<DetectFormatDelegate> _decoders = new() { 
+    DecodeJpeg.DetectFormat,
+    DecodePng.DetectFormat,
   };
 }

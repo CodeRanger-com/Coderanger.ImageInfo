@@ -343,38 +343,6 @@
         "TagTypeName": "Xmp",
         "TagType": 18
       }
-    ],
-    "Iptc": [
-      {
-        "StringValue": "By-line = Sample metadata testing image",
-        "TagId": 80,
-        "TagType": 2,
-        "Name": "By-line",
-        "Description": "Contains name of the creator, e.g. writer, photographer or graphic artist",
-        "IsArray": false,
-        "HasValue": true,
-        "TagTypeName": "String"
-      },
-      {
-        "StringValue": "Copyright Notice = Copyright by CodeRanger.com",
-        "TagId": 116,
-        "TagType": 2,
-        "Name": "Copyright Notice",
-        "Description": "Contains any necessary copyright notice",
-        "IsArray": false,
-        "HasValue": true,
-        "TagTypeName": "String"
-      },
-      {
-        "StringValue": "Country/Primary Location Name = United Kingdom",
-        "TagId": 101,
-        "TagType": 2,
-        "Name": "Country/Primary Location Name",
-        "Description": "Provides full, publishable, name of the country/primary location where the intellectual property of the object was created, according to guidelines of the provider",
-        "IsArray": false,
-        "HasValue": true,
-        "TagTypeName": "String"
-      }
     ]
   }
 }

@@ -24,7 +24,7 @@ using Coderanger.ImageInfo.Decoders.Metadata.Iptc;
 /// </summary>
 internal class DecodeJpeg : IDecoder
 {
-  public IDecoder? DetectFormat( BinaryReader reader )
+  public static IDecoder? DetectFormat( BinaryReader reader )
   {
     // Set it to the start of the stream
     reader.Position( 0 );
@@ -40,7 +40,7 @@ internal class DecodeJpeg : IDecoder
     var headerValue = DataConversion.UInt32FromBigEndianBuffer( new byte[] { 0, 0, header[ 0 ], header[ 1 ] }.AsSpan() );
     if( headerValue == JpegConstants.MagicNumberValue )
     {
-      return this;
+      return new DecodeJpeg();
     }
 
     return null;

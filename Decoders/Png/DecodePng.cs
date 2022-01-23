@@ -27,7 +27,7 @@ using Coderanger.ImageInfo.Decoders.Metadata.Xmp;
 /// </summary>
 internal class DecodePng : IDecoder
 {
-  public IDecoder? DetectFormat( BinaryReader reader )
+  public static IDecoder? DetectFormat( BinaryReader reader )
   {
     // Set it to the start of the stream
     reader.Position( 0 );
@@ -43,11 +43,11 @@ internal class DecodePng : IDecoder
     var headerValue = DataConversion.UInt64FromBigEndianBuffer( header );
     if( headerValue == PngConstants.MagicNumberValue )
     {
-      return this;
+      return new DecodePng();
     }
 
     return null;
-}
+  }
 
   public ImageDetails Decode( BinaryReader reader )
   {

@@ -18,7 +18,7 @@ internal interface IDecoder
   /// </summary>
   /// <param name="reader">Wrapper around a readable stream</param>
   /// <returns>This decoder if it can be used to decode the stream</returns>
-  IDecoder? DetectFormat( BinaryReader reader );
+  static IDecoder? DetectFormat( BinaryReader _ ) => throw new NotImplementedException( "Must implement a static implementation which creates a new instance when its the right format" );
 
   /// <summary>
   /// Decodes the stream passed and returns an ImageDetails object

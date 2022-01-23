@@ -124,10 +124,10 @@ public sealed class ImageInfo
   /// <returns></returns>
   private static IDecoder? FindDecoder( BinaryReader reader )
   {
-    foreach( var formatDetector in FormatManager.Get() )
+    foreach( var formatDetectorDelegate in FormatManager.Get() )
     {
       reader.Position( 0 );
-      var decoder = formatDetector.DetectFormat( reader );
+      var decoder = formatDetectorDelegate( reader );
       if( decoder != null )
       {
         return decoder;
