@@ -97,7 +97,7 @@ internal class DecodeExif
   private byte[] ValidateHeader()
   {
     byte[] data = _reader.ReadBytes( TiffConstants.HeaderLength );
-    _exifByteOrder = TiffByteOrderHelper.GetTiffByteOrder( data.AsSpan( 0, 2 ) );
+    _exifByteOrder = ByteOrderHelper.GetTiffByteOrder( data.AsSpan( 0, 2 ) );
 
     var signature = DataConversion.Int16FromBuffer( data.AsSpan( 2, 2 ), _exifByteOrder );
     if( signature != TiffSignatureValue )
@@ -365,7 +365,7 @@ internal class DecodeExif
 
   private long _segmentStart = 0;
   private bool _processed = false;
-  private TiffByteOrder _exifByteOrder = TiffByteOrder.Unknown;
+  private ByteOrder _exifByteOrder = ByteOrder.Unknown;
 
   private readonly BinaryReader _reader;
 

@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="TiffByteOrderHelper.cs" company="CodeRanger.com">
+// <copyright file="ByteOrderHelper.cs" company="CodeRanger.com">
 //     CodeRanger.com. All rights reserved
 // </copyright>
 // <author>Dan Petitt</author>
@@ -13,7 +13,7 @@ using System;
 /// <summary>
 /// Classifier of data byte order type referenced
 /// </summary>
-internal enum TiffByteOrder
+internal enum ByteOrder
 {
   Unknown,
   LittleEndian,
@@ -23,15 +23,15 @@ internal enum TiffByteOrder
 /// <summary>
 /// Helper for retrieving byte order from buffer
 /// </summary>
-internal static class TiffByteOrderHelper
+internal static class ByteOrderHelper
 {
-  internal static TiffByteOrder GetTiffByteOrder( ReadOnlySpan<byte> dataSpan )
+  internal static ByteOrder GetTiffByteOrder( ReadOnlySpan<byte> dataSpan )
   {
     return DataConversion.UInt16FromBigEndianBuffer( dataSpan ) switch
     {
-      TiffConstants.ByteOrder.BigEndianValue => TiffByteOrder.BigEndian,
-      TiffConstants.ByteOrder.LittleEndianValue => TiffByteOrder.LittleEndian,
-      _ => throw new ArgumentException( "Unknown byte order in JPEG TIFF header" ),
+      TiffConstants.ByteOrder.BigEndianValue => ByteOrder.BigEndian,
+      TiffConstants.ByteOrder.LittleEndianValue => ByteOrder.LittleEndian,
+      _ => throw new ArgumentException( "Unknown byte order" ),
     };
   }
 }

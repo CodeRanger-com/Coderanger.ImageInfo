@@ -57,7 +57,7 @@ internal static class DataConversion
   /// <param name="bufferOrder">The byte order of the data in the buffer</param>
   /// <returns>Converted Int16 or short</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static short Int16FromBuffer( ReadOnlySpan<byte> buffer, TiffByteOrder bufferOrder )
+  internal static short Int16FromBuffer( ReadOnlySpan<byte> buffer, ByteOrder bufferOrder )
   {
     // Ensure no conversion beyond buffer bounds
     if( buffer.Length < sizeof( short ) )
@@ -65,7 +65,7 @@ internal static class DataConversion
       throw new ArgumentException( $"Invalid buffer size passed to {nameof( Int16FromBuffer )}" );
     }
 
-    if( bufferOrder == TiffByteOrder.BigEndian )
+    if( bufferOrder == ByteOrder.BigEndian )
     {
       return Int16FromBigEndianBuffer( buffer );
     }
@@ -83,7 +83,7 @@ internal static class DataConversion
   /// <param name="bufferOrder">The byte order of the data in the buffer</param>
   /// <returns>Converted UInt16 or ushort</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static ushort UInt16FromBuffer( ReadOnlySpan<byte> buffer, TiffByteOrder bufferOrder )
+  internal static ushort UInt16FromBuffer( ReadOnlySpan<byte> buffer, ByteOrder bufferOrder )
   {
     // Ensure no conversion beyond buffer bounds
     if( buffer.Length < sizeof( ushort ) )
@@ -91,7 +91,7 @@ internal static class DataConversion
       throw new ArgumentException( $"Invalid buffer size passed to {nameof( UInt16FromBuffer )}" );
     }
 
-    if( bufferOrder == TiffByteOrder.BigEndian )
+    if( bufferOrder == ByteOrder.BigEndian )
     {
       return UInt16FromBigEndianBuffer( buffer );
     }
@@ -109,7 +109,7 @@ internal static class DataConversion
   /// <param name="bufferOrder">The byte order of the data in the buffer</param>
   /// <returns>Converted Int32 or int</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static int Int32FromBuffer( ReadOnlySpan<byte> buffer, TiffByteOrder bufferOrder )
+  internal static int Int32FromBuffer( ReadOnlySpan<byte> buffer, ByteOrder bufferOrder )
   {
     // Ensure no conversion beyond buffer bounds
     if( buffer.Length < sizeof( int ) )
@@ -117,7 +117,7 @@ internal static class DataConversion
       throw new ArgumentException( $"Invalid buffer size passed to {nameof( Int32FromBuffer )}" );
     }
 
-    if( bufferOrder == TiffByteOrder.BigEndian )
+    if( bufferOrder == ByteOrder.BigEndian )
     {
       return Int32FromBigEndianBuffer( buffer );
     }
@@ -135,7 +135,7 @@ internal static class DataConversion
   /// <param name="bufferOrder">The byte order of the data in the buffer</param>
   /// <returns>Converted UInt32 or uint</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static uint UInt32FromBuffer( ReadOnlySpan<byte> buffer, TiffByteOrder bufferOrder )
+  internal static uint UInt32FromBuffer( ReadOnlySpan<byte> buffer, ByteOrder bufferOrder )
   {
     // Ensure no conversion beyond buffer bounds
     if( buffer.Length < sizeof( int ) )
@@ -143,7 +143,7 @@ internal static class DataConversion
       throw new ArgumentException( $"Invalid buffer size passed to {nameof( UInt32FromBuffer )}" );
     }
 
-    if( bufferOrder == TiffByteOrder.BigEndian )
+    if( bufferOrder == ByteOrder.BigEndian )
     {
       return UInt32FromBigEndianBuffer( buffer );
     }
@@ -161,7 +161,7 @@ internal static class DataConversion
   /// <param name="bufferOrder">The byte order of the data in the buffer</param>
   /// <returns>Converted Single or float</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static float FloatFromBuffer( ReadOnlySpan<byte> buffer, TiffByteOrder bufferOrder )
+  internal static float FloatFromBuffer( ReadOnlySpan<byte> buffer, ByteOrder bufferOrder )
   {
     // Ensure no conversion beyond buffer bounds
     if( buffer.Length < sizeof( float ) )
@@ -169,7 +169,7 @@ internal static class DataConversion
       throw new ArgumentException( $"Invalid buffer size passed to {nameof( FloatFromBuffer )}" );
     }
 
-    if( bufferOrder == TiffByteOrder.BigEndian )
+    if( bufferOrder == ByteOrder.BigEndian )
     {
       return FloatFromBigEndianBuffer( buffer );
     }
@@ -187,7 +187,7 @@ internal static class DataConversion
   /// <param name="bufferOrder">The byte order of the data in the buffer</param>
   /// <returns>Converted double</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static double DoubleFromBuffer( ReadOnlySpan<byte> buffer, TiffByteOrder bufferOrder )
+  internal static double DoubleFromBuffer( ReadOnlySpan<byte> buffer, ByteOrder bufferOrder )
   {
     // Ensure no conversion beyond buffer bounds
     if( buffer.Length < sizeof( double ) )
@@ -195,7 +195,7 @@ internal static class DataConversion
       throw new ArgumentException( $"Invalid buffer size passed to {nameof( DoubleFromBuffer )}" );
     }
 
-    if( bufferOrder == TiffByteOrder.BigEndian )
+    if( bufferOrder == ByteOrder.BigEndian )
     {
       return DoubleFromBigEndianBuffer( buffer );
     }
@@ -213,7 +213,7 @@ internal static class DataConversion
   /// <param name="bufferOrder">The byte order of the data in the buffer</param>
   /// <returns>Converted Int64 or long</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static long Int64FromBuffer( ReadOnlySpan<byte> buffer, TiffByteOrder bufferOrder )
+  internal static long Int64FromBuffer( ReadOnlySpan<byte> buffer, ByteOrder bufferOrder )
   {
     // Ensure no conversion beyond buffer bounds
     if( buffer.Length < sizeof( long ) )
@@ -221,7 +221,7 @@ internal static class DataConversion
       throw new ArgumentException( $"Invalid buffer size passed to {nameof( Int64FromBuffer )}" );
     }
 
-    if( bufferOrder == TiffByteOrder.BigEndian )
+    if( bufferOrder == ByteOrder.BigEndian )
     {
       return Int64FromBigEndianBuffer( buffer );
     }
@@ -239,7 +239,7 @@ internal static class DataConversion
   /// <param name="bufferOrder">The byte order of the data in the buffer</param>
   /// <returns>Converted UInt64 or ulong</returns>
   /// <exception cref="ArgumentException">Thrown if buffer is not big enough</exception>
-  internal static ulong UInt64FromBuffer( ReadOnlySpan<byte> buffer, TiffByteOrder bufferOrder )
+  internal static ulong UInt64FromBuffer( ReadOnlySpan<byte> buffer, ByteOrder bufferOrder )
   {
     // Ensure no conversion beyond buffer bounds
     if( buffer.Length < sizeof( ulong ) )
@@ -247,7 +247,7 @@ internal static class DataConversion
       throw new ArgumentException( $"Invalid buffer size passed to {nameof( Int64FromBuffer )}" );
     }
 
-    if( bufferOrder == TiffByteOrder.BigEndian )
+    if( bufferOrder == ByteOrder.BigEndian )
     {
       return UInt64FromBigEndianBuffer( buffer );
     }

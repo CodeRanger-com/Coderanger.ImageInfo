@@ -14,7 +14,7 @@ using Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 
 internal static class ExifTagValueFactory
 {
-  internal static IMetadataTypedValue? Create( MetadataProfileType profile, BinaryReader reader, long dataStart, TiffByteOrder byteOrder )
+  internal static IMetadataTypedValue? Create( MetadataProfileType profile, BinaryReader reader, long dataStart, ByteOrder byteOrder )
   {
     var directoryBuffer = reader.ReadBytes( ExifConstants.ExifDirectorySize );
     var component = ExtractComponent( profile, directoryBuffer, dataStart, byteOrder );
@@ -380,7 +380,7 @@ internal static class ExifTagValueFactory
       DataBuffer = data;
     }
 
-    internal static CrackedData Create( ReadOnlySpan<byte> directoryBuffer, TiffByteOrder byteOrder )
+    internal static CrackedData Create( ReadOnlySpan<byte> directoryBuffer, ByteOrder byteOrder )
     {
       var tag = DataConversion.UInt16FromBuffer( directoryBuffer.Slice( TagByteStart, 2 ), byteOrder );
       var dataType = DataConversion.Int16FromBuffer( directoryBuffer.Slice( TypeByteStart, 2 ), byteOrder );
@@ -401,7 +401,7 @@ internal static class ExifTagValueFactory
     private const int DataByteStart = 8;
   }
 
-  private static ExifComponent ExtractComponent( MetadataProfileType profile, ReadOnlySpan<byte> directoryBuffer, long dataStart, TiffByteOrder byteOrder )
+  private static ExifComponent ExtractComponent( MetadataProfileType profile, ReadOnlySpan<byte> directoryBuffer, long dataStart, ByteOrder byteOrder )
   {
     var data = CrackedData.Create( directoryBuffer, byteOrder );
     return new ExifComponent( profile: profile,
