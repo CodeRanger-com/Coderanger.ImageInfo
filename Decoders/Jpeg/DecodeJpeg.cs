@@ -26,9 +26,6 @@ internal class DecodeJpeg : IDecoder
 {
   public static IDecoder? DetectFormat( BinaryReader reader )
   {
-    // Set it to the start of the stream
-    reader.Position( 0 );
-
     // Validate the stream is long enough
     if( reader.Length() < JpegConstants.MagicNumber.Length )
     {

@@ -8,6 +8,7 @@
 
 namespace Coderanger.ImageInfo.Decoders;
 
+using Coderanger.ImageInfo.Decoders.Bmp;
 using Coderanger.ImageInfo.Decoders.Jpeg;
 using Coderanger.ImageInfo.Decoders.Png;
 
@@ -26,5 +27,6 @@ internal class FormatManager
   private readonly List<DetectFormatDelegate> _decoders = new() { 
     DecodeJpeg.DetectFormat,
     DecodePng.DetectFormat,
+    DecodeBmp.DetectFormat,
   };
 }

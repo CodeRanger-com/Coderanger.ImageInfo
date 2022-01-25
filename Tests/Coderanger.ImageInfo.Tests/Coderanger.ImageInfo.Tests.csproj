@@ -21,6 +21,36 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Fixtures\Bmp\Version2\qr.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Bmp\Version3\small.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Bmp\Version3\maze.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Bmp\Version3\land.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Bmp\Version3\bath.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Bmp\Version3\budleigh-salterton.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Bmp\Version3\dakar-rally-bike.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Bmp\Version3\dakar-rally-toby-price.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Bmp\Version3\dakar-rally.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\Bmp\Version3\freediving.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Fixtures\Jpeg\bad_image_end.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

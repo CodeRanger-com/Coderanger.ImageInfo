@@ -3,7 +3,11 @@
 //     CodeRanger.com. All rights reserved
 // </copyright>
 // <author>Dan Petitt</author>
-// <comment></comment>
+// <comment>
+// Specifications:
+// https://en.wikipedia.org/wiki/Extensible_Metadata_Platform
+// https://wwwimages2.adobe.com/content/dam/acom/en/devnet/xmp/pdfs/XMP%20SDK%20Release%20cc-2016-08/XMPSpecificationPart3.pdf
+// </comment>
 // -----------------------------------------------------------------------
 
 namespace Coderanger.ImageInfo.Decoders.Metadata.Xmp;
