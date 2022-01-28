@@ -9,6 +9,7 @@
 namespace Coderanger.ImageInfo.Decoders;
 
 using Coderanger.ImageInfo.Decoders.Bmp;
+using Coderanger.ImageInfo.Decoders.Gif;
 using Coderanger.ImageInfo.Decoders.Jpeg;
 using Coderanger.ImageInfo.Decoders.Png;
 
@@ -28,5 +29,6 @@ internal class FormatManager
     DecodeJpeg.DetectFormat,
     DecodePng.DetectFormat,
     DecodeBmp.DetectFormat,
+    DecodeGif.DetectFormat,
   };
 }
