@@ -234,7 +234,7 @@ internal class DecodeExif
     return _profileTags.Count > 0;
   }
 
-  internal bool AddTagsToProfile( ref Dictionary<MetadataProfileType, List<IMetadataTypedValue>> tags )
+  internal bool AddTagsToProfile( ref Metadata metadata )
   {
     if( HasTags() )
     {
@@ -242,7 +242,7 @@ internal class DecodeExif
       {
         if( _profileTags.TryGetValue( profile, out var profileTags ) )
         {
-          tags.Add( profile, profileTags );
+          metadata.AddTags( profile, profileTags );
         }
       }
       return true;
@@ -250,11 +250,6 @@ internal class DecodeExif
 
     return false;
   }
-
-  //internal Dictionary<MetadataProfileType, List<IMetadataTypedValue>> GetProfileTags()
-  //{
-  //  return _profileTags;
-  //}
 
   private bool DiscoverIfdOffsets()
   {

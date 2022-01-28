@@ -34,7 +34,9 @@ internal class DecodeJpeg : IDecoder
     }
 
     var header = reader.ReadBytes( JpegConstants.MagicNumber.Length );
-    var headerValue = DataConversion.UInt32FromBigEndianBuffer( new byte[] { 0, 0, header[ 0 ], header[ 1 ] }.AsSpan() );
+    var signature = new byte[] { 0, 0, header[ 0 ], header[ 1 ] };
+
+    var headerValue = DataConversion.UInt32FromBigEndianBuffer( signature.AsSpan() );
     if( headerValue == JpegConstants.MagicNumberValue )
     {
       return new DecodeJpeg();
@@ -140,19 +142,24 @@ internal class DecodeJpeg : IDecoder
 
     if( _width > 0 && _height > 0 )
     {
-      Dictionary<MetadataProfileType, List<IMetadataTypedValue>> tags = new();
+      var metadata = new Metadata();
 
       if( _exifDecoder?.HasTags() ?? false )
       {
-        _exifDecoder.AddTagsToProfile( ref tags );
+        _exifDecoder.AddTagsToProfile( ref metadata );
       }
 
       if( _iptcDecoder?.HasTags() ?? false )
       {
-        _iptcDecoder.AddTagsToProfile( ref tags );
+        _iptcDecoder.AddTagsToProfile( ref metadata );
       }
 
-      return new ImageDetails( _width, _height, _horizontalDpi, _verticalDpi, JpegConstants.MimeType, tags.Count > 0 ? tags : null );
+      return new ImageDetails( _width,
+                               _height,
+                               _horizontalDpi,
+                               _verticalDpi,
+                               JpegConstants.MimeType,
+                               metadata.GetTags() );
     }
 
     throw ExceptionHelper.Throw( reader, ErrorMessage );

@@ -54,11 +54,15 @@ internal class DecodeIptc
     return _values?.Count > 0;
   }
 
-  internal bool AddTagsToProfile( ref Dictionary<MetadataProfileType, List<IMetadataTypedValue>> tags )
+  internal bool AddTagsToProfile( ref Metadata metadata )
   {
     if( _values != null && HasTags() )
     {
-      tags.Add( MetadataProfileType.Iptc, _values );
+      var tags = metadata.GetListForProfile( MetadataProfileType.Iptc );
+      foreach( var tag in _values )
+      {
+        tags.Add( tag );
+      }
       return true;
     }
 

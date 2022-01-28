@@ -14,7 +14,6 @@
 namespace Coderanger.ImageInfo.Decoders.Gif;
 
 using System.IO;
-using System.Xml.Linq;
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 using Coderanger.ImageInfo.Decoders.Metadata;
 using Coderanger.ImageInfo.Decoders.Metadata.Xmp;
@@ -66,13 +65,15 @@ internal class DecodeGif : IDecoder
         var xmpData = ExtractXmp( reader );
         if( xmpData != null )
         {
-          var tags = new Dictionary<MetadataProfileType, List<IMetadataTypedValue>>();
+          var metadata = new Metadata();
+          metadata.AddTag( MetadataProfileType.Xmp, xmpData );
 
-          var tagValue = new List<IMetadataTypedValue>();
-          tags.Add( MetadataProfileType.Xmp, tagValue );
-          tagValue.Add( xmpData );
-
-          return new ImageDetails( imageInfo.Width, imageInfo.Height, 0, 0, GifConstants.MimeType, tags );
+          return new ImageDetails( imageInfo.Width,
+                                   imageInfo.Height,
+                                   0,
+                                   0,
+                                   GifConstants.MimeType,
+                                   metadata.GetTags() );
         }
 
         return imageInfo;

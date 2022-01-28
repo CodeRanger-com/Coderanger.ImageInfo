@@ -134,30 +134,31 @@ internal class DecodePng : IDecoder
 
     if( _width > 0 && _height > 0 )
     {
-      var tags = BuildTagList();
+      var metadata = BuildTagList();
 
-      return new ImageDetails( _width, _height, _resolutionX, _resolutionY, PngConstants.MimeType, tags.Count > 0 ? tags : null );
+      return new ImageDetails( _width,
+                               _height,
+                               _resolutionX,
+                               _resolutionY,
+                               PngConstants.MimeType,
+                               metadata.GetTags() );
     }
 
     throw ExceptionHelper.Throw( reader, ErrorMessage );
   }
 
-  private Dictionary<MetadataProfileType, List<IMetadataTypedValue>> BuildTagList()
+  private Metadata BuildTagList()
   {
-    Dictionary<MetadataProfileType, List<IMetadataTypedValue>> tags = new();
+    var metadata = new Metadata();
 
     if( _exifDecoder?.HasTags() ?? false )
     {
-      _exifDecoder.AddTagsToProfile( ref tags );
+      _exifDecoder.AddTagsToProfile( ref metadata );
     }
 
     if( _metadataItems.Count > 0 )
     {
-      if( !tags.TryGetValue( MetadataProfileType.PngText, out var value ) )
-      {
-        value = new List<IMetadataTypedValue>();
-        tags.Add( MetadataProfileType.PngText, value );
-      }
+      var value = metadata.GetListForProfile( MetadataProfileType.PngText );
 
       foreach( var data in _metadataItems )
       {
@@ -167,16 +168,10 @@ internal class DecodePng : IDecoder
 
     if( _xmpDataValue != null )
     {
-      if( !tags.TryGetValue( MetadataProfileType.Xmp, out var value ) )
-      {
-        value = new List<IMetadataTypedValue>();
-        tags.Add( MetadataProfileType.Xmp, value );
-      }
-
-      value.Add( _xmpDataValue );
+      metadata.AddTag( MetadataProfileType.Xmp, _xmpDataValue );
     }
 
-    return tags;
+    return metadata;
   }
 
   private long _width;
