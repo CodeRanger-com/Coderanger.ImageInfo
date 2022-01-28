@@ -13,6 +13,8 @@ internal static class BmpConstants
   internal static readonly byte[] MagicNumber = new byte[] { (byte)'B', (byte)'M' };
   internal static readonly int MagicNumberValue = 0x_00_00_42_4D;
 
+  internal const string MimeType = "image/bmp";
+
   internal static class HeaderSize
   {
     internal const int OS2Version2 = 12;

@@ -136,7 +136,7 @@ internal class DecodePng : IDecoder
     {
       var tags = BuildTagList();
 
-      return new ImageDetails( _width, _height, _resolutionX, _resolutionY, "image/png", tags.Count > 0 ? tags : null );
+      return new ImageDetails( _width, _height, _resolutionX, _resolutionY, PngConstants.MimeType, tags.Count > 0 ? tags : null );
     }
 
     throw ExceptionHelper.Throw( reader, ErrorMessage );

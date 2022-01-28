@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="DecodeDmp.cs" company="CodeRanger.com">
+// <copyright file="DecodeBmp.cs" company="CodeRanger.com">
 //     CodeRanger.com. All rights reserved
 // </copyright>
 // <author>Dan Petitt</author>
@@ -91,7 +91,7 @@ internal class DecodeBmp : IDecoder
 
     if( width > 0 && height > 0 )
     {
-      return new ImageDetails( width, height, 0, 0, MimeType, null );
+      return new ImageDetails( width, height, 0, 0, BmpConstants.MimeType, null );
     }
 
     throw ExceptionHelper.Throw( reader, ErrorMessage );
@@ -126,13 +126,12 @@ internal class DecodeBmp : IDecoder
 
     if( width > 0 && height > 0 )
     {
-      return new ImageDetails( width, height, hDPI, vDPI, MimeType, null );
+      return new ImageDetails( width, height, hDPI, vDPI, BmpConstants.MimeType, null );
     }
 
     throw ExceptionHelper.Throw( reader, ErrorMessage );
   }
 
-  const string MimeType = "image/bmp";
   const string ErrorMessage = "Invalid BMP format";
   const string ErrorMessageUnknown = "Unknown BMP format version";
 }

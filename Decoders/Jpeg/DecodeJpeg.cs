@@ -152,7 +152,7 @@ internal class DecodeJpeg : IDecoder
         _iptcDecoder.AddTagsToProfile( ref tags );
       }
 
-      return new ImageDetails( _width, _height, _horizontalDpi, _verticalDpi, "image/jpeg", tags.Count > 0 ? tags : null );
+      return new ImageDetails( _width, _height, _horizontalDpi, _verticalDpi, JpegConstants.MimeType, tags.Count > 0 ? tags : null );
     }
 
     throw ExceptionHelper.Throw( reader, ErrorMessage );

@@ -47,20 +47,17 @@ public class XmpData : IMetadataTypedValue
   public void SetValue( ReadOnlySpan<byte> buffer )
   {
     var xmpData = DataConversion.ConvertBuffer( buffer, StringEncoding.Utf8 );
-    _metadataValue = new MetadataTagValue( Type: TagType,
-                                           IsArray: false,
-                                           TagId: TagId,
-                                           TagName: "Xmp",
-                                           Value: xmpData );
+    SetValue( xmpData );
   }
 
   public void SetValue( string value )
   {
+    TrimPacket( ref value );
     _metadataValue = new MetadataTagValue( Type: TagType,
                                            IsArray: false,
                                            TagId: TagId,
                                            TagName: "Xmp",
-                                           Value: value );
+                                           Value: value.Trim() );
   }
 
   public bool TryGetValue( out MetadataTagValue? value )
@@ -75,5 +72,28 @@ public class XmpData : IMetadataTypedValue
     return false;
   }
 
+  private static void TrimPacket( ref string data )
+  {
+    DeleteTag( PacketStart, ref data );
+    DeleteTag( PacketEnd, ref data );
+  }
+
+  private static void DeleteTag( string tag, ref string data )
+  {
+    var start = data.IndexOf( tag );
+    if( start != -1 )
+    {
+      var end = data.IndexOf( CloseTag, start );
+      if( end != -1 )
+      {
+        data = data.Remove( start, ( end - start ) + CloseTag.Length );
+      }
+    }
+  }
+
   private MetadataTagValue? _metadataValue = null;
+
+  private const string CloseTag = "?>";
+  private const string PacketStart = "<?xpacket begin";
+  private const string PacketEnd = "<?xpacket end";
 }

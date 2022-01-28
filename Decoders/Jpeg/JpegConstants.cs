@@ -16,6 +16,8 @@ internal static class JpegConstants
   internal static readonly byte[] MagicNumber = new byte[] { 0xff, 0xd8 };
   internal static readonly int MagicNumberValue = 0x_00_00_ff_d8;
 
+  internal const string MimeType = "image/jpeg";
+
   internal static class Markers
   {
     /// <summary>
