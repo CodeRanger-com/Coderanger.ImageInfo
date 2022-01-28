@@ -24,6 +24,9 @@
     <None Update="Fixtures\Bmp\Version2\qr.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Fixtures\Bmp\Version2\test_v2.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Fixtures\Bmp\Version3\small.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

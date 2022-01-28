@@ -18,6 +18,7 @@ public class Decoder_Bmp_Tests
 {
   [TestMethod]
   [DataRow( "qr.bmp", 29, 29, 0, 0, "image/bmp" )]
+  [DataRow( "test_v2.bmp", 480, 640, 0, 0, "image/bmp" )]
   public void Validate_Version2_Images( string filename, int width, int height, int hdpi, int vdpi, string mime )
   {
     // Arrange
