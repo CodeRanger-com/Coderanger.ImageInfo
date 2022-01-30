@@ -12,6 +12,7 @@ using Coderanger.ImageInfo.Decoders.Bmp;
 using Coderanger.ImageInfo.Decoders.Gif;
 using Coderanger.ImageInfo.Decoders.Jpeg;
 using Coderanger.ImageInfo.Decoders.Png;
+using Coderanger.ImageInfo.Decoders.WebP;
 
 internal class FormatManager
 {
@@ -30,5 +31,6 @@ internal class FormatManager
     DecodePng.DetectFormat,
     DecodeBmp.DetectFormat,
     DecodeGif.DetectFormat,
+    DecodeWebP.DetectFormat,
   };
 }
