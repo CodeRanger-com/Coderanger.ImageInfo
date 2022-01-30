@@ -10,8 +10,19 @@ namespace Coderanger.ImageInfo.Decoders.Metadata.Xmp;
 
 internal static class XmpTagFactory
 {
-  internal static XmpData Create()
+  internal static void AddXmp( ReadOnlySpan<byte> buffer, ref Metadata metadata )
   {
-    return new XmpData();
+    var xmpData = new XmpData();
+    xmpData.SetValue( buffer );
+
+    metadata.AddTag( MetadataProfileType.Xmp, xmpData );
+  }
+
+  internal static void AddXmp( string value, ref Metadata metadata )
+  {
+    var xmpData = new XmpData();
+    xmpData.SetValue( value );
+
+    metadata.AddTag( MetadataProfileType.Xmp, xmpData );
   }
 }

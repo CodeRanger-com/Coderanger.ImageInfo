@@ -15,7 +15,6 @@
 namespace Coderanger.ImageInfo.Decoders.Png;
 
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
-using Coderanger.ImageInfo.Decoders.Metadata.Exif;
 using Coderanger.ImageInfo.Decoders.Png.Helpers;
 using Coderanger.ImageInfo.Decoders.Png.ChunkParts;
 using Coderanger.ImageInfo.Decoders.Metadata;
@@ -107,9 +106,7 @@ internal class DecodePng : IDecoder
         {
           if( txtInternational.Text.Keyword == PngConstants.Chunks.XmpKeyword )
           {
-            var xmpData = XmpTagFactory.Create();
-            xmpData.SetValue( txtInternational.Text.TextValue );
-            _xmpDataValue = xmpData;
+            XmpTagFactory.AddXmp( txtInternational.Text.TextValue, ref _metadata );
           }
           else
           {
@@ -120,7 +117,7 @@ internal class DecodePng : IDecoder
       else if( chunk is ExifChunk exif )
       {
         exif.LoadData( reader );
-        _exifDecoder = exif.ExifData;
+        exif.ExifData?.AddTagsToProfile( ref _metadata );
       }
       else if( chunk is EndChunk )
       {
@@ -134,44 +131,30 @@ internal class DecodePng : IDecoder
 
     if( _width > 0 && _height > 0 )
     {
-      var metadata = BuildTagList();
+      BuildTagList();
 
       return new ImageDetails( _width,
                                _height,
                                _resolutionX,
                                _resolutionY,
                                PngConstants.MimeType,
-                               metadata.GetTags() );
+                               _metadata.GetTags() );
     }
 
     throw ExceptionHelper.Throw( reader, ErrorMessage );
   }
 
-  private Metadata BuildTagList()
+  private void BuildTagList()
   {
-    var metadata = new Metadata();
-
-    if( _exifDecoder?.HasTags() ?? false )
-    {
-      _exifDecoder.AddTagsToProfile( ref metadata );
-    }
-
     if( _metadataItems.Count > 0 )
     {
-      var value = metadata.GetListForProfile( MetadataProfileType.PngText );
+      var value = _metadata.GetListForProfile( MetadataProfileType.PngText );
 
       foreach( var data in _metadataItems )
       {
         value.Add( new PngMetadata( data ) );
       }
     }
-
-    if( _xmpDataValue != null )
-    {
-      metadata.AddTag( MetadataProfileType.Xmp, _xmpDataValue );
-    }
-
-    return metadata;
   }
 
   private long _width;
@@ -179,8 +162,7 @@ internal class DecodePng : IDecoder
   private int _resolutionX = -1;
   private int _resolutionY = -1;
   private readonly List<PngText> _metadataItems = new();
-  private DecodeExif? _exifDecoder;
-  private IMetadataTypedValue? _xmpDataValue = null;
+  private Metadata _metadata = new();
 
   const string ErrorMessage = "Invalid PNG format";
 }

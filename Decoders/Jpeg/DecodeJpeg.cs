@@ -144,10 +144,7 @@ internal class DecodeJpeg : IDecoder
     {
       var metadata = new Metadata();
 
-      if( _exifDecoder?.HasTags() ?? false )
-      {
-        _exifDecoder.AddTagsToProfile( ref metadata );
-      }
+      _exifDecoder?.AddTagsToProfile( ref metadata );
 
       if( _iptcDecoder?.HasTags() ?? false )
       {

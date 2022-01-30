@@ -62,21 +62,13 @@ internal class DecodeGif : IDecoder
       var imageInfo = ParseDimensions( reader, header );
       if( imageInfo != null )
       {
-        var xmpData = ExtractXmp( reader );
-        if( xmpData != null )
-        {
-          var metadata = new Metadata();
-          metadata.AddTag( MetadataProfileType.Xmp, xmpData );
-
-          return new ImageDetails( imageInfo.Width,
-                                   imageInfo.Height,
-                                   0,
-                                   0,
-                                   GifConstants.MimeType,
-                                   metadata.GetTags() );
-        }
-
-        return imageInfo;
+        var metadata = ExtractXmp( reader );
+        return new ImageDetails( imageInfo.Width,
+                                  imageInfo.Height,
+                                  0,
+                                  0,
+                                  GifConstants.MimeType,
+                                  metadata?.GetTags() );
       }
     }
 
@@ -96,7 +88,7 @@ internal class DecodeGif : IDecoder
     throw ExceptionHelper.Throw( reader, ErrorMessage );
   }
 
-  private static IMetadataTypedValue? ExtractXmp( BinaryReader reader )
+  private static Metadata? ExtractXmp( BinaryReader reader )
   {
     // An XMP data block is held within an application extension block
     // with a signature prior to the xml package
@@ -147,9 +139,9 @@ internal class DecodeGif : IDecoder
 
     if( foundXmpBlock && endBlockOffset > startBlockOffset && xmp.Count > 0 )
     {
-      var xmpData = XmpTagFactory.Create();
-      xmpData.SetValue( xmp.ToArray().AsSpan() );
-      return xmpData;
+      var metadata = new Metadata();
+      XmpTagFactory.AddXmp( xmp.ToArray().AsSpan(), ref metadata );
+      return metadata;
     }
 
     return null;

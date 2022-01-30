@@ -81,7 +81,11 @@ public class ExifURational : ExifTypeBase, IMetadataTypedValue
       var numerator = DataConversion.Int32FromBuffer( numBuff, Component.ByteOrder );
       var denominator = DataConversion.Int32FromBuffer( denomBuff, Component.ByteOrder );
 
-      yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: new Rational( numerator, denominator ) );
+      yield return new MetadataTagValue( Type: TagType,
+                                         IsArray: IsArray,
+                                         TagId: TagId,
+                                         TagName: Name,
+                                         Value: new Rational( numerator, denominator ) );
     }
   }
 }

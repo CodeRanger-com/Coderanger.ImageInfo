@@ -31,10 +31,10 @@ using Coderanger.ImageInfo.Decoders.Metadata.Xmp;
 /// </remarks>
 internal class DecodeExif
 {
-  internal static DecodeExif? DecodeFromReader( BinaryReader reader )
+  internal static DecodeExif? DecodeFromReader( BinaryReader reader, bool validateSignature = true )
   {
     var decoder = new DecodeExif( reader );
-    if( decoder.Decode() )
+    if( decoder.Decode( validateSignature ) )
     {
       return decoder;
     }  
@@ -54,6 +54,27 @@ internal class DecodeExif
     }
 
     return null;
+  }
+
+  internal int HorizontalDpi { get; set; } = 0;
+  internal int VerticalDpi { get; set; } = 0;
+
+  internal bool AddTagsToProfile( ref Metadata metadata )
+  {
+    var tags = _metadata.GetTags();
+    if( tags != null )
+    {
+      foreach( var profile in tags.Keys )
+      {
+        if( tags.TryGetValue( profile, out var profileTags ) )
+        {
+          metadata.AddTags( profile, profileTags );
+        }
+      }
+      return true;
+    }
+
+    return false;
   }
 
   private DecodeExif( BinaryReader reader )
@@ -158,17 +179,7 @@ internal class DecodeExif
       _reader.BaseStream.Seek( _segmentStart + _idXmpOffset, SeekOrigin.Begin );
 
       var xmp = _reader.ReadBytes( _idXmpSize );
-
-      if( !_profileTags.TryGetValue( MetadataProfileType.Xmp, out var tags ) )
-      {
-        tags = new List<IMetadataTypedValue>();
-        _profileTags.Add( MetadataProfileType.Xmp, tags );
-      }
-
-      var data = XmpTagFactory.Create();
-      data.SetValue( xmp.AsSpan() );
-      tags.Add( data );
-
+      XmpTagFactory.AddXmp( xmp.AsSpan(), ref _metadata );
     }
   }
 
@@ -197,14 +208,8 @@ internal class DecodeExif
             var dataValue = ExifTagValueFactory.Create( profile, _reader, _segmentStart, _exifByteOrder );
             if( dataValue != null )
             {
-              if( !_profileTags.TryGetValue( profile, out var tags ) )
-              {
-                tags = new List<IMetadataTypedValue>();
-                _profileTags.Add( profile, tags );
-              }
-
               dataValue.SetValue( null );
-              tags.Add( dataValue );
+              _metadata.AddTag( profile, dataValue );
             }
           }
           else
@@ -224,31 +229,6 @@ internal class DecodeExif
         ifdOffset = DataConversion.Int32FromBuffer( nextIfdBuffer.AsSpan( 0, 4 ), _exifByteOrder );
       } while( ifdOffset != 0 );
     }
-  }
-
-  internal int HorizontalDpi { get; set; } = 0;
-  internal int VerticalDpi { get; set; } = 0;
-
-  internal bool HasTags()
-  {
-    return _profileTags.Count > 0;
-  }
-
-  internal bool AddTagsToProfile( ref Metadata metadata )
-  {
-    if( HasTags() )
-    {
-      foreach( var profile in _profileTags.Keys )
-      {
-        if( _profileTags.TryGetValue( profile, out var profileTags ) )
-        {
-          metadata.AddTags( profile, profileTags );
-        }
-      }
-      return true;
-    }
-
-    return false;
   }
 
   private bool DiscoverIfdOffsets()
@@ -292,76 +272,66 @@ internal class DecodeExif
     return false;
   }
 
+  /// <summary>
+  /// Extract and store only the resolution info
+  /// </summary>
+  private void ExtractResolutionInfo()
+  {
+    var resUnitTag = _metadata.FindTag( MetadataProfileType.Exif, ExifTag.ResolutionUnit );
+    if( resUnitTag != null )
+    {
+      DensityUnit? exifDensityUnit = null;
+
+      if( resUnitTag.TryGetValue( out var unitVal ) && unitVal != null )
+      {
+        var enumValue = (MetadataEnumValue)unitVal.Value;
+
+        exifDensityUnit = enumValue.EnumValue switch
+        {
+          "2" => DensityUnit.PixelsPerInch,
+          "3" => DensityUnit.PixelsPerCentimeter,
+          _ => DensityUnit.PixelsPerInch, // Unknown or not set, assume inches
+        };
+      }
+
+      if( !exifDensityUnit.HasValue )
+      {
+        return;
+      }
+
+      var xResTag = _metadata.FindTag( MetadataProfileType.Exif, ExifTag.XResolution );
+      if( xResTag != null )
+      {
+        if( xResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value is not null )
+        {
+          var rational = dpi.Value as Rational;
+          HorizontalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, rational?.ToDouble() ?? 0 );
+        }
+      }
+
+      var yResTag = _metadata.FindTag( MetadataProfileType.Exif, ExifTag.YResolution );
+      if( yResTag != null )
+      {
+        if( yResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value != null )
+        {
+          var rational = dpi.Value as Rational;
+          VerticalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, rational?.ToDouble() ?? 0 );
+        }
+      }
+    }
+  }
+
   private int _ifdSubExifOffset = -1;
   private int _ifdGpsOffset = -1;
   private int _ifdIptcOffset = -1;
   private int _idXmpOffset = -1;
   private int _idXmpSize = 0;
   private int _ifdInterOffset = -1;
-
-  /// <summary>
-  /// Extract and store only the resolution info
-  /// </summary>
-  private void ExtractResolutionInfo()
-  {
-    if( _profileTags.TryGetValue( MetadataProfileType.Exif, out var tags ) )
-    {
-      if( tags == null )
-      {
-        return;
-      }
-
-      var resUnitTag = tags.Find( t => t.TagId == ExifTag.ResolutionUnit );
-      if( resUnitTag != null )
-      {
-        DensityUnit? exifDensityUnit = null;
-
-        if( resUnitTag.TryGetValue( out var unitVal ) && unitVal != null )
-        {
-          var enumValue = (MetadataEnumValue)unitVal.Value;
-
-          exifDensityUnit = enumValue.EnumValue switch
-          {
-            "2" => DensityUnit.PixelsPerInch,
-            "3" => DensityUnit.PixelsPerCentimeter,
-            _ => DensityUnit.PixelsPerInch, // Unknown or not set, assume inches
-          };
-        }
-
-        if( !exifDensityUnit.HasValue )
-        {
-          return;
-        }
-
-        var xResTag = tags.Find( t => t.TagId == ExifTag.XResolution );
-        if( xResTag != null )
-        {
-          if( xResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value is not null )
-          {
-            var rational = dpi.Value as Rational;
-            HorizontalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, rational?.ToDouble() ?? 0 );
-          }
-        }
-
-        var yResTag = tags.Find( t => t.TagId == ExifTag.YResolution );
-        if( yResTag != null )
-        {
-          if( yResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value != null )
-          {
-            var rational = dpi.Value as Rational;
-            VerticalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, rational?.ToDouble() ?? 0 );
-          }
-        }
-      }
-    }
-  }
-
-  private readonly Dictionary<MetadataProfileType, List<IMetadataTypedValue>> _profileTags = new();
-
   private long _segmentStart = 0;
   private bool _processed = false;
   private ByteOrder _exifByteOrder = ByteOrder.Unknown;
 
+  private Metadata _metadata = new();
   private readonly BinaryReader _reader;
 
   private const short IfdOffsetSegmentSize = 12;
