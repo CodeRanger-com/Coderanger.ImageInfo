@@ -16,7 +16,7 @@ internal interface IDecoder
   /// <summary>
   /// Determines if the stream passed can be decoded by this decoder
   /// </summary>
-  /// <param name="reader">Wrapper around a readable stream</param>
+  /// <param name="_">Wrapper around a readable stream</param>
   /// <returns>This decoder if it can be used to decode the stream</returns>
   static IDecoder? DetectFormat( BinaryReader _ ) => throw new NotImplementedException( "Must implement a static implementation which creates a new instance when its the right format" );
 

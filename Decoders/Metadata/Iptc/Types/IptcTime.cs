@@ -21,6 +21,10 @@ public class IptcTime : IptcTypeBase, IMetadataTypedValue
   {
   }
 
+  /// <summary>
+  /// Adds a new value to the metadata object
+  /// </summary>
+  /// <param name="buffer">Buffer which contains the appropriate data value</param>
   public void AddToExistingValue( ReadOnlySpan<byte> buffer )
   {
     var value = Create( buffer );
@@ -30,6 +34,10 @@ public class IptcTime : IptcTypeBase, IMetadataTypedValue
     }
   }
 
+  /// <summary>
+  /// Sets the value of the object
+  /// </summary>
+  /// <param name="buffer">Buffer which contains the appropriate data value</param>
   public void SetValue( ReadOnlySpan<byte> buffer )
   {
     var value = Create( buffer );
@@ -44,7 +52,7 @@ public class IptcTime : IptcTypeBase, IMetadataTypedValue
     var bufferValue = DataConversion.ConvertBuffer( buffer, StringEncoding.Ascii );
     bufferValue = bufferValue.Replace( "+", string.Empty );
 
-    if( TimeOnly.TryParseExact( bufferValue, TimeFormatStringWithZone, null, System.Globalization.DateTimeStyles.AdjustToUniversal, out var timeWithZone ) )
+    if( DateTime.TryParseExact( bufferValue, TimeFormatStringWithZone, null, System.Globalization.DateTimeStyles.AdjustToUniversal, out var timeWithZone ) )
     {
       return new MetadataTagValue( Type: TagType,
                                    IsArray: false,
@@ -52,7 +60,7 @@ public class IptcTime : IptcTypeBase, IMetadataTypedValue
                                    TagName: Name,
                                    Value: timeWithZone );
     }
-    else if( TimeOnly.TryParseExact( bufferValue, TimeFormatString, null, System.Globalization.DateTimeStyles.None, out var time ) )
+    else if( DateTime.TryParseExact( bufferValue, TimeFormatString, null, System.Globalization.DateTimeStyles.None, out var time ) )
     {
       return new MetadataTagValue( Type: TagType,
                                    IsArray: false,

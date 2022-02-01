@@ -9,7 +9,7 @@
         "TagId": 270,
         "TagType": 2,
         "Name": "Image Description",
-        "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used; instead, the Exif tag 'UserComment' is to be used"
+        "Description": "Character string giving the title of the image. It may be a comment such as '1988 company picnic' for example. Two-bytes character codes cannot be used, instead, use the 'UserComment' Exif tag"
       },
       {
         "IsArray": false,
@@ -39,7 +39,7 @@
         "TagId": 274,
         "TagType": 16,
         "Name": "Orientation",
-        "Description": ""
+        "Description": "Orientation of the image viewed in terms of rows and columns"
       },
       {
         "StringValue": "Horizontal Resolution = 72/1 (72D)",

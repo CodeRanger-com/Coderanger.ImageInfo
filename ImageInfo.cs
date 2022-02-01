@@ -13,6 +13,9 @@ using Coderanger.ImageInfo.Decoders.DecoderUtils;
 using Coderanger.ImageInfo.Decoders.Metadata;
 using Coderanger.ImageInfo.Exceptions;
 
+/// <summary>
+/// Helper class with methods to decode an image or stream
+/// </summary>
 public sealed class ImageInfo
 {
   /// <summary>
@@ -25,7 +28,6 @@ public sealed class ImageInfo
   /// <returns>Null or a valid ImageInfo object</returns>
   /// <example>
   /// <code language="cs">
-  /// // Create a Workbook
   /// using var imageStream = new FileStream( "image.jpeg", FileMode.Open, FileAccess.Read );
   /// var imageInfo = ImageInfo.DecodeFromStream( imageStream );
   /// 
@@ -35,7 +37,8 @@ public sealed class ImageInfo
   /// Debug.WriteLine( $"Height = {imageInfo.Height}" );
   /// 
   /// // If there is any metedata in the image, the tags property
-  /// // will not be null and will contain the info
+  /// // will not be null and will contain the info as a dictionary
+  /// // of profile tag lists
   /// 
   /// </code>
   /// </example>

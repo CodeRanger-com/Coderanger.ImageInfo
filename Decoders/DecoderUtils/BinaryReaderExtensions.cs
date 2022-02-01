@@ -8,6 +8,8 @@
 
 namespace Coderanger.ImageInfo.Decoders.DecoderUtils;
 
+using Coderanger.ImageInfo.Exceptions;
+
 internal static class BinaryReaderExtensions
 {
   /// <summary>

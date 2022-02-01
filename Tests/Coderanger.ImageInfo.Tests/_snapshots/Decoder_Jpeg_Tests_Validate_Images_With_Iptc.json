@@ -42,7 +42,7 @@
         "TagTypeName": "String"
       },
       {
-        "StringValue": "Created Date = 22/11/2021",
+        "StringValue": "Created Date = 22/11/2021 00:00:00",
         "TagId": 55,
         "TagType": 13,
         "Name": "Created Date",
@@ -52,7 +52,7 @@
         "TagTypeName": "Date"
       },
       {
-        "StringValue": "Created Time = 15:02",
+        "StringValue": "Created Time = 01/02/2022 15:02:58",
         "TagId": 60,
         "TagType": 14,
         "Name": "Created Time",

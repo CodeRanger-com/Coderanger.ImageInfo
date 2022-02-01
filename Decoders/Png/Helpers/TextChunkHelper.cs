@@ -34,9 +34,7 @@ internal static class TextChunkHelper
     // Position is the null, so remove one for the keyword
     wordEnd--;
 
-#pragma warning disable IDE0057 // Use range operator
-    var wordBuffer = buffer.Slice( 0, wordEnd);
-#pragma warning restore IDE0057 // Use range operator
+    var wordBuffer = buffer[ ..wordEnd ];
 
     return new TextSlice( Value: DataConversion.ConvertBuffer( wordBuffer, encoding ),
                           ByteEndPosition: wordEnd );

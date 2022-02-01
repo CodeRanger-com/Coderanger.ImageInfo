@@ -8,13 +8,7 @@
 
 namespace Coderanger.ImageInfo.Decoders.DecoderUtils;
 
-/// <summary>
-/// Thrown when an image is invalid for the format being decoded
-/// </summary>
-public class ImageFormatException : ArgumentException
-{
-  public ImageFormatException( string message, string? paramName = null ) : base( message, paramName ) { }
-}
+using Coderanger.ImageInfo.Exceptions;
 
 internal static class ExceptionHelper
 {

@@ -25,12 +25,10 @@ internal ref struct TextDecompressor
     // 2-6 = 4 bytes  CRC (optional)
     var flags = _buffer[ 1 ];
 
-#pragma warning disable IDE0057 // Use range operator
     // If we have a dictionary, move past the crc cos we dont particularly care about checking
     // else skip just the cmf and flags bytes
     bool fdict = ( flags & 32 ) != 0;
-    var compressedBytes = _buffer.Slice( fdict ? 6 : 2 );
-#pragma warning restore IDE0057 // Use range operator
+    var compressedBytes = _buffer[ ( fdict ? 6 : 2 ).. ];
 
     using var memoryStream = new MemoryStream( compressedBytes.ToArray() );
     using var decompressor = new DeflateStream( memoryStream, CompressionMode.Decompress );

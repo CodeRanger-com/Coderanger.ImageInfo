@@ -33,6 +33,10 @@ public class ExifDate : ExifTypeBase, IMetadataTypedValue
     return $"{Name} = {_convertedValue}";
   }
 
+  /// <summary>
+  /// Sets the value of the object
+  /// </summary>
+  /// <param name="buffer">Buffer which contains the appropriate data value</param>
   public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();
@@ -51,7 +55,7 @@ public class ExifDate : ExifTypeBase, IMetadataTypedValue
     var byteCount = Component.ComponentCount * Component.ComponentSize;
 
     var stringValue = DataConversion.ConvertBuffer( buffer.AsSpan( 0, byteCount ), StringEncoding.Ascii );
-    if( DateOnly.TryParseExact( stringValue, DateFormatString, null, System.Globalization.DateTimeStyles.None, out var dt ) )
+    if( DateTime.TryParseExact( stringValue, DateFormatString, null, System.Globalization.DateTimeStyles.None, out var dt ) )
     {
       // Dates are stored as ASCII strings, but we can do better and make it a proper type
       yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: dt );

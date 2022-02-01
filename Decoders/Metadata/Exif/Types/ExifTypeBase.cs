@@ -58,6 +58,10 @@ public abstract class ExifTypeBase
 
   public string TagTypeName => TagType.ToString();
 
+  /// <summary>
+  /// Returns a string that represents the object
+  /// </summary>
+  /// <returns>String that represents the object</returns>
   public override string ToString()
   {
     if( IsArray )
@@ -123,10 +127,9 @@ public abstract class ExifTypeBase
   internal BinaryReader Reader { get; init; }
   internal ExifComponent Component { get; init; }
 
-  protected MetadataTagValue? _convertedValue;
-  protected readonly List<MetadataTagValue> _convertedValueArray = new();
-
-  protected const byte BufferByteSize = 4;
+  internal MetadataTagValue? _convertedValue;
+  internal readonly List<MetadataTagValue> _convertedValueArray = new();
+  internal const byte BufferByteSize = 4;
 
   private bool _processed = false;
 }

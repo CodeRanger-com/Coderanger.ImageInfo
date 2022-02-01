@@ -21,6 +21,10 @@ public class IptcDate : IptcTypeBase, IMetadataTypedValue
   {
   }
 
+  /// <summary>
+  /// Adds a new value to the metadata object
+  /// </summary>
+  /// <param name="buffer">Buffer which contains the appropriate data value</param>
   public void AddToExistingValue( ReadOnlySpan<byte> buffer )
   {
     var value = Create( buffer );
@@ -30,6 +34,10 @@ public class IptcDate : IptcTypeBase, IMetadataTypedValue
     }
   }
 
+  /// <summary>
+  /// Sets the value of the object
+  /// </summary>
+  /// <param name="buffer">Buffer which contains the appropriate data value</param>
   public void SetValue( ReadOnlySpan<byte> buffer )
   {
     var value = Create( buffer );
@@ -42,7 +50,7 @@ public class IptcDate : IptcTypeBase, IMetadataTypedValue
   private MetadataTagValue? Create( ReadOnlySpan<byte> buffer )
   {
     var bufferValue = DataConversion.ConvertBuffer( buffer, StringEncoding.Ascii );
-    if( DateOnly.TryParseExact( bufferValue, DateFormatString, null, System.Globalization.DateTimeStyles.None, out var dt ) )
+    if( DateTime.TryParseExact( bufferValue, DateFormatString, null, System.Globalization.DateTimeStyles.None, out var dt ) )
     {
       return new MetadataTagValue( Type: TagType,
                                    IsArray: false,
