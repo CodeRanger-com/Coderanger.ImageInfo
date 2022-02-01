@@ -18,6 +18,7 @@ internal static class TextChunkHelper
   /// Extract a null terminated string from a text chunk buffer
   /// </summary>
   /// <param name="buffer">Text chunk buffer which null terminates the keyword</param>
+  /// <param name="encoding">Encoding of string in the buffer</param>
   /// <returns>Valid word string in given encoding</returns>
   internal static TextSlice GetTerminatedStringFromBuffer( ReadOnlySpan<byte> buffer, StringEncoding encoding = StringEncoding.Ascii )
   {

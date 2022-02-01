@@ -8,12 +8,34 @@
 
   <PropertyGroup>
     <LangVersion>latestMajor</LangVersion>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile></DocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Summary>Cross platform image info library</Summary>
+    <Description>Cross platform library for inspecting information and metadata from common image files</Description>
+    <Copyright>Copyright (c) CodeRanger. All rights reserved.</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://www.coderanger.com/api/Coderanger.ImageInfo/</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/CodeRanger-com/Coderanger.ImageInfo/</RepositoryUrl>
+    <Language>en-GB</Language>
+    <PackageTags>webp;png;jpeg;jpg;gif;bmp;metadata;exif;iptc;xmp</PackageTags>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="Tests\**" />
     <EmbeddedResource Remove="Tests\**" />
     <None Remove="Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

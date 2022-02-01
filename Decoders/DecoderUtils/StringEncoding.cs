@@ -8,7 +8,10 @@
 
 namespace Coderanger.ImageInfo.Decoders.DecoderUtils;
 
-public enum StringEncoding
+/// <summary>
+/// Determines the type of encoding of the string
+/// </summary>
+internal enum StringEncoding
 {
   None,
   Ascii,

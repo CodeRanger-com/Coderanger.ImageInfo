@@ -15,11 +15,19 @@ namespace Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 /// <param name="Denominator"></param>
 public record Rational( int Numerator, int Denominator )
 {
+  /// <summary>
+  /// Returns a double value that represents the object
+  /// </summary>
+  /// <returns>Double value that represents the object</returns>
   public double ToDouble()
   {
     return (double)Numerator / Denominator;
   }
 
+  /// <summary>
+  /// Returns a string that represents the object
+  /// </summary>
+  /// <returns>String that represents the object</returns>
   public override string ToString()
   {
     return $"{Numerator}/{Denominator} ({ToDouble()}D)";

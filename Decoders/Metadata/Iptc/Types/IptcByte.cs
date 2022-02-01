@@ -18,11 +18,19 @@ public class IptcByte : IptcTypeBase, IMetadataTypedValue
   {
   }
 
+  /// <summary>
+  /// Adds a new value to the metadata object
+  /// </summary>
+  /// <param name="buffer">Buffer which contains the appropriate data value</param>
   public void AddToExistingValue( ReadOnlySpan<byte> buffer )
   {
     _metadata.Add( Create( buffer ) );
   }
 
+  /// <summary>
+  /// Sets the value of the object
+  /// </summary>
+  /// <param name="buffer">Buffer which contains the appropriate data value</param>
   public void SetValue( ReadOnlySpan<byte> buffer )
   {
     _metadata.Add( Create( buffer ) );

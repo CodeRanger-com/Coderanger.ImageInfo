@@ -28,6 +28,10 @@ public class ExifDate : ExifTypeBase, IMetadataTypedValue
   /// </summary>
   public override bool IsArray => false;
 
+  /// <summary>
+  /// Returns a string that represents the object
+  /// </summary>
+  /// <returns>String that represents the object</returns>
   public override string ToString()
   {
     return $"{Name} = {_convertedValue}";

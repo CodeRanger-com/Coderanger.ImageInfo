@@ -15,6 +15,10 @@ namespace Coderanger.ImageInfo.Decoders.Metadata;
 /// <param name="Information"></param>
 public record MetadataEnumValue( string EnumValue, string Information )
 {
+  /// <summary>
+  /// Returns a string that represents the object
+  /// </summary>
+  /// <returns>String that represents the object</returns>
   public override string ToString()
   {
     return $"{EnumValue} ({Information})";

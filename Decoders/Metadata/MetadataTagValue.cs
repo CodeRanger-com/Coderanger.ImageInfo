@@ -13,6 +13,10 @@ namespace Coderanger.ImageInfo.Decoders.Metadata;
 /// </summary>
 public record MetadataTagValue( MetadataType Type, bool IsArray, ushort TagId, string TagName, object Value )
 {
+  /// <summary>
+  /// Returns a string that represents the object
+  /// </summary>
+  /// <returns>String that represents the object</returns>
   public override string ToString()
   {
     var value = Value?.ToString() ?? string.Empty;

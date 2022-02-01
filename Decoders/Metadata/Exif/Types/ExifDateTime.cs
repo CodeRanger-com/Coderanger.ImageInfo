@@ -28,11 +28,19 @@ public class ExifDateTime : ExifTypeBase, IMetadataTypedValue
   /// </summary>
   public override bool IsArray => false;
 
+  /// <summary>
+  /// Returns a string that represents the object
+  /// </summary>
+  /// <returns>String that represents the object</returns>
   public override string ToString()
   {
     return $"{Name} = {_convertedValue}";
   }
 
+  /// <summary>
+  /// Sets the value of the object
+  /// </summary>
+  /// <param name="buffer">Buffer which contains the appropriate data value</param>
   public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();

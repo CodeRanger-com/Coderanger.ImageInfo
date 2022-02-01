@@ -31,12 +31,24 @@ public class XmpData : IMetadataTypedValue
   /// </summary>
   public string StringValue => (string)( _metadataValue?.Value ?? string.Empty );
 
+  /// <summary>
+  /// Returns true if the base tag value is an array of values
+  /// </summary>
   public bool IsArray => false;
 
+  /// <summary>
+  /// Tag identifier
+  /// </summary>
   public ushort TagId => 0;
 
+  /// <summary>
+  /// Returns true if their is a base tag value for this tag
+  /// </summary>
   public bool HasValue => ( (string)( _metadataValue?.Value ?? string.Empty ) ).Length > 0;
 
+  /// <summary>
+  /// Returns the base tag's name
+  /// </summary>
   public string TagTypeName => TagType.ToString();
 
   /// <summary>
@@ -44,12 +56,20 @@ public class XmpData : IMetadataTypedValue
   /// </summary>
   public MetadataType TagType { get; init; }
 
+  /// <summary>
+  /// Sets the value of the object
+  /// </summary>
+  /// <param name="buffer">Buffer which contains the appropriate data value</param>
   public void SetValue( ReadOnlySpan<byte> buffer )
   {
     var xmpData = DataConversion.ConvertBuffer( buffer, StringEncoding.Utf8 );
     SetValue( xmpData );
   }
 
+  /// <summary>
+  /// Sets the value of the object
+  /// </summary>
+  /// <param name="value">String which contains the appropriate data value</param>
   public void SetValue( string value )
   {
     TrimPacket( ref value );
@@ -60,12 +80,22 @@ public class XmpData : IMetadataTypedValue
                                            Value: value.Trim() );
   }
 
+  /// <summary>
+  /// Retrieves the objects value type
+  /// </summary>
+  /// <param name="value">Pass a MetadataTagValue to be set with this objects value</param>
+  /// <returns>Returns true if the value has been set</returns>
   public bool TryGetValue( out MetadataTagValue? value )
   {
     value = _metadataValue;
     return true;
   }
 
+  /// <summary>
+  /// Retrieves the objects value type array
+  /// </summary>
+  /// <param name="value">Pass a List of MetadataTagValue to be set with this objects array value</param>
+  /// <returns>Returns true if the value has been set</returns>
   public bool TryGetValueArray( out List<MetadataTagValue>? value )
   {
     value = null;

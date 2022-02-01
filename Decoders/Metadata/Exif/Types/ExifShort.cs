@@ -20,6 +20,10 @@ public class ExifShort : ExifTypeBase, IMetadataTypedValue
   {
   }
 
+  /// <summary>
+  /// Sets the value of the object
+  /// </summary>
+  /// <param name="buffer">Buffer which contains the appropriate data value</param>
   public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();
@@ -67,6 +71,10 @@ public class ExifUShort : ExifTypeBase, IMetadataTypedValue
   {
   }
 
+  /// <summary>
+  /// Sets the value of the object
+  /// </summary>
+  /// <param name="buffer">Buffer which contains the appropriate data value</param>
   public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();

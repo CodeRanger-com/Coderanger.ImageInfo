@@ -8,6 +8,9 @@
 
 namespace Coderanger.ImageInfo.Decoders.Metadata;
 
+/// <summary>
+/// Simple interface to define a base profile tag
+/// </summary>
 public interface IMetadataTag
 {
 }

@@ -11,7 +11,7 @@ namespace Coderanger.ImageInfo.Decoders.Metadata.Exif.Types;
 using Coderanger.ImageInfo.Decoders.DecoderUtils;
 
 /// <summary>
-/// 
+/// Base class describing common properties and methods of an Exif tag value
 /// </summary>
 public abstract class ExifTypeBase
 {
@@ -33,16 +33,38 @@ public abstract class ExifTypeBase
     }
   }
 
+  /// <summary>
+  /// Retrieves the objects value type
+  /// </summary>
+  /// <param name="value">Pass a MetadataTagValue to be set with this objects value</param>
+  /// <returns>Returns true if the value has been set</returns>
   public bool TryGetValue( out MetadataTagValue? value )
   {
     ProcessData();
+    if( _convertedValue == null )
+    {
+      value = null;
+      return false;
+    }
+
     value = _convertedValue;
     return true;
   }
 
+  /// <summary>
+  /// Retrieves the objects value type array
+  /// </summary>
+  /// <param name="value">Pass a List of MetadataTagValue to be set with this objects array value</param>
+  /// <returns>Returns true if the value has been set</returns>
   public bool TryGetValueArray( out List<MetadataTagValue>? value )
   {
     ProcessData();
+    if( _convertedValueArray == null || _convertedValueArray.Count == 0 )
+    {
+      value = null;
+      return false;
+    }
+
     value = _convertedValueArray;
     return true;
   }
@@ -52,10 +74,19 @@ public abstract class ExifTypeBase
   /// </summary>
   public string StringValue => ToString();
 
+  /// <summary>
+  /// Returns true if the base tag value is an array of values
+  /// </summary>
   public virtual bool IsArray => Component.ComponentCount > 1;
 
+  /// <summary>
+  /// Returns true if their is a base tag value for this tag
+  /// </summary>
   public bool HasValue => _convertedValueArray.Count > 0 || ((string)(_convertedValue?.Value ?? string.Empty)).Length > 0;
 
+  /// <summary>
+  /// Returns the base tag's name
+  /// </summary>
   public string TagTypeName => TagType.ToString();
 
   /// <summary>

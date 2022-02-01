@@ -85,11 +85,11 @@ internal static class MetadataHelpers
         break;
 
       case MetadataType.Date:
-        Console.Write( $"{(DateOnly)tagValue.Value}" );
+        Console.Write( $"{(DateTime)tagValue.Value}" );
         break;
 
       case MetadataType.Time:
-        Console.Write( $"{(TimeOnly)tagValue.Value}" );
+        Console.Write( $"{(DateTime)tagValue.Value}" );
         break;
 
       case MetadataType.DateTime:

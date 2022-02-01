@@ -8,6 +8,9 @@
 
 namespace Coderanger.ImageInfo.Decoders.Metadata.Iptc.Types;
 
+/// <summary>
+/// Base class describing common properties and methods of an IPTC tag value
+/// </summary>
 public abstract class IptcTypeBase
 {
   // Hack: Just used for reflection in the custom description attribute
@@ -56,18 +59,30 @@ public abstract class IptcTypeBase
   /// </summary>
   public bool IsArray => _metadata.Count > 1;
 
+  /// <summary>
+  /// Returns true if their is a base tag value for this tag
+  /// </summary>
   public bool HasValue => _metadata.Count > 0;
 
+  /// <summary>
+  /// Returns the base tag's name
+  /// </summary>
   public string TagTypeName => TagType.ToString();
 
+  /// <summary>
+  /// Returns a string that represents the object
+  /// </summary>
+  /// <returns>String that represents the object</returns>
   public override string ToString()
   {
     return $"{Name} = {string.Join( " / ", _metadata )}";
   }
 
   /// <summary>
-  /// Sets the metadata value if there is one and returns true
+  /// Retrieves the objects value type
   /// </summary>
+  /// <param name="value">Pass a MetadataTagValue to be set with this objects value</param>
+  /// <returns>Returns true if the value has been set</returns>
   public bool TryGetValue( out MetadataTagValue? value )
   {
     if( _metadata.Count == 0 )
@@ -81,8 +96,10 @@ public abstract class IptcTypeBase
   }
 
   /// <summary>
-  /// Sets the array of metadata values if there are any and returns true
+  /// Retrieves the objects value type array
   /// </summary>
+  /// <param name="value">Pass a List of MetadataTagValue to be set with this objects array value</param>
+  /// <returns>Returns true if the value has been set</returns>
   public bool TryGetValueArray( out List<MetadataTagValue>? value )
   {
     if( _metadata.Count == 0 )
@@ -95,5 +112,5 @@ public abstract class IptcTypeBase
     return true;
   }
 
-  protected readonly List<MetadataTagValue> _metadata = new();
+  internal readonly List<MetadataTagValue> _metadata = new();
 }

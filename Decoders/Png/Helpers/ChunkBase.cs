@@ -23,7 +23,6 @@ internal record ChunkBase( long DataLength, byte[] ChunkType, long DataStartPosi
   /// Lazy load the data segment when required
   /// </summary>
   /// <param name="reader"></param>
-  /// <param name="maxBytesToRead"></param>
   internal void LoadData( BinaryReader reader )
   {
     if( DataLength == 0 )

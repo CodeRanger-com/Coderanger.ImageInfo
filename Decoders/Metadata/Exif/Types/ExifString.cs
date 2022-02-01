@@ -27,6 +27,10 @@ public class ExifString : ExifTypeBase, IMetadataTypedValue
   /// </summary>
   public override bool IsArray => false;
 
+  /// <summary>
+  /// Sets the value of the object
+  /// </summary>
+  /// <param name="buffer">Buffer which contains the appropriate data value</param>
   public void SetValue( ReadOnlySpan<byte> buffer )
   {
     ProcessData();
