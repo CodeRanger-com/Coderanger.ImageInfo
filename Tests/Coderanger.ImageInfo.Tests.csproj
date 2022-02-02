@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Coderanger.ImageInfo.csproj" />
+    <ProjectReference Include="..\Coderanger.ImageInfo.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -304,7 +304,6 @@
 
   <ItemGroup>
     <Folder Include="Fixtures\Gif\" />
-    <Folder Include="_snapshots\" />
   </ItemGroup>
 
 </Project>

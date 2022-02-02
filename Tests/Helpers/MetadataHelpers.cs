@@ -89,7 +89,7 @@ internal static class MetadataHelpers
         break;
 
       case MetadataType.Time:
-        Console.Write( $"{(DateTime)tagValue.Value}" );
+        Console.Write( $"{(TimeSpan)tagValue.Value}" );
         break;
 
       case MetadataType.DateTime:

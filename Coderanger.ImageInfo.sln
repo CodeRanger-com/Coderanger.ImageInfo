@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coderanger.ImageInfo", "Coderanger.ImageInfo.csproj", "{94801F12-4B59-449A-BCF7-E895C1C68325}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coderanger.ImageInfo", "Coderanger.ImageInfo.csproj", "{94801F12-4B59-449A-BCF7-E895C1C68325}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coderanger.ImageInfo.Tests", "Tests\Coderanger.ImageInfo.Tests\Coderanger.ImageInfo.Tests.csproj", "{473712E9-F580-4E59-9C0A-7B0FAF0DBCFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coderanger.ImageInfo.Tests", "Tests\Coderanger.ImageInfo.Tests.csproj", "{AADB618D-A677-4F5B-A5C8-6DCA605D2B0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{94801F12-4B59-449A-BCF7-E895C1C68325}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94801F12-4B59-449A-BCF7-E895C1C68325}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94801F12-4B59-449A-BCF7-E895C1C68325}.Release|Any CPU.Build.0 = Release|Any CPU
-		{473712E9-F580-4E59-9C0A-7B0FAF0DBCFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{473712E9-F580-4E59-9C0A-7B0FAF0DBCFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{473712E9-F580-4E59-9C0A-7B0FAF0DBCFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{473712E9-F580-4E59-9C0A-7B0FAF0DBCFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AADB618D-A677-4F5B-A5C8-6DCA605D2B0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AADB618D-A677-4F5B-A5C8-6DCA605D2B0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AADB618D-A677-4F5B-A5C8-6DCA605D2B0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AADB618D-A677-4F5B-A5C8-6DCA605D2B0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
