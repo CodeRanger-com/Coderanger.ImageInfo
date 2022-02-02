@@ -50,28 +50,21 @@ public class IptcTime : IptcTypeBase, IMetadataTypedValue
   private MetadataTagValue? Create( ReadOnlySpan<byte> buffer )
   {
     var bufferValue = DataConversion.ConvertBuffer( buffer, StringEncoding.Ascii );
-    bufferValue = bufferValue.Replace( "+", string.Empty );
 
-    if( DateTime.TryParseExact( bufferValue, TimeFormatStringWithZone, null, System.Globalization.DateTimeStyles.AdjustToUniversal, out var timeWithZone ) )
+    if( bufferValue.Length < 6 )
     {
-      return new MetadataTagValue( Type: TagType,
-                                   IsArray: false,
-                                   TagId: TagId,
-                                   TagName: Name,
-                                   Value: timeWithZone );
-    }
-    else if( DateTime.TryParseExact( bufferValue, TimeFormatString, null, System.Globalization.DateTimeStyles.None, out var time ) )
-    {
-      return new MetadataTagValue( Type: TagType,
-                                   IsArray: false,
-                                   TagId: TagId,
-                                   TagName: Name,
-                                   Value: time );
+      return null;
     }
 
-    return null;
+    var hours = bufferValue[ ..2 ];
+    var mins = bufferValue.Substring( 2, 2 );
+    var secs = bufferValue.Substring( 4, 2 );
+
+    var time = new TimeSpan( int.Parse( hours ), int.Parse( mins ), int.Parse( secs ) );
+    return new MetadataTagValue( Type: TagType,
+                                  IsArray: false,
+                                  TagId: TagId,
+                                  TagName: Name,
+                                  Value: time );
   }
-
-  private const string TimeFormatStringWithZone = "HHmmsszzz";
-  private const string TimeFormatString = "HHmmss";
 }

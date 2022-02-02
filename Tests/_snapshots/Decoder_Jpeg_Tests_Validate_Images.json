@@ -588,6 +588,16 @@
         "TagTypeName": "Date"
       },
       {
+        "StringValue": "Created Time = 19:51:30",
+        "TagId": 60,
+        "TagType": 14,
+        "Name": "Created Time",
+        "Description": "Indicates the time the intellectual content of the object was created rather than the date of the creation of the physical representation",
+        "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Time"
+      },
+      {
         "StringValue": "Digital Creation Date = 17/10/2014 00:00:00",
         "TagId": 62,
         "TagType": 13,
@@ -596,6 +606,16 @@
         "IsArray": false,
         "HasValue": true,
         "TagTypeName": "Date"
+      },
+      {
+        "StringValue": "Digital Creation Time = 19:51:30",
+        "TagId": 63,
+        "TagType": 14,
+        "Name": "Digital Creation Time",
+        "Description": "Indicates the time the digital representation of the object was created",
+        "IsArray": false,
+        "HasValue": true,
+        "TagTypeName": "Time"
       },
       {
         "StringValue": "By-line = Dudarev Mikhail",
