@@ -1,0 +1,92 @@
+name: Build and Publish
+
+on:
+  push:
+    branches: [ main ]
+
+  # Allow manual run
+  workflow_dispatch:
+
+jobs:
+  BuildAndPublish:
+    runs-on: ubuntu-latest
+
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 6.0.x
+        include-prerelease: false
+
+    - name: Install Obfuscar
+      run: dotnet tool install --global Obfuscar.GlobalTool --version 2.2.32
+
+    - name: Install GitVersion
+      uses: gittools/actions/gitversion/setup@v0.9.5
+      with:
+        versionSpec: 5.x
+
+    - name: Use GitVersion
+      uses: gittools/actions/gitversion/execute@v0.9.5
+      id: gitversion # step id used as reference for output values
+      with:
+        useConfigFile: true
+        configFilePath: ./.github/GitVersion.yml
+
+    # Generate and update version info
+    - name: Update Version in Properties
+      uses: Amadevus/pwsh-script@v2.0.0
+      with:
+        script: ./.github/UpdateVersion.ps1
+
+    # Build with new version info
+    - name: Dotnet Release Build for Production
+      run: |
+        dotnet build --configuration Release
+
+    - name: Run Unit Tests
+      uses: b3b00/coverlet-action@1.1.7
+      with:
+        testProject: './Tests/Coderanger.ImageInfo.Tests.csproj'
+        outputFormat: 'opencover'
+        output: TestResults/coverage.opencover.xml
+        threshold: 80
+
+    - name: Create Coverage Badges
+      uses: danpetitt/open-cover-badge-generator-action@v1.0.10
+      with:
+        path-to-opencover-xml: ./Tests/TestResults/coverage.opencover.xml
+        minimum-coverage: 80
+        repo-token: ${{ secrets.CI_ACTIONS }}
+        commit-badges: false
+
+    - name: Publish to GitHub
+      run: |
+        dotnet nuget add source --username danpetitt --password ${{ secrets.CI_ACTIONS }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/CodeRanger-com/index.json"
+        dotnet nuget push "./bin/Release/Coderanger.ImageInfo.${{ steps.gitversion.outputs.SemVer }}.nupkg" --api-key ${{ secrets.CI_ACTIONS }} --source "github"
+
+    - name: Produce Changelog and Commit Files
+      uses: danpetitt/changelog-file-generator@v2.2.0
+      id: changelog
+      with:
+        token: ${{ secrets.CI_ACTIONS }}
+        exclude: build,docs,tests,ci,chore,Merge branch
+        file: ./CHANGELOG.md
+        release_version: v${{ steps.gitversion.outputs.SemVer }}
+        user: ci@coderanger.com
+        userName: Coderanger CI
+        files_to_commit: CHANGELOG.md,Directory.Build.props,*.svg
+
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.CI_ACTIONS }}
+      with:
+        tag_name: v${{ steps.gitversion.outputs.SemVer }}
+        release_name: Release v${{ steps.gitversion.outputs.SemVer }}
+        body: ${{ steps.changelog.outputs.changelog }}

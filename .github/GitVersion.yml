@@ -1,0 +1,40 @@
+assembly-versioning-scheme: MajorMinorPatch
+assembly-file-versioning-scheme: MajorMinorPatch
+mode: ContinuousDelivery
+continuous-delivery-fallback-tag: ci
+major-version-bump-message: '(breaking|backwards-incompatible|major)\(.*?\):\s+.*?'
+minor-version-bump-message: '(feat|feature|minor|perf)\(.*?\):\s+.*?'
+patch-version-bump-message: '(fix|patch|refactor|revert|style|build|docs|test|other)\(.*?\):\s+.*?'
+no-bump-message: '(chore|skip ci)'
+tag-pre-release-weight: 60000
+#commit-message-incrementing: Enabled
+branches:
+  main:
+    mode: ContinuousDelivery
+    tag: ''
+    increment: Patch
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+    regex: ^master$|^main$
+    tracks-release-branches: false
+    is-release-branch: false
+    is-mainline: true
+    pre-release-weight: 55000
+  release:
+    mode: ContinuousDelivery
+    tag: beta
+    increment: None
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+    regex: ^releases?[/-]
+    source-branches:
+    - main
+    tracks-release-branches: false
+    is-release-branch: true
+    is-mainline: false
+    pre-release-weight: 30000
+ignore:
+  sha: []
+commit-date-format: yyyy-MM-dd
+merge-message-formats: {}
+update-build-number: true

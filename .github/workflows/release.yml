@@ -1,0 +1,17 @@
+﻿name: Release Management
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: apexskier/github-release-commenter@latest
+        with:
+          GITHUB_TOKEN: ${{ secrets.CI_ACTIONS }}
+          comment-template: |
+            :tada: This is included in {release_link}
+          label-template: released 🍾
