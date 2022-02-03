@@ -23,6 +23,11 @@ jobs:
         dotnet-version: 6.0.x
         include-prerelease: false
 
+    - name: Run Tests
+      uses: Amadevus/pwsh-script@v2.0.0
+      with:
+        script: 'dotnet test failure Command failed: dotnet test -c Debug -p:coverletOutput=TestResults/coverage.opencover.xml -p:CollectCoverage=true -p:CoverletOutputFormat=opencover -p:Exclude=\"\" ./Tests/Coderanger.ImageInfo.Tests.csproj'
+
     - name: Run Unit Tests
       uses: b3b00/coverlet-action@1.1.7
       with:
