@@ -23,22 +23,13 @@ jobs:
         dotnet-version: 6.0.x
         include-prerelease: false
 
-    - name: Run Tests
-      uses: Amadevus/pwsh-script@v2.0.0
-      with:
-        script: |
-          dotnet test -c Debug -p:coverletOutput=TestResults/coverage.opencover.xml -p:CollectCoverage=true -p:CoverletOutputFormat=opencover -p:Exclude=\"\" ./Tests/Coderanger.ImageInfo.Tests.csproj
-          dir TestResults
-          type TestResults/coverage.opencover.xml
-          Write-Host "Finished"
-
     - name: Run Unit Tests
       uses: b3b00/coverlet-action@1.1.7
       with:
         testProject: './Tests/Coderanger.ImageInfo.Tests.csproj'
         outputFormat: 'opencover'
         output: TestResults/coverage.opencover.xml
-        threshold: 80
+        threshold: 50
 
     - name: Create Coverage Badges
       uses: danpetitt/open-cover-badge-generator-action@v1.0.10
