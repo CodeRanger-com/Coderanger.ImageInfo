@@ -23,6 +23,22 @@ jobs:
         dotnet-version: 6.0.x
         include-prerelease: false
 
+    - name: Run Unit Tests
+      uses: b3b00/coverlet-action@1.1.7
+      with:
+        testProject: './Tests/Coderanger.ImageInfo.Tests.csproj'
+        outputFormat: 'opencover'
+        output: TestResults/coverage.opencover.xml
+        threshold: 80
+
+    - name: Create Coverage Badges
+      uses: danpetitt/open-cover-badge-generator-action@v1.0.10
+      with:
+        path-to-opencover-xml: ./Tests/TestResults/coverage.opencover.xml
+        minimum-coverage: 80
+        repo-token: ${{ secrets.CI_ACTIONS }}
+        commit-badges: false
+
     - name: Install GitVersion
       uses: gittools/actions/gitversion/setup@v0.9.5
       with:
@@ -45,22 +61,6 @@ jobs:
     - name: Dotnet Release Build for Production
       run: |
         dotnet build --configuration Release
-
-    - name: Run Unit Tests
-      uses: b3b00/coverlet-action@1.1.7
-      with:
-        testProject: './Tests/Coderanger.ImageInfo.Tests.csproj'
-        outputFormat: 'opencover'
-        output: TestResults/coverage.opencover.xml
-        threshold: 80
-
-    - name: Create Coverage Badges
-      uses: danpetitt/open-cover-badge-generator-action@v1.0.10
-      with:
-        path-to-opencover-xml: ./Tests/TestResults/coverage.opencover.xml
-        minimum-coverage: 80
-        repo-token: ${{ secrets.CI_ACTIONS }}
-        commit-badges: false
 
     - name: Publish to GitHub
       run: |
