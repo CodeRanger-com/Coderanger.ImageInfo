@@ -38,7 +38,7 @@ jobs:
         testProject: './Tests/Coderanger.ImageInfo.Tests.csproj'
         outputFormat: 'opencover'
         output: TestResults/coverage.opencover.xml
-        threshold: 80
+        threshold: 70
 
     - name: Dotnet Release Build for Test
       run: dotnet build --verbosity normal --configuration Release

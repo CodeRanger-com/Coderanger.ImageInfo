@@ -29,13 +29,13 @@ jobs:
         testProject: './Tests/Coderanger.ImageInfo.Tests.csproj'
         outputFormat: 'opencover'
         output: TestResults/coverage.opencover.xml
-        threshold: 80
+        threshold: 70
 
     - name: Create Coverage Badges
       uses: danpetitt/open-cover-badge-generator-action@v1.0.10
       with:
         path-to-opencover-xml: ./Tests/TestResults/coverage.opencover.xml
-        minimum-coverage: 80
+        minimum-coverage: 70
         repo-token: ${{ secrets.CI_ACTIONS }}
         commit-badges: false
 
