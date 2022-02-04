@@ -29,7 +29,7 @@ jobs:
         testProject: './Tests/Coderanger.ImageInfo.Tests.csproj'
         outputFormat: 'opencover'
         output: TestResults/coverage.opencover.xml
-        threshold: 50
+        threshold: 80
 
     - name: Create Coverage Badges
       uses: danpetitt/open-cover-badge-generator-action@v1.0.10
