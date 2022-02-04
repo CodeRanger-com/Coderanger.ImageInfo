@@ -25,11 +25,11 @@ public class Decoder_Bmp_Tests
     using var stream = new FileStream( $"./Fixtures/Bmp/Version2/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();
-    if( info != null )
+    if( info is not null )
     {
       info.Width.Should().Be( width );
       info.Height.Should().Be( height );
@@ -61,11 +61,11 @@ public class Decoder_Bmp_Tests
     using var stream = new FileStream( $"./Fixtures/Bmp/Version3/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();
-    if( info != null )
+    if( info is not null )
     {
       info.Width.Should().Be( width );
       info.Height.Should().Be( height );

@@ -30,11 +30,11 @@ public class Decoder_Png_Tests
     using var stream = new FileStream( $"./Fixtures/Png/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();
-    if( info != null )
+    if( info is not null )
     {
       info.Width.Should().Be( width );
       info.Height.Should().Be( height );
@@ -60,11 +60,11 @@ public class Decoder_Png_Tests
     using var stream = new FileStream( $"./Fixtures/Png/metadata/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();
-    if( info != null )
+    if( info is not null )
     {
       info.Width.Should().Be( width );
       info.Height.Should().Be( height );

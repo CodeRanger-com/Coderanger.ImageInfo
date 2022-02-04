@@ -37,9 +37,10 @@ internal class DecodeWebP : IDecoder
       return null;
     }
 
-    var riffHeader = reader.ReadBytes( WebPConstants.Riff.MagicNumber.Length );
+    var riffHeader = reader.ReadBytes( WebPConstants.Riff.MagicNumber.Length ).AsSpan();
     reader.Skip( 4 ); // File Size
-    var webPHeader = reader.ReadBytes( WebPConstants.WebP.MagicNumber.Length );
+
+    var webPHeader = reader.ReadBytes( WebPConstants.WebP.MagicNumber.Length ).AsSpan();
     if( riffHeader.SequenceEqual( WebPConstants.Riff.MagicNumber )
       && webPHeader.SequenceEqual( WebPConstants.WebP.MagicNumber ) )
     {
@@ -137,7 +138,7 @@ internal class DecodeWebP : IDecoder
         // Total            = 3 bytes
         reader.Skip( 3 );
 
-        var signature = reader.ReadBytes( 3 );
+        var signature = reader.ReadBytes( 3 ).AsSpan();
         if( !signature.SequenceEqual( WebPConstants.Chunks.VP8Signature ) )
         {
           // Not valid WebP VP8 format

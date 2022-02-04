@@ -13,9 +13,8 @@ internal static class ExifConstants
   /// <summary>
   /// Header signature for EXIF header marker
   /// </summary>
-  internal static byte[] MagicBytes => new[]
+  internal static ReadOnlySpan<byte> MagicBytes => new[]
   {
-    // 0x45, 0x78, 0x69, 0x66
     (byte)'E', (byte)'x', (byte)'i', (byte)'f', (byte)'\0', (byte)'\0'
   };
   internal const uint MagicBytesVersion = 0x_45_78_69_66;

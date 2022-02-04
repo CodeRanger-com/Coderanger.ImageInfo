@@ -67,7 +67,7 @@ internal sealed class MetadataTagDetailsAttribute : Attribute
           // If the field has custom attributes, return the value passed to the constructor
           var customAttributes = fi.GetCustomAttributes<MetadataTagDetailsAttribute>();
           var detailsAttribute = customAttributes.FirstOrDefault();
-          if( detailsAttribute != null )
+          if( detailsAttribute is not null )
           {
             return new MetadataTagDetails( Name: detailsAttribute.Name, Description: detailsAttribute.Description );
           }

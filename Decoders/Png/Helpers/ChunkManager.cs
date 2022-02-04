@@ -16,7 +16,7 @@ internal class ChunkManager
   internal static bool TryGetChunkForType( byte[] chunkTypeBuffer, ChunkBase chunkBase, out IChunk? chunk )
   {
     var chunkType = DataConversion.UInt32FromBigEndianBuffer( chunkTypeBuffer );
-    if( RegisteredChunks.TryGetValue( chunkType, out var chunkCreator ) && chunkCreator != null )
+    if( RegisteredChunks.TryGetValue( chunkType, out var chunkCreator ) && chunkCreator is not null )
     {
       chunk = chunkCreator( chunkBase );
       return true;

@@ -86,7 +86,7 @@ internal class DecodePng : IDecoder
       else if( chunk is TextChunk txt )
       {
         txt.LoadData( reader );
-        if( txt.Text != null )
+        if( txt.Text is not null )
         {
           _metadataItems.Add( txt.Text );
         }
@@ -94,7 +94,7 @@ internal class DecodePng : IDecoder
       else if( chunk is TextCompressedChunk txtCompressed )
       {
         txtCompressed.LoadData( reader );
-        if( txtCompressed.Text != null )
+        if( txtCompressed.Text is not null )
         {
           _metadataItems.Add( txtCompressed.Text );
         }
@@ -102,7 +102,7 @@ internal class DecodePng : IDecoder
       else if( chunk is TextInternationalChunk txtInternational )
       {
         txtInternational.LoadData( reader );
-        if( txtInternational.Text != null )
+        if( txtInternational.Text is not null )
         {
           if( txtInternational.Text.Keyword == PngConstants.Chunks.XmpKeyword )
           {

@@ -1,25 +1,39 @@
 ﻿# Overview
 
-[![Build and Publish](https://github.com/CodeRanger-com/Coderanger.Excel/actions/workflows/build-publish.yml/badge.svg)](https://github.com/CodeRanger-com/Coderanger.Excel/actions/workflows/build-publish.yml) [![Line Coverage Status](./coverage-badge-line.svg)](https://github.com/danpetitt/open-cover-badge-generator-action/) [![Branch Coverage Status](./coverage-badge-branch.svg)](https://github.com/danpetitt/open-cover-badge-generator-action/)
+[![Build and Publish](https://github.com/CodeRanger-com/Coderanger.ImageInfo/actions/workflows/build-publish.yml/badge.svg)](https://github.com/CodeRanger-com/Coderanger.ImageInfo/actions/workflows/build-publish.yml) [![Line Coverage Status](./coverage-badge-line.svg)](https://github.com/danpetitt/open-cover-badge-generator-action/) [![Branch Coverage Status](./coverage-badge-branch.svg)](https://github.com/danpetitt/open-cover-badge-generator-action/)
 
-Coderanger.Excel is a cross-platform dotnet core .netstandard2.1 library that enables you to generate Microsoft Excel (or compatible) xlsx documents.
-
-The library API has been created for ease of use using a fluent style interface.
-
-Full documentation at https://github.com/CodeRanger-com/Coderanger.Excel
-
+Coderanger.ImageInfo is a very simple cross-platform dotnet core .netstandard2.1 library that enables you to inspect images and return back dimensions and metadata.
 
 
 ```cs
 using var imageStream = new FileStream( "image.jpeg", FileMode.Open, FileAccess.Read );
-var imageInfo = ImageInfo.DecodeFromStream( imageStream );
+var imageInfo = ImageInfo.Get( imageStream );
 
-// If imageInfo was decodable, an object is returned with metadata properties
-Debug.WriteLine( $"Mime = {imageInfo.MimeType}" );
-Debug.WriteLine( $"Width = {imageInfo.Width}" );
-Debug.WriteLine( $"Height = {imageInfo.Height}" );
+if( imageInfo is not null )
+{
+  // If imageInfo was decodable, an object is returned with metadata properties
+  Debug.WriteLine( $"Width = {imageInfo.Width}" );
+  Debug.WriteLine( $"Height = {imageInfo.Height}" );
+  Debug.WriteLine( $"Horizontal DPI = {imageInfo.HorizontalResolution}" );
+  Debug.WriteLine( $"Vertical DPI = {imageInfo.VerticalResolution}" );
+  Debug.WriteLine( $"Mime = {imageInfo.MimeType}" );
 
-// If there is any metedata in the image, the tags property
-// will not be null and will contain the info as a dictionary
-// of profile tag lists
+  // If there is any metadata in the image, the 'Tags' property
+  // will contain the info as a dictionary of profile tag lists
+
+  // For example, the following will output the tags in the 'Exif' profile
+  if( imageInfo.Metadata?.TryGetValue( MetadataProfileType.Exif, out var tags ) ?? false && tags is not null )
+  {
+    foreach( var tag in tags )
+    {
+      if( tag is not null && tag.HasValue )
+      {
+        if( tag.TryGetValue( out var metadataValue ) && metadataValue is not null )
+        {
+          Debug.WriteLine( $"{metadataValue.TagName} = {metadataValue.Value}" );
+        }
+      }
+    }
+  }
+}
 ```

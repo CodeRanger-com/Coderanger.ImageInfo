@@ -62,7 +62,7 @@ internal class DecodeExif
   internal bool AddTagsToProfile( ref Metadata metadata )
   {
     var tags = _metadata.GetTags();
-    if( tags != null )
+    if( tags is not null )
     {
       foreach( var profile in tags.Keys )
       {
@@ -206,7 +206,7 @@ internal class DecodeExif
           if( !isIfdOffset )
           {
             var dataValue = ExifTagValueFactory.Create( profile, _reader, _segmentStart, _exifByteOrder );
-            if( dataValue != null )
+            if( dataValue is not null )
             {
               dataValue.SetValue( null );
               _metadata.AddTag( profile, dataValue );
@@ -278,11 +278,11 @@ internal class DecodeExif
   private void ExtractResolutionInfo()
   {
     var resUnitTag = _metadata.FindTag( MetadataProfileType.Exif, ExifTag.ResolutionUnit );
-    if( resUnitTag != null )
+    if( resUnitTag is not null )
     {
       DensityUnit? exifDensityUnit = null;
 
-      if( resUnitTag.TryGetValue( out var unitVal ) && unitVal != null )
+      if( resUnitTag.TryGetValue( out var unitVal ) && unitVal is not null )
       {
         var enumValue = (MetadataEnumValue)unitVal.Value;
 
@@ -300,7 +300,7 @@ internal class DecodeExif
       }
 
       var xResTag = _metadata.FindTag( MetadataProfileType.Exif, ExifTag.XResolution );
-      if( xResTag != null )
+      if( xResTag is not null )
       {
         if( xResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value is not null )
         {
@@ -310,9 +310,9 @@ internal class DecodeExif
       }
 
       var yResTag = _metadata.FindTag( MetadataProfileType.Exif, ExifTag.YResolution );
-      if( yResTag != null )
+      if( yResTag is not null )
       {
-        if( yResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value != null )
+        if( yResTag is ExifURational exifValue && exifValue.TryGetValue( out var dpi ) && dpi?.Value is not null )
         {
           var rational = dpi.Value as Rational;
           VerticalDpi = UnitConvertor.ToDpi( exifDensityUnit.Value, rational?.ToDouble() ?? 0 );

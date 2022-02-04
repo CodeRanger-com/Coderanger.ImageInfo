@@ -31,7 +31,7 @@ internal record ChunkBase( long DataLength, byte[] ChunkType, long DataStartPosi
     }
 
     Data = reader.ReadBytes( (int)DataLength );
-    if( Data == null )
+    if( Data is null )
     {
       throw ExceptionHelper.Throw( reader, ErrorMessage );
     }
@@ -48,7 +48,7 @@ internal record ChunkBase( long DataLength, byte[] ChunkType, long DataStartPosi
     var crcCheck = reader.ReadBigEndianInt32();
 
     var crc = Crc32Checksum.Calculate( ChunkType, 0, ChunkType.Length );
-    if( Data != null )
+    if( Data is not null )
     {
       crc = Crc32Checksum.Calculate( crc, Data, 0, (int)DataLength );
     }

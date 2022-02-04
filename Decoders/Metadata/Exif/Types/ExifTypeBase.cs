@@ -26,7 +26,7 @@ public abstract class ExifTypeBase
     Component = component;
 
     var tagDetails = MetadataTagDetailsAttribute.GetTagDetails( ReflectionExifTag, TagId );
-    if( tagDetails != null )
+    if( tagDetails is not null )
     {
       Name = tagDetails.Name;
       Description = tagDetails.Description;
@@ -41,7 +41,7 @@ public abstract class ExifTypeBase
   public bool TryGetValue( out MetadataTagValue? value )
   {
     ProcessData();
-    if( _convertedValue == null )
+    if( _convertedValue is null )
     {
       value = null;
       return false;
@@ -59,7 +59,7 @@ public abstract class ExifTypeBase
   public bool TryGetValueArray( out List<MetadataTagValue>? value )
   {
     ProcessData();
-    if( _convertedValueArray == null || _convertedValueArray.Count == 0 )
+    if( _convertedValueArray is null || _convertedValueArray.Count == 0 )
     {
       value = null;
       return false;

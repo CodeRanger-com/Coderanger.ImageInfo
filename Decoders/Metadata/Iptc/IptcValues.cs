@@ -53,7 +53,7 @@ internal record IptcValue( uint Tag, byte[] Data )
         if( repeatable )
         {
           var existingTag = values.Find( t => t.TagId == tag );
-          if( existingTag != null )
+          if( existingTag is not null )
           {
             existingTag.AddToExistingValue( iptcData );
             added = true;
@@ -63,7 +63,7 @@ internal record IptcValue( uint Tag, byte[] Data )
         if( !added )
         {
           var value = IptcTagValueFactory.Create( record, tag, iptcData );
-          if( value != null )
+          if( value is not null )
           {
             values.Add( value );
           }

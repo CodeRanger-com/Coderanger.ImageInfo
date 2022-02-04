@@ -30,7 +30,7 @@ internal class Metadata
   internal void AddTag( MetadataProfileType profile, IMetadataTypedValue tag )
   {
     var profileTags = GetListForProfile( profile );
-    if( profileTags != null )
+    if( profileTags is not null )
     {
       profileTags.Add( tag );
     }
@@ -39,7 +39,7 @@ internal class Metadata
   internal void AddTags( MetadataProfileType profile, List<IMetadataTypedValue> tags )
   {
     var profileTags = GetListForProfile( profile );
-    if( profileTags != null )
+    if( profileTags is not null )
     {
       profileTags.AddRange( tags );
     }

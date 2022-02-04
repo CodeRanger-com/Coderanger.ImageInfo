@@ -10,7 +10,7 @@ namespace Coderanger.ImageInfo.Decoders.Bmp;
 
 internal static class BmpConstants
 {
-  internal static readonly byte[] MagicNumber = new byte[] { (byte)'B', (byte)'M' };
+  internal static ReadOnlySpan<byte> MagicNumber => new[] { (byte)'B', (byte)'M' };
   internal static readonly int MagicNumberValue = 0x_00_00_42_4D;
 
   internal const string MimeType = "image/bmp";

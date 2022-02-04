@@ -33,7 +33,7 @@ internal static class ChunkFactory
     // needed
 
     var chunkBase = new ChunkBase( dataLength, chunkType, dataStart );
-    if( ChunkManager.TryGetChunkForType( chunkType, chunkBase, out var validChunk ) && validChunk != null )
+    if( ChunkManager.TryGetChunkForType( chunkType, chunkBase, out var validChunk ) && validChunk is not null )
     {
       return validChunk;
     }

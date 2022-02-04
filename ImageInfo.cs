@@ -29,21 +29,39 @@ public sealed class ImageInfo
   /// <example>
   /// <code language="cs">
   /// using var imageStream = new FileStream( "image.jpeg", FileMode.Open, FileAccess.Read );
-  /// var imageInfo = ImageInfo.DecodeFromStream( imageStream );
+  /// var imageInfo = ImageInfo.Get( imageStream );
   /// 
   /// // If imageInfo was decodable, an object is returned with metadata properties
-  /// Debug.WriteLine( $"Mime = {imageInfo.MimeType}" );
+  /// if( imageInfo is null ) return;
+  ///
   /// Debug.WriteLine( $"Width = {imageInfo.Width}" );
   /// Debug.WriteLine( $"Height = {imageInfo.Height}" );
-  /// 
+  /// Debug.WriteLine( $"Horizontal DPI = {imageInfo.HorizontalResolution}" );
+  /// Debug.WriteLine( $"Vertical DPI = {imageInfo.VerticalResolution}" );
+  /// Debug.WriteLine( $"Mime = {imageInfo.MimeType}" );
+  ///
   /// // If there is any metedata in the image, the tags property
   /// // will not be null and will contain the info as a dictionary
   /// // of profile tag lists
-  /// 
+  ///
+  /// // For example, the following will output the tags in the 'Exif' profile
+  /// if( imageInfo.Metadata?.TryGetValue( MetadataProfileType.Exif, out var tags ) ?? false &amp;&amp; tags is not null )
+  /// {
+  ///   foreach( var tag in tags )
+  ///   {
+  ///     if( tag is not null &amp;&amp; tag.HasValue )
+  ///     {
+  ///       if( tag.TryGetValue( out var metadataValue ) &amp;&amp; metadataValue is not null )
+  ///       {
+  ///         Debug.WriteLine( $"{metadataValue.TagName} = {metadataValue.Value}" );
+  ///       }
+  ///     }
+  ///   }
+  /// }
   /// </code>
   /// </example>
   /// <exception cref="ImageStreamException">Thrown if image is not readable or seekable</exception>
-  public static ImageInfo DecodeFromStream( Stream image )
+  public static ImageInfo Get( Stream image )
   {
     if( !image.CanSeek || !image.CanRead )
     {
@@ -104,10 +122,10 @@ public sealed class ImageInfo
     var reader = new BinaryReader( _image );
 
     var decoder = FindDecoder( reader );
-    if( decoder != null )
+    if( decoder is not null )
     {
       var imageDetails = decoder.Decode( reader );
-      if( imageDetails == null )
+      if( imageDetails is null )
       {
         throw new ImageDecoderException( "Image stream could not be decoded" );
       }
@@ -131,7 +149,7 @@ public sealed class ImageInfo
     {
       reader.Position( 0 );
       var decoder = formatDetectorDelegate( reader );
-      if( decoder != null )
+      if( decoder is not null )
       {
         return decoder;
       }

@@ -26,7 +26,7 @@ internal struct PhysicalDimensionsChunk : IChunk
   public void LoadData( BinaryReader reader )
   {
     _chunk.LoadData( reader );
-    if( _chunk.Data != null )
+    if( _chunk.Data is not null )
     {
       var xPixels = DataConversion.UInt32FromBigEndianBuffer( _chunk.Data.AsSpan( 0, 4 ) );
       var yPixels = DataConversion.UInt32FromBigEndianBuffer( _chunk.Data.AsSpan( 4, 4 ) );

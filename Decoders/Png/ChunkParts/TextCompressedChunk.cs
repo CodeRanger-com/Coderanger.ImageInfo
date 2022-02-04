@@ -27,7 +27,7 @@ internal struct TextCompressedChunk : IChunk
   public void LoadData( BinaryReader reader )
   {
     _chunk.LoadData( reader );
-    if( _chunk.Data != null )
+    if( _chunk.Data is not null )
     {
       // Text chunk data are stored in 4 segments, with null termination between
       // Keyword	            1-79 bytes (Latin1 character string)

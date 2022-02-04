@@ -34,7 +34,7 @@ public class ExifDateTime : ExifTypeBase, IMetadataTypedValue
   /// <returns>String that represents the object</returns>
   public override string ToString()
   {
-    if( _convertedValue?.Value != null )
+    if( _convertedValue?.Value is not null )
     {
       var value = (DateTime)_convertedValue.Value;
       return $"{Name} = {value:yyyy-MM-dd HH:mm:ss}";
