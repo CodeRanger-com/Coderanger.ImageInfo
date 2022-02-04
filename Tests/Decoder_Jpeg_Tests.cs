@@ -43,7 +43,7 @@ public class Decoder_Jpeg_Tests
     using var stream = new FileStream( $"./Fixtures/Jpeg/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();
@@ -78,7 +78,7 @@ public class Decoder_Jpeg_Tests
     using var stream = new FileStream( $"./Fixtures/Jpeg/gps/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();
@@ -119,7 +119,7 @@ public class Decoder_Jpeg_Tests
     using var stream = new FileStream( $"./Fixtures/Jpeg/exif.org/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();
@@ -149,7 +149,7 @@ public class Decoder_Jpeg_Tests
     using var stream = new FileStream( $"./Fixtures/Jpeg/metadata/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();
@@ -177,7 +177,7 @@ public class Decoder_Jpeg_Tests
     using var stream = new FileStream( $"./Fixtures/Jpeg/metadata/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();

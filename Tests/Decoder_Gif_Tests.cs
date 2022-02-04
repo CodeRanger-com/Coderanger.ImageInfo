@@ -25,7 +25,7 @@ public class Decoder_Gif_Tests
     using var stream = new FileStream( $"./Fixtures/Gif/Version87a/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();
@@ -56,7 +56,7 @@ public class Decoder_Gif_Tests
     using var stream = new FileStream( $"./Fixtures/Gif/Version89a/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();
@@ -80,7 +80,7 @@ public class Decoder_Gif_Tests
     using var stream = new FileStream( $"./Fixtures/Gif/Metadata/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();

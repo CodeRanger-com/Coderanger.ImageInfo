@@ -25,7 +25,7 @@ public class Decoder_Bmp_Tests
     using var stream = new FileStream( $"./Fixtures/Bmp/Version2/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();
@@ -61,7 +61,7 @@ public class Decoder_Bmp_Tests
     using var stream = new FileStream( $"./Fixtures/Bmp/Version3/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();

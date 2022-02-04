@@ -26,7 +26,7 @@ public class Decoder_WebP_Tests
     using var stream = new FileStream( $"./Fixtures/Webp/VP8/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();
@@ -49,7 +49,7 @@ public class Decoder_WebP_Tests
     using var stream = new FileStream( $"./Fixtures/Webp/VP8L/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();
@@ -72,7 +72,7 @@ public class Decoder_WebP_Tests
     using var stream = new FileStream( $"./Fixtures/Webp/VP8X/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
-    var info = ImageInfo.DecodeFromStream( stream );
+    var info = ImageInfo.Get( stream );
 
     // Assert
     info.Should().NotBeNull();

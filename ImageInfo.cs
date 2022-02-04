@@ -29,7 +29,7 @@ public sealed class ImageInfo
   /// <example>
   /// <code language="cs">
   /// using var imageStream = new FileStream( "image.jpeg", FileMode.Open, FileAccess.Read );
-  /// var imageInfo = ImageInfo.DecodeFromStream( imageStream );
+  /// var imageInfo = ImageInfo.Get( imageStream );
   /// 
   /// // If imageInfo was decodable, an object is returned with metadata properties
   /// Debug.WriteLine( $"Mime = {imageInfo.MimeType}" );
@@ -43,7 +43,7 @@ public sealed class ImageInfo
   /// </code>
   /// </example>
   /// <exception cref="ImageStreamException">Thrown if image is not readable or seekable</exception>
-  public static ImageInfo DecodeFromStream( Stream image )
+  public static ImageInfo Get( Stream image )
   {
     if( !image.CanSeek || !image.CanRead )
     {

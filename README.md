@@ -12,14 +12,28 @@ Full documentation at https://github.com/CodeRanger-com/Coderanger.Excel
 
 ```cs
 using var imageStream = new FileStream( "image.jpeg", FileMode.Open, FileAccess.Read );
-var imageInfo = ImageInfo.DecodeFromStream( imageStream );
+var imageInfo = ImageInfo.Get( imageStream );
 
 // If imageInfo was decodable, an object is returned with metadata properties
 Debug.WriteLine( $"Mime = {imageInfo.MimeType}" );
 Debug.WriteLine( $"Width = {imageInfo.Width}" );
 Debug.WriteLine( $"Height = {imageInfo.Height}" );
 
-// If there is any metedata in the image, the tags property
-// will not be null and will contain the info as a dictionary
-// of profile tag lists
+// If there is any metadata in the image, the `Tags` property
+// will contain the info as a dictionary of profile tag lists
+
+if( imageInfo.Metadata?.TryGetValue( MetadataProfileType.Exif, out var tags ) ?? false && tags is not null )
+{
+  foreach( var tag in tags )
+  {
+    if( tag is not null && tag.HasValue )
+    {
+      if( tag.TryGetValue( out var metadataValue ) && metadataValue is not null )
+      {
+        Debug.WriteLine( $"{metadataValue.TagName} = {metadataValue.Value}" );
+      }
+    }
+  }
+}
+
 ```
