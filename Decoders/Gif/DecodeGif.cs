@@ -29,7 +29,7 @@ internal class DecodeGif : IDecoder
       return null;
     }
 
-    var header = reader.ReadBytes( GifConstants.MagicNumber.Length );
+    var header = reader.ReadBytes( GifConstants.MagicNumber.Length ).AsSpan();
     if( header.SequenceEqual( GifConstants.MagicNumber ) )
     {
       return new DecodeGif();
@@ -52,7 +52,7 @@ internal class DecodeGif : IDecoder
 
     var header = reader.ReadBytes( 7 ).AsSpan();
 
-    var version = header[ ..3 ].ToArray();
+    var version = header[ ..3 ];
     if( version.SequenceEqual( GifConstants.MagicNumberVersion87 ) )
     {
       return ParseDimensions( reader, header );

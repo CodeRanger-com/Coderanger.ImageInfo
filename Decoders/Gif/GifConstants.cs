@@ -10,9 +10,9 @@ namespace Coderanger.ImageInfo.Decoders.Gif;
 
 internal static class GifConstants
 {
-  internal static readonly byte[] MagicNumber = new byte[] { (byte)'G', (byte)'I', (byte)'F' };
-  internal static readonly byte[] MagicNumberVersion87 = new byte[] { (byte)'8', (byte)'7', (byte)'a' };
-  internal static readonly byte[] MagicNumberVersion89 = new byte[] { (byte)'8', (byte)'9', (byte)'a' };
+  internal static ReadOnlySpan<byte> MagicNumber => new[] { (byte)'G', (byte)'I', (byte)'F' };
+  internal static ReadOnlySpan<byte> MagicNumberVersion87 => new[] { (byte)'8', (byte)'7', (byte)'a' };
+  internal static ReadOnlySpan<byte> MagicNumberVersion89 => new[] { (byte)'8', (byte)'9', (byte)'a' };
 
   internal const string MimeType = "image/gif";
 
@@ -25,7 +25,7 @@ internal static class GifConstants
 
     internal static class XmpApplication
     {
-      internal static readonly byte[] Identifier = new byte[]
+      internal static ReadOnlySpan<byte> Identifier => new[]
       {
         (byte)'X', (byte)'M', (byte)'P', (byte)' ', (byte)'D', (byte)'a', (byte)'t', (byte)'a',
         (byte)'X', (byte)'M', (byte)'P'

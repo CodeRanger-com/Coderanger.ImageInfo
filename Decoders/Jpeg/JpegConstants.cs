@@ -13,7 +13,7 @@ internal static class JpegConstants
   /// <summary>
   /// Header signature for a JPEG image format
   /// </summary>
-  internal static readonly byte[] MagicNumber = new byte[] { 0xff, 0xd8 };
+  internal static ReadOnlySpan<byte> MagicNumber => new[] { (byte)0xff, (byte)0xd8 };
   internal static readonly int MagicNumberValue = 0x_00_00_ff_d8;
 
   internal const string MimeType = "image/jpeg";
