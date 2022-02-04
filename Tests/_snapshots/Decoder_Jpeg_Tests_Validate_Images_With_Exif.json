@@ -73,7 +73,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time = 12/04/2001 20:33:14",
+        "StringValue": "Date Time = 2001-04-12 20:33:14",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 306,
@@ -223,7 +223,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time Original = 12/04/2001 20:33:14",
+        "StringValue": "Date Time Original = 2001-04-12 20:33:14",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36867,
@@ -233,7 +233,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Photo Date Time Digitized = 12/04/2001 20:33:14",
+        "StringValue": "Photo Date Time Digitized = 2001-04-12 20:33:14",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36868,
@@ -539,7 +539,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time = 04/08/2000 18:22:57",
+        "StringValue": "Date Time = 2000-08-04 18:22:57",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 306,
@@ -689,7 +689,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time Original = 04/08/2000 18:22:57",
+        "StringValue": "Date Time Original = 2000-08-04 18:22:57",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36867,
@@ -699,7 +699,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Photo Date Time Digitized = 04/08/2000 18:22:57",
+        "StringValue": "Photo Date Time Digitized = 2000-08-04 18:22:57",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36868,
@@ -1015,7 +1015,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time = 02/09/2000 14:30:10",
+        "StringValue": "Date Time = 2000-09-02 14:30:10",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 306,
@@ -1165,7 +1165,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time Original = 02/09/2000 14:30:10",
+        "StringValue": "Date Time Original = 2000-09-02 14:30:10",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36867,
@@ -1175,7 +1175,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Photo Date Time Digitized = 02/09/2000 14:30:10",
+        "StringValue": "Photo Date Time Digitized = 2000-09-02 14:30:10",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36868,
@@ -1651,7 +1651,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time Original = 26/10/2000 16:46:51",
+        "StringValue": "Date Time Original = 2000-10-26 16:46:51",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36867,
@@ -1975,7 +1975,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time Original = 25/05/1999 21:00:09",
+        "StringValue": "Date Time Original = 1999-05-25 21:00:09",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36867,
@@ -1985,7 +1985,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Photo Date Time Digitized = 25/05/1999 21:00:09",
+        "StringValue": "Photo Date Time Digitized = 1999-05-25 21:00:09",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36868,
@@ -2281,7 +2281,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time = 06/04/2001 11:51:40",
+        "StringValue": "Date Time = 2001-04-06 11:51:40",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 306,
@@ -2411,7 +2411,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time Original = 06/04/2001 11:51:40",
+        "StringValue": "Date Time Original = 2001-04-06 11:51:40",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36867,
@@ -2421,7 +2421,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Photo Date Time Digitized = 06/04/2001 11:51:40",
+        "StringValue": "Photo Date Time Digitized = 2001-04-06 11:51:40",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36868,
@@ -2697,7 +2697,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time = 08/11/2000 20:14:38",
+        "StringValue": "Date Time = 2000-11-08 20:14:38",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 306,
@@ -2827,7 +2827,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time Original = 07/11/2000 10:41:43",
+        "StringValue": "Date Time Original = 2000-11-07 10:41:43",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36867,
@@ -2837,7 +2837,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Photo Date Time Digitized = 07/11/2000 10:41:43",
+        "StringValue": "Photo Date Time Digitized = 2000-11-07 10:41:43",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36868,
@@ -3183,7 +3183,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time Original = 31/05/2000 21:50:40",
+        "StringValue": "Date Time Original = 2000-05-31 21:50:40",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36867,
@@ -3193,7 +3193,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Photo Date Time Digitized = 31/05/2000 21:50:40",
+        "StringValue": "Photo Date Time Digitized = 2000-05-31 21:50:40",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36868,
@@ -3479,7 +3479,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time = 01/01/1998 00:00:00",
+        "StringValue": "Date Time = 1998-01-01 00:00:00",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 306,
@@ -3589,7 +3589,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time Original = 01/01/1998 00:00:00",
+        "StringValue": "Date Time Original = 1998-01-01 00:00:00",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36867,
@@ -3599,7 +3599,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Photo Date Time Digitized = 01/01/1998 00:00:00",
+        "StringValue": "Photo Date Time Digitized = 1998-01-01 00:00:00",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36868,
@@ -3843,7 +3843,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time = 18/11/2000 21:14:19",
+        "StringValue": "Date Time = 2000-11-18 21:14:19",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 306,
@@ -3963,7 +3963,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time Original = 18/11/2000 21:14:19",
+        "StringValue": "Date Time Original = 2000-11-18 21:14:19",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36867,
@@ -3973,7 +3973,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Photo Date Time Digitized = 18/11/2000 21:14:19",
+        "StringValue": "Photo Date Time Digitized = 2000-11-18 21:14:19",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36868,
@@ -4229,7 +4229,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time = 30/09/2000 10:59:45",
+        "StringValue": "Date Time = 2000-09-30 10:59:45",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 306,
@@ -4319,7 +4319,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time = 30/09/2000 10:59:45",
+        "StringValue": "Date Time = 2000-09-30 10:59:45",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 306,
@@ -4399,7 +4399,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time Original = 30/09/2000 10:59:45",
+        "StringValue": "Date Time Original = 2000-09-30 10:59:45",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36867,
@@ -4409,7 +4409,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Photo Date Time Digitized = 30/09/2000 10:59:45",
+        "StringValue": "Photo Date Time Digitized = 2000-09-30 10:59:45",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36868,
@@ -4655,7 +4655,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time = 01/12/1998 14:22:36",
+        "StringValue": "Date Time = 1998-12-01 14:22:36",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 306,
@@ -4825,7 +4825,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time Original = 01/12/1998 14:22:36",
+        "StringValue": "Date Time Original = 1998-12-01 14:22:36",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36867,
@@ -4835,7 +4835,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Photo Date Time Digitized = 01/12/1998 14:22:36",
+        "StringValue": "Photo Date Time Digitized = 1998-12-01 14:22:36",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36868,

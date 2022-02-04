@@ -43,7 +43,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time = 24/06/2008 13:58:07",
+        "StringValue": "Date Time = 2008-06-24 13:58:07",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 306,

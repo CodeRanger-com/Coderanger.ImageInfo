@@ -47,6 +47,26 @@ public class IptcDate : IptcTypeBase, IMetadataTypedValue
     }
   }
 
+  /// <summary>
+  /// Returns a string that represents the object
+  /// </summary>
+  /// <returns>String that represents the object</returns>
+  public override string ToString()
+  {
+    var output = string.Empty;
+    foreach( var data in _metadata )
+    {
+      var value = (DateTime)data.Value;
+      if( output.Length > 0 )
+      {
+        output += " / ";
+      }
+      output += $"{Name} = {value:yyyy-MM-dd}";
+    }
+
+    return output;
+  }
+
   private MetadataTagValue? Create( ReadOnlySpan<byte> buffer )
   {
     var bufferValue = DataConversion.ConvertBuffer( buffer, StringEncoding.Ascii );

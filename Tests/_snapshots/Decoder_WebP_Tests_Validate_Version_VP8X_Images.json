@@ -83,7 +83,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time = 22/11/2021 15:02:58",
+        "StringValue": "Date Time = 2021-11-22 15:02:58",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 306,
@@ -163,7 +163,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Date Time Original = 22/11/2021 15:02:58",
+        "StringValue": "Date Time Original = 2021-11-22 15:02:58",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36867,
@@ -173,7 +173,7 @@
       },
       {
         "IsArray": false,
-        "StringValue": "Photo Date Time Digitized = 22/11/2021 15:02:58",
+        "StringValue": "Photo Date Time Digitized = 2021-11-22 15:02:58",
         "HasValue": true,
         "TagTypeName": "DateTime",
         "TagId": 36868,

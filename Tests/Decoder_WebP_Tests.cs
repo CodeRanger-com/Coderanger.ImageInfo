@@ -23,7 +23,7 @@ public class Decoder_WebP_Tests
   public void Validate_Version_VP8_Images( string filename, int width, int height, string mime )
   {
     // Arrange
-    using var stream = new FileStream( $"./Fixtures/WebP/VP8/{filename}", FileMode.Open, FileAccess.Read );
+    using var stream = new FileStream( $"./Fixtures/Webp/VP8/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
     var info = ImageInfo.DecodeFromStream( stream );
@@ -46,7 +46,7 @@ public class Decoder_WebP_Tests
   public void Validate_Version_VP8L_Images( string filename, int width, int height, string mime )
   {
     // Arrange
-    using var stream = new FileStream( $"./Fixtures/WebP/VP8L/{filename}", FileMode.Open, FileAccess.Read );
+    using var stream = new FileStream( $"./Fixtures/Webp/VP8L/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
     var info = ImageInfo.DecodeFromStream( stream );
@@ -69,7 +69,7 @@ public class Decoder_WebP_Tests
   public void Validate_Version_VP8X_Images( string filename, int width, int height, int xResolution, int yResolution, string mime )
   {
     // Arrange
-    using var stream = new FileStream( $"./Fixtures/WebP/VP8X/{filename}", FileMode.Open, FileAccess.Read );
+    using var stream = new FileStream( $"./Fixtures/Webp/VP8X/{filename}", FileMode.Open, FileAccess.Read );
 
     // Act
     var info = ImageInfo.DecodeFromStream( stream );
