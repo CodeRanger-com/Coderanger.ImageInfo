@@ -24,7 +24,7 @@ jobs:
         include-prerelease: false
 
     - name: Run Unit Tests
-      uses: b3b00/coverlet-action@1.1.8
+      uses: b3b00/coverlet-action@1.1.9
       with:
         testProject: './Tests/Coderanger.ImageInfo.Tests.csproj'
         outputFormat: 'opencover'
