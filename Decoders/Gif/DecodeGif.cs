@@ -60,7 +60,7 @@ internal class DecodeGif : IDecoder
     else if( version.SequenceEqual( GifConstants.MagicNumberVersion89 ) )
     {
       var imageInfo = ParseDimensions( reader, header );
-      if( imageInfo != null )
+      if( imageInfo is not null )
       {
         var metadata = ExtractXmp( reader );
         return new ImageDetails( imageInfo.Width,

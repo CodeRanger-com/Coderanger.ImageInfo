@@ -45,7 +45,7 @@ public class ExifEnum : ExifTypeBase, IMetadataTypedValue
       {
         var buff = Component.DataValueBuffer.AsSpan( 0 + ( i * Component.ComponentSize ) );
         var value = GetEnumFromValue( buff );
-        if( value != null )
+        if( value is not null )
         {
           yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
         }
@@ -64,7 +64,7 @@ public class ExifEnum : ExifTypeBase, IMetadataTypedValue
       {
         var buff = dataValue.AsSpan( i * Component.ComponentSize, 2 );
         var value = GetEnumFromValue( buff );
-        if( value != null )
+        if( value is not null )
         {
           yield return new MetadataTagValue( Type: TagType, IsArray: IsArray, TagId: TagId, TagName: Name, Value: value );
         }

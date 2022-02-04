@@ -56,7 +56,7 @@ internal class DecodeIptc
 
   internal bool AddTagsToProfile( ref Metadata metadata )
   {
-    if( _values != null && HasTags() )
+    if( _values is not null && HasTags() )
     {
       var tags = metadata.GetListForProfile( MetadataProfileType.Iptc );
       foreach( var tag in _values )
@@ -126,9 +126,9 @@ internal class DecodeIptc
           //this.isIptc = true;
           var data = blockDataSpan.Slice( dataStartIdx, resourceDataSize );
           var decoded = IptcValue.Decode( data );
-          if( decoded != null )
+          if( decoded is not null )
           {
-            if( _values == null )
+            if( _values is null )
             {
               _values = new();
             }

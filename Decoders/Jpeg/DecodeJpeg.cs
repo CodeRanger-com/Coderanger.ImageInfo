@@ -189,12 +189,12 @@ internal class DecodeJpeg : IDecoder
 
   private void SyncResolution()
   {
-    if( _processedJfif || _exifDecoder != null )
+    if( _processedJfif || _exifDecoder is not null )
     {
       _horizontalDpi = 0;
       _verticalDpi = 0;
 
-      if( _exifDecoder != null )
+      if( _exifDecoder is not null )
       {
         _horizontalDpi = _exifDecoder.HorizontalDpi;
         _verticalDpi = _exifDecoder.VerticalDpi;

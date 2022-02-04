@@ -18,7 +18,7 @@ internal static class MetadataHelpers
 {
   internal static void Output( Dictionary<MetadataProfileType, List<IMetadataTypedValue>>? profiles )
   {
-    if( profiles == null )
+    if( profiles is null )
     {
       return;
     }
@@ -26,11 +26,11 @@ internal static class MetadataHelpers
     foreach( var profile in profiles.Keys )
     {
       Console.Write( $"\n{profile} Tags" );
-      if( profiles.TryGetValue( profile, out var profileTags ) && profileTags != null )
+      if( profiles.TryGetValue( profile, out var profileTags ) && profileTags is not null )
       {
         foreach( var exifValue in profileTags )
         {
-          if( exifValue == null )
+          if( exifValue is null )
           {
             Console.Write( "\n\t(none)" );
             return;
@@ -38,7 +38,7 @@ internal static class MetadataHelpers
 
           if( exifValue.IsArray )
           {
-            if( exifValue.TryGetValueArray( out var tagValues ) && tagValues != null )
+            if( exifValue.TryGetValueArray( out var tagValues ) && tagValues is not null )
             {
               var isFirst = true;
               foreach( var tagValue in tagValues )
@@ -50,7 +50,7 @@ internal static class MetadataHelpers
           }
           else
           {
-            if( exifValue.TryGetValue( out var tagValue ) && tagValue != null )
+            if( exifValue.TryGetValue( out var tagValue ) && tagValue is not null )
             {
               OutputValue( tagValue, outputTagDetails: true, isArray: false );
             }
@@ -68,7 +68,7 @@ internal static class MetadataHelpers
 
   private static void OutputValue( MetadataTagValue? tagValue, bool outputTagDetails, bool isArray )
   {
-    if( tagValue == null || tagValue.Value == null )
+    if( tagValue is null || tagValue.Value is null )
     {
       return;
     }

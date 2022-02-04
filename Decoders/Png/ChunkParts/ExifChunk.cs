@@ -26,7 +26,7 @@ internal struct ExifChunk : IChunk
   public void LoadData( BinaryReader reader )
   {
     _chunk.LoadData( reader );
-    if( _chunk.Data != null )
+    if( _chunk.Data is not null )
     {
       ExifData = DecodeExif.DecodeFromBuffer( _chunk.Data, (int)_chunk.DataLength, false );
     }

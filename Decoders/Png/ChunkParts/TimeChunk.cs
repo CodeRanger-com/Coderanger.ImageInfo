@@ -26,7 +26,7 @@ internal struct TimeChunk : IChunk
   public void LoadData( BinaryReader reader )
   {
     _chunk.LoadData( reader );
-    if( _chunk.Data != null )
+    if( _chunk.Data is not null )
     {
       /*
       Year	  2 bytes (complete; for example, 1995, not 95)

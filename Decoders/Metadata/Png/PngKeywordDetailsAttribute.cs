@@ -61,7 +61,7 @@ internal sealed class PngKeywordDetailsAttribute : Attribute
         {
           var value = fi.GetRawConstantValue();
 
-          if( value == null || fi.Name.ToLower() != loweredTagName )
+          if( value is null || fi.Name.ToLower() != loweredTagName )
           {
             continue;
           }
@@ -69,7 +69,7 @@ internal sealed class PngKeywordDetailsAttribute : Attribute
           // If the field has custom attributes, return the value passed to the constructor
           var customAttributes = fi.GetCustomAttributes<PngKeywordDetailsAttribute>();
           var detailsAttribute = customAttributes.FirstOrDefault();
-          if( detailsAttribute != null )
+          if( detailsAttribute is not null )
           {
             return new PngKeywordDetails( Id: (ushort)value, Name: detailsAttribute.Name, Description: detailsAttribute.Description );
           }

@@ -22,7 +22,7 @@ public abstract class IptcTypeBase
     TagType = type;
 
     var tagDetails = MetadataTagDetailsAttribute.GetTagDetails( ReflectionIptcTag, TagId );
-    if( tagDetails != null )
+    if( tagDetails is not null )
     {
       Name = tagDetails.Name;
       Description = tagDetails.Description;

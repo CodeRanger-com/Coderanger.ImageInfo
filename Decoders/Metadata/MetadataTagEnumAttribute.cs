@@ -38,12 +38,12 @@ internal sealed class MetadataTagEnumAttribute : Attribute
   /// </summary>
   public static string? GetTagEnumValue( IMetadataTag type, ushort tag, uint enumValue )
   {
-    return FindField( type, tag, (attribute) => attribute.Code != null && attribute.Code == enumValue );
+    return FindField( type, tag, (attribute) => attribute.Code is not null && attribute.Code == enumValue );
   }
 
   public static string? GetTagEnumValue( IMetadataTag type, ushort tag, string enumValue )
   {
-    return FindField( type, tag, ( attribute ) => attribute.CodeString != null && attribute.CodeString == enumValue );
+    return FindField( type, tag, ( attribute ) => attribute.CodeString is not null && attribute.CodeString == enumValue );
   }
 
   private delegate bool MatchField( MetadataTagEnumAttribute attribute );
@@ -82,7 +82,7 @@ internal sealed class MetadataTagEnumAttribute : Attribute
           var customAttributes = fi.GetCustomAttributes<MetadataTagEnumAttribute>();
           foreach( var detailsAttribute in customAttributes )
           {
-            if( detailsAttribute != null && matcher( detailsAttribute ) )
+            if( detailsAttribute is not null && matcher( detailsAttribute ) )
             {
               return detailsAttribute.Information;
             }

@@ -30,7 +30,7 @@ public class Decoder_WebP_Tests
 
     // Assert
     info.Should().NotBeNull();
-    if( info != null )
+    if( info is not null )
     {
       info.Width.Should().Be( width );
       info.Height.Should().Be( height );
@@ -53,7 +53,7 @@ public class Decoder_WebP_Tests
 
     // Assert
     info.Should().NotBeNull();
-    if( info != null )
+    if( info is not null )
     {
       info.Width.Should().Be( width );
       info.Height.Should().Be( height );
@@ -76,7 +76,7 @@ public class Decoder_WebP_Tests
 
     // Assert
     info.Should().NotBeNull();
-    if( info != null )
+    if( info is not null )
     {
       info.Width.Should().Be( width );
       info.Height.Should().Be( height );

@@ -26,7 +26,7 @@ internal struct HeaderChunk : IChunk
   public void LoadData( BinaryReader reader )
   {
     _chunk.LoadData( reader );
-    if( _chunk.Data != null )
+    if( _chunk.Data is not null )
     {
       // Header chunk data contains:
       // 4 bytes = width

@@ -35,7 +35,7 @@ public class IptcEnum : IptcTypeBase, IMetadataTypedValue
   public void AddToExistingValue( ReadOnlySpan<byte> buffer )
   {
     var value = Create( buffer );
-    if( value != null )
+    if( value is not null )
     {
       _metadata.Add( value );
     }
@@ -48,7 +48,7 @@ public class IptcEnum : IptcTypeBase, IMetadataTypedValue
   public void SetValue( ReadOnlySpan<byte> buffer )
   {
     var value = Create( buffer );
-    if( value != null )
+    if( value is not null )
     {
       _metadata.Add( value );
     }
