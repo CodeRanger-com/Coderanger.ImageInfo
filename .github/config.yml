@@ -1,2 +1,2 @@
 ﻿PR_TITLE_REGEX: /.*/
-COMMIT_MESSAGE_REGEX: /(breaking|backwards-incompatible|major|feat|feature|minor|perf|fix|patch|refactor|revert|style|build|docs|test|other|chore|ci|skip ci)\(.*?\):\s+.*?/
+COMMIT_MESSAGE_REGEX: /^(breaking|backwards-incompatible|major|feat|feature|minor|perf|fix|patch|refactor|revert|style|build|docs|test|other|chore|skip ci)\(.*?\):.*?/
