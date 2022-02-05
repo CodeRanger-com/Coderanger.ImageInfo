@@ -1,5 +1,9 @@
 # Coderanger.ImageInfo
 
+## [Release v0.3.1](https://github.com/CodeRanger-com/Coderanger.ImageInfo/releases/tag/v0.3.1) (2022-02-05)
+
+
+
 ## [Release v0.3.0](https://github.com/CodeRanger-com/Coderanger.ImageInfo/releases/tag/v0.3.0) (2022-02-04)
 
 
