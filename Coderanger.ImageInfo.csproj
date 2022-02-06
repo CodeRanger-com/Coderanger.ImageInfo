@@ -13,16 +13,28 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Summary>Cross platform image info library</Summary>
     <Description>Cross platform library for inspecting information and metadata from common image files</Description>
-    <Copyright>Copyright (c) CodeRanger. All rights reserved.</Copyright>
+    <Copyright>Copyright (c) CodeRanger.com. All rights reserved.</Copyright>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageProjectUrl>https://www.coderanger.com/api/Coderanger.ImageInfo/</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/CodeRanger-com/Coderanger.ImageInfo/</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/CodeRanger-com/Coderanger.ImageInfo/</RepositoryUrl>
     <Language>en-GB</Language>
-    <PackageTags>webp;png;jpeg;jpg;gif;bmp;metadata;exif;iptc;xmp;image;images;graphics;gfx</PackageTags>
+    <PackageTags>webp;png;jpeg;jpg;gif;bmp;metadata;exif;iptc;xmp;image;images;graphics;gfx;decoder</PackageTags>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
     <EnableNETAnalyzers>True</EnableNETAnalyzers>
     <AnalysisLevel>latest</AnalysisLevel>
+    <PackageLicenseFile>LICENCE.txt</PackageLicenseFile>
+    <Authors>CodeRanger.com</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>5</WarningLevel>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>5</WarningLevel>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
@@ -37,6 +49,10 @@
       <Pack>True</Pack>
     </None>
     <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="LICENCE.txt">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

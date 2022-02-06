@@ -72,3 +72,7 @@ if( imageInfo is not null )
 Contributions are welcome; even if it is just additional test images for subtypes of an image format so that the test suite can be increased.
 
 Find out more on our [how to contribute](CONTRIBUTIONS.md).
+
+## Licence
+
+Coderanger.ImageInfo is licensed under the [MIT](LICENCE.TXT) licence.
