@@ -1,5 +1,18 @@
 # Coderanger.ImageInfo
 
+## [Release v0.3.4](https://github.com/CodeRanger-com/Coderanger.ImageInfo/releases/tag/v0.3.4) (2022-02-07)
+
+### Bug Fixes
+
+* **Licence:**
+  * Corrected link in ReadMe ([4113c189](https://github.com/CodeRanger-com/Coderanger.ImageInfo/commit/4113c189597d088713c1345dad023ff2c86c5b2e))
+
+### Other Changes
+
+* **Licence:**
+  * Corrected link in ReadMe ([157c142a](https://github.com/CodeRanger-com/Coderanger.ImageInfo/commit/157c142ad8d0692cfba6f99f9da60d75b8cf2fa9))
+
+
 ## [Release v0.3.3](https://github.com/CodeRanger-com/Coderanger.ImageInfo/releases/tag/v0.3.3) (2022-02-07)
 
 ### Bug Fixes
