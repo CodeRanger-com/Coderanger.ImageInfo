@@ -11,6 +11,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile></DocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Cross platform image info library</Title>
     <Summary>Cross platform image info library</Summary>
     <Description>Cross platform library for inspecting information and metadata from common image files</Description>
     <Copyright>Copyright (c) CodeRanger.com. All rights reserved.</Copyright>
@@ -24,7 +25,7 @@
     <EnableNETAnalyzers>True</EnableNETAnalyzers>
     <AnalysisLevel>latest</AnalysisLevel>
     <PackageLicenseFile>LICENCE.txt</PackageLicenseFile>
-    <Authors>CodeRanger.com</Authors>
+    <Authors>CodeRanger.com and contributors</Authors>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -75,4 +75,4 @@ Find out more on our [how to contribute](CONTRIBUTIONS.md).
 
 ## Licence
 
-Coderanger.ImageInfo is licensed under the [MIT](LICENCE.TXT) licence.
+Coderanger.ImageInfo is licensed under the [MIT Licence](LICENCE.TXT).
