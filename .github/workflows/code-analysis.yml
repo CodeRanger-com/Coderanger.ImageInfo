@@ -1,8 +1,14 @@
 name: Code Analysis
 
 on:
+  push:
+    branches: [main, protected]
+  
   pull_request:
     branches: [ main ]
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.txt'
 
   # Allow manual run
   workflow_dispatch:
