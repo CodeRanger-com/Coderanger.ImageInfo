@@ -1,5 +1,13 @@
 # Coderanger.ImageInfo
 
+## [Release v0.3.3](https://github.com/CodeRanger-com/Coderanger.ImageInfo/releases/tag/v0.3.3) (2022-02-07)
+
+### Bug Fixes
+
+* **Licence:**
+  * Added licence ([4dfaa1c9](https://github.com/CodeRanger-com/Coderanger.ImageInfo/commit/4dfaa1c91042ad26223701876c00fbb544c71e2f))
+
+
 ## [Release v0.3.2](https://github.com/CodeRanger-com/Coderanger.ImageInfo/releases/tag/v0.3.2) (2022-02-06)
 
 ### Bug Fixes
