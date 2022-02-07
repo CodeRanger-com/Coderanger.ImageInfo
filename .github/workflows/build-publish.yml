@@ -62,10 +62,11 @@ jobs:
       run: |
         dotnet build --configuration Release
 
-    - name: Publish to GitHub
+    - name: Publish to GitHub and Nuget
       run: |
         dotnet nuget add source --username danpetitt --password ${{ secrets.CI_ACTIONS }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/CodeRanger-com/index.json"
         dotnet nuget push "./bin/Release/Coderanger.ImageInfo.${{ steps.gitversion.outputs.SemVer }}.nupkg" --api-key ${{ secrets.CI_ACTIONS }} --source "github"
+        dotnet nuget push "./bin/Release/Coderanger.ImageInfo.${{ steps.gitversion.outputs.SemVer }}.nupkg" --api-key ${{ secrets.NUGET_API_KEY }} --source "https://api.nuget.org/v3/index.json"
 
     - name: Produce Changelog and Commit Files
       uses: danpetitt/changelog-file-generator@v2.2.0
