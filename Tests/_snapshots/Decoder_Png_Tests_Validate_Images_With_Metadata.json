@@ -126,5 +126,17 @@
         "TagTypeName": "PngText"
       }
     ]
+  },
+  "latin1-pngtext.png-metadata": {
+    "PngText": [
+      {
+        "StringValue": "parameters = Quince, Cabbage, Melon and Cucumber, oil on canvas painting, still life, vanitas, by Juan Sánchez Cotán\nSteps: 20, Sampler: DPM++ 2M Karras, CFG scale: 7, Seed: 3182817204, Size: 1024x1024, Model hash: 31e35c80fc, Model: sdXL_v10, Refiner: sdXL_v10Refiner [7440042bbd], Refiner switch at: 0.8, Version: v1.8.0",
+        "IsArray": false,
+        "TagId": 255,
+        "TagType": 17,
+        "HasValue": true,
+        "TagTypeName": "PngText"
+      }
+    ]
   }
 }

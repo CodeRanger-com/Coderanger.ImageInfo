@@ -290,6 +290,9 @@
     <None Update="Fixtures\Png\metadata-blank.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Fixtures\Png\metadata\latin1-pngtext.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Fixtures\Png\metadata\bath.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
