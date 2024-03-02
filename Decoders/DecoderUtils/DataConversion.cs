@@ -29,7 +29,16 @@ internal static class DataConversion
       // Buffer will be null terminated so remove any zero bytes from the end
       if( encoding == StringEncoding.Ascii )
       {
-        return Encoding.UTF8.GetString( buffer ).TrimEnd( (char)0 ).Trim();
+        try
+        {
+          var utf8EncoderWithErrorCatching = new UTF8Encoding( false, true );
+          return utf8EncoderWithErrorCatching.GetString( buffer ).TrimEnd( (char)0 ).Trim();
+        }
+        catch( DecoderFallbackException )
+        {
+          var fallbackEncoder = Encoding.GetEncoding( "iso-8859-1" );
+          return fallbackEncoder.GetString( buffer ).TrimEnd( (char)0 ).Trim();
+        }
       }
       else if( encoding == StringEncoding.Unicode )
       {

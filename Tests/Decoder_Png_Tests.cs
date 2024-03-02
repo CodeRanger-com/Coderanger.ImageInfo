@@ -54,6 +54,7 @@ public class Decoder_Png_Tests
   [DataRow( "bath.png", 4032, 3024, 72, 72, "image/png" )]
   [DataRow( "iptc.png", 70, 70, 300, 300, "image/png" )]
   [DataRow( "metadata.png", 50, 50, 96, 96, "image/png" )]
+  [DataRow( "latin1-pngtext.png", 1024, 1024, -1, -1, "image/png" )]
   public void Validate_Images_With_Metadata( string filename, int width, int height, int hdpi, int vdpi, string mime )
   {
     // Arrange
